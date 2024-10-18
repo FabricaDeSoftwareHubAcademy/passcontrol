@@ -1,0 +1,25 @@
+/* CONFIGURAÇÃO DA BASE DA ÁREA ÚTIL */
+/* SUBSTITUIR O NOME 'NOME_DA_AREA' PELO NOME UTILIZADO NO CORPO DE DESENVOLVIMENTO! */
+
+.NOME_DA_AREA{
+    z-index: 1;
+    position: fixed;
+    top: 157px;
+    right: 2vh;
+    left: 27vh;
+    bottom: 2vh;
+    height: auto;
+    width: auto;
+    background-color: rgba(0, 0, 0, 0.12);
+    overflow: auto;
+    scroll-behavior: smooth;
+}
+
+/* MEDIA */
+
+@media screen and (max-width: 1200px) {
+
+    .NOME_DA_AREA{
+        left: 7vh;
+    }
+}
