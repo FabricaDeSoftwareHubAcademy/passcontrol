@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recuperar Senha</title>
+
+    <link rel="stylesheet" href="../css/recuperar-senha-codigo.css">
+
+    <script src="../js/recuperar-senha-codigo.js" defer></script>
+</head>
+
+<body class="recuperarSenha"> 
+    <div class="box">
+
+        <div class="GroupLine">
+            <div class="line">
+                <span></span>
+            </div>
+            <div class="arrow">
+                <div class="setas"><img src="../assets/img/setas.png" alt=""></div>
+                <div class="setas"><img src="../assets/img/setas.png" alt=""></div>
+                <div class="setas"><img src="../assets/img/setas.png" alt=""></div>
+            </div>
+        </div>
+    
+
+
+        <main>
+            <div class="containerAnime">
+                    <div class="containerImagens">
+                        <img src="../assets/img/top.png" alt="" class="imagem imagemTop">
+                        <img src="../assets/img/mid.png" alt="" class="imagem imagemMid">
+                        <img src="../assets/img/bot.png" alt="" class="imagem imagemBot">
+                    </div>
+                    <div class="titlePass">
+                        <h1>PASS CONTROL</h1>
+                    </div>
+            </div>
+
+
+            <div class="containerRecuperar">
+                <form action="" class="formRecuperar">
+                    <label for="" class="lblRecuperar">Recuperar Senha</label>
+
+                    <div class="containerInput">
+                        <input type="text" class="inpRecuperar" id="input1" placeholder="" maxlength="1" required onKeyUp="mudaFoco(this, 1, input2)">
+                        <input type="text" class="inpRecuperar" id="input2" placeholder="" maxlength="1" required onKeyUp="mudaFoco(this, 1, input3)">
+                        <input type="text" class="inpRecuperar" id="input3" placeholder="" maxlength="1" required onKeyUp="mudaFoco(this, 1, input4)">
+                        <input type="text" class="inpRecuperar" id="input4" placeholder="" maxlength="1" required onKeyUp="mudaFoco(this, 1, input5)">
+                        <input type="text" class="inpRecuperar" id="input5" placeholder="" maxlength="1" required onKeyUp="mudaFoco(this, 1, null)">
+                        
+                    </div>
+                    
+                    <span>Insira o código recebido no E-mail.</span>
+                    <nav>
+                        <button><a href="recuperar-senha-novaSenha.html">Enviar</a></button>
+                    </nav>
+                </form>
+            </div>
+        </main>
+
+
+
+        <div class="GroupLine groupRight">
+            <div class="arrow ">
+                <div class="setas setaRight"><img src="../assets/img/setas.png" alt=""></div>
+                <div class="setas setaRight"><img src="../assets/img/setas.png" alt=""></div>
+                <div class="setas setaRight"><img src="../assets/img/setas.png" alt=""></div>
+            </div>
+            <div class="line">
+                <span></span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: inter;
+    font-style: bold;
+}
+.recuperarSenha{
+    min-height: 100vh;
+    background-color: #fff;
+    background-image: url(../image/background.png);
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-size: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: white;
+}
+
+.box{
+    width: 100vw;
+    height: 700px;
+    background-color: rgba(198, 196, 196, 0.2);
+    backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+
+}
+
+.GroupLine{
+    width: 20px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    margin-right: 30px;
+    /* background-color: red; */
+}
+.groupRight{
+    justify-content: end;
+    margin-left: 30px;
+}
+.setaRight{
+    transform: rotate(180deg);
+}
+
+.line{
+    width: 2px;
+    height: 40%;
+    background-color: #3aa867;
+    border-radius: 5px 5px 0 0;
+}
+
+.arrow{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.setas{
+    font-size: 20px;
+    font-weight: 800;
+}
+
+main{
+    width: 700px;
+    height: 95%;
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.containerAnime{
+    width: 100%;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* animation Logo */
+
+.containerImagens {
+    position: relative;
+    width: 15%; 
+    height: 50px; 
+    /* margin-top: 2;0%; */
+}
+.titlePass{
+    margin-top: 50px;
+    font-weight: 800;
+}
+.titlePass h1{
+    color: #33404D;
+}
+.imagem {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    width: 100%; 
+    height: auto;
+    pointer-events: none; 
+}
+
+.imagemTop {
+    z-index: 3;
+    top: 10px; 
+    animation: animationTop 6s infinite linear;
+}
+
+.imagemMid {
+    z-index: 2;
+    top: 12px; 
+    animation: animationMid 6s infinite linear;
+}
+
+.imagemBot {
+    z-index: 1;
+    top: 24px; 
+    animation: animationBot 6s infinite linear;
+}
+
+@keyframes animationTop {
+    0%{
+        top: 0px;
+        left: 0px;
+    }
+    25%{
+        top: -8px;
+        left: 0px;
+    }
+    50%{
+        top: -8px;
+        left: -25px;
+    }
+    75%{
+        top: -8px;
+        left: 25px;
+    }
+    100%{
+        top: 0px;
+        left: 0px;
+    }
+}
+
+@keyframes animationMid {
+    0%{
+        /* top: 100px; */
+        left: 0px;
+    }
+    25%{
+        /* top: 60px; */
+        left: 0px;
+    }
+    50%{
+        /* top: 60px; */
+        left: 25px;
+    }
+    75%{
+        /* top: 60px; */
+        left: -25px;
+    }
+    100%{
+        /* top: 100px; */
+        left: 0px;
+    }
+}
+
+@keyframes animationBot {
+    0%{
+        top: 24px;
+        left: 0px;
+    }
+    25%{
+        top: 35px;
+        left: 0px;
+    }
+    50%{
+        top: 35px;
+        left: -25px;
+    }
+    75%{
+        top: 35px;
+        left: 25px;
+    }
+    100%{
+        top: 24px;
+        left: 0px;
+    }
+}
+
+.containerRecuperar{
+    width: 80%;
+    height: 70%;
+    margin-top: 50px;
+
+}
+
+.formRecuperar{
+    width: 100%;
+    height: 75%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.formRecuperar .lblRecuperar{
+    width: 100%;
+    
+    color: rgba(0, 0, 0, 0.671);
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 15px;
+}
+.formRecuperar .inpRecuperar{
+    width: 100%;
+    height: 60px;
+    background-color: none;
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 20px;
+    margin-top: 15px;
+    outline: none;
+}
+.formRecuperar .inpRecuperar:hover{
+    border: 3px solid #3aa867;
+}
+.formRecuperar .inpRecuperar:focus{
+    border: 3px solid #3aa867;
+}
+.containerRequisitoSenhas{
+    width: 100%;
+    margin-top: 10px;
+}
+.containerRequisitoSenhas h1{
+    font-size: 14px;
+}
+.containerRequisitoSenhas ul li{
+    list-style: none;
+    margin-bottom: 3px;
+    font-size: 13px;
+}
+
+.formRecuperar nav{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin-top: 20px;
+}
+.formRecuperar nav a {
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    font-size: 16px;
+    font-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+.formRecuperar nav button{
+    width: 80px;
+    height: 35px;
+    background-color: #33404D;
+    border-radius: 8px;
+    margin-right: 20px;
+    cursor: pointer;
+    
+}
+
+.requisitosInvalidos {
+    color: red;
+}
+
+.requisitosValidos {
+    color: green;
+}
