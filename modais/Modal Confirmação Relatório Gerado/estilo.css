@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+button {
+    padding: 10px 20px;
+    background-color: rgb(47, 128, 128);
+    border: 0;
+    border-radius: 10px;
+    font-size: 18px;
+    color: #FFFFFF;
+    font-weight: 500;
+    cursor: pointer;
+}
+.modal-container {
+    background: rgba(0, 0, 0, 0.5);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+.modal-container.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+.modal {
+    background-color: #e0e0e0;
+    width: 45%;
+    height: 40%;
+    padding: 30px;
+    border-radius: 0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+    text-align: left;
+}
+hr {
+    border: none;
+    border-top: 3px solid #000;
+    margin: 20px 0;
+    margin-left: -30px;
+    margin-right: -30px;
+}
+.logo {
+    position: absolute;
+    top: 5px;
+    right: 20px;
+    width: 100px;
+    height: auto;
+}
+h1 {
+    font-size: 40px;
+    margin-bottom: 35px;
+    font-weight: bold;
+}
+p {
+    margin-top: 80px;
+    font-size: 30px;
+    margin-bottom: 10px;
+    padding-left: 270px;
+}
+.button-group {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    padding-top: 35px;
+}
+button.Okay {
+    background-color: #33404D;
+    color: white;
+    margin-right: 30px;
+    border-radius: 5px;
+    font-size: 12px;
+    width: 100px;
+}
+button.Okay:hover{
+    color: #00FF00;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    text-decoration: underline #00FF00;
+}
+.check-image {
+    width: 100px; /* Ajuste o tamanho conforme necessário */
+    margin: 0px 330px; /* Adiciona espaço em cima e embaixo */
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novo Perfil de Acesso</title>
+    <link rel="stylesheet" href="./estilo.css">
+</head>
+<body>
+    <button class="open">Abrir Modal</button>
+    <main class="modal-container">
+        <section class="modal">
+            <img src="./IMG/Logo Nota Controlnt.png" alt="Logo Nota Control" class="logo">
+            <h1>Novo Perfil de Acesso</h1>
+            <hr>
+            <p>Nome do perfil</p>
+            <input type="text" placeholder="Digite o nome do perfil">
+
+            <article class="checkbox-container">
+                <div class="checkbox-group">
+                    <input type="checkbox" id="cadastrar-atendente">
+                    <label for="cadastrar-atendente">Cadastrar Atendente</label>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="cadastrar-servico">
+                    <label for="cadastrar-servico">Cadastrar Serviço</label>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="cadastrar-perfil">
+                    <label for="cadastrar-perfil">Cadastrar Perfil</label>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="tirar-relatorios">
+                    <label for="tirar-relatorios">Tirar Relatórios</label>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="editar-terminal">
+                    <label for="editar-terminal">Editar Terminal De Autoatendimento</label>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="editar-status">
+                    <label for="editar-status">Editar Status Atendente</label>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="editar-monitor">
+                    <label for="editar-monitor">Editar Monitor Chamada</label>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="selecionar-todos">
+                    <label for="selecionar-todos">Selecionar Todos</label>
+                </div>
+            </article>
+
+            <div class="button-group">
+                <button class="cancel">Cancelar</button>
+                <button class="save">Salvar</button>
+            </div>
+        </section>
+    </main>
+    <script src="./modal.js"></script>
+</body>
+</html>
