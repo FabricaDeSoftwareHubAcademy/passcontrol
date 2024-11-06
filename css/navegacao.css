@@ -85,6 +85,7 @@
     align-items: center;
     justify-content: space-evenly;
     font-size: 17px;
+    text-align: center;
 }
 
 /* INFO USUARIO */
@@ -252,31 +253,31 @@
 /* MEDIA */
 
 @media screen and (max-width: 1200px) {
-
     .area-lateral-navegacao{
-        display: none;
-    }
-    .lateral{
-        width: 5vh;
+        width: 6vh;
     }
     
-    .botao-Lateal .texto-bot{
+    .botao-lateal-navegacao .icone-menu-lateral{
+        height: auto;
+    }
+
+    .botao-lateal-navegacao .texto-bott{
         display: none;
     }
     
-    .lateral:hover{
+    .area-lateral-navegacao:hover{
         width: 25vh;
         cursor: pointer;
     }
     
-    .lateral:hover .botao-Lateal .texto-bot{
+    .area-lateral-navegacao:hover .botao-lateal-navegacao .texto-bott{
         display: flex;
     }
     
-    .botao-Lateal img{
+    .botao-lateal-navegacao .icone-menu-lateral{
         margin-left: 7px;
     }
-    .lateral:hover .botao-Lateal img{
+    .area-lateral-navegacao:hover .botao-lateal-navegacao .icone-menu-lateral{
         margin-left: 0px;
         }
 }
