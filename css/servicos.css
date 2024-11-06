@@ -150,13 +150,11 @@ button:hover {
     margin-top: 20px;
     display: block;
 }
-@media screen and (max-width:1170ps){
+@media screen and (max-width:1200px){
     .servico{
         min-height: 100%;
         padding-top: 0px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        left: 8vh;
     }
 }
 
