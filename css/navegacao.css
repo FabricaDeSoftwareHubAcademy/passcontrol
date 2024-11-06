@@ -1,4 +1,5 @@
 @import url(base_area_util.css);
+@import url(style-Ju.css);
 
 :root{
     --verde-control: #3AA867;
@@ -251,6 +252,10 @@
 /* MEDIA */
 
 @media screen and (max-width: 1200px) {
+
+    .area-lateral-navegacao{
+        display: none;
+    }
     .lateral{
         width: 5vh;
     }

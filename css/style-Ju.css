@@ -1,0 +1,408 @@
+:root {
+    --verde-control: #3AA867;
+    --cinza-control: #33404D;
+    --cor-fundo: #f9f9f9;
+    --font-main: Inter, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-main);
+    font-size: bolder;
+}
+
+.principal-chamar-senha {
+    /* width: 100vw;
+    height: 100vh;
+    flex-direction: column;
+    background-color: var(--cor-fundo);
+    font-size: 30px;
+    font-weight: bold;
+    background-image: url(../img/background\ design.png);
+    background-repeat: no-repeat;
+    background-position: right bottom; */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    position: fixed;
+    top: 157px;
+    right: 2vh;
+    left: 27vh;
+    bottom: 2vh;
+    height: auto;
+    width: auto;
+    /* background-color: rgba(0, 0, 0, 0.12); */
+    overflow: auto;
+    scroll-behavior: smooth;
+}
+
+.topo-pagina {
+    width: 100%;
+    height: 13%;
+}
+
+.dentro-topo {
+    background-color: brown;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 90%;
+    /* flex-direction: column; */
+    /* align-items: center; */
+    /* background-color: chartreuse; */
+}
+
+.user-topo {
+    width: 30px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    padding: 5px 54px;
+    /* background-color: aqua; */
+
+}
+
+.area-linha-top {
+    width: 100%;
+    height: 40px;
+    background-color: var(--cinza-control);
+}
+
+.corpo {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--cor-fundo);
+    font-size: 30px;
+    font-weight: bold;
+    background-image: url(../img/background\ design.png);
+    background-repeat: no-repeat;
+    background-position: right bottom;
+}
+
+.menu {
+    width: 12%;
+    height: 87%;
+    left: 0;
+    position: fixed;
+    background-color: #3AA867;
+}
+
+.area-chamada-atendimento {
+    width: 100%;
+    height: 100%;
+    background-color: #bfbfbf46;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.topo-area-chamada {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    /* background-color: red; */
+    justify-content: space-between;
+    align-content: center;
+    /* background-color: crimson; */
+}
+
+.esquerda-area-chamada {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background-color: blue; */
+    height: 200px;
+    width: 40%;
+}
+
+.guiche_senha-area-chamada {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2%;
+    height: 70%;
+    width: 100%;
+}
+
+.guiche-area-chamada-tl {
+    display: flex;
+    flex-direction: column;
+    /* background-color: blueviolet; */
+    justify-content: center;
+    align-items: center;
+    width: 230px;
+    height: 109px;
+    border-radius: 5px;
+    box-shadow: 4px 4px 8px 1px rgba(0, 0, 0, 0.38);
+    margin-top: 34px;
+    font-size: 28px;
+    font-weight: 700;
+    color: #33404D;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.senha_fila-guiche-area-chamada {
+    display: flex;
+    flex-direction: column;
+    /* background-color: aqua; */
+    justify-content: center;
+    align-items: center;
+    width: 230px;
+    height: 109px;
+    border-radius: 5px;
+    box-shadow: 4px 4px 8px 1px rgba(0, 0, 0, 0.38);
+    margin-top: 34px;
+    font-size: 28px;
+    font-weight: 700;
+    color: #33404D;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.botao_intervalo-guiche-area-chamada {
+    background-color: var(--cinza-control);
+    color: #f9f9f9;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: row;
+    width: 476px;
+    height: 49px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.botao_intervalo-guiche-area-chamada a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+    height: 80%;
+    text-decoration: none;
+    color: var(--cor-fundo);
+}
+
+.direita-guiche-area-chamada {
+    display: flex;
+    flex-direction: row;
+    width: 40%;
+    height: 200px;
+    justify-content: center;
+    /* background-color: blue; */
+}
+
+.direita-guiche-area-chamada div {
+    display: flex;
+    flex-direction: row;
+    /* background-color: brown; */
+    width: 90%;
+    height: 70%;
+    justify-content: center;
+    gap: 10px;
+}
+
+.botao--guiche-area-chamada {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    border-radius: 5px;
+    width: 223px;
+    height: 109px;
+    background-color: var(--verde-control);
+    margin-top: 34px;
+    font-size: 28px;
+    font-weight: 700;
+    border: none;
+    outline: none;
+}
+
+.botao--guiche-area-chamada a {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #f9f9f9;
+}
+
+.meio-guiche-area-chamada {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 200px;
+    /* background-color: chartreuse; */
+    justify-content: space-between;
+}
+
+.meio_esquerda-guiche-area-chamada {
+    width: 50%;
+    height: 100%;
+    align-items: end;
+    display: flex;
+    /* background-color: coral; */
+    margin-left: 3%;
+}
+
+.meio_esquerda-guiche-area-chamada h3 {
+    font-weight: 700;
+    font-size: 32px;
+    color: #33404D;
+}
+
+.meio_direita-guiche-area-chamada {
+    /* background-color: blueviolet; */
+    justify-content: right;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    height: 100%;
+    gap: 15px;
+    margin-right: 3%;
+    /* background-color: darkturquoise; */
+}
+
+.senhas-guiche-area-chamada {
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+    height: 70%;
+    /* background-color: aliceblue; */
+    background-color: rgba(255, 255, 255, 0.3);
+    justify-content: center;
+    align-items: center;
+    box-shadow: 4px 4px 8px 1px rgba(0, 0, 0, 0.38);
+    font-size: 28px;
+    font-weight: 700;
+    color: #33404D;
+    border-radius: 2%;
+}
+
+.fundo-guiche-area-chamada {
+    display: flex;
+    /* background-color: aqua; */
+    width: 98%;
+    height: auto;
+    justify-content: center;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.329);
+}
+
+.tabela_atendimento-guiche-area-chamada {
+    margin-top: 5px;
+    width: 96%;
+    /* border: 2px solid black; */
+    justify-content: space-around;
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 0;
+    gap: 0;
+    border-collapse: collapse;
+    /* margin-left: 2%; */
+}
+
+.tabela_atendimento-guiche-area-chamada th {
+    width: 10%;
+    border: 1px solid black;
+    background-color: #353D46;
+    font-size: 15px;
+    color: var(--cor-fundo);
+}
+
+.tabela_atendimento-guiche-area-chamada td {
+    border: 1px solid #353D46;
+    font-size: 13px;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+@media screen and (max-width: 1200px) {
+
+    .principal-chamar-senha {
+        left: 7vh;
+    }
+}
+
+
+/* MEDIA */
+
+
+@media screen and (min-width: 375px) and (max-width: 667px) {
+    
+    /* Ajustes para a área principal de chamada de senha */
+    .principal-chamar-senha {
+        display: flex;
+        top: 8,6%;
+        left: 2,7%;
+        right: 0,11%;
+        bottom: 0,11%;
+        padding: 10px;
+        font-size: 18px;
+    }
+
+
+    /* Estilos para o topo da página */
+    .topo-pagina {
+        height: 10%; /* Reduz a altura para melhor exibição em telas menores */
+    }
+
+    /* Menu lateral */
+    .menu {
+        width: 20%; /* Aumenta o menu para melhor visibilidade em telas pequenas */
+    }
+
+    /* Área de chamada de atendimento */
+    .area-chamada-atendimento {
+        padding: 5px;
+        width: 95%;
+    }
+
+    /* Ajustes para os guichês e senha */
+    .guiche-area-chamada-tl,
+    .senha_fila-guiche-area-chamada {
+        width: 90%;
+        height: auto;
+        font-size: 20px;
+        margin-top: 15px;
+    }
+
+    /* Botão de intervalo */
+    .botao_intervalo-guiche-area-chamada {
+        width: 100%;
+        height: 40px;
+        font-size: 18px;
+    }
+
+    /* Tabela de atendimento */
+    .tabela_atendimento-guiche-area-chamada {
+        width: 100%;
+    }
+    .tabela_atendimento-guiche-area-chamada th {
+        font-size: 12px;
+    }
+    .tabela_atendimento-guiche-area-chamada td {
+        font-size: 12px;
+    }
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .area-chamada-atendimento{
+        
+
+    }
+}
