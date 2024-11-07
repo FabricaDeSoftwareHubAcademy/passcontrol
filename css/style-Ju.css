@@ -74,7 +74,7 @@
     background-color: var(--cinza-control);
 }
 
-.corpo {
+/* .corpo {
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -94,7 +94,7 @@
     left: 0;
     position: fixed;
     background-color: #3AA867;
-}
+} */
 
 .area-chamada-atendimento {
     width: 100%;
@@ -123,8 +123,9 @@
     justify-content: center;
     align-items: center;
     /* background-color: blue; */
-    height: 200px;
+    height: 100%;
     width: 40%;
+    margin-left: 2%;
 }
 
 .guiche_senha-area-chamada {
@@ -176,7 +177,7 @@
     margin-top: 15px;
     display: flex;
     flex-direction: row;
-    width: 476px;
+    width: 75%;
     height: 49px;
     justify-content: center;
     align-items: center;
@@ -200,7 +201,7 @@
     display: flex;
     flex-direction: row;
     width: 40%;
-    height: 200px;
+    height: 100%;
     justify-content: center;
     /* background-color: blue; */
 }
@@ -287,6 +288,7 @@
     background-color: rgba(255, 255, 255, 0.3);
     justify-content: center;
     align-items: center;
+    text-align: center;
     box-shadow: 4px 4px 8px 1px rgba(0, 0, 0, 0.38);
     font-size: 28px;
     font-weight: 700;
@@ -340,6 +342,34 @@
 
 /* MEDIA */
 
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    *{
+        font-size: 22px;
+        text-align: center;
+    }
+    .topo-area-chamada{
+        margin-top: 1%;
+        justify-content: center;
+        gap: 15%;
+    }
+    .meio_esquerda-guiche-area-chamada h3{
+        font-size: 22px;
+    }
+    .meio_esquerda-guiche-area-chamada{
+        height: 98%;
+        width: 110%;
+    }
+    .meio_direita-guiche-area-chamada{
+        height: 90%;
+        width: 150%;
+    }
+    .esquerda-area-chamada{
+        margin-left: 2%;
+    }
+    .botao_intervalo-guiche-area-chamada{
+        width: 100%;
+    }
+}
 
 @media screen and (min-width: 375px) and (max-width: 667px) {
     
@@ -352,57 +382,5 @@
         bottom: 0,11%;
         padding: 10px;
         font-size: 18px;
-    }
-
-
-    /* Estilos para o topo da página */
-    .topo-pagina {
-        height: 10%; /* Reduz a altura para melhor exibição em telas menores */
-    }
-
-    /* Menu lateral */
-    .menu {
-        width: 20%; /* Aumenta o menu para melhor visibilidade em telas pequenas */
-    }
-
-    /* Área de chamada de atendimento */
-    .area-chamada-atendimento {
-        padding: 5px;
-        width: 95%;
-    }
-
-    /* Ajustes para os guichês e senha */
-    .guiche-area-chamada-tl,
-    .senha_fila-guiche-area-chamada {
-        width: 90%;
-        height: auto;
-        font-size: 20px;
-        margin-top: 15px;
-    }
-
-    /* Botão de intervalo */
-    .botao_intervalo-guiche-area-chamada {
-        width: 100%;
-        height: 40px;
-        font-size: 18px;
-    }
-
-    /* Tabela de atendimento */
-    .tabela_atendimento-guiche-area-chamada {
-        width: 100%;
-    }
-    .tabela_atendimento-guiche-area-chamada th {
-        font-size: 12px;
-    }
-    .tabela_atendimento-guiche-area-chamada td {
-        font-size: 12px;
-    }
-}
-
-
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-    .area-chamada-atendimento{
-        
-
     }
 }
