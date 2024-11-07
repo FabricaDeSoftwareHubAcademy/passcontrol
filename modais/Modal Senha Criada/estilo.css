@@ -74,13 +74,13 @@ p {
 .button-group {
     display: flex;
     justify-content: center;
-    margin-top: 20px;
+    margin-top: -10px;
     padding-top: 35px;
 }
 button.Okay {
     background-color: #33404D;
     color: white;
-    margin-right: 30px;
+    margin-right: 0px;
     border-radius: 5px;
     font-size: 12px;
     width: 100px;
