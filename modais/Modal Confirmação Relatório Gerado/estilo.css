@@ -80,7 +80,7 @@ p {
 button.Okay {
     background-color: #33404D;
     color: white;
-    margin-right: 30px;
+    margin-right: -10px;
     border-radius: 5px;
     font-size: 12px;
     width: 100px;
