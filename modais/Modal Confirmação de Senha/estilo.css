@@ -44,7 +44,7 @@ button {
     border-radius: 0;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     position: relative;
-    text-align: left;
+    text-align: center;
 }
 hr {
     border: none;
@@ -69,18 +69,17 @@ p {
     margin-top: 20px;
     font-size: 30px;
     margin-bottom: 10px;
-    padding-left: 20px;
 }
 .button-group {
     display: flex;
     justify-content: center;
-    margin-top: 20px;
+    margin-top: 10px;
     padding-top: 35px;
 }
 button.Okay {
     background-color: #33404D;
     color: white;
-    margin-right: 30px;
+    margin-right: 0;
     border-radius: 5px;
     font-size: 12px;
     width: 100px;
