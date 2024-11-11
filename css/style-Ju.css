@@ -371,16 +371,59 @@
     }
 }
 
-@media screen and (min-width: 375px) and (max-width: 667px) {
-    
-    /* Ajustes para a área principal de chamada de senha */
-    .principal-chamar-senha {
-        display: flex;
-        top: 8,6%;
-        left: 2,7%;
-        right: 0,11%;
-        bottom: 0,11%;
-        padding: 10px;
-        font-size: 18px;
+
+@media screen and (min-width: 375px) and (max-width: 667px){
+    *{
+        font-size: 11px;
+        text-align: center;
     }
+    .topo-area-chamada{
+        margin-top: 1%;
+        justify-content: center;
+        gap: 15%;
+    }
+    .guiche-area-chamada-tl{
+        height: 75%;
+        width: 80%;
+    }
+    .senha_fila-guiche-area-chamada{
+        height: 75%;
+        width: 80%;
+    }
+    .senhas-guiche-area-chamada{
+        height: 55%;
+        width: 60%;
+    }
+    .tabela_atendimento-guiche-area-chamada th{
+        font-size: 9px;
+    }
+    .tabela_atendimento-guiche-area-chamada td{
+        font-size: 10px;
+    }
+    .botao--guiche-area-chamada{
+        height: 75%;
+        width: 80%;
+    }
+    .meio_esquerda-guiche-area-chamada h3{
+        font-size: 12px;
+    }
+    .meio_esquerda-guiche-area-chamada{
+        height: 98%;
+        width: 110%;
+    }
+    .meio_direita-guiche-area-chamada{
+        height: 90%;
+        width: 150%;
+    }
+    .esquerda-area-chamada{
+        margin-left: 2%;
+    }
+    .botao_intervalo-guiche-area-chamada{
+        width: 100%;
+    }
+}
+
+
+@media screen and (min-width: 375px) {
+
 }
