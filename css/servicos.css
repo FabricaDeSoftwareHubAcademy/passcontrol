@@ -154,6 +154,7 @@ button:hover {
     margin-top: 20px;
     display: block;
 }
+/* MEDIA */
 @media screen and (max-width:1200px){
     .servico{
         min-height: 100%;
@@ -162,11 +163,4 @@ button:hover {
     }
 }
 
-/* MEDIA */
 
-@media screen and (max-width: 1200px) {
-
-    .NOME_DA_AREA{
-        left: 7vh;
-    }
-}
