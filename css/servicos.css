@@ -161,15 +161,6 @@ button:hover {
         left: 8vh;
     }
 }
-@media screen and (min-width:320px){
-    .servico{
-        min-height: 90%;
-        min-width: 90%;
-        padding-top: 0px;
-        left: 8vh;
-    }
-}
-
 
 /* MEDIA */
 
