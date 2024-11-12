@@ -1,0 +1,124 @@
+
+.topo-info-consultar-fila {
+    width: 100%;
+    height: 18%;
+    display: flex;
+    /* background-color: red; */
+    justify-content: space-between;
+    align-content: center;
+    /* background-color: crimson; */
+}
+
+.topo-consultar-fila {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 200px;
+    /* background-color: chartreuse; */
+    justify-content: space-between;
+}
+
+.topo-esquerda-consultar-fila {
+    width: 50%;
+    height: 100%;
+    align-items: end;
+    display: flex;
+    /* background-color: coral; */
+    margin-left: 3%;
+}
+
+.topo-esquerda-consultar-fila h3 {
+    font-weight: 700;
+    font-size: 32px;
+    color: #33404D;
+}
+
+.topo-direita-consultar-fila {
+    /* background-color: blueviolet; */
+    justify-content: right;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    height: 100%;
+    gap: 15px;
+    margin-right: 3%;
+    /* background-color: darkturquoise; */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.principal-consultar-fila{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    position: fixed;
+    top: 157px;
+    right: 2vh;
+    left: 27vh;
+    bottom: 2vh;
+    height: auto;
+    width: auto;
+    /* background-color: rgba(0, 0, 0, 0.12); */
+    overflow: auto;
+    scroll-behavior: smooth;
+    /* background-color: blue; */
+}
+.area-comum-consultar-fila {
+    width: 100%;
+    height: 100%;
+    background-color: #bfbfbf46;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    /* justify-content: center; */
+    align-items: center;
+    /* background-color: red; */
+}
+
+.tabela_atendimento-consulta-da-fila{
+    margin-top: 50px;
+    width: 96%;
+    /* border: 2px solid black; */
+    justify-content: space-around;
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 0;
+    gap: 0;
+    border-collapse: collapse;
+    /* margin-left: 2%; */
+}
+
+.tabela_atendimento-consulta-da-fila th {
+    width: 10%;
+    border: 1px solid black;
+    background-color: #353D46;
+    font-size: 15px;
+    color: var(--cor-fundo);
+}
+
+.tabela_atendimento-consulta-da-fila td {
+    border: 1px solid #353D46;
+    font-size: 13px;
+    background-color: rgba(255, 255, 255, 0.3);
+}
