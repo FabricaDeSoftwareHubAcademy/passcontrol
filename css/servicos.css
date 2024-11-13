@@ -6,7 +6,6 @@
 }
 .servico {
     min-height: calc(90vh - 90px);
-    position: fixed;
     justify-content: space-around;
     z-index: 1;
     position: fixed;
@@ -18,7 +17,7 @@
     width: auto;
     background-color: rgba(0, 0, 0, 0.12);
     overflow: auto;
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 #telabranca{
     background-color: #ffffff3a;
@@ -67,6 +66,8 @@
     background-color: #ffffff7a;
     border: 2px solid black;
     margin-top: 10px;   
+    position: relative;
+    
 }
 
 .partes_tab{
@@ -157,14 +158,44 @@ button:hover {
 /* MEDIA */
 @media screen and (max-width:1200px){
     .servico{
-        min-height: 100%;
         padding-top: 0px;
         left: 8vh;
     }
+}
+@media screen and (max-width:570px){
+    #buscarserv {
+        width: 40%;
+        margin-left: 99px;
+        font-size: 8px;
+    }
     #servico_cad{
-        margin-left: 1px;
-
+        width: 30%;
+        font-size: 18px;
+    }
+    .tabelaServico{
+        width: 100%;
+    }
+    .linha_divisoria{
+        width: 100%;
+        height: auto;
+    }
+    #telabranca{
+        width: 100%;
+    }
+    th, td{
+        width: 320px;
+        font-size: 12px;
+    }
+    .toggle-btn{
+        width: 50%;
+    }
+    .toggle-btn .circulo. {
+        width: 30%;
+    }
+    .toggle-btn.active .circulo{
+        width: 30%;
     }
 }
+
 
 
