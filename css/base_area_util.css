@@ -1,7 +1,7 @@
 /* CONFIGURAÇÃO DA BASE DA ÁREA ÚTIL */
-/* SUBSTITUIR O NOME 'NOME_DA_AREA' PELO NOME UTILIZADO NO CORPO DE DESENVOLVIMENTO! */
+/* NAO MEXER!! */
 
-.NOME_DA_AREA{
+.Area-Util-Projeto{
     z-index: 1;
     position: fixed;
     top: 157px;
@@ -13,13 +13,20 @@
     background-color: rgba(0, 0, 0, 0.12);
     overflow: auto;
     scroll-behavior: smooth;
+    display: flex;
 }
 
 /* MEDIA */
 
-@media screen and (max-width: 1200px) {
-
-    .NOME_DA_AREA{
+@media screen and (max-width: 1200px) and (min-width:361px) {
+    .Area-Util-Projeto{
         left: 8vh;
     }
+}
+
+@media screen and (max-width: 360px) {
+    .Area-Util-Projeto{
+        left: 2vh;
+    }
+    
 }
