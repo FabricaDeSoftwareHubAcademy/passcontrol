@@ -9,7 +9,7 @@ main {
     bottom: 2vh; 
     justify-content: center;
     align-items: start; 
-    overflow: auto; 
+    overflow: auto;
     scroll-behavior: smooth; 
 }
 .titulo {
@@ -23,7 +23,7 @@ main {
 
 .input-pesquisa {
     padding: 2px;
-    width: 100%; 
+    width: 100%;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
@@ -136,25 +136,81 @@ main {
     color: white;
 }
 @media (max-width: 768px) {
-    .menu-tabela {
-        width: 90%; 
-    }
-}
+    /* Título menor */
+    .main{    
+        top: 150px; 
+        right: 7vh; 
+        left: 87vh; 
+        bottom: 2vh;
 
-@media (max-width: 768px) {
-    .styled-button {
-        font-size: 0.9rem; 
-        padding: 12px 20px;
-        right: 10px;
-        bottom: 15px;
+    }
+    .titulo {
+        font-size: 18px; 
+    }
+
+    /* Ajustar largura da barra de pesquisa */
+    .barra-pesquisa {
+        width: 90%;
+        margin-left: 0;
+    }
+
+    /* Ajustes na tabela */
+    .menu-tabela {
+        width: 90%; /* Tabela ocupa mais espaço */
+    }
+
+    /* Ajustar padding das células da tabela */
+    .tabela-3x3 th,
+    .tabela-3x3 td {
+        padding: 8px;
+    }
+
+    /* Alterar as ações para coluna */
+    .actions {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .actions img {
+        width: 18px;
+        height: 18px;
     }
 }
 
 @media (max-width: 480px) {
-    .styled-button {
-        font-size: 0.8rem;
-        padding: 10px 15px;
-        right: 5px;
-        bottom: 10px;
+    main{   
+        top: 157px;  
+        left: 80px; 
+    }
+    /* Título ainda menor */
+    .titulo {
+        font-size: 11px;
+    }
+
+    /* Barra de pesquisa ocupa 100% */
+    .barra-pesquisa {
+        width: 60%;
+    }
+
+.tabela {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+    /* Menor padding nas células */
+    .tabela-3x3 th,
+    .tabela-3x3 td {
+        padding: 3px;
+    }
+
+    /* Ações ainda mais compactas */
+    .actions img {
+        width: 16px;
+        height: 16px;
+    }
+
+    .actions {
+        gap: 10px;
     }
 }
