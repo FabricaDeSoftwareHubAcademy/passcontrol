@@ -1,0 +1,167 @@
+.cadastro{
+    display: flex;
+    height: auto;
+} 
+.cadastro_title{
+    position:relative;
+    top: 10px;
+    left: 20px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    /* height: auto; */
+    font-size: 105%;
+    width: 180px;
+}  
+hr{
+    border: 0;
+    height: 4px;
+    background: black ;
+    margin: 20px 0;
+    width: 97%;
+    position: relative;
+    top: -30px;
+    left: 22px;  
+}
+/* .grupo{
+    width: 100%; 
+} */
+
+.nome{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;  
+    position: relative;
+    top: 35px;
+    left: 65px;
+    width: 113%;
+    display: flex;
+    flex-direction: column;
+    font-size: 90%;
+}
+.email{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;  
+    position: relative;
+    top: 60px;
+    left: 65px;
+    /* right: -580px; */
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    font-size: 90%;
+}
+.cpf{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;  
+    position: relative;
+    top: -10px;
+    left: 800px;
+    /* right: -330; */
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    font-size: 90%;
+
+}
+.senha{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;  
+    position: relative;
+    top: 20px;
+    left: 65px;
+    /* right: -330; */
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    font-size: 90%;
+}
+.confirmar{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;  
+    position: relative;
+    top: -50px;
+    left: 800px;
+    /* right: -330; */
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    font-size: 90%;  
+}
+.perfil{
+    position: relative;
+    top: -20px;
+    left: 65px;
+    /* right: -330; */
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    font-size: 90%;
+}
+/* 
+.nome input{
+    display: flex;
+    width: 90%;
+    background-color: brown;
+    margin-top: 10px;
+} */
+input{
+    height: 40px;
+    width: 55%;
+}
+.quadrado{
+    width: 80%;
+    height: 90%;
+    background-color: rgba(255 255 255 / 42%);
+    position: absolute;
+    left: auto;
+    margin-top: auto;
+}
+.forme{
+    width: auto;
+    height: auto;
+    /* display: flex; */
+    /* flex-direction: column;
+    justify-content: space-between; */
+}
+.labeledit{
+    top: 10px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: bold;
+    width: 30.25rem;
+}
+.borda{
+    border-radius: 5px;
+    margin-top: 12px;
+}
+.servicocheckbox{
+    width: 45%;
+    border-collapse: collapse;
+    right: 150px;
+    display: flex;
+    position: absolute;
+    left: 670px;
+    top: 370px;
+ 
+}
+.servicocheckbox td{
+    padding: 8px;
+    border: 1px solid black;
+    text-align: justify;
+    
+    font-size: 90%;
+    
+}
+.servicocheckbox input[type="checkbox"]{
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    accent-color: #379b60;
+    position: relative;
+    left: -3px;
+    top: 5px;
+}
+.servicocheckbox label{
+    cursor: pointer;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; 
+
+}  
+.titulo{
+    position: absolute;
+    left: 675px;
+    top: 335px;
+    font-size: 100%;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;  
+}

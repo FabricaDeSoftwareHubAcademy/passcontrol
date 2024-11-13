@@ -1,5 +1,7 @@
-@import url(base_area_util.css);
 
+
+@import url(base_area_util.css);
+@import url(edit.css);
 :root{
     --verde-control: #3AA867;
     --cinza-control: #33404D;
@@ -84,7 +86,6 @@
     align-items: center;
     justify-content: space-evenly;
     font-size: 17px;
-    text-align: center;
 }
 
 /* INFO USUARIO */
@@ -252,31 +253,27 @@
 /* MEDIA */
 
 @media screen and (max-width: 1200px) {
-    .area-lateral-navegacao{
-        width: 6vh;
+    .lateral{
+        width: 5vh;
     }
     
-    .botao-lateal-navegacao .icone-menu-lateral{
-        height: auto;
-    }
-
-    .botao-lateal-navegacao .texto-bott{
+    .botao-Lateal .texto-bot{
         display: none;
     }
     
-    .area-lateral-navegacao:hover{
+    .lateral:hover{
         width: 25vh;
         cursor: pointer;
     }
     
-    .area-lateral-navegacao:hover .botao-lateal-navegacao .texto-bott{
+    .lateral:hover .botao-Lateal .texto-bot{
         display: flex;
     }
     
-    .botao-lateal-navegacao .icone-menu-lateral{
+    .botao-Lateal img{
         margin-left: 7px;
     }
-    .area-lateral-navegacao:hover .botao-lateal-navegacao .icone-menu-lateral{
+    .lateral:hover .botao-Lateal img{
         margin-left: 0px;
         }
 }

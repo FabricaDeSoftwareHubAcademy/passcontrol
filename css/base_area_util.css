@@ -1,9 +1,11 @@
 /* CONFIGURAÇÃO DA BASE DA ÁREA ÚTIL */
 /* SUBSTITUIR O NOME 'NOME_DA_AREA' PELO NOME UTILIZADO NO CORPO DE DESENVOLVIMENTO! */
 
-.NOME_DA_AREA{
+.grupo{
     z-index: 1;
     position: fixed;
+    display: flex;
+    flex-direction: column;
     top: 157px;
     right: 2vh;
     left: 27vh;
@@ -11,7 +13,7 @@
     height: auto;
     width: auto;
     background-color: rgba(0, 0, 0, 0.12);
-    overflow: auto;
+    /* overflow: auto; */
     scroll-behavior: smooth;
 }
 
@@ -19,7 +21,8 @@
 
 @media screen and (max-width: 1200px) {
 
-    .NOME_DA_AREA{
-        left: 8vh;
+    .grupo{
+        left: 7vh;
     }
 }
+
