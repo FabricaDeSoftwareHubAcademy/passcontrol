@@ -13,14 +13,14 @@
     display: flex;
     flex-direction: row;
     width: 100%;
-    height: 200px;
+    height: 200%;
     /* background-color: chartreuse; */
     justify-content: space-between;
 }
 
 .topo-esquerda-consultar-fila {
     width: 50%;
-    height: 100%;
+    height: 68%;
     align-items: end;
     display: flex;
     /* background-color: coral; */
@@ -40,30 +40,11 @@
     display: flex;
     flex-direction: row;
     width: 50%;
-    height: 100%;
+    height: 76%;
     gap: 15px;
     margin-right: 3%;
     /* background-color: darkturquoise; */
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -73,7 +54,7 @@
     justify-content: center;
     align-items: center;
     z-index: 1;
-    position: fixed;
+    position: absolute;
     top: 157px;
     right: 2vh;
     left: 27vh;
@@ -122,3 +103,47 @@
     font-size: 13px;
     background-color: rgba(255, 255, 255, 0.3);
 }
+
+
+
+
+
+
+
+
+
+.area-botao-voltar-fila {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background-color: blue; */
+    height: 100%;
+    width: 40%;
+    margin-left: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; 
+    margin: 0;
+    padding: 0;
+}
+.botao-voltar-consultar-fila {
+    background-color: var(--cinza-control);
+    color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 75%;
+    height: 49px;
+    border-radius: 5px;
+    font-size: 28px;
+    font-weight: 700;
+    border: none; 
+}
+.botao-voltar-consultar-fila a{
+    text-decoration: none;
+    color: inherit; /* o link herda a cor do botão */
+}
+
+
