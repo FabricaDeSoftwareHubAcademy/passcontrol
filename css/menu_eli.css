@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root{
+  --verde-control: #3AA867;
+  --cinza-control: #33404D;
+  --cor-fundo: #f9f9f9;
+  --cor-nave-botaa: #2d3945;
+  --cor-hove-menu:  rgba(0, 0, 0, 0.2);
+  --cor-active: rgb(219 219 219);
+  --font-main: Inter, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+*{
+  margin: 0;
+  padding: 0;
+  
+}
+
+div.scrollmenu {
+  background-color: var(--cinza-control);
+  overflow: auto;
+  white-space: nowrap;
+  padding-top: 15px;
+  padding-left: 10px;
+  cursor: pointer;
+  min-height: 48px;
+  user-select: none;
+
+  /* display: flex;
+	align-items: center;
+	min-height: 48px;
+	margin-left: 60px;
+	cursor: pointer;
+	user-select: none; */
+}
+
+div.scrollmenu a {
+  display: inline-block;
+  color: var(--cor-fundo);
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+  border-radius: 5px 5px 0px 0px;
+}
+
+div.scrollmenu a:hover {
+  background-color: var(--cor-hove-menu);
+  color: var(--verde-control);
+}
+
+div.scrollmenu a.active{
+  background-color: var(--cor-active);
+  color: var(--cinza-control);
+  text-decoration: none;
+  /* padding: 13px; */
+}
+
+div.scrollmenu a.active:hover {
+  color: var(--font-main);
+}

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- TROCA TÍTULO QUANDO FOR UTILIZAR -->
+    <title>Navegação PassControl</title> 
+    
+
+    <!-- IMPORT DA FONTE -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+    <!-- IMPORT DO CSS -->
+    <link rel="stylesheet" href="../css/navegacao.css">
+
+</head>
+<body class="control-body-navegacao">
+    <header class="cabeca-navegacao-control">
+        <nav class="nav-cabeca">
+            <div class="logo-control">
+                <img src="../assets/icons/logo control.svg" alt="LOGOCONTROL" id="img-logo">
+            </div>
+            <H3>PassControl</H3>
+            <div class="usu">                
+                <!-- INFO DO USUARIO -->
+                <div class="menu-usuario">
+                    <a class="usu">Nome do Usuário</a> <!-- SERÁ NECESSÁRIA A CONFIGURAÇÃO DE UMA VARIÁVEL PARA O NOME DO USUÁRIO! -->
+                    <nav class="usu-detalhes"> 
+                        <img src="../assets/icons/image 33.svg" alt="">
+                        <ul class="texto-usu">
+                            <li class="nome-usu">Nome do Usuário</li>
+                            <li class="email-usu">funcionario123@fun.br</li>
+                            <li><a href="">Editar Informações</a></li>
+                            <li><a href="">Sair</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- MENU LATERAL -->
+    <div class="area-lateral-navegacao">
+        <nav class="menu-lateral-navegacao">
+
+            <div class="botao-navegacao">
+                <button class="botao-lateal-navegacao">
+                    <img class="icone-menu-lateral" src="../assets/icons/atend.svg" alt="ICONE ATENDIMENTO">
+                    <div class="texto-bott">Atendimento</div>
+                </button>
+            </div>
+            <div class="botao-navegacao">
+                <button class="botao-lateal-navegacao">
+                    <img class="icone-menu-lateral" src="../assets/icons/monitor.svg" alt="ICONE MONITOR">
+                    <div class="texto-bott">Monitor</div>
+                </button>
+            </div>
+            <div class="botao-navegacao">
+                <button class="botao-lateal-navegacao">
+                    <img class="icone-menu-lateral" src="../assets/icons/nota.svg" alt="ICONE RELATORIOS">
+                    <div class="texto-bott">Relatórios</div>
+                </button>
+            </div>
+            <div class="botao-navegacao">
+                <button class="botao-lateal-navegacao">
+                    <img class="icone-menu-lateral" src="../assets/icons/gestao.svg" alt="ICONE GESTAO">
+                    <div class="texto-bott">Gestão</div>
+                </button>
+            </div>
+        </nav>
+        <div class="sair-navegacao">
+            <button class="botao-lateal-navegacao">
+                <img class="icone-menu-lateral-sair" src="../assets/icons/sair.svg" alt="ICONE SAIR">
+                <div class="texto-bott">Sair</div>
+            </button>
+        </div>
+        
+    </div> 
+    <!-- CODIGO DO ELIANDRO -->
+    <section class="nome_da_area_eli">
+        <div class="scrollmenu">
+            <a href="./menusup_usuario.html">Usuários</a>
+            <a href="./menusup_serviços.html" class="active">Serviços</a>
+            <!-- <a href="./menuadm_autoatendimento.html">Autoatendimento</a> -->
+            <a href="./menuadm_usuario.html">ADM</a>
+        </div>
+        <!-- área da descrição da página de navegação  -->
+        <div class="descricao">
+            <h2>Menu de Gestão</h2>
+            <hr>
+            <p>Área de Gestão do Admimistrador.</p>
+        </div>
+        <!-- área dos cards de nevegação  -->
+        <main class="area-cards">
+            <div class="container">
+                <div class="wrapper">
+                    <div class="banner-img">
+                        <img src="../assets/img/img_eli/Ponto_de_Atendimento.png" alt="">
+                    </div>
+
+                    <h3 class="titulo-card">Atendimento</h3>
+                    <p>Pontos de Atendimento.</p>
+                </div>
+                <div class="button-wrapper">
+                    <button class="btn outline">DETALHES</button>
+                </div>
+            </div>
+            <div class="container">
+                <div class="wrapper">
+                    <div class="banner-img">
+                        <img src="../assets/img/img_eli/Serviços.png" alt="">
+                    </div>
+                    <h3 class="titulo-produto">Serviços</h3>
+                    <p>Gestão dos serviços</p>
+                </div>
+                <div class="button-wrapper">
+                    <button class="btn outline">DETALHES</button>
+                </div>
+            </div>    
+            </div>   
+        </main>
+
+    </section>
+        
+
+            <!-- INICIO DA ÁREA ÚTIL DA PÁGINA -->
+            <!-- INSIRA O CORPO DA SUA PÁGINA A PARTIR DESTE PONTO -->
+         
+</body>
+</html>

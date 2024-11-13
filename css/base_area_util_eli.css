@@ -1,7 +1,7 @@
 /* CONFIGURAÇÃO DA BASE DA ÁREA ÚTIL */
 /* SUBSTITUIR O NOME 'NOME_DA_AREA' PELO NOME UTILIZADO NO CORPO DE DESENVOLVIMENTO! */
 
-.NOME_DA_AREA{
+.nome_da_area_eli{
     z-index: 1;
     position: fixed;
     top: 157px;
@@ -19,7 +19,7 @@
 
 @media screen and (max-width: 1200px) {
 
-    .NOME_DA_AREA{
+    .nome_da_area_eli{
         left: 7vh;
     }
 }
