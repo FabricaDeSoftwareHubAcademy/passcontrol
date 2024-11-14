@@ -39,6 +39,7 @@ button {
 .modal {
     background-color: #e0e0e0;
     width: 45%;
+    height: 40%;
     padding: 30px;
     border-radius: 0;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
@@ -49,21 +50,25 @@ hr {
     border: none;
     border-top: 3px solid #000;
     margin: 20px 0;
+    margin-left: -30px;
+    margin-right: -30px;
 }
 .logo {
     position: absolute;
     top: 5px;
     right: 20px;
-    width: 100px;
+    width: 70px;
     height: auto;
 }
 h1 {
-    font-size: 32px;
+    font-size: 40px;
+    margin-right: 600px;
     font-weight: bold;
 }
 p {
-    font-size: 24px;
-    margin-top: 15px;
+    margin-top: 50px;
+    font-size: 30px;
+    margin-bottom: 10px;
 }
 .select-container {
     margin: 20px 0;
@@ -73,7 +78,7 @@ select {
     font-size: 18px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    width: 100%;
+    width: 20%;
 }
 button.confirm {
     background-color: #33404D;
