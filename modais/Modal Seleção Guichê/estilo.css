@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+button {
+    padding: 10px 20px;
+    background-color: rgb(47, 128, 128);
+    border: 0;
+    border-radius: 10px;
+    font-size: 18px;
+    color: #FFFFFF;
+    font-weight: 500;
+    cursor: pointer;
+}
+.modal-container {
+    background: rgba(0, 0, 0, 0.5);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+.modal-container.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+.modal {
+    background-color: #e0e0e0;
+    width: 45%;
+    padding: 30px;
+    border-radius: 0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+    text-align: center;
+}
+hr {
+    border: none;
+    border-top: 3px solid #000;
+    margin: 20px 0;
+}
+.logo {
+    position: absolute;
+    top: 5px;
+    right: 20px;
+    width: 100px;
+    height: auto;
+}
+h1 {
+    font-size: 32px;
+    font-weight: bold;
+}
+p {
+    font-size: 24px;
+    margin-top: 15px;
+}
+.select-container {
+    margin: 20px 0;
+}
+select {
+    padding: 10px;
+    font-size: 18px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+button.confirm {
+    background-color: #33404D;
+    color: white;
+    width: 120px;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+button.confirm:hover {
+    color: #00FF00;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    text-decoration: underline #00FF00;
+}
