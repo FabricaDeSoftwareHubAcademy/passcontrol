@@ -1,0 +1,84 @@
+.atendimento-tempo-real{
+    z-index: 1;
+    position: fixed;
+    top: 157px;
+    right: 2vh;
+    left: 27vh;
+    bottom: 2vh;
+    height: auto;
+    width: auto;
+    background-color: rgba(0, 0, 0, 0.12);
+    overflow: auto;
+    scroll-behavior: smooth;
+}
+
+.container-atendimento-tempo-real {
+    max-width: 100%;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+.line-atendimento-tempo-real {
+    width: 98%;
+    border: 2px solid var(--color-text-1);
+    margin: 0 auto;
+}
+
+.container-atendimento-tempo-real h1 {
+    font-weight: bold;
+    font-size: 20px;
+    color: var(--color-text-1);
+}
+
+.table-atendimento-tempo-real {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid var(--color-neutro-1);
+    padding: 8px;
+    text-align: left;
+    color: var(--color-text-1);
+    background-color: var(--color-background-1);
+    font-size: 13px;
+    font-weight: bold;
+}
+
+th {
+    background-color: var(--color-background-2);
+    font-size: 15px;
+    font-weight: bold;
+    color: var(--color-neutro-2);
+}
+
+.disponivel-atendimento-tempo-real {
+    color: var(--color-disponivel);
+}
+
+.em-atendimento-atendimento-tempo-real {
+    color: var(--color-em-atendimento);
+}
+
+.intervalo-atendimento-tempo-real {
+    color: var(--color-intervalo);
+}
+
+.status-flex-atendimento-tempo-real {
+    display: flex;
+    justify-content: space-between;
+}
+
+.circle-atendimento-tempo-real {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: var(--color-background-2);
+    border: 1px solid var(--color-neutro-2);
+}
