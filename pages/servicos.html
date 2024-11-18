@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- TROCA TÍTULO QUANDO FOR UTILIZAR -->
+    <title>SERVICOS</title> 
+    
+
+    <!-- IMPORT DA FONTE -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+    <!-- IMPORT DO CSS -->
+    <link rel="stylesheet" href="../css/navegacao.css">
+    <link rel="stylesheet" href="../css/servicos.css">
+
+</head>
+<body class="control-body-navegacao">
+    <header class="cabeca-navegacao-control">
+        <nav class="nav-cabeca">
+            <div class="logo-control">
+                <img src="../assets/icons/logo control.svg" alt="LOGOCONTROL" id="img-logo">
+            </div>
+            <H3>PassControl</H3>
+            <div class="usu">                
+                <!-- INFO DO USUARIO -->
+                <div class="menu-usuario">
+                    <a class="usu">Nome do Usuário</a> <!-- SERÁ NECESSÁRIA A CONFIGURAÇÃO DE UMA VARIÁVEL PARA O NOME DO USUÁRIO! -->
+                    <nav class="usu-detalhes"> 
+                        <img src="../assets/icons/image 33.svg" alt="">
+                        <ul class="texto-usu">
+                            <li class="nome-usu">Nome do Usuário</li>
+                            <li class="email-usu">funcionario123@fun.br</li>
+                            <li><a href="">Editar Informações</a></li>
+                            <li><a href="">Sair</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- MENU LATERAL -->
+    <div class="area-lateral-navegacao">
+        <nav class="menu-lateral-navegacao">
+            <div class="botao-navegacao">
+                <button class="botao-lateal-navegacao">
+                    <img class="icone-menu-lateral" src="../assets/icons/atend.svg" alt="">
+                    <div class="texto-bott">Atendimento</div>
+                </button>
+            </div>
+            <div class="botao-navegacao">
+                <button class="botao-lateal-navegacao">
+                    <img class="icone-menu-lateral" src="../assets/icons/monitor.svg" alt="ICONE MONITOR">
+                    <div class="texto-bott">Monitor</div>
+                </button>
+            </div>
+            <div class="botao-navegacao">
+                <button class="botao-lateal-navegacao">
+                    <img class="icone-menu-lateral" src="../assets/icons/nota.svg" alt="ICONE RELATORIOS">
+                    <div class="texto-bott">Relatórios</div>
+                </button>
+            </div>
+            <div class="botao-navegacao">
+                <button class="botao-lateal-navegacao">
+                    <img class="icone-menu-lateral" src="../assets/icons/gestao.svg" alt="ICONE GESTAO">
+                    <div class="texto-bott">Gestão</div>
+                </button>
+            </div>
+        </nav>
+        <div class="sair-navegacao">
+            <button class="botao-lateal-navegacao">
+                <img class="icone-menu-lateral-sair" src="../assets/icons/sair.svg" alt="ICONE SAIR">
+                <div class="texto-bott">Sair</div>
+            </button>
+        </div>
+    </div>
+
+            <!-- INICIO DA ÁREA ÚTIL DA PÁGINA -->
+            <!-- INSIRA O CORPO DA SUA PÁGINA A PARTIR DESTE PONTO -->
+            <section class="servico">
+                <div id="telabranca">
+                <div class="cabecalho">
+                <h1 id="servico_cad">Serviços Cadastrados</h1>
+                <div class="linha_divisoria">
+                <div class="buscar_registro">
+                    <input id="buscarserv" type="text" placeholder="Buscar Registro">
+                </div>
+                </div>
+                
+                <table class="tabelaServico">
+                    <thead>
+                        <tr>
+                            <th>Código do Serviço</th>
+                            <th>Serviços</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>FC</td>
+                            <td>Fiscalização</td>
+                            <td class="partes_tab">
+                                <a href="editar"><img id="editar" src="../assets/img/editar.png" alt="Editar"></a>
+                                <div class="toggle-btn active">
+                                    <div class="circulo"></div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>IP</td>
+                            <td>Iluminação Pública</td>
+                            <td class="partes_tab">
+                                <a href="editar"><img id="editar" src="../assets/img/editar.png" alt="Editar"></a>
+                                <div class="toggle-btn active">
+                                    <div class="circulo"></div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>IPTU</td>
+                            <td>IPTU</td>
+                            <td class="partes_tab">
+                                <a href="editar"><img id="editar" src="../assets/img/editar.png" alt="Editar"></a>
+                                <div class="toggle-btn active">
+                                    <div class="circulo"></div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>LIC</td>
+                            <td>Licenças</td>
+                            <td class="partes_tab">
+                                <a href="editar"><img id="editar" src="../assets/img/editar.png" alt="Editar"></a>
+                                <div class="toggle-btn active">
+                                    <div class="circulo"></div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>OUVID</td>
+                            <td>Ouvidoria</td>
+                            <td class="partes_tab">
+                                <a href="editar"><img id="editar" src="../assets/img/editar.png" alt="Editar"></a>
+                                <div class="toggle-btn active">
+                                    <div class="circulo"></div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>CM</td>
+                            <td>Conselho Municipal</td>
+                            <td class="partes_tab">
+                                <a href="editar"><img id="editar" src="../assets/img/editar.png" alt="Editar"></a>
+                                <div class="toggle-btn active">
+                                    <div class="circulo"></div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <script>
+                const toggleButtons = document.querySelectorAll('.toggle-btn');
+                toggleButtons.forEach(button => {
+                    button.addEventListener('click', () => {
+                        button.classList.toggle('active');
+                    });
+                });
+            </script>
+            <div class="button-container">
+                    <button class="botaoCadastrar">Cadastrar</button>
+            </div>
+            </div>
+        </section> 
+</body>
+</html>
