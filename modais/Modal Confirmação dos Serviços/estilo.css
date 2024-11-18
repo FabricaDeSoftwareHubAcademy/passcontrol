@@ -39,6 +39,7 @@ button {
 .modal {
     background-color: #e0e0e0;
     width: 45%;
+    height: 40%;
     padding: 30px;
     border-radius: 0;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
