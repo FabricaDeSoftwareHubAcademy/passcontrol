@@ -135,13 +135,12 @@ main {
     background-color: #4CAF50;
     color: white;
 }
-@media (max-width: 768px) {
+@media (max-width: 320px) {
     /* Título menor */
     .main{    
         top: 150px; 
-        right: 7vh; 
-        left: 87vh; 
-        bottom: 2vh;
+
+        left: 87px; 
 
     }
     .titulo {
@@ -150,26 +149,19 @@ main {
 
     /* Ajustar largura da barra de pesquisa */
     .barra-pesquisa {
-        width: 90%;
-        margin-left: 0;
+        width: 10%;
+        margin-left: 54%;
     }
 
     /* Ajustes na tabela */
     .menu-tabela {
-        width: 90%; /* Tabela ocupa mais espaço */
-    }
-
-    /* Ajustar padding das células da tabela */
-    .tabela-3x3 th,
-    .tabela-3x3 td {
-        padding: 8px;
-    }
-
-    /* Alterar as ações para coluna */
-    .actions {
+        width: 30%; /* Tabela ocupa mais espaço */
+        max-width: 800px;
+        display: flex;
         flex-direction: column;
-        gap: 15px;
+        align-items: center;
     }
+
 
     .actions img {
         width: 18px;
@@ -177,7 +169,7 @@ main {
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 320px) {
     main{   
         top: 157px;  
         left: 80px; 
@@ -189,28 +181,50 @@ main {
 
     /* Barra de pesquisa ocupa 100% */
     .barra-pesquisa {
-        width: 60%;
+        width: 46%;
     }
+    .input-pesquisa {
+        padding: 0px;
+        width: 100%;
+        font-size: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    
 
 .tabela {
     display: flex;
     justify-content: center;
-    padding: 10px;
+    padding: 3px;
 }
 
     /* Menor padding nas células */
     .tabela-3x3 th,
     .tabela-3x3 td {
-        padding: 3px;
+        font-size: 10px;
+        padding: 6px;
     }
 
     /* Ações ainda mais compactas */
     .actions img {
-        width: 16px;
+        width: 13px;
         height: 16px;
     }
 
     .actions {
         gap: 10px;
     }
+    .styled-button {
+        background-color: #2d3945;
+        color: white;
+        padding: 10px 5px;
+        text-align: center;
+        font-size: 10px;
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+
+    }
+    
+    
 }
