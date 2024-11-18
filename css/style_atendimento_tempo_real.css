@@ -14,16 +14,36 @@
 
 @media (max-width: 375px) {
     .atendimento-tempo-real {
-        z-index: 1;
-        position: fixed;
-        top: 157px;
-        right: 2vh;
         left: 8vh;
-        bottom: 2vh;
-        height: auto;
-        width: auto;
-        background-color: rgba(0, 0, 0, 0.12);
-        overflow: auto;
-        scroll-behavior: smooth;
+    }
+
+    .container-atendimento-tempo-real h1 {
+        font-size: 11px;
+    }
+
+    td {
+        font-size: 10px;
+    }
+
+    .status-flex-atendimento-tempo-real {
+        gap: 10px;
+    }
+}
+
+@media (max-width: 414px) {
+    .atendimento-tempo-real {
+        left: 8vh;
+    }
+
+    .container-atendimento-tempo-real h1 {
+        font-size: 12px;
+    }
+
+    td {
+        font-size: 10px;
+    }
+
+    .status-flex-atendimento-tempo-real {
+        gap: 10px;
     }
 }
