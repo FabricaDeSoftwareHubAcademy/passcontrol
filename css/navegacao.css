@@ -21,8 +21,6 @@
     z-index: 1000;
 }
 
-/* TOPO */
-
 .control-body-navegacao{
     background-color: var(--cor-fundo);
     background-image: url(../assets/img/Background-logo\ 2.svg);
@@ -38,46 +36,17 @@
     overflow: hidden;
 }
 
+/* TOPO */
+
 .cabeca-navegacao-control{
     background-color: var(--cinza-control);
     height: 15vh;
-    width: 100%;
+    width: 100vw;
     position: sticky;
     display: flex;
     flex-direction: column;
     justify-content: end;
-}
-
-.dark-area{
-    height: 5vh;
-    display: flex;
-    justify-content: start;
-    align-items: center;
-}
-
-.button-drop-down-menu-mobile{
-    width: 6vh;
-    height: 70%;
-    background-color: var(--cinza-control);
-    border: none;
-    outline: none;
-    cursor: pointer;
-    margin-left: 3%;
-
-    display: none;
-    justify-content: center;
-    align-items: center;
-
-    /* padding-left: ; */
-    /* display: none; */
-}
-
-.button-drop-down-menu-mobile:hover{
-    background-color: #181f26;
-}
-
-.button-drop-down-menu-mobile:hover .icone-menu-lateral{
-    filter: invert(51%) sepia(58%) saturate(446%) hue-rotate(92deg) brightness(96%) contrast(89%);
+    z-index: 1;
 }
 
 .nav-cabeca{
@@ -119,6 +88,11 @@
     justify-content: space-evenly;
     font-size: 17px;
     text-align: center;
+}
+
+.dark-area{
+    height: 5vh;
+    width: 100%;
 }
 
 /* INFO USUARIO */
@@ -182,10 +156,51 @@
 
 /* MENU LATERAL */
 
+.botao-menu-mobile{
+    position: absolute;
+    top: 10vh;
+    left: 0;
+    z-index: 2;
+
+    width: 6vh;
+    height: 6vh;
+    background-color: var(--verde-control);
+    border: none;
+    outline: none;
+    cursor: pointer;
+
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+    transition:all 0.3s ease;
+}
+
+.botao-menu-mobile:hover{
+    background-color: #181f26;
+}
+
+.botao-menu-mobile:hover .icone-menu-lateral{
+    filter: invert(51%) sepia(58%) saturate(446%) hue-rotate(92deg) brightness(96%) contrast(89%);
+}
+
+.menu-mobile_aberto{
+    margin:0px 0px;
+    transform:translateX(0px);
+    width: 25vh;
+}
+
+.menu-mobile_fechado{
+    transition:all 0.3s ease;
+    display: none;
+
+    transform:translateX(-300px);
+}
+
 .area-lateral-navegacao{
     background-color: var(--cinza-control);
     position: absolute;
-    top: 137px;
+    top: 15vh;
     width: 25vh;
     height: 90vh;
     display: flex;
@@ -288,7 +303,39 @@
 
 /* MEDIA */
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1200px){
+    .area-lateral-navegacao{
+        display: none;
+    }
+
+    .botao-menu-mobile{
+        display: flex;
+    }
+    
+    .botao-menu-mobile:hover .area-lateral-navegacao{
+        position: absolute;
+        display: flex;
+        width: 25vh;
+    }
+}
+
+@media screen and ((max-height: 600px)){
+    .area-lateral-navegacao{
+        display: none;
+    }
+
+    .botao-menu-mobile{
+        display: flex;
+    }
+    
+    .botao-menu-mobile:hover .area-lateral-navegacao{
+        position: absolute;
+        display: flex;
+        width: 25vh;
+    }
+}
+
+/* @media screen and (max-width: 1200px) {
     .area-lateral-navegacao{
         width: 6vh;
     }
@@ -317,20 +364,4 @@
     .area-lateral-navegacao:hover .botao-lateal-navegacao .icone-menu-lateral{
         margin-left: 0px;
     }
-}
-
-@media screen and (max-width: 360px) {
-    .area-lateral-navegacao{
-        display: none;
-    }
-
-    .button-drop-down-menu-mobile{
-        display: flex;
-    }
-    
-    .button-drop-down-menu-mobile:hover .area-lateral-navegacao{
-        position: absolute;
-        display: flex;
-        width: 25vh;
-    }
-}
+} */

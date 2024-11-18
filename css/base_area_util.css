@@ -4,7 +4,7 @@
 .Area-Util-Projeto{
     z-index: 1;
     position: fixed;
-    top: 157px;
+    top: 17vh;
     right: 2vh;
     left: 27vh;
     bottom: 2vh;
@@ -20,13 +20,19 @@
 
 @media screen and (max-width: 1200px) and (min-width:361px) {
     .Area-Util-Projeto{
-        left: 8vh;
+        left: 2vh;
     }
 }
 
-@media screen and (max-width: 360px) {
+@media screen and (max-height: 600px){
+    .Area-Util-Projeto{
+        left: 2vh;
+    }
+}
+
+/* @media screen and (max-width: 360px) {
     .Area-Util-Projeto{
         left: 2vh;
     }
     
-}
+} */
