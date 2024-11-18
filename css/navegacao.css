@@ -1,4 +1,7 @@
-@import url(base_area_util.css);
+@import url('base_area_util.css');
+@import url('conteudo.css');
+@import url('tabela.css');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 :root{
     --verde-control: #3AA867;
@@ -15,8 +18,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: var(--font-main);
-    font-style: bold;
+    font-family: Inter;
+    font-weight: bold;
     list-style: none;
     z-index: 1000;
 }
@@ -40,50 +43,16 @@
 
 .cabeca-navegacao-control{
     background-color: var(--cinza-control);
-    height: 15vh;
+    height: 137px;
     width: 100%;
     position: sticky;
     display: flex;
-    flex-direction: column;
-    justify-content: end;
-}
-
-.dark-area{
-    height: 5vh;
-    display: flex;
-    justify-content: start;
-    align-items: center;
-}
-
-.button-drop-down-menu-mobile{
-    width: 6vh;
-    height: 70%;
-    background-color: var(--cinza-control);
-    border: none;
-    outline: none;
-    cursor: pointer;
-    margin-left: 3%;
-
-    display: none;
-    justify-content: center;
-    align-items: center;
-
-    /* padding-left: ; */
-    /* display: none; */
-}
-
-.button-drop-down-menu-mobile:hover{
-    background-color: #181f26;
-}
-
-.button-drop-down-menu-mobile:hover .icone-menu-lateral{
-    filter: invert(51%) sepia(58%) saturate(446%) hue-rotate(92deg) brightness(96%) contrast(89%);
 }
 
 .nav-cabeca{
     background-color: var(--cor-fundo);
     width: 100%;
-    height: 10vh;
+    height: 100px;
     display: flex;
     flex-direction: row;
     align-content: space-evenly;
@@ -118,7 +87,6 @@
     align-items: center;
     justify-content: space-evenly;
     font-size: 17px;
-    text-align: center;
 }
 
 /* INFO USUARIO */
@@ -184,15 +152,13 @@
 
 .area-lateral-navegacao{
     background-color: var(--cinza-control);
-    position: absolute;
+    position: fixed;
     top: 137px;
     width: 25vh;
     height: 90vh;
     display: flex;
     flex-direction: column;
     align-content: space-evenly;
-    left: 0;
-
 }
 
 .menu-lateral-navegacao{
@@ -268,7 +234,6 @@
 .sair-navegacao .botao-lateal-navegacao .icone-menu-lateral-sair{
     width: auto;
 }
-
 .sair-navegacao .botao-lateal-navegacao{
     width: 80%;
     height: 59px;
@@ -284,53 +249,4 @@
     cursor: pointer;
     justify-content: center;
     padding-right: 5%;
-}
-
-/* MEDIA */
-
-@media screen and (max-width: 1200px) {
-    .area-lateral-navegacao{
-        width: 6vh;
-    }
-    
-    .botao-lateal-navegacao .icone-menu-lateral{
-        height: auto;
-    }
-
-    .botao-lateal-navegacao .texto-bott{
-        display: none;
-    }
-    
-    .area-lateral-navegacao:hover{
-        width: 25vh;
-        cursor: pointer;
-    }
-    
-    .area-lateral-navegacao:hover .botao-lateal-navegacao .texto-bott{
-        display: flex;
-    }
-    
-    .botao-lateal-navegacao .icone-menu-lateral{
-        margin-left: 7px;
-    }
-    
-    .area-lateral-navegacao:hover .botao-lateal-navegacao .icone-menu-lateral{
-        margin-left: 0px;
-    }
-}
-
-@media screen and (max-width: 360px) {
-    .area-lateral-navegacao{
-        display: none;
-    }
-
-    .button-drop-down-menu-mobile{
-        display: flex;
-    }
-    
-    .button-drop-down-menu-mobile:hover .area-lateral-navegacao{
-        position: absolute;
-        display: flex;
-        width: 25vh;
-    }
 }
