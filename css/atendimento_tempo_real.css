@@ -13,6 +13,9 @@
 }
 
 .container-atendimento-tempo-real {
+    max-width: 100%;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
     display: flex;
     justify-content: space-between;
     padding: 15px;
@@ -32,7 +35,7 @@
 
 .table-atendimento-tempo-real {
     width: 100%;
-    border-collapse: collapse;  
+    border-collapse: collapse;
 }
 
 th, td {
