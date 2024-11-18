@@ -4,6 +4,8 @@
 .Area-Util-Projeto{
     z-index: 1;
     position: fixed;
+    display: flex;
+    flex-direction: column;
     top: 17vh;
     right: 2vh;
     left: 27vh;
@@ -11,7 +13,7 @@
     height: auto;
     width: auto;
     background-color: rgba(0, 0, 0, 0.12);
-    overflow: auto;
+    /* overflow: auto; */
     scroll-behavior: smooth;
     display: flex;
 }
