@@ -1,0 +1,176 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  min-height: 100vh;
+  background-color: #f4f4f4;
+}
+
+/* Cabeçalho */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #3498DB;
+  color: white;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+}
+
+header .logo {
+  display: flex;
+  align-items: center;
+}
+
+header .logo img {
+  height: 50px;
+  margin-right: 10px;
+}
+
+header .login {
+  display: flex;
+  align-items: center;
+}
+
+header .login a {
+  margin-left: 15px;
+  color: white;
+  text-decoration: none;
+}
+
+header .login a:hover {
+  text-decoration: underline;
+}
+
+/* Menu lateral */
+.sidebar {
+  width: 250px;
+  background-color: #2C3E50;
+  color: white;
+  padding-top: 80px; /* Para ajustar com o cabeçalho */
+  position: fixed;
+  top: 60px;
+  left: 0;
+  bottom: 0;
+}
+
+.sidebar h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.sidebar ul {
+  list-style-type: none;
+}
+
+.sidebar ul li {
+  margin: 15px 0;
+}
+
+.sidebar ul li a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.sidebar ul li a:hover {
+  background-color: #34495E;
+}
+
+/* Conteúdo principal */
+.content {
+  margin-left: 250px;
+  padding-top: 80px;
+  padding: 20px;
+}
+
+/* Menu superior */
+.topnav {
+  display: flex;
+  justify-content: space-between;
+  background-color: #3498DB;
+  padding: 10px 20px;
+  color: white;
+  position: fixed;
+  width: calc(100% - 250px); /* Ajustar com base no menu lateral */
+  top: 60px;
+  left: 250px;
+  z-index: 1;
+}
+
+.topnav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.topnav a:hover {
+  text-decoration: underline;
+}
+
+/* Página de submenu */
+.submenu {
+  padding-top: 80px;
+}
+
+.descricao {
+  margin-bottom: 20px;
+}
+
+.descricao hr {
+  border: 1px solid #ccc;
+}
+
+.conteudo-imagens {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.box {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  width: 300px;
+}
+
+.box img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.box h3 {
+  margin-top: 10px;
+}
+
+.box p {
+  margin: 10px 0;
+}
+
+.box button {
+  padding: 10px 20px;
+  background-color: #3498DB;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.box button:hover {
+  background-color: #2980B9;
+}

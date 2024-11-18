@@ -1,7 +1,3 @@
-@import url(base_area_util_eli.css);
-@import url(style_eli.css);
-
-
 :root{
     --verde-control: #3AA867;
     --cinza-control: #33404D;
@@ -23,9 +19,11 @@
     z-index: 1000;
 }
 
-.control-body-navegacao{
+/* TOPO */
+
+.navegacao{
     background-color: var(--cor-fundo);
-    background-image: url(../assets/img/Background-logo\ 2.svg);
+    background-image: url(../IMG/Quadrado\ logo\ 2.svg);
     background-size: 35vh;
     background-repeat: no-repeat;
     background-position: bottom right;
@@ -38,23 +36,18 @@
     overflow: hidden;
 }
 
-/* TOPO */
-
-.cabeca-navegacao-control{
+.cabeca{
     background-color: var(--cinza-control);
-    height: 15vh;
-    width: 100vw;
-    position: sticky;
+    height: 137px;
+    width: 100%;
+    position: fixed;
     display: flex;
-    flex-direction: column;
-    justify-content: end;
-    z-index: 1;
 }
 
 .nav-cabeca{
     background-color: var(--cor-fundo);
     width: 100%;
-    height: 10vh;
+    height: 100px;
     display: flex;
     flex-direction: row;
     align-content: space-evenly;
@@ -83,23 +76,11 @@
 .usu{
     color: var(--cinza-control);
     height: 100%;
-    min-width: 15%;  
-
+    width: 15%;  
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     font-size: 17px;
-    text-align: center;
-}
-
-.dark-area{
-    height: 5vh;
-    width: 100%;
-}
-
-.dark-area{
-    height: 5vh;
-    width: 100%;
 }
 
 /* INFO USUARIO */
@@ -108,20 +89,19 @@
     background-color: var(--cor-fundo);
     display: none;
     position: absolute;
-    padding-top: 100px;
     width: auto;
-    padding: 20px;
+    border: 2px solid var(--cinza-control);
+    padding: 5px;
     text-decoration: none;
     align-content: center;
-    align-items: center;
     justify-content: center;
     right: 2%;
-    border-radius: 10px;
 }
 
 .usu-detalhes img{
+    border: 2px solid var(--verde-control);
+    margin-right: 10px;
     border-radius: 100px;
-    width: 150px;
 }
 
 .texto-usu{
@@ -131,93 +111,42 @@
     justify-content: center;
 }
 
-.texto-usu .nome-usu{
-    font-size: 26px;
+.texto-usu .nome{
+    font-size: 23px;
     font-weight: 700;
 }
 
-.texto-usu .email-usu{
-    display: flex;
-    padding-top: 5px;
-    font-size: 15px;
+.texto-usu .email{
+    font-size: 13px;
     font-weight: 500;
 }
 
 .texto-usu li a{
-    display: flex;
     text-decoration: none;
     font-size: 13px;
     color: rgb(39, 75, 238);
-    padding-top: 10px;
 }
 
 .menu-usuario:hover .usu-detalhes{
     display: flex;
-    flex-direction: column;
-    min-width: 200px;
-    align-content: center;
-    justify-content: center;
-    box-shadow: 2px 5px 5px 2px rgba(0, 0, 0, 0.2);
-    gap: 15px;
+    flex-direction: row;
+    min-width: 300px;
 }
 
-/* MENU LATERAL */
+/* LATERAL */
 
-.botao-menu-mobile{
-    position: absolute;
-    top: 10vh;
-    left: 0;
-    z-index: 2;
-
-    width: 6vh;
-    height: 6vh;
-    background-color: var(--verde-control);
-    border: none;
-    outline: none;
-    cursor: pointer;
-
-    display: none;
-    justify-content: center;
-    align-items: center;
-
-    transition:all 0.3s ease;
-}
-
-.botao-menu-mobile:hover{
-    background-color: #181f26;
-}
-
-.botao-menu-mobile:hover .icone-menu-lateral{
-    filter: invert(51%) sepia(58%) saturate(446%) hue-rotate(92deg) brightness(96%) contrast(89%);
-}
-
-.menu-mobile_aberto{
-    margin:0px 0px;
-    transform:translateX(0px);
-    width: 25vh;
-}
-
-.menu-mobile_fechado{
-    transition:all 0.3s ease;
-    display: none;
-
-    transform:translateX(-300px);
-}
-
-.area-lateral-navegacao{
+.lateral{
     background-color: var(--cinza-control);
-    position: absolute;
-    top: 15vh;
+    position: fixed;
+    top: 137px;
     width: 25vh;
     height: 90vh;
     display: flex;
     flex-direction: column;
     align-content: space-evenly;
-    left: 0;
-
 }
 
-.menu-lateral-navegacao{
+.menu-Lateral{
     width: 100%;
     height: 65vh;
     display: flex;
@@ -226,7 +155,7 @@
     justify-content: right;
 }
 
-.botao-navegacao{
+.botao{
     width: 100%;
     height: 89px;
     display: flex;
@@ -234,7 +163,7 @@
     justify-content: right;
 }
 
-.botao-navegacao .botao-lateal-navegacao{
+.botao .botao-Lateal{
     background-color: #2d3945;
     width: 95%;
     height: 59px;
@@ -250,48 +179,45 @@
     justify-content: left;
     align-items: center;
     padding-left: 20%;
+    /* background-color: red; */
 }
 
-.botao-lateal-navegacao .icone-menu-lateral{
+.botao-Lateal img{
     display: flex;
     align-items: center;
     justify-content: center;
     width: auto;
+    /* height: 25%; */
+    /* background-color: black; */
 }
 
-.botao-lateal-navegacao .texto-bott{
+.botao-Lateal .texto-bot{
     display: flex;
     padding-left: 7px;
     font-size: 13px;
-    width: auto;
 }
 
-.botao-lateal-navegacao:hover{
+.botao-Lateal:hover{
     background-color: #181f26;
     color: var(--verde-control);
 }
 
-.botao-lateal-navegacao:hover .icone-menu-lateral{
+.botao-Lateal:hover img{
     filter: invert(51%) sepia(58%) saturate(446%) hue-rotate(92deg) brightness(96%) contrast(89%);
 }
 
-.sair-navegacao{
+.sair{
     width: 100%;
     display: flex;
     align-content: center;
     justify-content: center;
 }
 
-.sair-navegacao .botao-lateal-navegacao:hover{
-    background-color: #181f26;
-    color: var(--verde-control);
-}
-
-.sair-navegacao .botao-lateal-navegacao .icone-menu-lateral-sair{
+.sair .botao-Lateal img{
     width: auto;
+    /* height: 27px; */
 }
-
-.sair-navegacao .botao-lateal-navegacao{
+.sair button{
     width: 80%;
     height: 59px;
     display: flex;
@@ -308,63 +234,105 @@
     padding-right: 5%;
 }
 
-/* MEDIA */
 
-@media screen and (max-width: 1200px){
-    .area-lateral-navegacao{
-        display: none;
-    }
+/* CORPO TESTE */
 
-    .botao-menu-mobile{
-        display: flex;
-    }
-    
-    .botao-menu-mobile:hover .area-lateral-navegacao{
-        position: absolute;
-        display: flex;
-        width: 25vh;
-    }
+main{ 
+    z-index: 1;
+    position: absolute;
+    display: flex;
+    top: 157px;
+    right: 2vh;
+    left: 27vh;
+    bottom: 2vh;
+    height: auto;
+    width: auto;
+    background-color: rgba(205, 205, 205, 0.52);
+    justify-content: space-between;
+    justify-content: center;
+    align-items: start;
+    padding: 5px;
+    overflow: auto;
+    scroll-behavior: smooth;
 }
 
-@media screen and ((max-height: 600px)){
-    .area-lateral-navegacao{
-        display: none;
-    }
-
-    .botao-menu-mobile{
-        display: flex;
-    }
-    
-    .botao-menu-mobile:hover .area-lateral-navegacao{
-        position: absolute;
-        display: flex;
-        width: 25vh;
-    }
+.teste-scroll{
+    margin-top: 50%;
+    display: flex;
+    background-color: #3AA867;
+    height: 300px;
+    align-content: end;
+    align-items: end;
 }
 
-/* @media screen and (max-width: 1200px) {
-    .area-lateral-navegacao{
-        width: 6vh;
-    }
-    
-    .botao-Lateal .texto-bot{
-        display: none;
-    }
-    
-    .lateral:hover{
-        width: 25vh;
-        cursor: pointer;
-    }
-    
-    .lateral:hover .botao-Lateal .texto-bot{
-        display: flex;
-    }
-    
-    .botao-Lateal img{
-        margin-left: 7px;
-    }
-    
-    .area-lateral-navegacao:hover .botao-lateal-navegacao .icone-menu-lateral{
-        margin-left: 0px;
-    }
-} */
+
+/*  TESTE DE TABELA  */
+.tabela{
+    width: 100%;
+    height: auto;
+}
+
+.tabela-atendidos{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    align-content: center;
+}
+
+.tabela-atendidos thead{
+    height: 3.5vh;
+    background-color: var(--cinza-control);
+    display: flex;
+    color: var(--cor-fundo);
+}
+
+.tabela-atendidos tbody{
+    color: var(--cinza-control);
+}
+
+.tabela-atendidos tr{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.tabela-atendidos th, td{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    border: 1px solid black;
+    border-collapse: collapse;
+    min-height: 3.5vh;
+    text-transform: capitalize;
+    align-content: center;
+    text-indent: 3px;
+
+    /* POGzão na veia */
+    margin-left: -1px;
+    margin-bottom: -1px;
+}
+
+
+/* AJUSTES INDIVIDUAIS DO ESPAÇO DA TABELA */
+.ordem{
+    width: 10%;
+}
+.nome{
+    width: 30%;
+}
+.servico{
+    width: 25%;
+}
+.senha{
+    width: 11%;
+}
+.inic{
+    width: 9%;
+}
+.term{
+    width: 9%;
+}
+.categoria{
+    width: 10%;
+}
