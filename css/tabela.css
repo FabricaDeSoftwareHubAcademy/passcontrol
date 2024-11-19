@@ -1,0 +1,93 @@
+.area-tabela{
+  width: 90%;
+  height: 70%;
+  background-color: rgb(255, 255, 255,0.5);
+  gap: 15px;
+  margin-top: 2rem;
+}
+
+.tabela {
+  border: 1px solid black;
+  border-collapse: collapse;
+  background-color: rgb(255, 255, 255,0.5);
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+th, td {
+  border: 1px solid black; 
+  padding: 8px;
+  text-align: left;
+  color: var(--cinza-control);
+}
+
+th {
+  background-color: var(--cinza-control);
+  color: var(--cor-fundo);
+}
+
+.editar{
+  /* width: 10rem; */
+  display: flex;
+  /* flex-direction: row; */
+  justify-content: space-between;
+}
+
+.editar a img:hover{
+  content: url(../assets/icons/Group\ 2925.png);
+  transition: 1s;}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 3.75rem;
+  height: 1.375rem;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--cor-fundo);
+  transition: 0.4s;
+  border-radius: 34px;
+  border: 1px solid var(--cinza-control);
+}
+
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 1.060625rem;
+  width: 1.04375rem;
+  left: 4px;
+  bottom: 1.8px;
+  background-color: var(--verde-control);
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+
+input:checked + .slider:before {
+  transform: translateX(33px);
+  background-color: red;
+}
+
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #4CAF50;
+}
+
+
+
+
