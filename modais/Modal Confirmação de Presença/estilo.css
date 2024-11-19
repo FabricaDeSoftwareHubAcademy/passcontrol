@@ -39,12 +39,12 @@ button {
 .modal {
     background-color: #e0e0e0;
     width: 45%;
-    height: 40%;
+    height: auto;
     padding: 30px;
     border-radius: 0;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     position: relative;
-    text-align: left;
+    text-align: center;
 }
 hr {
     border: none;
@@ -60,87 +60,61 @@ hr {
     width: 100px;
     height: auto;
 }
-.inf-modal{
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 20px;
-}
-.inf-modal, .servico {
-    display: flex;
-    flex-direction: row;
-    margin-bottom: 20px;
-}
-.container{
-    flex: 1;
-    margin-right: 20px;
-}
-.container:last-child {
-    margin-right: 0; /*Remove o espaçamento do último grupo*/
-}
-.file-input{
-    display: flex;
-    align-items: center;
-}
-.folder-icon{
-    width: 40px;
-    height: auto;
-}
 h1 {
     font-size: 40px;
+    font-weight: bold;
+    text-align: left;
     margin-bottom: 35px;
+}
+p {
+    font-size: 30px;
+    margin: 10px 0;
     font-weight: bold;
 }
-label {
-    font-size: 16px;
-    margin-bottom: 5px;
-}
-input[type="number"], 
-input[type="text"],
-input[type="file"] {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    background-color: white;
-}
-input[type="file"] {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    background-color: white;
-    cursor: pointer;
-}
-.servico{
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 20px;
+.senha {
+    color: red;
+    font-weight: bold;
 }
 .button-group {
     display: flex;
-    justify-content: flex-end;
-    margin-top: 20px;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 50px;
 }
-button.cancel, button.save {
+button.ausente {
     background-color: #33404D;
     color: white;
     border-radius: 5px;
     font-size: 12px;
-    width: 100px;
+    width: 120px;
 }
-button.cancel {
-    margin-right: 10px;
-}
-button.cancel:hover {
+button.ausente:hover {
     color: #FF0000;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
     text-decoration: underline #FF0000;
 }
-button.save:hover {
+button.presente {
+    background-color: #33404D;
+    color: white;
+    border-radius: 5px;
+    font-size: 12px;
+    width: 120px;
+}
+button.presente:hover {
     color: #00FF00;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
     text-decoration: underline #00FF00;
+}
+button.chamar {
+    background-color: #33404D;
+    color: white;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    font-size: 12px;
+    width: 20%;
+}
+button.chamar:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    text-decoration: underline;
 }
