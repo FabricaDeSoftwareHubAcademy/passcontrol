@@ -1,3 +1,6 @@
+@import url(navegacao.css);
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
 .area-info{
   z-index: 1;
   position: fixed;
@@ -19,6 +22,7 @@
   font-family: Inter;
   font-style: bold;
 }
+
 .header-area {
   width: 90%;
   height: 8%;
