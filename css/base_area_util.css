@@ -23,13 +23,13 @@
 
 @media screen and (max-width: 1200px) and (min-width:361px) {
     .Area-Util-Projeto{
-        left: 2vh;
+        left: 8vh;
     }
 }
 
-@media screen and (max-height: 600px){
+@media screen and (max-height: 625px){
     .Area-Util-Projeto{
-        left: 2vh;
+        left: 8vh;
     }
 }
 
