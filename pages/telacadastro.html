@@ -15,6 +15,8 @@
 
     <!-- IMPORT DO CSS -->
     <link rel="stylesheet" href="../css/navegacao.css">
+    <link rel="stylesheet" href="../css/edit.css">
+
 </head>
 <body class="control-body-navegacao">
     <header class="cabeca-navegacao-control">
@@ -39,8 +41,13 @@
                 </div>
             </div>
         </nav>
+        <div class="dark-area"></div>
     </header>
+
     <!-- MENU LATERAL -->
+    <button class="botao-menu-mobile">
+        <img class="icone-menu-lateral" src="../assets/icons/DropDownIcon.svg" alt="MENU">
+    </button>
     <div class="area-lateral-navegacao">
         <nav class="menu-lateral-navegacao">
 
@@ -78,90 +85,93 @@
         
     </div>
 
-        <section class="NOME_DA_AREA"></section>
-            <!-- Codigo luan -->        
+    <section class="Area-Util-Projeto">
+        <!-- Codigo luan -->        
         <nav class="grupo">
+
             <div class="quadrado"></div>
-                 <div class="titulo">
-                    <h1 class="cadastro_title">Cadastro de Usuário</h1><br>
-                    <hr>   
-                </div>
-                <section class="forme">
-                    <form action="">
-                        <div class="nome">
-                            <label class="labeledit" for="nome">Nome*</label>    
-                            <input class="borda" type="text" name="nome" placeholder=""> 
-                        </div>
-                        <div class="email">
-                            <label class="labeledit" for="email">Email*</label>    
-                            <input class="borda" type="text" name="email">
-                        </div>
-                        <div class="cpf">    
-                            <label class="labeledit" for="cpf">CPF</label>
-                            <input class="borda" type="text" name="email">
-                        </div>
-                        <div class="senha">    
-                            <label class="labeledit" for="senha">Senha*</label>
-                            <input class="borda" type="password" id="senha1" name="senha" required>
-                            <span class="toggle-password" onclick="tooglepassword()"></span>
-                            <button id="tooglepassword" clas="oculto1">mostrar</button>
-                            <script src="senha.js"></script>
-                        </div>
-                        <div class="confirmar">    
-                            <label class="labeledit" for="confirmar">Confirmar Senha*</label>
-                            <input class="borda" type="password" id="senha2" name="confirmar" required>
-                            <span class="toggle-password" onclick="tooglepassword()"></span>
-                        </div>
-                        <div class="perfil">    
-                            <label class="labeledit" for="perfil">Perfil De Acesso</label>
-                            <input class="borda" type="text" name="perfil">
-                        </div>
-                        <div class="select-all-container"> 
-                            <input type="checkbox" id="select-all"> 
-                            <label for="select-all">Selecionar Todos</label> 
-                        </div> 
-                        <title class="servico">Seviços</title> 
-                        <div class="checkbox-container">
+
+            <div class="titulo">
+                <h1 class="cadastro_title">Cadastro de Usuário</h1><br>
+                <hr>   
+            </div>
+            <section class="forme">
+                <form action="">
+                    <div class="nome">
+                        <label class="labeledit" for="nome">Nome*</label>    
+                        <input class="borda" type="text" name="nome" placeholder=""> 
+                    </div>
+                    <div class="email">
+                        <label class="labeledit" for="email">Email*</label>    
+                        <input class="borda" type="text" name="email">
+                    </div>
+                    <div class="cpf">    
+                        <label class="labeledit" for="cpf">CPF</label>
+                        <input class="borda" type="text" name="email">
+                    </div>
+                    <div class="senha">    
+                        <label class="labeledit" for="senha">Senha*</label>
+                        <input class="borda" type="password" id="senha1" name="senha" required>
+                        <span class="toggle-password" onclick="tooglepassword()"></span>
+                        <button id="tooglepassword" clas="oculto1">mostrar</button>
+                        <script src="senha.js"></script>
+                    </div>
+                    <div class="confirmar">    
+                        <label class="labeledit" for="confirmar">Confirmar Senha*</label>
+                        <input class="borda" type="password" id="senha2" name="confirmar" required>
+                        <span class="toggle-password" onclick="tooglepassword()"></span>
+                    </div>
+                    <div class="perfil">    
+                        <label class="labeledit" for="perfil">Perfil De Acesso</label>
+                        <input class="borda" type="text" name="perfil">
+                    </div>
+                    <div class="select-all-container"> 
+                        <input type="checkbox" id="select-all"> 
+                        <label for="select-all">Selecionar Todos</label> 
+                    </div> 
+                    <title class="servico">Seviços</title> 
+                    <div class="checkbox-container">
+                        <div class="column"> 
+                            <label class="customizado"> 
+                                <input type="checkbox" class="item" id="checkbox"> 
+                                <span class="teste">Conselho Muncipal</span> 
+                            </label> 
+                            <label class="customizado"> 
+                                <input type="checkbox" class="item" id="checkbox"> 
+                                <span class="teste">Fiscalização</span> 
+                            </label>
+                            <label class="customizado"> 
+                                <input type="checkbox" class="item" id="checkbox"> 
+                                <span class="teste">Iluminação Pública</span> 
+                            </label>  
+                            <label class="customizado"> 
+                                <input type="checkbox" class="item" id="checkbox"> 
+                                <span class="teste">IPTU</span> 
+                            </label>  
+                            </div> 
                             <div class="column"> 
                                 <label class="customizado"> 
                                     <input type="checkbox" class="item" id="checkbox"> 
-                                    <span class="teste">Conselho Muncipal</span> 
+                                    <span class="teste">Licenças</span> 
                                 </label> 
                                 <label class="customizado"> 
                                     <input type="checkbox" class="item" id="checkbox"> 
-                                    <span class="teste">Fiscalização</span> 
+                                    <span class="teste">Ouvidoria</span> 
+                                </label> 
+                                <label class="customizado"> 
+                                    <input type="checkbox" class="item" id="checkbox"> 
+                                    <span class="teste">Poda De Àrvores</span> 
                                 </label>
-                                <label class="customizado"> 
-                                    <input type="checkbox" class="item" id="checkbox"> 
-                                    <span class="teste">Iluminação Pública</span> 
-                                </label>  
-                                <label class="customizado"> 
-                                    <input type="checkbox" class="item" id="checkbox"> 
-                                    <span class="teste">IPTU</span> 
-                                </label>  
-                                </div> 
-                                <div class="column"> 
-                                    <label class="customizado"> 
-                                        <input type="checkbox" class="item" id="checkbox"> 
-                                        <span class="teste">Licenças</span> 
-                                    </label> 
-                                    <label class="customizado"> 
-                                        <input type="checkbox" class="item" id="checkbox"> 
-                                        <span class="teste">Ouvidoria</span> 
-                                    </label> 
-                                    <label class="customizado"> 
-                                        <input type="checkbox" class="item" id="checkbox"> 
-                                        <span class="teste">Poda De Àrvores</span> 
-                                    </label>
-                                     
-                                </div> 
+                                    
+                            </div> 
 
-                                <script src="scripts.js"></script>
-                            </div>
-                            <button class="botao1">Salvar</button>
-                            <button class="botao2">Voltar</button>
-                        </form>
-                </section>                           
+                            <script src="scripts.js"></script>
+                        </div>
+                        <button class="botao1">Salvar</button>
+                        <button class="botao2">Voltar</button>
+                    </form>
+            </section>                           
         </nav>
-    </body>
+    </section>
+</body>
 </html>
