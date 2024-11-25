@@ -226,6 +226,7 @@
     justify-content: left;
     align-items: center;
     padding-left: 20%;
+    text-decoration: none;
 }
 
 .botao-lateal-navegacao .icone-menu-lateral{
@@ -282,6 +283,7 @@
     cursor: pointer;
     justify-content: center;
     padding-right: 5%;
+    text-decoration: none;
 }
 
 /* MEDIA */
