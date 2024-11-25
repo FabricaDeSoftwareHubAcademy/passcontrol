@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url(navegacao.css);
 
 *{
     padding: 0;
@@ -132,6 +133,16 @@
     margin-right: 20px;
     font-size: 16px;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.btn:hover{
+    background-color: #181f26;
+    color: var(--verde-control);
+    transition: linear 0.04s;
 }
 
 .navEsqueciSenha{
