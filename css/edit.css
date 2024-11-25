@@ -1,3 +1,8 @@
+*{
+    margin: 0;
+    padding: 0%;
+    box-sizing: border-box;
+}
 
 .quadrado{
     width: 90%;
@@ -186,18 +191,18 @@
     font-size: var(--font-main);
     font-weight: bold;
 }
-/* Esconder o checkbox padrão */
+
 .customizado input[type="checkbox"] {
     position: absolute;
     opacity: 0;
-    cursor: pointer;
+    cursor: pointer;  
 }
 
- /* Criar um elemento customizado */
+
 .customizado .teste {
     position: relative;
     /* height: 50px; */
-    width: 200px;
+    /* width: 200px; */
     /* background-color: #ccc; */
     border-radius: 4px;
     display: inline-block;
@@ -207,11 +212,11 @@
     
 } 
 
-/* Estilo para quando o checkbox estiver selecionado */
+
 /* .customizado input[type="checkbox"]:checked + .teste {
     background-color: #4CAF50;
     border: 1px solid black;
-} */
+}    */
 
 .customizado .teste:after {
     content: "";
@@ -220,22 +225,42 @@
 
 } 
 
-/* Mostrar a marca de seleção */
+.customizado::before {
+    content: ''; 
+    position: relative;
+    left: -10px;
+    top: -1px;
+    width: 10px;
+    height: 10px;
+    border: 1px solid #000000;
+    border-radius: 2px;
+    background-color: white;
+}
+
 .customizado input[type="checkbox"]:checked + .teste:after {
     display: block;
   
 } 
 
-/* Estilo da marca de seleção */
-.customizado  .teste:after {
+.customizado  .teste::before {
     left: -20px;
     top: 5px;
     width: 0px;
     height: 0px;
-    border: solid var(--verde-control);
-    border-width: 0 10px 10px 0;
-    transform: rotate(1deg);
+    
 }
+.customizado  .teste:after {
+    left: -19px;
+    top: 6px;
+    width: 0px;
+    height: 0px;
+    border: solid var(--verde-control);
+    border-width: 2 10px 10px 2;
+    transform: rotate(1deg);
+    
+} 
+
+
 .botao1{
     background-color: var(--cinza-control);
     border-radius: 5px;
