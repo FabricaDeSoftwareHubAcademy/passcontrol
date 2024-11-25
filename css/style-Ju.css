@@ -298,58 +298,120 @@
     border-radius: 2%;
 }
 
-.fundo-guiche-area-chamada {
-    display: flex;
-    /* background-color: aqua; */
-    width: 98%;
-    height: auto;
-    justify-content: center;
-    border-radius: 5px;
-    background-color: rgba(255, 255, 255, 0.329);
-}
-
-.tabela_atendimento-guiche-area-chamada {
-    margin-top: 5px;
-    width: 96%;
-    /* border: 2px solid black; */
-    justify-content: space-around;
-    background-color: rgba(255, 255, 255, 0.3);
-    padding: 0;
-    gap: 0;
-    border-collapse: collapse;
-    /* margin-left: 2%; */
-}
-
-.tabela_atendimento-guiche-area-chamada th {
-    width: 10%;
+.fundo-guiche-area-chamada{
+    width: 90%;
+    height: 70%;
+    background-color: rgb(255, 255, 255,0.5);
+    gap: 15px;
+    margin-top: 2rem;
+  }
+  
+  .tabela_atendimento-guiche-area-chamada {
     border: 1px solid black;
-    background-color: #353D46;
-    font-size: 15px;
+    border-collapse: collapse;
+    background-color: rgb(255, 255, 255,0.5);
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  th, td {
+    border: 1px solid black; 
+    padding: 8px;
+    text-align: left;
+    color: var(--cinza-control);
+  }
+  
+  .tabela_atendimento-guiche-area-chamada th {
+    background-color: var(--cinza-control);
     color: var(--cor-fundo);
+  }
+  
+  .editar{
+    /* width: 10rem; */
+    display: flex;
+    /* flex-direction: row; */
+    justify-content: space-between;
+  }
+  
+.editar a img:hover{
+    content: url(../assets/icons/Group\ 2925.png);
+    transition: 1s;}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 3.75rem;
+    height: 1.375rem;
 }
 
-.tabela_atendimento-guiche-area-chamada td {
-    border: 1px solid #353D46;
-    font-size: 13px;
-    background-color: rgba(255, 255, 255, 0.3);
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
 }
 
-@media screen and (max-width: 1200px) {
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--cor-fundo);
+    transition: 0.4s;
+    border-radius: 34px;
+    border: 1px solid var(--cinza-control);
+}
+
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 1.060625rem;
+    width: 1.04375rem;
+    left: 4px;
+    bottom: 1.8px;
+    background-color: var(--verde-control);
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+
+input:checked + .slider:before {
+    transform: translateX(33px);
+    background-color: red;
+}
+
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #4CAF50;
+}
+
+
+/* @media screen and (max-width: 1200px) {
 
     .principal-chamar-senha {
         left: 7vh;
     }
-}
+} */
 
 
 
 /* MEDIA */
+@media screen and (min-width: 1024px) and (max-width: 1058px) {
+    .guiche_senha-area-chamada p{
+      text-align: center;  
+    }
+}
 
 @media screen and (min-width: 739px) and (max-width: 1024px) {
     *{
         font-size: 22px;
         text-align: center;
         /* background-color: aqua; */
+    }
+    .area-chamada-atendimento{
+        width: 250%;
     }
     .topo-area-chamada{
         margin-top: 1%;
@@ -369,6 +431,12 @@
     }
     .guiche_senha-area-chamada{
         gap: 14px;
+    }
+    .tabela_atendimento-guiche-area-chamada th{
+        font-size: 12px;
+    }
+    .tabela_atendimento-guiche-area-chamada td{
+        font-size: 14px;
     }
     .botao_intervalo-guiche-area-chamada{
         margin-top: 14px;
@@ -417,7 +485,7 @@
 }
 
 
-@media screen and (min-width: 551px) and (max-width: 624px){
+@media screen and (min-width: 556px) and (max-width: 624px){
     *{
         font-size: 18px;
         text-align: center;
@@ -453,7 +521,7 @@
         width: 80%;
     }
     .meio_esquerda-guiche-area-chamada h3{
-        font-size: 16px;
+        font-size: 15px;
     }
     .meio_esquerda-guiche-area-chamada{
         height: 98%;
@@ -470,7 +538,7 @@
         width: 100%;
     }
 }
-@media screen and (min-width: 492px) and (max-width: 550px){
+@media screen and (min-width: 499px) and (max-width: 555px){
     *{
         font-size: 15px;
         text-align: center;
@@ -506,231 +574,14 @@
         width: 80%;
     }
     .meio_esquerda-guiche-area-chamada h3{
-        font-size: 14px;
-    }
-    .meio_esquerda-guiche-area-chamada{
-        height: 98%;
-        width: 110%;
-    }
-    .meio_direita-guiche-area-chamada{
-        height: 90%;
-        width: 150%;
-    }
-    .esquerda-area-chamada{
-        margin-left: 2%;
-    }
-    .botao_intervalo-guiche-area-chamada{
-        width: 100%;
-    }
-}
-@media screen and (min-width: 430px) and (max-width: 491px){
-    *{
-        font-size: 12px;
-        text-align: center;
-    }
-    .topo-area-chamada{
-        margin-top: 1%;
-        justify-content: center;
-        gap: 18%;
-    }
-    .guiche-area-chamada-tl{
-        height: 75%;
-        width: 80%;
-    }
-    .guiche_senha-area-chamada{
-        gap: 10px;
-    }
-    .senha_fila-guiche-area-chamada{
-        height: 75%;
-        width: 80%;
-    }
-    .senhas-guiche-area-chamada{
-        height: 55%;
-        width: 60%;
-    }
-    .tabela_atendimento-guiche-area-chamada th{
-        font-size: 9px;
-    }
-    .tabela_atendimento-guiche-area-chamada td{
-        font-size: 10px;
-    }
-    .botao--guiche-area-chamada{
-        height: 75%;
-        width: 80%;
-    }
-    .meio_esquerda-guiche-area-chamada h3{
-        font-size: 12px;
-    }
-    .meio_esquerda-guiche-area-chamada{
-        height: 98%;
-        width: 110%;
-    }
-    .meio_direita-guiche-area-chamada{
-        height: 90%;
-        width: 150%;
-    }
-    .esquerda-area-chamada{
-        margin-left: 2%;
-    }
-    .botao_intervalo-guiche-area-chamada{
-        width: 100%;
-    }
-}
-
-@media screen and (min-width: 369px) and (max-width: 429px){
-    *{
-        font-size: 10px;
-        text-align: center;
-    }
-    .topo-area-chamada{
-        margin-top: 1%;
-        justify-content: center;
-        gap: 18%;
-        height: 40%;
-    }
-    .guiche-area-chamada-tl{
-        height: 75%;
-        width: 80%;
-    }
-    .guiche_senha-area-chamada{
-        gap: 10px;
-    }
-    .senha_fila-guiche-area-chamada{
-        height: 75%;
-        width: 80%;
-    }
-    .senhas-guiche-area-chamada{
-        height: 55%;
-        width: 60%;
-    }
-    .tabela_atendimento-guiche-area-chamada th{
-        font-size: 9px;
-    }
-    .tabela_atendimento-guiche-area-chamada td{
-        font-size: 10px;
-    }
-    .botao--guiche-area-chamada{
-        height: 75%;
-        width: 80%;
-    }
-    .meio_esquerda-guiche-area-chamada h3{
-        font-size: 10px;
-    }
-    .meio_esquerda-guiche-area-chamada{
-        height: 98%;
-        width: 110%;
-    }
-    .meio_direita-guiche-area-chamada{
-        height: 90%;
-        width: 150%;
-    }
-    .esquerda-area-chamada{
-        margin-left: 2%;
-    }
-    .botao_intervalo-guiche-area-chamada{
-        width: 100%;
-    }
-}
-
-
-
-
-
-/* @media screen and (max-width: 374px) {
-    *{
-        font-size: 11px;
-        text-align: center;
-    }
-    .topo-area-chamada{
-        margin-top: 1%;
-        justify-content: center;
-        gap: 15%;
-    }
-    .guiche-area-chamada-tl{
-        height: 75%;
-        width: 80%;
-    }
-    .senha_fila-guiche-area-chamada{
-        height: 75%;
-        width: 80%;
-    }
-    .senhas-guiche-area-chamada{
-        height: 55%;
-        width: 60%;
-    }
-    .tabela_atendimento-guiche-area-chamada th{
-        font-size: 9px;
-    }
-    .tabela_atendimento-guiche-area-chamada td{
-        font-size: 10px;
-    }
-    .botao--guiche-area-chamada{
-        height: 75%;
-        width: 80%;
-    }
-    .meio_esquerda-guiche-area-chamada h3{
-        font-size: 12px;
-    }
-    .meio_esquerda-guiche-area-chamada{
-        height: 98%;
-        width: 110%;
-    }
-    .meio_direita-guiche-area-chamada{
-        height: 90%;
-        width: 150%;
-    }
-    .esquerda-area-chamada{
-        margin-left: 2%;
-    }
-    .botao_intervalo-guiche-area-chamada{
-        width: 100%;
-    }
-} */
-
-/* @media screen and (min-height: 400px){
-    *{
-        font-size: 18px;
-        text-align: center;
-    }
-    .topo-area-chamada{
-        margin-top: -14px;
-        justify-content: center;
-        gap: 20%;
-    }
-    .guiche-area-chamada-tl{
-        height: 75%;
-        width: 50%;
-    }
-    .senha_fila-guiche-area-chamada{
-        height: 75%;
-        width: 50%;
-    }
-    .botao_intervalo-guiche-area-chamada{
-        margin-top: 5%;
-    }
-    .senhas-guiche-area-chamada{
-        height: 55%;
-        width: 30%;
-    }
-    .tabela_atendimento-guiche-area-chamada th{
-        font-size: 15px;
-    }
-    .tabela_atendimento-guiche-area-chamada td{
         font-size: 13px;
     }
-    .botao--guiche-area-chamada{
-        height: 75%;
-        width: 80%;
-    }
-    .meio_esquerda-guiche-area-chamada h3{
-        font-size: 18px;
-    }
     .meio_esquerda-guiche-area-chamada{
         height: 98%;
-        width: 140%;
+        width: 110%;
     }
     .meio_direita-guiche-area-chamada{
-        height: 110px;
+        height: 90%;
         width: 150%;
     }
     .esquerda-area-chamada{
@@ -739,103 +590,41 @@
     .botao_intervalo-guiche-area-chamada{
         width: 100%;
     }
-} */
-
-/* @media screen and (max-width: 900px) {
+}
+@media screen and (min-width: 446px) and (max-width: 498px){
     *{
-        font-size: 14px;
-        text-align: center;
-    }
-    .topo-area-chamada{
-        margin-top: -14px;
-        justify-content: center;
-        gap: 18%;
-        height: 24%;
-        width: 90%;
-        margin-right: 15px;
-    }
-    .guiche-area-chamada-tl{
-        height: 55%;
-        width: 50%;
-    }
-    .senha_fila-guiche-area-chamada{
-        height: 55%;
-        width: 50%;
-    }
-    .botao_intervalo-guiche-area-chamada{
-        margin-top: 5%;
-    }
-    .senhas-guiche-area-chamada{
-        height: 55%;
-        width: 30%;
-    }
-    .tabela_atendimento-guiche-area-chamada th{
-        font-size: 15px;
-    }
-    .tabela_atendimento-guiche-area-chamada td{
-        font-size: 13px;
-    }
-    .botao--guiche-area-chamada{
-        height: 75%;
-        width: 80%;
-    }
-    .meio_esquerda-guiche-area-chamada h3{
-        font-size: 18px;
-    }
-    .meio_esquerda-guiche-area-chamada{
-        height: 98%;
-        width: 140%;
-    }
-    .meio_direita-guiche-area-chamada{
-        height: 150px;
-        width: 800%;
-    }
-    .esquerda-area-chamada{
-        margin-left: 2%;
-    }
-    .botao_intervalo-guiche-area-chamada{
-        width: 100%;
-        margin-top: 10%;
-    }
-    .botao_intervalo-guiche-area-chamada a{
-        display: flex;
-        margin-left: 8px;
-        gap: 3px;
-    }
-    .botao_intervalo-guiche-area-chamada img{
-        display: flex;
-        margin-left: 8px;
-    }
-} */
-
-
-/* @media screen and (min-width: 1408px){
-    *{
-        font-size: 18px;
+        font-size: 12px;
         text-align: center;
     }
     .topo-area-chamada{
         margin-top: 1%;
         justify-content: center;
         gap: 18%;
+        height: 35%;
+    }
+    .direita-guiche-area-chamada{
+        height: 90%;
     }
     .guiche-area-chamada-tl{
         height: 75%;
-        width: 60%;
+        width: 80%;
+    }
+    .guiche_senha-area-chamada{
+        gap: 10px;
     }
     .senha_fila-guiche-area-chamada{
         height: 75%;
-        width: 60%;
+        width: 80%;
     }
     .senhas-guiche-area-chamada{
         height: 55%;
-        width: 30%;
+        width: 60%;
     }
     .tabela_atendimento-guiche-area-chamada th{
-        font-size: 15px;
+        font-size: 9px;
     }
     .tabela_atendimento-guiche-area-chamada td{
-        font-size: 13px;
+        font-size: 10px;
     }
     .botao--guiche-area-chamada{
         height: 75%;
@@ -858,4 +647,305 @@
     .botao_intervalo-guiche-area-chamada{
         width: 100%;
     }
-} */
+}
+
+@media screen and (min-width: 385px) and (max-width: 445px){
+    *{
+        font-size: 10px;
+        text-align: center;
+    }
+    .topo-area-chamada{
+        margin-top: 1%;
+        justify-content: center;
+        gap: 2%;
+        height: 30%;
+        width: 120%;
+    }
+    .guiche-area-chamada-tl{
+        height: 75%;
+        width: 80%;
+    }
+    .guiche_senha-area-chamada{
+        gap: 10px;
+    }
+    .senha_fila-guiche-area-chamada{
+        height: 75%;
+        width: 80%;
+    }
+    .senhas-guiche-area-chamada{
+        height: 55%;
+        width: 60%;
+    }
+    .tabela_atendimento-guiche-area-chamada th{
+        font-size: 9px;
+    }
+    .tabela_atendimento-guiche-area-chamada td{
+        font-size: 10px;
+    }
+    .botao--guiche-area-chamada{
+        height: 75%;
+        width: 80%;
+    }
+    .meio_esquerda-guiche-area-chamada h3{
+        font-size: 10px;
+    }
+    .meio_esquerda-guiche-area-chamada{
+        height: 98%;
+        width: 110%;
+    }
+    .meio_direita-guiche-area-chamada{
+        height: 90%;
+        width: 150%;
+    }
+    .esquerda-area-chamada{
+        margin-left: 2%;
+    }
+    .botao_intervalo-guiche-area-chamada{
+        width: 100%;
+    }
+}
+@media screen and (min-width: 354px) and (max-width: 384px){
+    *{
+        font-size: 10px;
+        text-align: center;
+    }
+    .topo-area-chamada{
+        margin-top: 1%;
+        justify-content: center;
+        gap: 3%;
+        height: 30%;
+        width: 120%;
+    }
+    .guiche-area-chamada-tl{
+        height: 75%;
+        width: 80%;
+    }
+    .guiche_senha-area-chamada{
+        gap: 10px;
+    }
+    .senha_fila-guiche-area-chamada{
+        height: 75%;
+        width: 80%;
+    }
+    .senhas-guiche-area-chamada{
+        height: 55%;
+        width: 60%;
+    }
+    .tabela_atendimento-guiche-area-chamada th{
+        font-size: 8px;
+    }
+    .tabela_atendimento-guiche-area-chamada td{
+        font-size: 8px;
+    }
+    .botao--guiche-area-chamada{
+        height: 75%;
+        width: 80%;
+    }
+    .area-botao--guiche-area-chamada{
+        margin-right: 8%;
+    }
+    .meio_esquerda-guiche-area-chamada h3{
+        font-size: 9px;
+    }
+    .meio_esquerda-guiche-area-chamada{
+        height: 98%;
+        width: 110%;
+    }
+    .meio_direita-guiche-area-chamada{
+        height: 80%;
+        width: 150%;
+    }
+    .esquerda-area-chamada{
+        margin-left: 2%;
+    }
+    .botao_intervalo-guiche-area-chamada{
+        width: 100%;
+    }
+}
+@media screen and (min-width: 250px) and (max-width: 353px){
+    *{
+        font-size: 9px;
+        text-align: center;
+    }
+    .topo-area-chamada{
+        margin-top: 1%;
+        justify-content: center;
+        gap: 18%;
+        height: 30%;
+    }
+    .guiche-area-chamada-tl{
+        height: 75%;
+        width: 80%;
+    }
+    .guiche_senha-area-chamada{
+        gap: 10px;
+    }
+    .direita-guiche-area-chamada{
+        height: 90%;
+    }
+    .senha_fila-guiche-area-chamada{
+        height: 75%;
+        width: 80%;
+    }
+    .senhas-guiche-area-chamada{
+        height: 55%;
+        width: 60%;
+    }
+    .tabela_atendimento-guiche-area-chamada th{
+        font-size: 8px;
+    }
+    .tabela_atendimento-guiche-area-chamada td{
+        font-size: 8px;
+    }
+    .botao--guiche-area-chamada{
+        height: 75%;
+        width: 80%;
+    }
+    .area-botao--guiche-area-chamada{
+        margin-right: 10%;
+    }
+    .meio_esquerda-guiche-area-chamada h3{
+        font-size: 8px;
+    }
+    .meio_esquerda-guiche-area-chamada{
+        height: 98%;
+        width: 110%;
+    }
+    .meio_direita-guiche-area-chamada{
+        height: 80%;
+        width: 150%;
+    }
+    .esquerda-area-chamada{
+        margin-left: 2%;
+    }
+    .botao_intervalo-guiche-area-chamada{
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 150px) and (max-width: 249px){
+    *{
+        font-size: 7px;
+        text-align: center;
+    }
+    .topo-area-chamada{
+        margin-top: 1%;
+        justify-content: center;
+        gap: 18%;
+        height: 28%;
+    }
+    .guiche-area-chamada-tl{
+        height: 75%;
+        width: 80%;
+    }
+    .guiche_senha-area-chamada{
+        gap: 10px;
+    }
+    .direita-guiche-area-chamada{
+        height: 90%;
+    }
+    .area-botao--guiche-area-chamada{
+        margin-right: 20%;
+    }
+    .senha_fila-guiche-area-chamada{
+        height: 75%;
+        width: 80%;
+    }
+    .senhas-guiche-area-chamada{
+        height: 55%;
+        width: 60%;
+    }
+    .tabela_atendimento-guiche-area-chamada th{
+        font-size: 8px;
+    }
+    .tabela_atendimento-guiche-area-chamada td{
+        font-size: 8px;
+    }
+    .botao--guiche-area-chamada{
+        height: 75%;
+        width: 80%;
+    }
+    .meio_esquerda-guiche-area-chamada h3{
+        font-size: 8px;
+    }
+    .meio_esquerda-guiche-area-chamada{
+        height: 98%;
+        width: 110%;
+    }
+    .meio_direita-guiche-area-chamada{
+        height: 70%;
+        width: 150%;
+    }
+    .esquerda-area-chamada{
+        margin-left: 2%;
+    }
+    .botao_intervalo-guiche-area-chamada{
+        width: 100%;
+        height: 25%;
+    }
+}
+
+@media screen and (min-width: 50px) and (max-width: 150px){
+    *{
+        font-size: 5px;
+        text-align: center;
+    }
+    .topo-area-chamada{
+        margin-top: 1%;
+        justify-content: center;
+        gap: 18%;
+        height: 18%;
+    }
+    .guiche-area-chamada-tl{
+        height: 75%;
+        width: 80%;
+    }
+    .guiche_senha-area-chamada{
+        gap: 10px;
+    }
+    .direita-guiche-area-chamada{
+        height: 90%;
+    }
+    .area-botao--guiche-area-chamada{
+        margin-right: 20%;
+    }
+    .senha_fila-guiche-area-chamada{
+        height: 75%;
+        width: 80%;
+    }
+    .senhas-guiche-area-chamada{
+        height: 55%;
+        width: 60%;
+    }
+    .tabela_atendimento-guiche-area-chamada th{
+        font-size: 8px;
+    }
+    .tabela_atendimento-guiche-area-chamada td{
+        font-size: 8px;
+    }
+    .botao--guiche-area-chamada{
+        height: 75%;
+        width: 80%;
+    }
+    .meio_esquerda-guiche-area-chamada h3{
+        font-size: 8px;
+    }
+    .meio_esquerda-guiche-area-chamada{
+        height: 98%;
+        width: 110%;
+    }
+    .meio_direita-guiche-area-chamada{
+        height: 70%;
+        width: 150%;
+    }
+    .esquerda-area-chamada{
+        margin-left: 2%;
+    }
+    .botao_intervalo-guiche-area-chamada{
+        width: 100%;
+        height: 25%;
+    }
+}
+
+
+
