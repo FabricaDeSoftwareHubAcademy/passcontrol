@@ -1,3 +1,6 @@
+@import url(navegacao.css);
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
 
 .topo-info-consultar-fila {
     width: 100%;
@@ -24,7 +27,8 @@
     align-items: end;
     display: flex;
     /* background-color: coral; */
-    margin-left: 3%;
+    margin-left: 2.5%;
+    margin-top: -2%;
 }
 
 .topo-esquerda-consultar-fila h3 {
@@ -46,7 +50,22 @@
     /* background-color: darkturquoise; */
 }
 
-
+.senhas-guiche-area-chamada {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    height: 65%;
+    /* background-color: aliceblue; */
+    background-color: rgba(255, 255, 255, 0.3);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: 4px 4px 8px 1px rgba(0, 0, 0, 0.38);
+    font-size: 28px;
+    font-weight: 700;
+    color: #33404D;
+    border-radius: 2%;
+}
 
 
 .principal-consultar-fila{
@@ -78,37 +97,106 @@
     /* background-color: red; */
 }
 
-.tabela_atendimento-consulta-da-fila{
-    margin-top: 50px;
+
+
+.fundo-guiche-area-chamada{
     width: 96%;
-    /* border: 2px solid black; */
-    justify-content: space-around;
-    background-color: rgba(255, 255, 255, 0.3);
-    padding: 0;
-    gap: 0;
-    border-collapse: collapse;
-    /* margin-left: 2%; */
+    height: 70%;
+    background-color: rgb(255, 255, 255,0.5);
+    gap: 15px;
+    margin-top: 3%;
+    border-radius: 5px;
 }
 
-.tabela_atendimento-consulta-da-fila th {
-    width: 10%;
+.tabela_atendimento-guiche-area-chamada {
     border: 1px solid black;
-    background-color: #353D46;
-    font-size: 15px;
+    border-collapse: collapse;
+    background-color: rgb(255, 255, 255,0.5);
+    width: 95%;
+    margin-bottom: 20px;
+    margin-left: 2.5%;
+}
+
+th, td {
+    border: 1px solid black; 
+    padding: 8px;
+    text-align: left;
+    color: var(--cinza-control);
+}
+
+.tabela_atendimento-guiche-area-chamada th {
+    background-color: var(--cinza-control);
     color: var(--cor-fundo);
 }
 
-.tabela_atendimento-consulta-da-fila td {
-    border: 1px solid #353D46;
-    font-size: 13px;
-    background-color: rgba(255, 255, 255, 0.3);
+.editar{
+    display: flex;
+    /* flex-direction: row; */
+    justify-content: space-between;
+}
+
+.editar a img:hover{
+    content: url(../assets/icons/Group\ 2925.png);
+    transition: 1s;}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 3.75rem;
+    height: 1.375rem;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--cor-fundo);
+    transition: 0.4s;
+    border-radius: 34px;
+    border: 1px solid var(--cinza-control);
+}
+
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 1.060625rem;
+    width: 1.04375rem;
+    left: 4px;
+    bottom: 1.8px;
+    background-color: var(--verde-control);
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+
+input:checked + .slider:before {
+    transform: translateX(33px);
+    background-color: red;
+}
+
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #4CAF50;
 }
 
 
 
-
-
-
+.input-search input{
+    border-radius: 5px 5px 0px 0px;
+    border: 1px solid rgb(128, 128, 128); 
+    width: 10.125rem;
+    margin-left: 4%;
+  }
 
 
 
@@ -128,22 +216,32 @@
     margin: 0;
     padding: 0;
 }
-.botao-voltar-consultar-fila {
-    background-color: var(--cinza-control);
-    color: #f9f9f9;
+.div-botao-info{
+    width: 90%;
+    height: 7%;
+    align-items: first baseline;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 75%;
-    height: 49px;
+    flex-direction: column;
+}
+.principal-consultar-fila .div-botao-info button{
+    width: 100px;
+    height: 40px;
+    background-color: var(--cinza-control);
+    color: rgb(255, 255, 255);
     border-radius: 5px;
-    font-size: 28px;
-    font-weight: 700;
-    border: none; 
+    outline: none;
+    border: none;
+    margin-top: 15px;
+    cursor: pointer;
+    font-size: 12px;
 }
-.botao-voltar-consultar-fila a{
-    text-decoration: none;
-    color: inherit; /* o link herda a cor do botão */
+.principal-consultar-fila .div-botao-info button:hover {
+    text-decoration: underline;
+    color: var(--verde-control);
+    filter: drop-shadow(4px 4px 2px gray);
 }
-
-
+.input-search input{
+    border-radius: 5px 5px 0px 0px;
+    border: 1px solid rgb(128, 128, 128); 
+    width: 10.125rem;
+}
