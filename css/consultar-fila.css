@@ -1,3 +1,4 @@
+@import url(navegacao.css);
 
 .topo-info-consultar-fila {
     width: 100%;
@@ -46,8 +47,17 @@
     /* background-color: darkturquoise; */
 }
 
-
-
+.senhas-guiche-area-chamada{
+    width: 15vh;
+    height: 10vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    box-shadow: 4px 4px 8px 1px rgba(0, 0, 0, 0.38);
+    background-color: rgba(250, 250, 250, 0.6);
+}
 
 .principal-consultar-fila{
     display: flex;
@@ -55,7 +65,7 @@
     align-items: center;
     z-index: 1;
     position: absolute;
-    top: 157px;
+    top: 17vh;
     right: 2vh;
     left: 27vh;
     bottom: 2vh;
@@ -66,10 +76,11 @@
     scroll-behavior: smooth;
     /* background-color: blue; */
 }
+
 .area-comum-consultar-fila {
     width: 100%;
     height: 100%;
-    background-color: #bfbfbf46;
+    /* background-color: #bfbfbf46; */
     display: flex;
     flex-direction: column;
     border-radius: 5px;
@@ -78,7 +89,11 @@
     /* background-color: red; */
 }
 
-.tabela_atendimento-consulta-da-fila{
+.fundo-guiche-area-chamada{
+    /* background-color: var(--cor-fundo); */
+}
+
+.tabela_atendimento-guiche-area-chamada{
     margin-top: 50px;
     width: 96%;
     /* border: 2px solid black; */
@@ -90,7 +105,7 @@
     /* margin-left: 2%; */
 }
 
-.tabela_atendimento-consulta-da-fila th {
+.tabela_atendimento-guiche-area-chamada th {
     width: 10%;
     border: 1px solid black;
     background-color: #353D46;
@@ -98,19 +113,11 @@
     color: var(--cor-fundo);
 }
 
-.tabela_atendimento-consulta-da-fila td {
+.tabela_atendimento-guiche-area-chamada td {
     border: 1px solid #353D46;
     font-size: 13px;
     background-color: rgba(255, 255, 255, 0.3);
 }
-
-
-
-
-
-
-
-
 
 .area-botao-voltar-fila {
     display: flex;

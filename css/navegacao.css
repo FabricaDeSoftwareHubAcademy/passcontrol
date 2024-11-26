@@ -14,7 +14,6 @@
     font-family: var(--font-main);
     font-style: bold;
     list-style: none;
-    z-index: 1000;
 }
 
 .control-body-navegacao{
@@ -30,6 +29,7 @@
     align-items: start;
     justify-content: top;
     overflow: hidden;
+    z-index: 10;
 }
 
 /* TOPO */
@@ -42,7 +42,7 @@
     display: flex;
     flex-direction: column;
     justify-content: end;
-    z-index: 1;
+    z-index: 10;
 }
 
 .nav-cabeca{
@@ -106,6 +106,7 @@
     justify-content: center;
     right: 2%;
     border-radius: 10px;
+    z-index: 10;
 }
 
 .usu-detalhes img{
@@ -262,10 +263,6 @@
 .sair-navegacao .botao-lateal-navegacao:hover{
     background-color: #181f26;
     color: var(--verde-control);
-}
-
-.sair-navegacao .botao-lateal-navegacao .icone-menu-lateral-sair{
-    width: auto;
 }
 
 .sair-navegacao .botao-lateal-navegacao{
