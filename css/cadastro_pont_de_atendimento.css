@@ -1,0 +1,195 @@
+
+main {  
+    z-index: 1; 
+    position: absolute; 
+    background-color:rgba(205, 205, 205, 0.52);
+    top: 157px; 
+    right: 2vh; 
+    left: 27vh; 
+    bottom: 2vh; 
+    justify-content: center;
+    align-items: start; 
+    overflow: auto;
+    scroll-behavior: smooth; 
+}
+.cubo-branco {
+    background-color: rgba(255, 255, 255, 0.52);
+    z-index: 1; 
+    position: absolute; 
+    top: 50px; 
+    right: 7vh; 
+    left: 7vh; 
+    bottom: 7vh; 
+    justify-content: center;
+    align-items: start; 
+    overflow: auto;
+    scroll-behavior: smooth; 
+}
+.titulo {
+    font-size: 30px; /* Tamanho do texto para telas grandes */
+    margin-top: 15px;
+    text-align: center; /* Centraliza o texto horizontalmente */
+    color: var(--cinza-control);
+}
+
+/* Responsividade */
+@media (max-width: 320px) {
+    .titulo {
+        font-size: 14px; /* Ajusta o tamanho da fonte para telas pequenas */
+        margin-top: 10px; /* Ajusta a margem superior para telas pequenas */
+    }
+}
+
+.sub-titulo {
+    font-size: 23px;
+    margin-top: 100px;
+    margin-left: 5%;
+    color: var(--cinza-control);
+}
+
+.barra-pesquisa {
+    width: 20%;
+    margin-left: 5%;
+    margin-top: 0.5%;
+}
+
+.input-pesquisa {
+    width: 100%;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    padding: 15px;
+}
+.sub-titulo2 {
+    font-size: 20px;
+    margin-top: 60px;
+    margin-left: 5%;
+    color: var(--cinza-control);
+}
+
+.barra-pesquisa1 {
+    width: 20%;
+    margin-left: 5%;
+    margin-top: 0.5%;
+    position: relative;
+}
+
+
+.botoes {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15%;
+    width: 20%;
+    margin-left: 75%; 
+}
+
+.btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.voltar {
+    background-color: #2d3945; 
+    color: aliceblue; 
+}
+ 
+
+.salvar {
+    background-color: #2d3945; 
+    color: aliceblue; 
+}
+
+
+.voltar:hover, .salvar:hover {
+    background-color: #2d3945; 
+    color: #4CAF50; 
+}
+
+@media (max-width: 320px) {
+    .titulo {
+        font-size: 14px; 
+        margin-top: 10px; 
+    }
+    .botoes {
+        width: 80%; 
+        margin-left: 10%; 
+    }
+
+    .btn {
+        font-size: 14px; 
+        width: 100%; 
+        padding: 12px 0; 
+        margin-bottom: 10px; 
+    }
+}
+
+
+@media (max-width: 320px) {
+    main {
+        top: 100px; 
+        left: 10px; 
+        right: 10px; 
+        width: 90%; 
+    }
+    .cubo-branco {
+        top: 60px; 
+        left: 60px; 
+        width: 70%;
+    }
+
+
+    .titulo {
+        font-size: 14px; 
+        margin-left: 5%; 
+    }
+
+    .sub-titulo {
+        font-size: 12px; 
+        margin-top: 40px;
+    }
+    .sub-titulo2{
+        font-size: 12px; 
+        margin-top: 40px; 
+    }
+
+    .barra-pesquisa, .barra-pesquisa1 {
+        width: 75%; 
+        margin-left: 5%; 
+        margin-top: 10px;
+    }
+
+    .input-pesquisa {
+        padding: 8px; 
+        width: 100%; 
+        font-size: 12px; 
+    }
+
+    .botoes {
+        display: flex;
+        flex-direction: column; 
+        justify-content: flex-start; 
+        align-items: flex-start; 
+        margin-top: 20px; 
+        width: 60%; 
+        margin-left: 30%;
+    }
+    .btn {
+        font-size: 12px; 
+        width: 50%; 
+        padding: 5px; 
+        margin-bottom: 10px;
+    }
+
+    .voltar, .salvar {
+        background-color: #2d3945; 
+        color: white;
+    }
+
+    .voltar:hover, .salvar:hover {
+        background-color: #4CAF50; 
+        color: white; 
+    }
+}
