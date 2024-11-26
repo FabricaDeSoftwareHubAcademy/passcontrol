@@ -1,0 +1,595 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url(navegacao.css);
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: inter;
+    font-style: bold;
+}
+
+.login{
+    min-height: 100vh;
+    background-image: url(./image/background.png);
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-size: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: white;
+}
+
+.containerLogin{
+    width: 1400px;
+    height: 700px;
+    display: flex;
+}
+.animBox{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 10px 0 0 10px;
+    background-color: rgba(198, 196, 196, 0.2);
+}
+.titlePass{
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+}
+.titlePass h1{
+    font-size: 50px;
+    font-weight: 600;
+    color: #33404D;
+}
+
+.card{
+    width: 50%;
+    backdrop-filter: blur(5px);
+    background-color: rgba(198, 196, 196, 0.2);
+    border-radius: 0 10px 10px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+}
+.title{
+    text-align: center;
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    color: #33404D;
+
+}
+.formBox{
+    width: 75%;
+    height: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.formBox .group{
+    width: 80%;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+}
+.senha{
+    margin-top: 30px;
+}
+
+.formBox .group label{
+    color: #33404D;
+    font-weight: bold;
+    font-size: 23px;
+    display: block;
+    /* margin-bottom: 3px; */
+}
+
+.formBox .group input{
+    width: 100%;
+    height: 40px;
+    border-radius: 10px;
+    border: 1px solid #33404D;
+    padding: 15px;
+    font-size: 20px;
+    font-weight: 600;
+    outline: none;    
+}
+.visualizaSenha{
+    width: 1.3rem;
+    cursor: pointer;
+}
+.formBox .group input:hover{
+    border: 3px solid #3aa867;
+}
+.formBox .group input:focus{
+    border: 3px solid #3aa867;
+}
+.btnEntrar{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin-top: 20%;
+}
+.btn{
+    width: 100px;
+    height: 40px;
+    background-color: #33404D;
+    color: white;
+    border-radius: 12px;
+    margin-right: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.btn:hover{
+    background-color: #181f26;
+    color: var(--verde-control);
+    transition: linear 0.04s;
+}
+
+.navEsqueciSenha{
+    width: 80%;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin-top: 10px;
+}
+.navEsqueciSenha li{
+    font-size: 20px;
+    list-style: none;
+}
+.navEsqueciSenha li a{
+    text-decoration: none;   
+    color: #33404F;
+}
+
+.GroupLine{
+    width: 20px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(198, 196, 196, 0.2);
+}
+.line1{
+    width: 2px;
+    height: 40%;
+    background-color: #3aa867;
+    border-radius: 0 0 5px 5px;
+}
+.line2{
+    width: 2px;
+    height: 40%;
+    background-color: #3aa867;
+    border-radius: 5px 5px 0 0 ;
+}
+
+.arrow{
+    display: flex;
+    flex-direction: column;
+    height: 20%;
+    justify-content: space-evenly;
+}
+.setas{
+    color: green;
+    font-size: 20px;
+    font-weight: 800;
+    /* transform: rotate(90deg); */
+}
+
+/* animation Logo */
+
+*{
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.containerImagens {
+    position: relative;
+    width: 30%; 
+    height: 200px; 
+    /* margin-top: 2;0%; */
+}
+
+.imagem {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; 
+    height: auto;
+    pointer-events: none; 
+}
+
+.imagemTop {
+    z-index: 3;
+    top: 0px; 
+    animation: animationTop 6s infinite linear;
+}
+
+.imagemMid {
+    z-index: 2;
+    top: 25px; 
+    animation: animationMid 6s infinite linear;
+}
+
+.imagemBot {
+    z-index: 1;
+    top: 50px; 
+    animation: animationBot 6s infinite linear;
+}
+
+@keyframes animationTop {
+    0%{
+        top: 0px;
+        left: 0px;
+    }
+    25%{
+        top: -50px;
+        left: 0px;
+    }
+    50%{
+        top: -50px;
+        left: -50px;
+    }
+    75%{
+        top: -50px;
+        left: 50px;
+    }
+    100%{
+        top: 0px;
+        left: 0px;
+    }
+}
+@keyframes animationMid {
+    0%{
+        /* top: 100px; */
+        left: 0px;
+    }
+    25%{
+        /* top: 60px; */
+        left: 0px;
+    }
+    50%{
+        /* top: 60px; */
+        left: 50px;
+    }
+    75%{
+        /* top: 60px; */
+        left: -50px;
+    }
+    100%{
+        /* top: 100px; */
+        left: 0px;
+    }
+}
+@keyframes animationBot {
+    0%{
+        top: 50px;
+        left: 0px;
+    }
+    25%{
+        top: 100px;
+        left: 0px;
+    }
+    50%{
+        top: 100px;
+        left: -50px;
+    }
+    75%{
+        top: 100px;
+        left: 50px;
+    }
+    100%{
+        top: 50px;
+        left: 0px;
+    }
+}
+
+.GroupLineResponsive{
+    display: none;
+}
+
+
+
+@media (min-width: 0px) and (max-width: 600px){
+    .login{
+        background-size: 60%;
+        /* align-items: normal; */
+    }
+    .GroupLineResponsive{
+        display: flex;
+    }
+    .GroupLineResponsive{
+        width: 20px;
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .lineResponsive{
+        width: 2px;
+        height: 90%;
+        background-color: #3aa867;
+        border-radius: 0 0 5px 5px;
+    }
+    .setaRight{
+        transform: rotate(180deg);
+    }
+    /* box da animação  */
+    .containerLogin{
+        flex-direction: column;
+    }
+    .animBox{
+        width: 100%;
+        height: 150px;
+        border-radius: 10px 10px 0 0;
+        flex-direction: row;
+    }
+    .titlePass{
+        margin-top: 0px;
+        width: 50%;
+        height: 100%;
+        margin-left: 20px;
+
+    }
+    .titlePass h1{
+        font-size: 30px;
+        margin-left: 30px;
+    }
+
+    /* linha mid */
+    .GroupLine{
+        display: none;
+    }
+
+    /* fomulario */
+    .card{
+        width: 100%;
+        height: 100%;
+        border-radius: 0 0 10px 10px;
+        padding: 20px;
+    }
+    .title{
+        font-size: 30px;
+        margin-top: 30px;
+    }
+    .formBox{
+        width: 100%;
+        justify-content: normal;
+    }
+    .user{
+        margin-top: 0px;
+    }
+    .senha{
+        margin-top: 30px;
+    }
+
+
+
+    /* animacao logo */
+    .containerImagens{
+        width: 30%;
+        height: 40%;
+    }
+    .imagemTop {
+        z-index: 3;
+        top: 10px; 
+        animation: animationTop 6s infinite linear;
+    }
+    
+    .imagemMid {
+        z-index: 2;
+        top: 12px; 
+        animation: animationMid 6s infinite linear;
+    }
+    
+    .imagemBot {
+        z-index: 1;
+        top: 24px; 
+        animation: animationBot 6s infinite linear;
+    }
+    
+    @keyframes animationTop {
+        0%{
+            top: 0px;
+            left: 0px;
+        }
+        25%{
+            top: -8px;
+            left: 0px;
+        }
+        50%{
+            top: -8px;
+            left: -25px;
+        }
+        75%{
+            top: -8px;
+            left: 25px;
+        }
+        100%{
+            top: 0px;
+            left: 0px;
+        }
+    }
+    
+    @keyframes animationMid {
+        0%{
+            /* top: 100px; */
+            left: 0px;
+        }
+        25%{
+            /* top: 60px; */
+            left: 0px;
+        }
+        50%{
+            /* top: 60px; */
+            left: 25px;
+        }
+        75%{
+            /* top: 60px; */
+            left: -25px;
+        }
+        100%{
+            /* top: 100px; */
+            left: 0px;
+        }
+    }
+    
+    @keyframes animationBot {
+        0%{
+            top: 24px;
+            left: 0px;
+        }
+        25%{
+            top: 35px;
+            left: 0px;
+        }
+        50%{
+            top: 35px;
+            left: -25px;
+        }
+        75%{
+            top: 35px;
+            left: 25px;
+        }
+        100%{
+            top: 24px;
+            left: 0px;
+        }
+    }
+}
+
+
+@media (min-width: 601px) and (max-width: 970px){
+
+    
+
+    .login{
+        background-size: 40%;
+    }
+
+    .titlePass h1{
+        /* font-size: 25px; */
+    }
+    .title{
+        font-size: 30px;
+    }
+    .formBox{
+        width: 95%;
+    }
+
+       /* animacao logo */
+
+    .containerImagens{
+        width: 50%;
+    }
+       .imagemTop {
+        z-index: 3;
+        top: 10px; 
+        animation: animationTop 6s infinite linear;
+    }
+    
+    .imagemMid {
+        z-index: 2;
+        top: 12px; 
+        animation: animationMid 6s infinite linear;
+    }
+    
+    .imagemBot {
+        z-index: 1;
+        top: 24px; 
+        animation: animationBot 6s infinite linear;
+    }
+    
+    @keyframes animationTop {
+        0%{
+            top: 0px;
+            left: 0px;
+        }
+        25%{
+            top: -8px;
+            left: 0px;
+        }
+        50%{
+            top: -8px;
+            left: -25px;
+        }
+        75%{
+            top: -8px;
+            left: 25px;
+        }
+        100%{
+            top: 0px;
+            left: 0px;
+        }
+    }
+    
+    @keyframes animationMid {
+        0%{
+            /* top: 100px; */
+            left: 0px;
+        }
+        25%{
+            /* top: 60px; */
+            left: 0px;
+        }
+        50%{
+            /* top: 60px; */
+            left: 25px;
+        }
+        75%{
+            /* top: 60px; */
+            left: -25px;
+        }
+        100%{
+            /* top: 100px; */
+            left: 0px;
+        }
+    }
+    
+    @keyframes animationBot {
+        0%{
+            top: 24px;
+            left: 0px;
+        }
+        25%{
+            top: 35px;
+            left: 0px;
+        }
+        50%{
+            top: 35px;
+            left: -25px;
+        }
+        75%{
+            top: 35px;
+            left: 25px;
+        }
+        100%{
+            top: 24px;
+            left: 0px;
+        }
+    }
+}

@@ -1,20 +1,23 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- TROCA TÍTULO QUANDO FOR UTILIZAR -->
-    <title>Navegação PassControl</title> 
-    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- TROCA TÍTULO QUANDO FOR UTILIZAR -->
+        <title>Navegação PassControl</title> 
+        
+        
+        <!-- IMPORT DA FONTE -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+        
+        <!-- IMPORT DO CSS -->
+        <link rel="stylesheet" href="../css/navegacao.css">
 
-    <!-- IMPORT DA FONTE -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-
-    <!-- IMPORT DO CSS -->
-    <link rel="stylesheet" href="../css/navegacao.css">
+        <!-- IMPORT DO JS -->
+        <script src="../js/navegacao-menu-lateral.js" defer></script>
 
 </head>
 <body class="control-body-navegacao">
@@ -40,48 +43,57 @@
                 </div>
             </div>
         </nav>
+        <div class="dark-area"></div>
     </header>
+
     <!-- MENU LATERAL -->
+    <button class="botao-menu-mobile">
+        <img class="icone-menu-lateral" src="../assets/icons/DropDownIcon.svg" alt="MENU">
+    </button>
     <div class="area-lateral-navegacao">
         <nav class="menu-lateral-navegacao">
 
             <div class="botao-navegacao">
-                <button class="botao-lateal-navegacao">
+                <a class="botao-lateal-navegacao" href="atendimento.html">
                     <img class="icone-menu-lateral" src="../assets/icons/atend.svg" alt="ICONE ATENDIMENTO">
                     <div class="texto-bott">Atendimento</div>
-                </button>
+                </a>
             </div>
             <div class="botao-navegacao">
-                <button class="botao-lateal-navegacao">
+                <a class="botao-lateal-navegacao" href="Monitor.html">
                     <img class="icone-menu-lateral" src="../assets/icons/monitor.svg" alt="ICONE MONITOR">
                     <div class="texto-bott">Monitor</div>
-                </button>
+                </a>
             </div>
             <div class="botao-navegacao">
-                <button class="botao-lateal-navegacao">
+                <a class="botao-lateal-navegacao" href="">
                     <img class="icone-menu-lateral" src="../assets/icons/nota.svg" alt="ICONE RELATORIOS">
                     <div class="texto-bott">Relatórios</div>
-                </button>
+                </a>
             </div>
             <div class="botao-navegacao">
-                <button class="botao-lateal-navegacao">
+                <a class="botao-lateal-navegacao" href="menuadm_usuario.html">
                     <img class="icone-menu-lateral" src="../assets/icons/gestao.svg" alt="ICONE GESTAO">
                     <div class="texto-bott">Gestão</div>
-                </button>
+                </a>
             </div>
         </nav>
         <div class="sair-navegacao">
-            <button class="botao-lateal-navegacao">
+            <a class="botao-lateal-navegacao" href="login.html">
                 <img class="icone-menu-lateral-sair" src="../assets/icons/sair.svg" alt="ICONE SAIR">
                 <div class="texto-bott">Sair</div>
-            </button>
+            </a>
         </div>
         
     </div>
 
-        <section class="NOME_DA_AREA"></section>
-            <!-- INICIO DA ÁREA ÚTIL DA PÁGINA -->
-            <!-- INSIRA O CORPO DA SUA PÁGINA A PARTIR DESTE PONTO -->
-         
+    <section class="Area-Util-Projeto">
+        <!-- INICIO DA ÁREA ÚTIL DA PÁGINA -->
+        <!-- INSIRA O CORPO DA SUA PÁGINA A PARTIR DESTE PONTO -->
+
+
+
+        <!-- FIM DA ÁREA ÚTIL DA PÁGINA -->
+    </section>         
 </body>
 </html>

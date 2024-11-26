@@ -1,0 +1,227 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f5f5f5;
+}
+
+/* Botões gerais */
+button {
+    padding: 10px 20px;
+    background-color: rgb(47, 128, 128);
+    border: 0;
+    border-radius: 10px;
+    font-size: 18px;
+    color: #FFFFFF;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+/* Estilo do container do modal */
+.modal-container {
+    background: rgba(0, 0, 0, 0.5);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.modal-container.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Estilo do modal */
+.modal {
+    background-color: #e0e0e0;
+    width: 80%; /* Aumenta a largura inicial */
+    max-width: 1200px; /* Limita o tamanho máximo */
+    min-width: 400px; /* Evita que fique pequeno demais */
+    height: auto; /* Altura ajustável automaticamente */
+    padding: 40px; /* Mais espaço interno */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+    text-align: left;
+    box-sizing: border-box;
+}
+
+hr {
+    border: none;
+    border-top: 3px solid #000;
+    width: 32.4vw; /* Largura total da tela (viewport) */
+    margin-left: calc(-16.2vw + 50%); /* Centraliza a linha no modal */
+    margin-right: calc(-20vw + 50%); /* Centraliza a linha no modal */
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 10%; /* Ocupa 20% da largura do modal */
+    max-width: 200px; /* Limita o tamanho máximo */
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    height: auto;
+}
+
+/* Tipografia */
+h1 {
+    font-size: 28px;
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+
+p {
+    margin-top: 50px;
+    font-size: 18px;
+    margin: 20px 10;
+    text-align: center;
+}
+
+/* Grupo de botões */
+.button-group {
+    display: flex;
+    justify-content: right;
+    gap: 20px;
+    margin-top: 40px;
+}
+
+button.Okay {
+    background-color: #33404D;
+    color: white;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 10px 30px;
+}
+
+button.Okay:hover {
+    color: #00FF00;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    text-decoration: underline #00FF00;
+}
+
+/* Media Queries */
+
+/* Telas pequenas (celulares) */
+@media (max-width: 480px) {
+    hr {
+        width: 114%; /* Aumenta a largura da linha no celular */
+        margin-left: -7%; /* Ajusta a centralização */
+        margin-right: 10%; /* Ajusta a centralização */
+    }
+    .modal {
+        width: 95%;
+        padding: 20px;
+    }
+    .logo {
+        width: 60px;
+    }
+    h1 {
+        font-size: 20px;
+    }
+    p {
+        font-size: 14px;
+    }
+    button {
+        font-size: 12px;
+        padding: 8px 12px;
+    }
+}
+
+/* Telas médias (tablets) */
+@media (max-width: 768px) {
+    hr {
+        width: 109%; /* Aumenta a largura da linha no celular */
+        margin-left: -4.4%; /* Ajusta a centralização */
+        margin-right: 10%; /* Ajusta a centralização */
+    }
+    .modal {
+        width: 80%;
+        padding: 25px;
+    }
+    .logo {
+        width: 80px;
+    }
+    h1 {
+        font-size: 24px;
+    }
+    p {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 770px) and (max-width: 1022px) {
+    hr {
+        width: 115.3%; /* Ajusta a largura da linha para que não ultrapasse a tela */
+        margin-left: -7.7%; /* Centraliza um pouco à esquerda */
+        margin-right: 5%; /* Centraliza um pouco à direita */
+    }
+    .modal {
+        width: 80%;
+        max-width: 600px;
+    }
+    h1 {
+        font-size: 32px;
+    }
+    p {
+        font-size: 20px;
+    }
+    .logo {
+        width: 90px;
+    }
+}
+
+/* Telas grandes (desktops) */
+@media (min-width: 1024px) {
+    hr {
+        width: 115.3%; /* Reduz a largura da linha em telas maiores */
+        margin-left: -7.7%; /* Ajusta a centralização */
+        margin-right: 10%; /* Ajusta a centralização */
+    }
+    .modal {
+        width: 80%;
+        max-width: 600px;
+    }
+    h1 {
+        font-size: 32px;
+    }
+    p {
+        font-size: 20px;
+    }
+    .logo {
+        width: 90px;
+    }
+}
+
+/* Telas grandes (desktops grandes) */
+@media (min-width: 1200px) {
+    .modal {
+        width: 40%;
+        max-width: 600px;
+    }
+    h1 {
+        font-size: 32px;
+    }
+    p {
+        font-size: 20px;
+    }
+    .logo {
+        width: 90px;
+    }
+}

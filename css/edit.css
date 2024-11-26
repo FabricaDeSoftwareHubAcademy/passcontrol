@@ -1,0 +1,275 @@
+@import url(navegacao.css);
+
+.quadrado{
+    width: 90%;
+    height: 90%;
+    background-color: rgba(255, 255, 255, 0.356);
+    position: absolute;
+    left: 65px;
+    margin-top: 50px;
+}
+
+.titulo{
+    width: 100%;
+    height: auto;
+}
+.titulo .cadastro_title{
+   font-family: var(--font-main);
+   position: absolute;
+   top: 15px;
+   left: 25px;
+   font-size: 110%;
+}
+.titulo hr{
+    position: absolute;
+    border: 0;
+    height: 4px;
+    background: black ;
+    margin: 20px 0;
+    width: 95%;
+    top: 20px;
+    left: 25px;
+}
+
+.forme{
+    width: 100%;
+    height: auto;
+    
+}
+.nome{
+    position: relative;
+    top: 70px;
+    left: 189px;
+    width: 73%;
+    display: flex;
+    flex-direction: column;
+    font-size: 90%;
+}
+.nome .borda{
+    height: 40px;
+    border-radius: 5px;
+    margin-top: 12px;
+}
+
+.email{
+    position: relative;
+    top: 100px;
+    left: 189px;
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    font-size: 90%;
+}
+.email .borda{
+    height: 40px;
+    border-radius: 5px;
+    margin-top: 12px;
+}
+
+.cpf{
+    position: relative;
+    top: 38px;
+    left: 630px;
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    font-size: 90%;
+}
+.cpf .borda{
+    height: 40px;
+    border-radius: 5px;
+    margin-top: 12px;
+}
+
+.senha{  
+    position: relative;
+    top: 70px;
+    left: 189px;
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    font-size: 90%;
+}
+.senha .borda{
+    height: 40px;
+    border-radius: 5px;
+    margin-top: 12px;
+}
+.senha1-input{
+    padding: 8px;
+    margin-right: 8px;
+    font-size: 12px;
+}
+.oculto1{
+    padding: 8px;
+    font-size: 12px;
+    cursor: pointer;
+}
+.confirmar{
+    position: relative;
+    top: 8px;
+    left: 630px;
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    font-size: 90%;  
+}
+.confirmar .borda{
+    height: 40px;
+    border-radius: 5px;
+    margin-top: 12px;
+}
+
+.perfil{
+    position: relative;
+    top: 40px;
+    left: 189px;
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    font-size: 90%;
+}
+.perfil .borda{
+    height: 40px;
+    border-radius: 5px;
+    margin-top: 12px;
+}
+
+.labeledit{
+    font-family: var(--font-main);
+    height: 10px;
+    font-weight: bold;
+}
+
+.checkbox-container{ 
+    display: flex;
+    position: absolute;
+    left: 650px; 
+    width: 100%;
+    font-size: 100%;
+    top: 395px;
+    font-size: var(--font-main);
+    font-weight: bold;
+} 
+.column{ 
+    display: flex; 
+    flex-direction: column; 
+    margin-right: 20px; 
+} 
+.checkbox-container label{ 
+    display: flex; 
+    align-items: center; 
+    margin: 5px 0; 
+} 
+.checkbox-container input[type="checkbox"]{ 
+    margin-right: 10px;
+} 
+.servico-checkbox input[type="checkbox"]{
+    color: var(--verde-control);
+}
+.checkbox-container input[type="checkbox"]:checked + span{ 
+    color: var(--verde-control);
+} 
+.select-all-container{ 
+    margin-bottom: 10px; 
+    width: 14%;
+    position: absolute;
+    left: 822px;
+    top: 495px;
+    font-size: var(--font-main);
+    font-weight: bold;
+}
+.servico{
+    display: flex;
+    position: absolute;
+    top: 370px;
+    left: 630px;
+    font-size: var(--font-main);
+    font-weight: bold;
+}
+/* Esconder o checkbox padrão */
+.customizado input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+ /* Criar um elemento customizado */
+.customizado .teste {
+    position: relative;
+    /* height: 50px; */
+    width: 200px;
+    /* background-color: #ccc; */
+    border-radius: 4px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+    
+    
+} 
+
+/* Estilo para quando o checkbox estiver selecionado */
+/* .customizado input[type="checkbox"]:checked + .teste {
+    background-color: #4CAF50;
+    border: 1px solid black;
+} */
+
+.customizado .teste:after {
+    content: "";
+    position: absolute;
+    display: none;
+
+} 
+
+/* Mostrar a marca de seleção */
+.customizado input[type="checkbox"]:checked + .teste:after {
+    display: block;
+  
+} 
+
+/* Estilo da marca de seleção */
+.customizado  .teste:after {
+    left: -20px;
+    top: 5px;
+    width: 0px;
+    height: 0px;
+    border: solid var(--verde-control);
+    border-width: 0 10px 10px 0;
+    transform: rotate(1deg);
+}
+.botao1{
+    background-color: var(--cinza-control);
+    border-radius: 5px;
+    border: none;
+    color: var(--cor-fundo);
+    padding: 5px 25px;
+    font-size: 15px;
+    text-align: center;
+    cursor: pointer;
+    margin: 4px 4px;
+    position: absolute;
+    top: 558px;
+    left: 970px;
+}
+.botao1:hover{
+    color: var(--verde-control);
+    text-decoration:underline;
+}
+.botao2{
+    background-color: var(--cinza-control);
+    border-radius: 5px;
+    border: none;
+    color: var(--cor-fundo);
+    padding: 5px 25px;
+    font-size: 15px;
+    text-align: center;
+    cursor: pointer;
+    margin: 4px 4px;
+    position: absolute;
+    top: 558px;
+    left: 865px;
+}
+.botao2:hover{
+    color: var(--verde-control);
+    text-decoration:underline;
+}

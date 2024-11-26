@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../css/navegacao.css">
+    <link rel="stylesheet" href="../css/atendimento_tempo_real.css">
+    <link rel="stylesheet" href="../css/style_atendimento_tempo_real.css">
+    <title>Atendimento em Tempo Real</title>
+</head>
+<body class="control-body-navegacao">
+    <header class="cabeca-navegacao-control">
+        <nav class="nav-cabeca">
+            <div class="logo-control">
+                <img src="../assets/icons/logo control.svg" alt="LOGOCONTROL" id="img-logo">
+            </div>
+            <H3>PassControl</H3>
+            <div class="usu">                
+                <!-- INFO DO USUARIO -->
+                <div class="menu-usuario">
+                    <a class="usu">Nome do Usuário</a> <!-- SERÁ NECESSÁRIA A CONFIGURAÇÃO DE UMA VARIÁVEL PARA O NOME DO USUÁRIO! -->
+                    <nav class="usu-detalhes"> 
+                        <img src="../assets/icons/image 33.svg" alt="">
+                        <ul class="texto-usu">
+                            <li class="nome-usu">Nome do Usuário</li>
+                            <li class="email-usu">funcionario123@fun.br</li>
+                            <li><a href="">Editar Informações</a></li>
+                            <li><a href="">Sair</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </nav>
+        <div class="dark-area"></div>
+    </header>
+    
+    <!-- MENU LATERAL -->
+    <button class="botao-menu-mobile">
+        <img class="icone-menu-lateral" src="../assets/icons/DropDownIcon.svg" alt="MENU">
+    </button>
+    <div class="area-lateral-navegacao">
+        <nav class="menu-lateral-navegacao">
+            <div class="botao-navegacao">
+                <button class="botao-lateal-navegacao">
+                    <img class="icone-menu-lateral" src="../assets/icons/atend.svg" alt="ICONE ATENDIMENTO">
+                    <div class="texto-bott">Atendimento</div>
+                </button>
+            </div>
+            <div class="botao-navegacao">
+                <button class="botao-lateal-navegacao">
+                    <img class="icone-menu-lateral" src="../assets/icons/monitor.svg" alt="ICONE MONITOR">
+                    <div class="texto-bott">Monitor</div>
+                </button>
+            </div>
+            <div class="botao-navegacao">
+                <button class="botao-lateal-navegacao">
+                    <img class="icone-menu-lateral" src="../assets/icons/nota.svg" alt="ICONE RELATORIOS">
+                    <div class="texto-bott">Relatórios</div>
+                </button>
+            </div>
+            <div class="botao-navegacao">
+                <button class="botao-lateal-navegacao">
+                    <img class="icone-menu-lateral" src="../assets/icons/gestao.svg" alt="ICONE GESTAO">
+                    <div class="texto-bott">Gestão</div>
+                </button>
+            </div>
+        </nav>
+        <div class="sair-navegacao">
+            <button class="botao-lateal-navegacao">
+                <img class="icone-menu-lateral-sair" src="../assets/icons/sair.svg" alt="ICONE SAIR">
+                <div class="texto-bott">Sair</div>
+            </button>
+        </div>        
+    </div>
+        <section class="atendimento-tempo-real">
+            <div class="container-atendimento-tempo-real">
+                <h1 class="title-atendimento-tempo-real">Atendimento em Tempo Real</h1>
+                <h1 class="title-atendimento-tempo-real">Senhas na Fila: 000</h1>
+            </div>
+            <div class="line-atendimento-tempo-real"></div>
+            <div class="container-atendimento-tempo-real">
+                <table class="table-atendimento-tempo-real">
+                    <thead>
+                        <tr>
+                            <th>Perfil</th>
+                            <th>Serviço</th>
+                            <th>Senha</th>
+                            <th>Guichê</th>
+                            <th class="status-atendimento-tempo-real">
+                                <div class="status-flex-atendimento-tempo-real">
+                                    Status <span class="circle-atendimento-tempo-real"><i class="fa-solid fa-question"></i></span>
+                                </div>
+                            </th>
+                            <th>Término</th>
+                            <th>Início</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Paula Fernanda de Pauli</td>
+                            <td>IPTU</td>
+                            <td>CM 026</td>
+                            <td>03</td>
+                            <td class="disponivel-atendimento-tempo-real">Disponível</td>
+                            <td>14:00</td>
+                            <td>13:30</td>
+                        </tr>
+                        <tr>
+                            <td>João Silva</td>
+                            <td>Serviços Públicos</td>
+                            <td>CM 027</td>
+                            <td>04</td>
+                            <td class="em-atendimento-atendimento-tempo-real">Em Atendimento</td>
+                            <td>14:15</td>
+                            <td>13:45</td>
+                        </tr>
+                        <tr>
+                            <td>Maria Oliveira</td>
+                            <td>IPTU</td>
+                            <td>CM 028</td>
+                            <td>05</td>
+                            <td class="intervalo-atendimento-tempo-real">Intervalo</td>
+                            <td>14:30</td>
+                            <td>14:00</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+</body>
+</html>

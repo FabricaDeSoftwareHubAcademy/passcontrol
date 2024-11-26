@@ -1,0 +1,110 @@
+@import url(navegacao.css);
+@import url(base_area_util_eli.css);
+@import url(menu_eli.css);
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+*{
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+.descricao {
+  padding: 10px;
+  margin-bottom: 20px;
+  margin-right: 5px;
+}
+
+.descricao hr {
+  border: 1px solid #ccc;
+}
+
+.area-cards{
+  width: 70%;
+  height: auto;
+  background-color: rgba(237, 237, 240, 0.369);
+  margin: 10%;
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16%) saturate(180%);
+  border-radius: 12px;
+  padding: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+}
+.container{
+  width: 250px;
+  height: 350px;
+  border: 1px solid rgba(250, 255, 255, 0.125);
+  background-color: rgba(183, 180, 180, 0.513);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16%) saturate(180%);
+  border-radius: 12px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  filter: drop-shadow(10px 20px 10px rgb(145, 143, 145));
+}
+.wrapper{
+  width: 100%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.wrapper .banner-img .img{
+  width: 150px;
+  height: 170px;
+  border: 1px solid rgba(250, 255, 255, 0.125);
+  border-radius: 12px;
+  background-position: center;
+  background-size: cover;
+}
+.wrapper .titulo-card{
+  color: rgb(3, 4, 45);
+  font-size: 16px;
+  text-transform: uppercase;
+  padding: 5px;
+}
+.wrapper p{
+  color: aliceblue;
+  font-size: 14px;
+  text-transform: capitalize;
+  text-align: center;
+}
+.button-wrapper{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+.btn{
+  width: 100%;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 0px 0px 5px 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.outline{
+  background-color: #2d3945;
+  color: rgb(171, 173, 170);
+  transition: all 0.3s ease;
+  border: 1px solid rgb(28, 1, 28);
+}
+.outline:hover{
+  background-color: transparent;
+  color: rgb(7, 34, 156);
+}
+@media screen and (max-width:1200px){
+  .nome_da_area_eli{
+      min-height: 100%;
+      padding-top: 0px;
+      left: 8vh;
+  }
+}

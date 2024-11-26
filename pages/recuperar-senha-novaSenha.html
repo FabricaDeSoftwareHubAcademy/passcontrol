@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recuperar Senha</title>
+
+    <link rel="stylesheet" href="../css/recuperar-senha-novaSenha.css">
+</head>
+
+<body class="recuperarSenha">
+    <div class="box">
+
+        <div class="GroupLine">
+            <div class="line">
+                <span></span>
+            </div>
+            <div class="arrow">
+                <div class="setas"><img src="../assets/img/setas.png" alt=""></div>
+                <div class="setas"><img src="../assets/img/setas.png" alt=""></div>
+                <div class="setas"><img src="../assets/img/setas.png" alt=""></div>
+            </div>
+        </div>
+    
+
+
+        <main>
+            <div class="containerAnime">
+                    <div class="containerImagens">
+                        <img src="../assets/img/top.png" alt="" class="imagem imagemTop">
+                        <img src="../assets/img/mid.png" alt="" class="imagem imagemMid">
+                        <img src="../assets/img/bot.png" alt="" class="imagem imagemBot">
+                    </div>
+                    <div class="titlePass">
+                        <h1>PASS CONTROL</h1>
+                    </div>
+            </div>
+
+
+            <div class="containerRecuperar">
+                <form action="" class="formRecuperar">
+
+                    <label for="" class="lblRecuperar">Insira a nova senha</label>
+                    <input id="novaSenha" type="password" class="inpRecuperar" placeholder="Nova Senha">
+                    
+
+                    <label for="" class="lblRecuperar">Confirme a nova senha</label>
+                    <input id="confirmSenha" type="password" class="inpRecuperar" placeholder="Confirmar nova Senha">
+                   
+                    <div class="containerRequisitoSenhas">
+                        <h1>A senha deverá conter:</h1>
+                        <ul>
+                            <li id="digito" class="RequisitosMin " >Mínimo 8 dígitos</li>
+                            <li id="maiusca" class="RequisitosMin ">Maiúscula</li>
+                            <li id="numero" class="RequisitosMin ">Número</li>
+                            <li id="caracEspec" class="RequisitosMin " >Caractere Especial</li>
+                        </ul>
+                    </div>
+                    <nav>
+                        <button type="submit"><a href="login.html">Enviar</a></button>
+                    </nav>
+                </form>
+            </div>
+        </main>
+
+
+
+        <div class="GroupLine groupRight">
+            <div class="arrow ">
+                <div class="setas setaRight"><img src="../assets/img/setas.png" alt=""></div>
+                <div class="setas setaRight"><img src="../assets/img/setas.png" alt=""></div>
+                <div class="setas setaRight"><img src="../assets/img/setas.png" alt=""></div>
+            </div>
+            <div class="line">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/recuperar-senha-novaSenha.js" defer></script>
+</body>
+</html>
