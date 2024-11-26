@@ -46,7 +46,6 @@ main {
     margin-left: 17px;
     width: 98%;
 }
-
 .tabela {
     width: 100%;
     display: flex;
@@ -162,12 +161,10 @@ main {
         margin-top: 10px;
         text-align: center;
     }
-
     .barra-pesquisa {
         width: 40%;
         margin-left: 58%;
     }
-
     .input-pesquisa {
         padding: 1px;
         width: 100%;
@@ -179,28 +176,23 @@ main {
         margin-left: 1px;
         width: 98%;
     }
-
     .tabela {
         padding: 3px;
     }
-
     .menu-tabela {
         width: 100%;
         max-width: 320px;
         padding: 5px;
     }
-
     .tabela-3x3 th,
     .tabela-3x3 td {
         font-size: 10px;
         padding: 6px;
     }
-
     .actions img {
         width: 15px;
         height: 15px;
     }
-
     .styled-button {
         background-color: #2d3945;
         color: white;
