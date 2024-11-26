@@ -127,8 +127,8 @@ main {
     z-index: 1000;
 }
 .styled-button:hover {
-    background-color: #4CAF50;
-    color: white;
+    background-color: #2d3945;
+    color: #3AA867;
 }
 @media (max-width: 320px) {
 .barra-pesquisa {
