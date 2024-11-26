@@ -17,6 +17,9 @@
     <link rel="stylesheet" href="../css/navegacao.css">
     <link rel="stylesheet" href="../css/edit.css">
 
+    <link rel="stylesheet" href="../modais/Modal Confirmação dos Dados Registrados/estilo.css">
+    <link rel="stylesheet" href="../modais/Modal Confirmação dos Dados/estilo.css">
+
 </head>
 <body class="control-body-navegacao">
     <header class="cabeca-navegacao-control">
@@ -165,13 +168,45 @@
                                      
                                 </div> 
 
-                            <script src="scripts.js"></script>
+                            <script src="scripts.js" defer></script>
                         </div>
-                        <button class="botao1">Salvar</button>
-                        <button class="botao2">Voltar</button>
+                        <button class="botao1 open">Salvar</button>
+                        
+                        <!-- MODAL CONFIRMAR SALVAR EDICOES -->
+                        <main class="modal-container">
+                            <section class="modal">
+                                <img src="../modais/Modal Confirmação dos Dados Registrados/IMG/Logo Nota Controlnt.png" alt="Logo Nota Control" class="logo">
+                                <h1>Confirmação</h1>
+                                <hr>
+                                <p><b>Deseja Salvar as Edições Feitas?</b></p>
+                                <div class="button-group">
+                                    <button class="cancel">Não</button>
+                                    <button class="save">Sim</button>
+                                </div>
+                            </section>
+                        </main>
+
+                        <!-- MODAL CONFIRMACAO DO SALVAR EDICOES -->
+                        <main class="modal-container">
+                            <section class="modal">
+                                <img src="../modais/Modal Confirmação dos Dados Registrados/IMG/Logo Nota Controlnt.png" alt="Logo Nota Control" class="logo">
+                                <h1>Confirmação</h1>
+                                <hr>
+                                <p><b>Salvo com sucesso!</b></p>
+                                <div class="button-group">
+                                    <button class="Okay">Ok</button>
+                                </div>
+                            </section>
+                        </main>
+
+                        <!-- href="cadastro-funcionarios.html" -->
+                        <a class="botao2" href="cadastro-funcionarios.html">Voltar</a>
                     </form>
             </section>                           
             </nav>
     </section>
+
+    <script src="../modais/Modal Confirmação dos Dados Registrados/modal.js" defer></script>
+    <script src="../modais/Modal Confirmação dos Dados/modal.js" defer></script>
 </body>
 </html>
