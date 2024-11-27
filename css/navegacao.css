@@ -191,7 +191,7 @@
     flex-direction: column;
     align-content: space-evenly;
     left: 0;
-
+    z-index: 10;
 }
 
 .menu-lateral-navegacao{
