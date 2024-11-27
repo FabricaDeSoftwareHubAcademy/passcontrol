@@ -10,7 +10,7 @@
 .recuperarSenha{
     min-height: 100vh;
     background-color: #fff;
-    background-image: url(../image/background.png);
+    background-image: url(../assets/img/Background-logo\ 2.svg);
     background-repeat: no-repeat;
     background-position: bottom right;
     background-size: 20%;
@@ -278,6 +278,7 @@ main{
     width: 80px;
     height: 35px;
     background-color: #33404D;
+    color: white;
     border-radius: 8px;
     margin-right: 20px;
     cursor: pointer;
