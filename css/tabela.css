@@ -4,6 +4,7 @@
   gap: 15px;
   margin-top: 2rem;
   padding: 1.875rem;
+  display: flex;
 }
 
 .tabela {
@@ -12,6 +13,7 @@
   background-color: rgb(255, 255, 255,0.5);
   width: 100%;
   /* margin-bottom: 20px; */
+  /* display: flex; */
 }
 
 th, td {

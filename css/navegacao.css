@@ -14,7 +14,8 @@
     padding: 0;
     box-sizing: border-box;
     font-family: var(--font-main);
-    font-style: bold;
+    /* font-style: bold; */
+    font-weight: bold;
     list-style: none;
 }
 
