@@ -1,4 +1,4 @@
-.Area-Util-Projeto{
+/* .Area-Util-Projeto{
     z-index: 1;
     position: fixed;
     top: 157px;
@@ -10,11 +10,11 @@
     background-color: rgba(0, 0, 0, 0.12);
     overflow: auto;
     scroll-behavior: smooth;
-}
+} */
 
 .area-atendimento-tempo-real {
     height: 100vh;
-    margin: 0px 30px 30px 30px;
+    margin: 30px 30px 30px 30px;
     background-color: var(--color-background-3);
 }
 
