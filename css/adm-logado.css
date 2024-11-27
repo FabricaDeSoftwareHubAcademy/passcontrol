@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.perfil-titulo{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-left: 30px;
+}
+
+.sub-area{
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.52);
+    margin: 30px;
+    border-radius: 5px;
+}
+
+.perfil-titulo, .alt-senha-titulo{
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: black;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+}
+
+.form-group{
+    margin-bottom: 20px;
+}
+
+.form-group label{
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: black;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.form-group input{
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    background-color: #FFF;
+    color: black;
+}
+
+.form-row{
+    display: flex;
+    gap: 16px;
+}
+
+.form-row, .form-group{
+    flex: 1;
+}
+
+.form-actions{
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.botao-voltar, .botao-salvar {
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: 500;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.botao-voltar {
+    background-color: #33404D;
+    color: #fff;
+}
+
+.botao-voltar:hover {
+    color: #00FF00;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    text-decoration: underline #00FF00;
+}
+
+.botao-salvar {
+    background-color: #33404D;
+    color: #fff;
+}
+
+.botao-salvar:hover {
+    color: #00FF00;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    text-decoration: underline #00FF00;
+}
