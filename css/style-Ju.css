@@ -268,6 +268,7 @@
     font-weight: 700;
     font-size: 32px;
     color: #33404D;
+    margin-bottom: -32px;
 }
 
 .meio_direita-guiche-area-chamada {
@@ -301,7 +302,7 @@
 }
 
 .fundo-guiche-area-chamada{
-    width: 90%;
+    width: 92%;
     height: 70%;
     background-color: rgb(255, 255, 255,0.5);
     gap: 15px;
@@ -312,8 +313,9 @@
     border: 1px solid black;
     border-collapse: collapse;
     background-color: rgb(255, 255, 255,0.5);
-    width: 100%;
+    width: 95%;
     margin-bottom: 20px;
+    margin-left: 2.5%;
   }
   
   th, td {
@@ -329,7 +331,6 @@
   }
   
   .editar{
-    /* width: 10rem; */
     display: flex;
     /* flex-direction: row; */
     justify-content: space-between;
@@ -400,9 +401,41 @@ input:focus + .slider {
 
 
 /* MEDIA */
-@media screen and (min-width: 1024px) and (max-width: 1058px) {
+
+@media screen and (min-width: 1025px) and (max-width: 1429px) {
+    *{
+        font-size: 22px;
+        text-align: center;
+        /* background-color: aqua; */
+    }
     .guiche_senha-area-chamada p{
         text-align: center;  
+    }
+    .tabela_atendimento-guiche-area-chamada th{
+        font-size: 15px;
+    }
+    .tabela_atendimento-guiche-area-chamada td{
+        font-size: 13px;
+    }
+}
+
+
+
+
+@media screen and (min-width: 1023px) and (max-width: 1058px) {
+    *{
+        font-size: 20px;
+        text-align: center;
+        /* background-color: aqua; */
+    }
+    .guiche_senha-area-chamada p{
+        text-align: center;  
+    }
+    .tabela_atendimento-guiche-area-chamada th{
+        font-size: 15px;
+    }
+    .tabela_atendimento-guiche-area-chamada td{
+        font-size: 13px;
     }
 }
 
@@ -418,7 +451,7 @@ input:focus + .slider {
         gap: 15%;
     }
     .meio_esquerda-guiche-area-chamada h3{
-        font-size: 18px;
+        font-size: 20px;
     }
     .meio_esquerda-guiche-area-chamada{
         height: 98%;
@@ -439,6 +472,16 @@ input:focus + .slider {
     }
     .botao_intervalo-guiche-area-chamada{
         width: 100%;
+    }
+    .tabela_atendimento-guiche-area-chamada th{
+        font-size: 15px;
+    }
+    .tabela_atendimento-guiche-area-chamada td{
+        font-size: 13px;
+    }
+    .fundo-guiche-area-chamada{
+        width: 90%;
+        height: 70%;
     }
 }
 @media screen and (min-width: 625px) and (max-width: 739px) {
@@ -475,12 +518,29 @@ input:focus + .slider {
     .botao_intervalo-guiche-area-chamada{
         width: 100%;
     }
+    .tabela_atendimento-guiche-area-chamada th{
+        font-size: 15px;
+    }
+    .tabela_atendimento-guiche-area-chamada td{
+        font-size: 13px;
+    }
+    .fundo-guiche-area-chamada{
+        width: 90%;
+        height: 70%;
+    }
+      th, td {
+        padding: 2.2px;
+        text-align: left;
+      }
+      
 }
+
+
 
 
 @media screen and (min-width: 556px) and (max-width: 624px){
     *{
-        font-size: 18px;
+        font-size: 15px;
         text-align: center;
     }
     .topo-area-chamada{
@@ -502,12 +562,6 @@ input:focus + .slider {
     .senhas-guiche-area-chamada{
         height: 55%;
         width: 60%;
-    }
-    .tabela_atendimento-guiche-area-chamada th{
-        font-size: 9px;
-    }
-    .tabela_atendimento-guiche-area-chamada td{
-        font-size: 10px;
     }
     .botao--guiche-area-chamada{
         height: 75%;
@@ -530,10 +584,24 @@ input:focus + .slider {
     .botao_intervalo-guiche-area-chamada{
         width: 100%;
     }
+    .tabela_atendimento-guiche-area-chamada th{
+        font-size: 13px;
+    }
+    .tabela_atendimento-guiche-area-chamada td{
+        font-size: 11px;
+    }
+    .fundo-guiche-area-chamada{
+        width: 90%;
+        height: 70%;
+    }
+    th, td {
+        padding: 2.2px;
+        text-align: left;
+    }
 }
 @media screen and (min-width: 499px) and (max-width: 555px){
     *{
-        font-size: 15px;
+        font-size: 14px;
         text-align: center;
     }
     .topo-area-chamada{
@@ -555,12 +623,6 @@ input:focus + .slider {
     .senhas-guiche-area-chamada{
         height: 55%;
         width: 60%;
-    }
-    .tabela_atendimento-guiche-area-chamada th{
-        font-size: 9px;
-    }
-    .tabela_atendimento-guiche-area-chamada td{
-        font-size: 10px;
     }
     .botao--guiche-area-chamada{
         height: 75%;
@@ -582,6 +644,20 @@ input:focus + .slider {
     }
     .botao_intervalo-guiche-area-chamada{
         width: 100%;
+    }
+    .tabela_atendimento-guiche-area-chamada th{
+        font-size: 12px;
+    }
+    .tabela_atendimento-guiche-area-chamada td{
+        font-size: 10px;
+    }
+    .fundo-guiche-area-chamada{
+        width: 90%;
+        height: 70%;
+    }
+    th, td {
+        padding: 1px;
+        text-align: left;
     }
 }
 @media screen and (min-width: 446px) and (max-width: 498px){
@@ -640,6 +716,20 @@ input:focus + .slider {
     .botao_intervalo-guiche-area-chamada{
         width: 100%;
     }
+    .tabela_atendimento-guiche-area-chamada th{
+        font-size: 11px;
+    }
+    .tabela_atendimento-guiche-area-chamada td{
+        font-size: 9px;
+    }
+    .fundo-guiche-area-chamada{
+        width: 90%;
+        height: 70%;
+    }
+    th, td {
+        padding: 0.2px;
+        text-align: left;
+    }
 }
 
 @media screen and (min-width: 385px) and (max-width: 445px){
@@ -669,12 +759,6 @@ input:focus + .slider {
         height: 55%;
         width: 60%;
     }
-    .tabela_atendimento-guiche-area-chamada th{
-        font-size: 9px;
-    }
-    .tabela_atendimento-guiche-area-chamada td{
-        font-size: 10px;
-    }
     .botao--guiche-area-chamada{
         height: 75%;
         width: 80%;
@@ -695,6 +779,20 @@ input:focus + .slider {
     }
     .botao_intervalo-guiche-area-chamada{
         width: 100%;
+    }
+    .tabela_atendimento-guiche-area-chamada th{
+        font-size: 9px;
+    }
+    .tabela_atendimento-guiche-area-chamada td{
+        font-size: 8px;
+    }
+    .fundo-guiche-area-chamada{
+        width: 90%;
+        height: 70%;
+    }
+    th, td {
+        padding: 0.1px;
+        text-align: left;
     }
 }
 @media screen and (min-width: 354px) and (max-width: 384px){
@@ -753,6 +851,20 @@ input:focus + .slider {
     }
     .botao_intervalo-guiche-area-chamada{
         width: 100%;
+    }
+    .tabela_atendimento-guiche-area-chamada th{
+        font-size: 8px;
+    }
+    .tabela_atendimento-guiche-area-chamada td{
+        font-size: 7px;
+    }
+    .fundo-guiche-area-chamada{
+        width: 90%;
+        height: 70%;
+    }
+    th, td {
+        padding: 0px;
+        text-align: left;
     }
 }
 @media screen and (min-width: 250px) and (max-width: 353px){
@@ -813,6 +925,20 @@ input:focus + .slider {
     }
     .botao_intervalo-guiche-area-chamada{
         width: 100%;
+    }
+    .tabela_atendimento-guiche-area-chamada th{
+        font-size: 8px;
+    }
+    .tabela_atendimento-guiche-area-chamada td{
+        font-size: 7px;
+    }
+    .fundo-guiche-area-chamada{
+        width: 90%;
+        height: 70%;
+    }
+    th, td {
+        padding: 0px;
+        text-align: left;
     }
 }
 
@@ -875,6 +1001,20 @@ input:focus + .slider {
     .botao_intervalo-guiche-area-chamada{
         width: 100%;
         height: 25%;
+    }
+    .tabela_atendimento-guiche-area-chamada th{
+        font-size: 8px;
+    }
+    .tabela_atendimento-guiche-area-chamada td{
+        font-size: 7px;
+    }
+    .fundo-guiche-area-chamada{
+        width: 90%;
+        height: 70%;
+    }
+    th, td {
+        padding: 0px;
+        text-align: left;
     }
 }
 
