@@ -1,9 +1,10 @@
 .area-tabela{
   width: 90%;
-  height: 70%;
   background-color: rgb(255, 255, 255,0.5);
   gap: 15px;
   margin-top: 2rem;
+  padding: 1.875rem;
+  display: flex;
 }
 
 .tabela {
@@ -11,7 +12,8 @@
   border-collapse: collapse;
   background-color: rgb(255, 255, 255,0.5);
   width: 100%;
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
+  /* display: flex; */
 }
 
 th, td {
@@ -27,10 +29,9 @@ th {
 }
 
 .editar{
-  /* width: 10rem; */
   display: flex;
-  /* flex-direction: row; */
   justify-content: space-between;
+  align-items: center;
 }
 
 .editar a img:hover{
