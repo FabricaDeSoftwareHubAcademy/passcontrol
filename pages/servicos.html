@@ -16,6 +16,7 @@
     <!-- IMPORT DO CSS -->
     <link rel="stylesheet" href="../css/navegacao.css">
     <link rel="stylesheet" href="../css/servicos.css">
+    <link rel="stylesheet" href="../modais/Modal Confirmação dos Serviços/estilo.css">
 
 </head>
 <body class="control-body-navegacao">
@@ -35,7 +36,7 @@
                             <li class="nome-usu">Nome do Usuário</li>
                             <li class="email-usu">funcionario123@fun.br</li>
                             <li><a href="">Editar Informações</a></li>
-                            <li><a href="">Sair</a></li>
+                            <li><a href="login.html">Sair</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -52,36 +53,36 @@
         <nav class="menu-lateral-navegacao">
 
             <div class="botao-navegacao">
-                <button class="botao-lateal-navegacao">
+                <a class="botao-lateal-navegacao" href="atendimento.html">
                     <img class="icone-menu-lateral" src="../assets/icons/atend.svg" alt="ICONE ATENDIMENTO">
                     <div class="texto-bott">Atendimento</div>
-                </button>
+                </a>
             </div>
             <div class="botao-navegacao">
-                <button class="botao-lateal-navegacao">
+                <a class="botao-lateal-navegacao" href="Monitor.html">
                     <img class="icone-menu-lateral" src="../assets/icons/monitor.svg" alt="ICONE MONITOR">
                     <div class="texto-bott">Monitor</div>
-                </button>
+                </a>
             </div>
             <div class="botao-navegacao">
-                <button class="botao-lateal-navegacao">
+                <a class="botao-lateal-navegacao" href="">
                     <img class="icone-menu-lateral" src="../assets/icons/nota.svg" alt="ICONE RELATORIOS">
                     <div class="texto-bott">Relatórios</div>
-                </button>
+                </a>
             </div>
             <div class="botao-navegacao">
-                <button class="botao-lateal-navegacao">
+                <a class="botao-lateal-navegacao" href="menuadm_usuario.html">
                     <img class="icone-menu-lateral" src="../assets/icons/gestao.svg" alt="ICONE GESTAO">
                     <div class="texto-bott">Gestão</div>
-                </button>
+                </a>
             </div>
         </nav>
         <div class="sair-navegacao">
-            <button class="botao-lateal-navegacao">
-                <img class="icone-menu-lateral-sair" src="../assets/icons/sair.svg" alt="ICONE SAIR">
+            <a class="botao-lateal-navegacao" href="login.html">
+                <img class="icone-menu-lateral" src="../assets/icons/sair.svg" alt="ICONE SAIR">
                 <div class="texto-bott">Sair</div>
-            </button>
-        </div>    
+            </a>
+        </div>
     </div>
 
     <section class="Area-Util-Projeto">
@@ -178,10 +179,43 @@
                 });
             </script>
             <div class="button-container">
-                    <button class="botaoCadastrar">Cadastrar</button>
+                    <button class="botaoCadastrar open">Cadastrar</button>
+
+                </div>
+                
             </div>
-            </div>
-        </div> 
-    </section>
+
+            <!-- MODAL CADASTRAR SERVICOS -->
+            <main class="modal-container">
+                <section class="modal">
+                    <img src="../modais/Modal Confirmação dos Serviços/IMG/Logo Nota Controlnt.png" alt="Logo Nota Control" class="logo">
+                    <h1>Cadastrar Serviços</h1>
+                    <hr>
+                    <div class="inf-modal">
+                        <div class="container">
+                            <label><b>Código do Serviço</b></label>
+                            <input type="number" placeholder="Digite o código do serviço">
+                        </div>
+                        <div class="container">
+                            <label><b>Ícone</b></label>
+                            <div class="file-input">
+                                <input type="file" id="fileInput" class="file-input">
+                                <img src="" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="servico">
+                        <label><b>Serviço</b></label>
+                        <input type="text" placeholder="Digite o nome do novo serviço">
+                    </div>
+                    <div class="button-group">
+                        <button class="botao-modal cancel">Cancelar</button>
+                        <button class="botao-modal save">Salvar</button>
+                    </div>
+                </section>
+            </main>saaaaaaassssaaaaaassssssvvvbbaaaababab
+    </div> 
+</section>
+    <script src="../modais/Modal Confirmação dos Serviços/modal.js" defer></script>
 </body>
 </html>

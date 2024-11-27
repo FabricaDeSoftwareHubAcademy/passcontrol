@@ -247,6 +247,7 @@
 .botao-lateal-navegacao:hover{
     background-color: #181f26;
     color: var(--verde-control);
+    /* text-decoration: underline var(--verde-control);     */
 }
 
 .botao-lateal-navegacao:hover .icone-menu-lateral{
@@ -263,6 +264,7 @@
 .sair-navegacao .botao-lateal-navegacao:hover{
     background-color: #181f26;
     color: var(--verde-control);
+    /* text-decoration: underline var(--verde-control); */
 }
 
 .sair-navegacao .botao-lateal-navegacao{
@@ -281,6 +283,22 @@
     justify-content: center;
     padding-right: 5%;
     text-decoration: none;
+}
+
+/* CLASSE ACTIVE */
+
+.botao-lateal-navegacao.ativo-estacionario{
+    background-color: #181f26ad;
+    color: var(--verde-control);
+    text-decoration: underline var(--verde-control);    
+}
+
+.botao-lateal-navegacao.ativo-estacionario:hover {
+    background-color: #181f26;
+  }
+
+.botao-lateal-navegacao .icone-menu-lateral.ativo-estacionario{
+    filter: invert(51%) sepia(58%) saturate(446%) hue-rotate(92deg) brightness(96%) contrast(89%);
 }
 
 /* MEDIA */

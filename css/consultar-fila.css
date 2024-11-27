@@ -244,3 +244,19 @@ input:focus + .slider {
     border: 1px solid rgb(128, 128, 128); 
     width: 10.125rem;
 }
+
+.botao-voltar{
+    cursor: pointer;
+    background-color: #33404D;
+    color: white;
+    margin-right: 30px;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 10px 30px;
+}
+
+.botao-voltar:hover {
+    color: #3AA867;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    /* text-decoration: underline #3AA867; */
+}

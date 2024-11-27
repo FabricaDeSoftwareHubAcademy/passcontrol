@@ -390,7 +390,6 @@ input:focus + .slider {
     box-shadow: 0 0 1px #4CAF50;
 }
 
-
 @media screen and (max-width: 1200px) {
 
     .principal-chamar-senha {
