@@ -5,7 +5,6 @@
     --cinza-control: #33404D;
     --cor-fundo: #f9f9f9;
     --font-main: Inter, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-
 }
 
 * {
@@ -39,7 +38,7 @@
     height: auto;
     width: auto;
     /* background-color: rgba(0, 0, 0, 0.12); */
-    overflow: auto;
+    overflow: scroll;
     scroll-behavior: smooth;
 }
 
@@ -303,39 +302,43 @@
 
 .fundo-guiche-area-chamada{
     width: 92%;
-    height: 70%;
+    height: auto;
+    border-radius: 5px;
     background-color: rgb(255, 255, 255,0.5);
     gap: 15px;
     margin-top: 2rem;
-  }
-  
-  .tabela_atendimento-guiche-area-chamada {
+    overflow-x: scroll;
+    display: flex;
+    justify-content: center;
+}
+    
+.tabela_atendimento-guiche-area-chamada {
     border: 1px solid black;
     border-collapse: collapse;
     background-color: rgb(255, 255, 255,0.5);
     width: 95%;
-    margin-bottom: 20px;
-    margin-left: 2.5%;
-  }
-  
-  th, td {
+    margin: 30px;
+    /* margin-left: 2.5%; */
+}
+
+th, td {
     border: 1px solid black; 
     padding: 8px;
     text-align: left;
     color: var(--cinza-control);
-  }
-  
-  .tabela_atendimento-guiche-area-chamada th {
+}
+
+.tabela_atendimento-guiche-area-chamada th {
     background-color: var(--cinza-control);
     color: var(--cor-fundo);
-  }
-  
-  .editar{
+}
+
+.editar{
     display: flex;
     /* flex-direction: row; */
     justify-content: space-between;
-  }
-  
+}
+
 .editar a img:hover{
     content: url(../assets/icons/Group\ 2925.png);
     transition: 1s;}
@@ -406,7 +409,7 @@ input:focus + .slider {
         font-size: 22px;
         text-align: center;
         /* background-color: aqua; */
-    }
+    }   
     .guiche_senha-area-chamada p{
         text-align: center;  
     }
@@ -527,11 +530,11 @@ input:focus + .slider {
         width: 90%;
         height: 70%;
     }
-      th, td {
+th, td {
         padding: 2.2px;
         text-align: left;
-      }
-      
+}
+
 }
 
 
