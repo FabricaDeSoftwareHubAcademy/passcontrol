@@ -1,22 +1,24 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- TROCA TÍTULO QUANDO FOR UTILIZAR -->
-    <title>Tela Cadastro Funcinarios</title> 
-    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- TROCA TÍTULO QUANDO FOR UTILIZAR -->
+        <title>Navegação PassControl</title> 
+        
+        
+        <!-- IMPORT DA FONTE -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+        
+        <!-- IMPORT DO CSS -->
+        <link rel="stylesheet" href="../css/navegacao.css">
 
-    <!-- IMPORT DA FONTE -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet"> -->
+        <!-- IMPORT DO JS -->
+        <script src="../js/navegacao-menu-lateral.js" defer></script>
 
-    <!-- IMPORT DO CSS -->
-    <link rel="stylesheet" href="../css/navegacao.css">
-    <link rel="stylesheet" href="../css/conteudo.css">
-    <link rel="stylesheet" href="../css/tabela.css">
 </head>
 <body class="control-body-navegacao">
     <header class="cabeca-navegacao-control">
@@ -35,50 +37,55 @@
                             <li class="nome-usu">Nome do Usuário</li>
                             <li class="email-usu">funcionario123@fun.br</li>
                             <li><a href="">Editar Informações</a></li>
-                            <li><a href="">Sair</a></li>
+                            <li><a href="login.html">Sair</a></li>
                         </ul>
                     </nav>
                 </div>
             </div>
         </nav>
+        <div class="dark-area"></div>
     </header>
+
     <!-- MENU LATERAL -->
+    <button class="botao-menu-mobile">
+        <img class="icone-menu-lateral" src="../assets/icons/DropDownIcon.svg" alt="MENU">
+    </button>
     <div class="area-lateral-navegacao">
         <nav class="menu-lateral-navegacao">
 
             <div class="botao-navegacao">
-                <button class="botao-lateal-navegacao">
+                <a class="botao-lateal-navegacao" href="atendimento.html">
                     <img class="icone-menu-lateral" src="../assets/icons/atend.svg" alt="ICONE ATENDIMENTO">
                     <div class="texto-bott">Atendimento</div>
-                </button>
+                </a>
             </div>
             <div class="botao-navegacao">
-                <button class="botao-lateal-navegacao">
+                <a class="botao-lateal-navegacao" href="Monitor.html">
                     <img class="icone-menu-lateral" src="../assets/icons/monitor.svg" alt="ICONE MONITOR">
                     <div class="texto-bott">Monitor</div>
-                </button>
+                </a>
             </div>
             <div class="botao-navegacao">
-                <button class="botao-lateal-navegacao">
+                <a class="botao-lateal-navegacao" href="">
                     <img class="icone-menu-lateral" src="../assets/icons/nota.svg" alt="ICONE RELATORIOS">
                     <div class="texto-bott">Relatórios</div>
-                </button>
+                </a>
             </div>
             <div class="botao-navegacao">
-                <button class="botao-lateal-navegacao">
+                <a class="botao-lateal-navegacao" href="menuadm_usuario.html">
                     <img class="icone-menu-lateral" src="../assets/icons/gestao.svg" alt="ICONE GESTAO">
                     <div class="texto-bott">Gestão</div>
-                </button>
+                </a>
             </div>
         </nav>
         <div class="sair-navegacao">
-            <button class="botao-lateal-navegacao">
-                <img class="icone-menu-lateral-sair" src="../assets/icons/sair.svg" alt="ICONE SAIR">
+            <a class="botao-lateal-navegacao" href="login.html">
+                <img class="icone-menu-lateral" src="../assets/icons/sair.svg" alt="ICONE SAIR">
                 <div class="texto-bott">Sair</div>
-            </button>
+            </a>
         </div>
-        
     </div>
+
     <div class="area-info">
         <div class="header-area">
             <div class="titulo-area">
@@ -105,40 +112,48 @@
                     <td>guilermegaymer@gmail.com</td>
                     <td>Administrador</td>
                     <td>Nota Fiscal</td>
-                    <td class="editar"><a href=""><img src="../assets/icons/Group 2924.png" alt=""></a><label class="switch">
-                        <input type="checkbox">
-                        <span class="slider"></span>
-                    </label></td>
+                    <td>
+                        <div class="editar"><a href=""><img src="../assets/icons/Group 2924.png" alt=""></a><label class="switch">
+                            <input type="checkbox">
+                            <span class="slider"></span>
+                        </label></div>
+                    </td>
                 </tr>
                 <tr>
                     <td>Joao Pedro Sampaio</td>
                     <td>joaozinhodelasedeles@gmail</td>
                     <td>Atendente</td>
                     <td>IPTU</td>
-                    <td class="editar"><a href=""><img src="../assets/icons/Group 2924.png" alt=""></a><label class="switch">
-                        <input type="checkbox">
-                        <span class="slider"></span>
-                    </label></td>
+                    <td>
+                        <div class="editar"><a href=""><img src="../assets/icons/Group 2924.png" alt=""></a><label class="switch">
+                            <input type="checkbox">
+                            <span class="slider"></span>
+                        </label></div>
+                    </td>
                 </tr>
                 <tr>
                     <td>adsd </td>
                     <td>asdas </td>
                     <td>asda </td>
                     <td> asda</td>
-                    <td class="editar"><a href=""><img src="../assets/icons/Group 2924.png" alt=""></a><label class="switch">
-                        <input type="checkbox">
-                        <span class="slider"></span>
-                    </label></td>
+                    <td>
+                        <div class="editar"><a href=""><img src="../assets/icons/Group 2924.png" alt=""></a><label class="switch">
+                            <input type="checkbox">
+                            <span class="slider"></span>
+                        </label></div>
+                    </td>
                 </tr>
                 <tr>
                     <td> ads</td>
                     <td>asd </td>
                     <td>asd </td>
                     <td>asd </td>
-                    <td class="editar"><a href=""><img src="../assets/icons/Group 2924.png" alt=""></a><label class="switch">
-                        <input type="checkbox">
-                        <span class="slider"></span>
-                    </label></td>
+                    <td>
+                        <div class="editar"><a href=""><img src="../assets/icons/Group 2924.png" alt=""></a><label class="switch">
+                            <input type="checkbox">
+                            <span class="slider"></span>
+                        </label></div>
+                    </td>
                 </tr>
             </table>
         </div>
