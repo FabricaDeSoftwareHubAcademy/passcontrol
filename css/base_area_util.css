@@ -1,28 +1,38 @@
 /* CONFIGURAÇÃO DA BASE DA ÁREA ÚTIL */
-/* SUBSTITUIR O NOME 'NOME_DA_AREA' PELO NOME UTILIZADO NO CORPO DE DESENVOLVIMENTO! */
+/* NAO MEXER!! */
 
 .grupo{
     z-index: 1;
     position: fixed;
-    display: flex;
-    flex-direction: column;
-    top: 157px;
+    top: 17vh;
     right: 2vh;
     left: 27vh;
     bottom: 2vh;
     height: auto;
     width: auto;
     background-color: rgba(0, 0, 0, 0.12);
-    /* overflow: auto; */
+    overflow: auto;
     scroll-behavior: smooth;
+    display: flex;
 }
 
 /* MEDIA */
 
-@media screen and (max-width: 1200px) {
-
+@media screen and (max-width: 1200px) and (min-width:361px) {
     .grupo{
-        left: 7vh;
+        left: 8vh;
     }
 }
 
+@media screen and (max-height: 625px){
+    .grupo{
+        left: 8vh;
+    }
+}
+
+/* @media screen and (max-width: 360px) {
+    .Area-Util-Projeto{
+        left: 2vh;
+    }
+    
+} */
