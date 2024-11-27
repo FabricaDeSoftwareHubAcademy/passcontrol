@@ -10,7 +10,7 @@
 }
 .forme{
     width: 100%;
-    height: auto;
+    height: 260px;
 }
 .quadrado{
     width: 90%;
@@ -24,7 +24,7 @@
     position: absolute;
     width: 45%;
     left: 2%;
-    top: 350px
+    top: 313px;
 
 }
 .titulo{
@@ -66,7 +66,7 @@
 
 .email{
     position: relative;
-    top: 50px;
+    top: 88px;
     left: 2%;
     width: 45%;
     display: flex;
@@ -81,7 +81,7 @@
 
 .cpf{
     position: relative;
-    top: -18px;
+    top: 21px;
     left: 52%;
     width: 45%;
     display: flex;
@@ -94,35 +94,6 @@
     margin-top: 12px;
 }
 
-.senha{  
-    position: relative;
-    top: 28px;
-    left: 2%;
-    width: 45%;
-    display: flex;
-    flex-direction: column;
-    font-size: 90%;
-}
-.senha .borda{
-    height: 40px;
-    border-radius: 5px;
-    margin-top: 12px;
-}
-
-.confirmar{
-    position: relative;
-    top: -40px;
-    left: 52%;
-    width: 45%;
-    display: flex;
-    flex-direction: column;
-    font-size: 90%;  
-}
-.confirmar .borda{
-    height: 40px;
-    border-radius: 5px;
-    margin-top: 12px;
-}
 
 .labeledit{
     font-family: var(--font-main);
@@ -163,14 +134,14 @@
     left: 53%; 
     width: 50%;
     font-size: 100%;
-    top: 370px;
+    top: 344px;
     font-size: var(--font-main);
     font-weight: bold;
 }
 .servico{
     display: flex;
     position: absolute;
-    top: 350px;
+    top: 319px;
     left: 52%;
     font-size: var(--font-main);
     font-weight: bold;
@@ -179,7 +150,7 @@
     display: flex;
     position: absolute;
     left: 71%;
-    top: 465px;
+    top: 439px;
 }
 .column{ 
     display: flex; 
@@ -315,4 +286,3 @@
     color: var(--verde-control);
     text-decoration:underline;
 }
-
