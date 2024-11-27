@@ -54,7 +54,7 @@ main {
 }
 .menu-tabela {
     width: 100%;
-    max-width: 800px;
+    max-width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -137,7 +137,7 @@ main {
 }
 .menu-tabela {
     width: 30%;
-    max-width: 800px;
+    max-width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
