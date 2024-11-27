@@ -3,21 +3,14 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
-        <!-- TROCA TÍTULO QUANDO FOR UTILIZAR -->
         <title>Navegação PassControl</title> 
-        
-        <!-- IMPORT DA FONTE -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-        
-        <!-- IMPORT DO CSS -->
         <link rel="stylesheet" href="../css/navegacao.css">
-
-        <!-- IMPORT DO JS -->
         <script src="../js/navegacao-menu-lateral.js" defer></script>
-
+        <link rel="stylesheet" href="../css/style-configuracao-autoatendimento.css">
+        <link rel="stylesheet" href="../css/configuracao-autoatendimento.css">
 </head>
 <body class="control-body-navegacao">
     <header class="cabeca-navegacao-control">
@@ -27,9 +20,8 @@
             </div>
             <H3>PassControl</H3>
             <div class="usu">                
-                <!-- INFO DO USUARIO -->
                 <div class="menu-usuario">
-                    <a class="usu">Nome do Usuário</a> <!-- SERÁ NECESSÁRIA A CONFIGURAÇÃO DE UMA VARIÁVEL PARA O NOME DO USUÁRIO! -->
+                    <a class="usu">Nome do Usuário</a>
                     <nav class="usu-detalhes"> 
                         <img src="../assets/icons/image 33.svg" alt="">
                         <ul class="texto-usu">
@@ -44,14 +36,11 @@
         </nav>
         <div class="dark-area"></div>
     </header>
-
-    <!-- MENU LATERAL -->
     <button class="botao-menu-mobile">
         <img class="icone-menu-lateral" src="../assets/icons/DropDownIcon.svg" alt="MENU">
     </button>
     <div class="area-lateral-navegacao">
         <nav class="menu-lateral-navegacao">
-
             <div class="botao-navegacao">
                 <a class="botao-lateal-navegacao" href="atendimento.html">
                     <img class="icone-menu-lateral" src="../assets/icons/atend.svg" alt="ICONE ATENDIMENTO">
@@ -84,14 +73,57 @@
             </a>
         </div>
     </div>
-
     <section class="Area-Util-Projeto">
-        <!-- INICIO DA ÁREA ÚTIL DA PÁGINA -->
-        <!-- INSIRA O CORPO DA SUA PÁGINA A PARTIR DESTE PONTO -->
+        <h1>Autoatendimento</h1>
+        <div class="area-configuracao-autoatendimento">
+            <h2>Selecione serviços do autoatendimento:</h2>
+            <div class="lista-servicos-configuracao-autoatendimento">
+                <div class="item-servico-configuracao-autoatendimento">
+                    <input type="checkbox" id="conselho-municipal">
+                    <label for="conselho-municipal">Conselho Municipal</label>
+                </div>
 
+                <div class="item-servico-configuracao-autoatendimento">
+                    <input type="checkbox" id="fiscalizacao">
+                    <label for="fiscalizacao">Fiscalização</label>
+                </div>
 
+                <div class="item-servico-configuracao-autoatendimento">
+                    <input type="checkbox" id="iluminacao-publica">
+                    <label for="iluminacao-publica">Iluminação Pública</label>
+                </div>
 
-        <!-- FIM DA ÁREA ÚTIL DA PÁGINA -->
+                <div class="item-servico-configuracao-autoatendimento">
+                    <input type="checkbox" id="iptu">
+                    <label for="iptu">IPTU</label>
+                </div>
+
+                <div class="item-servico-configuracao-autoatendimento">
+                    <input type="checkbox" id="licencas">
+                    <label for="licencas">Licenças</label>
+                </div>
+
+                <div class="item-servico-configuracao-autoatendimento">
+                    <input type="checkbox" id="ouvidoria">
+                    <label for="ouvidoria">Ouvidoria</label>
+                </div>
+
+                <div class="item-servico-configuracao-autoatendimento">
+                    <input type="checkbox" id="poda-de-arvores">
+                    <label for="poda-de-arvores">Poda de Árvores</label>
+                </div>
+
+                <div class="item-servico-configuracao-autoatendimento">
+                    <input type="checkbox" id="selecionar-todos">
+                    <label for="selecionar-todos">Selecionar Todos</label>
+                </div>
+            </div>
+            <div class="btn-configuracao-autoatendimento">
+                <button>Novo Serviço</button>
+                <button>Visualizar</button>
+                <button>Salvar</button>
+            </div>
+        </div>
     </section>         
 </body>
 </html>
