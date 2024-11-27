@@ -1,5 +1,16 @@
 @import url(navegacao.css);
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+:root {
+    --verde-control: #3AA867;
+    --cinza-control: #33404D;
+    --cor-fundo: #f9f9f9;
+    --font-main: Inter, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+
+*{
+    font-family: var(--font-main);
+}
 
 
 .topo-info-consultar-fila {
@@ -100,12 +111,14 @@
 
 
 .fundo-guiche-area-chamada{
+    font-weight: 600;
     width: 96%;
     height: 70%;
     background-color: rgb(255, 255, 255,0.5);
     gap: 15px;
     margin-top: 3%;
     border-radius: 5px;
+    overflow-x: scroll;
 }
 
 .tabela_atendimento-guiche-area-chamada {
@@ -196,7 +209,7 @@ input:focus + .slider {
     border: 1px solid rgb(128, 128, 128); 
     width: 10.125rem;
     margin-left: 4%;
-  }
+}
 
 
 
@@ -218,14 +231,14 @@ input:focus + .slider {
 }
 .div-botao-info{
     width: 90%;
-    height: 7%;
+    height: 8%;
     align-items: first baseline;
     display: flex;
     flex-direction: column;
 }
-.principal-consultar-fila .div-botao-info button{
-    width: 100px;
-    height: 40px;
+.Area-Util-Projeto .div-botao-info button{
+    width: 95px;
+    height: 35px;
     background-color: var(--cinza-control);
     color: rgb(255, 255, 255);
     border-radius: 5px;
@@ -235,7 +248,8 @@ input:focus + .slider {
     cursor: pointer;
     font-size: 12px;
 }
-.principal-consultar-fila .div-botao-info button:hover {
+
+.Area-Util-Projeto .div-botao-info button:hover {
     text-decoration: underline;
     color: var(--verde-control);
     filter: drop-shadow(4px 4px 2px gray);
@@ -245,6 +259,7 @@ input:focus + .slider {
     border: 1px solid rgb(128, 128, 128); 
     width: 10.125rem;
 }
+
 
 
 
@@ -318,16 +333,51 @@ input:focus + .slider {
     color: #33404D;
     }
 }
-@media screen and (min-width: 650px) and (max-width: 849px) {
+@media screen and (min-width: 610px) and (max-width: 849px) {
     .topo-esquerda-consultar-fila h3 {
         font-weight: 700;
-        font-size: 24px;
+        font-size: 20px;
+        color: #33404D;
+    }
+}
+@media screen and (min-width: 410px) and (max-width: 609px) {
+    .topo-esquerda-consultar-fila h3 {
+        font-weight: 700;
+        font-size: 18px;
+        color: #33404D;
+    }
+}
+@media screen and (min-width: 375px) and (max-width: 409px) {
+    .topo-esquerda-consultar-fila h3 {
+        font-weight: 700;
+        font-size: 14px;
         color: #33404D;
     }
 }
 
 
+@media screen and (min-width: 891px) and (max-width: 1400px){
+    .senhas-guiche-area-chamada p{
+        font-size: 25px;
+    }
+}
 
+
+@media screen and (min-width: 801px) and (max-width: 890px){
+    .senhas-guiche-area-chamada{
+        height: 70%;
+        width: 45%;
+    }
+}
+@media screen and (min-width: 625px) and (max-width: 800px){
+        .senhas-guiche-area-chamada{
+            height: 70%;
+            width: 45%;
+        }
+        .senhas-guiche-area-chamada p{
+            font-size: 22px;
+        }
+}
 
 
 
