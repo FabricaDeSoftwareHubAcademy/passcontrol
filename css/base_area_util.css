@@ -18,10 +18,15 @@
 
 /* MEDIA */
 
-@media screen and (max-width: 1200px) and (min-width:361px) {
+@media screen and (min-width:361px) and (max-width: 1200px){
     .grupo{
         left: 8vh;
     }
+    .botao1{
+        display: block;
+        right: 8vh;
+    }
+  
 }
 
 @media screen and (max-height: 625px){
@@ -30,9 +35,9 @@
     }
 }
 
-/* @media screen and (max-width: 360px) {
+@media screen and (min-width: 360px) and (max-width: 360px){
     .Area-Util-Projeto{
         left: 2vh;
     }
-    
-} */
+   
+} 

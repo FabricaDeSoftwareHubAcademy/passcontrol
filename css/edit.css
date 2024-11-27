@@ -1,13 +1,4 @@
-@media screen and (min-width: 1020px){
-    .quadrado{
-        flex-wrap: wrap;
-    }
-    
-    /*inputs e botao */
-    .flex,.selecionar{
-        display: flow-root;
-    }
-}
+
 .forme{
     width: 100%;
     height: auto;
@@ -81,7 +72,7 @@
 
 .cpf{
     position: relative;
-    top: -18px;
+    top: -21px;
     left: 52%;
     width: 45%;
     display: flex;
@@ -284,14 +275,10 @@
     border-radius: 5px;
     border: none;
     color: var(--cor-fundo);
-    padding: 5px 25px;
     font-size: 15px;
     text-align: center;
     cursor: pointer;
-    margin: 4px 4px;
     position: absolute;
-    top: 632px;
-    left: 75%;
 }
 .botao1:hover{
     color: var(--verde-control);
@@ -302,17 +289,27 @@
     border-radius: 5px;
     border: none;
     color: var(--cor-fundo);
-    padding: 5px 25px;
     font-size: 15px;
     text-align: center;
     cursor: pointer;
-    margin: 4px 4px;
     position: absolute;
-    top: 632px;
-    left: 87%;
+
 }
 .botao2:hover{
     color: var(--verde-control);
     text-decoration:underline;
 }
 
+.area-botao-cadastrar{
+    gap: 15px;
+    background-color: red;
+    position: absolute;
+    top:200px;
+
+}
+
+
+@media screen and (min-wight: 850px) and (max-wight: 1200px) {
+    
+    
+}
