@@ -1,4 +1,17 @@
-
+@media screen and (min-width: 1020px){
+    .quadrado{
+        flex-wrap: wrap;
+    }
+    
+    /*inputs e botao */
+    .flex,.selecionar{
+        display: flow-root;
+    }
+}
+.forme{
+    width: 100%;
+    height: auto;
+}
 .quadrado{
     width: 90%;
     height: 90%;
@@ -7,7 +20,13 @@
     left: 65px;
     margin-top: 50px;
 }
+.perfild{
+    position: absolute;
+    width: 45%;
+    left: 2%;
+    top: 350px
 
+}
 .titulo{
     width: 100%;
     height: auto;
@@ -30,16 +49,11 @@
     left: 25px;
 }
 
-.forme{
-    width: 100%;
-    height: auto;
-    
-}
 .nome{
     position: relative;
-    top: 70px;
-    left: 189px;
-    width: 73%;
+    top: 15px;
+    left: 2%;
+    width: 95%;
     display: flex;
     flex-direction: column;
     font-size: 90%;
@@ -52,9 +66,9 @@
 
 .email{
     position: relative;
-    top: 100px;
-    left: 189px;
-    width: 35%;
+    top: 50px;
+    left: 2%;
+    width: 45%;
     display: flex;
     flex-direction: column;
     font-size: 90%;
@@ -67,9 +81,9 @@
 
 .cpf{
     position: relative;
-    top: 38px;
-    left: 630px;
-    width: 35%;
+    top: -18px;
+    left: 52%;
+    width: 45%;
     display: flex;
     flex-direction: column;
     font-size: 90%;
@@ -82,9 +96,9 @@
 
 .senha{  
     position: relative;
-    top: 70px;
-    left: 189px;
-    width: 35%;
+    top: 28px;
+    left: 2%;
+    width: 45%;
     display: flex;
     flex-direction: column;
     font-size: 90%;
@@ -94,21 +108,12 @@
     border-radius: 5px;
     margin-top: 12px;
 }
-.senha1-input{
-    padding: 8px;
-    margin-right: 8px;
-    font-size: 12px;
-}
-.oculto1{
-    padding: 8px;
-    font-size: 12px;
-    cursor: pointer;
-}
+
 .confirmar{
     position: relative;
-    top: 8px;
-    left: 630px;
-    width: 35%;
+    top: -40px;
+    left: 52%;
+    width: 45%;
     display: flex;
     flex-direction: column;
     font-size: 90%;  
@@ -119,6 +124,12 @@
     margin-top: 12px;
 }
 
+.labeledit{
+    font-family: var(--font-main);
+    width: 50%;
+    height: 15px;
+    font-weight: bold;
+}
 .perfil{
     position: relative;
     top: 40px;
@@ -135,11 +146,6 @@
     margin-top: 12px;
 }
 
-.labeledit{
-    font-family: var(--font-main);
-    height: 10px;
-    font-weight: bold;
-}
 .selecao{
     display: flex;
     position: absolute;
@@ -154,13 +160,27 @@
 .checkbox-container{ 
     display: flex;
     position: absolute;
-    left: 650px; 
+    left: 53%; 
     width: 100%;
     font-size: 100%;
-    top: 395px;
+    top: 370px;
     font-size: var(--font-main);
     font-weight: bold;
-} 
+}
+.servico{
+    display: flex;
+    position: absolute;
+    top: 350px;
+    left: 52%;
+    font-size: var(--font-main);
+    font-weight: bold;
+}
+.todos{
+    display: flex;
+    position: absolute;
+    left: 71%;
+    top: 465px;
+}
 .column{ 
     display: flex; 
     flex-direction: column; 
@@ -186,14 +206,6 @@
     position: absolute;
     left: 822px;
     top: 495px;
-    font-size: var(--font-main);
-    font-weight: bold;
-}
-.servico{
-    display: flex;
-    position: absolute;
-    top: 370px;
-    left: 630px;
     font-size: var(--font-main);
     font-weight: bold;
 }
@@ -278,8 +290,8 @@
     cursor: pointer;
     margin: 4px 4px;
     position: absolute;
-    top: 558px;
-    left: 970px;
+    top: 517px;
+    left: 75%;
 }
 .botao1:hover{
     color: var(--verde-control);
@@ -296,8 +308,8 @@
     cursor: pointer;
     margin: 4px 4px;
     position: absolute;
-    top: 558px;
-    left: 865px;
+    top: 517px;
+    left: 87%;
 }
 .botao2:hover{
     color: var(--verde-control);
