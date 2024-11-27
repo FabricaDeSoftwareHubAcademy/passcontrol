@@ -25,6 +25,8 @@ div.scrollmenu {
   min-height: 48px;
   user-select: none;
 
+  overflow: hidden;
+
   /* display: flex;
 	align-items: center;
 	min-height: 48px;
