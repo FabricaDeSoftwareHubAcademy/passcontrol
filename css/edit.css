@@ -2,14 +2,18 @@
 .forme{
     width: 100%;
     height: auto;
+    flex-wrap: wrap;
 }
+
 .quadrado{
-    width: 90%;
+    width: 80%;
     height: 90%;
     background-color: rgba(255, 255, 255, 0.356);
     position: absolute;
-    left: 65px;
+    left: 12%;
     margin-top: 50px;
+    flex-wrap: wrap;
+    flex-direction: column;
 }
 .perfild{
     position: absolute;
@@ -275,10 +279,14 @@
     border-radius: 5px;
     border: none;
     color: var(--cor-fundo);
-    font-size: 15px;
+    font-size: 17px;
     text-align: center;
     cursor: pointer;
-    position: absolute;
+    width: 120px;
+    height: 35px;
+    font-weight: bold;
+
+    
 }
 .botao1:hover{
     color: var(--verde-control);
@@ -286,30 +294,49 @@
 }
 .botao2{
     background-color: var(--cinza-control);
+    
     border-radius: 5px;
     border: none;
     color: var(--cor-fundo);
-    font-size: 15px;
+    font-size: 17px;
     text-align: center;
     cursor: pointer;
-    position: absolute;
-
+    width: 120px;
+    height: 35px;
+    font-weight: bold;
+    
 }
 .botao2:hover{
     color: var(--verde-control);
     text-decoration:underline;
 }
 
-.area-botao-cadastrar{
-    gap: 15px;
-    background-color: red;
+.btn{
     position: absolute;
-    top:200px;
-
+    left: 75%;
+    top: 650px;
+    button{margin: 0 15px}
+    
 }
 
 
-@media screen and (min-wight: 850px) and (max-wight: 1200px) {
+
+
+
+
+@media screen and (max-wight: 480px) {
+    .flex{
+        right: 8vh;
+        width: 90%;
+        height: 100px;
+        display: block;
+    }
     
+}
+@media screen and (min-wight: 481px) {
+    .flex{
+        left: 8vh;
+        color: aqua;
+    }
     
 }

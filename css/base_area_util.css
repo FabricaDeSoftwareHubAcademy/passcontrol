@@ -18,26 +18,16 @@
 
 /* MEDIA */
 
-@media screen and (min-width:361px) and (max-width: 1200px){
-    .grupo{
+@media screen and (max-width: 1200px) and (min-width:361px) {
+    .Area-Util-Projeto{
         left: 8vh;
+        background-color: aqua;
     }
-    .botao1{
-        display: block;
-        right: 8vh;
-    }
-  
 }
 
 @media screen and (max-height: 625px){
-    .grupo{
+    .Area-Util-Projeto{
         left: 8vh;
+        
     }
 }
-
-@media screen and (min-width: 360px) and (max-width: 360px){
-    .Area-Util-Projeto{
-        left: 2vh;
-    }
-   
-} 
