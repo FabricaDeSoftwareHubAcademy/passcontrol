@@ -25,11 +25,6 @@
     .Area-Util-Projeto{
         left: 8vh;
     }
-    .botao1{
-        display: block;
-        right: 8vh;
-    }
-  
 }
 
 @media screen and (max-height: 625px){
@@ -38,9 +33,9 @@
     }
 }
 
-@media screen and (min-width: 360px) and (max-width: 360px){
+/* @media screen and (min-width: 360px) and (max-width: 360px){
     .Area-Util-Projeto{
-        left: 2vh;
+        left: 8vh;
+        
     }
-   
-} 
+} */
