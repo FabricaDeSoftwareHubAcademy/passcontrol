@@ -9,12 +9,21 @@
     margin-bottom: 20px;
     font-size: 1.5rem;
     font-weight: 600;
-    margin-left: 30px;
+    margin-left: 80px;
 }
 
 .sub-area{
-    height: 100vh;
     background-color: rgba(255, 255, 255, 0.52);
+    padding: 20px 30px;
+    position: absolute;
+    top: 30px;
+    right: 5vh; 
+    left: 5vh; 
+    bottom: 7vh;
+    justify-content: center;
+    align-items: start; 
+    overflow: auto;
+    scroll-behavior: smooth;
     margin: 30px;
     border-radius: 5px;
 }
@@ -58,8 +67,12 @@
 }
 
 .form-actions{
-    justify-content: space-between;
-    margin-top: 20px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 16px;
+    margin-top: auto;
+    margin-bottom: 40px;
+    margin-right: 80px;
 }
 
 .botao-voltar, .botao-salvar {
@@ -67,7 +80,7 @@
     font-size: 1rem;
     font-weight: 500;
     border: none;
-    border-radius: 4px;
+    border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.2s;
 }
