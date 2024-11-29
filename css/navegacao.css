@@ -288,7 +288,7 @@
 /* CLASSE ACTIVE */
 
 .botao-lateal-navegacao.ativo-estacionario{
-    background-color: #181f26ad;
+    background-color: var(--cor-fundo);
     color: var(--verde-control);
     text-decoration: underline var(--verde-control);    
 }
