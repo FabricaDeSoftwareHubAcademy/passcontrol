@@ -197,12 +197,6 @@ button:hover {
         width: 320px;
         font-size: 12px;
     }
-    .toggle-btn{
-        width: 50%;
-    }
-    .toggle-btn.active .circulo{
-        width: 30%;
-    }
 }
 
 
