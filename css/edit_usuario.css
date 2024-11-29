@@ -71,7 +71,7 @@
 
 .email{
     position: relative;
-    top: 50px;
+    top: 85px;
     left: 8%;
     width: 42%;
     display: flex;
@@ -86,7 +86,7 @@
 
 .cpf{
     position: relative;
-    top: -18px;
+    top: 17px;
     left: 51%;
     width: 42%;
     display: flex;
@@ -94,36 +94,6 @@
     font-size: 90%;
 }
 .cpf .borda{
-    height: 40px;
-    border-radius: 5px;
-    margin-top: 12px;
-}
-
-.senha{  
-    position: relative;
-    top: 28px;
-    left: 8%;
-    width: 42%;
-    display: flex;
-    flex-direction: column;
-    font-size: 90%;
-}
-.senha .borda{
-    height: 40px;
-    border-radius: 5px;
-    margin-top: 12px;
-}
-
-.confirmar{
-    position: relative;
-    top: -40px;
-    left: 51%;
-    width: 42%;
-    display: flex;
-    flex-direction: column;
-    font-size: 90%;  
-}
-.confirmar .borda{
     height: 40px;
     border-radius: 5px;
     margin-top: 12px;
@@ -178,7 +148,7 @@
 .servico{
     display: flex;
     position: absolute;
-    top: 350px;
+    top: 330px;
     left: 52%;
     font-size: var(--font-main);
     font-weight: bold;
@@ -194,6 +164,7 @@
     flex-direction: column; 
     margin-right: 20px; 
     flex: 1;
+    
 } 
 .checkbox-container label{ 
     display: flex; 
