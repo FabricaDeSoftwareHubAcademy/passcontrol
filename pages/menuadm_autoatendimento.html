@@ -27,13 +27,13 @@
             <div class="usu">                
                 <!-- INFO DO USUARIO -->
                 <div class="menu-usuario">
-                    <a class="usu">Nome do Usuário</a> <!-- SERÁ NECESSÁRIA A CONFIGURAÇÃO DE UMA VARIÁVEL PARA O NOME DO USUÁRIO! -->
+                    <a class="usu">Nome do Usuário</a>
                     <nav class="usu-detalhes"> 
                         <img src="../assets/icons/image 33.svg" alt="">
                         <ul class="texto-usu">
                             <li class="nome-usu">Nome do Usuário</li>
                             <li class="email-usu">funcionario123@fun.br</li>
-                            <li><a href="">Editar Informações</a></li>
+                            <li><a href="adm-logado.html">Editar Informações</a></li>
                             <li><a href="login.html">Sair</a></li>
                         </ul>
                     </nav>
@@ -44,9 +44,10 @@
     </header>
 
     <!-- MENU LATERAL -->
-    <button class="botao-menu-mobile">
+    <button class="botao-menu-mobile"> <!-- Botão ainda inativo -->
         <img class="icone-menu-lateral" src="../assets/icons/DropDownIcon.svg" alt="MENU">
     </button>
+
     <div class="area-lateral-navegacao">
         <nav class="menu-lateral-navegacao">
 
@@ -113,7 +114,7 @@
                         <p>Gestão do Autoatendimento.</p>
                     </div>
                     <div class="button-wrapper">
-                        <a href=""><button class="btn outline">DETALHES</button></a>
+                        <button class="btn outline" onclick="window.location.href='configuracao-autoatendimento.html';">DETALHES</button>
                     </div>
                 </div>
                 <div class="container">
@@ -126,7 +127,7 @@
                             Autoatendimento</p>
                     </div>
                     <div class="button-wrapper">
-                        <a href="Monitor.html"><button class="btn outline">DETALHES</button></a>
+                        <button class="btn outline" onclick="window.location.href='Monitor.html';">DETALHES</button>
                     </div>
                 </div>      
             </main>
