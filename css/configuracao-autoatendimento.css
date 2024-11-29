@@ -1,0 +1,47 @@
+.area-configuracao-autoatendimento {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    height: 100vh;
+    margin: 30px;
+    background-color: var(--color-background-3);
+}
+
+h2 {
+    text-align: center;
+    color: var(--color-text-2);
+    margin-top: 10px;
+    margin-bottom: 50px;
+    font-size: 32px;
+}
+
+.lista-servicos-configuracao-autoatendimento {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.item-servico-configuracao-autoatendimento {
+    display: flex;
+    align-items: center;
+    width: 40%;
+    margin-bottom: 10px;
+    font-size: 32px;
+    color: var(--color-background-2);
+}
+
+input[type="checkbox"] {
+    transform: scale(1.5);
+    margin-right: 10px;
+}
+
+.btn-configuracao-autoatendimento {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    margin-top: auto;
+}

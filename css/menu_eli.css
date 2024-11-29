@@ -17,12 +17,12 @@
 
 div.scrollmenu {
   background-color: var(--cinza-control);
-  overflow: auto;
   white-space: nowrap;
-  padding-top: 15px;
-  padding-left: 10px;
   cursor: pointer;
-  min-height: 48px;
+  height: auto;
+  /* padding-top: 15px; */
+  padding-top: 10px;
+  padding-left: 10px;
   user-select: none;
 
   /* display: flex;

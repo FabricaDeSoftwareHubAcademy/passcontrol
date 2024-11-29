@@ -27,14 +27,14 @@
             <div class="usu">                
                 <!-- INFO DO USUARIO -->
                 <div class="menu-usuario">
-                    <a class="usu">Nome do Usuário</a> <!-- SERÁ NECESSÁRIA A CONFIGURAÇÃO DE UMA VARIÁVEL PARA O NOME DO USUÁRIO! -->
+                    <a class="usu">Nome do Usuário</a>
                     <nav class="usu-detalhes"> 
                         <img src="../assets/icons/image 33.svg" alt="">
                         <ul class="texto-usu">
                             <li class="nome-usu">Nome do Usuário</li>
                             <li class="email-usu">funcionario123@fun.br</li>
-                            <li><a href="">Editar Informações</a></li>
-                            <li><a href="">Sair</a></li>
+                            <li><a href="adm-logado.html">Editar Informações</a></li>
+                            <li><a href="login.html">Sair</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -44,44 +44,44 @@
     </header>
 
     <!-- MENU LATERAL -->
-    <button class="botao-menu-mobile">
+    <button class="botao-menu-mobile"> <!-- Botão ainda inativo -->
         <img class="icone-menu-lateral" src="../assets/icons/DropDownIcon.svg" alt="MENU">
     </button>
+
     <div class="area-lateral-navegacao">
         <nav class="menu-lateral-navegacao">
 
             <div class="botao-navegacao">
-                <button class="botao-lateal-navegacao">
+                <a class="botao-lateal-navegacao" href="atendimento.html">
                     <img class="icone-menu-lateral" src="../assets/icons/atend.svg" alt="ICONE ATENDIMENTO">
                     <div class="texto-bott">Atendimento</div>
-                </button>
+                </a>
             </div>
             <div class="botao-navegacao">
-                <button class="botao-lateal-navegacao">
+                <a class="botao-lateal-navegacao" href="Monitor.html">
                     <img class="icone-menu-lateral" src="../assets/icons/monitor.svg" alt="ICONE MONITOR">
                     <div class="texto-bott">Monitor</div>
-                </button>
+                </a>
             </div>
             <div class="botao-navegacao">
-                <button class="botao-lateal-navegacao">
+                <a class="botao-lateal-navegacao" href="">
                     <img class="icone-menu-lateral" src="../assets/icons/nota.svg" alt="ICONE RELATORIOS">
                     <div class="texto-bott">Relatórios</div>
-                </button>
+                </a>
             </div>
             <div class="botao-navegacao">
-                <button class="botao-lateal-navegacao">
-                    <img class="icone-menu-lateral" src="../assets/icons/gestao.svg" alt="ICONE GESTAO">
+                <a class="botao-lateal-navegacao ativo-estacionario" href="menuadm_usuario.html">
+                    <img class="icone-menu-lateral ativo-estacionario" src="../assets/icons/gestao.svg" alt="ICONE GESTAO">
                     <div class="texto-bott">Gestão</div>
-                </button>
+                </a>
             </div>
         </nav>
         <div class="sair-navegacao">
-            <button class="botao-lateal-navegacao">
-                <img class="icone-menu-lateral-sair" src="../assets/icons/sair.svg" alt="ICONE SAIR">
+            <a class="botao-lateal-navegacao" href="login.html">
+                <img class="icone-menu-lateral" src="../assets/icons/sair.svg" alt="ICONE SAIR">
                 <div class="texto-bott">Sair</div>
-            </button>
+            </a>
         </div>
-        
     </div>
 
     <section class="Area-Util-Projeto">
@@ -114,7 +114,7 @@
                         <p>Pontos de Atendimento.</p>
                     </div>
                     <div class="button-wrapper">
-                        <button class="btn outline">DETALHES</button>
+                        <button class="btn outline" onclick="window.location.href='atendimentocadastrados.html';">DETALHES</button>
                     </div>
                 </div>
                 <div class="container">
@@ -126,7 +126,7 @@
                         <p>Gestão dos serviços</p>
                     </div>
                     <div class="button-wrapper">
-                        <button class="btn outline">DETALHES</button>
+                        <button class="btn outline" onclick="window.location.href='servicos.html';">DETALHES</button>
                     </div>
                 </div>    
             </main>

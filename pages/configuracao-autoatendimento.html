@@ -1,21 +1,16 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- TROCA TÍTULO QUANDO FOR UTILIZAR -->
-    <title>Navegação PassControl</title> 
-    
-
-    <!-- IMPORT DA FONTE -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-
-    <!-- IMPORT DO CSS -->
-    <link rel="stylesheet" href="../css/style_eli.css">
-
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Navegação PassControl</title> 
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="../css/navegacao.css">
+        <script src="../js/navegacao-menu-lateral.js" defer></script>
+        <link rel="stylesheet" href="../css/style-configuracao-autoatendimento.css">
+        <link rel="stylesheet" href="../css/configuracao-autoatendimento.css">
 </head>
 <body class="control-body-navegacao">
     <header class="cabeca-navegacao-control">
@@ -85,53 +80,56 @@
     </div>
     
     <section class="Area-Util-Projeto">
-        <!-- INICIO DA ÁREA ÚTIL DA PÁGINA -->
-        <!-- INSIRA O CORPO DA SUA PÁGINA A PARTIR DESTE PONTO -->
-
-        <!-- CODIGO DO ELIANDRO -->
-        <div class="nome_da_area_eli">
-            <div class="scrollmenu">
-                <a href="./menusup_usuario.html" class="active">Usuários</a>
-                <a href="./menusup_serviços.html">Serviços</a>
-                <!-- <a href="./menuadm_autoatendimento.html">Autoatendimento</a> -->
-                <a href="./menuadm_usuario.html">ADM</a>
-            </div>
-            <!-- área da descrição da página de navegação  -->
-            <div class="descricao">
-                <h2>Menu de Gestão</h2>
-                <hr>
-                <p>Área de Gestão do Supervisor.</p>
-            </div>
-            <!-- área dos cards de nevegação  -->
-            <main class="area-cards">
-                <div class="container">
-                    <div class="wrapper">
-                        <div class="banner-img">
-                            <img src="../assets/img/img_eli/Usuário_Cadastrado.png" alt="">
-                        </div>
-
-                        <h3 class="titulo-card">Usuários</h3>
-                        <p>Usuários Cadastrados.</p>
-                    </div>
-                    <div class="button-wrapper">
-                        <button class="btn outline" onclick="window.location.href='AtendentesCadastrados.html';">DETALHES</button>
-                    </div>
+        <h1>Autoatendimento</h1>
+        <div class="area-configuracao-autoatendimento">
+            <h2>Selecione serviços do autoatendimento:</h2>
+            <div class="lista-servicos-configuracao-autoatendimento">
+                <div class="item-servico-configuracao-autoatendimento">
+                    <input type="checkbox" id="conselho-municipal">
+                    <label for="conselho-municipal">Conselho Municipal</label>
                 </div>
-                <div class="container">
-                    <div class="wrapper">
-                        <div class="banner-img">
-                            <img src="../assets/img/img_eli/Cadastro de Usuário.png" alt="">
-                        </div>
-                        <h3 class="titulo-produto">Cadastro</h3>
-                        <p>Cadastro de Usuário</p>
-                    </div>
-                    <div class="button-wrapper">
-                        <button class="btn outline" onclick="window.location.href='telacadastro.html';">DETALHES</button>
-                    </div>
-                </div>    
-            </main>
-        </div>   
-    </section>
-         
+
+                <div class="item-servico-configuracao-autoatendimento">
+                    <input type="checkbox" id="fiscalizacao">
+                    <label for="fiscalizacao">Fiscalização</label>
+                </div>
+
+                <div class="item-servico-configuracao-autoatendimento">
+                    <input type="checkbox" id="iluminacao-publica">
+                    <label for="iluminacao-publica">Iluminação Pública</label>
+                </div>
+
+                <div class="item-servico-configuracao-autoatendimento">
+                    <input type="checkbox" id="iptu">
+                    <label for="iptu">IPTU</label>
+                </div>
+
+                <div class="item-servico-configuracao-autoatendimento">
+                    <input type="checkbox" id="licencas">
+                    <label for="licencas">Licenças</label>
+                </div>
+
+                <div class="item-servico-configuracao-autoatendimento">
+                    <input type="checkbox" id="ouvidoria">
+                    <label for="ouvidoria">Ouvidoria</label>
+                </div>
+
+                <div class="item-servico-configuracao-autoatendimento">
+                    <input type="checkbox" id="poda-de-arvores">
+                    <label for="poda-de-arvores">Poda de Árvores</label>
+                </div>
+
+                <div class="item-servico-configuracao-autoatendimento">
+                    <input type="checkbox" id="selecionar-todos">
+                    <label for="selecionar-todos">Selecionar Todos</label>
+                </div>
+            </div>
+            <div class="btn-configuracao-autoatendimento">
+                <button>Novo Serviço</button>
+                <button>Visualizar</button>
+                <button>Salvar</button>
+            </div>
+        </div>
+    </section>         
 </body>
 </html>

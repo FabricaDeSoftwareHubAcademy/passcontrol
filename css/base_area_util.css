@@ -33,9 +33,9 @@
     }
 }
 
-/* @media screen and (max-width: 360px) {
+/* @media screen and (min-width: 360px) and (max-width: 360px){
     .Area-Util-Projeto{
-        left: 2vh;
+        left: 8vh;
+        
     }
-    
 } */

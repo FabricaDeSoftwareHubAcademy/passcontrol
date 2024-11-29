@@ -15,7 +15,7 @@ body {
 }
 
 /* Botões gerais */
-button {
+.botao-modal {
     padding: 10px 20px;
     background-color: rgb(47, 128, 128);
     border: 0;

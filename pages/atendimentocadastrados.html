@@ -28,14 +28,14 @@
             <div class="usu">                
                 <!-- INFO DO USUARIO -->
                 <div class="menu-usuario">
-                    <a class="usu">Nome do Usuário</a> <!-- SERÁ NECESSÁRIA A CONFIGURAÇÃO DE UMA VARIÁVEL PARA O NOME DO USUÁRIO! -->
+                    <a class="usu">Nome do Usuário</a>
                     <nav class="usu-detalhes"> 
                         <img src="../assets/icons/image 33.svg" alt="">
                         <ul class="texto-usu">
                             <li class="nome-usu">Nome do Usuário</li>
                             <li class="email-usu">funcionario123@fun.br</li>
-                            <li><a href="">Editar Informações</a></li>
-                            <li><a href="">Sair</a></li>
+                            <li><a href="adm-logado.html">Editar Informações</a></li>
+                            <li><a href="login.html">Sair</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -43,91 +43,108 @@
         </nav>
         <div class="dark-area"></div>
     </header>
+
     <!-- MENU LATERAL -->
-    <button class="botao-menu-mobile">
+    <button class="botao-menu-mobile"> <!-- Botão ainda inativo -->
         <img class="icone-menu-lateral" src="../assets/icons/DropDownIcon.svg" alt="MENU">
     </button>
+
     <div class="area-lateral-navegacao">
         <nav class="menu-lateral-navegacao">
 
             <div class="botao-navegacao">
-                <button class="botao-lateal-navegacao">
+                <a class="botao-lateal-navegacao" href="atendimento.html">
                     <img class="icone-menu-lateral" src="../assets/icons/atend.svg" alt="ICONE ATENDIMENTO">
                     <div class="texto-bott">Atendimento</div>
-                </button>
+                </a>
             </div>
             <div class="botao-navegacao">
-                <button class="botao-lateal-navegacao">
+                <a class="botao-lateal-navegacao" href="Monitor.html">
                     <img class="icone-menu-lateral" src="../assets/icons/monitor.svg" alt="ICONE MONITOR">
                     <div class="texto-bott">Monitor</div>
-                </button>
+                </a>
             </div>
             <div class="botao-navegacao">
-                <button class="botao-lateal-navegacao">
+                <a class="botao-lateal-navegacao" href="">
                     <img class="icone-menu-lateral" src="../assets/icons/nota.svg" alt="ICONE RELATORIOS">
                     <div class="texto-bott">Relatórios</div>
-                </button>
+                </a>
             </div>
             <div class="botao-navegacao">
-                <button class="botao-lateal-navegacao">
-                    <img class="icone-menu-lateral" src="../assets/icons/gestao.svg" alt="ICONE GESTAO">
+                <a class="botao-lateal-navegacao ativo-estacionario" href="menuadm_usuario.html">
+                    <img class="icone-menu-lateral ativo-estacionario" src="../assets/icons/gestao.svg" alt="ICONE GESTAO">
                     <div class="texto-bott">Gestão</div>
-                </button>
+                </a>
             </div>
         </nav>
         <div class="sair-navegacao">
-            <button class="botao-lateal-navegacao">
-                <img class="icone-menu-lateral-sair" src="../assets/icons/sair.svg" alt="ICONE SAIR">
+            <a class="botao-lateal-navegacao" href="login.html">
+                <img class="icone-menu-lateral" src="../assets/icons/sair.svg" alt="ICONE SAIR">
                 <div class="texto-bott">Sair</div>
-            </button>
+            </a>
         </div>
-        
     </div>
 
-            <!-- INICIO DA ÁREA ÚTIL DA PÁGINA -->
-            <!-- INSIRA O CORPO DA SUA PÁGINA A PARTIR DESTE PONTO -->
+    <section class="Area-Util-Projeto">
+        <!-- INICIO DA ÁREA ÚTIL DA PÁGINA -->
+        <!-- INSIRA O CORPO DA SUA PÁGINA A PARTIR DESTE PONTO -->
          
-    <main>
-        <div>
-        <h2 class="titulo">Pontos de Atendimento Cadastrados</h2>
-        <div class="barra-pesquisa">
-            <input type="text" class="input-pesquisa" placeholder="Buscar Registro">
-        </div>
-    
-        <div class="linha"></div>
-        <div class="tabela">
-            <section class="menu-tabela">
-                <table class="tabela-3x3">
-                    <tr>
-                        <th>Tipo</th>
-                        <th>Identificador</th>
-                        <th>Ações</th>
-                    </tr>
-                    <tr>
-                        <td>guichê</td>
-                        <td>1</td>
-                        <td class="actions">
-                            <img src="../assets/img/editar.png" alt="Editar">
-                            <div class="toggle-btn active">
-                                <div class="circle"></div>
-                            </div>
-                        </td>
-                    </tr>
+            <!-- <main> -->
+                <div class="cubo-branco">
+                    <h2 class="titulo">Pontos de Atendimento Cadastrados</h2>
                     
-                </table>
-                <button class="styled-button">Novo guichê</button>
-            </section>
-        </div>
-        <script>
-            const toggleButtons = document.querySelectorAll('.toggle-btn');
-            toggleButtons.forEach(button => {
-                button.addEventListener('click', () => {
-                    button.classList.toggle('active');
-                });
-            });
-        </script>
-    </main>
-
+                    <!-- Barra de pesquisa -->
+                    <div class="barra-pesquisa">
+                        <input type="text" class="input-pesquisa" placeholder="Buscar Registro">
+                    </div>
+            
+                    <!-- Linha divisória -->
+                    <div class="linha"></div>
+            
+                    <!-- Tabela de pontos de atendimento -->
+                    <div class="tabela">
+                        <section class="menu-tabela">
+                            <table class="tabela-3x3">
+                                <tr>
+                                    <th>Tipo</th>
+                                    <th>Identificador</th>
+                                    <th>Ações</th>
+                                </tr>
+                                <tr>
+                                    <td>Guichê</td>
+                                    <td>1</td>
+                                    <td class="actions">
+                                        <!-- Botão de edição -->
+                                        <a href="editar_pont_de_atendimento.html">
+                                            <img src="../assets/img/editar.png" alt="Editar">
+                                        </a>
+                                        <!-- Botão de ativar/desativar -->
+                                        <div class="toggle-btn active">
+                                            <div class="circle"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+            
+                            <!-- Botão para adicionar novo guichê -->
+                            <a href="cadastro_pont_de_atendimento.html">
+                                <button class="styled-button">Novo Guichê</button>
+                            </a>
+                        </section>
+                    </div>
+                </div>
+            
+                <script>
+                    // Script para alternar o estado dos botões toggle
+                    const toggleButtons = document.querySelectorAll('.toggle-btn');
+                    toggleButtons.forEach(button => {
+                        button.addEventListener('click', () => {
+                            button.classList.toggle('active');
+                        });
+                    });
+                </script>
+            <!-- </main> -->
+    </section>
 
 </body>
 </html>

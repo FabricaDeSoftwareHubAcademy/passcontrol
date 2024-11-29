@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- TROCA TÍTULO QUANDO FOR UTILIZAR -->
-    <title>Navegação PassControl</title> 
+    <title>Pontos de Atendimentos Cadastrados</title> 
     
 
     <!-- IMPORT DA FONTE -->
@@ -14,7 +14,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 
     <!-- IMPORT DO CSS -->
-    <link rel="stylesheet" href="../css/style_eli.css">
+    <link rel="stylesheet" href="../css/navegacao.css">
+    <link rel="stylesheet" href="../css/cadastro_pont_de_atendimento.css">
 
 </head>
 <body class="control-body-navegacao">
@@ -83,55 +84,70 @@
             </a>
         </div>
     </div>
+
+    <!-- INICIO DA ÁREA ÚTIL DA PÁGINA -->
+    <!-- INSIRA O CORPO DA SUA PÁGINA A PARTIR DESTE PONTO -->
     
-    <section class="Area-Util-Projeto">
-        <!-- INICIO DA ÁREA ÚTIL DA PÁGINA -->
-        <!-- INSIRA O CORPO DA SUA PÁGINA A PARTIR DESTE PONTO -->
-
-        <!-- CODIGO DO ELIANDRO -->
-        <div class="nome_da_area_eli">
-            <div class="scrollmenu">
-                <a href="./menusup_usuario.html" class="active">Usuários</a>
-                <a href="./menusup_serviços.html">Serviços</a>
-                <!-- <a href="./menuadm_autoatendimento.html">Autoatendimento</a> -->
-                <a href="./menuadm_usuario.html">ADM</a>
+    <main>
+        <div class="cubo-branco">
+            <h2 class="titulo">Cadastro - Pontos de Atendimento</h2>
+            <h3 class="sub-titulo">Local de Atendimento</h3>
+            
+            <!-- Campo de Local de Atendimento -->
+            <div class="barra-pesquisa">
+                <input type="text" class="input-pesquisa" placeholder="EX: GUICHÊ">
             </div>
-            <!-- área da descrição da página de navegação  -->
-            <div class="descricao">
-                <h2>Menu de Gestão</h2>
-                <hr>
-                <p>Área de Gestão do Supervisor.</p>
+    
+            <h4 class="sub-titulo2">Número/Letra</h4>
+    
+            <!-- Campo de Número/Letra -->
+            <div class="barra-pesquisa1">
+                <input type="text" class="input-pesquisa" placeholder="EX: 01">
             </div>
-            <!-- área dos cards de nevegação  -->
-            <main class="area-cards">
-                <div class="container">
-                    <div class="wrapper">
-                        <div class="banner-img">
-                            <img src="../assets/img/img_eli/Usuário_Cadastrado.png" alt="">
-                        </div>
+    
+            <!-- Botões de ação -->
+            <div class="botoes">
+                <a href="atendimentocadastrados.html">
+                    <button class="btn voltar">Voltar</button>
+                </a>
+                <button class="btn salvar" id="btnSalvar">Salvar</button>
+            </div>
+        </div>
+    
+        <!-- Modal de Salvo com Sucesso -->
+        <div id="modalSucesso" class="modal hidden">
+            <div class="modal-content">
+                <span class="close-btn" id="closeModal">&times;</span>
+                <p>Salvo com sucesso!</p>
+            </div>
+        </div>
 
-                        <h3 class="titulo-card">Usuários</h3>
-                        <p>Usuários Cadastrados.</p>
-                    </div>
-                    <div class="button-wrapper">
-                        <button class="btn outline" onclick="window.location.href='AtendentesCadastrados.html';">DETALHES</button>
-                    </div>
-                </div>
-                <div class="container">
-                    <div class="wrapper">
-                        <div class="banner-img">
-                            <img src="../assets/img/img_eli/Cadastro de Usuário.png" alt="">
-                        </div>
-                        <h3 class="titulo-produto">Cadastro</h3>
-                        <p>Cadastro de Usuário</p>
-                    </div>
-                    <div class="button-wrapper">
-                        <button class="btn outline" onclick="window.location.href='telacadastro.html';">DETALHES</button>
-                    </div>
-                </div>    
-            </main>
-        </div>   
-    </section>
-         
+                <!-- Script JavaScript -->
+        <script>
+            // Selecionar os elementos do modal e botão
+            const btnSalvar = document.getElementById('btnSalvar');
+            const modalSucesso = document.getElementById('modalSucesso');
+            const closeModal = document.getElementById('closeModal');
+        
+            // Evento para exibir o modal ao clicar em "Salvar"
+            btnSalvar.addEventListener('click', () => {
+                modalSucesso.style.display = 'block'; // Mostrar modal
+            });
+        
+            // Evento para fechar o modal ao clicar no "X"
+            closeModal.addEventListener('click', () => {
+                modalSucesso.style.display = 'none'; // Ocultar modal
+            });
+        
+            // Fechar o modal ao clicar fora da área do conteúdo
+            window.addEventListener('click', (event) => {
+                if (event.target === modalSucesso) {
+                    modalSucesso.style.display = 'none';
+                }
+            });
+        </script>
+
+    </main>      
+
 </body>
 </html>

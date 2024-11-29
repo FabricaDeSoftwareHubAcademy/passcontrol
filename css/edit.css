@@ -1,17 +1,40 @@
-@import url(navegacao.css);
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.forme{
+    width: 100%;
+    height: auto;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
 
 .quadrado{
-    width: 90%;
+    width: 80%;
     height: 90%;
     background-color: rgba(255, 255, 255, 0.356);
     position: absolute;
-    left: 65px;
+    left: 12%;
     margin-top: 50px;
+    flex-wrap: wrap;
+    gap: 20px;
+    flex-direction: column;
 }
+.container-flex{
+    flex: 1 1 35%;
+}
+.perfild{
+    position: absolute;
+    width: 45%;
+    left: 2%;
+    top: 350px
 
-.titulo{
-    width: 100%;
-    height: auto;
+}
+.titulo h1{
+    text-align:  center;
+    font-size: 2em;
+    margin-bottom: 20px;
 }
 .titulo .cadastro_title{
    font-family: var(--font-main);
@@ -31,16 +54,11 @@
     left: 25px;
 }
 
-.forme{
-    width: 100%;
-    height: auto;
-    
-}
 .nome{
     position: relative;
-    top: 70px;
-    left: 189px;
-    width: 73%;
+    top: 15px;
+    left: 2%;
+    width: 95%;
     display: flex;
     flex-direction: column;
     font-size: 90%;
@@ -53,9 +71,9 @@
 
 .email{
     position: relative;
-    top: 100px;
-    left: 189px;
-    width: 35%;
+    top: 50px;
+    left: 2%;
+    width: 45%;
     display: flex;
     flex-direction: column;
     font-size: 90%;
@@ -68,9 +86,9 @@
 
 .cpf{
     position: relative;
-    top: 38px;
-    left: 630px;
-    width: 35%;
+    top: -21px;
+    left: 52%;
+    width: 45%;
     display: flex;
     flex-direction: column;
     font-size: 90%;
@@ -83,9 +101,9 @@
 
 .senha{  
     position: relative;
-    top: 70px;
-    left: 189px;
-    width: 35%;
+    top: 28px;
+    left: 2%;
+    width: 45%;
     display: flex;
     flex-direction: column;
     font-size: 90%;
@@ -95,21 +113,12 @@
     border-radius: 5px;
     margin-top: 12px;
 }
-.senha1-input{
-    padding: 8px;
-    margin-right: 8px;
-    font-size: 12px;
-}
-.oculto1{
-    padding: 8px;
-    font-size: 12px;
-    cursor: pointer;
-}
+
 .confirmar{
     position: relative;
-    top: 8px;
-    left: 630px;
-    width: 35%;
+    top: -40px;
+    left: 52%;
+    width: 45%;
     display: flex;
     flex-direction: column;
     font-size: 90%;  
@@ -120,6 +129,13 @@
     margin-top: 12px;
 }
 
+.labeledit{
+    font-family: var(--font-main);
+    width: 50%;
+    height: 15px;
+    font-weight: bold;
+    display: block;
+}
 .perfil{
     position: relative;
     top: 40px;
@@ -128,33 +144,56 @@
     display: flex;
     flex-direction: column;
     font-size: 90%;
+    border-radius: 5px solid black;
 }
-.perfil .borda{
+.selecao .pi{
     height: 40px;
-    border-radius: 5px;
+    border-radius: 5px solid black;
     margin-top: 12px;
 }
 
-.labeledit{
-    font-family: var(--font-main);
-    height: 10px;
-    font-weight: bold;
+.selecao{
+    display: flex;
+    position: absolute;
+    top: 15px;
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    margin-top: 12px;
+    background-color: white;
+    font-size: var(--font-main);
 }
-
 .checkbox-container{ 
     display: flex;
     position: absolute;
-    left: 650px; 
-    width: 100%;
+    left: 53%; 
+    width: 50%;
     font-size: 100%;
-    top: 395px;
+    top: 370px;
     font-size: var(--font-main);
     font-weight: bold;
-} 
+    display: flex;
+    gap: 20px;
+}
+.servico{
+    display: flex;
+    position: absolute;
+    top: 350px;
+    left: 52%;
+    font-size: var(--font-main);
+    font-weight: bold;
+}
+.todos{
+    display: flex;
+    position: absolute;
+    left: 71%;
+    top: 465px;
+}
 .column{ 
     display: flex; 
     flex-direction: column; 
     margin-right: 20px; 
+    flex: 1;
 } 
 .checkbox-container label{ 
     display: flex; 
@@ -179,40 +218,32 @@
     font-size: var(--font-main);
     font-weight: bold;
 }
-.servico{
-    display: flex;
-    position: absolute;
-    top: 370px;
-    left: 630px;
-    font-size: var(--font-main);
-    font-weight: bold;
-}
-/* Esconder o checkbox padrão */
+
 .customizado input[type="checkbox"] {
     position: absolute;
     opacity: 0;
-    cursor: pointer;
+    cursor: pointer;  
 }
 
- /* Criar um elemento customizado */
+
 .customizado .teste {
     position: relative;
     /* height: 50px; */
-    width: 200px;
+    /* width: 200px; */
     /* background-color: #ccc; */
     border-radius: 4px;
-    display: inline-block;
+    display: flex;
     vertical-align: middle;
     margin-right: 10px;
     
     
 } 
 
-/* Estilo para quando o checkbox estiver selecionado */
+
 /* .customizado input[type="checkbox"]:checked + .teste {
     background-color: #4CAF50;
     border: 1px solid black;
-} */
+}    */
 
 .customizado .teste:after {
     content: "";
@@ -221,35 +252,55 @@
 
 } 
 
-/* Mostrar a marca de seleção */
+.customizado::before {
+    content: ''; 
+    position: relative;
+    left: -10px;
+    top: -1px;
+    width: 10px;
+    height: 10px;
+    border: 1px solid #000000;
+    border-radius: 2px;
+    background-color: white;
+}
+
 .customizado input[type="checkbox"]:checked + .teste:after {
     display: block;
   
 } 
 
-/* Estilo da marca de seleção */
-.customizado  .teste:after {
+.customizado  .teste::before {
     left: -20px;
     top: 5px;
     width: 0px;
     height: 0px;
-    border: solid var(--verde-control);
-    border-width: 0 10px 10px 0;
-    transform: rotate(1deg);
+    
 }
+.customizado  .teste:after {
+    left: -19px;
+    top: 6px;
+    width: 0px;
+    height: 0px;
+    border: solid var(--verde-control);
+    border-width: 2 10px 10px 2;
+    transform: rotate(1deg);
+    
+} 
+
+
 .botao1{
     background-color: var(--cinza-control);
     border-radius: 5px;
     border: none;
     color: var(--cor-fundo);
-    padding: 5px 25px;
-    font-size: 15px;
+    font-size: 17px;
     text-align: center;
     cursor: pointer;
-    margin: 4px 4px;
-    position: absolute;
-    top: 558px;
-    left: 970px;
+    width: 120px;
+    height: 35px;
+    font-weight: bold;
+
+    
 }
 .botao1:hover{
     color: var(--verde-control);
@@ -257,19 +308,106 @@
 }
 .botao2{
     background-color: var(--cinza-control);
+    
     border-radius: 5px;
     border: none;
     color: var(--cor-fundo);
-    padding: 5px 25px;
-    font-size: 15px;
+    font-size: 17px;
     text-align: center;
     cursor: pointer;
-    margin: 4px 4px;
-    position: absolute;
-    top: 558px;
-    left: 865px;
+    width: 120px;
+    height: 35px;
+    font-weight: bold;
+    
 }
 .botao2:hover{
     color: var(--verde-control);
     text-decoration:underline;
+}
+
+.btn{
+    position: absolute;
+    left: 75%;
+    top: 650px;
+    display: flex;
+    button{margin: 0 15px}
+    
+}
+
+
+
+@media screen and (max-width: 768px){
+    .quadrado{
+        width: 90%;
+        left: 5%;
+    }
+    .perfild,.selecionar{
+        width: 100%;
+        position: relative;
+        left: 0;
+    }
+    .titulo .cadastro_title{
+        font-size: 100%;
+    }
+    .nome, .email, .cpf, .senha, .confirmar{
+        width: 100%;
+    }
+    .btn{
+        display: flex;
+        justify-content: space-around;
+        position: relative;
+        left: 0;
+        top: auto;
+    }
+    .checkbox-container{
+        display: block;
+        left: 0;
+        top: auto;
+    }
+    .column{
+        width: 100%;
+        margin-right: 0;
+    }
+    .checkbox-container input[type="checkbox"]{
+        margin-right: 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .quadrado{
+        width: 100%;
+        margin-top: 20px;
+        left: 0;
+    }
+    .perfild, .selecionar{
+        width: 100%;
+    }
+    .checkbox-container{
+        width: 100%;
+        margin-top:  20px;
+    }
+    .servico, .todos{
+        font-size: 14px;
+    }
+    .cadastro_title{
+        font-size: 20px;
+        text-align: center;
+    }
+    .nome input,
+    .email input,
+    .cpf input,
+    .senha input,
+    .confirmar input{
+        width: 100%;
+    }
+    .botao1, .botao2{
+        width: 100%;
+        margin: 10px 0;
+    }
+    .checkbox-container{
+        display: block;
+        margin-left: 0;
+        width: 100%;
+    }
+    
 }

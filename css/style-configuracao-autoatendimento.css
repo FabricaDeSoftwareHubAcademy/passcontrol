@@ -1,0 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-background-1: #f9f9f9;
+    --color-background-2: #353D46;
+    --color-background-3: rgba(255, 255, 255, 0.4);
+
+    --color-neutro-1: #000;
+    --color-neutro-2: #fff;
+
+    --color-text-1: #33404D;
+    --color-text-2: #3B4B59;
+
+    --color-intervalo: #FFA800;
+    --color-disponivel: #3AA867;
+    --color-em-atendimento: #0080C8;
+}
