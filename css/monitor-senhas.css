@@ -27,51 +27,70 @@
     background-position: bottom right;
     width: 100vw;
     height: 100vh;
-    justify-content: top;
+    justify-content: center;
     overflow: hidden;
     
 }
 .fundo-azul-lateral{
-    width: 490px;
+    background-color: var(--cor-azul-escuro--1);
+    min-width: 300px;
     height: 100vh;
     display: flex;
-    background-color: var(--cor-azul-escuro--1);
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
-    
+    /* gap: 1%; */
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 2;
 }
 .fundo-azul-lateral h1{
-    width: 70%;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
     color: white;
-    font-size: 55px;
-    margin-top: -130px;
-    margin-bottom: 30px;
+    font-size: 3vw;
     font-weight: 700;
+
+    /* text-wrap: nowrap; */
+    /* font-size: 55px; */
+    /* font-size:larger; */
+    /* margin-top: -130px; */
+    /* margin-top: 2%; */
+    /* margin-bottom: 10%; */
+    /* background-color: rgb(30, 30, 30);   */
 }
 .area-das-senhas{
     display: flex;
-    width: 455px;
-    height: 725px;
+    height: auto;
     align-items: center;
     flex-direction: column;
     justify-content: center;
     border-radius: 5px;
     background-color: var(--cor-cinza--1);
-    margin-left: 15px;
-    margin-right: 15px;
+    gap: 2vh;
+    padding: 4vh 2vh;
+    margin: 2vh;
+    /* width: 455px; */
+    /* height: 725px; */
+    /* height: inherit; */
+    /* margin-left: 15px; */
+    /* margin-right: 15px; */
 }
 .caixa-das-senhas{
     display: flex;
-    width: 430px;
-    height: 135px;
     align-items: center;
     flex-direction: column;
     background-color: var(--cor-azul-escuro--0_10);
-    margin-top: 25px;
-    margin-bottom: 25px;
-    border-radius: 5px;
+
+    /* width: 430px; */
+    /* height: 135px; */
+    /* margin-top: 25px; */
+    /* margin-bottom: 25px; */
+    /* border-radius: 5px; */
 }
 .caixa-das-senhas h2{
     display: flex;
@@ -131,13 +150,28 @@
 
 
 .fundo-senha-principal {
-    width: 70%;
-    height: 725px;
+    /* width: 70%; */
+    /* height: 37.76vw; */
+    /* margin-top: 25px; */
+    /* margin-top: 5vw; */
+    /* margin-left: 70px; */
+    /* margin-right: 70px; */
+    /* border-radius: 5px; */
+    position: absolute;
     background-color: var(--cor-azul-escuro--0_10);
-    margin-top: 25px;
-    margin-left: 70px;
-    margin-right: 70px;
-    border-radius: 5px;
+    height: auto;
+    width: auto;
+    /* margin-left: 400px; */
+    top: 7vh;
+    right: 2vh;
+    left: 60vh;
+    bottom: 7vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background-color: rebeccapurple; */
+
 }
 .nome-pessoa h1{
     padding: 40px;
@@ -149,17 +183,31 @@
 .infos-senha-principal {
     display: flex;
     flex-direction: column;
-}
-.infos-senha-principal h2 {
-    display: flex;
-    font-size: 100px;
+    text-wrap: nowrap;
     justify-content: space-between;
-    margin: 20px 150px 20px 150px;
+    list-style: none;
+
     color: var(--cor-azul-escuro--1);
     font-weight: 800;
+    font-size: 4vw;
+}
+.infos-senha-principal li{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    /* background-color: red; */
+    gap: 5%;
+    margin: 20px 150px 20px 150px;
+}
+
+.infos-senha-principal h2 {
+    display: flex;
+    justify-content: space-between;
 }
 .infos-senha-principal span{
-    width: 400px;
-    text-align: center;
+    min-width: 200px;
+    text-align: end;
     font-weight: 800;
+    /* background-color: rebeccapurple; */
 }
