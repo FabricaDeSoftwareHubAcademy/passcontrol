@@ -5,7 +5,7 @@
     box-sizing: border-box;
 }
 .servico {
-    min-height: calc(90vh - 90px);
+    /* min-height: calc(90vh - 90px); */
     justify-content: space-around;
     z-index: 1;
     position: fixed;
@@ -18,11 +18,9 @@
     background-color: rgba(0, 0, 0, 0.12);
     overflow: auto;
     scroll-behavior: smooth;
-    margin: 30px;
 }
 .cabecalho{
     margin: 30px;
-    width: 95%;
 }
 #telabranca{
     background-color: #ffffff3a;
@@ -57,35 +55,35 @@
     font-size: 20px;
     font-weight: bold;
     margin-top: 10px;
-    margin-left: 18px;
+    margin-left: -11px;
 }
 .linha_divisoria{
     background-color: #37474F;
     height: 1px;
-    width: 98%;
+    width: 100%;
     padding: 4px;
-    margin-left: 30px;
+    
     
 }
 .tabelaServico{
-    width:98%;
-    height: 100%;
+    width:100%;
+    height:100%;
     border-collapse: collapse;
     margin-bottom: 20px;
     background-color: #ffffff7a;
     border: 2px solid black;
     margin-top: 20px;   
     position: relative;
-    margin: 30px;
     
 }
 
 .partes_tab{
+    display: flexbox;
     justify-content: space-between;
     align-items: baseline;
     
 }
-#editar{
+/* #editar{
     width: 30px;
     height: 30px;
     float: left;
@@ -95,11 +93,14 @@
     align-items: center;
     padding-top: 10px;
     margin-left: auto;
+} */
+#editar{
+    width: 26px;
 }
-th, td {
-  
+.partes_tabe, td {
+    width: 30px;
     border: 1px solid #37474F;
-    padding: 8px;
+    padding: 0.5%;
     text-align: left;
     font-family: Arial, sans-serif;
     font-size: 15px;
@@ -107,7 +108,7 @@ th, td {
     text-decoration-color: #37474F;
 }
 
-th {
+.partes_tabe {
     background-color: #37474F;
     color: rgb(255, 255, 255);
     justify-content: space-between;
@@ -115,11 +116,13 @@ th {
     font-size: 20px;
     
 }
+td{
+
+}
 
 .toggle-btn {
-    margin-top: 15px;
     width: 60px;
-    height: 20px;
+    height: 21px;
     background-color: #ffffff;
     border-radius: 10px;
     position: relative;
@@ -153,7 +156,7 @@ th {
     border-radius: 5px;
     cursor: pointer;
     margin-right: 15px;
-    margin-top: 18%;
+    margin-top: 17%;
 
 }
 
@@ -169,11 +172,14 @@ button:hover {
 /* MEDIA */
 @media screen and (max-width:1200px){
     .servico{
-        padding-top: 0px;
         left: 8vh;
     }
+
 }
-@media screen and (max-width:570px){
+@media screen and (max-width:630px){
+    .servico{
+        left: 8vh;
+    }
     #buscarserv {
         width: 40%;
         margin-left: 99px;
@@ -185,6 +191,7 @@ button:hover {
     }
     .tabelaServico{
         width: 100%;
+        padding: 0.5%;
     }
     .linha_divisoria{
         width: 100%;
@@ -193,11 +200,115 @@ button:hover {
     #telabranca{
         width: 100%;
     }
-    th, td{
-        width: 320px;
+    .partes_tabe, td{
+        width: 38%;
+        padding: 1px;
         font-size: 12px;
     }
+    #editar{
+        width: 22px;
+        height: 22px;
+        margin-right: 55px;
+        margin-top: 10px;
+    }
+    
+    .toggle-btn{
+        width: 48px;
+        height: 18px;
+        bottom: 20px;
+    }
+    .toggle-btn .circulo {
+        width: 14px;
+        height: 14px;
+        top: 1px;
+    }
+    .toggle-btn.active .circulo {
+        left: 30px;
+    }
+    
 }
+@media screen and (max-width:430px){
+    .servico{
+        left: 8vh;
+    }
+    #telabranca{
+        width: 100%;
+    }
+    #buscarserv {
+        width: 40%;
+        margin-left: 99px;
+        font-size: 8px;
+    }
+    #servico_cad{
+        width: 30%;
+        font-size: 18px;
+    }
+    .tabelaServico{
+        width:100%;
+    }
+    .linha_divisoria{
+        width: 100%;
+        height: auto;
+    }
+    .partes_tabe, .td{
+        width: 50%;
+        padding: 1px;
+        font-size: 12px;
+    }
+    #editar{
+        width: 22px;
+        height: 22px;
+        margin-right: 55px;
+        margin-top: 10px;
+    }
+    .toggle-btn{
+        width: 45px;
+        height: 16px;
+        bottom: 20px;
+    }
+    .toggle-btn .circulo {
+        width: 12px;
+        height: 12px;
+        top: 1px;
+    }
+    .toggle-btn.active .circulo {
+        left: 29px;
+    }
+}
+
+@media screen and (max-width:320px){
+    #telabranca{
+        width: 100%;
+    }
+    .partes_tabe, .td{
+        width: 50%;
+        height: 48%;
+        padding: 1px;
+    }
+    #editar{
+        width: 22px;
+        height: 22px;
+        margin-right: 55px;
+        margin-top: 10px;
+    }
+    
+    .toggle-btn{
+        width: 45px;
+        height: 16px;
+        bottom: 20px;
+    }
+    .toggle-btn .circulo {
+        width: 12px;
+        height: 12px;
+        top: 1px;
+    }
+    .toggle-btn.active .circulo {
+        left: 29px;
+    }
+}
+
+
+
 
 
 
