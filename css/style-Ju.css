@@ -276,27 +276,17 @@
     width: 50%;
     height: 140%;
     gap: 15px;
-<<<<<<< HEAD
-    padding-right: 2.5%;
-    /* margin-right: 3%; */
-=======
     margin-right: 3%;
     /* background-color: aqua; */
->>>>>>> origin/task006
     /* background-color: darkturquoise; */
 }
 
 .senhas-guiche-area-chamada {
     display: flex;
     flex-direction: column;
-<<<<<<< HEAD
-    width: 35%;
-    height: 70%;
-=======
     width: 45%;
     height: 40%;
     /* background-color: aliceblue; */
->>>>>>> origin/task006
     background-color: rgba(255, 255, 255, 0.3);
     justify-content: center;
     align-items: center;
@@ -505,24 +495,12 @@ input:focus + .slider {
         font-size: 24px;
     }
     .meio_esquerda-guiche-area-chamada h3{
-<<<<<<< HEAD
-        font-size: 19px;
-    }
-    .meio_esquerda-guiche-area-chamada{
-        height: 98%;
-        /* width: 110%; */
-    }
-    .meio_direita-guiche-area-chamada{
-        height: 90%;
-        width: 150%;
-=======
         font-size: 16px;
     }
     .meio_esquerda-guiche-area-chamada{
         height: 98%;
         width: 50%;
         margin-left: 6%;
->>>>>>> origin/task006
     }
     .guiche_senha-area-chamada{
         gap: 14px;
