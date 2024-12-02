@@ -13,6 +13,7 @@ main {
     scroll-behavior: smooth; 
 }
 .cubo-branco {
+    padding: 30px;
     background-color: rgba(255, 255, 255, 0.52); /* Cor branca com opacidade */
     z-index: 1; 
     position: absolute; 
@@ -130,10 +131,24 @@ main {
     background-color: #2d3945;
     color: #3AA867;
 }
-@media (max-width: 320px) {
+@media (max-width: 1320px) {
+    .menu-tabela {
+        width: 100%;
+        max-width: 100%;
+        padding: 5px;
+    }
+    .tabela-3x3 {
+        width: 300%;
+    }
+    .tabela-3x3 th,
+    .tabela-3x3 td {
+        font-size: 18px;
+        padding: 6px;
+    }
+}
 .barra-pesquisa {
-        width: 46%;
-    margin-left: 54%;
+    width: 20%;
+    margin-left: 81.5%;
 }
 .menu-tabela {
     width: 30%;
@@ -141,12 +156,11 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    }
 }
 @media (max-width: 320px) {
     main {   
         top: 100px;
-        left: 10px;
+        left: 20px;
         right: 10px;
         width: 100%;
     }
@@ -157,13 +171,14 @@ main {
         bottom: 7vh; 
     }
     .titulo {
-        font-size: 13px;
-        margin-top: 10px;
+        font-size: 12px;
+        margin-top: -10px;
         text-align: center;
     }
     .barra-pesquisa {
-        width: 40%;
-        margin-left: 58%;
+        width: 63%;
+        margin-top: 10px;
+        margin-left: 52%;
     }
     .input-pesquisa {
         padding: 1px;
@@ -173,8 +188,8 @@ main {
     }
     .linha {
         margin-top: 1px;
-        margin-left: 1px;
-        width: 98%;
+        margin-left: -23px;
+        width: 130.5%;
     }
     .tabela {
         padding: 3px;
@@ -190,7 +205,7 @@ main {
         padding: 6px;
     }
     .actions img {
-        width: 15px;
+        width: 25px;
         height: 15px;
     }
     .styled-button {
@@ -198,7 +213,7 @@ main {
         color: white;
         padding: 10px 5px;
         font-size: 10px;
-        bottom: 60px;
+        bottom: 40px;
         right: 45px;
     }
 }
