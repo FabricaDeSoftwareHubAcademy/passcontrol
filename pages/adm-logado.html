@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         <!-- TROCA TÍTULO QUANDO FOR UTILIZAR -->
-        <title>Navegação PassControl</title> 
+        <title>Tela ADM Logado</title>
         
         <!-- IMPORT DA FONTE -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,9 +15,11 @@
         <!-- IMPORT DO CSS -->
         <link rel="stylesheet" href="../css/navegacao.css">
         <link rel="stylesheet" href="../css/adm-logado.css">
+        <link rel="stylesheet" href="../modais/Modal Confirmação dos Dados Registrados/estilo.css">
 
         <!-- IMPORT DO JS -->
         <script src="../js/navegacao-menu-lateral.js" defer></script>
+        <script src="../modais/Modal Confirmação dos Dados Registrados/modal.js" defer></script>
 
 </head>
 <body class="control-body-navegacao">
@@ -123,8 +125,20 @@
         </div>
         <div class="form-actions">
             <button type="button" class="botao-voltar">Voltar</button>
-            <button type="submit" class="botao-salvar">Salvar</button>
+            <button type="submit" class="botao-salvar open">Salvar</button>
         </div>
+        <main class="modal-container">
+            <section class="modal">
+                <img src="../modais/Modal Confirmação dos Dados Registrados/IMG/Logo Nota Controlnt.png" alt="Logo Nota Control" class="logo">
+                <h1>Confirmação</h1>
+                <hr>
+                <p><b>Deseja Salvar as Edições Feitas?</b></p>
+                <div class="button-group">
+                    <button class="botao-modal cancel">Não</button>
+                    <button class="botao-modal save">Sim</button>
+                </div>
+            </section>
+        </main>
 
         <!-- FIM DA ÁREA ÚTIL DA PÁGINA -->
     </section>         
