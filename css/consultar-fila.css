@@ -283,17 +283,40 @@ input:focus + .slider {
     /* text-decoration: underline #3AA867; */
 }
 
-@media screen and (min-width: 1300px) and (max-width: 1480px) {
-    .topo-esquerda-consultar-fila{
-        width: 50%;
-        height: 64%;
-        align-items: end;
-        display: flex;
-        /* background-color: coral; */
-        margin-left: 2.5%;
-        margin-top: -2%;
 
+
+
+
+
+
+@media screen and (min-width: 1481px) and (max-width: 1780px) {
+    .topo-esquerda-consultar-fila {
+        margin-left: 2.5%;
+        margin-top: -3%;
+    } 
+    .topo-direita-consultar-fila {
+        width: 80%;
+        height: 64%;
     }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* MEDIA? */
+
+@media screen and (min-width: 1300px) and (max-width: 1480px) {
+    .topo-esquerda-consultar-fila {
+        margin-left: 2.5%;
+        margin-top: -4%;
+    } 
 }
 
 @media screen and (min-width: 1020px) and (max-width: 1299px) {
@@ -304,7 +327,7 @@ input:focus + .slider {
         display: flex;
         /* background-color: coral; */
         margin-left: 2.5%;
-        margin-top: -2%;
+        margin-top: -4%;
 
     }
 }
@@ -317,7 +340,7 @@ input:focus + .slider {
         display: flex;
         /* background-color: coral; */
         margin-left: 2.5%;
-        margin-top: -2%;
+        margin-top: -3%;
     }
 }
 
@@ -369,9 +392,7 @@ input:focus + .slider {
 }
 @media screen and (min-width: 375px) and (max-width: 409px) {
     .topo-esquerda-consultar-fila h3 {
-        font-weight: 700;
         font-size: 14px;
-        color: #33404D;
     }
 }
 
@@ -410,10 +431,11 @@ input:focus + .slider {
 
 
 
-@media screen and (min-width: 1058px) and (max-width: 1250px) {
+@media screen and (min-width: 1058px) and (max-width: 1490px) {
     .topo-direita-consultar-fila {
-        height: 60%;
+        margin-top: 3%;
         width: 90%;
+        height: 54%;
     }
 }
 @media screen and (min-width: 1023px) and (max-width: 1058px) {
@@ -479,8 +501,14 @@ input:focus + .slider {
 
 @media screen and (min-width: 354px) and (max-width: 384px) {
     .topo-direita-consultar-fila {
-        height: 80%;
-        width: 150%;
+        height: 50%;
+        width: 190%;
+    }
+    .topo-direita-consultar-fila p{
+        font-size: 14px;
+        }
+    .topo-esquerda-consultar-fila h3 {
+        font-size: 14px;
     }
 }
 
