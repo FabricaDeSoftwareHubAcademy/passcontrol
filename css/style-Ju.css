@@ -405,7 +405,7 @@ input:focus + .slider {
 
 /* MEDIA */
 
-@media screen and (min-width: 1025px) and (max-width: 1429px) {
+@media screen and (min-width: 1025px) and (max-width: 1529px) {
     *{
         font-size: 22px;
         text-align: center;
@@ -428,7 +428,7 @@ input:focus + .slider {
         height: 28%;
     }
     .meio_direita-guiche-area-chamada{
-        height: 120%;
+        height: 150%;
         width: 90%;
     }
     .meio_direita-guiche-area-chamada p{
@@ -439,40 +439,6 @@ input:focus + .slider {
 
 
 
-@media screen and (min-width: 1023px) and (max-width: 1058px) {
-    *{
-        font-size: 20px;
-        text-align: center;
-        /* background-color: aqua; */
-    }
-    .guiche_senha-area-chamada p{
-        text-align: center;  
-    }
-    .meio-guiche-area-chamada {
-        width: 100%;
-        height: 28%;
-    }
-    .meio_direita-guiche-area-chamada{
-        height: 120%;
-        width: 90%;
-    }
-    .meio_direita-guiche-area-chamada p{
-        font-size: 28px;
-    }
-    .meio_esquerda-guiche-area-chamada h3{
-        font-size: 25px;
-    }
-    .meio_esquerda-guiche-area-chamada{
-        height: 98%;
-        width: 50%;
-    }
-    .tabela_atendimento-guiche-area-chamada th{
-        font-size: 15px;
-    }
-    .tabela_atendimento-guiche-area-chamada td{
-        font-size: 13px;
-    }
-}
 
 @media screen and (min-width: 739px) and (max-width: 1024px) {
     *{
@@ -490,11 +456,12 @@ input:focus + .slider {
         width: 100%;
     }
     .meio_direita-guiche-area-chamada{
-        height: 150%;
-        width:  120%;
+        height: 100%;
+        width:  90%;
+        align-items: end;
     }
     .meio_direita-guiche-area-chamada p{
-        font-size: 24px;
+        font-size: 20px;
     }
     .meio_esquerda-guiche-area-chamada h3{
         font-size: 16px;
@@ -543,7 +510,7 @@ input:focus + .slider {
         height: 38%;
     }
     .meio_direita-guiche-area-chamada{
-        height: 120%;
+        height: 160%;
         width: 90%;
     }
     .meio_direita-guiche-area-chamada p{
@@ -611,8 +578,8 @@ th, td {
         width: 80%;
     }
     .senhas-guiche-area-chamada{
-        height: 55%;
-        width: 60%;
+        height: 35%;
+        width: 70%;
     }
     .botao--guiche-area-chamada{
         height: 75%;
@@ -626,8 +593,8 @@ th, td {
         width: 110%;
     }
     .meio_direita-guiche-area-chamada{
-        height: 90%;
-        width: 150%;
+        height: 140%;
+        width: 170%;
     }
     .esquerda-area-chamada{
         margin-left: 2%;
@@ -681,14 +648,22 @@ th, td {
     }
     .meio_esquerda-guiche-area-chamada h3{
         font-size: 13px;
+        margin-left: 5%;
     }
     .meio_esquerda-guiche-area-chamada{
         height: 98%;
         width: 110%;
     }
+    .meio-guiche-area-chamada {
+        width: 100%;
+        height: 22%;
+    }
     .meio_direita-guiche-area-chamada{
-        height: 90%;
+        height: 140%;
         width: 150%;
+    }
+    .meio_direita-guiche-area-chamada p{
+        font-size: 16px;
     }
     .esquerda-area-chamada{
         margin-left: 2%;
@@ -814,16 +789,30 @@ th, td {
         height: 75%;
         width: 80%;
     }
+    .meio-guiche-area-chamada{
+        flex-direction: row;
+    }
     .meio_esquerda-guiche-area-chamada h3{
-        font-size: 10px;
+        font-size: 12px;
+        margin-bottom: -20px;
     }
     .meio_esquerda-guiche-area-chamada{
         height: 98%;
-        width: 110%;
+        width: 10%;
+        margin-left: 10%;
+    }
+    .meio-guiche-area-chamada {
+        width: 100%;
+        height: 15%;
+        text-wrap: nowrap;
     }
     .meio_direita-guiche-area-chamada{
-        height: 90%;
-        width: 150%;
+        height: 100%;
+        width: 100%;
+        margin-right: 18%;
+    }
+    .meio_direita-guiche-area-chamada p{
+        font-size: 12px;
     }
     .esquerda-area-chamada{
         margin-left: 2%;
@@ -886,22 +875,30 @@ th, td {
     .area-botao--guiche-area-chamada{
         margin-right: 8%;
     }
+    .meio-guiche-area-chamada {
+        width: 100%;
+        height: 15%;
+        text-wrap: nowrap;
+    }
+    .meio_direita-guiche-area-chamada{
+        height: 120%;
+        width: 190%;
+        flex-direction: column;
+    }
     .meio_esquerda-guiche-area-chamada h3{
         font-size: 9px;
     }
     .meio_esquerda-guiche-area-chamada{
         height: 98%;
         width: 110%;
-    }
-    .meio_direita-guiche-area-chamada{
-        height: 80%;
-        width: 150%;
+        margin-top: -5%;
     }
     .esquerda-area-chamada{
         margin-left: 2%;
     }
     .botao_intervalo-guiche-area-chamada{
         width: 100%;
+        margin-top: 15%;
     }
     .tabela_atendimento-guiche-area-chamada th{
         font-size: 8px;
