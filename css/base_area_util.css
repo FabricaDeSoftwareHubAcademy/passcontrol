@@ -16,6 +16,8 @@
     overflow: auto;
     scroll-behavior: smooth;
     display: flex;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 
