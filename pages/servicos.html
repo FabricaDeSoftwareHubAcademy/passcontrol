@@ -82,98 +82,96 @@
             <!-- INSIRA O CORPO DA SUA PÁGINA A PARTIR DESTE PONTO -->
             <section class="servico">
                 <div id="telabranca">
-                <div class="cabecalho">
-                <h1 id="servico_cad">Serviços Cadastrados</h1>
-                <div class="linha_divisoria">
-                <div class="buscar_registro">
-                    <input id="buscarserv" type="text" placeholder="Buscar Registro">
-                </div>
-                </div>
+                    <div class="cabecalho">
+                    <h1 id="servico_cad">Serviços Cadastrados</h1>
+                    <div class="linha_divisoria">
+                    <div class="buscar_registro">
+                        <input id="buscarserv" type="text" placeholder="Buscar Registro">
+                    </div>
+                    </div>
                 
-                <table class="tabelaServico">
-                    <thead>
-                        <tr>
-                            <th class="partes_tabe">Código do Serviço</th>
-                            <th class="partes_tabe">Serviços</th>
-                            <th class="partes_tabe">Ações</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>FC </td>
-                            <td>Fiscalização</td>
-                            <td class="partes_tab">
-                                <a href="editar"><img id="editar" src="../assets/img/editar.png" alt="Editar"></a>
-                                <div class="toggle-btn active">
-                                    <div class="circulo"></div>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>IP</td>
-                            <td>Iluminação Pública</td>
-                            <td class="partes_tab">
-                                <a href="editar"><img id="editar" src="../assets/img/editar.png" alt="Editar"></a>
-                                <div class="toggle-btn active">
-                                    <div class="circulo"></div>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>IPTU</td>
-                            <td>IPTU</td>
-                            <td class="partes_tab">
-                                <a href="editar"><img id="editar" src="../assets/img/editar.png" alt="Editar"></a>
-                                <div class="toggle-btn active">
-                                    <div class="circulo"></div>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>LIC</td>
-                            <td>Licenças</td>
-                            <td class="partes_tab">
-                                <a href="editar"><img id="editar" src="../assets/img/editar.png" alt="Editar"></a>
-                                <div class="toggle-btn active">
-                                    <div class="circulo"></div>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>OUVID</td>
-                            <td>Ouvidoria</td>
-                            <td class="partes_tab">
-                                <a href="editar"><img id="editar" src="../assets/img/editar.png" alt="Editar"></a>
-                                <div class="toggle-btn active">
-                                    <div class="circulo"></div>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>CM</td>
-                            <td>Conselho Municipal</td>
-                            <td class="partes_tab">
-                                <a href="editar"><img id="editar" src="../assets/img/editar.png" alt="Editar"></a>
-                                <div class="toggle-btn active">
-                                    <div class="circulo"></div>
-                                </div>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <script>
-                const toggleButtons = document.querySelectorAll('.toggle-btn');
-                toggleButtons.forEach(button => {
-                    button.addEventListener('click', () => {
-                        button.classList.toggle('active');
-                    });
-                });
-            </script>
-            <div class="button-container">
-                    <button class="botaoCadastrar">Cadastrar</button>
-            </div>
+                    <table class="tabelaServico">
+                        <thead>
+                            <tr>
+                                <th class="partes_tabe">Código do Serviço</th>
+                                <th class="partes_tabe">Serviços</th>
+                                <th class="partes_tabe">Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>FC </td>
+                                <td>Fiscalização</td>
+                                <td class="partes_tab">
+                                    <a href="editar"><img id="editar" src="../assets/img/editar.png" alt="Editar"></a>
+                                    <div class="toggle-btn active">
+                                        <div class="circulo"></div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>IP</td>
+                                <td>Iluminação Pública</td>
+                                <td class="partes_tab">
+                                    <a href="editar"><img id="editar" src="../assets/img/editar.png" alt="Editar"></a>
+                                    <div class="toggle-btn active">
+                                        <div class="circulo"></div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>IPTU</td>
+                                <td>IPTU</td>
+                                <td class="partes_tab">
+                                    <a href="editar"><img id="editar" src="../assets/img/editar.png" alt="Editar"></a>
+                                    <div class="toggle-btn active">
+                                        <div class="circulo"></div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>LIC</td>
+                                <td>Licenças</td>
+                                <td class="partes_tab">
+                                    <a href="editar"><img id="editar" src="../assets/img/editar.png" alt="Editar"></a>
+                                    <div class="toggle-btn active">
+                                        <div class="circulo"></div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>OUVID</td>
+                                <td>Ouvidoria</td>
+                                <td class="partes_tab">
+                                    <a href="editar"><img id="editar" src="../assets/img/editar.png" alt="Editar"></a>
+                                    <div class="toggle-btn active">
+                                        <div class="circulo"></div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>CM</td>
+                                <td>Conselho Municipal</td>
+                                <td class="partes_tab">
+                                    <a href="editar"><img id="editar" src="../assets/img/editar.png" alt="Editar"></a>
+                                    <div class="toggle-btn active">
+                                        <div class="circulo"></div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>     
+            <div class="button-container"><button class="botaoCadastrar">Cadastrar</button></div>
             </div>
         </section> 
+        <script>
+            const toggleButtons = document.querySelectorAll('.toggle-btn');
+            toggleButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    button.classList.toggle('active');
+                });
+            });
+        </script>
 </body>
 </html>
