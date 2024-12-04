@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
@@ -5,17 +6,19 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         <!-- TROCA TÍTULO QUANDO FOR UTILIZAR -->
-        <title>Navegação PassControl</title> 
+        <title>TELA AUTOATENDIMENTO</title> 
         
         
         <!-- IMPORT DA FONTE -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
         
         <!-- IMPORT DO CSS -->
         <link rel="stylesheet" href="../css/navegacao.css">
-        <link rel="stylesheet" href="../css/tela_autoatendimento.css">
+        <link rel="stylesheet" href="../css/tela_autoatendimentoTeste.css">
 
         <!-- IMPORT DO JS -->
         <script src="../js/navegacao-menu-lateral.js" defer></script>
@@ -36,12 +39,7 @@
     <!-- INSIRA O CORPO DA SUA PÁGINA A PARTIR DESTE PONTO -->
 
     <!-- <section class="fundo-cinza"> -->
-
         <section class="box-servicos" id="box-servicos">
-            <!-- <span class="selecione-servico">
-                Selecione o serviço para o qual deseja atendimento:
-            </span> -->
-
             <div class="area-quadrados">
                 <a href="" class="quadrado">
                     <h4>IPTU</h4>
@@ -82,10 +80,18 @@
                     <h4>IPTU</h4>
                     <img class="imagem-servico" src="assets/casa.svg" alt="Servico" id="img-servico">
                 </a>
+
+                
+                <!-- Repita os quadrados conforme necessário -->
             </div>
         </section>
-    <!-- </div> -->
 
-    <!-- FIM DA ÁREA ÚTIL DA PÁGINA -->
-</body>
+        <div class="seta">
+            <button class="btn-proximaPagina" onclick="window.location.href='tela_autoatendimentoPage1.html'">
+                <i class="fas fa-arrow-right"></i> <!-- Ícone de seta para a direita -->
+            </button>
+        </div>
+
+       
+    </body>
 </html>
