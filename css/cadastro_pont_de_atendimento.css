@@ -92,23 +92,48 @@ main {
     color: #4CAF50; 
 }
 @media (max-width: 1320px) {
+    main {
+        top: 150px;
+        left: 5%;
+        right: 5%;
+    }
     .titulo {
         font-size: 25px; 
         margin-top: 10px; 
     }
     .botoes {
+        margin-left: 500px;
+        width: 20%;
+        max-width: 400px;
+    }
+    .btn {
+        font-size: 14px;
+        padding: 13px;
+    }
+}
+@media (max-width: 790px) {
+    main {
+        top: 150px;
+        left: 5%;
+        right: 5%;
+    }
+    .titulo {
+        font-size: 20px;
+    }
+    .botoes {
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
         width: 10%;
-        margin-left: 340px;
-        margin-top: 200px;
+        margin: 20px 20px; 
+        margin-top: 180px;
+        margin-left: 350px;
     }
-    .btn{
-        flex: 1;
-        max-width: 140%;
-        padding: 12px;
-        margin: 0 5px;
+    .btn {
+        flex: 1 1 auto;
+        max-width: 200px;
+        padding: 10px;
+        margin: 10px;
     }
 }
 @media (max-width: 320px) {
