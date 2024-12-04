@@ -1,6 +1,7 @@
 :root{
     --cor-azul-escuro--1: rgba(51, 64, 77, 1);
     --cor-azul-escuro--0_10: rgba(51, 64, 77, 0.10);
+    --cor-azul-acinzentado: rgb(69, 84, 99);
     --cor-cinza--1: rgb(240, 240, 240,1);
     --font-main: Inter, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 
@@ -14,9 +15,6 @@
 
 
     
-
-
-
 .fundo-de-tudo{
     display: flex;
     align-items: center;
@@ -33,17 +31,19 @@
 }
 .fundo-azul-lateral{
     background-color: var(--cor-azul-escuro--1);
-    min-width: 300px;
+    /* min-width: 480px; */
+    width: 30vw;
     height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* gap: 1%; */
     position: fixed;
     left: 0;
     top: 0;
     z-index: 2;
+
+    /* gap: 1%; */
 }
 .fundo-azul-lateral h1{
     width: 90%;
@@ -72,8 +72,9 @@
     border-radius: 5px;
     background-color: var(--cor-cinza--1);
     gap: 2vh;
-    padding: 4vh 2vh;
+    padding: 3vh 2vh;
     margin: 2vh;
+
     /* width: 455px; */
     /* height: 725px; */
     /* height: inherit; */
@@ -85,6 +86,7 @@
     align-items: center;
     flex-direction: column;
     background-color: var(--cor-azul-escuro--0_10);
+    padding: 1.5vh;
 
     /* width: 430px; */
     /* height: 135px; */
@@ -101,26 +103,31 @@
 }
 .conjunto-senhas{
     display: flex;
+    align-items: center;
     width: 100%;
     justify-content: space-between;
-
+    gap: 4vw;
 }
 .senha{
     display: flex;
     color: var(--cor-azul-escuro--1);
     align-items: center;
     flex-direction: column;
-    margin-left: 30px;
 }
-.senha h3{
+.senha h3, .guiche h3{
     display: flex;
-    font-size: 25px;
+    /* font-size: 25px; */
+    font-size: 3vh;
     padding: 5px;
     font-weight: 800;
+    margin-top: 2vh;
+    color: var(--cor-azul-acinzentado);
 }
-.senha h4{
+.senha h4, .guiche h4{
     display: flex;
-    font-size: 40px;
+    /* font-size: 40px; */
+    font-size: 4vh;
+    text-wrap: nowrap;
     font-weight: 800;
 }
 .guiche{
@@ -129,23 +136,8 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    margin-right: 60px;
     
 }
-.guiche h5{
-    display: flex;
-    font-size: 25px;
-    padding: 5px;
-    font-weight: 800;
-}
-.guiche h6{
-    display: flex;
-    font-size: 40px;
-    font-weight: 800;
-}
-
-
-
 
 
 
@@ -157,20 +149,21 @@
     /* margin-left: 70px; */
     /* margin-right: 70px; */
     /* border-radius: 5px; */
+
     position: absolute;
     background-color: var(--cor-azul-escuro--0_10);
     height: auto;
     width: auto;
+    border-radius: 5px;
     /* margin-left: 400px; */
-    top: 7vh;
-    right: 2vh;
-    left: 60vh;
-    bottom: 7vh;
+    top: 2vw;
+    right: 2vw;
+    left: 32vw;
+    bottom: 2vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* background-color: rebeccapurple; */
 
 }
 .nome-pessoa h1{
@@ -196,18 +189,37 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    /* background-color: red; */
-    gap: 5%;
+    gap: 10%;
     margin: 20px 150px 20px 150px;
 }
 
 .infos-senha-principal h2 {
     display: flex;
     justify-content: space-between;
+    color: var(--cor-azul-acinzentado);
 }
 .infos-senha-principal span{
     min-width: 200px;
-    text-align: end;
+    text-align: center;
+    font-size: 6vw;
     font-weight: 800;
-    /* background-color: rebeccapurple; */
+}
+
+@media screen and (max-width: 1281px){
+    *{
+        overflow: hidden;
+    }
+
+    .fundo-azul-lateral{
+        /* height: 100vw; */
+        width: 38vw;
+        align-items: center;
+    }
+
+    .fundo-senha-principal{
+        top: 2vw;
+        right: 2vw;
+        left: 40vw;
+        bottom: 2vw;
+    }
 }
