@@ -32,14 +32,19 @@ main {
     color: var(--cinza-control);
 }
 .barra-pesquisa {
-    width: 8%;
-    margin-left: 91%;
+    width: 100%; 
+    position: absolute;
+    right: -127px;
+    top: 35px;
 }
+
 .input-pesquisa {
-    width: 100%;
+    width: 40%;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
+
+
 .linha {
     background-color: #2d3945;
     height: 6px;
@@ -138,7 +143,7 @@ main {
         padding: 5px;
     }
     .tabela-3x3 {
-        width: 300%;
+        width: 150%;
     }
     .tabela-3x3 th,
     .tabela-3x3 td {
