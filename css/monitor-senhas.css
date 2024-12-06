@@ -31,7 +31,6 @@
 }
 .fundo-azul-lateral{
     background-color: var(--cor-azul-escuro--1);
-    /* min-width: 480px; */
     width: 30vw;
     height: 100vh;
     display: flex;
@@ -72,7 +71,7 @@
     border-radius: 5px;
     background-color: var(--cor-cinza--1);
     gap: 2vh;
-    padding: 3vh 2vh;
+    padding: 2.5vh 1.6vh;
     margin: 2vh;
 
     /* width: 455px; */
@@ -87,6 +86,7 @@
     flex-direction: column;
     background-color: var(--cor-azul-escuro--0_10);
     padding: 1.5vh;
+    width: calc(100% - 3vh);
 
     /* width: 430px; */
     /* height: 135px; */
@@ -96,10 +96,13 @@
 }
 .caixa-das-senhas h2{
     display: flex;
-    font-size: 35px;
+    font-size: 2rem;
     margin-top: 5px;
     color: var(--cor-azul-escuro--1);
     font-weight: 800;
+    text-align: center;
+    padding-left: 2px;
+    padding-right: 2px;
 }
 .conjunto-senhas{
     display: flex;
@@ -116,7 +119,6 @@
 }
 .senha h3, .guiche h3{
     display: flex;
-    /* font-size: 25px; */
     font-size: 3vh;
     padding: 5px;
     font-weight: 800;
@@ -125,7 +127,6 @@
 }
 .senha h4, .guiche h4{
     display: flex;
-    /* font-size: 40px; */
     font-size: 4vh;
     text-wrap: nowrap;
     font-weight: 800;
@@ -136,26 +137,15 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    
 }
 
 
-
 .fundo-senha-principal {
-    /* width: 70%; */
-    /* height: 37.76vw; */
-    /* margin-top: 25px; */
-    /* margin-top: 5vw; */
-    /* margin-left: 70px; */
-    /* margin-right: 70px; */
-    /* border-radius: 5px; */
-
     position: absolute;
     background-color: var(--cor-azul-escuro--0_10);
     height: auto;
     width: auto;
     border-radius: 5px;
-    /* margin-left: 400px; */
     top: 2vw;
     right: 2vw;
     left: 32vw;
@@ -164,48 +154,71 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
+    
+    /* width: 70%; */
+    /* height: 37.76vw; */
+    /* margin-top: 25px; */
+    /* margin-top: 5vw; */
+    /* margin-left: 70px; */
+    /* margin-right: 70px; */
+    /* border-radius: 5px; */
+    /* margin-left: 400px; */
+}
+.fundo-senha-principal-wrap{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 .nome-pessoa h1{
-    padding: 40px;
-    font-size: 70px;
+    padding-bottom: 7%;
+    font-size: 8vh;
     text-align: center;
     color: var(--cor-azul-escuro--1);
     font-weight: 800;
+    text-wrap: nowrap;
 }
-.infos-senha-principal {
+.infos-senha-principal{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     text-wrap: nowrap;
     justify-content: space-between;
     list-style: none;
 
     color: var(--cor-azul-escuro--1);
-    font-weight: 800;
-    font-size: 4vw;
+    font-size: 3.5vw;
+    gap: 10%;
+
+    /* font-weight: 800; */
+    background-color: red;
 }
 .infos-senha-principal li{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: space-between;
     gap: 10%;
-    margin: 20px 150px 20px 150px;
+    width: auto;
 }
 
 .infos-senha-principal h2 {
+    width: auto;
     display: flex;
     justify-content: space-between;
     color: var(--cor-azul-acinzentado);
+    font-size: 5vh;
 }
 .infos-senha-principal span{
+    /* width: 50%; */
     min-width: 200px;
     text-align: center;
-    font-size: 6vw;
     font-weight: 800;
+    font-size: 10vh;
 }
 
-@media screen and (max-width: 1281px){
+@media screen and (max-width: 1300px){
     *{
         overflow: hidden;
     }
@@ -221,5 +234,44 @@
         right: 2vw;
         left: 40vw;
         bottom: 2vw;
+        white-space: nowrap;
+        word-wrap: break-word;
+    }
+    .infos-senha-principal{
+        flex-direction: column;
+        justify-content: space-between;
+        list-style: none;
+        
+        color: var(--cor-azul-escuro--1);
+        font-size: 3.5vw;
+        gap: 10%;
+        
+        /* font-weight: 800; */
+    }
+    .nome-pessoa{
+        display: flex;
+        text-size-adjust: 10%;
+    }
+    .infos-senha-principal li{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-betweaen;
+        width: auto;
+        margin-bottom: 10%;
+        
+        /* background-color: red; */
+    }
+    .infos-senha-principal h2 {
+        width: auto;
+        display: flex;
+        justify-content: space-between;
+        color: var(--cor-azul-acinzentado);
+        font-size: 5vh;
+        text-decoration: underline;
+    }
+    .infos-senha-principal span{
+        /* width: 50%; */
+        font-size: 10vh;
     }
 }
