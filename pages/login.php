@@ -1,3 +1,8 @@
+<?php
+    require_once 'banco.php';
+    $banco = new Banco();
+?>
+
 <!DOCTYPE html>
 <html lang="p-br">
 
@@ -87,6 +92,23 @@
             <span></span>
         </div>
     </div>
+
+
+
+
+<?php
+
+    $banco->conectar("passcontrol", "localhost", "devweb", "suporte@22");
+
+    if($banco->msgErro == ""){
+        echo "Tudo Certo";
+    }else{
+        echo "Erro ao conectar....";
+    }
+
+
+
+?>
 </body>
 
 </html>
