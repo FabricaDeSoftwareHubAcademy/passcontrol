@@ -24,7 +24,7 @@
 }
 #telabranca{
     width: 96%;
-    height: 70vh;
+    height: 57vh;
     background-color: #ffffff3a;
     margin: 30px;
 }
@@ -169,14 +169,14 @@ button:hover {
 }
 @media screen and (max-width: 1280px) {
     #telabranca {
-        height: 90vh;
+        height: 30vh;
 
 }
 }
 
 @media screen and (max-width: 1024px) {
     #telabranca {
-        height: 85vh;
+        height: 35vh;
 
 }
 }
@@ -191,7 +191,7 @@ button:hover {
 @media screen and (max-width: 540px){
     #telabranca {
         width: 800px;
-        height: 70vh;
+        height: 05vh;
       }
 }
 
@@ -208,7 +208,7 @@ button:hover {
     }
     #telabranca {
       width: 800px;
-      height: 65vh;
+      height: 30vh;
     }
     .toggle-btn{
         width: 48px;
@@ -234,7 +234,6 @@ button:hover {
 @media screen and (max-width: 430px) {
     #telabranca {
       width: 500px;
-      height: 55vh;
     }
     #buscarserv {
       width: 70%;
@@ -256,7 +255,7 @@ button:hover {
 @media screen and (max-width: 320px){
     #telabranca {
         width: 650px;
-        height: 60vh;
+        
       }
       .button-container1{
           width: 650px;
