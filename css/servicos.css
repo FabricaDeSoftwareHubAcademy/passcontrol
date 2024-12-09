@@ -26,7 +26,7 @@
 }
 #telabranca{
     width: 96%;
-    height: 60%;
+    height: 57vh;
     background-color: #ffffff3a;
     margin: 30px;
 }
@@ -130,8 +130,8 @@
     background-color: #00cc00;
     left: 36px;
 }
-.button-container{
-    width: 98%;
+.button-container1{
+    width: 96%;
     height: 100px;
     display: flex;
     justify-content: flex-end;
@@ -165,9 +165,38 @@ button:hover {
     }
     #telabranca {
         width: 100%;
-        height: 55%;
+        height: 45vh;
+        margin: 1rem 0;
       }
-  }
+}
+@media screen and (max-width: 1280px) {
+    #telabranca {
+        height: 30vh;
+
+}
+}
+
+@media screen and (max-width: 1024px) {
+    #telabranca {
+        height: 35vh;
+
+}
+}
+@media screen and (max-width: 912){
+    #telabranca {
+        width: 800px;
+        height: 75vh;
+      }
+}
+
+
+@media screen and (max-width: 540px){
+    #telabranca {
+        width: 800px;
+        height: 05vh;
+      }
+}
+
 @media screen and (max-width: 686px) {
     #buscarserv {
       width: 105;
@@ -181,6 +210,7 @@ button:hover {
     }
     #telabranca {
       width: 800px;
+      height: 30vh;
     }
     .toggle-btn{
         width: 48px;
@@ -197,10 +227,11 @@ button:hover {
     .toggle-btn.active .circulo {
         left: 30px;
     }
-    .botaoCadastrar {
-        margin-top: 5%;
+    .button-container1{
+        width: 800px;
+        
     }
-  }
+}
   
 @media screen and (max-width: 430px) {
     #telabranca {
@@ -210,31 +241,27 @@ button:hover {
       width: 70%;
       margin-left: 50px;
     }
-    .button-container{
+    .button-container1{
         width: 95%;
         margin-top: 2%;
     }
     .partes_tabe, td {
         font-size: 13px;
     }
-    .botaoCadastrar {
-        margin-top: 10%;
+    .button-container1{
+        width: 500px;
+        
     }
-  }
+}
   
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 320px){
     #telabranca {
-      width: 650px;
-    }
-    .button-container{
-        width: 95%;
-        margin-top: 5%;
-    }
-  }
-
-
-
-
-
-
-
+        width: 650px;
+        
+      }
+      .button-container1{
+          width: 650px;
+          
+      }
+}
+    
