@@ -19,3 +19,153 @@
     --color-disponivel: #3AA867;
     --color-em-atendimento: #0080C8;
 }
+
+@media (max-width: 1024px) {
+    .item-servico-configuracao-autoatendimento label{
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 912px) {
+    .item-servico-configuracao-autoatendimento label{
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 853px) {
+    .item-servico-configuracao-autoatendimento label{
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 820px) {
+    .item-servico-configuracao-autoatendimento label{
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .item-servico-configuracao-autoatendimento label{
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 540px) {
+    .area-configuracao-autoatendimento h2 {
+        font-size: 16px;
+    }
+
+    .item-servico-configuracao-autoatendimento label{
+        font-size: 10px;
+    }
+
+    .btn-configuracao-autoatendimento button {
+        font-size: 13px;
+        padding: 5px;
+    }
+}
+
+@media (max-width: 430px) {
+    .area-configuracao-autoatendimento h2 {
+        font-size: 16px;
+    }
+
+    .item-servico-configuracao-autoatendimento label{
+        font-size: 10px;
+    }
+
+    .btn-configuracao-autoatendimento button {
+        font-size: 13px;
+        padding: 5px;
+    }
+}
+
+@media (max-width: 414px) {
+    .area-configuracao-autoatendimento h2 {
+        font-size: 16px;
+    }
+
+    .item-servico-configuracao-autoatendimento label{
+        font-size: 10px;
+    }
+
+    .btn-configuracao-autoatendimento button {
+        font-size: 13px;
+        padding: 5px;
+    }
+}
+
+@media (max-width: 412px) {
+    .area-configuracao-autoatendimento h2 {
+        font-size: 16px;
+    }
+
+    .item-servico-configuracao-autoatendimento label{
+        font-size: 10px;
+    }
+
+    .btn-configuracao-autoatendimento button {
+        font-size: 13px;
+        padding: 5px;
+    }
+}
+
+@media (max-width: 390px) {
+    .area-configuracao-autoatendimento h2 {
+        font-size: 16px;
+    }
+
+    .item-servico-configuracao-autoatendimento label{
+        font-size: 10px;
+    }
+
+    .btn-configuracao-autoatendimento button {
+        font-size: 11px;
+        padding: 5px;
+    }
+}
+
+@media (max-width: 375px) {
+    .area-configuracao-autoatendimento h2 {
+        font-size: 16px;
+    }
+
+    .item-servico-configuracao-autoatendimento label{
+        font-size: 10px;
+    }
+
+    .btn-configuracao-autoatendimento button {
+        font-size: 11px;
+        padding: 5px;
+    }
+}
+
+@media (max-width: 360px) {
+    .area-configuracao-autoatendimento h2 {
+        font-size: 16px;
+    }
+
+    .item-servico-configuracao-autoatendimento label{
+        font-size: 8px;
+    }
+
+    .btn-configuracao-autoatendimento button {
+        font-size: 11px;
+        padding: 5px;
+    }
+}
+
+@media (max-width: 344px) {
+    .area-configuracao-autoatendimento h2 {
+        font-size: 14px;
+    }
+
+    .item-servico-configuracao-autoatendimento label{
+        font-size: 6px;
+    }
+
+    .btn-configuracao-autoatendimento button {
+        font-size: 8px;
+        padding: 5px;
+    }
+}
