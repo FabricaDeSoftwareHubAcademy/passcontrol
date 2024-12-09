@@ -307,42 +307,7 @@
 
 
 
-@media screen and (max-width: 768px){
-    .quadrado{
-        width: 90%;
-        left: 5%;
-    }
-    .perfild,.selecionar{
-        width: 100%;
-        position: relative;
-        left: 0;
-    }
-    .titulo .cadastro_title{
-        font-size: 100%;
-    }
-    .nome, .email, .cpf, .senha, .confirmar{
-        width: 100%;
-    }
-    .btn{
-        display: flex;
-        justify-content: space-around;
-        position: relative;
-        left: 0;
-        top: auto;
-    }
-    .checkbox-container{
-        display: block;
-        left: 0;
-        top: auto;
-    }
-    .column{
-        width: 100%;
-        margin-right: 0;
-    }
-    .checkbox-container input[type="checkbox"]{
-        margin-right: 10px;
-    }
-}
+
 
 @media screen and (max-width: 480px) {
     .quadrado{
@@ -382,4 +347,42 @@
         width: 100%;
     }
     
+}
+
+
+@media screen and (max-width: 768px){
+    .quadrado{
+        width: 90%;
+        left: 5%;
+    }
+    .perfild,.selecionar{
+        width: 100%;
+        position: relative;
+        left: 0;
+    }
+    .titulo .cadastro_title{
+        font-size: 100%;
+    }
+    .nome, .email, .cpf, .senha, .confirmar{
+        width: 100%;
+    }
+    .btn{
+        display: flex;
+        justify-content: space-around;
+        position: relative;
+        left: 0;
+        top: auto;
+    }
+    .checkbox-container{
+        display: block;
+        left: 0;
+        top: auto;
+    }
+    .column{
+        width: 100%;
+        margin-right: 0;
+    }
+    .checkbox-container input[type="checkbox"]{
+        margin-right: 10px;
+    }
 }
