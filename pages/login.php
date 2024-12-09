@@ -1,5 +1,5 @@
 <?php
-    require_once 'banco.php';
+    require_once '../db/banco.php';
     $banco = new Banco();
 ?>
 
@@ -98,7 +98,7 @@
 
 <?php
 
-    $banco->conectar("passcontrol", "localhost", "devweb", "suporte@22");
+    $banco->conectar("passcontrol", "localhost", "root", "");
 
     if($banco->msgErro == ""){
         echo "Tudo Certo";
