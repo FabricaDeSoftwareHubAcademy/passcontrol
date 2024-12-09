@@ -324,6 +324,7 @@
     background-color: rgb(255, 255, 255,0.5);
     width: 95%;
     margin: 2vw;
+    max-height: 230px;
     /* margin-left: 2.5%; */
 }
 
@@ -333,6 +334,7 @@ th, td {
     text-align: left;
     min-width: 50px;
     color: var(--cinza-control);
+    position: relative;
 }
 
 .tabela_atendimento-guiche-area-chamada th {
@@ -411,7 +413,7 @@ input:focus + .slider {
 
 /* MEDIA */
 
-@media screen and (min-width: 1316px) and (max-width: 1529px) {
+@media screen and (min-width: 1201px) and (max-width: 1629px) {
     *{
         font-size: 22px;
         text-align: center;
@@ -428,6 +430,9 @@ input:focus + .slider {
     }
     .tabela_atendimento-guiche-area-chamada td{
         font-size: 13px;
+    }
+    .tabela_atendimento-guiche-area-chamada {
+        max-height: 530px;
     }
     .meio_esquerda-guiche-area-chamada h3{
         font-size: 24px;
@@ -456,7 +461,7 @@ input:focus + .slider {
     }
 }
 
-@media screen and (min-width: 1025px) and (max-width: 1315px) {
+@media screen and (min-width: 1025px) and (max-width: 1200px) {
     *{
         font-size: 22px;
         text-align: center;
@@ -479,7 +484,7 @@ input:focus + .slider {
         font-size: 24px;
     }
     .meio_esquerda-guiche-area-chamada{
-        margin-top: 16%;
+        margin-top: 13%;
     }
     .meio-guiche-area-chamada {
         width: 100%;
@@ -488,7 +493,7 @@ input:focus + .slider {
     .meio_direita-guiche-area-chamada{
         height: 140%;
         width: 65%;
-        margin-top: 6%;
+        margin-top: 3%;
     }
     .meio_direita-guiche-area-chamada p{
         font-size: 24px;
@@ -517,7 +522,7 @@ input:focus + .slider {
         font-size: 13px;
     }
     .meio_esquerda-guiche-area-chamada h3{
-        font-size: 20px;
+        font-size: 18px;
         margin-bottom: 28%;
     }
     .meio_esquerda-guiche-area-chamada{
@@ -552,8 +557,8 @@ input:focus + .slider {
         gap: 15%;
     }
     .meio_esquerda-guiche-area-chamada h3{
-        font-size: 14px;
-        margin-bottom: 1%;
+        font-size: 16px;
+        margin-bottom: -4%;
     }
     .meio_esquerda-guiche-area-chamada{
         margin-bottom: -1%;
@@ -565,7 +570,11 @@ input:focus + .slider {
         height: 18%;
     }
     .meio_direita-guiche-area-chamada{
-        height: 180%;
+        height: 150%;
+        width: 60%;
+    }
+    .senhas-guiche-area-chamada{
+        height: 60%;
         width: 90%;
     }
     .meio_direita-guiche-area-chamada p{
@@ -580,12 +589,10 @@ input:focus + .slider {
     }
     .botao_intervalo-guiche-area-chamada{
         margin-top: 14px;
+        width: 100%;
     }
     .esquerda-area-chamada{
         margin-left: 2%;
-    }
-    .botao_intervalo-guiche-area-chamada{
-        width: 100%;
     }
     .tabela_atendimento-guiche-area-chamada th{
         font-size: 15px;
@@ -633,24 +640,28 @@ th, td {
         width: 80%;
     }
     .meio_esquerda-guiche-area-chamada h3{
-        font-size: 12px;
-        margin-bottom: -5%;
-    }
-    .meio_esquerda-guiche-area-chamada{
-        margin-bottom: -8%;
-        align-items: center;
+        font-size: 16px;
+        margin-left: 5%;
+        margin-top: 42%;
     }
     .meio_esquerda-guiche-area-chamada{
         height: 98%;
-        width: 110%;
-        margin-top: 12%;
-        align-items: center; 
+        width: 180%;
+    }
+    .meio-guiche-area-chamada {
+        width: 100%;
+        height: 22%;
     }
     .meio_direita-guiche-area-chamada{
-        align-items: start;
-        margin-top: 10%;
-        height: 190%;
-        width: 180%;
+        height: 130%;
+        width: 160%;
+        align-items: end;
+        margin-right: 8%;
+        margin-top: -3%;
+        flex-direction: column;
+    }
+    .meio_direita-guiche-area-chamada p{
+        font-size: 16px;
     }
     .esquerda-area-chamada{
         margin-left: 2%;
@@ -674,7 +685,7 @@ th, td {
         text-align: left;
     }
 }
-@media screen and (min-width: 505px) and (max-width: 555px){
+@media screen and (min-width: 507px) and (max-width: 555px){
     *{
         font-size: 14px;
         text-align: center;
@@ -747,7 +758,7 @@ th, td {
         text-align: left;
     }
 }
-@media screen and (min-width: 466px) and (max-width: 504px){
+@media screen and (min-width: 466px) and (max-width: 506px){
     *{
         font-size: 14px;
         text-align: center;
