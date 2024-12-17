@@ -1,6 +1,8 @@
 <?php
     require_once '../db/banco.php';
+    require_once '../db/usuario.php';
     $banco = new Banco();
+    $usuario = new Usuario();
 ?>
 
 <!DOCTYPE html>
@@ -13,6 +15,7 @@
 
     <link rel="stylesheet" href="../css/login.css">
     <script src="../js/login.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
 <body class="login">
@@ -59,21 +62,22 @@
         <div class="card">
             <span class="title">Olá, Seja Bem-Vindo !!</span>
 
-            <form action="#" method="post" class="formBox">
+            <form action="#" method="POST" class="formBox">
                 <div class="group user">
                     <label for="name">Usuário</label>
-                    <input type="text" placeholder="Email">
+                    <input type="email" name="email" placeholder="Email">
+
                 </div>
                 <div class="group senha">
                     <label for="password">Senha</label>
-                    <input type="password" placeholder="Senha" id="inpSenha">
+                    <input type="password" name="senha" placeholder="Senha" id="inpSenha">
                 </div>
 
                 <nav class="navEsqueciSenha">
                     <li><a href="recuperar-senha-email.html">Esqueci Minha Senha</a></li>
                 </nav>
                 <div class="btnEntrar">
-                        <a href="atendimento.html" type="submit" class="btn">Entrar</a>
+                        <input type="submit" value="Entrar" class="btn">
                 </div>
             </form>
             
@@ -98,14 +102,51 @@
 
 <?php
 
-    $banco->conectar("passcontrol", "localhost", "root", "");
 
-    if($banco->msgErro == ""){
-        echo "Tudo Certo";
-    }else{
-        echo "Erro ao conectar....";
+    if($_SERVER['REQUEST_METHOD'] === 'POST'){
+        $email = addslashes($_POST['email']);
+        $senha = addslashes($_POST['senha']);
+
+        if(!empty($email) && !empty($senha)){
+            $banco->conectar("passcontrol", "localhost", "root", "");
+            
+            if($usuario->msgErro == ""){
+                if($usuario->logar($email, $senha)){
+                    header("location: atendimento.html");
+                }else{
+                    ?>
+                        <script>
+                            Swal.fire({
+                            icon: "error",
+                            title: "Oops...",
+                            text: "Email ou Senha incorreto",
+                            });
+                        </script>
+                    <?php
+                }
+            }else{
+                ?>
+                <script>
+                    Swal.fire({
+                    icon: "error",
+                    title: "Oops...",
+                    text: <?php echo json_encode("Erro: " . $usuario->msgErro); ?>,
+                    });
+                </script>
+            <?php
+            }
+        }else{
+            ?>
+            <script>
+                Swal.fire({
+                icon: "error",
+                title: "Oops...",
+                text: "Preencha todos os campos",
+                });
+            </script>
+        <?php
+        }
     }
-
 
 
 ?>
