@@ -119,7 +119,7 @@
                             Swal.fire({
                             icon: "error",
                             title: "Oops...",
-                            text: "Email ou Senha incorreto",
+                            text: "Email ou Senha incorreto.",
                             });
                         </script>
                     <?php
@@ -141,7 +141,7 @@
                 Swal.fire({
                 icon: "error",
                 title: "Oops...",
-                text: "Preencha todos os campos",
+                text: "Preencha todos os campos.",
                 });
             </script>
         <?php
