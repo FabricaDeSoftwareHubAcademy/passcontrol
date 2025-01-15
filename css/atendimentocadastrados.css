@@ -32,19 +32,25 @@ main {
     color: var(--cinza-control);
 }
 .barra-pesquisa {
-    width: 8%;
-    margin-left: 91%;
+    width: 13%; 
+    position: absolute;
+    right: -33px;
+    top: 35px;
+
 }
+
 .input-pesquisa {
-    width: 100%;
+    width: 60%;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
+
+
 .linha {
     background-color: #2d3945;
     height: 6px;
     margin-top: 1px;
-    margin-left: 17px;
+    margin-left: 15px;
     width: 98%;
 }
 .tabela {
@@ -138,18 +144,19 @@ main {
         padding: 5px;
     }
     .tabela-3x3 {
-        width: 300%;
+        width: 150%;
     }
     .tabela-3x3 th,
     .tabela-3x3 td {
         font-size: 18px;
         padding: 6px;
     }
+    .barra-pesquisa {
+        width: 18%; /* Ajusta para telas menores */
+        max-width: 500px;
+    }
 }
-.barra-pesquisa {
-    width: 20%;
-    margin-left: 81.5%;
-}
+
 .menu-tabela {
     width: 30%;
     max-width: 100%;

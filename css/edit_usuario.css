@@ -307,6 +307,49 @@
 
 
 
+
+
+@media screen and (max-width: 480px) {
+    .quadrado{
+        width: 100%;
+        margin-top: 20px;
+        left: 0;
+    }
+    .perfild, .selecionar{
+        width: 100%;
+    }
+    .checkbox-container{
+        width: 100%;
+        margin-top:  20px;
+        
+    }
+    .servico, .todos{
+        font-size: 14px;
+    }
+    .cadastro_title{
+        font-size: 20px;
+        text-align: center;
+    }
+    .nome input,
+    .email input,
+    .cpf input,
+    .senha input,
+    .confirmar input{
+        width: 100%;
+    }
+    .botao1, .botao2{
+        width: 100%;
+        margin: 10px 0;
+    }
+    .checkbox-container{
+        display: block;
+        margin-left: 0;
+        width: 100%;
+    }
+    
+}
+
+
 @media screen and (max-width: 768px){
     .quadrado{
         width: 90%;
@@ -342,43 +385,4 @@
     .checkbox-container input[type="checkbox"]{
         margin-right: 10px;
     }
-}
-
-@media screen and (max-width: 480px) {
-    .quadrado{
-        width: 100%;
-        margin-top: 20px;
-        left: 0;
-    }
-    .perfild, .selecionar{
-        width: 100%;
-    }
-    .checkbox-container{
-        width: 100%;
-        margin-top:  20px;
-    }
-    .servico, .todos{
-        font-size: 14px;
-    }
-    .cadastro_title{
-        font-size: 20px;
-        text-align: center;
-    }
-    .nome input,
-    .email input,
-    .cpf input,
-    .senha input,
-    .confirmar input{
-        width: 100%;
-    }
-    .botao1, .botao2{
-        width: 100%;
-        margin: 10px 0;
-    }
-    .checkbox-container{
-        display: block;
-        margin-left: 0;
-        width: 100%;
-    }
-    
 }

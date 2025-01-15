@@ -7,7 +7,7 @@
     box-sizing: border-box;
 }
 .servico {
-    /* min-height: calc(90vh - 90px); */
+    min-height: calc(90vh - 90px);
     justify-content: space-around;
     z-index: 1;
     position: fixed;
@@ -25,18 +25,17 @@
     margin: 30px;
 }
 #telabranca{
+    width: 96%;
+    height: 57vh;
     background-color: #ffffff3a;
-    height: 89%;
     margin: 30px;
-
 }
 
 .buscar_registro{
     width: 165px;
     height: 28px;
     float: right;
-    margin-right: -4px;
-    margin-top: -31px;
+    margin: -31px -4px 0 0;
     border-radius: 5px;
 }
 #buscarserv{
@@ -69,13 +68,10 @@
 }
 .tabelaServico{
     width:100%;
-    height:100%;
     border-collapse: collapse;
-    margin-bottom: 20px;
     background-color: #ffffff7a;
     border: 2px solid black;
     margin-top: 20px;   
-    position: relative;
     
 }
 
@@ -85,17 +81,7 @@
     align-items: baseline;
     
 }
-/* #editar{
-    width: 30px;
-    height: 30px;
-    float: left;
-    display: flex;
-    flex-direction: column;
-    justify-content: right;
-    align-items: center;
-    padding-top: 10px;
-    margin-left: auto;
-} */
+
 #editar{
     width: 26px;
 }
@@ -115,11 +101,8 @@
     color: rgb(255, 255, 255);
     justify-content: space-between;
     font-family: Arial, sans-serif;
-    font-size: 20px;
+    font-size: 15px;
     
-}
-td{
-
 }
 
 .toggle-btn {
@@ -147,9 +130,16 @@ td{
     background-color: #00cc00;
     left: 36px;
 }
+.button-container1{
+    width: 96%;
+    height: 100px;
+    display: flex;
+    justify-content: flex-end;
 
+}
 .botaoCadastrar {
-    float: right;
+    width: 110px;
+    height: 40px;
     background-color: #37474F;
     color: white;
     border: none;
@@ -157,67 +147,77 @@ td{
     font-size: 16px;
     border-radius: 5px;
     cursor: pointer;
-    margin-right: 15px;
-    margin-top: 17%;
-
+    margin-top: 1%;
 }
 
 button:hover {
     background-color: #455A64;
 }
-
 .cadastrar-btn {
    
     margin-top: 20px;
     display: block;
 }
 /* MEDIA */
-@media screen and (max-width:1200px){
-    .servico{
-        left: 8vh;
+@media screen and (max-width: 1200px) {
+    .servico {
+      left: 8vh;
     }
+    #telabranca {
+        width: 100%;
+        height: 45vh;
+        margin: 1rem 0;
+      }
+}
+@media screen and (max-width: 1280px) {
+    #telabranca {
+        height: 30vh;
 
 }
-@media screen and (max-width:630px){
-    .servico{
-        left: 8vh;
-    }
+}
+
+@media screen and (max-width: 1024px) {
+    #telabranca {
+        height: 35vh;
+
+}
+}
+@media screen and (max-width: 912){
+    #telabranca {
+        width: 800px;
+        height: 75vh;
+      }
+}
+
+
+@media screen and (max-width: 540px){
+    #telabranca {
+        width: 800px;
+        height: 05vh;
+      }
+}
+
+@media screen and (max-width: 686px) {
     #buscarserv {
-        width: 40%;
-        margin-left: 99px;
-        font-size: 8px;
+      width: 105;
+      font-size: 12px;
     }
-    #servico_cad{
-        width: 30%;
-        font-size: 18px;
+    #servico_cad {
+      font-size: 18px;
     }
-    .tabelaServico{
-        width: 100%;
-        padding: 0.5%;
+    .tabelaServico {
+      padding: 0.5%;
     }
-    .linha_divisoria{
-        width: 100%;
-        height: auto;
+    #telabranca {
+      width: 800px;
+      height: 30vh;
     }
-    #telabranca{
-        width: 100%;
-    }
-    .partes_tabe, td{
-        width: 38%;
-        padding: 1px;
-        font-size: 12px;
-    }
-    #editar{
-        width: 22px;
-        height: 22px;
-        margin-right: 55px;
-        margin-top: 10px;
-    }
-    
     .toggle-btn{
         width: 48px;
         height: 18px;
-        bottom: 20px;
+        bottom: -15px;
+        right: 2px;
+        top:12px
     }
     .toggle-btn .circulo {
         width: 14px;
@@ -227,90 +227,41 @@ button:hover {
     .toggle-btn.active .circulo {
         left: 30px;
     }
-    
-}
-@media screen and (max-width:430px){
-    .servico{
-        left: 8vh;
+    .button-container1{
+        width: 800px;
+        
     }
-    #telabranca{
-        width: 100%;
+}
+  
+@media screen and (max-width: 430px) {
+    #telabranca {
+      width: 500px;
     }
     #buscarserv {
-        width: 40%;
-        margin-left: 99px;
-        font-size: 8px;
+      width: 70%;
+      margin-left: 50px;
     }
-    #servico_cad{
-        width: 30%;
-        font-size: 18px;
+    .button-container1{
+        width: 95%;
+        margin-top: 2%;
     }
-    .tabelaServico{
-        width:100%;
+    .partes_tabe, td {
+        font-size: 13px;
     }
-    .linha_divisoria{
-        width: 100%;
-        height: auto;
-    }
-    .partes_tabe, .td{
-        width: 50%;
-        padding: 1px;
-        font-size: 12px;
-    }
-    #editar{
-        width: 22px;
-        height: 22px;
-        margin-right: 55px;
-        margin-top: 10px;
-    }
-    .toggle-btn{
-        width: 45px;
-        height: 16px;
-        bottom: 20px;
-    }
-    .toggle-btn .circulo {
-        width: 12px;
-        height: 12px;
-        top: 1px;
-    }
-    .toggle-btn.active .circulo {
-        left: 29px;
+    .button-container1{
+        width: 500px;
+        
     }
 }
-
-@media screen and (max-width:320px){
-    #telabranca{
-        width: 100%;
-    }
-    .partes_tabe, .td{
-        width: 50%;
-        height: 48%;
-        padding: 1px;
-    }
-    #editar{
-        width: 22px;
-        height: 22px;
-        margin-right: 55px;
-        margin-top: 10px;
-    }
+  
+@media screen and (max-width: 320px){
+    #telabranca {
+        width: 650px;
+        
+      }
+      .button-container1{
+          width: 650px;
+          
+      }
+}
     
-    .toggle-btn{
-        width: 45px;
-        height: 16px;
-        bottom: 20px;
-    }
-    .toggle-btn .circulo {
-        width: 12px;
-        height: 12px;
-        top: 1px;
-    }
-    .toggle-btn.active .circulo {
-        left: 29px;
-    }
-}
-
-
-
-
-
-

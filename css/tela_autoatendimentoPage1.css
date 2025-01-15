@@ -1,0 +1,181 @@
+:root {
+    --verde-control: #3AA867;
+    --cinza-control: #33404D;
+    --cor-fundo: #f9f9f9;
+    --font-main: Inter, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    
+}
+
+/* HEX COLOR TO FILTER CONVERTER */
+/* https://isotropic.co/tool/hex-color-to-css-filter/ */
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-main);
+    font-style: bold;
+    list-style: none;
+    z-index: 1000;
+}
+
+/* TOPO */
+
+cabeca {
+    background-color: var(--cinza-control);
+    height: auto;
+    width: auto;
+    position: sticky;
+    display: flex;
+}
+
+.nav-cabeca {
+    background-color: var(--cor-fundo);
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    align-content: space-evenly;
+}
+
+.logo-control {
+    width: fit-content;
+    padding: 2px;
+    padding-left: 5px;
+}
+
+#img-logo {
+    height: 100%;
+    width: 100%;
+}
+
+.nav-cabeca H3 {
+    color: var(--cinza-control);
+    width: 80%;
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+    font-size: 23px;
+}
+
+.espaco {
+    background-color: black; /* Define a cor preta */
+    height: 50px; /* Define a altura da linha */
+    width: 100%; /* Faz com que ocupe toda a largura disponível */
+    margin: 10px 0; /* Adiciona um espaçamento acima e abaixo, opcional */
+}
+
+.area-servicos {
+    height: calc(100vh - 140px); /* Garante que a área de serviços ocupe o espaço restante */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../assets/background.png);
+    background-size: 400px;
+    background-repeat: no-repeat;
+    background-position: right bottom;
+}
+
+.selecione-servico {
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    /* background-color: aliceblue; */
+    text-align: center;
+    font-family: var(--font-main);
+    font-weight: 800;
+}
+
+/* Centraliza verticalmente e horizontalmente a área cinza */
+.fundo-cinza {
+    background-color: rgba(0, 0, 0, 0.1); 
+    width: 80%; /* Ajuste a largura conforme necessário */
+    height: 80%; /* Ajuste a altura conforme necessário */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+/* Box que contém os serviços */
+.box-servicos {
+    width: auto;
+    max-width: 1200px;
+    padding: 20px;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Area de quadrados */
+.area-quadrados {
+    display: flex;
+    width: auto;
+    height: auto;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    gap: 50px;
+    flex-direction: row;
+    align-items: center;
+    border: #33404D;
+    border-radius: 5px 5px 5px 5px;
+    
+}
+
+
+
+.quadrado {
+    border: 4px solid var(--verde-control);
+    position: relative;
+    border-radius: 5px;
+    gap: 18px;
+    width: 250px;
+    height: 250px;
+    padding: 20px;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.imagem-servico {
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+
+
+
+.nome-servico {
+    display: flex;
+    justify-content: center;
+}
+
+.seta {
+    display: flex;
+    justify-content: flex-end; 
+    align-items: flex-end;
+    width: 100%;
+    padding: 20px;
+}
+
+.btn-proximaPagina {
+    background-color: transparent;
+    color: var(--cinza-control);
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-proximaPagina i {
+    font-size: 50px;
+}

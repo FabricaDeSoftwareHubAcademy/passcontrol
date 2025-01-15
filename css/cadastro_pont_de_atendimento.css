@@ -33,14 +33,14 @@ main {
     color: var(--cinza-control);
 }
 .sub-titulo {
-    font-size: 23px;
+    font-size: 22px;
     margin-top: 100px;
     margin-left: 5%;
     color: var(--cinza-control);
 }
 
 .barra-pesquisa {
-    width: 20%;
+    width: 22%;
     margin-left: 5%;
     margin-top: 0.5%;
 }
@@ -52,14 +52,14 @@ main {
     padding: 15px;
 }
 .sub-titulo2 {
-    font-size: 20px;
+    font-size: 22px;
     margin-top: 60px;
     margin-left: 5%;
     color: var(--cinza-control);
 }
 
 .barra-pesquisa1 {
-    width: 20%;
+    width: 22%;
     margin-left: 5%;
     margin-top: 0.5%;
     position: relative;
@@ -91,21 +91,49 @@ main {
     background-color: #2d3945; 
     color: #4CAF50; 
 }
-@media (max-width: 320px) {
+@media (max-width: 1320px) {
+    main {
+        top: 150px;
+        left: 5%;
+        right: 5%;
+    }
     .titulo {
-        font-size: 14px; 
+        font-size: 25px; 
         margin-top: 10px; 
     }
     .botoes {
-        width: 80%; 
-        margin-left: 10%; 
+        margin-left: 500px;
+        width: 20%;
+        max-width: 400px;
     }
-
     .btn {
-        font-size: 14px; 
-        width: 100%; 
-        padding: 12px 0; 
-        margin-bottom: 10px; 
+        font-size: 14px;
+        padding: 13px;
+    }
+}
+@media (max-width: 790px) {
+    main {
+        top: 150px;
+        left: 5%;
+        right: 5%;
+    }
+    .titulo {
+        font-size: 20px;
+    }
+    .botoes {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 10%;
+        margin: 20px 20px; 
+        margin-top: 180px;
+        margin-left: 350px;
+    }
+    .btn {
+        flex: 1 1 auto;
+        max-width: 200px;
+        padding: 10px;
+        margin: 10px;
     }
 }
 @media (max-width: 320px) {
@@ -153,13 +181,13 @@ main {
         flex-direction: column; 
         justify-content: flex-start; 
         align-items: flex-start; 
-        margin-top: 20px; 
-        width: 60%; 
+        margin-top: 30px; 
+        width: 38%; 
         margin-left: 30%;
     }
     .btn {
         font-size: 12px; 
-        width: 50%; 
+        width: 100%; 
         padding: 5px; 
         margin-bottom: 10px;
     }

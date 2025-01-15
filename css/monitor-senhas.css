@@ -1,6 +1,7 @@
 :root{
     --cor-azul-escuro--1: rgba(51, 64, 77, 1);
     --cor-azul-escuro--0_10: rgba(51, 64, 77, 0.10);
+    --cor-azul-acinzentado: rgb(69, 84, 99);
     --cor-cinza--1: rgb(240, 240, 240,1);
     --font-main: Inter, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 
@@ -14,9 +15,6 @@
 
 
     
-
-
-
 .fundo-de-tudo{
     display: flex;
     align-items: center;
@@ -33,17 +31,18 @@
 }
 .fundo-azul-lateral{
     background-color: var(--cor-azul-escuro--1);
-    min-width: 300px;
+    width: 30vw;
     height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* gap: 1%; */
     position: fixed;
     left: 0;
     top: 0;
     z-index: 2;
+
+    /* gap: 1%; */
 }
 .fundo-azul-lateral h1{
     width: 90%;
@@ -72,8 +71,9 @@
     border-radius: 5px;
     background-color: var(--cor-cinza--1);
     gap: 2vh;
-    padding: 4vh 2vh;
+    padding: 2.5vh 1.6vh;
     margin: 2vh;
+
     /* width: 455px; */
     /* height: 725px; */
     /* height: inherit; */
@@ -85,6 +85,8 @@
     align-items: center;
     flex-direction: column;
     background-color: var(--cor-azul-escuro--0_10);
+    padding: 1.5vh;
+    width: calc(100% - 3vh);
 
     /* width: 430px; */
     /* height: 135px; */
@@ -94,33 +96,39 @@
 }
 .caixa-das-senhas h2{
     display: flex;
-    font-size: 35px;
+    font-size: 2rem;
     margin-top: 5px;
     color: var(--cor-azul-escuro--1);
     font-weight: 800;
+    text-align: center;
+    padding-left: 2px;
+    padding-right: 2px;
 }
 .conjunto-senhas{
     display: flex;
+    align-items: center;
     width: 100%;
     justify-content: space-between;
-
+    gap: 4vw;
 }
 .senha{
     display: flex;
     color: var(--cor-azul-escuro--1);
     align-items: center;
     flex-direction: column;
-    margin-left: 30px;
 }
-.senha h3{
+.senha h3, .guiche h3{
     display: flex;
-    font-size: 25px;
+    font-size: 3vh;
     padding: 5px;
     font-weight: 800;
+    margin-top: 2vh;
+    color: var(--cor-azul-acinzentado);
 }
-.senha h4{
+.senha h4, .guiche h4{
     display: flex;
-    font-size: 40px;
+    font-size: 4vh;
+    text-wrap: nowrap;
     font-weight: 800;
 }
 .guiche{
@@ -129,27 +137,24 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    margin-right: 60px;
-    
 }
-.guiche h5{
-    display: flex;
-    font-size: 25px;
-    padding: 5px;
-    font-weight: 800;
-}
-.guiche h6{
-    display: flex;
-    font-size: 40px;
-    font-weight: 800;
-}
-
-
-
-
 
 
 .fundo-senha-principal {
+    position: absolute;
+    background-color: var(--cor-azul-escuro--0_10);
+    height: auto;
+    width: auto;
+    border-radius: 5px;
+    top: 2vw;
+    right: 2vw;
+    left: 32vw;
+    bottom: 2vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
     /* width: 70%; */
     /* height: 37.76vw; */
     /* margin-top: 25px; */
@@ -157,57 +162,116 @@
     /* margin-left: 70px; */
     /* margin-right: 70px; */
     /* border-radius: 5px; */
-    position: absolute;
-    background-color: var(--cor-azul-escuro--0_10);
-    height: auto;
-    width: auto;
     /* margin-left: 400px; */
-    top: 7vh;
-    right: 2vh;
-    left: 60vh;
-    bottom: 7vh;
+}
+.fundo-senha-principal-wrap{
+    height: 100%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* background-color: rebeccapurple; */
-
 }
 .nome-pessoa h1{
-    padding: 40px;
-    font-size: 70px;
+    padding-bottom: 7%;
+    font-size: 8vh;
     text-align: center;
     color: var(--cor-azul-escuro--1);
     font-weight: 800;
+    text-wrap: nowrap;
 }
-.infos-senha-principal {
+.infos-senha-principal{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     text-wrap: nowrap;
     justify-content: space-between;
     list-style: none;
 
     color: var(--cor-azul-escuro--1);
-    font-weight: 800;
-    font-size: 4vw;
+    font-size: 3.5vw;
+    gap: 10%;
+
+    /* font-weight: 800; */
+    background-color: red;
 }
 .infos-senha-principal li{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    /* background-color: red; */
-    gap: 5%;
-    margin: 20px 150px 20px 150px;
+    gap: 10%;
+    width: auto;
 }
 
 .infos-senha-principal h2 {
+    width: auto;
     display: flex;
     justify-content: space-between;
+    color: var(--cor-azul-acinzentado);
+    font-size: 5vh;
 }
 .infos-senha-principal span{
+    /* width: 50%; */
     min-width: 200px;
-    text-align: end;
+    text-align: center;
     font-weight: 800;
-    /* background-color: rebeccapurple; */
+    font-size: 10vh;
+}
+
+@media screen and (max-width: 1300px){
+    *{
+        overflow: hidden;
+    }
+
+    .fundo-azul-lateral{
+        /* height: 100vw; */
+        width: 38vw;
+        align-items: center;
+    }
+
+    .fundo-senha-principal{
+        top: 2vw;
+        right: 2vw;
+        left: 40vw;
+        bottom: 2vw;
+        white-space: nowrap;
+        word-wrap: break-word;
+    }
+    .infos-senha-principal{
+        flex-direction: column;
+        justify-content: space-between;
+        list-style: none;
+        
+        color: var(--cor-azul-escuro--1);
+        font-size: 3.5vw;
+        gap: 10%;
+        
+        /* font-weight: 800; */
+    }
+    .nome-pessoa{
+        display: flex;
+        text-size-adjust: 10%;
+    }
+    .infos-senha-principal li{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-betweaen;
+        width: auto;
+        margin-bottom: 10%;
+        
+        /* background-color: red; */
+    }
+    .infos-senha-principal h2 {
+        width: auto;
+        display: flex;
+        justify-content: space-between;
+        color: var(--cor-azul-acinzentado);
+        font-size: 5vh;
+        text-decoration: underline;
+    }
+    .infos-senha-principal span{
+        /* width: 50%; */
+        font-size: 10vh;
+    }
 }

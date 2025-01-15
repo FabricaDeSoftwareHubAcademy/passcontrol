@@ -8,7 +8,6 @@
 /* HEX COLOR TO FILTER CONVERTER */
 /* https://isotropic.co/tool/hex-color-to-css-filter/ */
 
-
 * {
     margin: 0;
     padding: 0;
@@ -21,20 +20,13 @@
 
 /* TOPO */
 
-.control-body-navegacao{
-    display: flex;
-    align-items: center;
-    justify-content: centers;
-    flex-direction: column;
-}
-
-/* .cabeca {
+.cabeca {
     background-color: var(--cinza-control);
     height: auto;
     width: auto;
     position: sticky;
     display: flex;
-} */
+}
 
 .nav-cabeca {
     background-color: var(--cor-fundo);
@@ -69,47 +61,54 @@
     height: calc(100vh - 140px);
     width: 100%;
     display: flex;
-    background-image: url(..//telaautoatendimento_passcontrol-/background.png);
+    background-image: url(../assets/background.png);
     background-size: 400px;
     background-repeat: no-repeat;
     background-position: right bottom;
-    /* background-color: red; */
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* padding: 20px; */
-
 }
 
 .selecione-servico {
     align-items: center;
     justify-content: center;
     font-size: 32px;
-    /* background-color: aliceblue; */
     text-align: center;
     font-family: var(--font-main);
     font-weight: 800;
 }
 
 .espaco {
-    background-color: black; /* Define a cor preta */
-    height: 50px; /* Define a altura da linha */
-    width: 100%; /* Faz com que ocupe toda a largura disponível */
-    margin: 10px 0; /* Adiciona um espaçamento acima e abaixo, opcional */
+    background-color: black;
+    height: 50px;
+    width: 100%;
+    margin: 10px 0;
+}
+
+.fundo-cinza {
+    background-color: rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+    width: 1300px;
+    height: 1000px;
 }
 
 .box-servicos {
-    /* max-width: 1200px; Define uma largura máxima, opcional */
-    /* width: auto; Largura ajustada com margens */
-    background-color: rgba(0, 0, 0, 0.1); 
-    height: calc(100vh - 19vh);
-    width: calc(100vw - 2vw);
-    padding: 15vw; /* Espaçamento interno para afastar o conteúdo das bordas */
-    margin: 20px auto; /* Centraliza horizontalmente a seção */
+    width: auto;
+    max-width: 1200px;
+    padding: 20px;
+    margin: 20px auto;
     display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+}
+
+.container-quadrados {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }
 
 .area-quadrados {
@@ -119,14 +118,11 @@
     justify-content: center;
     flex-wrap: wrap;
     margin-top: 50px;
-    gap: 50px;
-    /* background-color: aliceblue; */
+    gap: 400px;
     flex-direction: row;
     align-items: center;
     border: #33404D;
-    border-radius: 5px 5px 5px 5px;
-    /* padding: 20px; */
-
+    border-radius: 5px;
 }
 
 .quadrado {
@@ -138,11 +134,9 @@
     height: 250px;
     padding: 20px;
     background-color: transparent;
-
 }
 
 .imagem-servico {
-    /* display: flex; */
     justify-content: center;
     align-items: center;
     height: 100px;
@@ -151,29 +145,24 @@
 .nome-servico {
     display: flex;
     justify-content: center;
-
 }
 
 .seta {
+    margin-top: 30px;
     display: flex;
-    justify-content: flex-end; /* Alinha o botão à direita */
-    align-items: flex-end; /* Alinha o botão ao fundo */
-    width: 100%; /* Garante que ocupa toda a largura do contêiner pai */
-    padding: 20px; /* Adiciona espaçamento opcional */
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
 }
 
 .btn-proximaPagina {
-    background-color: transparent;
-    color: var(--cinza-control);
+    background-color: white;
     display: flex;
-    justify-content: center; /* Centraliza a seta horizontalmente */
-    align-items: center; /* Centraliza a seta verticalmente */
-    border: none; /* Remove a borda */
-    cursor: pointer; /* Adiciona cursor de clique */
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 5px;
+    height: 60px;
+    width: 150px;
+    margin-left: 30px;
 }
-
-.btn-proximaPagina i {
-    font-size: 50px; /* Aumenta o tamanho da seta */
-}
-
-
