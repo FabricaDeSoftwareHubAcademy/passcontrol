@@ -171,6 +171,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+}
+.nome-pessoa{
+    width: 90%;
+    /* background-color: yellow; */
 }
 .nome-pessoa h1{
     padding-bottom: 7%;
@@ -178,29 +183,33 @@
     text-align: center;
     color: var(--cor-azul-escuro--1);
     font-weight: 800;
-    text-wrap: nowrap;
+    text-wrap: wrap;
 }
 .infos-senha-principal{
-    display: flex;
+    display: block;
     flex-direction: row;
     text-wrap: nowrap;
-    justify-content: space-between;
-    list-style: none;
+    justify-content: center;
+    justify-content: space-around;
+
+    /* list-style: none; */
 
     color: var(--cor-azul-escuro--1);
     font-size: 3.5vw;
-    gap: 10%;
-
+    /* gap: 10%; */
+    
     /* font-weight: 800; */
-    background-color: red;
+    /* background-color: red; */
+    /* width: 90%; */
 }
 .infos-senha-principal li{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    gap: 10%;
-    width: auto;
+    /* gap: 10%; */
+    
+    /* width: 100%; */
 }
 
 .infos-senha-principal h2 {
@@ -210,13 +219,39 @@
     color: var(--cor-azul-acinzentado);
     font-size: 5vh;
 }
+
 .infos-senha-principal span{
-    /* width: 50%; */
+    /* width: 40%; */
     min-width: 200px;
     text-align: center;
     font-weight: 800;
     font-size: 10vh;
+    
+    /* text-wrap: wrap; */
 }
+
+.nome-servico{
+    display: flex;
+    width: 90%;
+    
+    align-items: end;
+    justify-content: space-around;
+
+}
+
+.nome-servico li{
+    display: flex;
+    flex-direction: row;
+
+    gap: 10%;
+    list-style: none;
+}
+
+.nome-servico li h2{
+    color: var(--cor-azul-acinzentado);
+    font-size: 2vh;
+}   
+
 
 @media screen and (max-width: 1300px){
     *{
