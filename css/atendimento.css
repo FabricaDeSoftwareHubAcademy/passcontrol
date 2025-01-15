@@ -986,17 +986,17 @@ th, td {
         margin-top: 15%;
     }
     .tabela_atendimento-guiche-area-chamada th{
-        font-size: 8px;
+        font-size: 10px;
     }
     .tabela_atendimento-guiche-area-chamada td{
-        font-size: 7px;
+        font-size: 8px;
     }
     .fundo-guiche-area-chamada{
         width: 90%;
         height: 70%;
     }
     th, td {
-        padding: 0px;
+        padding: 1px;
         text-align: left;
     }
 }
