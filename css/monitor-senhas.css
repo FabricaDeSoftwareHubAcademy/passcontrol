@@ -12,8 +12,6 @@
     font-family: Inter, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
 }
 
-
-
     
 .fundo-de-tudo{
     display: flex;
@@ -27,8 +25,8 @@
     height: 100vh;
     justify-content: center;
     overflow: hidden;
-    
 }
+
 .fundo-azul-lateral{
     background-color: var(--cor-azul-escuro--1);
     width: 30vw;
@@ -41,27 +39,21 @@
     left: 0;
     top: 0;
     z-index: 2;
-
-    /* gap: 1%; */
 }
+
 .fundo-azul-lateral h1{
     width: 90%;
+    height: 9vh;
+    
     display: flex;
-    align-items: center;
+    align-items: end;
     justify-content: center;
     text-align: center;
     color: white;
     font-size: 3vw;
     font-weight: 700;
-
-    /* text-wrap: nowrap; */
-    /* font-size: 55px; */
-    /* font-size:larger; */
-    /* margin-top: -130px; */
-    /* margin-top: 2%; */
-    /* margin-bottom: 10%; */
-    /* background-color: rgb(30, 30, 30);   */
 }
+
 .area-das-senhas{
     display: flex;
     height: auto;
@@ -72,73 +64,73 @@
     background-color: var(--cor-cinza--1);
     gap: 2vh;
     padding: 2.5vh 1.6vh;
-    margin: 2vh;
+    margin: 2vh 2vh 2vh 2vh;
 
-    /* width: 455px; */
-    /* height: 725px; */
-    /* height: inherit; */
-    /* margin-left: 15px; */
-    /* margin-right: 15px; */
+    height: 95%;
+    width: 90%;
 }
+
 .caixa-das-senhas{
+    width: calc(100% - 3vh);
+    height: 20%;
+    padding: 1.5vh;
     display: flex;
     align-items: center;
     flex-direction: column;
     background-color: var(--cor-azul-escuro--0_10);
-    padding: 1.5vh;
-    width: calc(100% - 3vh);
+}
 
-    /* width: 430px; */
-    /* height: 135px; */
-    /* margin-top: 25px; */
-    /* margin-bottom: 25px; */
-    /* border-radius: 5px; */
-}
 .caixa-das-senhas h2{
-    display: flex;
-    font-size: 2rem;
-    margin-top: 5px;
-    color: var(--cor-azul-escuro--1);
-    font-weight: 800;
-    text-align: center;
-    padding-left: 2px;
-    padding-right: 2px;
-}
-.conjunto-senhas{
+    height: 80%;
     display: flex;
     align-items: center;
-    width: 100%;
-    justify-content: space-between;
-    gap: 4vw;
+    padding: auto;
+    font-size: 4.5vh;
+    font-weight: 800;
+    text-wrap:wrap;
+    text-align: center;
+    color: var(--cor-azul-escuro--1);
 }
+
+.conjunto-senhas{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 .senha{
     display: flex;
     color: var(--cor-azul-escuro--1);
     align-items: center;
-    flex-direction: column;
+    justify-content: center;
+    flex-direction: row;
 }
+
 .senha h3, .guiche h3{
     display: flex;
     font-size: 3vh;
     padding: 5px;
     font-weight: 800;
-    margin-top: 2vh;
+    text-decoration: underline;
     color: var(--cor-azul-acinzentado);
 }
+
 .senha h4, .guiche h4{
     display: flex;
     font-size: 4vh;
     text-wrap: nowrap;
     font-weight: 800;
 }
+
 .guiche{
     display: flex;
     color: var(--cor-azul-escuro--1);
     align-items: center;
     justify-content: center;
-    flex-direction: column;
+    flex-direction: row;
 }
-
 
 .fundo-senha-principal {
     position: absolute;
@@ -154,16 +146,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
-    /* width: 70%; */
-    /* height: 37.76vw; */
-    /* margin-top: 25px; */
-    /* margin-top: 5vw; */
-    /* margin-left: 70px; */
-    /* margin-right: 70px; */
-    /* border-radius: 5px; */
-    /* margin-left: 400px; */
 }
+
 .fundo-senha-principal-wrap{
     height: 100%;
     width: 100%;
@@ -171,12 +155,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
 }
+
 .nome-pessoa{
     width: 90%;
-    /* background-color: yellow; */
 }
+
 .nome-pessoa h1{
     padding-bottom: 7%;
     font-size: 8vh;
@@ -185,82 +169,68 @@
     font-weight: 800;
     text-wrap: wrap;
 }
+
 .infos-senha-principal{
     display: block;
     flex-direction: row;
     text-wrap: nowrap;
     justify-content: center;
     justify-content: space-around;
-
-    /* list-style: none; */
-
     color: var(--cor-azul-escuro--1);
     font-size: 3.5vw;
-    /* gap: 10%; */
-    
-    /* font-weight: 800; */
-    /* background-color: red; */
-    /* width: 90%; */
 }
+
 .infos-senha-principal li{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    /* gap: 10%; */
-    
-    /* width: 100%; */
     margin-bottom: 10%;
 }
 
-.infos-senha-principal h2 {
+.infos-senha-principal li h2 {
     width: auto;
     display: flex;
     justify-content: space-between;
     color: var(--cor-azul-acinzentado);
     font-size: 5vh;
+    text-decoration: underline;
 }
 
 .infos-senha-principal span{
-    /* width: 40%; */
     min-width: 200px;
     text-align: center;
     font-weight: 800;
     font-size: 10vh;
-    
-    /* text-wrap: wrap; */
 }
 
 .nome-servico{
     display: flex;
-    width: 90%;
-    
+    width: 90%;    
     align-items: end;
     justify-content: space-around;
-
 }
 
 .nome-servico li{
     display: flex;
     flex-direction: row;
     align-items: center;
-
-    gap: 10%;
+    justify-content: center;
+    width: 100%;
+    gap: 15px;
     list-style: none;
 }
 
 .nome-servico li h2{
+    font-size: 4vh;
+    font-weight: 600;
     color: var(--cor-azul-acinzentado);
-    font-size: 3.5vh;
-
-    font-weight: 400;
 }   
 
 .nome-servico li span{
-    color: var(--cor-azul-escuro--1);
     font-size: 5vh;
-
-    font-weight: 400;
+    font-weight: 600;
+    color: var(--cor-azul-escuro--1);
 }   
 
 @media screen and (max-width: 1300px){
@@ -269,7 +239,6 @@
     }
 
     .fundo-azul-lateral{
-        /* height: 100vw; */
         width: 38vw;
         align-items: center;
     }
@@ -290,8 +259,6 @@
         color: var(--cor-azul-escuro--1);
         font-size: 3.5vw;
         gap: 10%;
-        
-        /* font-weight: 800; */
     }
     .nome-pessoa{
         display: flex;
@@ -304,8 +271,6 @@
         justify-content: space-betweaen;
         width: auto;
         margin-bottom: 10%;
-        
-        /* background-color: red; */
     }
     .infos-senha-principal h2 {
         width: auto;
@@ -316,7 +281,6 @@
         text-decoration: underline;
     }
     .infos-senha-principal span{
-        /* width: 50%; */
         font-size: 10vh;
     }
 }
