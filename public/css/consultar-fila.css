@@ -288,11 +288,20 @@ input:focus + .slider {
 
 
 
-
-@media screen and (min-width: 1481px) and (max-width: 1780px) {
+@media screen and (min-width: 1780px) and (max-width: 1980px) {
     .topo-esquerda-consultar-fila {
         margin-left: 2.5%;
         margin-top: -3%;
+    } 
+    .topo-direita-consultar-fila {
+        width: 80%;
+        height: 64%;
+    }
+}
+@media screen and (min-width: 1481px) and (max-width: 1779px) {
+    .topo-esquerda-consultar-fila {
+        margin-left: 2.5%;
+        margin-top: -5%;
     } 
     .topo-direita-consultar-fila {
         width: 80%;
@@ -315,7 +324,7 @@ input:focus + .slider {
 @media screen and (min-width: 1300px) and (max-width: 1480px) {
     .topo-esquerda-consultar-fila {
         margin-left: 2.5%;
-        margin-top: -4%;
+        margin-top: -6%;
     } 
 }
 
@@ -332,7 +341,7 @@ input:focus + .slider {
     }
 }
 
-@media screen and (min-width: 850px) and (max-width: 1019px) {
+@media screen and (min-width: 857px) and (max-width: 1019px) {
     .topo-esquerda-consultar-fila{
         width: 50%;
         height: 58%;
@@ -342,17 +351,25 @@ input:focus + .slider {
         margin-left: 2.5%;
         margin-top: -3%;
     }
+    .topo-esquerda-consultar-fila h3{
+        font-weight: 700;
+        font-size: 28px;
+    }
 }
 
-@media screen and (min-width: 650px) and (max-width: 849px) {
+@media screen and (min-width: 650px) and (max-width: 856px) {
     .topo-esquerda-consultar-fila{
-        width: 50%;
+        width: 60%;
         height: 54%;
         align-items: end;
         display: flex;
         /* background-color: coral; */
         margin-left: 2.5%;
         margin-top: -2%;
+    }
+    .topo-esquerda-consultar-fila h3{
+        font-weight: 700;
+        font-size: 24px;
     }
 }
 @media screen and (min-width: 350px) and (max-width: 649px) {
@@ -398,8 +415,12 @@ input:focus + .slider {
 
 
 @media screen and (min-width: 891px) and (max-width: 1400px){
+    .senhas-guiche-area-chamada {
+        height: 55%;
+        width: 45%;
+    }
     .senhas-guiche-area-chamada p{
-        font-size: 25px;
+        font-size: 24px;
     }
 }
 
@@ -412,14 +433,40 @@ input:focus + .slider {
 }
 @media screen and (min-width: 625px) and (max-width: 800px){
         .senhas-guiche-area-chamada{
-            height: 70%;
-            width: 45%;
+            height: 60%;
+            width: 50%;
         }
         .senhas-guiche-area-chamada p{
             font-size: 22px;
         }
 }
-
+@media screen and (min-width: 520px) and (max-width: 625px){
+    .senhas-guiche-area-chamada{
+        height: 50%;
+        width: 45%;
+    }
+    .senhas-guiche-area-chamada p{
+        font-size: 22px;
+    }
+}
+@media screen and (min-width: 420px) and (max-width: 519px){
+    .senhas-guiche-area-chamada{
+        height: 40%;
+        width: 45%;
+    }
+    .senhas-guiche-area-chamada p{
+        font-size: 20px;
+    }
+}
+@media screen and (min-width: 320px) and (max-width: 419px){
+    .senhas-guiche-area-chamada{
+        height: 35%;
+        width: 45%;
+    }
+    .senhas-guiche-area-chamada p{
+        font-size: 18px;
+    }
+}
 
 
 
