@@ -169,14 +169,14 @@ button:hover {
 }
 @media screen and (max-width: 1280px) {
     #telabranca {
-        height: 30vh;
+        height: 47vh;
 
 }
 }
 
 @media screen and (max-width: 1024px) {
     #telabranca {
-        height: 35vh;
+        height: 55vh;
 
 }
 }
@@ -187,13 +187,6 @@ button:hover {
       }
 }
 
-
-@media screen and (max-width: 540px){
-    #telabranca {
-        width: 800px;
-        height: 05vh;
-      }
-}
 
 @media screen and (max-width: 686px) {
     #buscarserv {
@@ -208,7 +201,7 @@ button:hover {
     }
     #telabranca {
       width: 800px;
-      height: 30vh;
+      height: 40vh;
     }
     .toggle-btn{
         width: 48px;
@@ -229,11 +222,20 @@ button:hover {
         width: 800px;
         
     }
+    .botaoCadastrar{
+        margin-right: 4%;
+    }
 }
-  
+@media screen and (max-width: 540px){
+    #telabranca {
+        width: 800px;
+        height: 05vh;
+      }
+}
 @media screen and (max-width: 430px) {
     #telabranca {
       width: 500px;
+      height: 50vh;
     }
     #buscarserv {
       width: 70%;
@@ -250,16 +252,23 @@ button:hover {
         width: 500px;
         
     }
+    .botaoCadastrar{
+        margin-right: 4%;
+    }
+    
 }
   
 @media screen and (max-width: 320px){
     #telabranca {
         width: 650px;
         
+        
       }
       .button-container1{
           width: 650px;
+
           
       }
+      
 }
     
