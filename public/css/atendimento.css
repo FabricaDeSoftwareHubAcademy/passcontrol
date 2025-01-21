@@ -913,7 +913,7 @@ th, td {
         text-align: left;
     }
 }
-@media screen and (min-width: 354px) and (max-width: 384px){
+@media screen and (min-width: 361px) and (max-width: 384px){
     *{
         font-size: 10px;
         text-align: center;
@@ -939,12 +939,6 @@ th, td {
     .senhas-guiche-area-chamada{
         height: 85%;
         width: 60%;
-    }
-    .tabela_atendimento-guiche-area-chamada th{
-        font-size: 15px;
-    }
-    .tabela_atendimento-guiche-area-chamada td{
-        font-size: 13px;
     }
     .botao--guiche-area-chamada{
         height: 75%;
@@ -986,21 +980,22 @@ th, td {
         margin-top: 15%;
     }
     .tabela_atendimento-guiche-area-chamada th{
-        font-size: 8px;
+        font-size: 12px;
     }
     .tabela_atendimento-guiche-area-chamada td{
-        font-size: 7px;
+        font-size: 9px;
+        height: 25%;
     }
     .fundo-guiche-area-chamada{
         width: 90%;
-        height: 70%;
+        height: 65%;
     }
     th, td {
         padding: 0px;
         text-align: left;
     }
 }
-@media screen and (min-width: 250px) and (max-width: 353px){
+@media screen and (min-width: 250px) and (max-width: 360px){
     *{
         font-size: 9px;
         text-align: center;
@@ -1210,14 +1205,3 @@ th, td {
         height: 25%;
     }
 }
-
-
-
-
-
-
-
-
-
-
-    
