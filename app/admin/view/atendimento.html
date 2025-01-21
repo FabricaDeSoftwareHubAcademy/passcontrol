@@ -14,16 +14,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 
     <!-- IMPORT DO CSS -->
-    <link rel="stylesheet" href="../css/navegacao.css">
-    <link rel="stylesheet" href="../css/menu_eli.css">
-    <link rel="stylesheet" href="../css/atendimento.css">
+    <link rel="stylesheet" href="../../../public/css/navegacao.css">
+    <link rel="stylesheet" href="../../../public/css/menu_eli.css">
+    <link rel="stylesheet" href="../../../public/css/atendimento.css">
 
 </head>
 <body class="control-body-navegacao">
     <header class="cabeca-navegacao-control">
         <nav class="nav-cabeca">
             <div class="logo-control">
-                <img src="../assets/icons/logo control.svg" alt="LOGOCONTROL" id="img-logo">
+                <img src="../../../public/img/icons/logo control.svg" alt="LOGOCONTROL" id="img-logo">
             </div>
             <H3>PassControl</H3>
             <div class="usu">                
@@ -31,12 +31,12 @@
                 <div class="menu-usuario">
                     <a class="usu">Nome do Usuário</a>
                     <nav class="usu-detalhes"> 
-                        <img src="../assets/icons/image 33.svg" alt="">
+                        <img src="../../../public/img/icons/image 33.svg"alt="">
                         <ul class="texto-usu">
                             <li class="nome-usu">Nome do Usuário</li>
                             <li class="email-usu">funcionario123@fun.br</li>
-                            <li><a href="adm-logado.html">Editar Informações</a></li>
-                            <li><a href="login.html">Sair</a></li>
+                            <li><a href="../view/adm-logado.html">Editar Informações</a></li>
+                            <li><a href="../../../login.html">Sair</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -47,40 +47,40 @@
 
     <!-- MENU LATERAL -->
     <button class="botao-menu-mobile"> <!-- Botão ainda inativo -->
-        <img class="icone-menu-lateral" src="../assets/icons/DropDownIcon.svg" alt="MENU">
+        <img class="icone-menu-lateral" src="../../../public/img/icons/DropDownIcon.svg" alt="MENU">
     </button>
 
     <div class="area-lateral-navegacao">
         <nav class="menu-lateral-navegacao">
 
             <div class="botao-navegacao">
-                <a class="botao-lateal-navegacao ativo-estacionario" href="atendimento.html">
-                    <img class="icone-menu-lateral ativo-estacionario" src="../assets/icons/atend.svg" alt="ICONE ATENDIMENTO">
+                <a class="botao-lateal-navegacao ativo-estacionario" href="../view/atendimento.html">
+                    <img class="icone-menu-lateral ativo-estacionario" src="../../../public/img/icons/atend.svg" alt="ICONE ATENDIMENTO">
                     <div class="texto-bott">Atendimento</div>
                 </a>
             </div>
             <div class="botao-navegacao">
-                <a class="botao-lateal-navegacao" href="Monitor.html">
-                    <img class="icone-menu-lateral" src="../assets/icons/monitor.svg" alt="ICONE MONITOR">
+                <a class="botao-lateal-navegacao" href="../../usuario/view/Monitor.html">
+                    <img class="icone-menu-lateral" src="../../../public/img/icons/monitor.svg" alt="ICONE MONITOR">
                     <div class="texto-bott">Monitor</div>
                 </a>
             </div>
             <div class="botao-navegacao">
                 <a class="botao-lateal-navegacao" href="">
-                    <img class="icone-menu-lateral" src="../assets/icons/nota.svg" alt="ICONE RELATORIOS">
+                    <img class="icone-menu-lateral" src="../../../public/img/icons/nota.svg" alt="ICONE RELATORIOS">
                     <div class="texto-bott">Relatórios</div>
                 </a>
             </div>
             <div class="botao-navegacao">
-                <a class="botao-lateal-navegacao" href="menuadm_usuario.html">
-                    <img class="icone-menu-lateral" src="../assets/icons/gestao.svg" alt="ICONE GESTAO">
+                <a class="botao-lateal-navegacao" href="../../admin/view/menuadm_usuario.html">
+                    <img class="icone-menu-lateral" src="../../../public/img/icons/gestao.svg" alt="ICONE GESTAO">
                     <div class="texto-bott">Gestão</div>
                 </a>
             </div>
         </nav>
         <div class="sair-navegacao">
-            <a class="botao-lateal-navegacao" href="login.html">
-                <img class="icone-menu-lateral" src="../assets/icons/sair.svg" alt="ICONE SAIR">
+            <a class="botao-lateal-navegacao" href="../../../login.html">
+                <img class="icone-menu-lateral" src="../../../public/img/icons/sair.svg" alt="ICONE SAIR">
                 <div class="texto-bott">Sair</div>
             </a>
         </div>
@@ -93,8 +93,8 @@
         <!-- <div class="principal-chamar-senha"> -->
             <!-- SUBMENU ATENDIMENTO -->
             <div class="scrollmenu" style="display: flex; justify-content: start; align-items: start;">
-                <a href="./atendimento_tempo_real.html">Guichês</a>
-                <a href="./atendimento.html" class="active">Atendimento</a>
+                <a href="../../admin/view/atendimento_tempo_real.html">Guichês</a>
+                <a href="../../admin/view/atendimento.html" class="active">Atendimento</a>
             </div>
 
             <nav class="area-chamada-atendimento">
@@ -113,21 +113,21 @@
                         <button class="botao_intervalo-guiche-area-chamada">
                             <a href="">
                                 Intervalo
-                                <img src="../assets/icons/ampulheta.svg" alt="ampulheta">
+                                <img src="../../../public/img/icons/ampulheta.svg" alt="ampulheta">
                             </a>
                         </button>
                     </ul>
                     <ul class="direita-guiche-area-chamada">
                         <div class="area-botao--guiche-area-chamada">
                             <button class="botao--guiche-area-chamada">
-                                <a href="../pages/consultar-fila.html">
-                                    <img src="../assets/icons/lupa.svg" alt="lupa">
+                                <a href="../../admin/view/consultar-fila.html">
+                                    <img src="../../../public/img/icons/lupa.svg" alt="lupa">
                                     Consultar Fila
                                 </a>
                             </button>
                             <button class="botao--guiche-area-chamada">
                                 <a href="">
-                                    <img src="../assets/icons/user.svg" alt="usuário">
+                                    <img src="../../../public/img/icons/user.svg" alt="usuário">
                                     Próxima Senha
                                 </a>
                             </button>
