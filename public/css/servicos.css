@@ -229,7 +229,7 @@ button:hover {
 @media screen and (max-width: 540px){
     #telabranca {
         width: 800px;
-        height: 05vh;
+        height: 50vh;
       }
 }
 @media screen and (max-width: 430px) {
