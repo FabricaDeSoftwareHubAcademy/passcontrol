@@ -169,7 +169,7 @@ button:hover {
 }
 @media screen and (max-width: 1280px) {
     #telabranca {
-        height: 47vh;
+        height: 51vh;
 
 }
 }
@@ -201,7 +201,7 @@ button:hover {
     }
     #telabranca {
       width: 800px;
-      height: 40vh;
+      height: 55vh;
     }
     .toggle-btn{
         width: 48px;
