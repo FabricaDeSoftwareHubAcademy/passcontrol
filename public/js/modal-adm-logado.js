@@ -1,24 +1,27 @@
-const buttonAbrir = document.querySelector(".open");
-const modalContainer = document.querySelector(".modal-container");
-const buttonFechar = document.querySelector(".close");
-const buttonCancelar = document.querySelector(".cancel");
-const buttonSalvar = document.querySelector(".save");
+document.addEventListener("DOMContentLoaded", function() {
+    const buttonSalvar = document.querySelector(".botao-salvar");
+    
+    // Acessar o modal (EXPORTADO)
+    const modalContainer = document.querySelector("main-modal-adm-logado");
 
-buttonAbrir.addEventListener("click", () => {
-    modalContainer.classList.add("show");
-});
+    buttonSalvar.addEventListener("click", () => {
+        modalContainer.querySelector(".modal-container").classList.add("show");
+    });
 
-buttonCancelar.addEventListener("click", () => {
-    modalContainer.classList.remove("show");
-});
-buttonSalvar.addEventListener("click", () => {
-    modalContainer.classList.remove("show");
+    const buttonCancelar = modalContainer.querySelector(".cancel");
+    buttonCancelar.addEventListener("click", () => {
+        modalContainer.querySelector(".modal-container").classList.remove("show");
+    });
+
+    const buttonSim = modalContainer.querySelector(".save");
+    buttonSim.addEventListener("click", () => {
+        modalContainer.querySelector(".modal-container").classList.remove("show");
+    });
 });
 
 class Modal_ADM_Logado extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
-        <button class="botao-modal open">Abrir Modal</button>
         <main class="modal-container">
         <section class="modal">
             <img src="../../../public/img/img-modais/Logo Nota Controlnt.png" alt="Logo Nota Control" class="logo">
