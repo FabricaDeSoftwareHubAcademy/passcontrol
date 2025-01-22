@@ -38,8 +38,7 @@
     align-items: end;
     display: flex;
     /* background-color: coral; */
-    margin-left: 2.5%;
-    margin-top: -2%;
+    padding-left: 2%;
 } 
 
 .topo-esquerda-consultar-fila h3 {
@@ -64,7 +63,7 @@
 .senhas-guiche-area-chamada {
     display: flex;
     flex-direction: column;
-    width: 30%;
+    width: 25%;
     height: 65%;
     /* background-color: aliceblue; */
     background-color: rgba(255, 255, 255, 0.3);
@@ -548,13 +547,20 @@ input:focus + .slider {
 
 @media screen and (min-width: 354px) and (max-width: 384px) {
     .topo-direita-consultar-fila {
-        height: 50%;
-        width: 190%;
+        height: 75%;
+        width: 150%;
+    }
+    .topo-esquerda-consultar-fila h3{
+        font-size: 18px;
+    }
+    .topo-esquerda-consultar-fila{
+        margin-top: -6%;
+        margin-left: 6%;
+    }
+    .senhas-guiche-area-chamada{
+        width: 70%;
     }
     .topo-direita-consultar-fila p{
-        font-size: 14px;
-        }
-    .topo-esquerda-consultar-fila h3 {
         font-size: 14px;
     }
 }
@@ -563,6 +569,16 @@ input:focus + .slider {
     .topo-direita-consultar-fila {
         height: 75%;
         width: 150%;
+    }
+    .topo-esquerda-consultar-fila h3{
+        font-size: 18px;
+    }
+    .topo-esquerda-consultar-fila{
+        margin-top: -26%;
+        margin-left: 6%;
+    }
+    .senhas-guiche-area-chamada{
+        width: 70%;
     }
 }
 

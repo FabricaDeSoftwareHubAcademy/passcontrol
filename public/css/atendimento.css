@@ -484,7 +484,7 @@ input:focus + .slider {
         font-size: 24px;
     }
     .meio_esquerda-guiche-area-chamada{
-        margin-top: 13%;
+        margin-top: 10%;
     }
     .meio-guiche-area-chamada {
         width: 100%;
@@ -523,7 +523,7 @@ input:focus + .slider {
     }
     .meio_esquerda-guiche-area-chamada h3{
         font-size: 18px;
-        margin-bottom: 28%;
+        margin-bottom: 38%;
     }
     .meio_esquerda-guiche-area-chamada{
         margin-bottom: -8%;
@@ -558,7 +558,7 @@ input:focus + .slider {
     }
     .meio_esquerda-guiche-area-chamada h3{
         font-size: 16px;
-        margin-bottom: -4%;
+        margin-bottom: 0%;
     }
     .meio_esquerda-guiche-area-chamada{
         margin-bottom: -1%;
@@ -642,7 +642,7 @@ th, td {
     .meio_esquerda-guiche-area-chamada h3{
         font-size: 16px;
         margin-left: 5%;
-        margin-top: 42%;
+        margin-top: 36%;
     }
     .meio_esquerda-guiche-area-chamada{
         height: 98%;
@@ -695,7 +695,7 @@ th, td {
         justify-content: center;
         gap: 18%;
     }
-    .guiche-area-chamada-tl{
+    .guiche-area-chamada-tl{        /* padding-bottom: 95%; */
         height: 75%;
         width: 80%;
     }
@@ -717,7 +717,7 @@ th, td {
     .meio_esquerda-guiche-area-chamada h3{
         font-size: 16px;
         margin-left: 5%;
-        margin-top: 40%;
+        margin-top: 30%;
     }
     .meio_esquerda-guiche-area-chamada{
         height: 98%;
@@ -922,7 +922,7 @@ th, td {
         margin-top: 1%;
         justify-content: center;
         gap: 3%;
-        height: 30%;
+        height: 32%;
         width: 120%;
     }
     .guiche-area-chamada-tl{
@@ -938,7 +938,7 @@ th, td {
     }
     .senhas-guiche-area-chamada{
         height: 85%;
-        width: 60%;
+        width: 75%;
     }
     .botao--guiche-area-chamada{
         height: 75%;
@@ -960,12 +960,11 @@ th, td {
         align-items: end;
         padding-right: 5%;
         margin-top: -2%;
-        /* background-color: rebeccapurple; */
     }
     .meio_esquerda-guiche-area-chamada h3{
         font-size: 9px;
         margin-left: 10%;
-        margin-top: 85%;
+        margin-top: 80%;
     }
     .meio_esquerda-guiche-area-chamada{
         height: 98%;
@@ -1004,6 +1003,7 @@ th, td {
         margin-top: 1%;
         justify-content: center;
         gap: 18%;
+        height: 24%;
     }
     .guiche-area-chamada-tl{
         height: 75%;
@@ -1011,6 +1011,8 @@ th, td {
     }
     .guiche_senha-area-chamada{
         gap: 10px;
+        width: 120%;
+        margin-left: 18%;
     }
     .senha_fila-guiche-area-chamada{
         height: 75%;
@@ -1027,7 +1029,7 @@ th, td {
     .meio_esquerda-guiche-area-chamada h3{
         font-size: 9px;
         margin-left: 5%;
-        margin-top: 68%;
+        margin-top: 55%;
     }
     .meio_esquerda-guiche-area-chamada{
         height: 98%;
@@ -1051,7 +1053,15 @@ th, td {
         margin-left: 2%;
     }
     .botao_intervalo-guiche-area-chamada{
-        width: 100%;
+        width: 120%;
+        margin-top: 20%;
+        margin-left: 18%;
+    }
+    .botao_intervalo-guiche-area-chamada a{
+        margin-left: 24%;
+    }
+    .botao_intervalo-guiche-area-chamada img{
+        margin-right: 18%;
     }
     .tabela_atendimento-guiche-area-chamada th{
         font-size: 12px;
