@@ -33,7 +33,7 @@ th {
 }
 
 .editar a img:hover{
-  content: url(../assets/icons/Group\ 2925.png);
+  content: url(/public/img/icons/Group\ 2925.png);
   transition: 1s;}
 
 .switch {
