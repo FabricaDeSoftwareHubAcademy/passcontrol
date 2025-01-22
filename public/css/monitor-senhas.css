@@ -17,7 +17,7 @@
     display: flex;
     align-items: center;
     background-color: var(--cor-cinza--1);
-    background-image: url(../assets/img/Background-logo\ 2.svg);
+    background-image: url(../../public/img/Background-logo\ 2.svg);
     background-size: 35vh;
     background-repeat: no-repeat;
     background-position: bottom right;
