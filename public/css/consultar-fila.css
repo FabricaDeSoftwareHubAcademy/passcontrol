@@ -64,7 +64,7 @@
     display: flex;
     flex-direction: column;
     width: 25%;
-    height: 65%;
+    height: 75%;
     /* background-color: aliceblue; */
     background-color: rgba(255, 255, 255, 0.3);
     justify-content: center;
@@ -334,7 +334,7 @@ input:focus + .slider {
         align-items: end;
         display: flex;
         /* background-color: coral; */
-        margin-left: 2.5%;
+        margin-left: 4%;
         margin-top: -4%;
 
     }
@@ -347,7 +347,7 @@ input:focus + .slider {
         align-items: end;
         display: flex;
         /* background-color: coral; */
-        margin-left: 2.5%;
+        margin-left: 4%;
         margin-top: -3%;
     }
     .topo-esquerda-consultar-fila h3{
@@ -416,7 +416,8 @@ input:focus + .slider {
 @media screen and (min-width: 891px) and (max-width: 1400px){
     .senhas-guiche-area-chamada {
         height: 55%;
-        width: 45%;
+        width: 35%;
+        margin-right: 5%;
     }
     .senhas-guiche-area-chamada p{
         font-size: 24px;
@@ -428,12 +429,14 @@ input:focus + .slider {
     .senhas-guiche-area-chamada{
         height: 70%;
         width: 45%;
+        margin-right: 5%;
     }
 }
 @media screen and (min-width: 625px) and (max-width: 800px){
         .senhas-guiche-area-chamada{
             height: 60%;
             width: 50%;
+            margin-right: 5%;
         }
         .senhas-guiche-area-chamada p{
             font-size: 22px;
@@ -443,6 +446,7 @@ input:focus + .slider {
     .senhas-guiche-area-chamada{
         height: 50%;
         width: 45%;
+        margin-right: 5%;
     }
     .senhas-guiche-area-chamada p{
         font-size: 22px;
@@ -452,6 +456,7 @@ input:focus + .slider {
     .senhas-guiche-area-chamada{
         height: 40%;
         width: 45%;
+        margin-right: 5%;
     }
     .senhas-guiche-area-chamada p{
         font-size: 20px;
@@ -461,6 +466,7 @@ input:focus + .slider {
     .senhas-guiche-area-chamada{
         height: 35%;
         width: 45%;
+        margin-right: 5%;
     }
     .senhas-guiche-area-chamada p{
         font-size: 18px;
