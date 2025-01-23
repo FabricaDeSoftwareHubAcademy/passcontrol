@@ -1,8 +1,6 @@
 /* CONFIGURAÇÃO DA BASE DA ÁREA ÚTIL */
 /* SUBSTITUIR O NOME 'NOME_DA_AREA' PELO NOME UTILIZADO NO CORPO DE DESENVOLVIMENTO! */ 
 
-@import url(navegacao.css);
-
 *{
     box-sizing: border-box;
 }
@@ -17,7 +15,7 @@
     bottom: 2vh;
     height: auto;
     width: auto;
-    /* background-color: rgba(0, 0, 0, 0.12); */
+    background-color: rgba(0, 0, 0, 0.12);
     overflow: auto;
     scroll-behavior: smooth;
 }
@@ -171,14 +169,14 @@ button:hover {
 }
 @media screen and (max-width: 1280px) {
     #telabranca {
-        height: 30vh;
+        height: 51vh;
 
 }
 }
 
 @media screen and (max-width: 1024px) {
     #telabranca {
-        height: 35vh;
+        height: 55vh;
 
 }
 }
@@ -189,13 +187,6 @@ button:hover {
       }
 }
 
-
-@media screen and (max-width: 540px){
-    #telabranca {
-        width: 800px;
-        height: 05vh;
-      }
-}
 
 @media screen and (max-width: 686px) {
     #buscarserv {
@@ -210,7 +201,7 @@ button:hover {
     }
     #telabranca {
       width: 800px;
-      height: 30vh;
+      height: 55vh;
     }
     .toggle-btn{
         width: 48px;
@@ -231,14 +222,23 @@ button:hover {
         width: 800px;
         
     }
+    .botaoCadastrar{
+        margin-right: 4%;
+    }
 }
-  
+@media screen and (max-width: 540px){
+    #telabranca {
+        width: 800px;
+        height: 50vh;
+      }
+}
 @media screen and (max-width: 430px) {
     #telabranca {
       width: 500px;
+      height: 55vh;
     }
     #buscarserv {
-      width: 70%;
+      width: 69.5%;
       margin-left: 50px;
     }
     .button-container1{
@@ -252,16 +252,23 @@ button:hover {
         width: 500px;
         
     }
+    .botaoCadastrar{
+        margin-right: 4%;
+    }
+    
 }
   
 @media screen and (max-width: 320px){
     #telabranca {
         width: 650px;
         
+        
       }
       .button-container1{
           width: 650px;
+
           
       }
+      
 }
     
