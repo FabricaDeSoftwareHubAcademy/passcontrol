@@ -34,7 +34,7 @@
     height: 75%;
     border-radius: 5px;
     background-color: var(--cor-fundo);
-    background-image: url(../assets/img/Background-logo\ 2.svg);
+    background-image: url(../../public/img/Background-logo\ 2.svg);
     background-size: 20vh;
     background-repeat: no-repeat;
     background-position: bottom right;
