@@ -99,14 +99,11 @@
 .area-comum-consultar-fila {
     width: 100%;
     height: 100%;
-    /* background-color: #bfbfbf46; */
     display: flex;
     flex-direction: column;
     border-radius: 5px;
-    
     /* justify-content: center; */
     align-items: center;
-    /* background-color: red; */
 }
 
 
