@@ -49,7 +49,7 @@ div.scrollmenu a:hover {
 
 div.scrollmenu a.active{
   background-color: var(--cor-active);
-  color: var(--cinza-control);
+  color: var(--verde-control);
   text-decoration: none;
   /* padding: 13px; */
 }

@@ -290,7 +290,7 @@
 .botao-lateal-navegacao.ativo-estacionario{
     background-color: var(--cor-fundo);
     color: var(--verde-control);
-    text-decoration: underline var(--verde-control);    
+    /* text-decoration: underline var(--verde-control);     */
 }
 
 .botao-lateal-navegacao.ativo-estacionario:hover {
