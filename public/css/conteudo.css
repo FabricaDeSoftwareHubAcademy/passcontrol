@@ -10,7 +10,7 @@
   bottom: 2vh;
   height: auto;
   width: auto;
-  background-color: rgba(0, 0, 0, 0.12);
+  background-color: rgba(191, 191, 191, 0.3);
   /* overflow: auto; */
   scroll-behavior: smooth;
   display: flex;
@@ -175,5 +175,24 @@
 @media screen and (max-height:667px) {
   .div-botao-info{
     bottom: -51px;
+  }
+}
+
+
+@media screen and (max-width: 798px) and (max-height:866px)  {
+  .div-botao-info{
+    bottom: -220px;
+  }
+}
+
+@media screen and (max-width: 797px) and (max-height:866px)  {
+  .div-botao-info{
+    bottom: -215px;
+  }
+}
+
+@media screen and (max-width:380px) and (max-height:866px)  {
+  .div-botao-info{
+    bottom: -215px;
   }
 }
