@@ -301,18 +301,12 @@
     .area-das-senhas{
         padding: 7px;
     }
-    .caixa-das-senhas{
-        /* background-color: aquamarine; */
-        /* padding: 3px; */
-    }
     .caixa-das-senhas h2{
         height: 60%;
     }
     .conjunto-senhas{
-        /* background-color: red; */
         align-items: center;
         gap: calc(+5px);
-        /* background-color: burlywood; */
         flex-direction: column;
     }
     .caixa-das-senhas h2{
