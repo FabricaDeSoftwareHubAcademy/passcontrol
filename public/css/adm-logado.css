@@ -20,9 +20,7 @@
     right: 5vh; 
     left: 5vh; 
     bottom: 7vh;
-    justify-content: center;
-    align-items: start; 
-    overflow: auto;
+    justify-content: center; 
     scroll-behavior: smooth;
     margin: 30px;
     border-radius: 5px;
@@ -91,9 +89,8 @@
 }
 
 .botao-voltar:hover {
-    color: #00FF00;
+    color: #FFFFFF;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-    text-decoration: underline #00FF00;
 }
 
 .botao-salvar {
@@ -102,9 +99,8 @@
 }
 
 .botao-salvar:hover {
-    color: #00FF00;
+    color: #3AA867;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-    text-decoration: underline #00FF00;
 }
 
 /* Responsividade */
