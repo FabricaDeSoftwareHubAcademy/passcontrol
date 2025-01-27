@@ -13,37 +13,45 @@
 }
 
 .sub-area{
+    width: 90%;
     background-color: rgba(255, 255, 255, 0.52);
     padding: 20px 30px;
-    position: absolute;
+    position: relative;
     top: 30px;
     right: 5vh; 
     left: 5vh; 
     bottom: 7vh;
-    justify-content: center; 
-    scroll-behavior: smooth;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
     margin: 30px;
     border-radius: 5px;
 }
 
-.perfil-titulo, .alt-senha-titulo{
+.perfil-titulo{
     font-size: 1.5rem;
     font-weight: 600;
     color: black;
     margin-bottom: 20px;
     padding-bottom: 10px;
+    margin-left: 80px;
 }
 
-.form-group{
+.dados-pessoais, .alterar-senha {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.dados-pessoais h3, .alterar-senha h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
     margin-bottom: 20px;
 }
 
-.form-group label{
-    font-size: 0.875rem;
-    font-weight: 500;
-    color: black;
-    margin-bottom: 8px;
-    display: block;
+.form-group{
+    margin-bottom: 50px;
 }
 
 .form-group input{
@@ -53,15 +61,6 @@
     border-radius: 5px;
     background-color: #FFF;
     color: black;
-}
-
-.form-row{
-    display: flex;
-    gap: 16px;
-}
-
-.form-row, .form-group{
-    flex: 1;
 }
 
 .form-actions{
@@ -112,10 +111,11 @@
         bottom: 5vh;
         right: 4vh;
         left: 4vh;
+        width: 85%;
     }
     .form-actions {
         z-index: 0;
-        margin-right: 75px;
+        margin-right: 90px;
     }
     .perfil-titulo {
         margin-left: 75px;
@@ -130,6 +130,7 @@
         bottom: 4vh;
         right: 3vh;
         left: 3vh;
+        width: 83%;
     }
     .perfil-titulo {
         margin-left: 75px;
@@ -180,124 +181,98 @@
     }
 }
 
+/* Responsividade após 700px */
 @media (max-width: 700px){
     .perfil-titulo {
         font-size: 1.5rem;
-        margin-left: 70px;
+        margin-left: 20px;
     }
-    .form-row {
-        flex-direction: column;
-        gap: 1px;
-    }
-    .sub-area{
-        margin: 64px;
-        padding: 5px;
+
+    .sub-area {
+        margin: 0;
+        padding: 10px;
         top: 5px;
         bottom: 2vh;
         right: 1vh;
         left: 1vh;
+        flex-direction: column;
+        gap: 10px;
+        width: 95%;
     }
-    .form-actions{
-        margin-right: 70px;
+
+    .dados-pessoais, .alterar-senha {
+        flex: none;
+        width: 100%;
+    }
+
+    .form-group input {
+        font-size: 0.8rem;
+        padding: 10px;
+    }
+
+    .form-actions {
+        margin-right: 20px;
+        margin-top: 30px;
     }
 }
 
 @media (max-width: 480px) {
     .perfil-titulo {
-        font-size: 1rem;
-        margin-left: 65px;
+        font-size: 1.5rem;
+        margin-left: 20px;
     }
+
     .sub-area {
-        margin: 55px;
+        margin: 0;
+        padding: 10px;
+        top: 5px;
+        bottom: 2vh;
+        right: 1vh;
+        left: 1vh;
+        flex-direction: column;
+        gap: 10px;
+        width: 94%;
+    }
+
+    .form-group input {
+        font-size: 0.75rem;
+    }
+
+    .form-actions {
+        margin-right: 10px;
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 320px) {
+    .perfil-titulo {
+        font-size: 1.5rem;
+        margin-left: 15px;
+    }
+
+    .sub-area {
+        margin: 0;
         padding: 5px;
         top: 5px;
         bottom: 2vh;
         right: 1vh;
         left: 1vh;
+        flex-direction: column;
+        gap: 5px;
+        width: 90%;
     }
-    .form-group input {
-        font-size: 0.75rem;
-    }
-    .form-actions{
-        margin-right: 62px;
-    }
-    .botao-voltar, .botao-salvar {
-        font-size: 0.875rem;
-        padding: 5px 10px;
-    }
-}
 
-@media (max-width: 410px) {
-    .perfil-titulo {
-        font-size: 1rem;
-        margin-left: 15px;
-    }
-    .sub-area {
-        margin: 55px;
-        padding: 5px;
-        top: 5px;
-        bottom: 2vh;
-        right: -5vh;
-        left: -5vh;
-    }
     .form-group input {
         font-size: 0.75rem;
     }
-    .form-actions{
-        margin-right: 90px;
-    }
-    .botao-voltar, .botao-salvar {
-        font-size: 0.875rem;
-        padding: 5px 10px;
-    }
-}
 
-@media (min-width: 361px) and (max-width: 389px) {
-    .perfil-titulo {
-        font-size: 1rem;
-        margin-left: 15px;
+    .form-actions {
+        margin-right: 15px;
+        margin-top: 30px;
     }
-    .sub-area {
-        margin: 55px;
-        padding: 5px;
-        top: 5px;
-        bottom: 2vh;
-        right: -5vh;
-        left: -5vh;
-    }
-    .form-group input {
-        font-size: 0.75rem;
-    }
-    .form-actions{
-        margin-right: 70px;
-    }
-    .botao-voltar, .botao-salvar {
-        font-size: 0.875rem;
-        padding: 5px 10px;
-    }
-}
 
-@media (max-width: 360px) {
-    .perfil-titulo {
-        font-size: 1rem;
-        margin-left: 15px;
-    }
-    .sub-area {
-        margin: 55px;
-        padding: 5px;
-        top: 5px;
-        bottom: 2vh;
-        right: -5vh;
-        left: -5vh;
-    }
-    .form-group input {
-        font-size: 0.75rem;
-    }
-    .form-actions{
-        margin-right: 65px;
-    }
     .botao-voltar, .botao-salvar {
-        font-size: 0.875rem;
-        padding: 5px 10px;
+        font-size: 1rem;
+        padding: 5px 8px;
     }
 }
