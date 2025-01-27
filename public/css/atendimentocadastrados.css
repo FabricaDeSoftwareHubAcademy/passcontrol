@@ -14,7 +14,7 @@ main {
 }
 .titulo {
     font-size: 25px;
-    margin-left: 45px;
+    margin-left: 54px;
     margin-top:24px;
     margin-bottom: 3px;
     color: var(--cinza-control);
@@ -23,13 +23,13 @@ main {
     width: 13%; 
     position: absolute;
     right: -1px;
-    top: 29px;
+    top: 34px;
 
 }
 
 .input-pesquisa {
     width: 77%;
-    height:28px;
+    height:22px;
     border: 1px solid #000000;
     border-radius: 3px;
 }
@@ -55,8 +55,9 @@ main {
     background-color: #2d3945;
     height: 6px;
     margin-top: -1px;
-    margin-left: 47px;
-    width: 94.2%;
+    margin-left: 52px;
+    margin-right: auto;
+    width: 94%;
 }
 .tabela {
     width: 100%;
@@ -74,7 +75,7 @@ main {
     
 }
 .tabela-3x3 {
-    width: 350%;
+    width: 330%;
     border-collapse: collapse;
 }
 .tabela-3x3 th,
@@ -84,6 +85,9 @@ main {
     border: 1px solid #000000;
     box-sizing: border-box;
 }
+.tabela-3x3 td {
+    background-color: #ffffff; 
+}
 .tabela-3x3 th {
     background-color: #2d3945;
     color: #fff;
@@ -91,17 +95,19 @@ main {
 .tabela-3x3 tr:nth-child(even) {
     background-color: #ffffff;
 }
+.tabela-3x3 td:nth-child(2) {
+    text-align: center;
+}
 .actions { 
     width: 23%;
-    margin-left:20px; 
-    
 }
 .actions img {
     width: 24px;
     height:24px;
     transition: transform 0.3s;
     float: left; 
-    margin-right: 50px; 
+    margin-left: 40px; 
+    max-width: 60px;
 }
 .actions img:hover {
     transform: scale(1.2); 
@@ -113,7 +119,8 @@ main {
     border-radius: 40px;
     border: 1px solid #000000;
     position: relative;
-    left:40px;
+    float: right; 
+    left:0px;
     top:3px;
 }
 .toggle-btn .circle {
@@ -158,7 +165,7 @@ main {
         padding: 5px;
     }
     .tabela-3x3 {
-        width: 150%;
+        width: 340%;
     }
     .tabela-3x3 th,
     .tabela-3x3 td {
@@ -171,8 +178,18 @@ main {
     }
     .linha {
         margin-top: -1px;
-        margin-left: 43px;
-        width:90.9%;
+        margin-left: 52px;
+        width:89%;
+    }
+    .actions img {
+        width: 24px;
+        height:24px; 
+        margin-left: 30px;
+    }
+    .toggle-btn {
+        width: 40px;
+        height: 20px;
+        top:3px;
     }
 }
 
@@ -183,54 +200,8 @@ main {
     flex-direction: column;
     align-items: center;
 }
-@media (max-width: 1200px) {
-    .menu-tabela {
-        width: 20%;
-        max-width: 100%;
-        padding: 5px;
-    }
-    .tabela-3x3 {
-        width: 150%;
-    }
-    .tabela-3x3 th,
-    .tabela-3x3 td {
-        font-size: 18px;
-        padding: 6px;
-    }
-    .barra-pesquisa {
-        width: 20%; /* Ajusta para telas menores */
-        max-width: 500px;
-    }
-    .linha {
-        margin-top: -1px;
-        margin-left: 43px;
-        width:91%;
-    }
-}
-@media (max-width: 1000px) {
-    .menu-tabela {
-        width: 20%;
-        max-width: 100%;
-        padding: 5px;
-    }
-    .tabela-3x3 {
-        width: 150%;
-    }
-    .tabela-3x3 th,
-    .tabela-3x3 td {
-        font-size: 18px;
-        padding: 6px;
-    }
-    .barra-pesquisa {
-        width: 21.5%; /* Ajusta para telas menores */
-        max-width: 500px;
-    }
-    .linha {
-        margin-top: -1px;
-        margin-left: 42px;
-        width:90.6%;
-    }
-}
+
+
 @media (max-width: 860px) {
     .titulo {
         font-size: 22px;
@@ -270,6 +241,28 @@ main {
         width: 76%;
         height:23px;
     }
+    .actions img {
+        width: 24px;
+        height:24px;
+        transition: transform 0.3s;
+        float: left; 
+        margin-left: 20px; 
+        max-width: 60px;
+    }
+    .actions img:hover {
+        transform: scale(1.2); 
+    }
+    .toggle-btn {
+        width: 40px;
+        height: 20px;
+        background-color: #ffffff;
+        border-radius: 40px;
+        border: 1px solid #000000;
+        position: relative;
+        float: right; 
+        left:10px;
+        top:3px;
+    }
 }
 @media (max-width: 850px) {
     .titulo {
@@ -290,7 +283,80 @@ main {
         padding: 5px;
     }
     .tabela-3x3 {
-        width: 150%;
+        width: 570%;
+    }
+    .tabela-3x3 th,
+    .tabela-3x3 td {
+        font-size: 18px;
+        padding: 6px;
+    }
+    .barra-pesquisa {
+        font-size: 10px;
+        width: 26.5%; /* Ajusta para telas menores */
+        max-width: 500px;
+        margin-top: -6px;
+    }
+    .input-pesquisa {
+        width: 76%;
+        height:18px;
+    }
+    .linha {
+        margin-top: -1px;
+        margin-left: 42px;
+        width:87.6%;
+    }
+ 
+    .toggle-btn {
+        width: 37px;
+        height: 18px;
+        background-color: #ffffff;
+        border-radius: 40px;
+        border: 1px solid #000000;
+        position: relative;
+        left:2px;
+        top:1px;
+    }
+    .toggle-btn .circle {
+        width:15px;
+        height: 15px;
+        background-color: #ff0000;
+        border-radius: 50%;
+        position: absolute;
+        top: 1px;
+        left: 2px;
+        transition: left 0.3s;
+    }
+    .toggle-btn.active .circle {
+        background-color: #3AA867;
+        left: 18px;
+        top: 1px;
+    }
+    .actions img {
+        width: 23px;
+        height: 23px;
+        margin-left: 20px;
+    }
+}
+@media (max-width: 710px) {
+    .titulo {
+        font-size: 16px;
+        margin-left: 45px;
+        margin-top:24px;
+        margin-bottom: 3px;
+    }
+    .cubo-branco {
+        top: 53px; 
+        right:44px; 
+        left: 42px; 
+        bottom: 7vh; 
+    }
+    .menu-tabela {
+        width: 20%;
+        max-width: 100%;
+        padding: 5px;
+    }
+    .tabela-3x3 {
+        width: 650%;
     }
     .tabela-3x3 th,
     .tabela-3x3 td {
@@ -311,10 +377,125 @@ main {
         width: 76%;
         height:18px;
     }
+    .toggle-btn {
+        width: 37px;
+        height: 18px;
+        background-color: #ffffff;
+        border-radius: 40px;
+        border: 1px solid #000000;
+        position: relative;
+        left:2px;
+        top:1px;
+    }
+    .toggle-btn .circle {
+        width:15px;
+        height: 15px;
+        background-color: #ff0000;
+        border-radius: 50%;
+        position: absolute;
+        top: 1px;
+        left: 2px;
+        transition: left 0.3s;
+    }
+    .toggle-btn.active .circle {
+        background-color: #3AA867;
+        left: 18px;
+        top: 1px;
+    }
+    .actions img {
+        width: 23px;
+        height: 23px;
+        margin-left: 3px;
+    }
 }
-@media (max-width: 742px) {
+@media (max-width: 596px) {
     .titulo {
-        font-size: 14px;
+        font-size: 12px;
+        margin-left: 45px;
+        margin-top:24px;
+        margin-bottom: 3px;
+    }
+    .cubo-branco {
+        top: 50px; 
+        right:44px; 
+        left: 42px; 
+        bottom: 7vh; 
+    }
+    .barra-pesquisa {
+        font-size: 9px;
+        width: 32.5%; /* Ajusta para telas menores */
+        max-width: 500px;
+        margin-top: -8px;
+    }
+ 
+    .input-pesquisa {
+        width: 74.5%;
+        height:16px;
+    }
+    .linha {
+        margin-top: -1px;
+        margin-left: 42px;
+        width:87%;
+    }
+    .tabela {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding: 3px;
+    }
+    .menu-tabela {
+        width: 10%;
+        max-width: 100%;
+        padding: 5px;
+    }
+    .tabela-3x3 {
+        width: 1500%;
+    }
+    .tabela-3x3 th,
+    .tabela-3x3 td {
+        font-size: 12px;
+        padding: 6px;
+    }
+
+    .actions img {
+        width: 20px;
+        height:20px;
+        transition: transform 0.3s;
+        margin-left: 0px; 
+        max-width: 60px;
+    }
+    .actions img:hover {
+        transform: scale(1.2); 
+    }
+    .toggle-btn {
+        width: 30px;
+        height: 15px;
+        background-color: #ffffff;
+        border-radius: 40px;
+        border: 1px solid #000000;
+        position: relative;
+        float: right; 
+        top:3px;
+    }
+.toggle-btn .circle {
+    width: 12px;
+    height: 11px;
+    background-color: #ff0000;
+    border-radius: 50%;
+    position: absolute;
+    top: 1px;
+    left: 3px;
+    transition: left 0.3s;
+}
+.toggle-btn.active .circle {
+    background-color: #3AA867;
+    left: 15px;
+    top: 1px;
+}
+}
+@media (max-width: 550px) {
+    .titulo {
+        font-size: 12px;
         margin-left: 45px;
         margin-top:24px;
         margin-bottom: 3px;
@@ -332,12 +513,12 @@ main {
         padding: 3px;
     }
     .menu-tabela {
-        width: 10%;
+        width: 9.5%;
         max-width: 100%;
         padding: 5px;
     }
     .tabela-3x3 {
-        width: 150%;
+        width: 1900%;
     }
     .tabela-3x3 th,
     .tabela-3x3 td {
@@ -345,23 +526,57 @@ main {
         padding: 6px;
     }
     .barra-pesquisa {
-        font-size: 9px;
-        width: 26.5%; /* Ajusta para telas menores */
+        font-size: 15px;
+        width: 24.5%; /* Ajusta para telas menores */
         max-width: 500px;
-    }
-    .linha {
-        margin-top: -1px;
-        margin-left: 42px;
-        width:87%;
+        margin-right: 18px;
     }
     .input-pesquisa {
         width: 74.5%;
         height:15px;
     }
+    .linha {
+        margin-top: 1px;
+        margin-left: 42px;
+        width:81%;
+    }
+ 
+    .actions img {
+        width: 20px;
+        height:20px;
+        transition: transform 0.3s;
+        margin-left: 0px; 
+        max-width: 60px;
+    }
+    .actions img:hover {
+        transform: scale(1.2); 
+    }
+    .toggle-btn {
+        width: 30px;
+        height: 15px;
+        background-color: #ffffff;
+        border-radius: 40px;
+        border: 1px solid #000000;
+        position: relative;
+        float: right; 
+        top:3px;
+    }
+.toggle-btn .circle {
+    width: 12px;
+    height: 11px;
+    background-color: #ff0000;
+    border-radius: 50%;
+    position: absolute;
+    top: 1px;
+    left: 3px;
+    transition: left 0.3s;
 }
-
-
-
+.toggle-btn.active .circle {
+    background-color: #3AA867;
+    left: 15px;
+    top: 1px;
+}
+}
 @media (max-width: 320px) {
     main {   
     top: 157px; 
@@ -392,46 +607,54 @@ main {
         width: 84%;
         font-size: 10px;
         border-radius: 5px;
-        height:20px;
+        height:14px;
     }
     .linha {
         margin-top: 28px;
-        margin-left: 21.5px;
-        margin-right: 90px;
-        width: 83%;
+        margin-left: 20px;
+        width: 84%;
     }
     .tabela {
         padding: 1px;
     }
     .menu-tabela {
-        width: 50%;
+        width: 65%;
         max-width: 320px;
         padding: 1px;
     }
+    .tabela-3x3 {
+        width: 200%;
+        border-collapse: collapse;
+    }
     .tabela-3x3 th,
     .tabela-3x3 td {
-        font-size: 10px;
+        font-size: 12.5px;
         padding: 3px;
     }
     .toggle-btn {
-        width: 33.5px;
-        height: 14px;
+        width: 23.5px;
+        height: 13px;
         background-color: #ffffff;
         border-radius: 40px;
         border: 1px solid #000000;
         position: relative;
-        left:30px;
+        left:px;
         top:1px;
     }
     .toggle-btn .circle {
-        width: 10px;
-        height: 10px;
+        width: 9px;
+        height: 9px;
         background-color: #ff0000;
         border-radius: 50%;
         position: absolute;
         top: 1px;
-        left: 4px;
+        left: 2px;
         transition: left 0.3s;
+    }
+    .toggle-btn.active .circle {
+        background-color: #3AA867;
+        left: 10px;
+        top: 1px;
     }
     .actions img {
         width: 15px;
@@ -442,7 +665,7 @@ main {
         color: white;
         padding: 7px 3px;
         font-size: 9px;
-        bottom: 35px;
+        bottom: 30px;
         right: 45px;
     }
 }
