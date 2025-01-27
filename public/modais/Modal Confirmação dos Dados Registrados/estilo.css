@@ -116,7 +116,6 @@ button.cancel {
 button.cancel:hover {
     color: #FF0000;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-    text-decoration: underline #FF0000;
 }
 
 /* Estilo do botão salvar */
@@ -130,9 +129,8 @@ button.save {
 
 /* Estilo do botão salvar no hover */
 button.save:hover {
-    color: #00FF00;
+    color: #3AA867;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-    text-decoration: underline #00FF00;
 }
 
 /* Media Queries */
