@@ -13,11 +13,11 @@
     height: auto;
     width: auto;
     background-color: rgba(0, 0, 0, 0.12);
-    overflow: auto;
+    overflow: hidden;
     scroll-behavior: smooth;
     display: flex;
-    overflow-x: hidden;
-    overflow-y: auto;
+    /* overflow-x: hidden;
+    overflow-y: hidden; */
 }
 
 
@@ -37,7 +37,6 @@
 
 /* @media screen and (min-width: 360px) and (max-width: 360px){
     .Area-Util-Projeto{
-        left: 8vh;
-        
+        left: 8vh;        
     }
 } */
