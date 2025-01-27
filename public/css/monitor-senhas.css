@@ -1,3 +1,5 @@
+@import url(base_navegacao.css);
+
 :root{
     --cor-azul-escuro--1: rgba(51, 64, 77, 1);
     --cor-azul-escuro--0_10: rgba(51, 64, 77, 0.10);
@@ -114,7 +116,7 @@
     font-size: 3vh;
     padding: 5px;
     font-weight: 800;
-    text-decoration: underline;
+    /* text-decoration: underline; */
     color: var(--cor-azul-acinzentado);
 }
 
@@ -195,7 +197,7 @@
     justify-content: space-between;
     color: var(--cor-azul-acinzentado);
     font-size: 5vh;
-    text-decoration: underline;
+    /* text-decoration: underline; */
 }
 
 .infos-senha-principal span{
@@ -226,7 +228,7 @@
     font-size: 4vh;
     font-weight: 600;
     color: var(--cor-azul-acinzentado);
-    text-decoration: underline;
+    /* text-decoration: underline; */
 }   
 
 .nome-servico li span{
@@ -281,7 +283,7 @@
         justify-content: space-between;
         color: var(--cor-azul-acinzentado);
         font-size: 5vh;
-        text-decoration: underline;
+        /* text-decoration: underline; */
     }
     .infos-senha-principal span{
         font-size: 10vh;
