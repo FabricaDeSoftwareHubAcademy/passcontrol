@@ -1,0 +1,436 @@
+eliandro@eliandro:~/Documentos/passcontrol$ git pull testes-main
+fatal: 'testes-main' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+eliandro@eliandro:~/Documentos/passcontrol$ git remote -v
+origin  git@github.com:FabricaDeSoftwareHubAcademy/passcontrol.git (fetch)
+origin  git@github.com:FabricaDeSoftwareHubAcademy/passcontrol.git (push)
+eliandro@eliandro:~/Documentos/passcontrol$ git pull origin  testes-main
+From github.com:FabricaDeSoftwareHubAcademy/passcontrol
+ * branch            testes-main -> FETCH_HEAD
+Updating 64eaf73..a291cd7
+Fast-forward
+ app/admin/view/AtendentesCadastrados.html                                |  420 +++++++++++
+ {pages => app/admin/view}/Editar-perfil-usuario.html                     |   26 +-
+ {pages => app/admin/view}/adm-logado.html                                |   56 +-
+ app/admin/view/atendimento.html                                          |  381 ++++++++++
+ {pages => app/admin/view}/atendimento_tempo_real.html                    |   34 +-
+ {pages => app/admin/view}/atendimentocadastrados.html                    |   85 ++-
+ {pages => app/admin/view}/cadastro-funcionarios.html                     |   26 +-
+ {pages => app/admin/view}/cadastro_pont_de_atendimento.html              |   32 +-
+ {pages => app/admin/view}/configuracao-autoatendimento.html              |   35 +-
+ {pages => app/admin/view}/consultar-fila.html                            |   38 +-
+ {pages => app/admin/view}/edicao_usuario.html                            |   32 +-
+ {pages => app/admin/view}/editar_pont_de_atendimento.html                |   28 +-
+ {pages => app/admin/view}/menuadm_autoatendimento.html                   |   18 +-
+ .../admin/view/menuadm_servi\303\247os.html"                             |   15 +-
+ {pages => app/admin/view}/menuadm_usuario.html                           |   16 +-
+ .../admin/view/menusup_servi\303\247os.html"                             |   16 +-
+ {pages => app/admin/view}/menusup_usuario.html                           |   14 +-
+ app/admin/view/monitor-modal.html                                        |  174 +++++
+ {pages => app/admin/view}/navegacao.html                                 |   35 +-
+ {pages => app/admin/view}/recuperar-senha-codigo.html                    |   22 +-
+ {pages => app/admin/view}/recuperar-senha-email.html                     |   22 +-
+ {pages => app/admin/view}/recuperar-senha-novaSenha.html                 |   24 +-
+ app/admin/view/relatorio_diario.html                                     |  144 ++++
+ app/admin/view/servicos.html                                             |  187 +++++
+ {pages => app/admin/view}/telacadastro.html                              |   36 +-
+ {pages => app/usuario/view}/Monitor.html                                 |   53 +-
+ app/usuario/view/tela_autoatendimentoPage1.html                          |   99 +++
+ app/usuario/view/tela_autoatendimentoPage2.html                          |   99 +++
+ app/usuario/view/tela_autoatendimentoPage3.html                          |   65 ++
+ app/usuario/view/tela_autoatendimentoPage4.html                          |   73 ++
+ .../usuario/view/tela_autoatendimentoTeste.html                          |   30 +-
+ app/usuario/view/tela_autondimentoPage5.html                             |   54 ++
+ css/atendimentocadastrados.css                                           |  204 -----
+ css/cadastro_pont_de_atendimento.css                                     |  224 ------
+ css/edit.css                                                             |  413 ----------
+ css/monitor-senhas.css                                                   |  165 ----
+ css/style-configuracao-autoatendimento.css                               |   21 -
+ pages/login.html => login.html                                           |   32 +-
+ .../IMG/Logo Nota Controlnt.png"                                         |  Bin 5377 -> 0 bytes
+ .../IMG/Logo Nota Controlnt.png"                                         |  Bin 5377 -> 0 bytes
+ .../IMG/Logo Nota Controlnt.png"                                         |  Bin 5377 -> 0 bytes
+ .../IMG/Logo Nota Controlnt.png"                                         |  Bin 5377 -> 0 bytes
+ .../IMG/Logo Nota Controlnt.png"                                         |  Bin 5377 -> 0 bytes
+ .../IMG/Logo Nota Controlnt.png"                                         |  Bin 5377 -> 0 bytes
+ .../IMG/Logo Nota Controlnt.png"                                         |  Bin 5377 -> 0 bytes
+ .../IMG/Logo Nota Controlnt.png"                                         |  Bin 5377 -> 0 bytes
+ .../IMG/Logo Nota Controlnt.png"                                         |  Bin 5377 -> 0 bytes
+ modais/Modal Fila Zerada/IMG/Logo Nota Controlnt.png                     |  Bin 5377 -> 0 bytes
+ modais/Modal Fila Zerada/IMG/tick-circlecheck.png                        |  Bin 3208 -> 0 bytes
+ .../IMG/Logo Nota Controlnt.png"                                         |  Bin 5377 -> 0 bytes
+ .../IMG/Logo Nota Controlnt.png"                                         |  Bin 5377 -> 0 bytes
+ modais/Modal Iniciar Intervalo/IMG/Logo Nota Controlnt.png               |  Bin 5377 -> 0 bytes
+ modais/Modal Intervalo Iniciado/IMG/Logo Nota Controlnt.png              |  Bin 5377 -> 0 bytes
+ modais/Modal Novo Perfil de Acesso/IMG/Logo Nota Controlnt.png           |  Bin 5377 -> 0 bytes
+ .../IMG/Logo Nota Controlnt.png"                                         |  Bin 5377 -> 0 bytes
+ modais/Modal Senha Criada/IMG/Logo Nota Controlnt.png                    |  Bin 5377 -> 0 bytes
+ modais/Modal Senha Criada/IMG/tick-circlecheck.png                       |  Bin 3208 -> 0 bytes
+ pages/AtendentesCadastrados.html                                         |  166 ----
+ pages/atendimento.html                                                   |  220 ------
+ pages/servicos.html                                                      |  222 ------
+ {css => public/css}/AtendentesCadastrados.css                            |    5 +-
+ {css => public/css}/adm-logado.css                                       |  176 ++---
+ css/style-Ju.css => public/css/atendimento.css                           |  606 ++++++++++-----
+ {css => public/css}/atendimento_tempo_real.css                           |    0
+ public/css/atendimentocadastrados.css                                    |  671 +++++++++++++++++
+ {css => public/css}/base_area_util.css                                   |    7 +-
+ {css => public/css}/base_area_util_eli.css                               |    0
+ {css => public/css}/base_navegacao.css                                   |    4 +-
+ public/css/cadastro_pont_de_atendimento.css                              |  414 ++++++++++
+ {css => public/css}/configuracao-autoatendimento.css                     |   28 +
+ {css => public/css}/consultar-fila.css                                   |  158 +++-
+ {css => public/css}/conteudo.css                                         |   38 +-
+ public/css/edit.css                                                      | 1288 ++++++++++++++++++++++++++++++++
+ {css => public/css}/edit_usuario.css                                     |   76 +-
+ {css => public/css}/editar_pont_de_atendimento.css                       |  122 ++-
+ {css => public/css}/login.css                                            |    0
+ {css => public/css}/menu_eli.css                                         |    2 +-
+ public/css/monitor-modal.css                                             |  966 ++++++++++++++++++++++++
+ public/css/monitor-senhas.css                                            |  393 ++++++++++
+ {css => public/css}/navegacao.css                                        |    4 +-
+ {css => public/css}/recuperar-senha-codigo.css                           |    0
+ {css => public/css}/recuperar-senha-email.css                            |    0
+ {css => public/css}/recuperar-senha-novaSenha.css                        |    0
+ public/css/relatorio_diario.css                                          |  161 ++++
+ {css => public/css}/servicos.css                                         |  190 +++--
+ public/css/style-configuracao-autoatendimento.css                        |  171 +++++
+ {css => public/css}/style_atendimento_tempo_real.css                     |   74 +-
+ {css => public/css}/style_eli.css                                        |   40 +-
+ {css => public/css}/tabela.css                                           |    6 +-
+ public/css/tela_autoatendimentoPage1.css                                 |  181 +++++
+ css/tela_autoatendimento.css => public/css/tela_autoatendimentoPage2.css |   43 +-
+ public/css/tela_autoatendimentoPage3.css                                 |  168 +++++
+ public/css/tela_autoatendimentoPage4.css                                 |  177 +++++
+ public/css/tela_autoatendimentoPage5.css                                 |  127 ++++
+ public/css/tela_autoatendimentoTeste.css                                 |  224 ++++++
+ {assets => public}/img/Background-logo 2.svg                             |    0
+ {assets => public/img}/icons/DropDownIcon.svg                            |    0
+ {assets => public/img}/icons/Group 2924.png                              |  Bin
+ {assets => public/img}/icons/Group 2925.png                              |  Bin
+ {assets => public/img}/icons/ampulheta.svg                               |    0
+ {assets => public/img}/icons/atend.svg                                   |    0
+ {assets/img => public/img/icons}/editar.png                              |  Bin
+ {assets => public/img}/icons/gestao.svg                                  |    0
+ {assets => public/img}/icons/image 33.svg                                |    0
+ public/img/icons/imagem casa.jpg                                         |  Bin 0 -> 45170 bytes
+ {assets => public/img}/icons/logo control.svg                            |    0
+ {assets => public/img}/icons/lupa.svg                                    |    0
+ {assets => public/img}/icons/monitor.svg                                 |    0
+ {assets => public/img}/icons/nota.svg                                    |    0
+ {assets => public/img}/icons/sair.svg                                    |    0
+ {assets => public/img}/icons/user.svg                                    |    0
+ .../img/img-menu/Cadastro de Usu\303\241rio.png"                         |  Bin
+ .../img/img-menu/Gest\303\243o_do_Autoatendimento.png"                   |  Bin
+ {assets/img/img_eli => public/img/img-menu}/Ponto_de_Atendimento.png     |  Bin
+ .../Servi\303\247os.png" => "public/img/img-menu/Servi\303\247os.png"    |  Bin
+ .../img/img-menu/Usu\303\241rio_Cadastrado.png"                          |  Bin
+ .../img-menu/Visualiza\303\247\303\243o Monitor de Autoatendimento.png"  |  Bin
+ .../IMG => public/img/img-modais}/Logo Nota Controlnt.png                |  Bin
+ .../IMG/folder.png" => public/img/img-modais/folder.png                  |  Bin
+ .../tick-circlecheck.png" => public/img/img-modais/tick-circlecheck.png  |  Bin
+ {assets/img => public/img/logo-png}/bot.png                              |  Bin
+ {assets/img => public/img/logo-png}/mid.png                              |  Bin
+ {assets/img => public/img/logo-png}/setas.png                            |  Bin
+ {assets/img => public/img/logo-png}/top.png                              |  Bin
+ public/js/ativar.js                                                      |    4 +
+ {js => public/js}/cadastro_pont_de_atendimento.js                        |    0
+ public/js/configuracao-autoatendimento.js                                |    8 +
+ {js => public/js}/empty.js                                               |    0
+ {js => public/js}/login.js                                               |    0
+ public/js/modal-adm-logado.js                                            |   40 +
+ public/js/monitor-modal.js                                               |   18 +
+ {js => public/js}/navegacao-menu-lateral-teste.js                        |    0
+ {js => public/js}/recuperar-senha-codigo.js                              |    0
+ {js => public/js}/recuperar-senha-novaSenha.js                           |    0
+ {js => public/js}/scripts.js                                             |    0
+ {js => public/js}/senha.js                                               |    0
+ {modais => public/modais}/Modal Alerta FIla Zerada/estilo.css            |    0
+ {modais => public/modais}/Modal Alerta FIla Zerada/index.html            |    2 +-
+ {modais => public/modais}/Modal Alerta FIla Zerada/modal.js              |    0
+ .../modais/Modal Ativa\303\247\303\243o Guich\303\252/estilo.css"        |    0
+ .../modais/Modal Ativa\303\247\303\243o Guich\303\252/index.html"        |    2 +-
+ .../modais/Modal Ativa\303\247\303\243o Guich\303\252/modal.js"          |    0
+ .../modais/Modal Ativa\303\247\303\243o Usu\303\241rio/estilo.css"       |    0
+ .../modais/Modal Ativa\303\247\303\243o Usu\303\241rio/index.html"       |    2 +-
+ .../modais/Modal Ativa\303\247\303\243o Usu\303\241rio/modal.js"         |    0
+ .../Modal Confirma\303\247\303\243o Relat\303\263rio Gerado/estilo.css"  |    0
+ .../Modal Confirma\303\247\303\243o Relat\303\263rio Gerado/index.html"  |    2 +-
+ .../Modal Confirma\303\247\303\243o Relat\303\263rio Gerado/modal.js"    |    0
+ .../Modal Confirma\303\247\303\243o de Presen\303\247a/estilo.css"       |    0
+ .../Modal Confirma\303\247\303\243o de Presen\303\247a/index.html"       |    2 +-
+ .../modais/Modal Confirma\303\247\303\243o de Presen\303\247a/modal.js"  |    0
+ .../modais/Modal Confirma\303\247\303\243o de Senha/estilo.css"          |    0
+ .../modais/Modal Confirma\303\247\303\243o de Senha/index.html"          |    4 +-
+ .../modais/Modal Confirma\303\247\303\243o de Senha/modal.js"            |    0
+ .../.vscode/settings.json"                                               |    0
+ .../Modal Confirma\303\247\303\243o dos Dados Registrados/estilo.css"    |   67 +-
+ .../Modal Confirma\303\247\303\243o dos Dados Registrados/index.html"    |    2 +-
+ .../Modal Confirma\303\247\303\243o dos Dados Registrados/modal.js"      |    0
+ .../modais/Modal Confirma\303\247\303\243o dos Dados/estilo.css"         |    0
+ .../modais/Modal Confirma\303\247\303\243o dos Dados/index.html"         |    2 +-
+ .../modais/Modal Confirma\303\247\303\243o dos Dados/modal.js"           |    0
+ .../Modal Confirma\303\247\303\243o dos Servi\303\247os/estilo.css"      |    0
+ .../Modal Confirma\303\247\303\243o dos Servi\303\247os/index.html"      |    2 +-
+ .../modais/Modal Confirma\303\247\303\243o dos Servi\303\247os/modal.js" |    0
+ .../Modal Confirm\303\247\303\243o Servi\303\247o Cadastrado/estilo.css" |    0
+ .../Modal Confirm\303\247\303\243o Servi\303\247o Cadastrado/index.html" |    2 +-
+ .../Modal Confirm\303\247\303\243o Servi\303\247o Cadastrado/modal.js"   |    0
+ .../estilo.css" => public/modais/Modal Fila Zerada/estilo.css            |    0
+ {modais => public/modais}/Modal Fila Zerada/index.html                   |    2 +-
+ {modais => public/modais}/Modal Fila Zerada/modal.js                     |    0
+ .../modais/Modal Inativa\303\247\303\243o Guich\303\252/estilo.css"      |    0
+ .../modais/Modal Inativa\303\247\303\243o Guich\303\252/index.html"      |    2 +-
+ .../modais/Modal Inativa\303\247\303\243o Guich\303\252/modal.js"        |    0
+ .../modais/Modal Inativa\303\247\303\243o Usu\303\241rio/estilo.css"     |    0
+ .../modais/Modal Inativa\303\247\303\243o Usu\303\241rio/index.html"     |    2 +-
+ .../modais/Modal Inativa\303\247\303\243o Usu\303\241rio/modal.js"       |    0
+ {modais => public/modais}/Modal Iniciar Intervalo/estilo.css             |    0
+ {modais => public/modais}/Modal Iniciar Intervalo/index.html             |    2 +-
+ {modais => public/modais}/Modal Iniciar Intervalo/modal.js               |    0
+ {modais => public/modais}/Modal Intervalo Iniciado/estilo.css            |    0
+ {modais => public/modais}/Modal Intervalo Iniciado/index.html            |    2 +-
+ {modais => public/modais}/Modal Intervalo Iniciado/modal.js              |    0
+ {modais => public/modais}/Modal Novo Perfil de Acesso/estilo.css         |    0
+ {modais => public/modais}/Modal Novo Perfil de Acesso/index.html         |    2 +-
+ {modais => public/modais}/Modal Novo Perfil de Acesso/modal.js           |    0
+ .../modais/Modal Sele\303\247\303\243o Guich\303\252/estilo.css"         |    0
+ .../modais/Modal Sele\303\247\303\243o Guich\303\252/index.html"         |    2 +-
+ .../modais/Modal Sele\303\247\303\243o Guich\303\252/modal.js"           |    0
+ {modais => public/modais}/Modal Senha Criada/estilo.css                  |    0
+ {modais => public/modais}/Modal Senha Criada/index.html                  |    4 +-
+ {modais => public/modais}/Modal Senha Criada/modal.js                    |    0
+ 191 files changed, 8246 insertions(+), 2507 deletions(-)
+ create mode 100644 app/admin/view/AtendentesCadastrados.html
+ rename {pages => app/admin/view}/Editar-perfil-usuario.html (79%)
+ rename {pages => app/admin/view}/adm-logado.html (68%)
+ create mode 100644 app/admin/view/atendimento.html
+ rename {pages => app/admin/view}/atendimento_tempo_real.html (78%)
+ rename {pages => app/admin/view}/atendimentocadastrados.html (58%)
+ rename {pages => app/admin/view}/cadastro-funcionarios.html (81%)
+ rename {pages => app/admin/view}/cadastro_pont_de_atendimento.html (79%)
+ rename {pages => app/admin/view}/configuracao-autoatendimento.html (75%)
+ rename {pages => app/admin/view}/consultar-fila.html (82%)
+ rename {pages => app/admin/view}/edicao_usuario.html (82%)
+ rename {pages => app/admin/view}/editar_pont_de_atendimento.html (79%)
+ rename {pages => app/admin/view}/menuadm_autoatendimento.html (91%)
+ rename "pages/menuadm_servi\303\247os.html" => "app/admin/view/menuadm_servi\303\247os.html" (92%)
+ rename {pages => app/admin/view}/menuadm_usuario.html (92%)
+ rename "pages/menusup_servi\303\247os.html" => "app/admin/view/menusup_servi\303\247os.html" (92%)
+ rename {pages => app/admin/view}/menusup_usuario.html (92%)
+ create mode 100644 app/admin/view/monitor-modal.html
+ rename {pages => app/admin/view}/navegacao.html (61%)
+ rename {pages => app/admin/view}/recuperar-senha-codigo.html (66%)
+ rename {pages => app/admin/view}/recuperar-senha-email.html (55%)
+ rename {pages => app/admin/view}/recuperar-senha-novaSenha.html (63%)
+ create mode 100644 app/admin/view/relatorio_diario.html
+ create mode 100644 app/admin/view/servicos.html
+ rename {pages => app/admin/view}/telacadastro.html (83%)
+ rename {pages => app/usuario/view}/Monitor.html (62%)
+ create mode 100644 app/usuario/view/tela_autoatendimentoPage1.html
+ create mode 100644 app/usuario/view/tela_autoatendimentoPage2.html
+ create mode 100644 app/usuario/view/tela_autoatendimentoPage3.html
+ create mode 100644 app/usuario/view/tela_autoatendimentoPage4.html
+ rename pages/tela_autoatendimento.html => app/usuario/view/tela_autoatendimentoTeste.html (81%)
+ create mode 100644 app/usuario/view/tela_autondimentoPage5.html
+ delete mode 100644 css/atendimentocadastrados.css
+ delete mode 100644 css/cadastro_pont_de_atendimento.css
+ delete mode 100644 css/edit.css
+ delete mode 100644 css/monitor-senhas.css
+ delete mode 100644 css/style-configuracao-autoatendimento.css
+ rename pages/login.html => login.html (55%)
+ delete mode 100644 "modais/Modal Ativa\303\247\303\243o Guich\303\252/IMG/Logo Nota Controlnt.png"
+ delete mode 100644 "modais/Modal Ativa\303\247\303\243o Usu\303\241rio/IMG/Logo Nota Controlnt.png"
+ delete mode 100644 "modais/Modal Confirma\303\247\303\243o Relat\303\263rio Gerado/IMG/Logo Nota Controlnt.png"
+ delete mode 100644 "modais/Modal Confirma\303\247\303\243o de Presen\303\247a/IMG/Logo Nota Controlnt.png"
+ delete mode 100644 "modais/Modal Confirma\303\247\303\243o de Senha/IMG/Logo Nota Controlnt.png"
+ delete mode 100644 "modais/Modal Confirma\303\247\303\243o dos Dados Registrados/IMG/Logo Nota Controlnt.png"
+ delete mode 100644 "modais/Modal Confirma\303\247\303\243o dos Dados/IMG/Logo Nota Controlnt.png"
+ delete mode 100644 "modais/Modal Confirma\303\247\303\243o dos Servi\303\247os/IMG/Logo Nota Controlnt.png"
+ delete mode 100644 "modais/Modal Confirm\303\247\303\243o Servi\303\247o Cadastrado/IMG/Logo Nota Controlnt.png"
+ delete mode 100644 modais/Modal Fila Zerada/IMG/Logo Nota Controlnt.png
+ delete mode 100644 modais/Modal Fila Zerada/IMG/tick-circlecheck.png
+ delete mode 100644 "modais/Modal Inativa\303\247\303\243o Guich\303\252/IMG/Logo Nota Controlnt.png"
+ delete mode 100644 "modais/Modal Inativa\303\247\303\243o Usu\303\241rio/IMG/Logo Nota Controlnt.png"
+ delete mode 100644 modais/Modal Iniciar Intervalo/IMG/Logo Nota Controlnt.png
+ delete mode 100644 modais/Modal Intervalo Iniciado/IMG/Logo Nota Controlnt.png
+ delete mode 100644 modais/Modal Novo Perfil de Acesso/IMG/Logo Nota Controlnt.png
+ delete mode 100644 "modais/Modal Sele\303\247\303\243o Guich\303\252/IMG/Logo Nota Controlnt.png"
+ delete mode 100644 modais/Modal Senha Criada/IMG/Logo Nota Controlnt.png
+ delete mode 100644 modais/Modal Senha Criada/IMG/tick-circlecheck.png
+ delete mode 100644 pages/AtendentesCadastrados.html
+ delete mode 100644 pages/atendimento.html
+ delete mode 100644 pages/servicos.html
+ rename {css => public/css}/AtendentesCadastrados.css (60%)
+ rename {css => public/css}/adm-logado.css (64%)
+ rename css/style-Ju.css => public/css/atendimento.css (70%)
+ rename {css => public/css}/atendimento_tempo_real.css (100%)
+ create mode 100644 public/css/atendimentocadastrados.css
+ rename {css => public/css}/base_area_util.css (85%)
+ rename {css => public/css}/base_area_util_eli.css (100%)
+ rename {css => public/css}/base_navegacao.css (97%)
+ create mode 100644 public/css/cadastro_pont_de_atendimento.css
+ rename {css => public/css}/configuracao-autoatendimento.css (61%)
+ rename {css => public/css}/consultar-fila.css (81%)
+ rename {css => public/css}/conteudo.css (82%)
+ create mode 100644 public/css/edit.css
+ rename {css => public/css}/edit_usuario.css (99%)
+ rename {css => public/css}/editar_pont_de_atendimento.css (65%)
+ rename {css => public/css}/login.css (100%)
+ rename {css => public/css}/menu_eli.css (97%)
+ create mode 100644 public/css/monitor-modal.css
+ create mode 100644 public/css/monitor-senhas.css
+ rename {css => public/css}/navegacao.css (98%)
+ rename {css => public/css}/recuperar-senha-codigo.css (100%)
+ rename {css => public/css}/recuperar-senha-email.css (100%)
+ rename {css => public/css}/recuperar-senha-novaSenha.css (100%)
+ create mode 100644 public/css/relatorio_diario.css
+ rename {css => public/css}/servicos.css (53%)
+ create mode 100644 public/css/style-configuracao-autoatendimento.css
+ rename {css => public/css}/style_atendimento_tempo_real.css (71%)
+ rename {css => public/css}/style_eli.css (75%)
+ rename {css => public/css}/tabela.css (89%)
+ create mode 100644 public/css/tela_autoatendimentoPage1.css
+ rename css/tela_autoatendimento.css => public/css/tela_autoatendimentoPage2.css (82%)
+ create mode 100644 public/css/tela_autoatendimentoPage3.css
+ create mode 100644 public/css/tela_autoatendimentoPage4.css
+ create mode 100644 public/css/tela_autoatendimentoPage5.css
+ create mode 100644 public/css/tela_autoatendimentoTeste.css
+ rename {assets => public}/img/Background-logo 2.svg (100%)
+ rename {assets => public/img}/icons/DropDownIcon.svg (100%)
+ rename {assets => public/img}/icons/Group 2924.png (100%)
+ rename {assets => public/img}/icons/Group 2925.png (100%)
+ rename {assets => public/img}/icons/ampulheta.svg (100%)
+ rename {assets => public/img}/icons/atend.svg (100%)
+ rename {assets/img => public/img/icons}/editar.png (100%)
+ rename {assets => public/img}/icons/gestao.svg (100%)
+ rename {assets => public/img}/icons/image 33.svg (100%)
+ create mode 100644 public/img/icons/imagem casa.jpg
+ rename {assets => public/img}/icons/logo control.svg (100%)
+ rename {assets => public/img}/icons/lupa.svg (100%)
+ rename {assets => public/img}/icons/monitor.svg (100%)
+ rename {assets => public/img}/icons/nota.svg (100%)
+ rename {assets => public/img}/icons/sair.svg (100%)
+ rename {assets => public/img}/icons/user.svg (100%)
+ rename "assets/img/img_eli/Cadastro de Usu\303\241rio.png" => "public/img/img-menu/Cadastro de Usu\303\241rio.png" (100%)
+ rename "assets/img/img_eli/Gest\303\243o_do_Autoatendimento.png" => "public/img/img-menu/Gest\303\243o_do_Autoatendimento.png" (100%)
+ rename {assets/img/img_eli => public/img/img-menu}/Ponto_de_Atendimento.png (100%)
+ rename "assets/img/img_eli/Servi\303\247os.png" => "public/img/img-menu/Servi\303\247os.png" (100%)
+ rename "assets/img/img_eli/Usu\303\241rio_Cadastrado.png" => "public/img/img-menu/Usu\303\241rio_Cadastrado.png" (100%)
+ rename "assets/img/img_eli/Visualiza\303\247\303\243o Monitor de Autoatendimento.png" => "public/img/img-menu/Visualiza\303\247\303\243o Monitor de Autoatendimento.png" (100%)
+ rename {modais/Modal Alerta FIla Zerada/IMG => public/img/img-modais}/Logo Nota Controlnt.png (100%)
+ rename "modais/Modal Confirma\303\247\303\243o dos Servi\303\247os/IMG/folder.png" => public/img/img-modais/folder.png (100%)
+ rename "modais/Modal Confirma\303\247\303\243o de Senha/IMG/tick-circlecheck.png" => public/img/img-modais/tick-circlecheck.png (100%)
+ rename {assets/img => public/img/logo-png}/bot.png (100%)
+ rename {assets/img => public/img/logo-png}/mid.png (100%)
+ rename {assets/img => public/img/logo-png}/setas.png (100%)
+ rename {assets/img => public/img/logo-png}/top.png (100%)
+ create mode 100644 public/js/ativar.js
+ rename {js => public/js}/cadastro_pont_de_atendimento.js (100%)
+ create mode 100644 public/js/configuracao-autoatendimento.js
+ rename {js => public/js}/empty.js (100%)
+ rename {js => public/js}/login.js (100%)
+ create mode 100644 public/js/modal-adm-logado.js
+ create mode 100644 public/js/monitor-modal.js
+ rename {js => public/js}/navegacao-menu-lateral-teste.js (100%)
+ rename {js => public/js}/recuperar-senha-codigo.js (100%)
+ rename {js => public/js}/recuperar-senha-novaSenha.js (100%)
+ rename {js => public/js}/scripts.js (100%)
+ rename {js => public/js}/senha.js (100%)
+ rename {modais => public/modais}/Modal Alerta FIla Zerada/estilo.css (100%)
+ rename {modais => public/modais}/Modal Alerta FIla Zerada/index.html (84%)
+ rename {modais => public/modais}/Modal Alerta FIla Zerada/modal.js (100%)
+ rename "modais/Modal Ativa\303\247\303\243o Guich\303\252/estilo.css" => "public/modais/Modal Ativa\303\247\303\243o Guich\303\252/estilo.css" (100%)
+ rename "modais/Modal Ativa\303\247\303\243o Guich\303\252/index.html" => "public/modais/Modal Ativa\303\247\303\243o Guich\303\252/index.html" (85%)
+ rename "modais/Modal Ativa\303\247\303\243o Guich\303\252/modal.js" => "public/modais/Modal Ativa\303\247\303\243o Guich\303\252/modal.js" (100%)
+ rename "modais/Modal Ativa\303\247\303\243o Usu\303\241rio/estilo.css" => "public/modais/Modal Ativa\303\247\303\243o Usu\303\241rio/estilo.css" (100%)
+ rename "modais/Modal Ativa\303\247\303\243o Usu\303\241rio/index.html" => "public/modais/Modal Ativa\303\247\303\243o Usu\303\241rio/index.html" (85%)
+ rename "modais/Modal Ativa\303\247\303\243o Usu\303\241rio/modal.js" => "public/modais/Modal Ativa\303\247\303\243o Usu\303\241rio/modal.js" (100%)
+ rename "modais/Modal Confirma\303\247\303\243o Relat\303\263rio Gerado/estilo.css" => "public/modais/Modal Confirma\303\247\303\243o Relat\303\263rio Gerado/estilo.css" (100%)
+ rename "modais/Modal Confirma\303\247\303\243o Relat\303\263rio Gerado/index.html" => "public/modais/Modal Confirma\303\247\303\243o Relat\303\263rio Gerado/index.html" (84%)
+ rename "modais/Modal Confirma\303\247\303\243o Relat\303\263rio Gerado/modal.js" => "public/modais/Modal Confirma\303\247\303\243o Relat\303\263rio Gerado/modal.js" (100%)
+ rename "modais/Modal Confirma\303\247\303\243o de Presen\303\247a/estilo.css" => "public/modais/Modal Confirma\303\247\303\243o de Presen\303\247a/estilo.css" (100%)
+ rename "modais/Modal Confirma\303\247\303\243o de Presen\303\247a/index.html" => "public/modais/Modal Confirma\303\247\303\243o de Presen\303\247a/index.html" (89%)
+ rename "modais/Modal Confirma\303\247\303\243o de Presen\303\247a/modal.js" => "public/modais/Modal Confirma\303\247\303\243o de Presen\303\247a/modal.js" (100%)
+ rename "modais/Modal Confirma\303\247\303\243o de Senha/estilo.css" => "public/modais/Modal Confirma\303\247\303\243o de Senha/estilo.css" (100%)
+ rename "modais/Modal Confirma\303\247\303\243o de Senha/index.html" => "public/modais/Modal Confirma\303\247\303\243o de Senha/index.html" (75%)
+ rename "modais/Modal Confirma\303\247\303\243o de Senha/modal.js" => "public/modais/Modal Confirma\303\247\303\243o de Senha/modal.js" (100%)
+ rename "modais/Modal Confirma\303\247\303\243o dos Dados Registrados/.vscode/settings.json" => "public/modais/Modal Confirma\303\247\303\243o dos Dados Registrados/.vscode/settings.json" (100%)
+ rename "modais/Modal Inativa\303\247\303\243o Usu\303\241rio/estilo.css" => "public/modais/Modal Confirma\303\247\303\243o dos Dados Registrados/estilo.css" (82%)
+ rename "modais/Modal Confirma\303\247\303\243o dos Dados Registrados/index.html" => "public/modais/Modal Confirma\303\247\303\243o dos Dados Registrados/index.html" (86%)
+ rename "modais/Modal Confirma\303\247\303\243o dos Dados Registrados/modal.js" => "public/modais/Modal Confirma\303\247\303\243o dos Dados Registrados/modal.js" (100%)
+ rename "modais/Modal Confirma\303\247\303\243o dos Dados/estilo.css" => "public/modais/Modal Confirma\303\247\303\243o dos Dados/estilo.css" (100%)
+ rename "modais/Modal Confirma\303\247\303\243o dos Dados/index.html" => "public/modais/Modal Confirma\303\247\303\243o dos Dados/index.html" (84%)
+ rename "modais/Modal Confirma\303\247\303\243o dos Dados/modal.js" => "public/modais/Modal Confirma\303\247\303\243o dos Dados/modal.js" (100%)
+ rename "modais/Modal Confirma\303\247\303\243o dos Servi\303\247os/estilo.css" => "public/modais/Modal Confirma\303\247\303\243o dos Servi\303\247os/estilo.css" (100%)
+ rename "modais/Modal Confirma\303\247\303\243o dos Servi\303\247os/index.html" => "public/modais/Modal Confirma\303\247\303\243o dos Servi\303\247os/index.html" (92%)
+ rename "modais/Modal Confirma\303\247\303\243o dos Servi\303\247os/modal.js" => "public/modais/Modal Confirma\303\247\303\243o dos Servi\303\247os/modal.js" (100%)
+ rename "modais/Modal Confirma\303\247\303\243o dos Dados Registrados/estilo.css" => "public/modais/Modal Confirm\303\247\303\243o Servi\303\247o Cadastrado/estilo.css" (100%)
+ rename "modais/Modal Confirm\303\247\303\243o Servi\303\247o Cadastrado/index.html" => "public/modais/Modal Confirm\303\247\303\243o Servi\303\247o Cadastrado/index.html" (86%)
+ rename "modais/Modal Confirm\303\247\303\243o Servi\303\247o Cadastrado/modal.js" => "public/modais/Modal Confirm\303\247\303\243o Servi\303\247o Cadastrado/modal.js" (100%)
+ rename "modais/Modal Confirm\303\247\303\243o Servi\303\247o Cadastrado/estilo.css" => public/modais/Modal Fila Zerada/estilo.css (100%)
+ rename {modais => public/modais}/Modal Fila Zerada/index.html (85%)
+ rename {modais => public/modais}/Modal Fila Zerada/modal.js (100%)
+ rename modais/Modal Fila Zerada/estilo.css => "public/modais/Modal Inativa\303\247\303\243o Guich\303\252/estilo.css" (100%)
+ rename "modais/Modal Inativa\303\247\303\243o Guich\303\252/index.html" => "public/modais/Modal Inativa\303\247\303\243o Guich\303\252/index.html" (85%)
+ rename "modais/Modal Inativa\303\247\303\243o Guich\303\252/modal.js" => "public/modais/Modal Inativa\303\247\303\243o Guich\303\252/modal.js" (100%)
+ rename "modais/Modal Inativa\303\247\303\243o Guich\303\252/estilo.css" => "public/modais/Modal Inativa\303\247\303\243o Usu\303\241rio/estilo.css" (100%)
+ rename "modais/Modal Inativa\303\247\303\243o Usu\303\241rio/index.html" => "public/modais/Modal Inativa\303\247\303\243o Usu\303\241rio/index.html" (85%)
+ rename "modais/Modal Inativa\303\247\303\243o Usu\303\241rio/modal.js" => "public/modais/Modal Inativa\303\247\303\243o Usu\303\241rio/modal.js" (100%)
+ rename {modais => public/modais}/Modal Iniciar Intervalo/estilo.css (100%)
+ rename {modais => public/modais}/Modal Iniciar Intervalo/index.html (86%)
+ rename {modais => public/modais}/Modal Iniciar Intervalo/modal.js (100%)
+ rename {modais => public/modais}/Modal Intervalo Iniciado/estilo.css (100%)
+ rename {modais => public/modais}/Modal Intervalo Iniciado/index.html (85%)
+ rename {modais => public/modais}/Modal Intervalo Iniciado/modal.js (100%)
+ rename {modais => public/modais}/Modal Novo Perfil de Acesso/estilo.css (100%)
+ rename {modais => public/modais}/Modal Novo Perfil de Acesso/index.html (95%)
+ rename {modais => public/modais}/Modal Novo Perfil de Acesso/modal.js (100%)
+ rename "modais/Modal Sele\303\247\303\243o Guich\303\252/estilo.css" => "public/modais/Modal Sele\303\247\303\243o Guich\303\252/estilo.css" (100%)
+ rename "modais/Modal Sele\303\247\303\243o Guich\303\252/index.html" => "public/modais/Modal Sele\303\247\303\243o Guich\303\252/index.html" (88%)
+ rename "modais/Modal Sele\303\247\303\243o Guich\303\252/modal.js" => "public/modais/Modal Sele\303\247\303\243o Guich\303\252/modal.js" (100%)
+ rename {modais => public/modais}/Modal Senha Criada/estilo.css (100%)
+ rename {modais => public/modais}/Modal Senha Criada/index.html (75%)
+ rename {modais => public/modais}/Modal Senha Criada/modal.js (100%)
+eliandro@eliandro:~/Documentos/passcontrol$ git branch
+* BasedeNavegacao
+eliandro@eliandro:~/Documentos/passcontrol$ git branch task034
+eliandro@eliandro:~/Documentos/passcontrol$ git branch task034
+fatal: a branch named 'task034' already exists
+eliandro@eliandro:~/Documentos/passcontrol$ git branch
+* BasedeNavegacao
+  task034
+eliandro@eliandro:~/Documentos/passcontrol$ git checkout task034
+Switched to branch 'task034'
+eliandro@eliandro:~/Documentos/passcontrol$ git status
+No ramo task034
+Changes not staged for commit:
+  (utilize "git add <arquivo>..." para atualizar o que será submetido)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   app/admin/view/menuadm_usuario.html
+
+nenhuma modificação adicionada à submissão (utilize "git add" e/ou "git commit -a")
+eliandro@eliandro:~/Documentos/passcontrol$ git add .
+eliandro@eliandro:~/Documentos/passcontrol$ git status
+No ramo task034
+Mudanças a serem submetidas:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   app/admin/view/menuadm_usuario.html
+
+eliandro@eliandro:~/Documentos/passcontrol$ git commit -m "adicionei comentario teste"
+[task034 dcefaf6] adicionei comentario teste
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+eliandro@eliandro:~/Documentos/passcontrol$ git push origin task034
+Enumerating objects: 11, done.
+Counting objects: 100% (11/11), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (6/6), 538 bytes | 538.00 KiB/s, done.
+Total 6 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To github.com:FabricaDeSoftwareHubAcademy/passcontrol.git
+   2acac4e..dcefaf6  task034 -> task034
+eliandro@eliandro:~/Documentos/passcontrol$ 
