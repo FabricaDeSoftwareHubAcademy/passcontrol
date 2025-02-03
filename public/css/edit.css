@@ -325,21 +325,14 @@
     text-decoration:underline;
 }
 
-.btn{
+.btn-telacadastro {
     position: absolute;
-    left: 75%;
-    top: 650px;
+    left: 76%;
+    top: 695px;
     display: flex;
+    gap: 20px;
     
 }
-
-/* @media screen and (max-width: 320px){
-    .quadrado{
-        background-color: brown;
-        width: 5%;
-    }
-    
-} */
 
 
 @media screen and (min-width: 320px) and (max-width: 374px) {
@@ -360,6 +353,7 @@
         position: absolute;
         width: auto;
         left: 0%;
+        height: 20px;
     }
     .botao2{
         display: flex;
@@ -367,13 +361,14 @@
         width: auto;
         position: absolute;
         left: 40%;
+        height: 20px;
     }
-    .btn{
+    .btn-telacadastro{
         display: flex;
         justify-content: space-around;
         position: relative;
         top: 370px;
-        left:-17px;
+        left: 0px;
     }
     .checkbox-container{
         display: block;
@@ -479,22 +474,26 @@
         display: flex;
         flex-direction: column;
         position: absolute;
-        width: auto;
-        left: 0%;
+        width: 56px;
+        height: 19px;
+        left: -3%;
+        top: -25px;
     }
     .botao2{
         display: flex;
         flex-direction: column;
-        width: auto;
+        width: 55px;
+        height: 20px;
         position: absolute;
-        left: 40%;
+        left: 35%;
+        top: -25px;
     }
-    .btn{
+    .btn-telacadastro{
         display: flex;
         justify-content: space-around;
         position: relative;
-        top: 370px;
-        left:-17px;
+        top: 435px;
+        left: 20px;
     }
     .checkbox-container{
         display: block;
@@ -592,21 +591,25 @@
         display: flex;
         flex-direction: column;
         position: absolute;
-        width: auto;
-        left: 0%;
+        width: 53px;
+        left: 8%;
+        height: 20px;
+        top: -15px;
     }
     .botao2{
         display: flex;
         flex-direction: column;
         width: auto;
         position: absolute;
-        left: 40%;
+        left: 38%;
+        height: 20px;
+        top: -15px;
     }
-    .btn{
+    .btn-telacadastro{
         display: flex;
         justify-content: space-around;
         position: relative;
-        top: 370px;
+        top: 290px;
         left: 23px;
     }
     .checkbox-container{
@@ -721,7 +724,7 @@
         position: absolute;
         left: 40%;
     }
-    .btn{
+    .btn-telacadastro{
         display: flex;
         justify-content: space-around;
         position: relative;
@@ -840,7 +843,7 @@
         position: absolute;
         left: 40%;
     }
-    .btn{
+    .btn-telacadastro{
         display: flex;
         justify-content: space-around;
         position: relative;
@@ -959,7 +962,7 @@
         position: absolute;
         left: 40%;
     }
-    .btn{
+    .btn-telacadastro{
         display: flex;
         justify-content: space-around;
         position: relative;
@@ -1077,7 +1080,7 @@
         position: absolute;
         left: 40%;
     }
-    .btn{
+    .btn-telacadastro{
         display: flex;
         justify-content: space-around;
         position: relative;
@@ -1196,7 +1199,7 @@
         position: absolute;
         left: 40%;
     }
-    .btn{
+    .btn-telacadastro{
         display: flex;
         justify-content: space-around;
         position: relative;
@@ -1314,7 +1317,7 @@
         position: absolute;
         left: 40%;
     }
-    .btn{
+    .btn-telacadastro{
         display: flex;
         justify-content: space-around;
         position: relative;
