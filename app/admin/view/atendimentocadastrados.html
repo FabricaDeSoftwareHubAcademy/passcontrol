@@ -73,6 +73,8 @@
             <div class="botao-navegacao">
                 <a class="botao-lateal-navegacao" href="../../../app/admin/view/menuadm_usuario.html">
                     <img class="icone-menu-lateral" src="../../../public/img/icons/gestao.svg" alt="ICONE GESTAO">
+                <a class="botao-lateal-navegacao ativo-estacionario" href="menuadm_usuario.html">
+                    <img class="icone-menu-lateral ativo-estacionario" src="../../../public/img/icons/gestao.svg" alt="ICONE GESTAO">
                     <div class="texto-bott">Gestão</div>
                 </a>
             </div>
@@ -89,17 +91,19 @@
         <!-- INSIRA O CORPO DA SUA PÁGINA A PARTIR DESTE PONTO -->
          
             <!-- <main> -->
-                <div class="cubo-branco">
-                    <h2 class="titulo">Pontos de Atendimento Cadastrados</h2>
-                    
-                    <!-- Barra de pesquisa -->
+                  <!-- titulo -->
+                <div>
+                  <h2 class="titulo">Pontos de Atendimento Cadastrados</h2>
+                  <!-- Barra de pesquisa -->
                     <div class="barra-pesquisa">
                         <input type="text" class="input-pesquisa" placeholder="Buscar Registro">
                     </div>
-            
-                    <!-- Linha divisória -->
-                    <div class="linha"></div>
-            
+                </div>
+        
+                <!-- Linha divisória -->
+                <div class="linha"></div>
+                
+                <div class="cubo-branco">
                     <!-- Tabela de pontos de atendimento -->
                     <div class="tabela">
                         <section class="menu-tabela">
@@ -114,7 +118,7 @@
                                     <td>1</td>
                                     <td class="actions">
                                         <!-- Botão de edição -->
-                                        <a href="../../../app/admin/view/editar_pont_de_atendimento.html">
+                                        <a href="editar_pont_de_atendimento.html">
                                             <img src="../../../public/img/icons/editar.png" alt="Editar">
                                         </a>
                                         <!-- Botão de ativar/desativar -->
@@ -122,7 +126,45 @@
                                             <div class="circle"></div>
                                         </div>
                                     </td>
+        
+                                    
+                                    
                                 </tr>
+                                <tr>
+                                    <td>Guichê</td>
+                                    <td>2</td>
+                                    <td class="actions">
+                                        <!-- Botão de edição -->
+                                        <a href="editar_pont_de_atendimento.html">
+                                            <img src="../../../public/img/icons/editar.png" alt="Editar">
+                                        </a>
+                                        <!-- Botão de ativar/desativar -->
+                                        <div class="toggle-btn active">
+                                            <div class="circle"></div>
+                                        </div>
+                                    </td>
+                                    <tr>
+                                        <td>Guichê</td>
+                                        <td>3</td>
+                                        <td class="actions">
+                                            <!-- Botão de edição -->
+                                            <a href="editar_pont_de_atendimento.html">
+                                                <img src="../../../public/img/icons/editar.png" alt="Editar">
+                                            </a>
+                                            <!-- Botão de ativar/desativar -->
+                                            <div class="toggle-btn active">
+                                                <div class="circle"></div>
+                                            </div>
+                                        </td>
+            
+                                        
+                                        
+                                    </tr>
+        
+                                    
+                                    
+                                </tr>
+                                
                             </table>
             
                             <!-- Botão para adicionar novo guichê -->

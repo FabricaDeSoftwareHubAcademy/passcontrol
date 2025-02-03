@@ -5,7 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         <!-- TROCA TÍTULO QUANDO FOR UTILIZAR -->
-        <title>Tela ADM Logado</title>
+        <title>Navegação PassControl</title> 
+        
         
         <!-- IMPORT DA FONTE -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,13 +14,12 @@
         <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
         
         <!-- IMPORT DO CSS -->
-        <link rel="stylesheet" href="../../../public/css/navegacao.css">
-        <link rel="stylesheet" href="../../../public/css/adm-logado.css">
-        <link rel="stylesheet" href="../../../public/modais/Modal Confirmação dos Dados Registrados/estilo.css">
+        <link rel="stylesheet" href="/public/css/navegacao.css">
+        <link rel="stylesheet" href="../../../public/css/menu_eli.css">
+        <link rel="stylesheet" href="../../../public/css/relatorio_diario.css">
 
         <!-- IMPORT DO JS -->
-        <script src="../../../public/js/navegacao-menu-lateral-teste.js" defer></script>
-        <script src="../../../public/js/modal-adm-logado.js"></script>
+        <script src="../js/navegacao-menu-lateral.js" defer></script>
 
 </head>
 <body class="control-body-navegacao">
@@ -34,12 +34,12 @@
                 <div class="menu-usuario">
                     <a class="usu">Nome do Usuário</a>
                     <nav class="usu-detalhes"> 
-                        <img src="../../../public/img/icons/image 33.svg" alt="">
+                        <img src="../assets/icons/image 33.svg" alt="">
                         <ul class="texto-usu">
                             <li class="nome-usu">Nome do Usuário</li>
                             <li class="email-usu">funcionario123@fun.br</li>
-                            <li><a href="../../../app/admin/view/adm-logado.html">Editar Informações</a></li>
-                            <li><a href="../../../login.html">Sair</a></li>
+                            <li><a href="adm-logado.html">Editar Informações</a></li>
+                            <li><a href="login.html">Sair</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -50,20 +50,20 @@
 
     <!-- MENU LATERAL -->
     <button class="botao-menu-mobile"> <!-- Botão ainda inativo -->
-        <img class="icone-menu-lateral" src="../../../public/img/icons/DropDownIcon.svg" alt="MENU">
+        <img class="icone-menu-lateral" src="../assets/icons/DropDownIcon.svg" alt="MENU">
     </button>
 
     <div class="area-lateral-navegacao">
         <nav class="menu-lateral-navegacao">
 
             <div class="botao-navegacao">
-                <a class="botao-lateal-navegacao" href="../../../app/admin/view/atendimento.html">
+                <a class="botao-lateal-navegacao" href="atendimento.html">
                     <img class="icone-menu-lateral" src="../../../public/img/icons/atend.svg" alt="ICONE ATENDIMENTO">
                     <div class="texto-bott">Atendimento</div>
                 </a>
             </div>
             <div class="botao-navegacao">
-                <a class="botao-lateal-navegacao" href="../../../app/admin/view/monitor-modal.html">
+                <a class="botao-lateal-navegacao" href="Monitor.html">
                     <img class="icone-menu-lateral" src="../../../public/img/icons/monitor.svg" alt="ICONE MONITOR">
                     <div class="texto-bott">Monitor</div>
                 </a>
@@ -75,14 +75,14 @@
                 </a>
             </div>
             <div class="botao-navegacao">
-                <a class="botao-lateal-navegacao" href="../../../app/admin/view/menuadm_usuario.html">
+                <a class="botao-lateal-navegacao" href="menuadm_usuario.html">
                     <img class="icone-menu-lateral" src="../../../public/img/icons/gestao.svg" alt="ICONE GESTAO">
                     <div class="texto-bott">Gestão</div>
                 </a>
             </div>
         </nav>
         <div class="sair-navegacao">
-            <a class="botao-lateal-navegacao" href="../../../login.html">
+            <a class="botao-lateal-navegacao" href="login.html">
                 <img class="icone-menu-lateral" src="../../../public/img/icons/sair.svg" alt="ICONE SAIR">
                 <div class="texto-bott">Sair</div>
             </a>
@@ -90,55 +90,55 @@
     </div>
 
     <section class="Area-Util-Projeto">
-    <!-- INICIO DA ÁREA ÚTIL DA PÁGINA -->
-    <h3 class="perfil-titulo">Perfil</h3>
-    <div class="sub-area">
-        <!-- Grupo de Dados Pessoais -->
-        <div class="dados-pessoais">
-            <h3>Dados Pessoais</h3>
-            <div class="form-group">
-                <label for="nome">Nome</label>
-                <input type="text" id="nome" name="nome" placeholder="Digite o Nome do Funcionário">
+        <!-- INICIO DA ÁREA ÚTIL DA PÁGINA -->
+        <!-- INSIRA O CORPO DA SUA PÁGINA A PARTIR DESTE PONTO -->
+        <div class="scrollmenu" style="display: flex; justify-content: start; align-items: start;">
+            <a href="../../admin/view/atendimento_tempo_real.html">Guichês</a>
+            <a href="../../admin/view/atendimento.html" class="active">Atendimento</a>
+        </div>
+
+
+
+        <div class="containerDelimitador">
+            <div class="containerRelatioTitle">
+                <h2>Relatório Diário</h2>
             </div>
-            <div class="form-row">
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" placeholder="Digite o Email do Funcionário">
+
+            <div class="areaBrancaRd">
+                <div class="containerOptionsLateral">
+                    <div class="containerFiltro">
+                        <div class="containerTitleFiltro">
+                            <h3>Filtro</h3>
+                        </div>
+
+                        <div class="containerPeriodo">
+                            <div class="periodoTitle">
+                                <h3>Período</h3>
+                            </div>
+                            <div class="containerPeriodoFiltro">
+                                <div class="containerInputDate">
+                                    <input type="date" class="inputDate1">
+                                    <input type="date" class="inputDate2">
+                                </div>
+                                <div class="containerInputLocal">
+                                    <select name="local" id="inputLocal" palceholder="Profeitura de Campo Grande / MS">
+                                        <option value="CampoGrandeMS">Campo Grande / ms</option>
+                                    </select>
+                                </div>
+                                <div class="containerFiltrar">
+                                    <input type="submit" value="FIltrar" class="inputFIltrar">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
                 </div>
-                <div class="form-group">
-                    <label for="cpf">CPF</label>
-                    <input type="number" id="cpf" name="cpf" placeholder="Digite o CPF do Funcionário">
+                <div class="containerMainRd">
+
                 </div>
             </div>
         </div>
-
-        <!-- Grupo de Alterar Senha -->
-        <div class="alterar-senha">
-            <h3>Alterar Senha</h3>
-            <div class="form-group">
-                <label for="senha-atual">Senha Atual</label>
-                <input type="password" id="senha-atual" name="senha-atual" placeholder="Digite a Senha Atual">
-            </div>
-            <div class="form-row">
-                <div class="form-group">
-                    <label for="nova-senha">Nova Senha</label>
-                    <input type="password" id="nova-senha" name="nova-senha" placeholder="Digite a Nova Senha">
-                </div>
-                <div class="form-group">
-                    <label for="confirm-nova-senha">Confirmar Nova Senha</label>
-                    <input type="password" id="confirm-nova-senha" name="confirm-nova-senha" placeholder="Digite Novamente a Nova Senha">
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="form-actions">
-        <button type="button" class="botao-voltar" onclick="window.location.href='javascript:history.back()';">Voltar</button>
-        <button type="submit" class="botao-salvar open">Salvar</button>
-    </div>
-        <main-modal-adm-logado></main-modal-adm-logado>
-
         <!-- FIM DA ÁREA ÚTIL DA PÁGINA -->
-    </section>
-
+    </section>         
 </body>
 </html>
