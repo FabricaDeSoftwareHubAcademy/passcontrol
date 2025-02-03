@@ -239,5 +239,6 @@ cabeca {
     .area-quadrados {
         gap: 15px;
         justify-content: center;
+        /* display: flex; */
     }
 }
