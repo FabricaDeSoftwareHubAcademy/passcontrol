@@ -351,24 +351,29 @@
         display: flex;
         flex-direction: column;
         position: absolute;
-        width: auto;
+        width: 57px;
         left: 0%;
-        height: 20px;
+        height: 23px;
+        margin: -10px;
+        font-size: larger;
     }
     .botao2{
         display: flex;
         flex-direction: column;
-        width: auto;
+        width: 60px;
         position: absolute;
-        left: 40%;
-        height: 20px;
+        left: 45%;
+        height: 23px;
+        margin: -10px;
+        font-size: larger;
     }
     .btn-telacadastro{
         display: flex;
         justify-content: space-around;
         position: relative;
-        top: 370px;
-        left: 0px;
+        top: 425px;
+        left: -25px;
+        margin: 0px;
     }
     .checkbox-container{
         display: block;
