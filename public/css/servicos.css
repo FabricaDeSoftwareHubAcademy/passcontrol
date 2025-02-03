@@ -1,119 +1,154 @@
 /* CONFIGURAÇÃO DA BASE DA ÁREA ÚTIL */
-/* SUBSTITUIR O NOME 'NOME_DA_AREA' PELO NOME UTILIZADO NO CORPO DE DESENVOLVIMENTO! */ 
-
-*{
+* {
     box-sizing: border-box;
-}
-.servico {
-    min-height: calc(90vh - 90px);
-    justify-content: space-around;
+  }
+  
+  #servico {
     z-index: 1;
-    position: fixed;
     top: 157px;
     right: 2vh;
     left: 27vh;
     bottom: 2vh;
     height: auto;
     width: auto;
-    background-color: rgba(0, 0, 0, 0.12);
-    overflow: auto;
-    scroll-behavior: smooth;
-}
-.cabecalho{
-    margin: 30px;
-}
-#telabranca{
+    overflow: hidden;
+    scroll-behavior: auto;
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    align-items: stretch;
+  }
+  
+  #tela-branca {
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
     width: 96%;
-    height: 57vh;
-    background-color: #ffffff3a;
-    margin: 30px;
-}
-
-.buscar_registro{
-    width: 165px;
-    height: 28px;
-    float: right;
-    margin: -31px -4px 0 0;
-    border-radius: 5px;
-}
-#buscarserv{
+    padding: 20px;
+    margin: 25px auto;
+  }
+  
+  .cabecalho {
     width: 100%;
-    height: 95%;
-    border: 2px solid #333;
-    border-radius: 5px 5px 0px 0px;
-    outline: none; 
-}
-
-#servico_cad{
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  #servicos-cadastrados {
     text-align: left;
-    font-size: 20px;
     color: #333;
-    padding: 10px;
-    font-size: 15px;
     font-family: Arial, sans-serif;
-    font-size: 20px;
     font-weight: bold;
-    margin-top: 10px;
-    margin-left: -11px;
-}
-.linha_divisoria{
+    margin-top: 50px;
+    margin-left: 23px;
+  }
+  
+  .linha-divisoria {
     background-color: #37474F;
     height: 1px;
-    width: 100%;
+    width: 96%;
     padding: 4px;
-    
-    
-}
-.tabelaServico{
-    width:100%;
-    border-collapse: collapse;
-    background-color: #ffffff7a;
-    border: 2px solid black;
-    margin-top: 20px;   
-    
-}
-
-.partes_tab{
-    display: flexbox;
-    justify-content: space-between;
-    align-items: baseline;
-    
-}
-
-#editar{
-    width: 26px;
-}
-.partes_tabe, td {
-    width: 30px;
-    border: 1px solid #37474F;
-    padding: 0.5%;
+    margin: 0 auto;
+  }
+  
+  .campo-busca {
+    width: 21%;
+    height: 39px;
+    outline: none;
+    border: 1px rgb(6, 11, 95);
+    margin-left: 81.4%;
+    display: block;
+  
+  }
+  
+  #buscar-servico {
+    width: 60%;
+    font-style: italic;
+    font-size: 14px;
+    border: 2px solid #333333c2;
+    border-radius: 10px 10px 0 0;
+    outline: none;
+    background-image: url(../../public/img/icons/lupa.png);
+    background-position: right 10px center;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+  }
+  .topo-tabela{
+    width: 74%;
     text-align: left;
-    font-family: Arial, sans-serif;
-    font-size: 15px;
-    font-weight: 700;
-    text-decoration-color: #37474F;
-}
+    position: fixed;
+    border: 2px solid #00cc00;
+  }
+  
+  .cabecalho-tabela1{
+    color: #ffffff;
+    width: 30%;
+  }
+  .cabecalho-tabela2{
+    color: #ffffff;
+    width: 30%;
 
-.partes_tabe {
-    background-color: #37474F;
-    color: rgb(255, 255, 255);
-    justify-content: space-between;
-    font-family: Arial, sans-serif;
-    font-size: 15px;
-    
-}
+  }
+  .cabecalho-tabela3{
+    color: #ffffff;
+    width: 30%;
 
-.toggle-btn {
+  }
+  .cabecalho-tabela4{
+    color: #ffffff;
+    width: 25%;
+
+  }
+  .separacao{
+    margin-top: 48px;
+  }
+  
+  .tabela-servicos {
+    width: 100%;
+    border-collapse: collapse;
+    border: 2px solid #ff0000;
+  }
+
+  
+  .tabela-servicos th,
+  .tabela-servicos td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #00d4dbfd;
+
+  }
+  
+  .tabela-servicos th {
+    background-color: #4a5a67;
+    font-weight: bold;
+    border: 2px solid salmon;
+    position: sticky;
+  }
+  
+  .coluna-acoes {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    align-content: stretch;
+    justify-content: center;
+  }
+  
+  #icone-editar {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    margin-right: 50px;
+  }
+  
+  .toggle-btn {
     width: 60px;
     height: 21px;
     background-color: #ffffff;
     border-radius: 10px;
     position: relative;
-    float: right;
-    border:1px solid #37474F;
-}
-
-.toggle-btn .circulo {
+    border: 1px solid #37474F;
+  }
+  
+  .toggle-btn .circulo {
     width: 20px;
     height: 15px;
     background-color: #ff0000;
@@ -122,21 +157,27 @@
     top: 2px;
     left: 2px;
     transition: left 0.3s;
-}
-
-.toggle-btn.active .circulo {
+  }
+  
+  .toggle-btn.active .circulo {
     background-color: #00cc00;
     left: 36px;
-}
-.button-container1{
+  }
+  
+  .button-container1 {
     width: 96%;
     height: 100px;
     display: flex;
     justify-content: flex-end;
-
-}
-.botaoCadastrar {
-    width: 110px;
+  }
+  
+  .tabela-wrapper {
+    max-height: 339px;
+    overflow-y: auto;
+    border: 1px solid #dddddd;
+  }
+  
+  .botaoCadastrar {
     height: 40px;
     background-color: #37474F;
     color: white;
@@ -145,130 +186,97 @@
     font-size: 16px;
     border-radius: 5px;
     cursor: pointer;
-    margin-top: 1%;
-}
-
-button:hover {
+  }
+  
+  button:hover {
     background-color: #455A64;
-}
-.cadastrar-btn {
-   
-    margin-top: 20px;
+  }
+  
+  .cadastrar-btn {
+    margin-top: 2px;
     display: block;
-}
-/* MEDIA */
-@media screen and (max-width: 1200px) {
-    .servico {
+  }
+  
+  @media screen and (max-width: 1024px) {
+    #servico {
       left: 8vh;
     }
-    #telabranca {
-        width: 100%;
-        height: 45vh;
-        margin: 1rem 0;
-      }
-}
-@media screen and (max-width: 1280px) {
-    #telabranca {
-        height: 51vh;
-
-}
-}
-
-@media screen and (max-width: 1024px) {
-    #telabranca {
-        height: 55vh;
-
-}
-}
-@media screen and (max-width: 912){
-    #telabranca {
-        width: 800px;
-        height: 75vh;
-      }
-}
-
-
-@media screen and (max-width: 686px) {
-    #buscarserv {
-      width: 105;
+  
+    #tela-branca {
+      width: 95%;
+      height: auto;
+    }
+  
+    .campo-busca {
+      margin-left: 70%;
+    }
+  
+    .linha-divisoria {
+      width: 95%;
+      margin-left: 2%;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    #tela-branca {
+      width: 90%;
+      padding: 10px;
+    }
+    .linha-divisoria{
+      width: 90%;
+    }
+    .campo-busca {
+      max-width: 250px;
+    }
+  
+    #buscar-servico {
       font-size: 12px;
     }
-    #servico_cad {
-      font-size: 18px;
-    }
-    .tabelaServico {
-      padding: 0.5%;
-    }
-    #telabranca {
-      width: 800px;
-      height: 55vh;
-    }
-    .toggle-btn{
-        width: 48px;
-        height: 18px;
-        bottom: -15px;
-        right: 2px;
-        top:12px
-    }
-    .toggle-btn .circulo {
-        width: 14px;
-        height: 14px;
-        top: 1px;
-    }
-    .toggle-btn.active .circulo {
-        left: 30px;
-    }
-    .button-container1{
-        width: 800px;
-        
-    }
-    .botaoCadastrar{
-        margin-right: 4%;
-    }
-}
-@media screen and (max-width: 540px){
-    #telabranca {
-        width: 800px;
-        height: 50vh;
-      }
-}
-@media screen and (max-width: 430px) {
-    #telabranca {
-      width: 500px;
-      height: 55vh;
-    }
-    #buscarserv {
-      width: 69.5%;
-      margin-left: 50px;
-    }
-    .button-container1{
-        width: 95%;
-        margin-top: 2%;
-    }
-    .partes_tabe, td {
-        font-size: 13px;
-    }
-    .button-container1{
-        width: 500px;
-        
-    }
-    .botaoCadastrar{
-        margin-right: 4%;
-    }
-    
-}
+    #icone-editar {
+      width: 25px;
+      height: 25px;
+      cursor: pointer;
+      margin-right: 20px;
+  }
+  }
   
-@media screen and (max-width: 320px){
-    #telabranca {
-        width: 650px;
-        
-        
-      }
-      .button-container1{
-          width: 650px;
-
-          
-      }
-      
-}
-    
+  @media screen and (max-width: 540px) {
+    #tela-branca {
+      width: 85%;
+      padding: 8px;
+    }
+  
+    .campo-busca {
+      width: 100px;
+      margin-left: auto;
+    }
+  
+    .toggle-btn {
+      width: 50px;
+      height: 18px;
+    }
+  
+    .toggle-btn .circulo {
+      width: 14px;
+      height: 14px;
+    }
+  }
+  
+  @media screen and (max-width: 320px) {
+    #tela-branca {
+      width: 100%;
+      padding: 5px;
+    }
+  
+    .campo-busca {
+      width: 80px;
+      font-size: 10px;
+      margin-left: auto;
+      margin-right: 10px;
+    }
+  
+    .tabela-servicos th,
+    .tabela-servicos td {
+      font-size: 12px;
+    }
+  }
