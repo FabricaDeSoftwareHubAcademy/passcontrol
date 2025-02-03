@@ -1,10 +1,6 @@
 @import url(base_area_util.css);
 
-.area-monitor-modal{
-    z-index: 999999;
-}
 .area-modal {
-    z-index: 99999;
     display: flex;
     position: fixed;
     top: 0;
@@ -15,6 +11,7 @@
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    z-index: 10;
 }
 .modal-fundo {
     display: flex;
@@ -27,6 +24,7 @@
     background-repeat: no-repeat;
     background-position: bottom right;
     text-align: center;
+    z-index: 4;
 }
 .fundo-lateral{
     display: flex;

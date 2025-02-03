@@ -3,6 +3,7 @@
 :root{
     --verde-control: #3AA867;
     --cinza-control: #33404D;
+    --vermelho: #dd0f00;
     --cor-fundo: #f9f9f9;
     --font-main: Inter, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
@@ -29,7 +30,8 @@
     align-items: start;
     justify-content: top;
     overflow: hidden;
-    z-index: 10;
+    z-index: 0;
+    /* background-color: red; */
 }
 
 /* TOPO */
@@ -42,7 +44,7 @@
     display: flex;
     flex-direction: column;
     justify-content: end;
-    z-index: 10;
+    z-index: 2;
 }
 
 .nav-cabeca{
@@ -141,6 +143,10 @@
     padding-top: 10px;
 }
 
+.texto-usu li .sair{
+    color: var(--vermelho);
+}
+
 .menu-usuario:hover .usu-detalhes{
     display: flex;
     flex-direction: column;
@@ -157,7 +163,7 @@
     position: absolute;
     top: 10vh;
     left: 0;
-    z-index: 2;
+    z-index: 3;
 
     width: 6vh;
     height: 6vh;
@@ -191,7 +197,7 @@
     flex-direction: column;
     align-content: space-evenly;
     left: 0;
-    z-index: 10;
+    z-index: 2;
 }
 
 .menu-lateral-navegacao{
@@ -254,6 +260,7 @@
     filter: invert(51%) sepia(58%) saturate(446%) hue-rotate(92deg) brightness(96%) contrast(89%);
 }
 
+
 .sair-navegacao{
     width: 100%;
     display: flex;
@@ -263,8 +270,11 @@
 
 .sair-navegacao .botao-lateal-navegacao:hover{
     background-color: #181f26;
-    color: var(--verde-control);
-    /* text-decoration: underline var(--verde-control); */
+    color: var(--vermelho);
+}
+
+.sair-navegacao .botao-lateal-navegacao:hover .icone-menu-lateral{
+    filter: brightness(0) saturate(100%) invert(12%) sepia(81%) saturate(5896%) hue-rotate(2deg) brightness(95%) contrast(102%);
 }
 
 .sair-navegacao .botao-lateal-navegacao{
@@ -291,14 +301,10 @@
     background-color: var(--cor-fundo);
     color: var(--verde-control);
     /* text-decoration: underline var(--verde-control);     */
-}
 
-.botao-lateal-navegacao.ativo-estacionario:hover {
-    background-color: #181f26;
-  }
-
-.botao-lateal-navegacao .icone-menu-lateral.ativo-estacionario{
-    filter: invert(51%) sepia(58%) saturate(446%) hue-rotate(92deg) brightness(96%) contrast(89%);
+    .icone-menu-lateral{
+        filter: invert(51%) sepia(58%) saturate(446%) hue-rotate(92deg) brightness(96%) contrast(89%);        
+    }
 }
 
 /* MEDIA */
