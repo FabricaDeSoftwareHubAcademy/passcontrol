@@ -109,35 +109,106 @@
 
 
 .fundo-guiche-area-chamada{
-    font-weight: 600;
     width: 96%;
+    font-weight: 600;
     height: 70%;
-    background-color: rgb(255, 255, 255,0.5);
-    /* gap: 15px; */
     border-radius: 5px;
-    overflow-x: scroll;
+    background-color: rgb(255, 255, 255,0.5);
+    gap: 15px;
+    /* overflow-x: scroll; */
+    display: flex; 
+    justify-content: left; 
 }
 
 .tabela_atendimento-guiche-area-chamada {
-    border: 1px solid black;
-    border-collapse: collapse;
-    background-color: rgb(255, 255, 255,0.5);
-    width: 95%;
-    margin: 30px;
-    margin-left: 2.5%;
+    /* border: 1px solid black;  */
+    border-collapse: collapse; 
+    background-color: rgba(255, 255, 255, 0.5); 
+    width: 95%; 
+    margin: 2vw auto; 
+    max-height: 230px; 
+    position: relative; 
+    overflow: hidden;  
+    transition: overflow 0.3s ease;  
 }
-
-th, td {
+.tabela_atendimento-guiche-area-chamada:hover { 
+    overflow-y: auto;  
+} 
+th { 
+    position: sticky; 
+    top: 0; 
+    background-color: #f4f4f4; 
+    z-index: 2; 
+    padding: 10px; 
+    text-align: left; 
     border: 1px solid black; 
-    padding: 8px;
-    text-align: left;
-    color: var(--cinza-control);
-}
+    min-width: 50px; 
+} 
+td { 
+    border: 1px solid black; 
+    padding: 9px; 
+    text-align: left; 
+    min-width: 50px; 
+    color: var(--cinza-control); 
+} 
 
 .tabela_atendimento-guiche-area-chamada th {
     background-color: var(--cinza-control);
     color: var(--cor-fundo);
 }
+thead, tbody tr { 
+    display: table; 
+    width: 100%; 
+    table-layout: fixed; 
+} 
+tbody { 
+    display: block; 
+    max-height: 180px; 
+    overflow-y: scroll;  
+    position: relative; 
+} 
+.tabela_atendimento-guiche-area-chamada tbody::-webkit-scrollbar { 
+    width: 0.1px; 
+    opacity: 0;  
+    transition: opacity 0.3s ease;  
+} 
+.tabela_atendimento-guiche-area-chamada:hover tbody::-webkit-scrollbar { 
+    opacity: 1;  
+    width: 9px; 
+} 
+.tabela_atendimento-guiche-area-chamada tbody::-webkit-scrollbar-thumb { 
+    background-color: rgba(0, 0, 0, 0.5); 
+    border-radius: 4px;
+
+} 
+.tabela_atendimento-guiche-area-chamada tbody::-webkit-scrollbar-track { 
+    background: transparent; 
+} 
+
+.tabela_atendimento-guiche-area-chamada tbody::-webkit-scrollbar-thumb:hover { 
+    background-color: rgba(0, 0, 0, 0.7); 
+    width: 9px; 
+} 
+
+.tabela_atendimento-guiche-area-chamada:hover tbody,thead{ 
+    margin-right: -9px;
+    /* display: flex; */
+} 
+
+thead, tbody tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed; 
+}
+td, th {
+    white-space: normal; /* Permite quebra de linha */
+    word-wrap: break-word; /* Garante que palavras longas quebrem */
+}
+
+
+
+
+
 
 .editar{
     display: flex;
@@ -235,7 +306,7 @@ input:focus + .slider {
 .div-botao-info{
     width: 90%;
     height: 8%;
-    align-items: first baseline;
+    align-items: flex-end;
     display: flex;
     flex-direction: column;
 }

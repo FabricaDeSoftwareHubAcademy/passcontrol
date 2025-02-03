@@ -327,80 +327,97 @@
 
 
 
-.tabela_atendimento-guiche-area-chamada {
-    border: 1px solid black;
-    border-collapse: collapse;
-    background-color: rgba(255, 255, 255, 0.5);
-    width: 95%;
-    margin: 2vw auto;
-    max-height: 230px;
-    position: relative;
-    overflow-y: auto;
+/* TABELA  */
+.fundo-guiche-area-chamada{ 
+    width: 92%; 
+    font-weight: 600; 
+    height: 100%; 
+    border-radius: 5px; 
+    background-color: rgb(255, 255, 255,0.5); 
+    gap: 15px; 
+    margin-top: 2rem; 
+    /* overflow-x: scroll; */ 
+    display: flex; 
+    justify-content: left; 
+} 
+.tabela_atendimento-guiche-area-chamada { 
+    /* border: 1px solid black;  */
+    border-collapse: collapse; 
+    background-color: rgba(255, 255, 255, 0.5); 
+    width: 95%; 
+    margin: 2vw auto; 
+    max-height: 230px; 
+    position: relative; 
+    overflow: hidden;  
+    transition: overflow 0.3s ease;  
+} 
+.tabela_atendimento-guiche-area-chamada:hover { 
+    overflow-y: auto;  
+} 
+.tabela_atendimento-guiche-area-chamada th { 
+    background-color: var(--cinza-control); 
+    color: var(--cor-fundo); 
+} 
+th { 
+    position: sticky; 
+    top: 0; 
+    background-color: #f4f4f4; 
+    z-index: 2; 
+    padding: 10px; 
+    text-align: left; 
+    border: 1px solid black; 
+    min-width: 50px; 
+} 
+td { 
+    border: 1px solid black; 
+    padding: 9px; 
+    text-align: left; 
+    min-width: 50px; 
+    color: var(--cinza-control); 
+} 
+td, th {
+    white-space: normal; /* Permite quebra de linha */
+    word-wrap: break-word; /* Garante que palavras longas quebrem */
+}
+thead, tbody tr { 
+    display: table; 
+    width: 100%; 
+    table-layout: fixed; 
+} 
+tbody { 
+    display: block; 
+    max-height: 180px; 
+    overflow-y: scroll;  
+    position: relative; 
 
-}
-
-.tabela_atendimento-guiche-area-chamada th {
-    background-color: var(--cinza-control);
-    color: var(--cor-fundo);
-}
-
-
-
-th {
-    position: sticky;
-    top: 0;
-    background-color: #f4f4f4;
-    z-index: 2;
-    padding: 10px;   
-    text-align: left;
-    border: 1px solid black;
-    min-width: 50px;
-}
-
-td {
-    border: 1px solid black;
-    padding: 9px;
-    text-align: left;
-    min-width: 50px;
-    color: var(--cinza-control);
-}
-thead tr{
-    /* display: flex;
-    margin-right: 300px; */
-}
-tbody {
-    display: block;
-    max-height: 170px; 
-    overflow-y: scroll;
-    position: relative;
-    
-}
-.tabela_atendimento-guiche-area-chamada tbody::-webkit-scrollbar {
-    width: 5px; 
-}
-.tabela_atendimento-guiche-area-chamada tbody::-webkit-scrollbar:hover {
-    width: 9px;
-}
-
-.tabela_atendimento-guiche-area-chamada tbody::-webkit-scrollbar-thumb {
+} 
+.tabela_atendimento-guiche-area-chamada tbody::-webkit-scrollbar { 
+    width: 0.1px; 
+    opacity: 0;  
+    transition: opacity 0.3s ease;  
+} 
+.tabela_atendimento-guiche-area-chamada:hover tbody::-webkit-scrollbar { 
+    opacity: 1;  
+    width: 9px; 
+} 
+.tabela_atendimento-guiche-area-chamada tbody::-webkit-scrollbar-thumb { 
     background-color: rgba(0, 0, 0, 0.5); 
-    border-radius: 4px; 
-}
+    border-radius: 4px;
 
-.tabela_atendimento-guiche-area-chamada tbody::-webkit-scrollbar-track {
+} 
+.tabela_atendimento-guiche-area-chamada tbody::-webkit-scrollbar-track { 
     background: transparent; 
-}
+} 
 
-/* Remove o espaço que a barra de rolagem pode criar */
-.tabela_atendimento-guiche-area-chamada {
-    overflow: hidden;
-}
-
-.tabela_atendimento-guiche-area-chamada tbody::-webkit-scrollbar-thumb:hover {
+.tabela_atendimento-guiche-area-chamada tbody::-webkit-scrollbar-thumb:hover { 
     background-color: rgba(0, 0, 0, 0.7); 
-    width: 9px;
-}
+    width: 9px; 
+} 
 
+.tabela_atendimento-guiche-area-chamada:hover tbody,thead{ 
+    margin-right: -9px;
+    /* display: flex; */
+} 
 
 thead, tbody tr {
     display: table;
@@ -408,6 +425,8 @@ thead, tbody tr {
     table-layout: fixed; 
     
 }
+
+
 
 
 .editar{
@@ -572,7 +591,7 @@ input:focus + .slider {
 
 @media screen and (min-width: 739px) and (max-width: 1024px) {
     *{
-        font-size: 22px;
+        font-size: 20px;
         text-align: center;
         /* background-color: aqua; */
     }   
