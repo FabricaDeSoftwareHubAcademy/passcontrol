@@ -199,7 +199,10 @@ thead, tbody tr {
     display: table;
     width: 100%;
     table-layout: fixed; 
-    
+}
+td, th {
+    white-space: normal; /* Permite quebra de linha */
+    word-wrap: break-word; /* Garante que palavras longas quebrem */
 }
 
 
@@ -303,7 +306,7 @@ input:focus + .slider {
 .div-botao-info{
     width: 90%;
     height: 8%;
-    align-items: first baseline;
+    align-items: flex-end;
     display: flex;
     flex-direction: column;
 }

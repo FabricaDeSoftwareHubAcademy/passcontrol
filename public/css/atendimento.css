@@ -375,6 +375,10 @@ td {
     min-width: 50px; 
     color: var(--cinza-control); 
 } 
+td, th {
+    white-space: normal; /* Permite quebra de linha */
+    word-wrap: break-word; /* Garante que palavras longas quebrem */
+}
 thead, tbody tr { 
     display: table; 
     width: 100%; 
@@ -587,7 +591,7 @@ input:focus + .slider {
 
 @media screen and (min-width: 739px) and (max-width: 1024px) {
     *{
-        font-size: 22px;
+        font-size: 20px;
         text-align: center;
         /* background-color: aqua; */
     }   
