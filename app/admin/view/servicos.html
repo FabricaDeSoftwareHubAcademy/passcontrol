@@ -87,101 +87,137 @@
     </div>
 
     <section class="Area-Util-Projeto">
-            <!-- INICIO DA ÁREA ÚTIL DA PÁGINA -->
-            <!-- INSIRA O CORPO DA SUA PÁGINA A PARTIR DESTE PONTO -->
-            <div class="servico">
-                <div id="telabranca">
-                    <div class="cabecalho">
-                    <h1 id="servico_cad">Serviços Cadastrados</h1>
-                    <div class="linha_divisoria">
-                    <div class="buscar_registro">
-                        <input id="buscarserv" type="text" placeholder="Buscar Registro">
-                    </div>
-                    </div>
-                
-                    <table class="tabelaServico">
-                        <thead>
-                            <tr>
-                                <th class="partes_tabe">Código do Serviço</th>
-                                <th class="partes_tabe">Serviços</th>
-                                <th class="partes_tabe">Ações</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>FC </td>
-                                <td>Fiscalização</td>
-                                <td class="partes_tab">
-                                    <a href="editar"><img id="editar" src="../../../public/img/editar.png" alt="Editar"></a>
-                                    <div class="toggle-btn active">
-                                        <div class="circulo"></div>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>IP</td>
-                                <td>Iluminação Pública</td>
-                                <td class="partes_tab">
-                                    <a href="editar"><img id="editar" src="../../../public/img/editar.png" alt="Editar"></a>
-                                    <div class="toggle-btn active">
-                                        <div class="circulo"></div>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>IPTU</td>
-                                <td>IPTU</td>
-                                <td class="partes_tab">
-                                    <a href="editar"><img id="editar" src="../../../public/img/editar.png" alt="Editar"></a>
-                                    <div class="toggle-btn active">
-                                        <div class="circulo"></div>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>LIC</td>
-                                <td>Licenças</td>
-                                <td class="partes_tab">
-                                    <a href="editar"><img id="editar" src="../../../public/img/editar.png" alt="Editar"></a>
-                                    <div class="toggle-btn active">
-                                        <div class="circulo"></div>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>OUVID</td>
-                                <td>Ouvidoria</td>
-                                <td class="partes_tab">
-                                    <a href="editar"><img id="editar" src="../../../public/img/editar.png" alt="Editar"></a>
-                                    <div class="toggle-btn active">
-                                        <div class="circulo"></div>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>CM</td>
-                                <td>Conselho Municipal</td>
-                                <td class="partes_tab">
-                                    <a href="editar"><img id="editar" src="../../../public/img/editar.png" alt="Editar"></a>
-                                    <div class="toggle-btn active">
-                                        <div class="circulo"></div>
-                                    </div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                 </div>      
-            <div class="button-container1"><button class="botaoCadastrar">Cadastrar</button></div>
+        <!-- INICIO DA ÁREA ÚTIL DA PÁGINA -->
+        <!-- INSIRA O CORPO DA SUA PÁGINA A PARTIR DESTE PONTO -->
+        <div id="servico">        
+              <div class="cabecalho">
+                <h1 id="servicos-cadastrados">Serviços Cadastrados</h1>
+                <div class="campo-busca">
+                    <input id="buscar-servico" type="text" placeholder="Buscar Registro">
+                  </div>
+                <div class="linha-divisoria"></div>
+            <div id="tela-branca">    
+            
+              <div class="tabela-wrapper">
+                <table class="tabela-servicos">
+                  <thead>
+                    <tr class="topo-tabela">
+                      <th class="cabecalho-tabela1">Código do Serviço</th>
+                      <th class="cabecalho-tabela2">Serviços</th>
+                      <th class="cabecalho-tabela3">Editar</th>
+                      <th class="cabecalho-tabela4">Ativar/Desativar</th>
+                    </tr>
+                  </thead>
+                  <tbody class="separacao">
+                    <tr class="linha-tabela">
+                      <td>FC</td>
+                      <td>Fiscalização</td>
+                      <td class="coluna-acoes">
+                        <a href="editar"><img id="icone-editar" src="../../../public/img/icons/editar.png" alt="Editar"></a></td>
+                        <td>
+                            <div class="toggle-btn ativo"><div class="circulo"></div></div>
+                        </td>
+                    </tr>
+                    <tr class="linha-tabela">
+                      <td>FC</td>
+                      <td>Fiscalização</td>
+                      <td class="coluna-acoes">
+                        <a href="editar"><img id="icone-editar" src="../../../public/img/icons/editar.png" alt="Editar"></a></td>
+                        <td>
+                            <div class="toggle-btn ativo"><div class="circulo"></div></div>
+                        </td>
+                    </tr>
+                    <tr class="linha-tabela">
+                      <td>FC</td>
+                      <td>Fiscalização</td>
+                      <td class="coluna-acoes">
+                        <a href="editar"><img id="icone-editar" src="../../../public/img/icons/editar.png" alt="Editar"></a></td>
+                        <td>
+                            <div class="toggle-btn ativo"><div class="circulo"></div></div>
+                        </td>
+                    </tr>
+                    <tr class="linha-tabela">
+                      <td>FC</td>
+                      <td>Fiscalização</td>
+                      <td class="coluna-acoes">
+                        <a href="editar"><img id="icone-editar" src="../../../public/img/icons/editar.png" alt="Editar"></a>
+                      </td>
+                      <td>
+                        <div class="toggle-btn ativo"><div class="circulo"></div></div>
+                    </td>
+                    </tr>
+                    <tr class="linha-tabela">
+                      <td>FC</td>
+                      <td>Fiscalização</td>
+                      <td class="coluna-acoes">
+                        <a href="editar"><img id="icone-editar" src="../../../public/img/icons/editar.png" alt="Editar"></a></td>
+                        <td>
+                            <div class="toggle-btn ativo"><div class="circulo"></div></div>
+                        </td>
+                    </tr>
+                    <tr class="linha-tabela">
+                      <td>FC</td>
+                      <td>Fiscalização</td>
+                      <td class="coluna-acoes">
+                        <a href="editar"><img id="icone-editar" src="../../../public/img/icons/editar.png" alt="Editar"></a></td>
+                        <td>
+                            <div class="toggle-btn ativo"><div class="circulo"></div></div>
+                        </td>
+                    </tr>
+                    <tr class="linha-tabela">
+                      <td>IP</td>
+                      <td>Iluminação Pública</td>
+                      <td class="coluna-acoes">
+                        <a href="editar"><img id="icone-editar" src="../../../public/img/icons/editar.png" alt="Editar"></a></td>
+                        <td>
+                            <div class="toggle-btn ativo"><div class="circulo"></div></div>
+                        </td>
+                    </tr>
+                    <tr class="linha-tabela">
+                      <td>IPTU</td>
+                      <td>IPTU</td>
+                      <td class="coluna-acoes">
+                        <a href="editar"><img id="icone-editar" src="../../../public/img/icons/editar.png" alt="Editar"></a></td>
+                        <td>
+                            <div class="toggle-btn ativo"><div class="circulo"></div></div>
+                        </td>
+                    </tr>
+                    <tr class="linha-tabela">
+                      <td>LIC</td>
+                      <td>Licenças</td>
+                      <td class="coluna-acoes">
+                        <a href="editar"><img id="icone-editar" src="../../../public/img/icons/editar.png" alt="Editar"></a></td>
+                        <td>
+                            <div class="toggle-btn ativo"><div class="circulo"></div></div>
+                        </td>
+                    </tr>
+                    <tr class="linha-tabela">
+                      <td>OUVID</td>
+                      <td>Ouvidoria</td>
+                      <td class="coluna-acoes">
+                        <a href="editar"><img id="icone-editar" src="../../../public/img/icons/editar.png" alt="Editar"></a></td>
+                        <td>
+                            <div class="toggle-btn ativo"><div class="circulo"></div></div>
+                        </td>
+                    </tr>
+                    <tr class="linha-tabela">
+                      <td>CM</td>
+                      <td>Conselho Municipal</td>
+                      <td class="coluna-acoes">
+                        <a href="editar"><img id="icone-editar" src="../../../public/img/icons/editar.png" alt="Editar"></a></td>
+                        <td>
+                            <div class="toggle-btn ativo"><div class="circulo"></div></div>
+                        </td>
+                    </tr>       
+                  </tbody>
+                </table>
+              </div>
             </div>
-        </section> 
-        <script>
-            const toggleButtons = document.querySelectorAll('.toggle-btn');
-                toggleButtons.forEach(button => {
-                button.addEventListener('click', () => {
-                    button.classList.toggle('active');
-                });
-            });
-        </script>
+            <div class="button-container1"><button class="botaoCadastrar">Cadastrar</button></div>
+          </div>
+        </div>
+        
+    </section> 
+    <script src="../../../public/js/ativar.js"></script>
 </body>
 </html>

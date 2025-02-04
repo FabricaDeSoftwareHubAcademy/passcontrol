@@ -38,8 +38,8 @@
                         <ul class="texto-usu">
                             <li class="nome-usu">Nome do Usuário</li>
                             <li class="email-usu">funcionario123@fun.br</li>
-                            <li><a href="adm-logado.html">Editar Informações</a></li>
-                            <li><a href="login.html">Sair</a></li>
+                            <li><a href="../../../app/admin/view/adm-logado.html">Editar Informações</a></li>
+                            <li><a href="../../../login.html">Sair</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -57,13 +57,13 @@
         <nav class="menu-lateral-navegacao">
 
             <div class="botao-navegacao">
-                <a class="botao-lateal-navegacao" href="atendimento.html">
+                <a class="botao-lateal-navegacao" href="../../../app/admin/view/atendimento.html">
                     <img class="icone-menu-lateral" src="../../../public/img/icons/atend.svg" alt="ICONE ATENDIMENTO">
                     <div class="texto-bott">Atendimento</div>
                 </a>
             </div>
             <div class="botao-navegacao">
-                <a class="botao-lateal-navegacao" href="Monitor.html">
+                <a class="botao-lateal-navegacao" href="../../../app/admin/view/monitor-modal.html">
                     <img class="icone-menu-lateral" src="../../../public/img/icons/monitor.svg" alt="ICONE MONITOR">
                     <div class="texto-bott">Monitor</div>
                 </a>
@@ -75,14 +75,14 @@
                 </a>
             </div>
             <div class="botao-navegacao">
-                <a class="botao-lateal-navegacao" href="menuadm_usuario.html">
+                <a class="botao-lateal-navegacao" href="../../../app/admin/view/menuadm_usuario.html">
                     <img class="icone-menu-lateral" src="../../../public/img/icons/gestao.svg" alt="ICONE GESTAO">
                     <div class="texto-bott">Gestão</div>
                 </a>
             </div>
         </nav>
         <div class="sair-navegacao">
-            <a class="botao-lateal-navegacao" href="login.html">
+            <a class="botao-lateal-navegacao" href="../../../login.html">
                 <img class="icone-menu-lateral" src="../../../public/img/icons/sair.svg" alt="ICONE SAIR">
                 <div class="texto-bott">Sair</div>
             </a>
@@ -90,10 +90,12 @@
     </div>
 
     <section class="Area-Util-Projeto">
-        <!-- INICIO DA ÁREA ÚTIL DA PÁGINA -->
-        <!-- INSIRA O CORPO DA SUA PÁGINA A PARTIR DESTE PONTO -->
-        <h3 class="perfil-titulo">Perfil</h3>
-        <div class="sub-area">
+    <!-- INICIO DA ÁREA ÚTIL DA PÁGINA -->
+    <h3 class="perfil-titulo">Perfil</h3>
+    <div class="sub-area">
+        <!-- Grupo de Dados Pessoais -->
+        <div class="dados-pessoais">
+            <h3>Dados Pessoais</h3>
             <div class="form-group">
                 <label for="nome">Nome</label>
                 <input type="text" id="nome" name="nome" placeholder="Digite o Nome do Funcionário">
@@ -108,7 +110,11 @@
                     <input type="number" id="cpf" name="cpf" placeholder="Digite o CPF do Funcionário">
                 </div>
             </div>
-            <h3 class="alt-senha-titulo"> Alterar Senha</h3>
+        </div>
+
+        <!-- Grupo de Alterar Senha -->
+        <div class="alterar-senha">
+            <h3>Alterar Senha</h3>
             <div class="form-group">
                 <label for="senha-atual">Senha Atual</label>
                 <input type="password" id="senha-atual" name="senha-atual" placeholder="Digite a Senha Atual">
@@ -124,10 +130,11 @@
                 </div>
             </div>
         </div>
-        <div class="form-actions">
-            <button type="button" class="botao-voltar" onclick="window.location.href='javascript:history.back()';">Voltar</button>
-            <button type="submit" class="botao-salvar open">Salvar</button>
-        </div>
+    </div>
+    <div class="form-actions">
+        <button type="button" class="botao-voltar" onclick="window.location.href='javascript:history.back()';">Voltar</button>
+        <button type="submit" class="botao-salvar open">Salvar</button>
+    </div>
         <main-modal-adm-logado></main-modal-adm-logado>
 
         <!-- FIM DA ÁREA ÚTIL DA PÁGINA -->

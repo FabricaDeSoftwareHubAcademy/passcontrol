@@ -20,6 +20,7 @@
 
 .container-atendimento-tempo-real {
     max-width: 100%;
+    max-height: 60vh;
     overflow: auto;
     -webkit-overflow-scrolling: touch;
     display: flex;
@@ -59,6 +60,8 @@ th {
     font-size: 15px;
     font-weight: bold;
     color: var(--color-neutro-2);
+    position: sticky;
+    top: -1rem;
 }
 
 .disponivel-atendimento-tempo-real {
