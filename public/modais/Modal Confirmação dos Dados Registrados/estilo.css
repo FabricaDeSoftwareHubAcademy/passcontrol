@@ -160,7 +160,7 @@ button.save:hover {
     }
 
     .button-group {
-        flex-direction: column !important;
+        flex-direction: row !important;
         align-items: center !important;
         gap: 10px !important;
     }
@@ -175,8 +175,18 @@ button.save:hover {
         margin-right: 0 !important; /* Remove o deslocamento para a esquerda */
     }
 
-    button {
-        width: 100% !important;
+    button.cancel{
+        font-size: 12px !important; /* Diminui o tamanho da fonte */
+        padding: 8px 12px !important; /* Reduz o padding */
+        width: auto !important; /* Ajusta a largura automaticamente */
+        max-width: 200px !important; /* Limita o tamanho máximo da largura */
+    }
+
+    button.save{
+        font-size: 12px !important; /* Diminui o tamanho da fonte */
+        padding: 8px 12px !important; /* Reduz o padding */
+        width: auto !important; /* Ajusta a largura automaticamente */
+        max-width: 200px !important; /* Limita o tamanho máximo da largura */
     }
 
     /* Ajuste da linha horizontal */
@@ -260,6 +270,9 @@ button.save:hover {
         width: 90%; /* Aumenta a largura da linha no celular */
         margin: 0 auto;
     }
+    .modal{
+        margin-right: 30px;
+    }
     section .modal {
         width: 80%;
         padding: 15px;
@@ -283,6 +296,9 @@ button.save:hover {
     hr {
         width: 90%; /* Aumenta a largura da linha no celular */
         margin: 0 auto;
+    }
+    .modal{
+        margin-right: 30px;
     }
     section .modal {
         width: 1%;

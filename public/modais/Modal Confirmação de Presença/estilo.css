@@ -188,7 +188,7 @@ button.chamar:hover {
     }
 
     .button-group {
-        flex-direction: column !important;
+        flex-direction: row !important;
         align-items: center !important;
         gap: 10px !important;
     }
@@ -201,11 +201,27 @@ button.chamar:hover {
 
     button.ausente {
         margin-right: 0 !important; /* Remove o deslocamento para a esquerda */
-        margin-bottom: 10px;
     }
 
-    button {
-        width: 100% !important;
+    button.ausente{
+        font-size: 12px !important; /* Diminui o tamanho da fonte */
+        padding: 8px 12px !important; /* Reduz o padding */
+        width: auto !important; /* Ajusta a largura automaticamente */
+        max-width: 200px !important; /* Limita o tamanho máximo da largura */
+    }
+
+    button.presente{
+        font-size: 12px !important; /* Diminui o tamanho da fonte */
+        padding: 8px 12px !important; /* Reduz o padding */
+        width: auto !important; /* Ajusta a largura automaticamente */
+        max-width: 200px !important; /* Limita o tamanho máximo da largura */
+    }
+
+    button.chamar{
+        font-size: 12px !important; /* Diminui o tamanho da fonte */
+        padding: 8px 12px !important; /* Reduz o padding */
+        width: auto !important; /* Ajusta a largura automaticamente */
+        max-width: 200px !important; /* Limita o tamanho máximo da largura */
     }
 
     /* Ajuste da linha horizontal */
