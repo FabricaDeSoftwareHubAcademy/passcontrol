@@ -299,6 +299,7 @@
     width: 120px;
     height: 35px;
     font-weight: bold;
+    margin: 22px;
 
     
 }
@@ -318,6 +319,7 @@
     width: 120px;
     height: 35px;
     font-weight: bold;
+    margin: 22px;
     
 }
 .botao2:hover{
@@ -327,10 +329,11 @@
 
 .btn-telacadastro {
     position: absolute;
-    left: 76%;
-    top: 695px;
+    left: 75%;
+    top: 615px;
     display: flex;
-    gap: 20px;
+    margin: 0px;
+    
     
 }
 
@@ -479,26 +482,31 @@
         display: flex;
         flex-direction: column;
         position: absolute;
-        width: 56px;
-        height: 19px;
+        width: 57px;
+        height: 24px;
         left: -3%;
         top: -25px;
+        margin: -10px;
+        font-size: larger;
     }
     .botao2{
         display: flex;
         flex-direction: column;
-        width: 55px;
-        height: 20px;
+        width: 60px;
+        height: 24px;
         position: absolute;
         left: 35%;
         top: -25px;
+        margin: -10px;
+        font-size: larger;
     }
     .btn-telacadastro{
         display: flex;
         justify-content: space-around;
         position: relative;
-        top: 435px;
+        top: 485px;
         left: 20px;
+        margin: 0px;
     }
     .checkbox-container{
         display: block;
@@ -576,7 +584,7 @@
 
 }
 
-@media screen and (min-width: 390px) and (max-width: 430px) {
+@media screen and (min-width: 390px) and (max-width: 429px) {
     .cadastro_title{
         position: absolute;
         width: auto;
@@ -596,26 +604,31 @@
         display: flex;
         flex-direction: column;
         position: absolute;
-        width: 53px;
+        width: 58px;
         left: 8%;
-        height: 20px;
+        height: 25px;
         top: -15px;
+        margin: -25px;
+        font-size: larger;
     }
     .botao2{
         display: flex;
         flex-direction: column;
-        width: auto;
+        width: 60px;
         position: absolute;
         left: 38%;
-        height: 20px;
+        height: 25px;
         top: -15px;
+        margin: -24px;
+        font-size: larger;
     }
     .btn-telacadastro{
         display: flex;
         justify-content: space-around;
         position: relative;
-        top: 290px;
-        left: 23px;
+        top: 390px;
+        left: 40px;
+        margin: 0px;
     }
     .checkbox-container{
         display: block;
@@ -699,7 +712,7 @@
 
 }
 
-@media screen and (min-width: 520px) and (max-width: 579px) {
+@media screen and (min-width: 430px) and (max-width: 499px) {
     .cadastro_title{
         position: absolute;
         width: auto;
@@ -719,22 +732,29 @@
         display: flex;
         flex-direction: column;
         position: absolute;
-        width: auto;
-        left: 0%;
+        width: 57px;
+        height: 25px;
+        left: 15%;
+        margin: -45px;
+        font-size: larger;
     }
     .botao2{
         display: flex;
         flex-direction: column;
-        width: auto;
+        width: 60px;
+        height: 25px;
         position: absolute;
         left: 40%;
+        margin: -44px;
+        font-size: larger;
     }
     .btn-telacadastro{
         display: flex;
         justify-content: space-around;
         position: relative;
-        top: 370px;
-        left: 23px;
+        top: 277px;
+        left: 50px;
+        margin: 0px;
     }
     .checkbox-container{
         display: block;
@@ -790,13 +810,13 @@
     .perfild{
         position: absolute;
         left: -22%;
-        top: -150px;
+        top: -230px;
         width: 70%;
     }
     .servico{
         position: absolute;
-        top: -36px;
-        left: -22%;
+        top: -140px;
+        left: -21%;
     }
 
     .column-1{
@@ -805,6 +825,7 @@
         flex-direction: column;
         width: 100%;
         left: -27%;
+        top: -110px;
     }
     .column-2{
         position: absolute;
@@ -812,22 +833,18 @@
         flex-direction: column;
         width: 100%;
         left: -27%; 
-        top: 120px;
+        top: 55px;
     }
 
 }
 
 
-@media screen and (min-width: 580px) and (max-width: 619px) {
+@media screen and (min-width: 500px) and (max-width: 629px) {
     .cadastro_title{
         position: absolute;
         width: auto;
     }
-    .perfild,.selecionar{
-        width: 100%;
-        position: relative;
-        left: 30%;
-    }
+ 
     .titulo .cadastro_title{
         font-size: 100%;
     }
@@ -908,8 +925,8 @@
     }
     .perfild{
         position: absolute;
-        left: -22%;
-        top: -150px;
+        left: 8%;
+        top: 450px;
         width: 70%;
     }
     .servico{
