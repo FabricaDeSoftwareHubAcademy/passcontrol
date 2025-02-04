@@ -18,21 +18,11 @@
     align-content: space-around;
     align-items: stretch;
   }
-  
-  #tela-branca {
-    background-color: #ffffff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
-    width: 96%;
-    padding: 20px;
-    margin: 25px auto;
-  }
-  
   .cabecalho {
     width: 100%;
     text-align: center;
     margin-bottom: 20px;
   }
-  
   #servicos-cadastrados {
     text-align: left;
     color: #333;
@@ -41,15 +31,6 @@
     margin-top: 50px;
     margin-left: 23px;
   }
-  
-  .linha-divisoria {
-    background-color: #37474F;
-    height: 1px;
-    width: 96%;
-    padding: 4px;
-    margin: 0 auto;
-  }
-  
   .campo-busca {
     width: 21%;
     height: 39px;
@@ -59,7 +40,6 @@
     display: block;
   
   }
-  
   #buscar-servico {
     width: 60%;
     font-style: italic;
@@ -72,11 +52,38 @@
     background-repeat: no-repeat;
     box-sizing: border-box;
   }
+  .linha-divisoria {
+    background-color: #37474F;
+    height: 1px;
+    width: 96%;
+    padding: 4px;
+    margin: 0 auto;
+  }
+  #tela-branca {
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+    width: 96%;
+    padding: 20px;
+    margin: 25px auto;
+  }
+  .tabela-wrapper {
+    max-height: 339px;
+    overflow-y: auto;
+    border: 1px solid #dddddd;
+  }
+  .tabela-servicos {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
   .topo-tabela{
-    width: 74%;
+    width: 100%;
     text-align: left;
-    position: fixed;
-    border: 2px solid #00cc00;
+    position: sticky;
+    top: 0;
+    flex-wrap: wrap;
+    align-content: stretch;
+    justify-content: left;
   }
   
   .cabecalho-tabela1{
@@ -98,38 +105,24 @@
     width: 25%;
 
   }
-  .separacao{
-    margin-top: 48px;
-  }
-  
-  .tabela-servicos {
-    width: 100%;
-    border-collapse: collapse;
-    border: 2px solid #ff0000;
-  }
-
-  
   .tabela-servicos th,
   .tabela-servicos td {
     padding: 10px;
     text-align: left;
-    border: 1px solid #00d4dbfd;
+    border: 1px solid #4a5a67;
 
   }
-  
   .tabela-servicos th {
     background-color: #4a5a67;
     font-weight: bold;
-    border: 2px solid salmon;
     position: sticky;
+    top: 0;
+    z-index: 10;
   }
-  
-  .coluna-acoes {
+
+  .coluna-editar {
     display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    align-content: stretch;
-    justify-content: center;
+    flex-direction: column;
   }
   
   #icone-editar {
@@ -138,7 +131,6 @@
     cursor: pointer;
     margin-right: 50px;
   }
-  
   .toggle-btn {
     width: 60px;
     height: 21px;
@@ -146,6 +138,7 @@
     border-radius: 10px;
     position: relative;
     border: 1px solid #37474F;
+    
   }
   
   .toggle-btn .circulo {
@@ -170,13 +163,6 @@
     display: flex;
     justify-content: flex-end;
   }
-  
-  .tabela-wrapper {
-    max-height: 339px;
-    overflow-y: auto;
-    border: 1px solid #dddddd;
-  }
-  
   .botaoCadastrar {
     height: 40px;
     background-color: #37474F;
