@@ -35,7 +35,7 @@
                             <li class="nome-usu">Nome do Usuário</li>
                             <li class="email-usu">funcionario123@fun.br</li>
                             <li><a href="../../../app/admin/view/adm-logado.html">Editar Informações</a></li>
-                            <li><a href="../../../login.html">Sair</a></li>
+                            <li><a class="sair" href="../../../login.html">Sair</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -59,7 +59,7 @@
                 </a>
             </div>
             <div class="botao-navegacao">
-                <a class="botao-lateal-navegacao" href="../../../app/admin/view/monitor-modal.html">
+                <a class="botao-lateal-navegacao" id="openModalBtn">
                     <img class="icone-menu-lateral" src="../../../public/img/icons/monitor.svg" alt="ICONE MONITOR">
                     <div class="texto-bott">Monitor</div>
                 </a>
@@ -71,8 +71,8 @@
                 </a>
             </div>
             <div class="botao-navegacao">
-                <a class="botao-lateal-navegacao ativo-estacionario" href="./menuadm_usuario.html">
-                    <img class="icone-menu-lateral ativo-estacionario" src="../assets/icons/gestao.svg" alt="ICONE GESTAO">
+                <a class="botao-lateal-navegacao ativo-estacionario" href="../../../app/admin/view/menuadm_usuario.html">
+                    <img class="icone-menu-lateral" src="../../../public/img/icons/gestao.svg" alt="ICONE GESTAO">
                     <div class="texto-bott">Gestão</div>
                 </a>
             </div>
@@ -88,7 +88,7 @@
 <!-- INICIO DA ÁREA ÚTIL DA PÁGINA -->
 <!-- INSIRA O CORPO DA SUA PÁGINA A PARTIR DESTE PONTO -->
 
-<main>
+<section class="Area-Util-Projeto">
     <div class="cubo-branco">
         <h2 class="titulo">Editar - Pontos de Atendimento</h2>
         <h3 class="sub-titulo">Local de Atendimento</h3>
@@ -121,7 +121,7 @@
             <p>Salvo com sucesso!</p>
         </div>
     </div>
-</main>
+</section>
 
 <!-- Script JavaScript -->
 <script>

@@ -2,7 +2,6 @@ const modal = document.getElementById("modal");
 const openModalBtn = document.getElementById("openModalBtn");
 const botaofecharmonitor = document.querySelector(".botao-fechar-monitor");
 
-
 openModalBtn.onclick = function() {
     modal.style.display = "flex";
 }
