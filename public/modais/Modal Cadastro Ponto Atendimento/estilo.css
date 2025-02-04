@@ -185,66 +185,123 @@ button.save:hover {
 
 /* Telas pequenas (celulares) */
 
-/* Telas muito pequenas (de 320px até 400px) */
+/* Telas pequenas (até 320px) */
 @media (max-width: 400px) and (min-width: 320px) {
-    /* Garantir que o body e a modal não ultrapassem a largura da tela */
-    body, .modal-container {
-        overflow-x: hidden !important; /* Impede que o conteúdo ultrapasse horizontalmente */
-    }
-
-    hr {
-        width: 100%; /* A linha horizontal ocupa 100% da largura disponível */
-    }
-    
     .modal {
         width: 90% !important;
-        max-width: 350px !important;
-        padding: 10px !important;
-        margin: 0 auto !important;
+        min-width: auto !important; /* Permite ajuste dinâmico */
+        padding: 15px !important;
     }
-
+    
     .logo {
         width: 50px !important;
-        margin-right: 30px !important;
+        top: 15px;
+        right: 10px !important;
     }
 
     h1 {
-        font-size: 16px !important;
+        font-size: 18px !important;
+        margin-bottom: 20px !important;
     }
 
-    input[type="text"],
+    label {
+        font-size: 14px !important;
+    }
+
     input[type="number"], 
+    input[type="text"],
     input[type="file"] {
-        font-size: 10px !important;
         padding: 8px !important;
-        margin: 1px 0 !important;
+        font-size: 14px !important;
+    }
+
+    .button-group {
+        flex-direction: row !important;
+        align-items: center !important;
+        gap: 10px !important;
     }
 
     button {
-        font-size: 15px !important;
-        padding: 8px 10px !important;
-        margin-right: 40px;
+        font-size: 12px !important;
+        padding: 8px 15px !important;
+        width: 100% !important;
+    }
+
+    button.cancel {
+        margin-right: 0 !important; /* Remove o deslocamento para a esquerda */
+    }
+
+    button.cancel{
+        font-size: 12px !important; /* Diminui o tamanho da fonte */
+        padding: 8px 12px !important; /* Reduz o padding */
+        width: auto !important; /* Ajusta a largura automaticamente */
+        max-width: 200px !important; /* Limita o tamanho máximo da largura */
+    }
+
+    button.save{
+        font-size: 12px !important; /* Diminui o tamanho da fonte */
+        padding: 8px 12px !important; /* Reduz o padding */
+        width: auto !important; /* Ajusta a largura automaticamente */
+        max-width: 200px !important; /* Limita o tamanho máximo da largura */
+    }
+
+    /* Ajuste da linha horizontal */
+    hr {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
     }
 }
 
-/* Telas médias (de 400px até 480px) */
-@media (max-width: 480px) and (min-width: 400px) {
+@media (max-width: 400px) and (min-width: 350px) {
+    h1 {
+        font-size: 16px !important;
+        margin-top: 10px !important; /* Afastando do topo */
+        max-width: 100% !important; /* Evita que o título fique muito largo */
+    }
+
+    .logo {
+        width: 45px !important; /* Reduzindo o tamanho da logo */
+        right: 5px !important; /* Ajusta um pouco mais para a direita */
+    }
+}
+
+@media (max-width: 350px) and (min-width: 345px) {
+    h1 {
+        font-size: 16px !important;
+        margin-right: 50px;
+        max-width: 100% !important; /* Evita que o título fique muito largo */
+    }
+
+    .logo {
+        width: 45px !important; /* Reduzindo o tamanho da logo */
+        top: 15px;
+        right: 20px !important; /* Ajusta um pouco mais para a direita */
+    }
+}
+
+@media (max-width: 480px) {
+    hr {
+        width: 114%; /* Aumenta a largura da linha no celular */
+        margin-left: -7%; /* Ajusta a centralização */
+        margin-right: 10%; /* Ajusta a centralização */
+    }
     .modal {
         width: 95%;
-        max-width: 350px;
+        padding: 20px;
     }
     .logo {
-        width: 40px;
+        width: 60px;
     }
     h1 {
-        font-size: 16px;
+        font-size: 20px;
     }
-    input[type="text"],
-    input[type="number"] {
-        font-size: 13px;
+    p {
+        font-size: 14px;
     }
     button {
-        font-size: 10px;
+        font-size: 12px;
+        padding: 8px 12px;
     }
 }
 
@@ -260,6 +317,7 @@ button.save:hover {
         max-width: 120px; /* Evita que fique grande demais */
     }
 }
+
 
 /* Telas médias (tablets) */
 @media (max-width: 768px) {
