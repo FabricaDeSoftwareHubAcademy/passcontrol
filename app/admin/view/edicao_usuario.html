@@ -38,7 +38,7 @@
                             <li class="nome-usu">Nome do Usuário</li>
                             <li class="email-usu">funcionario123@fun.br</li>
                             <li><a href="../../../app/admin/view/adm-logado.html">Editar Informações</a></li>
-                            <li><a href="../../../login.html">Sair</a></li>
+                            <li><a class="sair" href="../../../login.html">Sair</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -62,7 +62,7 @@
                 </a>
             </div>
             <div class="botao-navegacao">
-                <a class="botao-lateal-navegacao" href="../../../app/admin/view/monitor-modal.html">
+                <a class="botao-lateal-navegacao" id="openModalBtn">
                     <img class="icone-menu-lateral" src="../../../public/img/icons/monitor.svg" alt="ICONE MONITOR">
                     <div class="texto-bott">Monitor</div>
                 </a>
@@ -74,7 +74,7 @@
                 </a>
             </div>
             <div class="botao-navegacao">
-                <a class="botao-lateal-navegacao" href="../../../app/admin/view/menuadm_usuario.html">
+                <a class="botao-lateal-navegacao ativo-estacionario" href="../../../app/admin/view/menuadm_usuario.html">
                     <img class="icone-menu-lateral" src="../../../public/img/icons/gestao.svg" alt="ICONE GESTAO">
                     <div class="texto-bott">Gestão</div>
                 </a>
@@ -88,90 +88,175 @@
         </div>
     </div>
 
-        <section class="Area-Util-Projeto">
-            <!-- Codigo luan -->
-                
-            <div class="titulo">
-            <h1 class="cadastro_title">Edição de Usuário</h1><br>
-            <hr>   
+    <section class="Area-Util-Projeto">
+        <!-- Codigo luan -->
+            
+        <div class="titulo">
+        <h1 class="cadastro_title">Edição de Usuário</h1><br>
+        <hr>   
+        </div>
+        <div class="quadrado">
+            <div class="container-flex">
+                <section class="forme">
+                        <div class="nome">
+                            <label class="labeledit" for="nome">Nome*</label>    
+                            <input class="borda" type="text" name="nome" placeholder=""> 
+                        </div>
+                        <div class="email">
+                            <label class="labeledit" for="email">Email*</label>    
+                            <input class="borda" type="text" name="email">
+                        </div>
+                        <div class="cpf">    
+                            <label class="labeledit" for="cpf">CPF</label>
+                            <input class="borda" type="text" name="email">
+                        </div>
+                </section>
             </div>
-            <div class="quadrado">
-                <div class="container-flex">
-                    <section class="forme">
-                            <div class="nome">
-                                <label class="labeledit" for="nome">Nome*</label>    
-                                <input class="borda" type="text" name="nome" placeholder=""> 
-                            </div>
-                            <div class="email">
-                                <label class="labeledit" for="email">Email*</label>    
-                                <input class="borda" type="text" name="email">
-                            </div>
-                            <div class="cpf">    
-                                <label class="labeledit" for="cpf">CPF</label>
-                                <input class="borda" type="text" name="email">
-                            </div>
-                    </section>
+            <div class="selecionar">
+
+                <div class="perfild">    
+                    <label class="labeledit" for="perfil">Perfil De Acesso</label>
+                    <select class="selecao" name="plataforma" required="required">
+                        <option class="pi" value="admin">Administrador</option>
+                        <option class="pi" value="sup">Supervisor</option>
+                        <option class="pi" value="atend">Atendente</option>
+                        <option class="pi" value="auto-at">Terminal de Autoatendimento</option>
+                    </select>
+                </div>    
+                <title class="servico">Seviços</title> 
+                    <div class="checkbox-container">
+                        <div class="column"> 
+                            <label class="customizado"> 
+                                <input type="checkbox" class="item" id="checkbox"> 
+                                <span class="teste">Conselho Muncipal</span> 
+                            </label> 
+                            <label class="customizado"> 
+                                <input type="checkbox" class="item" id="checkbox"> 
+                                <span class="teste">Fiscalização</span> 
+                            </label>
+                            <label class="customizado"> 
+                                <input type="checkbox" class="item" id="checkbox"> 
+                                <span class="teste">Iluminação Pública</span>
+                            </label>  
+                            <label class="customizado"> 
+                                <input type="checkbox" class="item" id="checkbox"> 
+                                <span class="teste">IPTU</span> 
+                            </label>  
+                        </div> 
+                        <div class="column"> 
+                            <div class="caixa"></div> 
+                            <label class="customizado">      
+                                <input type="checkbox" class="item" id="checkbox">
+                                <span class="teste">Licenças</span>
+                            </label> 
+                            <label class="customizado"> 
+                                <input type="checkbox" class="item" id="checkbox"> 
+                                <span class="teste">Ouvidoria</span> 
+                            </label> 
+                            <label class="customizado"> 
+                                <input type="checkbox" class="item" id="checkbox"> 
+                                <span class="teste">Poda De Àrvores</span> 
+                            </label>   
+                            <label class="customizado"> 
+                                <input type="checkbox" id="select-all"> 
+                                <label for="select-all">Selecionar Todos</label> 
+                            </label>
+                        </div>
+                    </div>
+                <div class="btn">
+                    <script src="../../../public/js/scripts.js"></script>   
+                    <button class="botao1">Voltar</button>
+                    <button class="botao2">Salvar</button>
                 </div>
-                <div class="selecionar">
- 
-                    <div class="perfild">    
-                        <label class="labeledit" for="perfil">Perfil De Acesso</label>
-                        <select class="selecao" name="plataforma" required="required">
-                            <option class="pi" value="admin">Administrador</option>
-                            <option class="pi" value="sup">Supervisor</option>
-                            <option class="pi" value="atend">Atendente</option>
-                            <option class="pi" value="auto-at">Terminal de Autoatendimento</option>
-                        </select>
-                    </div>    
-                    <title class="servico">Seviços</title> 
-                        <div class="checkbox-container">
-                            <div class="column"> 
-                                <label class="customizado"> 
-                                    <input type="checkbox" class="item" id="checkbox"> 
-                                    <span class="teste">Conselho Muncipal</span> 
-                                </label> 
-                                <label class="customizado"> 
-                                    <input type="checkbox" class="item" id="checkbox"> 
-                                    <span class="teste">Fiscalização</span> 
-                                </label>
-                                <label class="customizado"> 
-                                    <input type="checkbox" class="item" id="checkbox"> 
-                                    <span class="teste">Iluminação Pública</span>
-                                </label>  
-                                <label class="customizado"> 
-                                    <input type="checkbox" class="item" id="checkbox"> 
-                                    <span class="teste">IPTU</span> 
-                                </label>  
-                            </div> 
-                            <div class="column"> 
-                                <div class="caixa"></div> 
-                                <label class="customizado">      
-                                    <input type="checkbox" class="item" id="checkbox">
-                                    <span class="teste">Licenças</span>
-                                </label> 
-                                <label class="customizado"> 
-                                    <input type="checkbox" class="item" id="checkbox"> 
-                                    <span class="teste">Ouvidoria</span> 
-                                </label> 
-                                <label class="customizado"> 
-                                    <input type="checkbox" class="item" id="checkbox"> 
-                                    <span class="teste">Poda De Àrvores</span> 
-                                </label>   
-                                <label class="customizado"> 
-                                    <input type="checkbox" id="select-all"> 
-                                    <label for="select-all">Selecionar Todos</label> 
-                                </label>
+            </div>
+        </div>
+    </section>           
+    
+    <!--MONITOR MODAL-->
+    <div class="area-monitor-modal">
+        <div class="area-modal" id="modal">
+            <div class="modal-fundo">
+                <div class="fundo-lateral">
+                    <h1>Últimas Chamadas</h1>
+                    <div class="area-das-senhas">
+                        <div class="caixa-das-senhas">
+                            <h2>NOME DA PESSOA</h2>
+                            <div class="conjunto-senhas">
+                                <div class="senha">
+                                    <h3>SENHA</h3>
+                                    <h4>CM 001</h4>
+                                </div>
+                                <div class="guiche">
+                                    <h5>GUICHE</h5>
+                                    <h6>1</h6>
+                                </div>
                             </div>
                         </div>
-                    <div class="btn">
-                        <script src="../../../public/js/scripts.js"></script>   
-                        <button class="botao1">Voltar</button>
-                        <button class="botao2">Salvar</button>
+                        <div class="caixa-das-senhas">
+                            <h2>NOME DA PESSOA</h2>
+                            <div class="conjunto-senhas">
+                                <div class="senha">
+                                    <h3>SENHA</h3>
+                                    <h4>CM 001</h4>
+                                </div>
+                                <div class="guiche">
+                                    <h5>GUICHE</h5>
+                                    <h6>1</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="caixa-das-senhas">
+                            <h2>NOME DA PESSOA</h2>
+                            <div class="conjunto-senhas">
+                            <div class="senha">
+                                <h3>SENHA</h3>
+                                <h4>CM 001</h4>
+                            </div>
+                            <div class="guiche">
+                                <h5>GUICHE</h5>
+                                <h6>1</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="caixa-das-senhas">
+                        <h2>NOME DA PESSOA</h2>
+                        <div class="conjunto-senhas">
+                            <div class="senha">
+                                <h3>SENHA</h3>
+                                <h4>CM 001</h4>
+                            </div>
+                            <div class="guiche">
+                                <h5>GUICHE</h5>
+                                <h6>1</h6>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </section>                                 
-    </body>
+            <div class="fundo-principal">
+                <div class="area-botao-fechar-monitor">
+                    <div class="botao-fechar-monitor">
+                        <h2>X</h2> 
+                    </div>
+                </div>
+            <div class="fundo-senha-principal">
+                <div class="caixa-senha-principal">
+                    <div class="conjunto-senha-principal">
+                        <div class="nome-pessoa">
+                            <h1>NOME DA PESSOA</h1>
+                        </div>
+                        <div class="infos-senha-principal">
+                            <h2>SERVIÇO:<span>IPTU</span></h2>
+                            <h2>SENHA:<span>CM 001</span></h2>
+                            <h2>GUICHÊ:<span>1</span></h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../../../public/js/monitor-modal.js" defer></script>
+</body>
 </html>
 
                                 

@@ -45,7 +45,7 @@
 
 .fundo-azul-lateral h1{
     width: 100%;
-    height: 12%;
+    height: 20%;
     
     display: flex;
     align-items: end;
@@ -65,7 +65,7 @@
     border-radius: 5px;
     background-color: var(--cor-cinza--1);
     gap: 2vh;
-    padding: 2.5vh 1.6vh;
+    /* padding: 2.5vh 1.6vh; */
     margin: 2vh 2vh 2vh 2vh;
 
     height: 95%;
@@ -74,7 +74,7 @@
 
 .caixa-das-senhas{
     width: calc(100% - 3vh);
-    height: 20%;
+    height: 22%;
     border-radius: 5px;
     padding: 1.5vh;
     display: flex;
@@ -304,11 +304,12 @@
         padding: 7px;
     }
     .caixa-das-senhas h2{
-        height: 60%;
+        height: 50%;
     }
+
     .conjunto-senhas{
         align-items: center;
-        gap: calc(+5px);
+        /* gap: calc(+5px); */
         flex-direction: column;
     }
     .caixa-das-senhas h2{
@@ -334,15 +335,20 @@
         left: 0vw;
         bottom: 0px;
         flex-direction: column;
+        flex-direction: row;
         width: 100%;
         height: 30%;
 
-        align-items: start;
+        align-items: center;
+        justify-content: start;
         overflow:auto;
     }
     .fundo-azul-lateral h1{
-        height: 15%;
-        align-items: end;
+        /* height: 15%; */
+        width: 20% ;
+        align-items: center;
+        text-align: center;
+        /* background-color: rebeccapurple; */
     }
     .area-das-senhas{
         flex-direction: row;
@@ -389,5 +395,10 @@
         font-size: 3.5vh;
         text-align: center;
         text-wrap: wrap;
+    }
+}
+@media screen and (max-height: 700px) {
+    .fundo-azul-lateral h1{
+        font-size: 4vh;
     }
 }

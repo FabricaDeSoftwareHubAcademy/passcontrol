@@ -61,13 +61,13 @@
     height: calc(100vh - 140px);
     width: 100%;
     display: flex;
-    background-image: url(../assets/background.png);
-    background-size: 400px;
-    background-repeat: no-repeat;
-    background-position: right bottom;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background-image: url('../img/Background-logo\ 2.svg');
+    background-size: 400px;
+    background-repeat: no-repeat;
+    background-position: right bottom;
 }
 
 .selecione-servico {
@@ -76,11 +76,15 @@
     font-size: 32px;
     text-align: center;
     font-family: var(--font-main);
+    color: #113062;
     font-weight: 800;
+    margin-bottom: 20px;
+    padding-top: 90px;
 }
 
+
 .espaco {
-    background-color: black;
+    background-color:var(--cinza-control);
     height: 50px;
     width: 100%;
     margin: 10px 0;
@@ -88,9 +92,14 @@
 
 .fundo-cinza {
     background-color: rgba(0, 0, 0, 0.1);
-    margin-top: 50px;
-    width: 1300px;
-    height: 1000px;
+    width: 90%;
+    height: 100%; /* Altere para 100% para garantir que a altura seja adequada */
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Isso vai centralizar o conteúdo dentro da área */
+    border-radius: 10px;
+    padding: 20; /* Se necessário, adicione um pequeno padding para garantir que o conteúdo não fique muito colado nas bordas */
+    flex-direction: column;
 }
 
 .box-servicos {
@@ -104,12 +113,7 @@
     flex-direction: column;
 }
 
-.container-quadrados {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-}
+
 
 .area-quadrados {
     display: flex;
@@ -118,44 +122,66 @@
     justify-content: center;
     flex-wrap: wrap;
     margin-top: 50px;
-    gap: 400px;
+    gap: 50px;
     flex-direction: row;
     align-items: center;
     border: #33404D;
     border-radius: 5px;
 }
 
+
 .quadrado {
     border: 4px solid var(--verde-control);
-    position: relative;
     border-radius: 5px;
-    gap: 18px;
     width: 250px;
     height: 250px;
-    padding: 20px;
+    padding: 30px;
     background-color: transparent;
+    display: flex;
+    flex-direction: column; /* Mantenha a direção das imagens em coluna */
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    text-align: center;
+    overflow: hidden; /* Garante que o conteúdo não ultrapasse o quadrado */
+}
+
+.quadrado .imagem-servico-container {
+    display: flex;
+    flex-direction: row; /* Alinha as imagens horizontalmente */
+    justify-content: center;
+    align-items: center;
+    gap: 5px; /* Espaço entre as imagens */
+    width: 100%; /* Certifica-se de que as imagens se ajustem dentro do quadrado */
 }
 
 .imagem-servico {
-    justify-content: center;
-    align-items: center;
-    height: 100px;
+    max-width: 50px; /* Tamanho máximo das imagens */
+    max-height: 50px; /* Tamanho máximo das imagens */
+    object-fit: contain; /* Garante que as imagens se ajustem dentro do espaço sem distorcer */
 }
 
-.nome-servico {
+.quadrado h4 {
+    color: #113062;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+    padding-top: 10px;
+}
+
+
+
+.botao {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start; /* Alinha à esquerda */
+    width: 100%; /* Garante que ocupe toda a largura disponível */
+    margin-top: 30px; /* Adiciona um espaço acima do botão */
+    position: relative;
+    padding: -20px;
+    border:2px solid #113062;
 }
 
-.seta {
-    margin-top: 30px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    width: 100%;
-}
-
-.btn-proximaPagina {
+.btn-voltar {
     background-color: white;
     display: flex;
     justify-content: center;
@@ -164,5 +190,10 @@
     border-radius: 5px;
     height: 60px;
     width: 150px;
-    margin-left: 30px;
+    text-align: center;
+    font-size: 18px;
+    color: #113062; /* Cor do texto */
+    text-decoration: none; /* Remove o sublinhado do link */
+    font-weight: bold;
+    padding: 10px;
 }

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tela Autotendimento</title>
-    <link rel="stylesheet" href="/public/css/estilo.css">
+    <link rel="stylesheet" href="../../../public/css/tela_autoatendimentoPage3.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -23,7 +23,7 @@
     <header class="cabeca">
         <nav class="nav-cabeca">
             <div class="logo-control">
-                <img src="./assets/logo control.svg" alt="LOGOCONTROL" id="img-logo">
+                <img src="../../../public/img/icons/logo control.svg" alt="LOGOCONTROL" id="img-logo">
             </div>
             <H3>PassControl</H3>
     </header>
@@ -35,27 +35,38 @@
         <div class="fundo-cinza">
             <section class="box-servicos" id="box-servicos">
                 <span class="selecione-servico">
-                    Selecione o tipo de atendimento
+                    Selecione o tipo de atendimento:
                 </span>
 
                 <div class="area-quadrados">
 
                     <a href="" class="quadrado">
-                        <img class="imagem-servico" src="assets/casa.svg" alt="Servico" id="img-servico">
+                        <img class="imagem-servico" src="../../../public/img/icons/comum_img.svg" alt="Servico" id="img-servico">
                         <h4>COMUM</h4> 
                     </a>
 
+                
+
                     <a href="" class="quadrado">
-                        <img class="imagem-servico" src="assets/casa.svg" alt="Servico" id="img-servico">
-                        <h4>PREFERENCIAL</h4> 
+                        <div class="imagem-servico-container">
+                            <img class="imagem-servico" src="../../../public/img/icons/idoso_pref.svg" alt="Servico" id="img-servico">
+                            <img class="imagem-servico" src="../../../public/img/icons/gestante_pref.svg" alt="Servico" id="img-servico">
+                            <img class="imagem-servico" src="../../../public/img/icons/colo_pref.svg" alt="Servico" id="img-servico">
+                            <img class="imagem-servico" src="../../../public/img/icons/especial_pref.svg" alt="Servico" id="img-servico">
+                        </div>
+                        <h4>PREFERENCIAL</h4>
                     </a>
+                    
 
-                   
+                        <div class="botao">
+                            <a href="../../usuario/view/tela_autoatendimentoPage1.html" class="btn-voltar">
+                            VOLTAR
+                            </a>
+                        </div>
+                           
+            </section>
+            
 
-            <div class="seta">
-                <button class="btn-proximaPagina">
-                    VOLTAR
-                </button>
             </div>
         </div>
 

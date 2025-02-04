@@ -1,7 +1,7 @@
 @import url(base_area_util.css);
 
 .area-modal {
-    display: flex;
+    display: none;
     position: fixed;
     top: 0;
     left: 0;

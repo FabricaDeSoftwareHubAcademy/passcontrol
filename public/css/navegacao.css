@@ -1,4 +1,5 @@
 @import url(base_area_util.css);
+@import url(monitor-modal.css);
 
 :root{
     --verde-control: #3AA867;

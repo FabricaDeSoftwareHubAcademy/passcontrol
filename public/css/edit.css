@@ -299,6 +299,7 @@
     width: 120px;
     height: 35px;
     font-weight: bold;
+    margin: 22px;
 
     
 }
@@ -318,6 +319,7 @@
     width: 120px;
     height: 35px;
     font-weight: bold;
+    margin: 22px;
     
 }
 .botao2:hover{
@@ -327,10 +329,11 @@
 
 .btn-telacadastro {
     position: absolute;
-    left: 76%;
-    top: 695px;
+    left: 75%;
+    top: 615px;
     display: flex;
-    gap: 20px;
+    margin: 0px;
+    
     
 }
 
@@ -386,13 +389,14 @@
     .quadrado{
         position: fixed;
         scroll-behavior: smooth;
-        left: 24%;
-        width: 68%;
+        left: 20%;
+        width: 72%;
         height: 74%;
         display: flex;
         flex-direction: column;
         overflow: auto;
         scroll-behavior: smooth;
+        overflow-x: hidden;
     }
     .nome{
        width: 85%;
@@ -479,26 +483,31 @@
         display: flex;
         flex-direction: column;
         position: absolute;
-        width: 56px;
-        height: 19px;
+        width: 57px;
+        height: 24px;
         left: -3%;
         top: -25px;
+        margin: -10px;
+        font-size: larger;
     }
     .botao2{
         display: flex;
         flex-direction: column;
-        width: 55px;
-        height: 20px;
+        width: 60px;
+        height: 24px;
         position: absolute;
         left: 35%;
         top: -25px;
+        margin: -10px;
+        font-size: larger;
     }
     .btn-telacadastro{
         display: flex;
         justify-content: space-around;
         position: relative;
-        top: 435px;
+        top: 485px;
         left: 20px;
+        margin: 0px;
     }
     .checkbox-container{
         display: block;
@@ -511,13 +520,14 @@
     .quadrado{
         position: fixed;
         scroll-behavior: smooth;
-        left: 24%;
-        width: 68%;
+        left: 19%;
+        width: 73%;
         height: 74%;
         display: flex;
         flex-direction: column;
         overflow: auto;
         scroll-behavior: smooth;
+        overflow-x: hidden;
     }
     .nome{
        width: 85%;
@@ -576,7 +586,7 @@
 
 }
 
-@media screen and (min-width: 390px) and (max-width: 430px) {
+@media screen and (min-width: 390px) and (max-width: 429px) {
     .cadastro_title{
         position: absolute;
         width: auto;
@@ -596,26 +606,31 @@
         display: flex;
         flex-direction: column;
         position: absolute;
-        width: 53px;
+        width: 58px;
         left: 8%;
-        height: 20px;
+        height: 25px;
         top: -15px;
+        margin: -25px;
+        font-size: larger;
     }
     .botao2{
         display: flex;
         flex-direction: column;
-        width: auto;
+        width: 60px;
         position: absolute;
         left: 38%;
-        height: 20px;
+        height: 25px;
         top: -15px;
+        margin: -24px;
+        font-size: larger;
     }
     .btn-telacadastro{
         display: flex;
         justify-content: space-around;
         position: relative;
-        top: 290px;
-        left: 23px;
+        top: 390px;
+        left: 40px;
+        margin: 0px;
     }
     .checkbox-container{
         display: block;
@@ -628,13 +643,14 @@
     .quadrado{
         position: fixed;
         scroll-behavior: smooth;
-        left: 18%;
-        width: 75%;
+        left: 21%;
+        width: 71%;
         height: 74%;
         display: flex;
         flex-direction: column;
         overflow: auto;
         scroll-behavior: smooth;
+        overflow-x: hidden;
     }
     .nome{
        width: 85%;
@@ -699,6 +715,258 @@
 
 }
 
+@media screen and (min-width: 430px) and (max-width: 499px) {
+    .cadastro_title{
+        position: absolute;
+        width: auto;
+    }
+    .perfild,.selecionar{
+        width: 100%;
+        position: relative;
+        left: 30%;
+    }
+    .titulo .cadastro_title{
+        font-size: 100%;
+    }
+    .nome, .email, .cpf, .senha, .confirmar{
+        width: 100%;
+    }
+    .botao1{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        width: 57px;
+        height: 25px;
+        left: 15%;
+        margin: -45px;
+        font-size: larger;
+    }
+    .botao2{
+        display: flex;
+        flex-direction: column;
+        width: 60px;
+        height: 25px;
+        position: absolute;
+        left: 40%;
+        margin: -44px;
+        font-size: larger;
+    }
+    .btn-telacadastro{
+        display: flex;
+        justify-content: space-around;
+        position: relative;
+        top: 277px;
+        left: 50px;
+        margin: 0px;
+    }
+    .checkbox-container{
+        display: block;
+        left: 0;
+        top: auto;
+    }
+    .checkbox-container input[type="checkbox"]{
+        margin-right: 10px;
+    }
+    .quadrado{
+        position: fixed;
+        scroll-behavior: smooth;
+        left: 21%;
+        width: 71%;
+        height: 74%;
+        display: flex;
+        flex-direction: column;
+        overflow: auto;
+        scroll-behavior: smooth;
+        overflow-x: hidden;
+    }
+    .nome{
+       width: 85%;
+    }
+    .email{
+        width: 85%;
+        position: absolute;
+        top: 100px;
+    }
+    .cpf{
+       position: absolute;
+       display: flex;
+       flex-direction: column;
+       top: 185px;
+       left: 8%;
+       width: 85%;
+    }
+    .senha{
+        width: 85%;
+        position: absolute;
+        top: 270px;
+    }
+    .confirmar{
+        width: 85%;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        top: 360px;
+        left: 8%;
+    }
+    .labeledit{
+        width: 100%;
+    }
+    .perfild{
+        position: absolute;
+        left: -22%;
+        top: -230px;
+        width: 70%;
+    }
+    .servico{
+        position: absolute;
+        top: -140px;
+        left: -21%;
+    }
+
+    .column-1{
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        left: -27%;
+        top: -110px;
+    }
+    .column-2{
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        left: -27%; 
+        top: 55px;
+    }
+
+}
+
+
+@media screen and (min-width: 500px) and (max-width: 519px) {
+    .cadastro_title{
+        position: absolute;
+        width: auto;
+    }
+ 
+    .titulo .cadastro_title{
+        font-size: 100%;
+    }
+    .nome, .email, .cpf, .senha, .confirmar{
+        width: 100%;
+    }
+    .botao1{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        width: 71px;
+        height: 28px;
+        left: 10%;
+        margin: -44px;
+        font-size: x-large;
+    }
+    .botao2{
+        display: flex;
+        flex-direction: column;
+        width: 75px;
+        height: 28px;
+        position: absolute;
+        left: 40%;
+        margin: -44px;
+        font-size: x-large;
+    }
+    .btn-telacadastro{
+        display: flex;
+        justify-content: space-around;
+        position: relative;
+        width: auto;
+        top: 140px;
+        left: 168px;
+    }
+    .checkbox-container{
+        display: block;
+        left: 0;
+        top: auto;
+    }
+    .checkbox-container input[type="checkbox"]{
+        margin-right: 10px;
+    }
+    .quadrado{
+        position: fixed;
+        scroll-behavior: smooth;
+        left: 21%;
+        width: 71%;
+        height: 74%;
+        display: flex;
+        flex-direction: column;
+        overflow: auto;
+        scroll-behavior: smooth;
+        overflow-x: hidden;
+}
+    .nome{
+       width: 85%;
+    }
+    .email{
+        width: 85%;
+        position: absolute;
+        top: 100px;
+    }
+    .cpf{
+       position: absolute;
+       display: flex;
+       flex-direction: column;
+       top: 185px;
+       left: 8%;
+       width: 85%;
+    }
+    .senha{
+        width: 85%;
+        position: absolute;
+        top: 270px;
+    }
+    .confirmar{
+        width: 85%;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        top: 360px;
+        left: 8%;
+    }
+    .labeledit{
+        width: 100%;
+    }
+    .perfild{
+        position: absolute;
+        left: 8%;
+        top: 450px;
+        width: 70%;
+    }
+    .servico{
+        position: absolute;
+        top: 540px;
+        left: 9%;
+    }
+
+    .column-1{
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        left: 30%;
+        top: -225px;
+    }
+    .column-2{
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        left: 30%; 
+        top: -100px;
+    }
+
+}
+
+
 @media screen and (min-width: 520px) and (max-width: 579px) {
     .cadastro_title{
         position: absolute;
@@ -719,279 +987,49 @@
         display: flex;
         flex-direction: column;
         position: absolute;
-        width: auto;
-        left: 0%;
-    }
-    .botao2{
-        display: flex;
-        flex-direction: column;
-        width: auto;
-        position: absolute;
-        left: 40%;
-    }
-    .btn-telacadastro{
-        display: flex;
-        justify-content: space-around;
-        position: relative;
-        top: 370px;
-        left: 23px;
-    }
-    .checkbox-container{
-        display: block;
-        left: 0;
-        top: auto;
-    }
-    .checkbox-container input[type="checkbox"]{
-        margin-right: 10px;
-    }
-    .quadrado{
-        position: fixed;
-        scroll-behavior: smooth;
-        left: 16%;
-        width: 77%;
-        height: 74%;
-        display: flex;
-        flex-direction: column;
-        overflow: auto;
-        scroll-behavior: smooth;
-    }
-    .nome{
-       width: 85%;
-    }
-    .email{
-        width: 85%;
-        position: absolute;
-        top: 100px;
-    }
-    .cpf{
-       position: absolute;
-       display: flex;
-       flex-direction: column;
-       top: 185px;
-       left: 8%;
-       width: 85%;
-    }
-    .senha{
-        width: 85%;
-        position: absolute;
-        top: 270px;
-    }
-    .confirmar{
-        width: 85%;
-        position: absolute;
-        display: flex;
-        flex-direction: column;
-        top: 360px;
-        left: 8%;
-    }
-    .labeledit{
-        width: 100%;
-    }
-    .perfild{
-        position: absolute;
-        left: -22%;
-        top: -150px;
-        width: 70%;
-    }
-    .servico{
-        position: absolute;
-        top: -36px;
-        left: -22%;
-    }
-
-    .column-1{
-        position: absolute;
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        left: -27%;
-    }
-    .column-2{
-        position: absolute;
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        left: -27%; 
-        top: 120px;
-    }
-
-}
-
-
-@media screen and (min-width: 580px) and (max-width: 619px) {
-    .cadastro_title{
-        position: absolute;
-        width: auto;
-    }
-    .perfild,.selecionar{
-        width: 100%;
-        position: relative;
-        left: 30%;
-    }
-    .titulo .cadastro_title{
-        font-size: 100%;
-    }
-    .nome, .email, .cpf, .senha, .confirmar{
-        width: 100%;
-    }
-    .botao1{
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        width: auto;
-        left: 0%;
-    }
-    .botao2{
-        display: flex;
-        flex-direction: column;
-        width: auto;
-        position: absolute;
-        left: 40%;
-    }
-    .btn-telacadastro{
-        display: flex;
-        justify-content: space-around;
-        position: relative;
-        top: 370px;
-        left: 23px;
-    }
-    .checkbox-container{
-        display: block;
-        left: 0;
-        top: auto;
-    }
-    .checkbox-container input[type="checkbox"]{
-        margin-right: 10px;
-    }
-    .quadrado{
-        position: fixed;
-        scroll-behavior: smooth;
-        left: 16%;
-        width: 77%;
-        height: 74%;
-        display: flex;
-        flex-direction: column;
-        overflow: auto;
-        scroll-behavior: smooth;
-    }
-    .nome{
-       width: 85%;
-    }
-    .email{
-        width: 85%;
-        position: absolute;
-        top: 100px;
-    }
-    .cpf{
-       position: absolute;
-       display: flex;
-       flex-direction: column;
-       top: 185px;
-       left: 8%;
-       width: 85%;
-    }
-    .senha{
-        width: 85%;
-        position: absolute;
-        top: 270px;
-    }
-    .confirmar{
-        width: 85%;
-        position: absolute;
-        display: flex;
-        flex-direction: column;
-        top: 360px;
-        left: 8%;
-    }
-    .labeledit{
-        width: 100%;
-    }
-    .perfild{
-        position: absolute;
-        left: -22%;
-        top: -150px;
-        width: 70%;
-    }
-    .servico{
-        position: absolute;
-        top: -36px;
-        left: -22%;
-    }
-
-    .column-1{
-        position: absolute;
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        left: -27%;
-    }
-    .column-2{
-        position: absolute;
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        left: -27%; 
-        top: 120px;
-    }
-
-}
-
-
-@media screen and (min-width: 620px) and (max-width: 679px) {
-    .cadastro_title{
-        position: absolute;
-        width: auto;
-    }
-    .perfild,.selecionar{
-        width: 100%;
-        position: relative;
-        left: 30%;
-    }
-    .titulo .cadastro_title{
-        font-size: 100%;
-    }
-    .nome, .email, .cpf, .senha, .confirmar{
-        width: 100%;
-    }
-    .botao1{
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        width: auto;
-        left: 0%;
-    }
-    .botao2{
-        display: flex;
-        flex-direction: column;
-        width: auto;
-        position: absolute;
-        left: 40%;
-    }
-    .btn-telacadastro{
-        display: flex;
-        justify-content: space-around;
-        position: relative;
-        top: 370px;
-        left: 23px;
-    }
-    .checkbox-container{
-        display: block;
-        left: 0;
-        top: auto;
-    }
-    .checkbox-container input[type="checkbox"]{
-        margin-right: 10px;
-    }
-    .quadrado{
-        position: fixed;
-        scroll-behavior: smooth;
+        width: 71px;
+        height: 28px;
         left: 15%;
-        width: 78%;
+        margin: -44px;
+        font-size: x-large;
+    }
+    .botao2{
+        display: flex;
+        flex-direction: column;
+        width: 74px;
+        height: 30px;
+        position: absolute;
+        left: 40%;
+        margin: -44px;
+        font-size: x-large;
+    }
+    .btn-telacadastro{
+        display: flex;
+        justify-content: space-around;
+        position: relative;
+        top: 150px;
+        left: 74px;
+        
+    }
+    .checkbox-container{
+        display: block;
+        left: 0;
+        top: auto;
+    }
+    .checkbox-container input[type="checkbox"]{
+        margin-right: 10px;
+    }
+    .quadrado{
+        position: fixed;
+        scroll-behavior: smooth;
+        left: 20%;
+        width: 72%;
         height: 74%;
         display: flex;
         flex-direction: column;
         overflow: auto;
         scroll-behavior: smooth;
+        overflow-x: hidden;
     }
     .nome{
        width: 85%;
@@ -1028,13 +1066,13 @@
     .perfild{
         position: absolute;
         left: -22%;
-        top: -150px;
+        top: -350px;
         width: 70%;
     }
     .servico{
         position: absolute;
-        top: -36px;
-        left: -22%;
+        top: -260px;
+        left: -21%;
     }
 
     .column-1{
@@ -1043,6 +1081,7 @@
         flex-direction: column;
         width: 100%;
         left: -27%;
+        top: -100px;
     }
     .column-2{
         position: absolute;
@@ -1050,12 +1089,265 @@
         flex-direction: column;
         width: 100%;
         left: -27%; 
-        top: 120px;
+        top: -230px;
     }
 
 }
 
-@media screen and (min-width: 680px) and (max-width: 720px) {
+@media screen and (min-width: 580px) and (max-width: 620px) {
+    .cadastro_title{
+        position: absolute;
+        width: auto;
+    }
+    .perfild,.selecionar{
+        width: 100%;
+        position: relative;
+        left: 30%;
+    }
+    .titulo .cadastro_title{
+        font-size: 100%;
+    }
+    .nome, .email, .cpf, .senha, .confirmar{
+        width: 100%;
+    }
+    .botao1{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        width: 72px;
+        height: 30px;
+        left: 15%;
+        margin: -44px;
+        font-size: x-large;
+    }
+    .botao2{
+        display: flex;
+        flex-direction: column;
+        width: 74px;
+        height: 30px;
+        position: absolute;
+        left: 40%;
+        margin: -44px;
+        font-size: x-large;
+    }
+    .btn-telacadastro{
+        display: flex;
+        justify-content: space-around;
+        position: relative;
+        top: 122px;
+        left: 85px;
+    }
+    .checkbox-container{
+        display: block;
+        left: 0;
+        top: auto;
+    }
+    .checkbox-container input[type="checkbox"]{
+        margin-right: 10px;
+    }
+    .quadrado{
+        position: fixed;
+        scroll-behavior: smooth;
+        left: 19%;
+        width: 73%;
+        height: 74%;
+        display: flex;
+        flex-direction: column;
+        overflow: auto;
+        scroll-behavior: smooth;
+        overflow-x: hidden;
+    }
+    .nome{
+       width: 85%;
+    }
+    .email{
+        width: 85%;
+        position: absolute;
+        top: 100px;
+    }
+    .cpf{
+       position: absolute;
+       display: flex;
+       flex-direction: column;
+       top: 185px;
+       left: 8%;
+       width: 85%;
+    }
+    .senha{
+        width: 85%;
+        position: absolute;
+        top: 270px;
+    }
+    .confirmar{
+        width: 85%;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        top: 360px;
+        left: 8%;
+    }
+    .labeledit{
+        width: 100%;
+    }
+    .perfild{
+        position: absolute;
+        left: -22%;
+        top: -355px;
+        width: 70%;
+    }
+    .servico{
+        position: absolute;
+        top: -260px;
+        left: -21%;
+    }
+
+    .column-1{
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        left: -27%;
+        top: -230px;
+    }
+    .column-2{
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        left: -27%; 
+        top: -110px;
+    }
+
+}
+
+
+@media screen and (min-width: 621px) and (max-width: 650px) {
+    .cadastro_title{
+        position: absolute;
+        width: auto;
+    }
+    .perfild,.selecionar{
+        width: 100%;
+        position: relative;
+        left: 30%;
+    }
+    .titulo .cadastro_title{
+        font-size: 100%;
+    }
+    .nome, .email, .cpf, .senha, .confirmar{
+        width: 100%;
+    }
+    .botao1{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        width: 70px;
+        height: 30px;
+        left: 15%;
+        margin: -44px;
+        font-size: x-large;
+    }
+    .botao2{
+        display: flex;
+        flex-direction: column;
+        width: 76px;
+        height: 30px;
+        position: absolute;
+        left: 40%;
+        margin: -44px;
+        font-size: x-large;
+    }
+    .btn-telacadastro{
+        display: flex;
+        justify-content: space-around;
+        position: relative;
+        top: 145px;
+        left: 90px;
+    }
+    .checkbox-container{
+        display: block;
+        left: 0;
+        top: auto;
+    }
+    .checkbox-container input[type="checkbox"]{
+        margin-right: 10px;
+    }
+    .quadrado{
+        position: fixed;
+        scroll-behavior: smooth;
+        left: 18%;
+        width: 74%;
+        height: 74%;
+        display: flex;
+        flex-direction: column;
+        overflow: auto;
+        scroll-behavior: smooth;
+        overflow-x: hidden;
+    }
+    .nome{
+       width: 85%;
+    }
+    .email{
+        width: 85%;
+        position: absolute;
+        top: 100px;
+    }
+    .cpf{
+       position: absolute;
+       display: flex;
+       flex-direction: column;
+       top: 185px;
+       left: 8%;
+       width: 85%;
+    }
+    .senha{
+        width: 85%;
+        position: absolute;
+        top: 270px;
+    }
+    .confirmar{
+        width: 85%;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        top: 360px;
+        left: 8%;
+    }
+    .labeledit{
+        width: 100%;
+    }
+    .perfild{
+        position: absolute;
+        left: -22%;
+        top: -350px;
+        width: 70%;
+    }
+    .servico{
+        position: absolute;
+        top: -260px;
+        left: -21%;
+    }
+
+    .column-1{
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        left: -27%;
+        top: -230px;
+    }
+    .column-2{
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        left: -27%; 
+        top: -110px;
+    }
+
+}
+
+@media screen and (min-width: 651px) and (max-width: 700px) {
     .cadastro_title{
         position: absolute;
         width: auto;
@@ -1103,13 +1395,14 @@
     .quadrado{
         position: fixed;
         scroll-behavior: smooth;
-        left: 14%;
-        width: 79%;
+        left: 17%;
+        width: 76%;
         height: 74%;
         display: flex;
         flex-direction: column;
         overflow: auto;
         scroll-behavior: smooth;
+        overflow-x: hidden;
     }
     .nome{
        width: 85%;
@@ -1146,13 +1439,13 @@
     .perfild{
         position: absolute;
         left: -22%;
-        top: -150px;
+        top: -350px;
         width: 70%;
     }
     .servico{
         position: absolute;
-        top: -36px;
-        left: -22%;
+        top: -260px;
+        left: -21%;
     }
 
     .column-1{
@@ -1161,243 +1454,7 @@
         flex-direction: column;
         width: 100%;
         left: -27%;
-    }
-    .column-2{
-        position: absolute;
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        left: -27%; 
-        top: 120px;
-    }
-
-}
-
-
-@media screen and (min-width: 721px) and (max-width: 768px) {
-    .cadastro_title{
-        position: absolute;
-        width: auto;
-    }
-    .perfild,.selecionar{
-        width: 100%;
-        position: relative;
-        left: 30%;
-    }
-    .titulo .cadastro_title{
-        font-size: 100%;
-    }
-    .nome, .email, .cpf, .senha, .confirmar{
-        width: 100%;
-    }
-    .botao1{
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        width: auto;
-        left: 0%;
-    }
-    .botao2{
-        display: flex;
-        flex-direction: column;
-        width: auto;
-        position: absolute;
-        left: 40%;
-    }
-    .btn-telacadastro{
-        display: flex;
-        justify-content: space-around;
-        position: relative;
-        top: 370px;
-        left: 23px;
-    }
-    .checkbox-container{
-        display: block;
-        left: 0;
-        top: auto;
-    }
-    .checkbox-container input[type="checkbox"]{
-        margin-right: 10px;
-    }
-    .quadrado{
-        position: fixed;
-        scroll-behavior: smooth;
-        left: 14%;
-        width: 79%;
-        height: 74%;
-        display: flex;
-        flex-direction: column;
-        overflow: auto;
-        scroll-behavior: smooth;
-    }
-    .nome{
-       width: 85%;
-    }
-    .email{
-        width: 85%;
-        position: absolute;
-        top: 100px;
-    }
-    .cpf{
-       position: absolute;
-       display: flex;
-       flex-direction: column;
-       top: 185px;
-       left: 8%;
-       width: 85%;
-    }
-    .senha{
-        width: 85%;
-        position: absolute;
-        top: 270px;
-    }
-    .confirmar{
-        width: 85%;
-        position: absolute;
-        display: flex;
-        flex-direction: column;
-        top: 360px;
-        left: 8%;
-    }
-    .labeledit{
-        width: 100%;
-    }
-    .perfild{
-        position: absolute;
-        left: -22%;
-        top: -150px;
-        width: 70%;
-    }
-    .servico{
-        position: absolute;
-        top: -36px;
-        left: -22%;
-    }
-
-    .column-1{
-        position: absolute;
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        left: -27%;
-    }
-    .column-2{
-        position: absolute;
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        left: -27%; 
-        top: 120px;
-    }
-
-}
-
-@media screen and (min-width: 769px) and (max-width: 900px) {
-    .cadastro_title{
-        position: absolute;
-        width: auto;
-    }
-    .perfild,.selecionar{
-        width: 100%;
-        position: relative;
-        left: 30%;
-    }
-    .titulo .cadastro_title{
-        font-size: 100%;
-    }
-    .nome, .email, .cpf, .senha, .confirmar{
-        width: 100%;
-    }
-    .botao1{
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        width: auto;
-        left: 0%;
-    }
-    .botao2{
-        display: flex;
-        flex-direction: column;
-        width: auto;
-        position: absolute;
-        left: 40%;
-    }
-    .btn-telacadastro{
-        display: flex;
-        justify-content: space-around;
-        position: relative;
-        top: 370px;
-        left: 23px;
-    }
-    .checkbox-container{
-        display: block;
-        left: 0;
-        top: auto;
-    }
-    .checkbox-container input[type="checkbox"]{
-        margin-right: 10px;
-    }
-    .quadrado{
-        position: fixed;
-        scroll-behavior: smooth;
-        left: 12%;
-        width: 82%;
-        height: 74%;
-        display: flex;
-        flex-direction: column;
-        overflow: auto;
-        scroll-behavior: smooth;
-    }
-    .nome{
-       width: 85%;
-    }
-    .email{
-        width: 85%;
-        position: absolute;
-        top: 100px;
-    }
-    .cpf{
-       position: absolute;
-       display: flex;
-       flex-direction: column;
-       top: 185px;
-       left: 8%;
-       width: 85%;
-    }
-    .senha{
-        width: 85%;
-        position: absolute;
-        top: 270px;
-    }
-    .confirmar{
-        width: 85%;
-        position: absolute;
-        display: flex;
-        flex-direction: column;
-        top: 360px;
-        left: 8%;
-    }
-    .labeledit{
-        width: 100%;
-    }
-    .perfild{
-        position: absolute;
-        left: -22%;
-        top: -150px;
-        width: 70%;
-    }
-    .servico{
-        position: absolute;
-        top: -36px;
-        left: -22%;
-    }
-
-    .column-1{
-        position: absolute;
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        left: -27%;
+        top: 0px;
     }
     .column-2{
         position: absolute;
