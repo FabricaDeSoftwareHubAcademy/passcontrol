@@ -41,6 +41,7 @@ body {
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.3s ease;
+    z-index: 99999;
 }
 
 .modal-container.show {
@@ -57,7 +58,6 @@ body {
     height: auto; /* Altura ajustável automaticamente */
     padding: 40px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    position: relative;
     text-align: left;
     box-sizing: border-box;
     border-radius: 0;
