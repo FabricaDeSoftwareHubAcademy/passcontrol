@@ -311,18 +311,6 @@
     border-radius: 2%;
 }
 
-.fundo-guiche-area-chamada{
-    width: 92%;
-    font-weight: 600;
-    height: 100%;
-    border-radius: 5px;
-    background-color: rgb(255, 255, 255,0.5);
-    gap: 15px;
-    margin-top: 2rem;
-    /* overflow-x: scroll; */
-    display: flex;
-    justify-content: left;
-}
     
 
 
@@ -336,7 +324,7 @@
     background-color: rgb(255, 255, 255,0.5); 
     gap: 15px; 
     margin-top: 2rem; 
-    /* overflow-x: scroll; */ 
+    overflow-x: scroll; 
     display: flex; 
     justify-content: left; 
 } 
@@ -367,6 +355,7 @@ th {
     text-align: left; 
     border: 1px solid black; 
     min-width: 50px; 
+
 } 
 td { 
     border: 1px solid black; 
@@ -376,8 +365,11 @@ td {
     color: var(--cinza-control); 
 } 
 td, th {
-    white-space: normal; /* Permite quebra de linha */
-    word-wrap: break-word; /* Garante que palavras longas quebrem */
+    /* overflow-y: auto; */
+    /* min-width: 50px; */
+    width: calc(+90px);
+    /* white-space: normal; Permite quebra de linha */
+    /* word-wrap: break-word; Garante que palavras longas quebrem */
 }
 thead, tbody tr { 
     display: table; 
