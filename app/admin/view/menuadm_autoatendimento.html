@@ -89,13 +89,27 @@
         <!-- INSIRA O CORPO DA SUA PÁGINA A PARTIR DESTE PONTO -->
 
         <!-- CODIGO DO ELIANDRO -->
-        <div class="nome_da_area_eli">
-            <div class="scrollmenu">
+        <!-- navmenu -->
+        <div class="menu-container">
+            <div class="menu">
+                <button class="hamburger" onclick="toggleMenu()">☰</button>
                 <a href="./menuadm_usuario.html">Usuários</a>
-                <a href="./menuadm_serviços.html">Serviços</a>
+                <a href="./menuadm_servicos.html">Serviços</a>
                 <a href="./menuadm_autoatendimento.html" class="active">Autoatendimento</a>
                 <a href="./menusup_usuario.html">SUP</a>
             </div>
+            <div class="menu-mobile" id="mobileMenu">
+                <a href="./menuadm_usuario.html">Usuários</a>
+                <a href="./menuadm_servicos.html">Serviços</a>
+                <a href="./menuadm_autoatendimento.html" class="active">Autoatendimento</a>
+                <a href="./menusup_usuario.html">SUP</a>
+            </div>
+        </div>
+        <script>
+            function toggleMenu() {
+                document.getElementById("mobileMenu").classList.toggle("active");
+            }
+        </script>
             <!-- área da descrição da página de navegação  -->
             <div class="descricao">
                 <h2>Menu de Gestão</h2>
