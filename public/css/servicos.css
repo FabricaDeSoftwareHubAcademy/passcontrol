@@ -105,11 +105,7 @@
     border: 1px solid #4a5a67;
 
   }
-  .coluna-editar {
-    display: flex;
-    flex-direction: column;
-    outline: none;
-  }
+ 
   
   #icone-editar {
     width: 30px;
