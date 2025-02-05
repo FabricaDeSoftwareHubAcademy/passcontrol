@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const buttonAbrir = document.querySelector(".botao--guiche-area-chamada");
+    const buttonAbrir = document.querySelector(".chamar-senha");
     
     // Acessar o modal (EXPORTADO)
     const modalContainer = document.querySelector("main-proxima-senha");

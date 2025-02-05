@@ -115,11 +115,11 @@
                     <ul class="esquerda-area-chamada">
                         <div class="guiche_senha-area-chamada">
                             <div class="guiche-area-chamada-tl">
-                                <p>0</p>
+                                <h2>0</h2>
                                 <p>Guichê</p>
                             </div>
                             <div class="senha_fila-guiche-area-chamada">
-                                <p>1</p>
+                                <h2>1</h2>
                                 <p>Senhas Na Fila</p>
                             </div>
                         </div>
@@ -138,7 +138,7 @@
                                     Consultar Fila
                                 </a>
                             </button>
-                            <button class="botao--guiche-area-chamada">
+                            <button class="botao--guiche-area-chamada chamar-senha">
                                 <a href="">
                                     <img src="../../../public/img/icons/user.svg" alt="usuário">
                                     Próxima Senha
@@ -153,11 +153,11 @@
                     </div>
                     <div class="meio_direita-guiche-area-chamada">
                         <div class="senhas-guiche-area-chamada">
-                            <p>0</p>
+                            <h2>0</h2>
                             <p>Senhas Atendidas</p>
                         </div>
                         <div class="senhas-guiche-area-chamada">
-                            <p>2</p>
+                            <h2>2</h2>
                             <p>Senhas Ausente</p>
                         </div>
                     </div>
@@ -401,5 +401,11 @@
         </div>
     </div>
     <script src="../../../public/js/monitor-modal.js" defer></script>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById("mobileMenu").classList.toggle("active");
+        }
+    </script>
 </body>
 </html>
