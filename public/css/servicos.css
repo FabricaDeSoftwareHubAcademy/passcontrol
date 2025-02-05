@@ -180,7 +180,7 @@
     }
   
     .campo-busca {
-      margin-left: 70%;
+      margin-left: 66.4%;
     }
   
     .linha-divisoria {
@@ -199,6 +199,7 @@
     }
     .campo-busca {
       max-width: 250px;
+      margin-left: 75%;
     }
   
     #buscar-servico {
@@ -220,7 +221,7 @@
   
     .campo-busca {
       width: 100px;
-      margin-left: auto;
+      margin-left: 69%;
     }
   
     .toggle-btn {
@@ -233,7 +234,13 @@
       height: 14px;
     }
   }
-  
+  @media screen and (max-width: 360px) {
+    .campo-busca {
+      width: 100px;
+      margin-left: 64%;
+  }
+}
+
   @media screen and (max-width: 320px) {
     #tela-branca {
       width: 100%;
