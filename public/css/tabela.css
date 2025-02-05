@@ -5,6 +5,20 @@
   margin-top: 2rem;
   padding: 1.875rem;
   display: flex;
+  height: 70%;
+}
+
+ .sub-area-tabela {
+  height: 100%; 
+  overflow: hidden; 
+  position: relative; 
+  width: 100%;
+}
+
+.sub-sub-area-tabela {
+  max-height: 100%; 
+  overflow-y: auto; 
+  width: 100%;
 }
 
 .tabela {
@@ -12,6 +26,8 @@
   border-collapse: collapse;
   background-color: rgb(255, 255, 255,0.4);
   width: 100%;
+  height: 30%;
+
 }
 
 th, td {
@@ -24,11 +40,14 @@ th, td {
 th {
   background-color: var(--cinza-control);
   color: var(--cor-fundo);
+  position: sticky;
+  z-index: 10;
+  top: 0;
 }
 
 .editar{
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 
@@ -36,6 +55,11 @@ th {
   content: url(/public/img/icons/Group\ 2925.png);
   transition: 1s;}
 
+.ativarswitch{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .switch {
   position: relative;
   display: inline-block;
