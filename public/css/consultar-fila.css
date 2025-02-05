@@ -126,7 +126,6 @@
     background-color: rgba(255, 255, 255, 0.5); 
     width: 95%; 
     margin: 2vw auto; 
-    max-height: 230px; 
     position: relative; 
     overflow: hidden;  
     transition: overflow 0.3s ease;  
@@ -163,7 +162,7 @@ thead, tbody tr {
 } 
 tbody { 
     display: block; 
-    max-height: 180px; 
+    max-height: 45vh;
     overflow-y: scroll;  
     position: relative; 
 } 
