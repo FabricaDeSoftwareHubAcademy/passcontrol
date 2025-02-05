@@ -139,10 +139,9 @@
     width: 100%;
 }
 
-.guiche-area-chamada-tl {
+.guiche-area-chamada-tl{
     display: flex;
     flex-direction: column;
-    /* background-color: blueviolet; */
     justify-content: center;
     align-items: center;
     width: 230px;
@@ -154,8 +153,19 @@
     font-weight: 700;
     color: #33404D;
     background-color: rgba(255, 255, 255, 0.3);
+    gap: 5%;
+    
 }
-
+.guiche-area-chamada-tl h2, .senha_fila-guiche-area-chamada h2{
+    text-align: center;
+    align-items: center;
+    width: 100%;
+}
+.guiche-area-chamada-tl p, .senha_fila-guiche-area-chamada p{
+    font-size: 2.5vh;
+    height: 35%;
+    margin: 0;
+}
 .senha_fila-guiche-area-chamada {
     display: flex;
     flex-direction: column;
@@ -171,6 +181,7 @@
     font-weight: 700;
     color: #33404D;
     background-color: rgba(255, 255, 255, 0.3);
+    gap: 5%
 }
 
 .botao_intervalo-guiche-area-chamada {
@@ -309,9 +320,16 @@
     font-weight: 700;
     color: #33404D;
     border-radius: 2%;
+    gap: 0;
 }
-
-    
+.senhas-guiche-area-chamada h2{
+    padding-top: 5%;
+    height: 50%;
+    /* background-color: red; */
+}
+.senhas-guiche-area-chamada p{
+    font-size: 2.5vh;
+}
 
 
 
