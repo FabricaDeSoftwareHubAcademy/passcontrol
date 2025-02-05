@@ -324,7 +324,7 @@
     background-color: rgb(255, 255, 255,0.5); 
     gap: 15px; 
     margin-top: 2rem; 
-    overflow-x: scroll; 
+    /* overflow-x: scroll;  */
     display: flex; 
     justify-content: left; 
 } 
@@ -1156,8 +1156,9 @@ th, td {
         height: 70%;
     }
     th, td {
-        padding: 1px;
+        padding: 10px;
         text-align: left;
+
     }
 }
 

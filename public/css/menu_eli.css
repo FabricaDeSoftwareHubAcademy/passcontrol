@@ -1,59 +1,94 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
-:root{
+:root {
   --verde-control: #3AA867;
   --cinza-control: #33404D;
   --cor-fundo: #f9f9f9;
   --cor-nave-botaa: #2d3945;
-  --cor-hove-menu:  rgba(0, 0, 0, 0.2);
+  --cor-hove-menu: rgba(0, 0, 0, 0.2);
   --cor-active: rgb(219 219 219);
-  --font-main: Inter, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  --font-main: Inter, sans-serif;
 }
-*{
+* {
   margin: 0;
   padding: 0;
-  
+  box-sizing: border-box;
 }
-
-div.scrollmenu {
+body {
+  font-family: var(--font-main);
+  background: var(--cor-fundo);
+}
+.menu-container {
   background-color: var(--cinza-control);
-  white-space: nowrap;
-  cursor: pointer;
-  height: auto;
-  /* padding-top: 15px; */
-  padding-top: 10px;
-  padding-left: 10px;
-  user-select: none;
-
-  /* display: flex;
-	align-items: center;
-	min-height: 48px;
-	margin-left: 60px;
-	cursor: pointer;
-	user-select: none; */
+  padding: 0 10px;
 }
-
-div.scrollmenu a {
-  display: inline-block;
+.menu {
+  padding-top: 15px;
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+}
+.menu a {
   color: var(--cor-fundo);
-  text-align: center;
-  padding: 14px;
   text-decoration: none;
+  padding: 14px;
   border-radius: 5px 5px 0px 0px;
 }
-
-div.scrollmenu a:hover {
+.menu a:hover {
   background-color: var(--cor-hove-menu);
   color: var(--verde-control);
 }
-
-div.scrollmenu a.active{
+.menu a.active {
   background-color: var(--cor-active);
   color: var(--verde-control);
-  text-decoration: none;
-  /* padding: 13px; */
 }
-
-div.scrollmenu a.active:hover {
+.menu a.active:hover {
   color: var(--font-main);
+}
+.menu-mobile {
+  display: none;
+  flex-direction: column;
+  background-color: var(--cinza-control);
+}
+.menu-mobile a {
+  color: var(--cor-fundo);
+  padding: 14px;
+  text-align: center;
+  border-bottom: 1px solid var(--cor-nave-botaa);
+}
+.menu-mobile a:hover {
+  background-color: var(--cor-hove-menu);
+  color: var(--verde-control);
+}
+.menu-mobile a.active {
+  background-color: var(--cor-active);
+  color: var(--verde-control);
+}
+.menu-mobile  a.active:hover {
+  color: var(--font-main);
+}
+.hamburger {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: var(--cor-fundo);
+  background: none;
+  border: none;
+}
+@media (max-width: 768px) {
+  .menu a {
+      display: none;
+  }
+  .hamburger {
+      display: block;
+  }
+  .menu-mobile {
+      display: none;
+  }
+  .menu-mobile.active {
+      display: flex;
+  }
+  .menu-mobile a.active:hover {
+    color: var(--verde-control);
+  }
 }
