@@ -90,11 +90,16 @@
 
     <section class="Area-Util-Projeto">
         <!-- SUBMENU ATENDIMENTO -->
-        <div class="scrollmenu">
-            <a href="../../../app/admin/view/atendimento_tempo_real.html" class="active">Guichês</a>
-            <a href="../../../app/admin/view/atendimento.html">Atendimento</a>
-            <!-- <a href="./menuadm_autoatendimento.html">Autoatendimento</a> -->
-            <!-- <a href="./menuadm_usuario.html">ADM</a> -->
+        <div class="menu-container">
+            <div class="menu">
+                <button class="hamburger" onclick="toggleMenu()">☰</button>
+                <a href="../../../app/admin/view/atendimento_tempo_real.html" class="active">Guichês</a>
+                <a href="../../../app/admin/view/atendimento.html">Atendimento</a>
+            </div>
+            <div class="menu-mobile" id="mobileMenu">
+                <a href="../../../app/admin/view/atendimento_tempo_real.html" class="active">Guichês</a>
+                <a href="../../../app/admin/view/atendimento.html">Atendimento</a>
+            </div>
         </div>
 
         <!-- ACOMPANHAMENTO EM TEMPO REAL -->

@@ -98,9 +98,16 @@
 
         <!-- <div class="principal-chamar-senha"> -->
             <!-- SUBMENU ATENDIMENTO -->
-            <div class="scrollmenu" style="display: flex; justify-content: start; align-items: start;">
-                <a href="../../../app/admin/view/atendimento_tempo_real.html">Guichês</a>
-                <a href="../../../app/admin/view/atendimento.html" class="active">Atendimento</a>
+            <div class="menu-container">
+                <div class="menu">
+                    <button class="hamburger" onclick="toggleMenu()">☰</button>
+                    <a href="../../../app/admin/view/atendimento_tempo_real.html">Guichês</a>
+                    <a href="../../../app/admin/view/atendimento.html" class="active">Atendimento</a>
+                </div>
+                <div class="menu-mobile" id="mobileMenu">
+                    <a href="../../../app/admin/view/atendimento_tempo_real.html">Guichês</a>
+                    <a href="../../../app/admin/view/atendimento.html" class="active">Atendimento</a>
+                </div>
             </div>
 
             <nav class="area-chamada-atendimento">
