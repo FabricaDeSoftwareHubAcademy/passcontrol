@@ -12,7 +12,7 @@
 
 .quadrado{
     width: 90%;
-    height: 90%;
+    height: 80%;
     background-color: rgba(255, 255, 255, 0.356);
     position: absolute;
     left: 5%;
@@ -99,7 +99,7 @@
     margin-top: 12px;
 }
 
-.senha{  
+.senha-cadastro{  
     position: relative;
     top: 28px;
     left: 8%;
@@ -108,7 +108,7 @@
     flex-direction: column;
     font-size: 90%;
 }
-.senha .borda{
+.senha-cadastro .borda{
     height: 40px;
     border-radius: 5px;
     margin-top: 12px;
@@ -337,7 +337,11 @@
     
 }
 
+@media screen and (max-width: 1715px){
 
+}
+
+/* 
 @media screen and (min-width: 320px) and (max-width: 374px) {
     .selecionar{
         width: 100%;
@@ -3386,4 +3390,4 @@
 
 
 
-
+ */
