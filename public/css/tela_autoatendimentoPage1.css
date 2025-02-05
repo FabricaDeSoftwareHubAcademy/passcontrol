@@ -15,7 +15,7 @@
     z-index: 1000;
 }
 
-cabeca {
+.cabeca {
     background-color: var(--cinza-control);
     height: auto;
     width: auto;
