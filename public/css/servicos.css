@@ -86,31 +86,9 @@
     justify-content: left;
   }
   
-  .cabecalho-tabela1{
+  .cabecalho-tabela1, .cabecalho-tabela2,.cabecalho-tabela3, .cabecalho-tabela4{
     color: #ffffff;
     width: 30%;
-  }
-  .cabecalho-tabela2{
-    color: #ffffff;
-    width: 30%;
-
-  }
-  .cabecalho-tabela3{
-    color: #ffffff;
-    width: 30%;
-
-  }
-  .cabecalho-tabela4{
-    color: #ffffff;
-    width: 25%;
-
-  }
-  .tabela-servicos th,
-  .tabela-servicos td {
-    padding: 10px;
-    text-align: left;
-    border: 1px solid #4a5a67;
-
   }
   .tabela-servicos th {
     background-color: #4a5a67;
@@ -120,9 +98,17 @@
     z-index: 10;
   }
 
+  .tabela-servicos th,
+  .tabela-servicos td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #4a5a67;
+
+  }
   .coluna-editar {
     display: flex;
     flex-direction: column;
+    outline: none;
   }
   
   #icone-editar {
