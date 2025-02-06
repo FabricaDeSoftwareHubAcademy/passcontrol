@@ -32,25 +32,27 @@
   margin-left: 23px;
 }
 .campo-busca {
-  width: 30%;
-  height: 39px;
+  height: 4%;
+  width: 96%;
   outline: none;
   border: 1px rgb(6, 11, 95);
-  margin-left: 74%;
-  display: block;
-
 }
 #buscar-servico {
-  width: 60%;
+  width: 20%;
+  height: 100%;
   font-style: italic;
   font-size: 14px;
   border: 2px solid #333333c2;
   border-radius: 10px 10px 0 0;
+  opacity: 0.5;
+  z-index: -1;
   outline: none;
   background-image: url(../../public/img/icons/lupa.png);
+  background-size: contain;
   background-position: right 10px center;
   background-repeat: no-repeat;
   box-sizing: border-box;
+  margin-left: 82%;
 }
 .linha-divisoria {
   background-color: #37474F;
@@ -68,7 +70,7 @@
   margin: 25px auto;
 }
 .tabela-wrapper {
-  max-height: 339px;
+  max-height: 350px;
   overflow-y: auto;
   border: 1px solid #dddddd;
 }
@@ -77,14 +79,16 @@
   border-collapse: collapse;
 }
 .cabecaTabelaServicos{
+  width: fit-content;
+  height: max-content;
   position: sticky;
   top: 0;
   z-index: 1000;
-  border: 10px solid #4a5a67;
 }
 .topo-tabela{
   width: 100%;
-  text-align: left;
+  height: 60px;
+  text-align: right;
   top: 0;
   flex-wrap: wrap;
   align-content: stretch;
@@ -115,8 +119,7 @@
   border: 1px solid #4a5a67;
 }
 
-.tabela-servicos th,
-.tabela-servicos td {
+.tabela-servicos td, .cabecalho-tabela1 th{
   padding: 10px;
   text-align: left;
   border: 1px solid #4a5a67;
@@ -154,42 +157,49 @@
   background-color: #00cc00;
   left: 36px;
 }
-
-.botaoCadastrarServico, .botaoVoltarServicos {
-  width: 96%;
-  height: 100px;
-  display: flex;
-  justify-content: flex-end;
-}
-.botaoCadastrar, .botaoVoltarServ {
-  height: 40px;
-  background-color: #37474F;
-  color: white;
-  border: none;
+.botao-voltar, .botao-cadastro {
   padding: 10px 20px;
-  font-size: 16px;
+  font-size: 1rem;
+  font-weight: 500;
+  border: none;
   border-radius: 5px;
   cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+.botoesVoltar-Cadastrar{
+  display: flex;
+  justify-content: flex-end;
+  gap: 16px;
+  margin-top: auto;
+  margin-bottom: 40px;
+  margin-right: 2%;
+}
+.botao-voltar {
+  background-color: #33404D;
+  color: #fff;
+}
+
+.botao-voltar:hover {
+  color: #FFFFFF;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.botao-cadastro {
+  background-color: #33404D;
+  color: #fff;
+}
+
+.botao-cadastro:hover {
+  color: #3AA867;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }
 
 button:hover {
   background-color: #455A64;
 }
 .tabela-wrapper::-webkit-scrollbar {
-  width: 10px;
+  width: 5px;
 }
-.tabela-wrapper::-webkit-scrollbar-track {
-  background: #f1f1f1;
-  border-radius: 5px;
-}
-.tabela-wrapper::-webkit-scrollbar-thumb {
-  background: #888;
-  border-radius: 5px;
-}
-.tabela-wrapper::-webkit-scrollbar-thumb:hover {
-  background: #555;
-}
-
 
 @media screen and (max-width: 1024px) {
   #servico {
@@ -201,14 +211,15 @@ button:hover {
     height: auto;
   }
 
-  .campo-busca {
-    margin-left: 73%;
-  }
-
   .linha-divisoria {
     width: 95%;
     margin-left: 2%;
   }
+  #buscar-servico{
+    margin-left: 76%;
+    width: 25%;
+  }
+  
 }
 
 @media screen and (max-width: 768px) {
@@ -219,9 +230,13 @@ button:hover {
   .linha-divisoria{
     width: 93%;
   }
-  .campo-busca {
-    max-width: 450px;
-    margin-left: 71%;
+  #buscar-servico{
+    margin-left: 64%;
+    width: 35%;
+  }
+
+  .botoesVoltar-Cadastrar{
+    margin-right: 5%;
   }
 
   #buscar-servico {
@@ -232,21 +247,20 @@ button:hover {
     height: 25px;
     cursor: pointer;
     margin-right: 20px;
-}
+  }
 }
 
-@media screen and (max-width: 540px) {
+@media screen and (max-width: 560px) {
   #tela-branca {
     width: 85%;
     padding: 8px;
   }
-
-  .campo-busca {
-    width: 100px;
-    margin-left: 69%;
-  }
   .linha-divisoria{
     width: 90%;
+  }
+  #buscar-servico{
+    margin-left: 42%;
+    width: 50%;
   }
   .toggle-btn {
     width: 50px;
@@ -258,28 +272,26 @@ button:hover {
     height: 14px;
   }
 }
-@media screen and (max-width: 360px) {
-  .campo-busca {
-    width: 100px;
-    margin-left: 64%;
-}
-}
+/* @media screen and (max-width: 360px) { */
+
 
 @media screen and (max-width: 320px) {
   #tela-branca {
     width: 100%;
     padding: 5px;
   }
-
-  .campo-busca {
-    width: 80px;
-    font-size: 10px;
-    margin-left: auto;
-    margin-right: 10px;
+  #buscar-servico{
+    margin-left: 2%;
+    width: 100%;
   }
-
+  .linha-divisoria{
+    width: 96%;
+  }
   .tabela-servicos th,
   .tabela-servicos td {
     font-size: 12px;
+  }
+  .botoesVoltar-Cadastrar{
+    margin-right: 1.5%;
   }
 }
