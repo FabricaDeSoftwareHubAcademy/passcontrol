@@ -10,7 +10,7 @@
 .recuperarSenha{
     min-height: 100vh;
     background-color: #fff;
-    background-image: url(../assets/img/Background-logo\ 2.svg);
+    background-image: url(../img/Background-logo\ 2.svg);
     background-repeat: no-repeat;
     background-position: bottom right;
     background-size: 20%;
@@ -291,4 +291,11 @@ main{
 
 .requisitosValidos {
     color: green;
+}
+
+@media (min-width: 0) and (max-width: 535px){
+    .titlePass{
+        font-size: 15px;
+    }
+
 }

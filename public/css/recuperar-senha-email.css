@@ -7,10 +7,18 @@
     font-family: inter;
     font-style: bold;
 }
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
 .recuperarSenha{
     min-height: 100vh;
     background-color: #fff;
-    background-image: url(../assets/img/Background-logo\ 2.svg);
+    background-image: url(../img/Background-logo\ 2.svg);
     background-repeat: no-repeat;
     background-position: bottom right;
     background-size: 20%;
@@ -286,8 +294,11 @@ main{
 
 
 
-@media (min-width: 0px) and (max-width: 466px){
+titlePasstitlePass{
 
+    .titlePass{
+        font-size: 15px;
+    }
     .box{
         width: 100%;
         border-radius: 10px 10px 10px 10px;
