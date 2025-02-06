@@ -20,7 +20,7 @@
 
 /* TOPO */
 
-.cabeca {
+.head {
     background-color: var(--cinza-control);
     height: auto;
     width: auto;
@@ -28,7 +28,7 @@
     display: flex;
 }
 
-.nav-cabeca {
+.nav-head {
     background-color: var(--cor-fundo);
     width: 100%;
     height: 100px;
@@ -48,7 +48,7 @@
     width: 100%;
 }
 
-.nav-cabeca H3 {
+.nav-head H3 {
     color: var(--cinza-control);
     width: 80%;
     padding-left: 20px;
@@ -57,7 +57,7 @@
     font-size: 23px;
 }
 
-.area-servicos {
+.workspace {
     height: calc(100vh - 140px);
     width: 100%;
     display: flex;
@@ -70,7 +70,7 @@
     background-position: right bottom;
 }
 
-.selecione-servico {
+.title {
     align-items: center;
     justify-content: center;
     font-size: 32px;
@@ -79,18 +79,20 @@
     color: #113062;
     font-weight: 800;
     margin-bottom: 20px;
-    padding-top: 90px;
+    /* padding-top: 50px; */
+    margin-top: 0%;
 }
 
 
-.espaco {
+
+.border-line {
     background-color:var(--cinza-control);
     height: 50px;
     width: 100%;
     margin: 10px 0;
 }
 
-.fundo-cinza {
+.area-cinza {
     background-color: rgba(0, 0, 0, 0.1);
     width: 90%;
     height: 100%; /* Altere para 100% para garantir que a altura seja adequada */
@@ -102,20 +104,8 @@
     flex-direction: column;
 }
 
-.box-servicos {
-    width: auto;
-    max-width: 1200px;
-    padding: 20px;
-    margin: 20px auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
 
-
-
-.area-quadrados {
+.box-area {
     display: flex;
     width: auto;
     height: auto;
@@ -130,7 +120,7 @@
 }
 
 
-.quadrado {
+.box {
     border: 4px solid var(--verde-control);
     border-radius: 5px;
     width: 250px;
@@ -146,7 +136,7 @@
     overflow: hidden; /* Garante que o conteúdo não ultrapasse o quadrado */
 }
 
-.quadrado .imagem-servico-container {
+.box .imagem-servico-container {
     display: flex;
     flex-direction: row; /* Alinha as imagens horizontalmente */
     justify-content: center;
@@ -161,7 +151,7 @@
     object-fit: contain; /* Garante que as imagens se ajustem dentro do espaço sem distorcer */
 }
 
-.quadrado h4 {
+.box h4 {
     color: #113062;
     font-size: 18px;
     font-weight: bold;
@@ -171,29 +161,28 @@
 
 
 
-.botao {
-    display: flex;
-    justify-content: flex-start; /* Alinha à esquerda */
-    width: 100%; /* Garante que ocupe toda a largura disponível */
-    margin-top: 30px; /* Adiciona um espaço acima do botão */
-    position: relative;
-    padding: -20px;
-    border:2px solid #113062;
-}
-
-.btn-voltar {
-    background-color: white;
+.button {
     display: flex;
     justify-content: center;
+    width: 100%; 
+    margin-top: 30px;
+    position: relative;
+    padding: -20px;
+    background-color: white;
     align-items: center;
     cursor: pointer;
     border-radius: 5px;
     height: 60px;
-    width: 150px;
+}
+
+.btn-text { 
+    display: flex;
     text-align: center;
     font-size: 18px;
-    color: #113062; /* Cor do texto */
-    text-decoration: none; /* Remove o sublinhado do link */
+    color: #113062;
+    text-decoration: none; 
     font-weight: bold;
     padding: 10px;
+    margin-top: 30px;
 }
+
