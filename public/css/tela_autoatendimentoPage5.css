@@ -20,7 +20,7 @@
   
   /* TOPO */
   
-  .cabeca {
+  .head {
     background-color: var(--cinza-control);
     height: auto;
     width: auto;
@@ -28,7 +28,7 @@
     display: flex;
   }
   
-  .nav-cabeca {
+  .nav-head {
     background-color: var(--cor-fundo);
     width: 100%;
     height: 100px;
@@ -48,7 +48,7 @@
     width: 100%;
   }
   
-  .nav-cabeca H3 {
+  .nav-head H3 {
     color: var(--cinza-control);
     width: 80%;
     padding-left: 20px;
@@ -57,64 +57,54 @@
     font-size: 23px;
   }
   
-  .area-servicos {
-    height: calc(100vh - 140px);
+  .workspace {
+    height: 100%;
     width: 100%;
     display: flex;
-    background-image: url(../assets/background.png);
-    background-size: 400px;
-    background-repeat: no-repeat;
-    background-position: right bottom;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-  }
+    background-image: url('../img/Background-logo\ 2.svg');
+    background-size: 400px;
+    background-repeat: no-repeat;
+    background-position: right bottom;
+}
   
-  .selecione-servico {
-    align-items: center;
-    justify-content: center;
-    font-size: 32px;
-    text-align: center;
-    font-family: var(--font-main);
-    font-weight: 800;
-  }
-  
-  .espaco {
+  .border-line {
     background-color: black;
     height: 50px;
     width: 100%;
     margin: 10px 0;
   }
   
-  .fundo-cinza {
-    background-color: rgba(0, 0, 0, 0.1);
-    margin-top: 50px;
-    width: 1300px;
-    height: 1000px;
-    border-radius: 5px;
-  }
-  
-  .box-servicos {
-    width: auto;
-    max-width: 1200px;
-    padding: 20px;
-    margin: 20px auto;
+  .area-cinza {
+    background-color: rgba(0, 0, 0, 0.1); 
+    width: calc(100% - 40px);
+    min-height: 60vh;
+    height: calc(100vh - 160px);
+    top: 10px; 
+    left: 10px; 
+    right: 10px; 
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
-  }
+    justify-content:flex-start;
+    align-items: center;
+    border-radius: 10px;
+    padding: 20px;
+    
+}
   
-  .botao {
+  
+  /* .button {
     margin-top: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
     padding: 0 50px;
-  }
+  } */
   
-  .btn-finalizar {
+  /* .btn-finalizar {
     background-color: black;
     color: white;
     display: flex;
@@ -124,4 +114,41 @@
     width: 200px;
     height: 40px;
     border: none;
-  }
+  } */
+
+  .button {
+    display: flex;
+    justify-content:center;
+    width: 10%; 
+    margin-top: 30px;
+    position: relative;
+    padding: -20px;
+    background-color: var(--cinza-control);
+    align-items: center;
+    cursor: pointer;
+    border-radius: 5px;
+    height: 60px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.button:hover {
+    background-color: var(--cinza-control);
+}
+
+.button:hover .btn-text {
+    color: green; 
+}
+
+.btn-text { 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 18px;
+    color: white;
+    text-decoration: none; 
+    font-weight: bold;
+    padding: 10px;
+    height: 100%;
+    width: 100%;
+}

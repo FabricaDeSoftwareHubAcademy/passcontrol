@@ -8,7 +8,7 @@
     <!-- TROCA TÍTULO QUANDO FOR UTILIZAR -->
     <title>PassControl</title> 
 
-    <link rel="stylesheet" href="../../public/css/tela_autoatendimentoPage4.css">
+    <link rel="stylesheet" href="../../../public/css/tela_autoatendimentoPage4.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -24,26 +24,26 @@
 </head>
 
 <body>
-    <header class="cabeca">
-        <nav class="nav-cabeca">
+    <header class="head">
+        <nav class="nav-head">
             <div class="logo-control">
                 <img src="../../../public/img/icons/logo control.svg" alt="LOGOCONTROL" id="img-logo">
             </div>
             <H3>PassControl</H3>
     </header>
 
-    <div class="espaco"></div>
+    <div class="border-line"></div>
 
-    <main class="area-servicos">
+    <main class="workspace">
 
-        <div class="fundo-cinza">
-            <section class="box-servicos" id="box-servicos">
-                <span class="selecione-servico">
+        <div class="area-cinza">
+        
+                <h4 class="page-title">
                     Informe seus dados para atendimento:
-                </span>
-                <br>
+                </h4>
+                
 
-                <div class="container-inputs">
+                <div class="box-inputs">
                     <div class="input-group">
                         <h3 for="nome">Nome*</h3>
                         <input type="text" class="input-servico" id="nome" name="nome" placeholder="Nome">
@@ -60,17 +60,18 @@
                         <input type="text" class="input-senha" id="senha" name="senha" placeholder="* A SENHA NÃO SERÁ IMPRESSA">
                     </div>
                 </div>
-            </section>
+            
 
-            <div class="botoes">
-                <a href="../../usuario/view/tela_autoatendimentoPage3.html" class="btn-voltar">
-                VOLTAR
-                </a>
-            </div>
-            <div class="botao">
-                <a href="../../usuario/view/tela_autodimentoPage5.html" class="btn-proximo">
-                PRÓXIMO
-                </a>
+                <div class="footer">
+                    <button class="button">
+                        <a href="../../usuario/view/tela_autoatendimentoPage3.html" class="btn-voltar">VOLTAR</a>
+                    </button>   
+                    <button class="button">
+                        <a href="../../usuario/view/tela_autoatendimentoPage5.html" class="btn-confirmar">CONFIRMAR</a>
+                    </button>   
+                </div>
+
+
             </div>
                
                
