@@ -117,3 +117,10 @@
       left: 8vh;
   }
 }
+@media (min-width: 0px) and (max-width: 625px){
+  .area-cards{
+    padding: 15px;
+    overflow-y: scroll; 
+  }
+  
+ }

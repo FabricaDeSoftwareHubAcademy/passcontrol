@@ -54,6 +54,7 @@ body {
   color: var(--cor-fundo);
   padding: 14px;
   text-align: center;
+  text-decoration: none;
   border-bottom: 1px solid var(--cor-nave-botaa);
 }
 .menu-mobile a:hover {
@@ -81,6 +82,7 @@ body {
   }
   .hamburger {
       display: block;
+      padding: 0 0 15px;
   }
   .menu-mobile {
       display: none;
@@ -90,5 +92,17 @@ body {
   }
   .menu-mobile a.active:hover {
     color: var(--verde-control);
+  }
+}
+
+@media (min-width: 0px) and (max-width: 625px){
+  .container{
+    width: 150px;
+  }
+  .banner-img{
+    width: 100%;
+  }
+  .banner-img img{
+    width: 100%;
   }
 }
