@@ -1,0 +1,403 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo do corpo da página */
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f5f5f5;
+}
+
+/* Estilo dos botões */
+.botao-modal {
+    padding: 10px 20px;
+    background-color: rgb(47, 128, 128);
+    border: 0;
+    border-radius: 10px;
+    font-size: 18px;
+    color: #FFFFFF;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+/* Estilo do container do modal */
+.modal-container {
+    background: rgba(0, 0, 0, 0.5);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.modal-container.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Estilo do modal */
+.modal {
+    background-color: #e0e0e0;
+    width: 80%;
+    max-width: 1200px; /* Limita o tamanho máximo */
+    min-width: 400px; /* Evita que fique pequeno demais */
+    height: auto; /* Altura ajustável automaticamente */
+    padding: 40px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+    text-align: left;
+    box-sizing: border-box;
+    border-radius: 0;
+}
+
+/* Estilo da linha horizontal */
+hr {
+    border: none;
+    border-top: 3px solid #000;
+    width: 32.4vw; /* Largura total da tela (viewport) */
+    margin-left: calc(-16.2vw + 50%); /* Centraliza a linha no modal */
+    margin-right: calc(-20vw + 50%); /* Centraliza a linha no modal */
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* Estilo do logo */
+.logo {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    width: 10%; /* Ocupa 10% da largura do modal */
+    max-width: 200px; /* Limita o tamanho máximo */
+    height: auto;
+}
+.senha-atual{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+.nova-senha{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+.conf-senha{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+.container{
+    flex: 1;
+    margin-right: 20px;
+}
+.container:last-child {
+    margin-right: 0; /*Remove o espaçamento do último grupo*/
+}
+.file-input{
+    display: flex;
+    align-items: center;
+}
+.folder-icon{
+    width: 40px;
+    height: auto;
+}
+h1 {
+    font-size: 25px !important;
+    margin-bottom: 35px;
+    font-weight: bold;
+}
+label {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+input[type="number"], 
+input[type="text"],
+input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: white;
+}
+input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: white;
+    cursor: pointer;
+}
+/* Grupo de botões */
+.button-group {
+    display: flex;
+    justify-content: right;
+    gap: 0px;
+    margin-top: 20px;
+}
+
+/* Estilo do botão cancelar */
+button.cancel {
+    background-color: #33404D;
+    color: white;
+    margin-right: 30px;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 10px 30px;
+}
+
+/* Estilo do botão cancelar no hover */
+button.cancel:hover {
+    color: #FFF;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Estilo do botão salvar */
+button.save {
+    background-color: #33404D;
+    color: white;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 10px 30px;
+}
+
+/* Estilo do botão salvar no hover */
+button.save:hover {
+    color: #3AA867;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Media Queries */
+
+/* Telas pequenas (celulares) */
+
+/* Telas pequenas (até 320px) */
+@media (max-width: 400px) and (min-width: 320px) {
+    .modal {
+        width: 90% !important;
+        min-width: auto !important; /* Permite ajuste dinâmico */
+        padding: 15px !important;
+    }
+    
+    .logo {
+        width: 50px !important;
+        top: 15px;
+        right: 10px !important;
+    }
+
+    h1 {
+        font-size: 18px !important;
+        margin-bottom: 20px !important;
+    }
+
+    label {
+        font-size: 14px !important;
+    }
+
+    input[type="number"], 
+    input[type="text"],
+    input[type="file"] {
+        padding: 8px !important;
+        font-size: 14px !important;
+    }
+
+    .button-group {
+        flex-direction: row !important;
+        align-items: center !important;
+        gap: 10px !important;
+    }
+
+    button {
+        font-size: 12px !important;
+        padding: 8px 15px !important;
+        width: 100% !important;
+    }
+
+    button.cancel {
+        margin-right: 0 !important; /* Remove o deslocamento para a esquerda */
+    }
+
+    button.cancel{
+        font-size: 12px !important; /* Diminui o tamanho da fonte */
+        padding: 8px 12px !important; /* Reduz o padding */
+        width: auto !important; /* Ajusta a largura automaticamente */
+        max-width: 200px !important; /* Limita o tamanho máximo da largura */
+    }
+
+    button.save{
+        font-size: 12px !important; /* Diminui o tamanho da fonte */
+        padding: 8px 12px !important; /* Reduz o padding */
+        width: auto !important; /* Ajusta a largura automaticamente */
+        max-width: 200px !important; /* Limita o tamanho máximo da largura */
+    }
+
+    /* Ajuste da linha horizontal */
+    hr {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 400px) and (min-width: 350px) {
+    h1 {
+        font-size: 16px !important;
+        margin-top: 10px !important; /* Afastando do topo */
+        max-width: 100% !important; /* Evita que o título fique muito largo */
+    }
+
+    .logo {
+        width: 45px !important; /* Reduzindo o tamanho da logo */
+        right: 5px !important; /* Ajusta um pouco mais para a direita */
+    }
+}
+
+@media (max-width: 350px) and (min-width: 345px) {
+    h1 {
+        font-size: 16px !important;
+        margin-right: 50px;
+        max-width: 100% !important; /* Evita que o título fique muito largo */
+    }
+
+    .logo {
+        width: 45px !important; /* Reduzindo o tamanho da logo */
+        top: 15px;
+        right: 20px !important; /* Ajusta um pouco mais para a direita */
+    }
+}
+
+@media (max-width: 480px) {
+    hr {
+        width: 114%; /* Aumenta a largura da linha no celular */
+        margin-left: -7%; /* Ajusta a centralização */
+        margin-right: 10%; /* Ajusta a centralização */
+    }
+    .modal {
+        width: 95%;
+        padding: 20px;
+    }
+    .logo {
+        width: 60px;
+    }
+    h1 {
+        font-size: 20px;
+    }
+    p {
+        font-size: 14px;
+    }
+    button {
+        font-size: 12px;
+        padding: 8px 12px;
+    }
+}
+
+@media (min-width: 550px) and (max-width: 767px) {
+    .modal h1 {
+        margin-top: 20px;
+        font-size: 20px !important; /* Diminui o tamanho para evitar quebra */
+        word-wrap: break-word; /* Quebra a palavra caso necessário */
+    }
+    .logo {
+        margin-top: 15px;
+        width: 15% !important; /* Diminui o tamanho da logo */
+        max-width: 120px; /* Evita que fique grande demais */
+    }
+}
+
+
+/* Telas médias (tablets) */
+@media (max-width: 768px) {
+    hr {
+        width: 109%; /* Aumenta a largura da linha no celular */
+        margin-left: -4.4%; /* Ajusta a centralização */
+        margin-right: 10%; /* Ajusta a centralização */
+    }
+    .modal {
+        width: 80%;
+        padding: 25px;
+    }
+    .logo {
+        width: 80px;
+    }
+    h1 {
+        font-size: 24px;
+    }
+    p {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 770px) and (max-width: 1022px) {
+    hr {
+        width: 115.3%; /* Ajusta a largura da linha para que não ultrapasse a tela */
+        margin-left: -7.7%; /* Centraliza um pouco à esquerda */
+        margin-right: 5%; /* Centraliza um pouco à direita */
+    }
+    .modal {
+        width: 80%;
+        max-width: 600px;
+    }
+    h1 {
+        font-size: 32px;
+    }
+    p {
+        font-size: 20px;
+    }
+    .logo {
+        width: 90px;
+    }
+}
+
+/* Telas grandes (desktops) */
+@media (min-width: 1024px) {
+    hr {
+        width: 115.3%; /* Reduz a largura da linha em telas maiores */
+        margin-left: -7.7%; /* Ajusta a centralização */
+        margin-right: 10%; /* Ajusta a centralização */
+    }
+    .modal {
+        width: 80%;
+        max-width: 600px;
+    }
+    h1 {
+        font-size: 32px;
+    }
+    p {
+        font-size: 20px;
+    }
+    .logo {
+        width: 90px;
+    }
+}
+
+/* Telas grandes (desktops grandes) */
+@media (min-width: 1200px) {
+    .modal {
+        width: 40%;
+        max-width: 600px;
+    }
+    h1 {
+        font-size: 32px;
+    }
+    p {
+        font-size: 20px;
+    }
+    .logo {
+        width: 90px;
+    }
+}
