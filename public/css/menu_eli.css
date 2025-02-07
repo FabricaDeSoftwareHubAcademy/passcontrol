@@ -82,6 +82,7 @@ body {
   }
   .hamburger {
       display: block;
+      padding: 0 0 15px;
   }
   .menu-mobile {
       display: none;
@@ -91,5 +92,17 @@ body {
   }
   .menu-mobile a.active:hover {
     color: var(--verde-control);
+  }
+}
+
+@media (min-width: 0px) and (max-width: 625px){
+  .container{
+    width: 150px;
+  }
+  .banner-img{
+    width: 100%;
+  }
+  .banner-img img{
+    width: 100%;
   }
 }
