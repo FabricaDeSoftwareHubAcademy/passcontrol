@@ -70,7 +70,7 @@
     background-position: right bottom;
 }
 
-.title {
+.page-title {
     align-items: center;
     justify-content: center;
     font-size: 32px;
@@ -79,11 +79,8 @@
     color: #113062;
     font-weight: 800;
     margin-bottom: 20px;
-    /* padding-top: 50px; */
     margin-top: 0%;
 }
-
-
 
 .border-line {
     background-color:var(--cinza-control);
@@ -93,29 +90,32 @@
 }
 
 .area-cinza {
-    background-color: rgba(0, 0, 0, 0.1);
-    width: 90%;
-    height: 100%; /* Altere para 100% para garantir que a altura seja adequada */
+    background-color: rgba(0, 0, 0, 0.1); 
+    width: calc(100% - 40px);
+    min-height: 60vh;
+    height: calc(100vh - 160px);
+    top: 10px; 
+    left: 10px; 
+    right: 10px; 
     display: flex;
-    justify-content: center;
-    align-items: center; /* Isso vai centralizar o conteúdo dentro da área */
-    border-radius: 10px;
-    padding: 20; /* Se necessário, adicione um pequeno padding para garantir que o conteúdo não fique muito colado nas bordas */
     flex-direction: column;
+    justify-content:flex-start;
+    align-items: center;
+    border-radius: 10px;
+    padding: 20px;
 }
-
 
 .box-area {
     display: flex;
-    width: auto;
-    height: auto;
+    width: 100%;
+    max-width: 1200px;
+    height: 100%;
     justify-content: center;
     flex-wrap: wrap;
-    margin-top: 50px;
-    gap: 50px;
+    margin-top: 30px;
+    gap: 30px;
     flex-direction: row;
     align-items: center;
-    border: #33404D;
     border-radius: 5px;
 }
 
@@ -123,32 +123,32 @@
 .box {
     border: 4px solid var(--verde-control);
     border-radius: 5px;
+    width: calc(33,33% - 20px);
+    gap: 18px;
     width: 250px;
     height: 250px;
-    padding: 30px;
+    padding: 20px;
     background-color: transparent;
     display: flex;
-    flex-direction: column; /* Mantenha a direção das imagens em coluna */
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     text-decoration: none;
-    text-align: center;
-    overflow: hidden; /* Garante que o conteúdo não ultrapasse o quadrado */
 }
 
 .box .imagem-servico-container {
     display: flex;
-    flex-direction: row; /* Alinha as imagens horizontalmente */
+    flex-direction: row; 
     justify-content: center;
     align-items: center;
-    gap: 5px; /* Espaço entre as imagens */
-    width: 100%; /* Certifica-se de que as imagens se ajustem dentro do quadrado */
+    gap: 15px; 
+    width: 100%; 
 }
 
 .imagem-servico {
-    max-width: 50px; /* Tamanho máximo das imagens */
-    max-height: 50px; /* Tamanho máximo das imagens */
-    object-fit: contain; /* Garante que as imagens se ajustem dentro do espaço sem distorcer */
+    max-width: 50px; 
+    max-height: 50px; 
+    object-fit: contain; 
 }
 
 .box h4 {
@@ -159,30 +159,47 @@
     padding-top: 10px;
 }
 
+.footer{
+    display: flex;
+    align-items: start;
+    width: 100%;
 
+}
 
 .button {
     display: flex;
-    justify-content: center;
-    width: 100%; 
+    justify-content:center;
+    width: 10%; 
     margin-top: 30px;
     position: relative;
     padding: -20px;
-    background-color: white;
+    background-color: var(--cinza-control);
     align-items: center;
     cursor: pointer;
     border-radius: 5px;
     height: 60px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.button:hover {
+    background-color: var(--cinza-control);
+}
+
+.button:hover .btn-text {
+    color: red; 
 }
 
 .btn-text { 
     display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
     font-size: 18px;
-    color: #113062;
+    color: white;
     text-decoration: none; 
     font-weight: bold;
     padding: 10px;
-    margin-top: 30px;
+    height: 100%;
+    width: 100%;
 }
 
