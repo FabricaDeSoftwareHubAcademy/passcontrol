@@ -194,9 +194,9 @@ button.save:hover {
         padding: 15px !important;
     }
     
-    .logo {
+    .modal .logo {
         width: 50px !important;
-        top: 15px;
+        top: 5px !important;
         right: 10px !important;
     }
 
@@ -257,7 +257,7 @@ button.save:hover {
 @media (max-width: 400px) and (min-width: 350px) {
     h1 {
         font-size: 16px !important;
-        margin-top: 10px !important; /* Afastando do topo */
+        margin-top: -1px !important; /* Afastando do topo */
         max-width: 100% !important; /* Evita que o título fique muito largo */
     }
 
@@ -292,7 +292,8 @@ button.save:hover {
         padding: 20px;
     }
     .logo {
-        width: 60px;
+        top: 15px !important;
+        width: 60px !important;
     }
     h1 {
         font-size: 20px;
@@ -306,14 +307,83 @@ button.save:hover {
     }
 }
 
+/* Telas entre 481px e 510px */
+@media (min-width: 481px) and (max-width: 510px) {
+    .modal {
+        width: 90% !important;
+        padding: 20px !important;
+    }
+
+    /* Ajuste da posição da logo */
+    .modal .logo {
+        width: 60px !important; /* Ajusta a largura da logo */
+        top: 30px !important;  /* Ajusta a posição para mais afastada */
+        right: 15px !important; /* Ajusta a posição à direita, se necessário */
+    }
+
+    /* Dando mais espaço para o h1 */
+    h1 {
+        margin-top: 30px !important;  /* Ajusta o espaçamento entre a logo e o título */
+        font-size: 22px !important;
+    }
+
+    /* Ajuste de outros elementos */
+    label {
+        font-size: 14px !important;
+    }
+
+    input[type="number"], 
+    input[type="text"],
+    input[type="file"] {
+        padding: 8px !important;
+        font-size: 14px !important;
+    }
+
+    .button-group {
+        flex-direction: row !important;
+        align-items: center !important;
+        gap: 10px !important;
+    }
+
+    button {
+        font-size: 12px !important;
+        padding: 8px 15px !important;
+        width: 100% !important;
+    }
+
+    button.cancel {
+        margin-right: 0 !important; /* Remove o deslocamento para a esquerda */
+    }
+
+    button.cancel {
+        font-size: 12px !important; /* Diminui o tamanho da fonte */
+        padding: 8px 12px !important; /* Reduz o padding */
+        width: auto !important; /* Ajusta a largura automaticamente */
+        max-width: 200px !important; /* Limita o tamanho máximo da largura */
+    }
+
+    button.save {
+        font-size: 12px !important; /* Diminui o tamanho da fonte */
+        padding: 8px 12px !important; /* Reduz o padding */
+        width: auto !important; /* Ajusta a largura automaticamente */
+        max-width: 200px !important; /* Limita o tamanho máximo da largura */
+    }
+
+    hr {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
 @media (min-width: 550px) and (max-width: 767px) {
     .modal h1 {
         margin-top: 20px;
         font-size: 20px !important; /* Diminui o tamanho para evitar quebra */
         word-wrap: break-word; /* Quebra a palavra caso necessário */
     }
-    .logo {
-        margin-top: 15px;
+    .modal .logo {
+        margin-top: 7px;
         width: 15% !important; /* Diminui o tamanho da logo */
         max-width: 120px; /* Evita que fique grande demais */
     }
