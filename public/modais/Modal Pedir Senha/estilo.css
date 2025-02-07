@@ -297,6 +297,25 @@ button.save:hover {
     }
 }
 
+/* Para telas entre 506px e 549px */
+@media (max-width: 549px) and (min-width: 506px) {
+    h1 {
+        font-size: 18px !important;
+        margin-top: 20px; /* Ajusta o espaçamento superior */
+    }
+
+    .logo {
+        width: 80px !important; /* Ajuste opcional para o tamanho da logo */
+        top: 15px; /* Ajusta a posição da logo para garantir que não fique muito próxima */
+    }
+}
+
+@media (min-width: 660px) and (max-width: 767px) {
+    .logo {
+        top: -1px; /* Ajusta a logo para subir um pouco */
+    }
+}
+
 @media (min-width: 550px) and (max-width: 767px) {
     .modal h1 {
         margin-top: 20px;
@@ -379,16 +398,17 @@ button.save:hover {
 /* Telas grandes (desktops grandes) */
 @media (min-width: 1200px) {
     .modal {
-        width: 40%;
-        max-width: 600px;
+        width: 40% !important;
+        max-width: 600px !important;
     }
     h1 {
-        font-size: 32px;
+        font-size: 20px !important;
+        white-space: nowrap;
     }
     p {
-        font-size: 20px;
+        font-size: 20px !important;
     }
     .logo {
-        width: 90px;
+        width: 80px !important;
     }
 }
