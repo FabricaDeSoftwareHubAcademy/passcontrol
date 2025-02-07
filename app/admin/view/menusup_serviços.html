@@ -4,24 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Atendimento em Tempo Real</title>
+    <!-- TROCA TÍTULO QUANDO FOR UTILIZAR -->
+    <title>PassControl</title> 
+    
 
     <!-- IMPORT DA FONTE -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 
-    <!-- IMPORT ICON LIBR -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
     <!-- IMPORT DO CSS -->
-    <link rel="stylesheet" href="../../../public/css/navegacao.css">
-    <link rel="stylesheet" href="../../../public/css/menu_eli.css">
-    <link rel="stylesheet" href="../../../public/css/atendimento_tempo_real.css">
-    <link rel="stylesheet" href="../../../public/css/style_atendimento_tempo_real.css">
+    <link rel="stylesheet" href="../../../public/css/style_eli.css">
 
     <link rel="shortcut icon" type="imagex/png" href="../../../public/img/Logo-Nota-Controlnt.ico">
-    
 </head>
 <body class="control-body-navegacao">
     <header class="cabeca-navegacao-control">
@@ -58,7 +53,7 @@
         <nav class="menu-lateral-navegacao">
 
             <div class="botao-navegacao">
-                <a class="botao-lateal-navegacao ativo-estacionario" href="../../../app/admin/view/atendimento.html">
+                <a class="botao-lateal-navegacao" href="../../../app/admin/view/atendimento.html">
                     <img class="icone-menu-lateral" src="../../../public/img/icons/atend.svg" alt="ICONE ATENDIMENTO">
                     <div class="texto-bott">Atendimento</div>
                 </a>
@@ -76,7 +71,7 @@
                 </a>
             </div>
             <div class="botao-navegacao">
-                <a class="botao-lateal-navegacao" href="../../../app/admin/view/menuadm_usuario.html">
+                <a class="botao-lateal-navegacao ativo-estacionario" href="../../../app/admin/view/menuadm_usuario.html">
                     <img class="icone-menu-lateral" src="../../../public/img/icons/gestao.svg" alt="ICONE GESTAO">
                     <div class="texto-bott">Gestão</div>
                 </a>
@@ -91,102 +86,63 @@
     </div>
 
     <section class="Area-Util-Projeto">
-        <!-- SUBMENU ATENDIMENTO -->
-        <div class="menu-container">
-            <div class="menu">
-                <button class="hamburger" onclick="toggleMenu()">☰</button>
-                <a href="../../../app/admin/view/atendimento_tempo_real.html" class="active">Guichês</a>
-                <a href="../../../app/admin/view/atendimento.html">Atendimento</a>
+        <!-- INICIO DA ÁREA ÚTIL DA PÁGINA -->
+        <!-- INSIRA O CORPO DA SUA PÁGINA A PARTIR DESTE PONTO -->
+        
+        <!-- CODIGO DO ELIANDRO -->
+        <div class="nome_da_area_eli">
+            <!-- navmenu .......-->
+            <div class="menu-container">
+                <div class="menu">
+                    <button class="hamburger" onclick="toggleMenu()">☰</button>
+                    <a href="./menuadm_usuario.html">Usuários</a>
+                    <a href="./menuadm_servicos.html" class="active">Serviços</a>
+                    <a href="./menuadm_autoatendimento.html">Autoatendimento</a>
+                    <a href="./menusup_usuario.html">SUP</a>
+                </div>
+                <div class="menu-mobile" id="mobileMenu">
+                    <a href="./menuadm_usuario.html">Usuários</a>
+                    <a href="./menuadm_servicos.html" class="active">Serviços</a>
+                    <a href="./menuadm_autoatendimento.html">Autoatendimento</a>
+                    <a href="./menusup_usuario.html">SUP</a>
+                </div>
             </div>
-            <div class="menu-mobile" id="mobileMenu">
-                <a href="../../../app/admin/view/atendimento_tempo_real.html" class="active">Guichês</a>
-                <a href="../../../app/admin/view/atendimento.html">Atendimento</a>
+            
+            <!-- área da descrição da página de navegação  -->
+            <div class="descricao">
+                <h2>Menu de Gestão</h2>
+                <hr>
+                <!-- <p>Área de Gestão do Supervisor.</p> -->
             </div>
-        </div>
+            <!-- área dos cards de nevegação  -->
+            <main class="area-cards">
+                <div class="container">
+                    <div class="wrapper">
+                        <div class="banner-img">
+                            <img src="../../../public/img/img-menu/pontodeatendimento.png" alt="">
+                        </div>
 
-        <!-- ACOMPANHAMENTO EM TEMPO REAL -->
-        <div class="area-atendimento-tempo-real">
-            <div class="container-atendimento-tempo-real">
-                <h1 class="title-atendimento-tempo-real title-atendimento-tempo-real-bt">Atendimento em Tempo Real</h1>
-                <h1 class="title-atendimento-tempo-real">Senhas na Fila: 000</h1>
-            </div>
-            <div class="line-atendimento-tempo-real"></div>
-            <div class="container-atendimento-tempo-real">
-                <table class="table-atendimento-tempo-real">
-                    <thead>
-                        <tr>
-                            <th>Perfil</th>
-                            <th>Serviço</th>
-                            <th>Senha</th>
-                            <th>Guichê</th>
-                            <th class="status-atendimento-tempo-real">
-                                <div class="status-flex-atendimento-tempo-real">
-                                    Status <span class="circle-atendimento-tempo-real"><i class="fa-solid fa-question"></i></span>
-                                </div>
-                            </th>
-                            <th>Término</th>
-                            <th>Início</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Paula Fernanda de Pauli</td>
-                            <td>IPTU</td>
-                            <td>CM 026</td>
-                            <td>03</td>
-                            <td class="disponivel-atendimento-tempo-real">Disponível</td>
-                            <td>14:00</td>
-                            <td>13:30</td>
-                        </tr>
-                        <tr>
-                            <td>João Silva</td>
-                            <td>Serviços Públicos</td>
-                            <td>CM 027</td>
-                            <td>04</td>
-                            <td class="em-atendimento-atendimento-tempo-real">Em Atendimento</td>
-                            <td>14:15</td>
-                            <td>13:45</td>
-                        </tr>
-                        <tr>
-                            <td>Maria Oliveira</td>
-                            <td>IPTU</td>
-                            <td>CM 028</td>
-                            <td>05</td>
-                            <td class="intervalo-atendimento-tempo-real">Intervalo</td>
-                            <td>14:30</td>
-                            <td>14:00</td>
-                        </tr>
-                        <tr>
-                            <td>Maria Oliveira</td>
-                            <td>IPTU</td>
-                            <td>CM 028</td>
-                            <td>05</td>
-                            <td class="intervalo-atendimento-tempo-real">Intervalo</td>
-                            <td>14:30</td>
-                            <td>14:00</td>
-                        </tr>
-                        <tr>
-                            <td>Maria Oliveira</td>
-                            <td>IPTU</td>
-                            <td>CM 028</td>
-                            <td>05</td>
-                            <td class="intervalo-atendimento-tempo-real">Intervalo</td>
-                            <td>14:30</td>
-                            <td>14:00</td>
-                        </tr>
-                        <tr>
-                            <td>Maria Oliveira</td>
-                            <td>IPTU</td>
-                            <td>CM 028</td>
-                            <td>05</td>
-                            <td class="intervalo-atendimento-tempo-real">Intervalo</td>
-                            <td>14:30</td>
-                            <td>14:00</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
+                        <!-- <h3 class="titulo-card">Atendimento</h3> -->
+                        <!-- <p>Pontos de Atendimento.</p> -->
+                    </div>
+                    <div class="button-wrapper">
+                        <button class="btn outline" onclick="window.location.href='../../../app/admin/view/atendimentocadastrados.html';">DETALHES</button>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="wrapper">
+                        <div class="banner-img">
+                            <img src="../../../public/img/img-menu/serviços.png" alt="">
+                        </div>
+                        <!-- <h3 class="titulo-produto">Serviços</h3> -->
+                        <!-- <p>Gestão dos sehhhrviços</p> -->
+                    </div>
+                    <div class="button-wrapper">
+                        <button class="btn outline" onclick="window.location.href='../../../app/admin/view/servicos.html';">Serviços</button>
+                    </div>
+                </div>    
+            </main>
+        </div>   
     </section>
 
     <!--MONITOR MODAL-->
@@ -273,10 +229,5 @@
         </div>
     </div>
     <script src="../../../public/js/monitor-modal.js" defer></script>
-    <script>
-        function toggleMenu() {
-            document.getElementById("mobileMenu").classList.toggle("active");
-        }
-    </script>
 </body>
 </html>
