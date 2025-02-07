@@ -24,13 +24,6 @@
 .container-flex{
     flex: 1 1 35%;
 }
-.perfild{
-    position: absolute;
-    width: 42%;
-    left: 8%;
-    top: 350px
-
-}
 .titulo h1{
     text-align:  center;
     font-size: 2em;
@@ -53,85 +46,74 @@
     top: 20px;
     left: 5%;
 }
-
 .nome{
     position: relative;
-    top: 15px;
-    left: 8%;
-    width: 85%;
+    top: 40px;
+    left: 15%;
+    width: 30%;
     display: flex;
     flex-direction: column;
     font-size: 90%;
 }
-.nome .borda{
-    height: 40px;
-    border-radius: 5px;
-    margin-top: 12px;
-}
-
 .email{
     position: relative;
-    top: 50px;
-    left: 8%;
-    width: 42%;
+    top: -25px;
+    left: 51%;
+    width: 30%;
     display: flex;
     flex-direction: column;
     font-size: 90%;
 }
-.email .borda{
-    height: 40px;
-    border-radius: 5px;
-    margin-top: 12px;
-}
-
 .cpf{
     position: relative;
-    top: -18px;
-    left: 51%;
-    width: 42%;
+    top: 0px;
+    left: 15%;
+    width: 30%;
     display: flex;
     flex-direction: column;
     font-size: 90%;
 }
-.cpf .borda{
-    height: 40px;
-    border-radius: 5px;
-    margin-top: 12px;
-}
-
 .senha-cadastro{  
     position: relative;
-    top: 28px;
-    left: 8%;
-    width: 42%;
+    top: -66px;
+    left: 51%;
+    width: 30%;
     display: flex;
     flex-direction: column;
     font-size: 90%;
 }
-.senha-cadastro .borda{
-    height: 40px;
-    border-radius: 5px;
-    margin-top: 12px;
+input::placeholder{
+    padding: 2px;
+}
+input {
+    padding: 10px;
+    font-size: 16px;
+    transition: padding 0.3s ease;
 }
 
+input:focus {
+    padding: 10px; 
+    outline: none;
+    border: 1px solid black;
+}
 .confirmar{
     position: relative;
-    top: -40px;
+    top: -30px;
     left: 51%;
-    width: 42%;
+    width: 30%;
     display: flex;
     flex-direction: column;
     font-size: 90%;  
 }
-.confirmar .borda{
-    height: 40px;
+.borda{
+    height: 45px;
     border-radius: 5px;
     margin-top: 12px;
 }
 
 .labeledit{
     font-family: var(--font-main);
-    width: 50%;
+    width: 60%;
     height: 15px;
     font-weight: bold;
     display: block;
@@ -146,18 +128,24 @@
     font-size: 90%;
     border-radius: 5px solid black;
 }
+.perfild{
+    position: absolute;
+    width: 16%;
+    left: 51%;
+    top: 360px
+}
+
 .selecao .pi{
     height: 40px;
     border-radius: 5px solid black;
     margin-top: 12px;
 }
-
 .selecao{
     display: flex;
     position: absolute;
     top: 15px;
     width: 100%;
-    height: 40px;
+    height: 45px;
     border-radius: 5px;
     margin-top: 12px;
     background-color: white;
@@ -169,7 +157,7 @@
     left: 53%; 
     width: 50%;
     font-size: 100%;
-    top: 370px;
+    top: 390px;
     font-size: var(--font-main);
     font-weight: bold;
     display: flex;
@@ -178,8 +166,8 @@
 .servico{
     display: flex;
     position: absolute;
-    top: 350px;
-    left: 52%;
+    top: 255px;
+    left: 15%;
     font-size: var(--font-main);
     font-weight: bold;
 }
@@ -189,12 +177,25 @@
     left: 71%;
     top: 465px;
 }
-.column{ 
-    display: flex; 
-    flex-direction: column; 
-    margin-right: 20px; 
-    flex: 1;
-} 
+.column-1{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    left: -73%;
+    top: -100px;
+    font-size: 115%;
+}
+.column-2{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    left: -40%; 
+    top: -100px;
+    font-size: 115%;
+}
+
 .checkbox-container label{ 
     display: flex; 
     align-items: center; 
@@ -256,7 +257,7 @@
     content: ''; 
     position: relative;
     left: -10px;
-    top: -1px;
+    top: -2px;
     width: 10px;
     height: 10px;
     border: 1px solid #000000;
@@ -287,59 +288,143 @@
     
 } 
 
-
-.botao1{
-    background-color: var(--cinza-control);
-    border-radius: 5px;
-    border: none;
-    color: var(--cor-fundo);
-    font-size: 17px;
-    text-align: center;
-    cursor: pointer;
-    width: 120px;
-    height: 35px;
-    font-weight: bold;
-    margin: 22px;
-
-    
-}
-.botao1:hover{
-    color: var(--verde-control);
-    text-decoration:underline;
-}
-.botao2{
-    background-color: var(--cinza-control);
-    
-    border-radius: 5px;
-    border: none;
-    color: var(--cor-fundo);
-    font-size: 17px;
-    text-align: center;
-    cursor: pointer;
-    width: 120px;
-    height: 35px;
-    font-weight: bold;
-    margin: 22px;
-    
-}
-.botao2:hover{
-    color: var(--verde-control);
-    text-decoration:underline;
-}
-
-.btn-telacadastro {
-    position: absolute;
-    left: 75%;
-    top: 615px;
+.form-actions2{
     display: flex;
-    margin: 0px;
-    
-    
+    justify-content: flex-end;
+    gap: 16px;
+    margin-top: 620px;
+    margin-bottom: 40px;
+    margin-right: 79px;
 }
 
-@media screen and (max-width: 1715px){
-
+.botao_volto, .botao_salvo {
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: 500;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
 }
+
+.botao_volto {
+    background-color: #33404D;
+    color: #fff;
+}
+
+.botao_volto:hover {
+    color: #FFFFFF;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.botao_salvo{
+    background-color: #33404D;
+    color: #fff;
+}
+
+.botao_salvo:hover {
+    color: #3AA867;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+
+@media screen and (max-width: 1920px){
+    .form-actions2{
+        margin-top: 690px;
+    }
+}
+@media screen and (max-width: 1732px){
+    .labeledit{
+        width: auto;
+    }
+}
+@media screen and (max-width: 1605px){
+    .column-2{
+        left: -73%;
+        top: 22px;  
+    }
+}
+@media screen and (max-width: 974px){
+    .labeledit{
+        width: 150%;
+    }
+}
+@media screen and (max-width: 950px){
+    .quadrado{
+        scroll-behavior: smooth;
+        overflow-x: hidden;
+    }
+    .nome{
+        left: 15%;
+        width: 70%;
+    }
+    .email{
+        left: 15%;
+        width: 70%;
+        top: 60px;
+    }
+    .cpf{
+        left: 15%;
+        width: 70%;
+        top: 82px;
+    }
+    .senha-cadastro{
+        left: 15%;
+        width: 70%;
+        top: 105px;
+    }
+    .confirmar{
+        left: 15%;
+        width: 70%;
+        top: 130px;
+    }
+    .perfild{
+        left: 15%;
+        width: 50%;
+        top: 510px; 
+    }
+    .servico{
+        left: 15%;
+        top: 607px;
+    }
+    .checkbox-container{
+        left: 55%;
+        top: 745px;  
+    }
+    .form-actions2{
+        margin-right: 5%;
+    }
+}
+@media screen and (max-width: 410px) {
+    .titulo .cadastro_title{
+        top: 0px;
+    }
+    
+}
+@media screen and (max-width: 410px) {
+    .column-2{
+        top: 6px;
+    }
+    .form-actions2{
+        width: 55%;
+        margin-left: 40%;
+    }
+    .titulo .cadastro_title{
+        top: 8px;
+    }
+}
+@media screen and (max-width: 320px) {
+    .titulo .cadastro_title{
+        top: 0px;
+    }
+}
+
+
+
+
+
+
+
 
 /* 
 @media screen and (min-width: 320px) and (max-width: 374px) {
