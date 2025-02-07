@@ -1,97 +1,80 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
-        <!-- TROCA TÍTULO QUANDO FOR UTILIZAR -->
-        <title>PassControl</title>  
-        
-        
-        <!-- IMPORT DA FONTE -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 
-        
-        <!-- IMPORT DO CSS -->
-        <link rel="stylesheet" href="/public/css/navegacao.css">
-        <link rel="stylesheet" href="/public/css/tela_autoatendimentoTeste.css">
-
-        <!-- IMPORT DO JS -->
-        <script src="../js/navegacao-menu-lateral.js" defer></script>
-
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PassControl</title> 
+    <link rel="stylesheet" href="../../../public/css/tela_autoatendimentoPage1.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<body class="control-body-navegacao">
-    <header class="cabeca-navegacao-control">
+
+<body>
+    <header class="cabeca">
         <nav class="nav-cabeca">
             <div class="logo-control">
-                <img src="../assets/icons/logo control.svg" alt="LOGOCONTROL" id="img-logo">
+                <img src="../../../public/img/icons/logo control.svg" alt="LOGOCONTROL" id="img-logo">
             </div>
-            <H3>PassControl</H3>              
+            <h3>PassControl</h3>
         </nav>
-        <div class="dark-area"></div>
     </header>
 
-    <!-- INICIO DA ÁREA ÚTIL DA PÁGINA -->
-    <!-- INSIRA O CORPO DA SUA PÁGINA A PARTIR DESTE PONTO -->
+    <div class="espaco"></div>
 
-    <!-- <section class="fundo-cinza"> -->
-        <section class="box-servicos" id="box-servicos">
-            <div class="area-quadrados">
-                <a href="" class="quadrado">
-                    <h4>IPTU</h4>
-                    <img class="imagem-servico" src="assets/casa.svg" alt="Servico" id="img-servico">
-                </a>
+    <main class="area-servicos">
+        <div class="fundo-cinza">
+            <!-- <section class="box-frase" id="box-frase"> -->
+                <span class="selecione-servico">
+                    Selecione o serviço:
+                </span>
 
-                <a href="" class="quadrado">
-                    <h4>IPTU</h4>
-                    <img class="imagem-servico" src="assets/casa.svg" alt="Servico" id="img-servico">
-                </a>
-
-                <a href="" class="quadrado">
-                    <h4>IPTU</h4>
-                    <img class="imagem-servico" src="assets/casa.svg" alt="Servico" id="img-servico">
-                </a>
-
-                <a href="" class="quadrado">
-                    <h4>IPTU</h4>
-                    <img class="imagem-servico" src="assets/casa.svg" alt="Servico" id="img-servico">
-                </a>
-
-                <a href="" class="quadrado">
-                    <h4>IPTU</h4>
-                    <img class="imagem-servico" src="assets/casa.svg" alt="Servico" id="img-servico">
-                </a>
-
-                <a href="" class="quadrado">
-                    <h4>IPTU</h4>
-                    <img class="imagem-servico" src="assets/casa.svg" alt="Servico" id="img-servico">
-                </a>
-
-                <a href="" class="quadrado">
-                    <h4>IPTU</h4>
-                    <img class="imagem-servico" src="assets/casa.svg" alt="Servico" id="img-servico">
-                </a>
-
-                <a href="" class="quadrado">
-                    <h4>IPTU</h4>
-                    <img class="imagem-servico" src="assets/casa.svg" alt="Servico" id="img-servico">
-                </a>
-
+                <div class="area-quadrados" id="area-quadrados">
+                    <a href="../view/tela_autoatendimentoPage3.html" class="quadrado">
+                        <img class="imagem-servico" src="../../../public/img/icons/iptu_img.svg" alt="Servico" id="img-servico">
+                        <h4>IPTU</h4>
+                    </a>
+                    <a href="../view/tela_autoatendimentoPage3.html" class="quadrado">
+                        <img class="imagem-servico" src="../../../public/img/icons/iluminaçao_img.png" alt="Servico" id="img-servico">
+                        <h4>Iluminação Pública</h4>
+                    </a>
+                    <a href="../view/tela_autoatendimentoPage3.html" class="quadrado">
+                        <img class="imagem-servico" src="../../../public/img/icons/conselho_img.png" alt="Servico" id="img-servico">
+                        <h4>Conselho Municipal</h4>
+                    </a>
+                    <a href="../view/tela_autoatendimentoPage3.html" class="quadrado">
+                        <img class="imagem-servico" src="../../../public/img/icons/fiscalizaçao_img.png" alt="Servico" id="img-servico">
+                        <h4>Fiscalização</h4>
+                    </a>
+                    <a href="../view/tela_autoatendimentoPage3.html" class="quadrado">
+                        <img class="imagem-servico" src="../../../public/img/icons/ouvidoria_img.png" alt="Servico" id="img-servico">
+                        <h4>Ouvidoria</h4>
+                    </a>
+                    <a href="../view/tela_autoatendimentoPage3.html" class="quadrado">
+                        <img class="imagem-servico" src="../../../public/img/icons/poda-arvores_img.png" alt="Servico" id="img-servico">
+                        <h4>Poda de Árvores</h4>
+                    </a>
+                    <a href="../view/tela_autoatendimentoPage3.html" class="quadrado">
+                        <img class="imagem-servico" src="../../../public/img/icons/licença_img.png" alt="Servico" id="img-servico">
+                        <h4>Licenças</h4>
+                    </a>
+                    <a href="../view/tela_autoatendimentoPage3.html" class="quadrado">
+                        <img class="imagem-servico" src="../../../public/img/icons/negociaçao_img.png" alt="Servico" id="img-servico">
+                        <h4>Negociação</h4>
+                    </a>
+                </div>
                 
-                <!-- Repita os quadrados conforme necessário -->
-            </div>
-        </section>
-
-        <div class="seta">
-            <button class="btn-proximaPagina" onclick="window.location.href='tela_autoatendimentoPage1.html'">
-                <i class="fas fa-arrow-right"></i> <!-- Ícone de seta para a direita -->
-            </button>
+                <div class="pagination-controls">
+                    <button id="prev-page" onclick="prevPage()">Anterior</button>
+                    <button id="next-page" onclick="nextPage()">Próximo</button>
+                </div>
+            </section>
         </div>
+    </main>
 
-       
-    </body>
+    <script src="../../../public/js/tela_autoatendimentoPaginação.js"></script>
+</body>
+
 </html>

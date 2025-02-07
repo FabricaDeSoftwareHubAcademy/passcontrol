@@ -15,7 +15,7 @@
     z-index: 1000;
 }
 
-.cabeca {
+.head {
     background-color: var(--cinza-control);
     height: auto;
     width: auto;
@@ -23,7 +23,7 @@
     display: flex;
 }
 
-.nav-cabeca {
+.nav-head {
     background-color: var(--cor-fundo);
     width: 100%;
     height: 100px;
@@ -43,7 +43,7 @@
     width: 100%;
 }
 
-.nav-cabeca H3 {
+.nav-head H3 {
     color: var(--cinza-control);
     width: 80%;
     padding-left: 20px;
@@ -52,14 +52,14 @@
     font-size: 23px;
 }
 
-.espaco {
+.border-line {
     background-color: var(--cinza-control);
     height: 50px;
     width: 100%;
     margin: 10px 0;
 }
 
-.area-servicos {
+.workspace {
     height: calc(100vh - 140px);
     width: 100%;
     display: flex;
@@ -72,7 +72,7 @@
     background-position: right bottom;
 }
 
-.selecione-servico {
+.title {
     align-items: center;
     justify-content: center;
     font-size: 32px;
@@ -83,11 +83,11 @@
 }
 
 
-.fundo-cinza {
+.area-cinza {
     background-color: rgba(0, 0, 0, 0.1); 
     width: calc(100% - 40px);
     min-height: 60vh;
-    /* height: calc(100vh - 160px); */
+    height: calc(100vh - 160px);
     top: 10px; 
     left: 10px; 
     right: 10px; 
@@ -97,56 +97,51 @@
     align-items: center;
     border-radius: 10px;
     padding: 20px;
-    /* overflow: hidden; */
     
 }
 
 
-.area-quadrados {
-    width: 100%;
-    max-width: 1200px;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 30px;
+.pagination-controls {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.pagination-controls button {
+    padding: 10px 20px;
+    margin: 0 5px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.pagination-controls button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
 }
 
 
 
-
-
-.box-frase {
-    width: auto;
-    max-width: 1200px;
-    padding: 20px;
-    margin: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.area-quadrados {
+.box-area {
     display: flex;
     width: 100%;
     max-width: 1200px;
     height: 100%;
     justify-content: center;
     flex-wrap: wrap;
-    margin-top: 50px;
+    margin-top: 30px;
     gap: 30px;
     flex-direction: row;
     align-items: center;
     /* border: #33404D; */
-    border: red;
     border-radius: 5px;
 }
 
-.quadrado {
+.box {
     border: 4px solid var(--verde-control);
     border-radius: 5px;
-    /* width: calc(25% - 20px); */
-    width: 250px;
+    width: calc(33,33% - 20px);
     gap: 18px;
     width: 250px;
     height: 250px;
@@ -159,6 +154,7 @@
     text-decoration: none;
 }
 
+
 .imagem-servico {
     justify-content: center;
     align-items: center;
@@ -166,7 +162,7 @@
     color: #113062;
 }
 
-.quadrado h4 {
+.box h4 {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -175,106 +171,4 @@
     font-weight: bold;
     margin-top: 10px;
     text-decoration: none;
-}
-
-/* Media Queries para Responsividade */
-
-/* Para telas maiores, como desktops */
-@media (min-width: 1024px) {
-    .area-quadrados {
-        gap: 50px;
-    }
-
-   /* Para tablets (até 1024px) - 2 quadrados por linha */
-@media (max-width: 1024px) {
-    .quadrado {
-        width: calc(50% - 20px); /* 2 por linha */
-    }
-}
-
-/* Para celulares (até 768px) - 1 quadrado por linha */
-@media (max-width: 768px) {
-    .quadrado {
-        width: calc(100% - 20px); /* 1 por linha */
-    }
-}
-
-
-    .nav-cabeca H3 {
-        font-size: 25px;
-    }
-}
-
-/* Para tablets ou telas médias (768px a 1023px) */
-@media (max-width: 1023px) and (min-width: 768px) {
-    .area-quadrados {
-        gap: 30px;
-    }
-
-    .quadrado {
-        width: 220px;
-        height: 220px;
-    }
-
-    .nav-cabeca H3 {
-        font-size: 20px;
-    }
-
-    .selecione-servico {
-        font-size: 28px;
-    }
-}
-
-/* Para celulares (abaixo de 768px) */
-@media (max-width: 767px) {
-    .area-quadrados {
-        gap: 20px;
-        justify-content: flex-start;
-        padding: 10px;
-    }
-
-    .quadrado {
-        width: 180px;
-        height: 180px;
-    }
-
-    .nav-cabeca H3 {
-        font-size: 18px;
-    }
-
-    .selecione-servico {
-        font-size: 24px;
-    }
-
-    /* Ajusta o fundo da área de serviços */
-    .area-servicos {
-        background-size: 300px;
-    }
-}
-
-/* Para dispositivos muito pequenos, como celulares em modo retrato (480px ou menos) */
-@media (max-width: 480px) {
-    .selecione-servico {
-        font-size: 22px;
-    }
-
-    .quadrado {
-        width: 160px;
-        height: 160px;
-    }
-
-    .nav-cabeca H3 {
-        font-size: 16px;
-    }
-
-    .area-servicos {
-        background-size: 250px;
-    }
-
-    /* Ajuste de espaçamento para dispositivos pequenos */
-    .area-quadrados {
-        gap: 15px;
-        justify-content: center;
-        /* display: flex; */
-    }
 }
