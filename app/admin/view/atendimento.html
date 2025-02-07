@@ -22,7 +22,7 @@
 
     <!-- IMPORT DO JS -->
     <script src="../../../public/js/modal-teladelogin.js"></script>
-    <script src="../../../public/js/modal-proxima-senha.js"></script>
+    <!-- <script src="../../../public/js/modal-proxima-senha.js"></script> -->
 
 </head>
 <body class="control-body-navegacao">
@@ -113,53 +113,59 @@
             <nav class="area-chamada-atendimento">
                 <nav class="topo-area-chamada">
                     <ul class="esquerda-area-chamada">
-                        <div class="guiche_senha-area-chamada">
-                            <div class="guiche-area-chamada-tl">
-                                <h2>0</h2>
-                                <p>Guichê</p>
-                            </div>
+                        <div class="atendimento-atual-atendimento">
                             <div class="senha_fila-guiche-area-chamada">
-                                <h2>1</h2>
-                                <p>Senhas Na Fila</p>
+                                <p class="numero--atendimento">1</p>
+                                <p></p>
                             </div>
                         </div>
-                        <button class="botao_intervalo-guiche-area-chamada">
-                            <a href="">
-                                Intervalo
-                                <img src="../../../public/img/icons/ampulheta.svg" alt="ampulheta">
-                            </a>
+                        <div class="info-atendimento-inicio">
+                            <div class="senhas-na-fila-atendimento">
+                                <p class="numero--atendimento">0</p>
+                                <p class="texto-info-atentdimento">Senhas Na Fila</p>
+                            </div>
+                            <div class="numero-guiche-atendimento">
+                                <p class="numero--atendimento">1</p>
+                                <p class="texto-info-atentdimento">Guichê</p>
+                            </div>
+                            <div class="senha-ausente-e-atendida">
+                                <p class="texto-info-atentdimento">Senhas Ausentes</p> 
+                                <p class="texto-info-atentdimento">Senhas Atendidas</p>
+                            </div>
+                        </div>
                         </button>
                     </ul>
                     <ul class="direita-guiche-area-chamada">
                         <div class="area-botao--guiche-area-chamada">
-                            <button class="botao--guiche-area-chamada">
-                                <a href="../../../app/admin/view/consultar-fila.html">
-                                    <img src="../../../public/img/icons/lupa.svg" alt="lupa">
+                            <button class="botao_intervalo-guiche-area-chamada">
+                                    <a href="" class="texto-botao-atendimento">
+                                        <img src="../../../public/img/icons/ampulheta.svg" alt="ampulheta">
+                                        Encerrar Atendimento
+                                    </a>
+                            </button>
+                            <button class="botao_intervalo-guiche-area-chamada">
+                                <a href="" class="texto-botao-atendimento">
+                                    <img src="../../../public/img/icons/ampulheta.svg" alt="ampulheta">
+                                    Próxima Fila
+                                </a>
+                            </button>
+                            <button class="botao_intervalo-guiche-area-chamada">
+                                <a href="" class="texto-botao-atendimento">
+                                    <img src="../../../public/img/icons/ampulheta.svg" alt="ampulheta">
                                     Consultar Fila
                                 </a>
                             </button>
-                            <button class="botao--guiche-area-chamada chamar-senha">
-                                <a href="">
-                                    <img src="../../../public/img/icons/user.svg" alt="usuário">
-                                    Próxima Senha
+                            <button class="botao_intervalo-guiche-area-chamada">
+                                <a href="" class="texto-botao-atendimento">
+                                    <img src="../../../public/img/icons/ampulheta.svg" alt="ampulheta">
+                                    Intervalo
                                 </a>
                             </button>
                         </div>
                     </ul>
                 </nav>
                 <div class="meio-guiche-area-chamada">
-                    <div class="meio_esquerda-guiche-area-chamada">
-                        <h3>Senhas Atendidas No Dia</h3>
-                    </div>
-                    <div class="meio_direita-guiche-area-chamada">
-                        <div class="senhas-guiche-area-chamada">
-                            <h2>0</h2>
-                            <p>Senhas Atendidas</p>
-                        </div>
-                        <div class="senhas-guiche-area-chamada">
-                            <h2>2</h2>
-                            <p>Senhas Ausente</p>
-                        </div>
+                    <h3>Senhas Atendidas No Dia</h3>
                     </div>
                 </div>
                 <div class="fundo-guiche-area-chamada">
