@@ -283,7 +283,7 @@ button.save:hover {
     }
 }
 
-@media (min-width: 770px) and (max-width: 1022px) {
+@media (min-width: 770px) and (max-width: 1023px) {
     hr {
         width: 115.3%; /* Ajusta a largura da linha para que não ultrapasse a tela */
         margin-left: -7.7%; /* Centraliza um pouco à esquerda */
