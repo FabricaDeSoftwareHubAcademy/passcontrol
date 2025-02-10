@@ -17,6 +17,7 @@
     list-style: none;
     z-index: 1000;
   }
+
   
   /* TOPO */
   
@@ -71,7 +72,7 @@
 }
   
   .border-line {
-    background-color: black;
+    background-color: var(--cinza-control);
     height: 50px;
     width: 100%;
     margin: 10px 0;
@@ -93,28 +94,51 @@
     padding: 20px;
     
 }
-  
-  
-  /* .button {
-    margin-top: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    padding: 0 50px;
-  } */
-  
-  /* .btn-finalizar {
-    background-color: black;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    width: 200px;
-    height: 40px;
-    border: none;
-  } */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  height: 80%;
+  max-width: 800px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.area-branca {
+  margin-bottom: 20px;
+}
+
+.info-area {
+  width: 100%;
+  font-size: 24px;
+  color: #113062; 
+  text-align: center;
+  line-height: 1;
+  /* align-items: center;
+  justify-content: center; */
+  padding: 20px;
+}
+
+.info-area div {
+  margin-bottom: 80px;
+}
+
+.info-area strong {
+  font-weight: bold;
+  color: #113062;
+}
+
+.footer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 20 20px;
+}
 
   .button {
     display: flex;
@@ -131,24 +155,25 @@
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+
 .button:hover {
     background-color: var(--cinza-control);
 }
 
-.button:hover .btn-text {
+.button:hover .btn-finalizar {
     color: green; 
 }
 
-.btn-text { 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    font-size: 18px;
-    color: white;
-    text-decoration: none; 
-    font-weight: bold;
-    padding: 10px;
-    height: 100%;
-    width: 100%;
+.btn-finalizar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 18px;
+  color: white;
+  text-decoration: none; 
+  font-weight: bold;
+  padding: 10px;
+  height: 100%;
+  width: 100%;
 }
