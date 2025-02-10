@@ -22,7 +22,7 @@
 }
 
 .box{
-    width: 100vw;
+    width: 95%;
     height: 700px;
     background-color: rgba(198, 196, 196, 0.2);
     backdrop-filter: blur(5px);
@@ -80,7 +80,25 @@ main{
     justify-content: center;
 }
 
+.containerNovaSenha{
+    width: 100%;
 
+
+    position: relative;
+}
+#togglePassword, #togglePasswordNv{
+    position: absolute;
+    right: 10px;
+    top: calc(50% + 10px);
+    cursor: pointer;
+    color: #666;
+}
+
+.containerConfNovaSenha{
+    width: 100%;
+
+    position: relative;
+}
 
 .containerAnime{
     width: 100%;
@@ -227,7 +245,7 @@ main{
 }
 .formRecuperar .inpRecuperar{
     width: 100%;
-    height: 60px;
+    height: 40px;
     background-color: none;
     border: 1px solid black;
     padding: 10px;
@@ -294,8 +312,20 @@ main{
 }
 
 @media (min-width: 0) and (max-width: 535px){
+    .recuperarSenha{
+        padding: 0;
+        }
+        .box{
+            width: 100%;
+        }
     .titlePass{
         font-size: 15px;
+    }
+    .GroupLine{
+        margin-right: 0;
+    }
+    .groupRight{
+        margin-left: 0;
     }
 
 }

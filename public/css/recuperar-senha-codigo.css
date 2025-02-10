@@ -22,7 +22,7 @@
 }
 
 .box{
-    width: 100vw;
+    width: 95%;
     height: 700px;
     background-color: rgba(198, 196, 196, 0.2);
     backdrop-filter: blur(5px);
@@ -305,6 +305,12 @@ input[type=number] {
 
 
 @media (min-width: 0) and (max-width: 535px){
+    .recuperarSenha{
+    padding: 0;
+    }
+    .box{
+        width: 100%;
+    }
     .containerRecuperar{
         width: 100%;
     }
