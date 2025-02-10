@@ -10,7 +10,7 @@
   bottom: 2vh;
   height: auto;
   width: auto;
-  background-color: rgba(191, 191, 191, 0.3);
+  /* background-color: rgba(191, 191, 191, 0.3); */
   /* overflow: auto; */
   scroll-behavior: smooth;
   display: flex;
