@@ -362,6 +362,12 @@
 
 /* MEDIA */
 
+@media screen and (max-width: 810px) and (max-height: 1080px) {
+    .area-lateral-navegacao{
+        display: none;
+    }
+}
+
 @media screen and (max-width: 1200px) {
     .area-lateral-navegacao{
         width: 6vh;
