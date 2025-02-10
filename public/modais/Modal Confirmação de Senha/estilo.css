@@ -266,7 +266,7 @@ button.Okay:hover {
     }
 }
 
-@media (min-width: 770px) and (max-width: 1022px) {
+@media (min-width: 770px) and (max-width: 1023px) {
     hr {
         width: 115.3%; /* Ajusta a largura da linha para que não ultrapasse a tela */
         margin-left: -7.7%; /* Centraliza um pouco à esquerda */
@@ -312,7 +312,7 @@ button.Okay:hover {
 /* Telas grandes (desktops grandes) */
 @media (min-width: 1200px) {
     .modal {
-        width: 40%;
+        width: 80%;
         max-width: 600px;
     }
     h1 {
