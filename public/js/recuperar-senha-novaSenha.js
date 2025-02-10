@@ -39,3 +39,34 @@ function validarSenha(novaSenha) {
 document.getElementById('novaSenha').addEventListener('input', function() {
     validarSenha(this.value);
 });
+
+
+
+const togglePassword = document.querySelector("#togglePassword");
+const password = document.querySelector("#confirmSenha");
+
+togglePassword.addEventListener("click", function(){
+    const type = password.type === "password" ? "text" : "password";
+
+    password.type = type;
+
+    this.classList.toggle("fa-eye");
+    this.classList.toggle("fa-eye-slash");
+});
+
+
+
+const togglePasswordNv = document.querySelector("#togglePasswordNv");
+const passwordNv = document.querySelector("#novaSenha");
+
+togglePasswordNv.addEventListener("click", function(){
+    const type = passwordNv.type === "password" ? "text" : "password";
+
+    passwordNv.type = type;
+
+    this.classList.toggle("fa-eye");
+    this.classList.toggle("fa-eye-slash");
+});
+
+
+

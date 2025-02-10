@@ -1,6 +1,11 @@
-var input = document.getElementById('#inpSenha input');
-var img = document.querySelectorAll('.visualizaSenha');
+const togglePassword = document.querySelector("#togglePassword");
+const password = document.querySelector("#inpSenha");
 
-img.addEventListener('click', function () {
-  input.type = input.type == 'text' ? 'password' : 'text';
+togglePassword.addEventListener("click", function(){
+    const type = password.type === "password" ? "text" : "password";
+
+    password.type = type;
+
+    this.classList.toggle("fa-eye");
+    this.classList.toggle("fa-eye-slash");
 });

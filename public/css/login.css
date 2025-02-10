@@ -16,6 +16,7 @@ body{
     align-items: center;
     justify-content: center;
     /* flex-direction: column; */
+    
 }
 .login{
     min-height: 100vh;
@@ -94,8 +95,15 @@ body{
 }
 .senha-telaLogin{
     margin-top: 30px;
+    position: relative;
 }
-
+#togglePassword{
+    position: absolute;
+    right: 10px;
+    top: calc(50% + 5px);
+    cursor: pointer;
+    color: #666;
+}
 .formBox .group label{
     color: #33404D;
     font-weight: bold;
@@ -339,6 +347,8 @@ body{
 
 
  /* ---------Media----------- */
+
+
 @media (min-width: 0px) and (max-width: 320px){
     .login{
         background-size: 60%;
