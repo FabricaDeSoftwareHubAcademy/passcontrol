@@ -149,7 +149,7 @@ button.save:hover {
     
     .logo {
         width: 50px !important;
-        top: 15px;
+        top: 7px !important;
         right: 10px !important;
     }
 
@@ -207,7 +207,7 @@ button.save:hover {
     }
 }
 
-@media (max-width: 400px) and (min-width: 350px) {
+@media (max-width: 400px) and (min-width: 351px) {
     h1 {
         font-size: 16px !important;
         margin-top: 10px !important; /* Afastando do topo */
@@ -216,7 +216,8 @@ button.save:hover {
 
     .logo {
         width: 45px !important; /* Reduzindo o tamanho da logo */
-        right: 5px !important; /* Ajusta um pouco mais para a direita */
+        top: 12px !important;
+        right: 10px !important; /* Ajusta um pouco mais para a direita */
     }
 }
 
@@ -229,8 +230,8 @@ button.save:hover {
 
     .logo {
         width: 45px !important; /* Reduzindo o tamanho da logo */
-        top: 15px;
-        right: 20px !important; /* Ajusta um pouco mais para a direita */
+        top: 7px !important;
+        right: 10px !important; /* Ajusta um pouco mais para a direita */
     }
 }
 
@@ -278,7 +279,7 @@ button.save:hover {
         font-size: 24px;
     }
     p {
-        font-size: 16px;
+        font-size: 20px;
     }
 }
 
@@ -328,7 +329,7 @@ button.save:hover {
 /* Telas grandes (desktops grandes) */
 @media (min-width: 1200px) {
     .modal {
-        width: 40%;
+        width: 80%;
         max-width: 600px;
     }
     h1 {
