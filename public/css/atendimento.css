@@ -47,13 +47,15 @@
     /* background-color: blue; */
     height: 100%;
     width: 70%;
+    gap: 0.6rem;
 }
 .atendimento-atual-atendimento{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    height: 24vh;
+    height: 20vh;
     width: 100%;
+    gap: 2%;
     /* background-color: aqua; */
 }
 .info-atendimento-inicio {
@@ -61,14 +63,14 @@
     flex-direction: row;
     justify-content: center;
     gap: 2%;
-    height: 50%;
+    height: 100%;
     width: 100%;
-    margin-top: 1%;
+    margin-top: 0%;
     /* padding: 1%; */
     /* background-color: aqua; */
 }
 
-.senhas-na-fila-atendimento, .numero-guiche-atendimento, .senha-ausente-e-atendida{
+.senhas-na-fila-atendimento, .senhas-na-fila-atendimento-vermelho, .senha-ausente-e-atendida{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -83,15 +85,42 @@
     color: #33404D;
     background-color: rgba(255, 255, 255, 0.3);
 }
+.numero-guiche-atendimento{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    height: 96%;
+    border-radius: 5px;
+    box-shadow: 4px 4px 8px 1px rgba(0, 0, 0, 0.38);
+    /* margin-top: 18px; */
+    font-size: 28px;
+    font-weight: 700;
+    color: #33404D;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+.senha-ausente-e-atendida{
+    gap: 1rem;
+    align-items: start;  
+    display: flex;
+}
+.senhas-na-fila-atendimento-vermelho{
+    color: red;
+}
+.texto-senhas-atendimento-ausente, .texto-senhas-atendimento-atendidas{
+    display: flex;
+}
 
 /* .senhas-na-fila-atendimento p, .numero-guiche-atendimento p, .senha-ausente-e-atendida p {
     text-align: center;
     align-items: center;
     width: 100%;
 } */
-.texto-info-atentdimento{
+.texto-info-atendimento{
     margin: 0;
- }
+    margin-left: 1rem;
+}
 .numero--atendimento{
     display: flex;
     text-align: center;
@@ -99,61 +128,99 @@
     align-items: center;
     margin: 0;    
 }
-
-
-.senha_fila-guiche-area-chamada {
+.senhas-vermelhas{
     display: flex;
-    /* flex-direction: column; */
-    background-color: purple;
+    text-align: center;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    height: 100%;
+    margin: 0; 
+}
+.texto-info-atendimento{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: 0; 
+}
+
+.informacoes-area-chamada {
+    display: flex;
+    /* justify-content: start; */
+    align-items: start;
+    width: 82%;
+    height: 95%;
     border-radius: 5px;
     box-shadow: 4px 4px 8px 1px rgba(0, 0, 0, 0.38);
     font-size: 28px;
     font-weight: 700;
     color: #33404D;
     background-color: rgba(255, 255, 255, 0.3);
-    /* gap: 5%; */
-    /* margin-top: 15px; */
+    flex-direction: column;
+    gap: 2rem;
 }
-
+.nome-area-chamada{
+    display: flex;
+    padding-left: 1.5rem;
+    gap: 0.4rem;
+}
+.info-area-chamada{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: flex-end;
+    align-content: flex-end;
+    /* justify-content: space-between; */
+}
+.senha-area-chamada{
+    padding-left: 1.5rem;
+    display: flex;
+    align-items: start;
+    width: 50%;
+    gap: 0.4rem;
+}
+.servico-area-chamada{
+    display: flex;
+    align-items: end;
+    gap: 0.4rem;
+}
 .botao_intervalo-guiche-area-chamada {
     background-color: var(--cinza-control);
     color: #f9f9f9;
     /* margin-top: 15px; */
     padding: 0%;
     display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: 100%;
-    justify-content: start;
-    align-items: start;
+    /* flex-direction: row; */
+    width: 50%;
+    height: 9rem;
+    /* justify-content: start; */
+    /* align-items: start; */
     border-radius: 5px;
     font-size: 28px;
     font-weight: 700;
-    gap: 90%;
 }
-
-
+.area-botao-atendimento{
+    display: flex;
+    gap: 2rem;
+}
 .texto-botao-atendimento{
     display: flex;
-    justify-content: start;
+    font-size: 20px;
+    justify-content: center;
     align-items: center;
-    gap: 30px;
+    gap: 12px;
     width: 100%;
     padding: 2%;
-    padding-left: 20px;
-    text-align: start;
+    /* padding-left: 20px; */
+    /* text-align: start; */
     height: 100%;
     text-decoration: none;
     color: var(--cor-fundo);
+    flex-direction: column;
 }
 
 .direita-guiche-area-chamada {
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     width: 30%;
     height: 100%;
     justify-content: flex-end;
@@ -206,32 +273,28 @@
 .meio-guiche-area-chamada {
     display: flex;
     flex-direction: row;
-    width: 96%;
+    width: 90%;
     height: 3%;
     /* background-color: chartreuse; */
-    margin-left: 4.5%;
-    margin-right: 4.5%;
+    margin-top: 3.5rem; 
     justify-content: space-between;
     text-align: end;
 }
 
-.meio_esquerda-guiche-area-chamada {
-    width: 50%;
-    height: 100%;
-    align-items: start;
-    margin-top: 11%;
-    display: flex;
-    /* background-color: coral; */
-    margin-left: 3%;
+.meio-guiche-area-chamada h3 {
+    font-weight: 700;
+    font-size: 28px;
+    color: #33404D;
 }
 
-.meio_esquerda-guiche-area-chamada h3 {
-    font-weight: 700;
+
+.meio-guiche-area-chamada h3 {
+    /* font-weight: 700;
     font-size: 32px;
     color: #33404D;
     /* margin-bottom: -32px; */
-    margin-bottom: -4%;
-    margin-left: 5%;
+    /* margin-bottom: -4%;
+    margin-left: 5%; */ 
 }
 
 .meio_direita-guiche-area-chamada {
@@ -284,9 +347,9 @@
     height: 100%; 
     border-radius: 5px; 
     background-color: rgb(255, 255, 255,0.5); 
-    gap: 15px; 
-    margin-top: 2rem; 
-    overflow-x: scroll; 
+    gap: 15px;
+    margin-top: 0.8rem;  
+    /* overflow-x: scroll;  */
     display: flex; 
     justify-content: left; 
 }
