@@ -73,7 +73,7 @@
 }
 
 .area-info .div-botao-info button:hover {
-  text-decoration: underline;
+  text-decoration: none;
   color: var(--verde-control);
   filter: drop-shadow(4px 4px 2px gray);
 }

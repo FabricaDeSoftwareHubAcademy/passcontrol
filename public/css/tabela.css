@@ -10,12 +10,12 @@
 
  .sub-area-tabela {
   height: 100%; 
-  overflow: hidden; 
-  position: relative; 
+  overflow-x: auto; 
+  position: fixed; 
   width: 100%;
 }
 
-.sub-sub-area-tabela {
+.tabela .sub-sub-area-tabela {
   max-height: 100%; 
   overflow-y: auto; 
   width: 100%;
