@@ -15,6 +15,10 @@
     z-index: 1000;
 }
 
+.body{
+    height: 100vh;
+}
+
 .head {
     background-color: var(--cinza-control);
     height: auto;
@@ -54,7 +58,7 @@
 
 .border-line {
     background-color: var(--cinza-control);
-    height: 50px;
+    height: 30px;
     width: 100%;
     margin: 10px 0;
 }

@@ -10,7 +10,7 @@ const services = [
     { img: "../../../public/img/icons/negociaçao_img.png", title: "Negociação" },
     { img: "../../../public/img/icons/limpeza_img.png", title: "Limpeza" },
     { img: "../../../public/img/icons/transporte_img.png", title: "Transporte" },
-    { img: "../../../public/img/icons/", title: "Água" },
+    { img: "../../../public/img/icons/água_img.png", title: "Água" },
     { img: "../../../public/img/icons/energia_img.png", title: "Energia" },
 
 ];
@@ -19,15 +19,13 @@ const services = [
 const itemsPerPage = 8;
 let currentPage = 1;
 
-// Elementos do DOM
 const boxContainer = document.getElementById("box-container");
 const prevButton = document.getElementById("prevPage");
 const nextButton = document.getElementById("nextPage");
 const pageIndicator = document.getElementById("pageIndicator");
 
-// Função para exibir os serviços na página correta
 function renderPage(page) {
-    // Limpa os itens antes de adicionar os novos
+    
     boxContainer.innerHTML = "";
 
     // Calcula os índices dos itens para esta página
@@ -57,7 +55,7 @@ function renderPage(page) {
     pageIndicator.textContent = `Página ${page}`;
 }
 
-// Eventos dos botões
+// botões
 prevButton.addEventListener("click", () => {
     if (currentPage > 1) {
         currentPage--;

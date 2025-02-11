@@ -5,9 +5,6 @@
     --font-main: Inter, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
-/* HEX COLOR TO FILTER CONVERTER */
-/* https://isotropic.co/tool/hex-color-to-css-filter/ */
-
 * {
     margin: 0;
     padding: 0;
@@ -18,7 +15,6 @@
     z-index: 1000;
 }
 
-/* TOPO */
 
 .head {
     background-color: var(--cinza-control);
@@ -58,7 +54,7 @@
 }
 
 .workspace {
-    height: calc(100vh - 140px);
+    height: 100%;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -69,6 +65,7 @@
     background-repeat: no-repeat;
     background-position: right bottom;
 }
+
 
 .page-title {
     align-items: center;
@@ -84,7 +81,7 @@
 
 .border-line {
     background-color:var(--cinza-control);
-    height: 50px;
+    height: 30px;
     width: 100%;
     margin: 10px 0;
 }
