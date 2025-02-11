@@ -1,11 +1,10 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- TROCA TÍTULO QUANDO FOR UTILIZAR -->
     <title>PassControl</title> 
 
     <link rel="stylesheet" href="../../../public/css/tela_autoatendimentoPage1.css">
@@ -99,4 +98,51 @@
     </main>
 </body>
 
+</html> -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PassControl</title> 
+    <link rel="stylesheet" href="../../../public/css/tela_autoatendimentoPage1.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <header class="head">
+        <nav class="nav-head">
+            <div class="logo-control">
+                <img src="../../../public/img/icons/logo control.svg" alt="LOGOCONTROL" id="img-logo">
+            </div>
+            <h3>PassControl</h3>
+        </nav>
+    </header>
+
+    <div class="border-line"></div>
+
+    <main class="workspace">
+        <div class="area-cinza">
+            <h4 class="page-title">Selecione o serviço:</h4>
+            
+            <!-- Container para os itens -->
+            <div class="box-area" id="box-container">
+                <!-- Os itens serão adicionados pelo JavaScript -->
+            </div>
+
+            <!-- Controles de Paginação -->
+            <div class="pagination-controls">
+                <button id="prevPage" disabled>Anterior</button>
+                <span id="pageIndicator">Página 1</span>
+                <button id="nextPage">Próximo</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="../../../public/js/tela_autoatendimentoPaginação.js"></script> <!-- Arquivo JavaScript separado -->
+</body>
 </html>

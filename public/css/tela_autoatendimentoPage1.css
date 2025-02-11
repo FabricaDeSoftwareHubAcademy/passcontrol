@@ -171,3 +171,24 @@
     margin-top: 10px;
     text-decoration: none;
 }
+
+.pagination-controls {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.pagination-controls button {
+    padding: 10px 20px;
+    margin: 0 5px;
+    background-color: var(--verde-control);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.pagination-controls button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
