@@ -94,6 +94,8 @@ main {
     z-index: 10;
     padding: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    word-wrap: break-word; /* Quebra o texto automaticamente */
+    white-space: normal; /* Permite que o texto se quebre em várias linhas */
 }
 
 .tabela-3x3 td {
@@ -174,7 +176,7 @@ main {
     align-items: center;
 }
 
-/* @media (max-width: 1320px) {
+@media (max-width: 1320px) {
     .menu-tabela {
         width: 100%;
         max-width: 100%;
@@ -208,10 +210,40 @@ main {
         top:3px;
     }
 }
-
-
-
-
+@media (max-width: 1316px) {
+    .menu-tabela {
+        width:30%;
+        max-width: 100%;
+        padding: 5px;
+    }
+    .tabela-3x3 {
+        width: 340%;
+    }
+    .tabela-3x3 th,
+    .tabela-3x3 td {
+        font-size: 18px;
+        padding: 6px;
+    }
+    .barra-pesquisa {
+        width: 21%;
+        max-width: 500px;
+    }
+    .linha {
+        margin-top: -1px;
+        margin-left: 52px;
+        width:89%;
+    }
+    .actions img {
+        width: 24px;
+        height:24px; 
+        margin-left: 30px;
+    }
+    .toggle-btn {
+        width: 40px;
+        height: 20px;
+        top:3px;
+    }
+}
 @media (max-width: 860px) {
     .titulo {
         font-size: 22px;
@@ -274,6 +306,7 @@ main {
         top:3px;
     }
 }
+
 @media (max-width: 850px) {
     .titulo {
         font-size: 16px;
@@ -287,11 +320,7 @@ main {
         left: 42px; 
         bottom: 7vh; 
     }
-    .menu-tabela {
-        width: 20%;
-        max-width: 100%;
-        padding: 5px;
-    }
+
     .tabela-3x3 {
         width: 570%;
     }
@@ -416,6 +445,14 @@ main {
         width: 23px;
         height: 23px;
         margin-left: 3px;
+    }
+}
+@media (max-width: 500px) {
+    .titulo {
+        font-size: 122px;
+        margin-left: 45px;
+        margin-top:24px;
+        margin-bottom: 3px;
     }
 }
 @media (max-width: 596px) {
@@ -591,8 +628,7 @@ main {
     main {   
     top: 157px; 
     right: 10px; 
-    left: 20%; 
-    bottom: vh; 
+    left: 20%;  
     }
     .cubo-branco {
         top: 78px; 
@@ -609,7 +645,7 @@ main {
     .barra-pesquisa {
         width: 50%;
         margin-top: 20px;
-        margin-right: 1px;
+        margin-right: 2px;
         
     }
     .input-pesquisa {
@@ -621,7 +657,7 @@ main {
     }
     .linha {
         margin-top: 28px;
-        margin-left: 20px;
+        margin-left: 18px;
         width: 84%;
     }
     .tabela {
@@ -636,10 +672,14 @@ main {
         width: 200%;
         border-collapse: collapse;
     }
-    .tabela-3x3 th,
+    .tabela-3x3 th {
+        font-size: 10px;
+     
+    }
     .tabela-3x3 td {
-        font-size: 12.5px;
+        font-size: 10.5px;
         padding: 3px;
+        align-items: left;
     }
     .toggle-btn {
         width: 23.5px;
@@ -648,7 +688,6 @@ main {
         border-radius: 40px;
         border: 1px solid #000000;
         position: relative;
-        left:px;
         top:1px;
     }
     .toggle-btn .circle {
@@ -678,4 +717,4 @@ main {
         bottom: 30px;
         right: 45px;
     }
-} */
+}
