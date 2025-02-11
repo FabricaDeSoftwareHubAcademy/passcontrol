@@ -1,10 +1,10 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const buttonAbrir = document.querySelector(".botao_intervalo-guiche-area-chamada");
+    const buttonAbrir = document.querySelector("#chm-intervalo");
     
     // Acessar o modal (EXPORTADO)
     const modalContainer = document.querySelector("main-tela-de-login");
 
-    buttonAbrir.addEventListener("click", () => {
+    buttonAbrir.addEventListener("click", (event) => {
         event.preventDefault();
         modalContainer.querySelector(".modal-container").classList.add("show");
     });

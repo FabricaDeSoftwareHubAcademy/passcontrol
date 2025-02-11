@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const buttonAbrir = document.querySelector(".chamar-senha");
+    const buttonAbrir = document.querySelector("#chm-senha");
     
     // Acessar o modal (EXPORTADO)
     const modalContainer = document.querySelector("main-proxima-senha");
