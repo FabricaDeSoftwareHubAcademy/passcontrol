@@ -56,13 +56,13 @@
 
 .border-line {
     background-color: var(--cinza-control);
-    height: 50px;
+    height: 30px;
     width: 100%;
     margin: 10px 0;
 }
 
 .workspace {
-    height: calc(100vh - 140px);
+    height: 100%;
     width: 100%;
     display: flex;
     flex-direction: column;
