@@ -1,11 +1,22 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const buttonAbrir = document.querySelector(".toggle-btn active");
+document.addEventListener("DOMContentLoaded", function () {
+    const buttonAbrir = document.querySelector("#button-action");
     
-    // Acessar o modal (EXPORTADO)
+    // Modais de ativação e inativação
     const modalContainer = document.querySelector("main-inativacao_atendimento-cadastrado");
+
+    let atendimentoAtivo = true; // Estado inicial: ativo
 
     buttonAbrir.addEventListener("click", (event) => {
         event.preventDefault();
+        
+        // Define o texto do modal com base no estado do atendimento
+        const modalText = atendimentoAtivo
+            ? "Deseja Inativar Esse Guichê?"
+            : "Deseja Ativar Esse Guichê?";
+
+        modalContainer.querySelector("p b").innerText = modalText;
+        
+        // Exibir modal
         modalContainer.querySelector(".modal-container").classList.add("show");
     });
 
@@ -16,6 +27,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
     const buttonSim = modalContainer.querySelector(".save");
     buttonSim.addEventListener("click", () => {
+        // Alterna o estado do atendimento
+        atendimentoAtivo = !atendimentoAtivo;
+
         modalContainer.querySelector(".modal-container").classList.remove("show");
     });
 });
@@ -29,7 +43,7 @@ class Modal_Inativacao_Atendimento_Cadastrado extends HTMLElement {
             <img src="../../../public/img/img-modais/Logo Nota Controlnt.png" alt="Logo Nota Control" class="logo">
             <h1>Confirmação</h1>
             <hr>
-            <p><b>Deseja Inativar Esse Guichê?</b></p>
+            <p><b>Deseja Inativar Esse Guichê?</b></p> <!-- O texto será alterado dinamicamente -->
             <div class="button-group">
                 <button class="botao-modal cancel">Não</button>
                 <button class="botao-modal save">Sim</button>
