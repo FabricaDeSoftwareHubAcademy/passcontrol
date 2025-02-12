@@ -20,10 +20,10 @@ main {
     color: var(--cinza-control);
 }
 .barra-pesquisa {
-    width: 13%; 
+    width: 10%; 
     position: absolute;
-    right: -1px;
-    top: 34px;
+    right: 3.5%;
+    top: 33px;
     max-width: 500px;
 
 }
