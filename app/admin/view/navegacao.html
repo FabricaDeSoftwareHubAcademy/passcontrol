@@ -18,7 +18,7 @@
         <link rel="stylesheet" href="../../../public/css/monitor-modal.css">
 
         <!-- IMPORT DO JS -->
-        <script src="../../../public/js/navegacao-menu-lateral.js" defer></script>
+        <script src="../../../public/js/navegacao-menu-lateral-teste.js" defer></script>
 
         <link rel="shortcut icon" type="imagex/png" href="../../../public/img/Logo-Nota-Controlnt.ico">
 
@@ -84,20 +84,25 @@
         </nav>
     </div>
 
-    <button class="botao-menu-mobile"> <!-- Botão ainda inativo -->
-        <img class="icone-menu-lateral" src="../../../public/img/icons/DropDownIcon.svg" alt="MENU">
+    <button class="botao-menu-mobile abrirMenuLateral" id="botao-menu-mobile"> <!-- Botão ainda inativo -->
+        <img class="icone-menu-lateral-mobile" src="../../../public/img/icons/DropDownIcon.svg" alt="MENU">
     </button>
     
     <div class="background-m-mobile">
         <div class="menu-navegacao-mobile">
             <nav class="area-botao-navegacao-mobile">
 
+                <a class="botao-lateal-navegacao-mobile recolher-m-menu" href="">
+                    <img class="icone-menu-lateral-mobile" src="../../../public/img/icons/Cross.svg" alt="ICONE-ATEND">
+                    <!-- <p class="texto-bott-mobile"></p> -->
+                </a>
+
                 <a class="botao-lateal-navegacao-mobile" href="">
                     <img class="icone-menu-lateral-mobile" src="../../../public/img/icons/atend.svg" alt="ICONE-ATEND">
                     <p class="texto-bott-mobile">Atendimento</p>
                 </a>
 
-                <a class="botao-lateal-navegacao-mobile" href="">
+                <a class="botao-lateal-navegacao-mobile" id="openModalBtn">
                     <img class="icone-menu-lateral-mobile" src="../../../public/img/icons/monitor.svg" alt="ICONE-MONITOR">
                     <p class="texto-bott-mobile">Monitor</p>
                 </a>
@@ -119,8 +124,8 @@
                     </a>
                 </div>
             </nav>
-
         </div>
+        <div class="areatransp"></div>
     </div>
 
     <section class="Area-Util-Projeto">
