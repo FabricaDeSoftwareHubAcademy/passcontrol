@@ -15,7 +15,7 @@ const services = [
 
 ];
 
-// Configuração da paginação
+// Configuração da pagininação
 const itemsPerPage = 8;
 let currentPage = 1;
 
@@ -47,7 +47,7 @@ function renderPage(page) {
         boxContainer.appendChild(box);
     });
 
-    // Atualiza os botões de navegação
+    // Atualiza os botões da quantidade de páginas
     prevButton.disabled = page === 1;
     nextButton.disabled = end >= services.length;
 
@@ -70,5 +70,5 @@ nextButton.addEventListener("click", () => {
     }
 });
 
-// Inicializa a primeira página
+//abre a primeira página
 renderPage(currentPage);
