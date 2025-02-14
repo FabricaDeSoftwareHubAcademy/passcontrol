@@ -328,20 +328,21 @@
     gap: 5vh;
     width: 70vw;
 }
-.botao-lateal-navegacao-mobile{
+.botao-lateral-navegacao-mobile{
     display: flex;
     align-items: center;
     justify-content: start;
     padding-left: 10%;
+    cursor: pointer;
 
     height: 9vh;
     width: 100%;
     border-radius: 5px 0 0 5px;
-
+    z-index: 5;
     text-decoration: none;
     background-color: #2d3945;
 }
-.botao-lateal-navegacao-mobile:hover{
+.botao-lateral-navegacao-mobile:hover{
     background-color: rgba(0, 0, 0, 0.2);
 }
 .recolher-m-menu{
@@ -374,7 +375,7 @@
     margin-top: 14vh;
     width: 100%;
 }
-.sair-mobile .botao-lateal-navegacao-mobile{
+.sair-mobile .botao-lateral-navegacao-mobile{
     width: 50%;
     border-radius: 5px;
     justify-content: center;

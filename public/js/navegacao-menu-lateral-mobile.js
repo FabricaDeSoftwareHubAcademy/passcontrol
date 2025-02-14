@@ -13,14 +13,19 @@
 //     })
 // })
 
-const abrirMenuLateral = document.querySelector(".abrirMenuLateral");
 const menuLateralMobile = document.querySelector(".background-m-mobile");
+const abrirMenuLateral = document.querySelector(".abrirMenuLateral");
 const fecharMenuLateral = document.querySelector(".areatransp");
+const recolherMenuLateral = document.querySelector(".recolher-m-menu");
 
 abrirMenuLateral.addEventListener("click", () =>{
     menuLateralMobile.classList.add("menu-visivel");
 })
 
 fecharMenuLateral.addEventListener("click", () =>{
+    menuLateralMobile.classList.remove("menu-visivel");
+})
+
+recolherMenuLateral.addEventListener("click", () =>{
     menuLateralMobile.classList.remove("menu-visivel");
 })
