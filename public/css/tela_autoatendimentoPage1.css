@@ -91,10 +91,8 @@
 .area-cinza {
     background-color: rgba(0, 0, 0, 0.1); 
     width: calc(100% - 40px);
-    /* width: 100%; */
-    min-height: 60vh;
-    height: calc(98vh - 160px);
-    /* height: auto; */
+    min-height: 80vh;
+    height: 100%;
     top: 10px; 
     left: 10px; 
     right: 10px; 
@@ -219,7 +217,7 @@
         font-size: 24px;
     }
 
-@media (max-width: 600px) {
+@media (max-width: 600px){
     .area-cinza {
         min-height: 70vh; 
         height: auto; 
@@ -237,40 +235,91 @@
         font-size: 14px; 
     }}
 
-@media (max-width: 1024px) {
+@media (max-width: 1024px) and (min-width: 768px) {
     .area-cinza {
         min-height: 70vh;
         height: auto;
         margin-bottom: 20px;
-        padding: 15px;
-    }
-    
-    
-    .pagination-controls {
-        justify-content: center;
-    }
-    
-    .pagination-controls button {
-        padding: 10px 20px;
-        font-size: 16px; 
+        padding: 20px;
+        width: 100%;
     }
 
+    .pagination-controls {
+            justify-content: center; /* Centraliza os botões de paginação */
+            margin-top: 20px;
+        }
+    
+    .pagination-controls button {
+        padding: 12px 24px; 
+        font-size: 16px;
+    }
+    
     .box-area {
         flex-direction: row;
         gap: 20px;
         justify-content: center;
     }
-
+    
     .box {
-        width: 230px; 
-        height: 230px;
-        padding: 15px;
+        width: 230px;
+        height: 230px; 
+        padding: 15px; 
     }
-
+    
     .imagem-servico {
         height: 80px;
     }
-}}
+    }
+
+    @media (min-width: 1025px) {  
+        .area-cinza {
+          padding: 30px;
+          width: calc(100% - 80px); 
+        }
+      
+        .container {
+          width: 75%; 
+          padding: 40px;
+        }
+      
+        .footer {
+          padding: 30px;
+        }
+      
+        .button {
+          width: 30%;  
+          margin-top: 50px;
+        }
+
+        .pagination-controls {
+            justify-content: center;
+        }
+        
+        .pagination-controls button {
+            padding: 10px 20px;
+            font-size: 16px; 
+        }
+    
+        .box-area {
+            flex-direction: row;
+            gap: 20px;
+            justify-content: center;
+        }
+    
+        .box {
+            width: 230px; 
+            height: 230px;
+            padding: 15px;
+        }
+    
+        .imagem-servico {
+            height: 80px;
+        }
+      }
+    
+    
+    
+}
 
 @media (max-width: 600px) {
         .workspace {
