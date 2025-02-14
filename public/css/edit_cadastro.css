@@ -9,7 +9,6 @@
     flex-wrap: wrap;
     flex-direction: column;
 }
-
 .quadrado{
     width: 90%;
     height: 80%;
@@ -73,6 +72,8 @@
     flex-direction: column;
     font-size: 90%;
 }
+
+
 input::placeholder{
     padding: 2px;
 }
@@ -93,6 +94,8 @@ input:focus {
     margin-top: 12px;
 }
 
+
+/* seleção de usuario */
 .labeledit{
     font-family: var(--font-main);
     width: 60%;
@@ -133,6 +136,9 @@ input:focus {
     background-color: white;
     font-size: var(--font-main);
 }
+
+
+/* checkbox de serviço */
 .checkbox-container{ 
     display: flex;
     position: absolute;
@@ -264,6 +270,8 @@ input:focus {
     transform: rotate(1deg);
 } 
 
+
+/* botao da tela */
 .form-actions2{
     display: flex;
     justify-content: flex-end;
@@ -302,6 +310,10 @@ input:focus {
     color: #3AA867;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }
+
+
+
+
 
 
 /* responsividade hotizontal */
@@ -431,16 +443,12 @@ input:focus {
 
 
 /* responsividade vertical */
-@media screen and (max-height: 640px){
+
+@media screen and (max-height: 365px){
     .customizado::before{
         top: 1px;
     }
 }
-/* @media screen and (max-height: 700px){
-    .customizado::before{
-    top: -2px;
-    }
-} */
 @media screen and (max-height: 808px){
     .form-actions2{
         margin-top: auto;
