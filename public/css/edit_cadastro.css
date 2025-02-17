@@ -382,53 +382,47 @@ input:focus {
         left: 55%;
         top: 695px;  
     }
-    .form-actions2{
-        margin-right: 5%;
-    }
 }
-
 @media screen and (max-width: 974px){
     .labeledit{
         width: 150%;
     }
 }
-
+@media screen and (max-width: 550px) {
+    .form-actions2{
+        margin-right: 13%;
+    }
+    .botao_salvo{
+        width: 40%;
+    }
+    .botao_volto{
+        width: 40%;
+    }
+}
 @media screen and (max-width: 410px) {
+    .column-2{
+        top: 22px;
+    }
     .titulo .cadastro_title{
         top: 0px;
     }
-    
 }
-
-@media screen and (max-width: 406px) {
-    .column-2{
-        top: 6px;
-    }
-    .form-actions2{
-        width: 55%;
-        margin-left: 40%;
-    }
-    .titulo .cadastro_title{
-        top: 8px;
-    }
-}
-
 @media screen and (max-width: 400px) {
     .titulo .cadastro_title{
         top: 10px;
     }
+    .column-2{
+        top: 10px;
+    }
+    .customizado::before{
+        top: 1px;
+    }
     .form-actions2{
-        margin-top: 630px;
-        margin-left: 30px;
-        width: 77%;
-        
+        margin-left: 13%;
     }
 }
 
 @media screen and (max-width: 360px){
-    .form-actions2{
-        margin-top: auto;
-    }
     .customizado::before{
         top: 1px;
     }
@@ -442,19 +436,22 @@ input:focus {
 
 
 
-/* responsividade vertical */
 
-@media screen and (max-height: 365px){
-    .customizado::before{
-        top: 1px;
-    }
-}
-@media screen and (max-height: 808px){
+
+/* responsividade vertical */
+@media screen and (max-height: 1368px){
     .form-actions2{
         margin-top: auto;
     }
     .quadrado{
+        height: 75%;
+    }
+}
+@media screen and (max-height: 600px) {
+    .quadrado{
         height: 70%;
+        scroll-behavior: smooth;
+        overflow-x: hidden;
     }
 }
 
