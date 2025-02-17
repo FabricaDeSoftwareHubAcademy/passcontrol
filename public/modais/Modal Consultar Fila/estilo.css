@@ -96,12 +96,7 @@ h1 {
     text-align: center;
 }
 
-/* Estilo do parágrafo */
-p {
-    font-size: 18px;
-    margin: 20px 0;
-    text-align: center;
-}
+
 
 /* Grupo de botões */
 .button-group {
@@ -317,8 +312,8 @@ button.return:hover {
 /* Telas grandes (desktops grandes) */
 @media (min-width: 1200px) {
     .modal {
-        width: 80%;
-        max-width: 600px;
+        width: 100%;
+        max-width: 1200px;
     }
     h1 {
         font-size: 32px;
