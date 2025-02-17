@@ -88,6 +88,8 @@
     align-items: center;
     justify-content: space-evenly;
     font-size: 17px;
+    font-size: 0.8rem;
+    /* font-size: 1vw; */
     text-align: center;
     /* background-color: red; */
 }
@@ -98,7 +100,11 @@
 }
 
 /* INFO USUARIO */
-
+.menu-usuario{
+    height: 100%;
+    cursor: pointer;
+    /* background-color: red; */
+}
 .usu-detalhes{
     background-color: var(--cor-fundo);
     display: none;
@@ -318,8 +324,8 @@
     background-color: var(--cinza-control);
     background-image: url(../../public/img/Logo-Nota-Controlnt.ico);
     background-repeat: no-repeat;
-    background-position: 10% 4vh;
-    background-size: 8vh;
+    background-position: 10vw 8vh;
+    background-size: 10vh;
 }
 .area-botao-navegacao-mobile{
     display: flex;
@@ -372,7 +378,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 14vh;
+    margin-top: 5vh;
     width: 100%;
 }
 .sair-mobile .botao-lateral-navegacao-mobile{

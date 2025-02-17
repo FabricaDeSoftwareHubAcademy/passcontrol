@@ -1,22 +1,11 @@
-//-- EM TESTE --
-
-// $(document).ready(function(){
-//     $('.botao-menu-mobile').on('click', function(){
-//         $('.background-m-mobile').toggleClass('aberto');
-//     })
-// })
-
-// $(document).ready(function(){
-//     $('.botao-menu-mobile').on('click', function() {
-//         $('.background-m-mobile').toggleClass('active');
-//         $('.botao-menu-mobile').find('i').toggleClass('fa-x')
-//     })
-// })
-
 const menuLateralMobile = document.querySelector(".background-m-mobile");
 const abrirMenuLateral = document.querySelector(".abrirMenuLateral");
 const fecharMenuLateral = document.querySelector(".areatransp");
 const recolherMenuLateral = document.querySelector(".recolher-m-menu");
+const abrirMonitorModal = document.querySelector(".btnMonitorModal");
+
+// const modal = document.getElementById("modal");
+// const openModalBtn = document.getElementById("openModalBtn");
 
 abrirMenuLateral.addEventListener("click", () =>{
     menuLateralMobile.classList.add("menu-visivel");
@@ -28,4 +17,9 @@ fecharMenuLateral.addEventListener("click", () =>{
 
 recolherMenuLateral.addEventListener("click", () =>{
     menuLateralMobile.classList.remove("menu-visivel");
+})
+
+abrirMonitorModal.addEventListener("click", () =>{
+    menuLateralMobile.classList.remove("menu-visivel");
+    modal.style.display = "flex";
 })
