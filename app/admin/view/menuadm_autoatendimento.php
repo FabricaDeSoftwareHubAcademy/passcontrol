@@ -14,17 +14,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 
     <!-- IMPORT DO CSS -->
-    <link rel="stylesheet" href="../../../public/css/navegacao.css">
-    <link rel="stylesheet" href="../../../public/css/edit_usuario.css">
-
-    <link rel="stylesheet" href="../../../public/modais/Modal Confirmação dos Dados Registrados/estilo.css">
-    <link rel="stylesheet" href="../../../public/modais/modais/Modal Confirmação dos Dados/estilo.css">
-    <link rel="stylesheet" href="../../../public/modais/Modal Confirmação dos Dados Registrados/estilo.css">
+    <link rel="stylesheet" href="../../../public/css/style_eli.css">
 
     <link rel="shortcut icon" type="imagex/png" href="../../../public/img/Logo-Nota-Controlnt.ico">
-
-    <!-- IMPORT DO JS -->
-     <script src="../../../public/js/modal-edicao-usuario.js"></script>
 
 </head>
 <body class="control-body-navegacao">
@@ -43,8 +35,8 @@
                         <ul class="texto-usu">
                             <li class="nome-usu">Nome do Usuário</li>
                             <li class="email-usu">funcionario123@fun.br</li>
-                            <li><a href="../../../app/admin/view/adm-logado.html">Editar Informações</a></li>
-                            <li><a class="sair" href="../../../index.html">Sair</a></li>
+                            <li><a href="../../../app/admin/view/adm-logado.php">Editar Informações</a></li>
+                            <li><a class="sair" href="../../../index.php">Sair</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -62,7 +54,7 @@
         <nav class="menu-lateral-navegacao">
 
             <div class="botao-navegacao">
-                <a class="botao-lateal-navegacao" href="../../../app/admin/view/atendimento.html">
+                <a class="botao-lateal-navegacao" href="../../../app/admin/view/atendimento.php">
                     <img class="icone-menu-lateral" src="../../../public/img/icons/atend.svg" alt="ICONE ATENDIMENTO">
                     <div class="texto-bott">Atendimento</div>
                 </a>
@@ -80,106 +72,84 @@
                 </a>
             </div>
             <div class="botao-navegacao">
-                <a class="botao-lateal-navegacao ativo-estacionario" href="../../../app/admin/view/menuadm_usuario.html">
+                <a class="botao-lateal-navegacao ativo-estacionario" href="../../../app/admin/view/menuadm_usuario.php">
                     <img class="icone-menu-lateral" src="../../../public/img/icons/gestao.svg" alt="ICONE GESTAO">
                     <div class="texto-bott">Gestão</div>
                 </a>
             </div>
         </nav>
         <div class="sair-navegacao">
-            <a class="botao-lateal-navegacao" href="../../../index.html">
+            <a class="botao-lateal-navegacao" href="../../../index.php">
                 <img class="icone-menu-lateral" src="../../../public/img/icons/sair.svg" alt="ICONE SAIR">
                 <div class="texto-bott">Sair</div>
             </a>
         </div>
     </div>
 
-        <section class="Area-Util-Projeto">
-            <!-- Codigo luan -->
-                
-            <div class="titulo">
-            <h1 class="cadastro_title">Edição de Usuário</h1><br>
-            <hr>   
+    <section class="Area-Util-Projeto">
+        <!-- INICIO DA ÁREA ÚTIL DA PÁGINA -->
+        <!-- INSIRA O CORPO DA SUA PÁGINA A PARTIR DESTE PONTO -->
+
+        <!-- CODIGO DO ELIANDRO -->
+        <!-- navmenu -->
+        <div class="menu-container">
+            <div class="menu">
+                <button class="hamburger" onclick="toggleMenu()">☰</button>
+                <a href="./menuadm_usuario.php">Usuários</a>
+                <a href="./menuadm_servicos.php">Serviços</a>
+                <a href="./menuadm_autoatendimento.php" class="active">Autoatendimento</a>
+                <a href="./menusup_usuario.php">SUP</a>
             </div>
-            <div class="quadrado">
-                <div class="container-flex">
-                    <section class="forme">
-                            <div class="nome">
-                                <label class="labeledit" for="nome">Nome*</label>    
-                                <input class="borda" type="text" name="nome" placeholder=""> 
-                            </div>
-                            <div class="email">
-                                <label class="labeledit" for="email">Email*</label>    
-                                <input class="borda" type="text" name="email">
-                            </div>
-                            <div class="cpf">    
-                                <label class="labeledit" for="cpf">CPF</label>
-                                <input class="borda" type="text" name="email">
-                            </div>
-                    </section>
-                </div>
-                <div class="selecionar">
- 
-                    <div class="perfild">    
-                        <label class="labeledit" for="perfil">Perfil De Acesso</label>
-                        <select class="selecao" name="plataforma" required="required">
-                            <option class="pi" value="admin">Administrador</option>
-                            <option class="pi" value="sup">Supervisor</option>
-                            <option class="pi" value="atend">Atendente</option>
-                            <option class="pi" value="auto-at">Terminal de Autoatendimento</option>
-                        </select>
-                    </div>    
-                    <title class="servico">Seviços</title> 
-                        <div class="checkbox-container">
-                            <div class="column"> 
-                                <label class="customizado"> 
-                                    <input type="checkbox" class="item" id="checkbox"> 
-                                    <span class="teste">Conselho Muncipal</span> 
-                                </label> 
-                                <label class="customizado"> 
-                                    <input type="checkbox" class="item" id="checkbox"> 
-                                    <span class="teste">Fiscalização</span> 
-                                </label>
-                                <label class="customizado"> 
-                                    <input type="checkbox" class="item" id="checkbox"> 
-                                    <span class="teste">Iluminação Pública</span>
-                                </label>  
-                                <label class="customizado"> 
-                                    <input type="checkbox" class="item" id="checkbox"> 
-                                    <span class="teste">IPTU</span> 
-                                </label>  
-                            </div> 
-                            <div class="column"> 
-                                <div class="caixa"></div> 
-                                <label class="customizado">      
-                                    <input type="checkbox" class="item" id="checkbox">
-                                    <span class="teste">Licenças</span>
-                                </label> 
-                                <label class="customizado"> 
-                                    <input type="checkbox" class="item" id="checkbox"> 
-                                    <span class="teste">Ouvidoria</span> 
-                                </label> 
-                                <label class="customizado"> 
-                                    <input type="checkbox" class="item" id="checkbox"> 
-                                    <span class="teste">Poda De Àrvores</span> 
-                                </label>   
-                                <label class="customizado"> 
-                                    <input type="checkbox" id="select-all"> 
-                                    <label for="select-all">Selecionar Todos</label> 
-                                </label>
-                            </div>
+            <div class="menu-mobile" id="mobileMenu">
+                <a href="./menuadm_usuario.php">Usuários</a>
+                <a href="./menuadm_servicos.php">Serviços</a>
+                <a href="./menuadm_autoatendimento.php" class="active">Autoatendimento</a>
+                <a href="./menusup_usuario.php">SUP</a>
+            </div>
+        </div>
+        <script>
+            function toggleMenu() {
+                document.getElementById("mobileMenu").classList.toggle("active");
+            }
+        </script>
+            <!-- área da descrição da página de navegação  -->
+            <div class="descricao">
+                <!-- <h2>Menu de Gestão</h2> -->
+                <hr>
+                <!-- <p>Área de Gestão do Admimistrador.</p> -->
+            </div>
+            <!-- área dos cards de nevegação  -->
+            <main class="area-cards">
+                <div class="container">
+                    <div class="wrapper">
+                        <div class="banner-img">
+                            <img src="../../../public/img/img-menu/gestaodoautoatendimento.png" alt="">
                         </div>
-                    <div class="btn">
-                        <script src="../../../public/js/scripts.js"></script>   
-                        <button class="botao1">Voltar</button>
-                        <button class="botao2">Salvar</button>
+
+                        <!-- <h3 class="titulo-card">Autoatendimento</h3> -->
+                        <!-- <p>Gestão do Autoatendimento.</p> -->
+                    </div>
+                    <div class="button-wrapper">
+                        <button class="btn outline" onclick="window.location.href='configuracao-autoatendimento.php';">Autoatendimento</button>
                     </div>
                 </div>
-            </div>
-        </section>
-        <main-edicao-usuario></main-edicao-usuario>          
-        
-        <!--MONITOR MODAL-->
+                <div class="container">
+                    <div class="wrapper">
+                        <div class="banner-img">
+                            <img src="../../../public/img/img-menu/visualizaçaomonitordeautoatendimento.png" alt="">
+                        </div>
+                        <!-- <h3 class="titulo-produto">Monitor</h3> -->
+                        <!-- <p>Visualizar Monitor de Autoatendimento</p> -->
+                    </div>
+                    <div class="button-wrapper">
+                        <button class="btn outline" onclick="window.location.href='../../../app/admin/view/monitor-modal.php';">Monitor</button>
+                    </div>
+                </div>      
+            </main>
+        </div>
+    </section>
+    
+    <!--MONITOR MODAL-->
     <div class="area-monitor-modal">
         <div class="area-modal" id="modal">
             <div class="modal-fundo">
@@ -266,4 +236,3 @@
 </body>
 </html>
 
-                                

@@ -52,7 +52,7 @@
         
             <div class="footer">
                     <button class="button">
-                        <a href="../../usuario/view/tela_autoatendimentoPage1.html" class="btn-finalizar">FINALIZAR</a>
+                        <a href="../../usuario/view/tela_autoatendimentoPage1.php" class="btn-finalizar">FINALIZAR</a>
                     </button>   
             </div>
 

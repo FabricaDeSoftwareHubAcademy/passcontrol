@@ -35,8 +35,8 @@
                         <ul class="texto-usu">
                             <li class="nome-usu">Nome do Usuário</li>
                             <li class="email-usu">funcionario123@fun.br</li>
-                            <li><a href="../../../app/admin/view/adm-logado.html">Editar Informações</a></li>
-                            <li><a class="sair" href="../../../index.html">Sair</a></li>
+                            <li><a href="../../../app/admin/view/adm-logado.php">Editar Informações</a></li>
+                            <li><a class="sair" href="../../../index.php">Sair</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -54,7 +54,7 @@
         <nav class="menu-lateral-navegacao">
 
             <div class="botao-navegacao">
-                <a class="botao-lateal-navegacao" href="../../../app/admin/view/atendimento.html">
+                <a class="botao-lateal-navegacao" href="../../../app/admin/view/atendimento.php">
                     <img class="icone-menu-lateral" src="../../../public/img/icons/atend.svg" alt="ICONE ATENDIMENTO">
                     <div class="texto-bott">Atendimento</div>
                 </a>
@@ -72,20 +72,20 @@
                 </a>
             </div>
             <div class="botao-navegacao">
-                <a class="botao-lateal-navegacao ativo-estacionario" href="../../../app/admin/view/menuadm_usuario.html">
+                <a class="botao-lateal-navegacao ativo-estacionario" href="../../../app/admin/view/menuadm_usuario.php">
                     <img class="icone-menu-lateral" src="../../../public/img/icons/gestao.svg" alt="ICONE GESTAO">
                     <div class="texto-bott">Gestão</div>
                 </a>
             </div>
         </nav>
         <div class="sair-navegacao">
-            <a class="botao-lateal-navegacao" href="../../../index.html">
+            <a class="botao-lateal-navegacao" href="../../../login.php">
                 <img class="icone-menu-lateral" src="../../../public/img/icons/sair.svg" alt="ICONE SAIR">
                 <div class="texto-bott">Sair</div>
             </a>
         </div>
     </div>
-
+    
     <section class="Area-Util-Projeto">
         <!-- INICIO DA ÁREA ÚTIL DA PÁGINA -->
         <!-- INSIRA O CORPO DA SUA PÁGINA A PARTIR DESTE PONTO -->
@@ -95,16 +95,16 @@
         <div class="menu-container">
             <div class="menu">
                 <button class="hamburger" onclick="toggleMenu()">☰</button>
-                <a href="./menuadm_usuario.html">Usuários</a>
-                <a href="./menuadm_servicos.html">Serviços</a>
-                <a href="./menuadm_autoatendimento.html" class="active">Autoatendimento</a>
-                <a href="./menusup_usuario.html">SUP</a>
+                <a href="./menusup_usuario.php" class="active">Usuários</a>
+                <a href="./menusup_servicos.php">Serviços</a>
+                <!-- <a href="./menuadm_autoatendimento.php" class="active">Autoatendimento</a> -->
+                <a href="./menuadm_usuario.php">ADM</a>
             </div>
             <div class="menu-mobile" id="mobileMenu">
-                <a href="./menuadm_usuario.html">Usuários</a>
-                <a href="./menuadm_servicos.html">Serviços</a>
-                <a href="./menuadm_autoatendimento.html" class="active">Autoatendimento</a>
-                <a href="./menusup_usuario.html">SUP</a>
+                <a href="./menusup_usuario.php" class="active">Usuários</a>
+                <a href="./menusup_servicos.php">Serviços</a>
+                <!-- <a href="./menuadm_autoatendimento.php" class="active">Autoatendimento</a> -->
+                <a href="./menuadm_usuario.php">ADM</a>
             </div>
         </div>
         <script>
@@ -112,43 +112,43 @@
                 document.getElementById("mobileMenu").classList.toggle("active");
             }
         </script>
-            <!-- área da descrição da página de navegação  -->
-            <div class="descricao">
-                <!-- <h2>Menu de Gestão</h2> -->
-                <hr>
-                <!-- <p>Área de Gestão do Admimistrador.</p> -->
-            </div>
+        <!-- área da descrição da página de navegação  -->
+        <div class="descricao">
+            <!-- <h2>Menu de Gestão</h2> -->
+            <hr>
+            <!-- <p>Área de Gestão do Supervisor.</p> -->
+        </div>
             <!-- área dos cards de nevegação  -->
             <main class="area-cards">
                 <div class="container">
                     <div class="wrapper">
                         <div class="banner-img">
-                            <img src="../../../public/img/img-menu/gestaodoautoatendimento.png" alt="">
+                            <img src="../../../public/img/img-menu/usuariocadastrado.png" alt="">
                         </div>
 
-                        <!-- <h3 class="titulo-card">Autoatendimento</h3> -->
-                        <!-- <p>Gestão do Autoatendimento.</p> -->
+                        <!-- <h3 class="titulo-card">Usuários</h3> -->
+                        <!-- <p>Usuários Cadastrados.</p> -->
                     </div>
                     <div class="button-wrapper">
-                        <button class="btn outline" onclick="window.location.href='configuracao-autoatendimento.html';">Autoatendimento</button>
+                        <button class="btn outline" onclick="window.location.href='../../../app/admin/view/AtendentesCadastrados.php';">Usuários</button>
                     </div>
                 </div>
                 <div class="container">
                     <div class="wrapper">
                         <div class="banner-img">
-                            <img src="../../../public/img/img-menu/visualizaçaomonitordeautoatendimento.png" alt="">
+                            <img src="../../../public/img/img-menu/cadastrodeusuario.png" alt="">
                         </div>
-                        <!-- <h3 class="titulo-produto">Monitor</h3> -->
-                        <!-- <p>Visualizar Monitor de Autoatendimento</p> -->
+                        <!-- <h3 class="titulo-produto">Cadastro</h3> -->
+                        <!-- <p>Cadastro de Usuário</p> -->
                     </div>
                     <div class="button-wrapper">
-                        <button class="btn outline" onclick="window.location.href='../../../app/admin/view/monitor-modal.html';">Monitor</button>
+                        <button class="btn outline" onclick="window.location.href='../../../app/admin/view/telacadastro.php';">Cadastro</button>
                     </div>
-                </div>      
+                </div>    
             </main>
-        </div>
+        </div>   
     </section>
-    
+         
     <!--MONITOR MODAL-->
     <div class="area-monitor-modal">
         <div class="area-modal" id="modal">
@@ -235,4 +235,3 @@
     <script src="../../../public/js/monitor-modal.js" defer></script>
 </body>
 </html>
-

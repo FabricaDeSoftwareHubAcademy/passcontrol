@@ -6,6 +6,7 @@
     
     <!-- TROCA TÍTULO QUANDO FOR UTILIZAR -->
     <title>PassControl</title> 
+    
 
     <!-- IMPORT DA FONTE -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,9 +14,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 
     <!-- IMPORT DO CSS -->
-    <link rel="stylesheet" href="../../../public/css/style_eli.css">
+    <link rel="stylesheet" href="../../../public/css/navegacao.css">
+    <link rel="stylesheet" href="../../../public/css/monitor-modal.css">
 
     <link rel="shortcut icon" type="imagex/png" href="../../../public/img/Logo-Nota-Controlnt.ico">
+
 </head>
 <body class="control-body-navegacao">
     <header class="cabeca-navegacao-control">
@@ -24,17 +27,17 @@
                 <img src="../../../public/img/icons/logo control.svg" alt="LOGOCONTROL" id="img-logo">
             </div>
             <H3>PassControl</H3>
-            <div class="usu">                
+            <div class="usu">
                 <!-- INFO DO USUARIO -->
                 <div class="menu-usuario">
-                    <a class="usu">Nome do Usuário</a>
+                    <a class="usu">Nome do Usuário</a> <!-- SERÁ NECESSÁRIA A CONFIGURAÇÃO DE UMA VARIÁVEL PARA O NOME DO USUÁRIO! -->
                     <nav class="usu-detalhes"> 
                         <img src="../../../public/img/icons/image 33.svg" alt="">
                         <ul class="texto-usu">
                             <li class="nome-usu">Nome do Usuário</li>
                             <li class="email-usu">funcionario123@fun.br</li>
-                            <li><a href="../../../app/admin/view/adm-logado.html">Editar Informações</a></li>
-                            <li><a class="sair" href="../../../index.html">Sair</a></li>
+                            <li><a href="../../admin/view/adm-logado.php">Editar Informações</a></li>
+                            <li><a href="../../../index.php">Sair</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -45,108 +48,49 @@
 
     <!-- MENU LATERAL -->
     <button class="botao-menu-mobile"> <!-- Botão ainda inativo -->
-        <img class="icone-menu-lateral" src="../../../public/img/icons/DropDownIcon.svg" alt="MENU">
+        <img class="icone-menu-lateral" src="../assets/icons/DropDownIcon.svg" alt="MENU">
     </button>
 
     <div class="area-lateral-navegacao">
         <nav class="menu-lateral-navegacao">
 
             <div class="botao-navegacao">
-                <a class="botao-lateal-navegacao" href="../../../app/admin/view/atendimento.html">
+                <a class="botao-lateal-navegacao" href="../../admin/view/atendimento.php">
                     <img class="icone-menu-lateral" src="../../../public/img/icons/atend.svg" alt="ICONE ATENDIMENTO">
                     <div class="texto-bott">Atendimento</div>
                 </a>
             </div>
             <div class="botao-navegacao">
-                <a class="botao-lateal-navegacao" id="openModalBtn">
+                <a class="botao-lateal-navegacao ativo-estacionario" id="openModalBtn">
                     <img class="icone-menu-lateral" src="../../../public/img/icons/monitor.svg" alt="ICONE MONITOR">
                     <div class="texto-bott">Monitor</div>
                 </a>
             </div>
             <div class="botao-navegacao">
-                <a class="botao-lateal-navegacao" href="">
+                <a class="botao-lateal-navegacao" href="relatorios.php">
                     <img class="icone-menu-lateral" src="../../../public/img/icons/nota.svg" alt="ICONE RELATORIOS">
                     <div class="texto-bott">Relatórios</div>
                 </a>
             </div>
             <div class="botao-navegacao">
-                <a class="botao-lateal-navegacao ativo-estacionario" href="../../../app/admin/view/menuadm_usuario.html">
+                <a class="botao-lateal-navegacao" href="../../admin/view/menuadm_usuario.php">
                     <img class="icone-menu-lateral" src="../../../public/img/icons/gestao.svg" alt="ICONE GESTAO">
                     <div class="texto-bott">Gestão</div>
                 </a>
             </div>
         </nav>
         <div class="sair-navegacao">
-            <a class="botao-lateal-navegacao" href="../../../index.html">
-                <img class="icone-menu-lateral" src="../../../public/img/icons/sair.svg" alt="ICONE SAIR">
+            <a class="botao-lateal-navegacao" href="../../../index.php">
+                <img class="icone-menu-lateral-sair" src="../../../public/img/icons/sair.svg" alt="ICONE SAIR">
                 <div class="texto-bott">Sair</div>
             </a>
         </div>
     </div>
-    
+
     <section class="Area-Util-Projeto">
-        <!-- INICIO DA ÁREA ÚTIL DA PÁGINA -->
-        <!-- INSIRA O CORPO DA SUA PÁGINA A PARTIR DESTE PONTO -->
-        
-        <!-- CODIGO DO ELIANDRO -->
-        <!-- navmenu -->
-        <div class="menu-container">
-            <div class="menu">
-                <button class="hamburger" onclick="toggleMenu()">☰</button>
-                <a href="./menuadm_usuario.html" class="active">Usuários</a>
-                <a href="./menuadm_servicos.html">Serviços</a>
-                <a href="./menuadm_autoatendimento.html">Autoatendimento</a>
-                <a href="./menusup_usuario.html">SUP</a>
-            </div>
-            <div class="menu-mobile" id="mobileMenu">
-                <a href="./menuadm_usuario.html" class="active">Usuários</a>
-                <a href="./menuadm_servicos.html">Serviços</a>
-                <a href="./menuadm_autoatendimento.html">Autoatendimento</a>
-                <a href="./menusup_usuario.html">SUP</a>
-            </div>
-        </div>
-        <script>
-            function toggleMenu() {
-                document.getElementById("mobileMenu").classList.toggle("active");
-            }
-        </script>
-            <!-- área da descrição da página de navegação  -->
-            <div class="descricao">
-                <!-- <h2>Menu de Gestão</h2> -->
-                <hr>
-                <!-- <p>Área de Gestão do Admimistrador.</p> -->
-            </div>
-            <!-- área dos cards de nevegação  -->
-            <main class="area-cards">
-                <div class="container">
-                    <div class="wrapper">
-                        <div class="banner-img">
-                            <img src="../../../public/img/img-menu/usuariocadastrado.png" alt="">
-                        </div>
 
-                        <!-- <h3 class="titulo-card">Usuários</h3> -->
-                        <!-- <p>Usuários Cadastrados.</p> -->
-                    </div>
-                    <div class="button-wrapper">
-                        <button class="btn outline" onclick="window.location.href='../../../app/admin/view/AtendentesCadastrados.html';">Usuários</button>
-                    </div>
-                </div>
-                <div class="container">
-                    <div class="wrapper">
-                        <div class="banner-img">
-                            <img src="../../../public/img/img-menu/cadastrodeusuario.png" alt="">
-                        </div>
-                        <!-- <h3 class="titulo-produto">Cadastro</h3> -->
-                        <!-- <p>Cadastro de Usuário</p> -->
-                    </div>
-                    <div class="button-wrapper">
-                        <button class="btn outline" onclick="window.location.href='../../../app/admin/view/telacadastro.html';">Tela de Cadastro</button>
-                    </div>
-                </div>      
-            </main>
-        </div>
     </section>
-
+    
     <!--MONITOR MODAL-->
     <div class="area-monitor-modal">
         <div class="area-modal" id="modal">

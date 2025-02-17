@@ -6,19 +6,26 @@
     
     <!-- TROCA TÍTULO QUANDO FOR UTILIZAR -->
     <title>PassControl</title> 
+    
 
     <!-- IMPORT DA FONTE -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 
     <!-- IMPORT DO CSS -->
     <link rel="stylesheet" href="../../../public/css/navegacao.css">
-    <link rel="stylesheet" href="../../../public/css/conteudo.css">
-    <link rel="stylesheet" href="../../../public/css/tabela.css">
+    <link rel="stylesheet" href="../../../public/css/edit_usuario.css">
+
+    <link rel="stylesheet" href="../../../public/modais/Modal Confirmação dos Dados Registrados/estilo.css">
+    <link rel="stylesheet" href="../../../public/modais/modais/Modal Confirmação dos Dados/estilo.css">
+    <link rel="stylesheet" href="../../../public/modais/Modal Confirmação dos Dados Registrados/estilo.css">
 
     <link rel="shortcut icon" type="imagex/png" href="../../../public/img/Logo-Nota-Controlnt.ico">
-    
+
+    <!-- IMPORT DO JS -->
+     <script src="../../../public/js/modal-edicao-usuario.js"></script>
+
 </head>
 <body class="control-body-navegacao">
     <header class="cabeca-navegacao-control">
@@ -36,8 +43,8 @@
                         <ul class="texto-usu">
                             <li class="nome-usu">Nome do Usuário</li>
                             <li class="email-usu">funcionario123@fun.br</li>
-                            <li><a href="../../../app/admin/view/adm-logado.html">Editar Informações</a></li>
-                            <li><a class="sair" href="../../../index.html">Sair</a></li>
+                            <li><a href="../../../app/admin/view/adm-logado.php">Editar Informações</a></li>
+                            <li><a class="sair" href="../../../index.php">Sair</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -55,7 +62,7 @@
         <nav class="menu-lateral-navegacao">
 
             <div class="botao-navegacao">
-                <a class="botao-lateal-navegacao" href="../../../app/admin/view/atendimento.html">
+                <a class="botao-lateal-navegacao" href="../../../app/admin/view/atendimento.php">
                     <img class="icone-menu-lateral" src="../../../public/img/icons/atend.svg" alt="ICONE ATENDIMENTO">
                     <div class="texto-bott">Atendimento</div>
                 </a>
@@ -73,90 +80,106 @@
                 </a>
             </div>
             <div class="botao-navegacao">
-                <a class="botao-lateal-navegacao ativo-estacionario" href="../../../app/admin/view/menuadm_usuario.html">
+                <a class="botao-lateal-navegacao ativo-estacionario" href="../../../app/admin/view/menuadm_usuario.php">
                     <img class="icone-menu-lateral" src="../../../public/img/icons/gestao.svg" alt="ICONE GESTAO">
                     <div class="texto-bott">Gestão</div>
                 </a>
             </div>
         </nav>
         <div class="sair-navegacao">
-            <a class="botao-lateal-navegacao" href="../../../index.html">
+            <a class="botao-lateal-navegacao" href="../../../index.php">
                 <img class="icone-menu-lateral" src="../../../public/img/icons/sair.svg" alt="ICONE SAIR">
                 <div class="texto-bott">Sair</div>
             </a>
         </div>
     </div>
 
-    <!-- INICIO DA ÁREA ÚTIL DA PÁGINA -->
-    <div class="area-info">
-        <div class="header-area">
-            <div class="titulo-area">
-                <span>Usuarios Cadastrados</span>
+        <section class="Area-Util-Projeto">
+            <!-- Codigo luan -->
+                
+            <div class="titulo">
+            <h1 class="cadastro_title">Edição de Usuário</h1><br>
+            <hr>   
             </div>
-            <div class="input-search">
-                <input type="search" name="Buscar Atendente" placeholder="Buscar Atendente">
+            <div class="quadrado">
+                <div class="container-flex">
+                    <section class="forme">
+                            <div class="nome">
+                                <label class="labeledit" for="nome">Nome*</label>    
+                                <input class="borda" type="text" name="nome" placeholder=""> 
+                            </div>
+                            <div class="email">
+                                <label class="labeledit" for="email">Email*</label>    
+                                <input class="borda" type="text" name="email">
+                            </div>
+                            <div class="cpf">    
+                                <label class="labeledit" for="cpf">CPF</label>
+                                <input class="borda" type="text" name="email">
+                            </div>
+                    </section>
+                </div>
+                <div class="selecionar">
+ 
+                    <div class="perfild">    
+                        <label class="labeledit" for="perfil">Perfil De Acesso</label>
+                        <select class="selecao" name="plataforma" required="required">
+                            <option class="pi" value="admin">Administrador</option>
+                            <option class="pi" value="sup">Supervisor</option>
+                            <option class="pi" value="atend">Atendente</option>
+                            <option class="pi" value="auto-at">Terminal de Autoatendimento</option>
+                        </select>
+                    </div>    
+                    <title class="servico">Seviços</title> 
+                        <div class="checkbox-container">
+                            <div class="column"> 
+                                <label class="customizado"> 
+                                    <input type="checkbox" class="item" id="checkbox"> 
+                                    <span class="teste">Conselho Muncipal</span> 
+                                </label> 
+                                <label class="customizado"> 
+                                    <input type="checkbox" class="item" id="checkbox"> 
+                                    <span class="teste">Fiscalização</span> 
+                                </label>
+                                <label class="customizado"> 
+                                    <input type="checkbox" class="item" id="checkbox"> 
+                                    <span class="teste">Iluminação Pública</span>
+                                </label>  
+                                <label class="customizado"> 
+                                    <input type="checkbox" class="item" id="checkbox"> 
+                                    <span class="teste">IPTU</span> 
+                                </label>  
+                            </div> 
+                            <div class="column"> 
+                                <div class="caixa"></div> 
+                                <label class="customizado">      
+                                    <input type="checkbox" class="item" id="checkbox">
+                                    <span class="teste">Licenças</span>
+                                </label> 
+                                <label class="customizado"> 
+                                    <input type="checkbox" class="item" id="checkbox"> 
+                                    <span class="teste">Ouvidoria</span> 
+                                </label> 
+                                <label class="customizado"> 
+                                    <input type="checkbox" class="item" id="checkbox"> 
+                                    <span class="teste">Poda De Àrvores</span> 
+                                </label>   
+                                <label class="customizado"> 
+                                    <input type="checkbox" id="select-all"> 
+                                    <label for="select-all">Selecionar Todos</label> 
+                                </label>
+                            </div>
+                        </div>
+                    <div class="btn">
+                        <script src="../../../public/js/scripts.js"></script>   
+                        <button class="botao1">Voltar</button>
+                        <button class="botao2">Salvar</button>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="linha-in">
-            <span></span>
-        </div>
-        <div class="area-tabela">
-            <table class="tabela">
-                <tr>
-                    <th>Nome</th>
-                    <th>Matricula</th>
-                    <th>Perfil</th>
-                    <th>Serviços</th>
-                    <th>Açoes</th>
-                </tr>
-                <tr>
-                    <td>Guilherme F. Machado</td>
-                    <td>guilermegaymer@gmail.com</td>
-                    <td>Administrador</td>
-                    <td>Nota Fiscal</td>
-                    <td class="editar"><a href=""><img src="../../../public/img/icons/Group 2924.png" alt=""></a><label class="switch">
-                        <input type="checkbox">
-                        <span class="slider"></span>
-                    </label></td>
-                </tr>
-                <tr>
-                    <td>Joao Pedro Sampaio</td>
-                    <td>joaozinhodelasedeles@gmail</td>
-                    <td>Atendente</td>
-                    <td>IPTU</td>
-                    <td class="editar"><a href=""><img src="../../../public/img/Group 2924.png" alt=""></a><label class="switch">
-                        <input type="checkbox">
-                        <span class="slider"></span>
-                    </label></td>
-                </tr>
-                <tr>
-                    <td>adsd </td>
-                    <td>asdas </td>
-                    <td>asda </td>
-                    <td> asda</td>
-                    <td class="editar"><a href=""><img src="../../../public/img/Group 2924.png" alt=""></a><label class="switch">
-                        <input type="checkbox">
-                        <span class="slider"></span>
-                    </label></td>
-                </tr>
-                <tr>
-                    <td> ads</td>
-                    <td>asd </td>
-                    <td>asd </td>
-                    <td>asd </td>
-                    <td class="editar"><a href=""><img src="../../../public/img/Group 2924.png" alt=""></a><label class="switch">
-                        <input type="checkbox">
-                        <span class="slider"></span>
-                    </label></td>
-                </tr>
-            </table>
-        </div>
-        <div class="div-botao-info">
-            <a href="../../../app/admin/view/telacadastro.html"><button class="add-func"  type="submit">Novo Funcionario</button></a>
-        </div>
-    </div>
-
-    <!--MONITOR MODAL-->
+        </section>
+        <main-edicao-usuario></main-edicao-usuario>          
+        
+        <!--MONITOR MODAL-->
     <div class="area-monitor-modal">
         <div class="area-modal" id="modal">
             <div class="modal-fundo">
@@ -242,3 +265,5 @@
     <script src="../../../public/js/monitor-modal.js" defer></script>
 </body>
 </html>
+
+                                

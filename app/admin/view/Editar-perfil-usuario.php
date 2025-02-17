@@ -7,7 +7,6 @@
         <!-- TROCA TÍTULO QUANDO FOR UTILIZAR -->
         <title>PassControl</title> 
         
-        
         <!-- IMPORT DA FONTE -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,11 +14,12 @@
         
         <!-- IMPORT DO CSS -->
         <link rel="stylesheet" href="../../../public/css/navegacao.css">
-        <link rel="stylesheet" href="../../../public/css/monitor-modal.css">
+        <link rel="stylesheet" href="../../../public/css/adm-logado.css">
+        <link rel="stylesheet" href="../../../public/modais/Modal Confirmação dos Dados Registrados/estilo.css">
 
         <!-- IMPORT DO JS -->
-        <script src="../../../public/js/navegacao-menu-lateral-mobile.js" defer></script>
-        <script src="../../../public/js/monitor-modal.js" defer></script>
+        <script src="../../../public/js/navegacao-menu-lateral-teste.js" defer></script>
+        <script src="../../../public/js/modal-editar-perfil-usuario.js"></script>
 
         <link rel="shortcut icon" type="imagex/png" href="../../../public/img/Logo-Nota-Controlnt.ico">
 
@@ -31,18 +31,17 @@
                 <img src="../../../public/img/icons/logo control.svg" alt="LOGOCONTROL" id="img-logo">
             </div>
             <H3>PassControl</H3>
-            <div class="usu-nome">                
+            <div class="usu">                
                 <!-- INFO DO USUARIO -->
                 <div class="menu-usuario">
-                    <a class="usu-nome">Nome do Usuário</a>
+                    <a class="usu">Nome do Usuário</a>
                     <nav class="usu-detalhes"> 
                         <img src="../../../public/img/icons/image 33.svg" alt="">
                         <ul class="texto-usu">
                             <li class="nome-usu">Nome do Usuário</li>
-                            <li class="email-usu">funcionario123@nofun.br</li>
-                            <li><a href="../../../app/admin/view/adm-logado.html">Editar Informações</a></li>
-                            <li><a id="ACESSO-A0-MODAL-DE-ALTERACAO-DE-SENHA">Alterar Senha</a></li>
-                            <li><a class="sair" href="../../../index.html">Sair</a></li>
+                            <li class="email-usu">funcionario123@fun.br</li>
+                            <li><a href="../../../app/admin/view/adm-logado.php">Editar Informações</a></li>
+                            <li><a class="sair" href="../../../index.php">Sair</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -52,90 +51,89 @@
     </header>
 
     <!-- MENU LATERAL -->
+    <button class="botao-menu-mobile"> <!-- Botão ainda inativo -->
+        <img class="icone-menu-lateral" src="../../../public/img/icons/DropDownIcon.svg" alt="MENU">
+    </button>
 
     <div class="area-lateral-navegacao">
         <nav class="menu-lateral-navegacao">
 
-            <a class="botao-lateal-navegacao" href="../../../app/admin/view/atendimento.html">
-                <img class="icone-menu-lateral" src="../../../public/img/icons/atend.svg" alt="ICONE-ATENDIMENTO">
-                <p class="texto-bott">Atendimento</p>
-            </a>
-
-            <a class="botao-lateal-navegacao" id="openModalBtn">
-                <img class="icone-menu-lateral" src="../../../public/img/icons/monitor.svg" alt="ICONE-MONITOR">
-                <p class="texto-bott">Monitor</p>
-            </a>
-
-            <a class="botao-lateal-navegacao" href="../../../app/admin/view/menuadm_usuario.html">
-                <img class="icone-menu-lateral" src="../../../public/img/icons/gestao.svg" alt="ICONE-GESTAO">
-                <p class="texto-bott">Gestão</p>
-            </a>
-
-            <a class="botao-lateal-navegacao" href="">
-                <img class="icone-menu-lateral" src="../../../public/img/icons/nota.svg" alt="ICONE-RELATORIOS">
-                <p class="texto-bott">Relatórios</p>
-            </a>
-            <div class="sair-navegacao">
-                <a class="botao-lateal-navegacao" href="../../../index.html">
-                    <img class="icone-menu-lateral" src="../../../public/img/icons/sair.svg" alt="ICONE-SAIR">
-                    <p class="texto-bott">Sair</p>
+            <div class="botao-navegacao">
+                <a class="botao-lateal-navegacao" href="../../../app/admin/view/atendimento.php">
+                    <img class="icone-menu-lateral" src="../../../public/img/icons/atend.svg" alt="ICONE ATENDIMENTO">
+                    <div class="texto-bott">Atendimento</div>
                 </a>
             </div>
-            
+            <div class="botao-navegacao">
+                <a class="botao-lateal-navegacao" id="openModalBtn">
+                    <img class="icone-menu-lateral" src="../../../public/img/icons/monitor.svg" alt="ICONE MONITOR">
+                    <div class="texto-bott">Monitor</div>
+                </a>
+            </div>
+            <div class="botao-navegacao">
+                <a class="botao-lateal-navegacao" href="">
+                    <img class="icone-menu-lateral" src="../../../public/img/icons/nota.svg" alt="ICONE RELATORIOS">
+                    <div class="texto-bott">Relatórios</div>
+                </a>
+            </div>
+            <div class="botao-navegacao">
+                <a class="botao-lateal-navegacao" href="../../../app/admin/view/menuadm_usuario.php">
+                    <img class="icone-menu-lateral" src="../../../public/img/icons/gestao.svg" alt="ICONE GESTAO">
+                    <div class="texto-bott">Gestão</div>
+                </a>
+            </div>
         </nav>
-    </div>
-
-    <button class="botao-menu-mobile abrirMenuLateral" id="botao-menu-mobile"> <!-- Botão ainda inativo -->
-        <img class="icone-menu-lateral-mobile" src="../../../public/img/icons/DropDownIcon.svg" alt="MENU">
-    </button>
-    
-    <div class="background-m-mobile">
-        <div class="menu-navegacao-mobile">
-            <nav class="area-botao-navegacao-mobile">
-
-                <a class="botao-lateral-navegacao-mobile recolher-m-menu">
-                    <img class="icone-menu-lateral-mobile" src="../../../public/img/icons/Cross.svg" alt="ICONE-ATEND">
-                </a>
-
-                <a class="botao-lateral-navegacao-mobile" href="../../../app/admin/view/atendimento.html">
-                    <img class="icone-menu-lateral-mobile" src="../../../public/img/icons/atend.svg" alt="ICONE-ATEND">
-                    <p class="texto-bott-mobile">Atendimento</p>
-                </a>
-
-                <a class="botao-lateral-navegacao-mobile btnMonitorModal" id="openModalBtn">
-                    <img class="icone-menu-lateral-mobile" src="../../../public/img/icons/monitor.svg" alt="ICONE-MONITOR">
-                    <p class="texto-bott-mobile">Monitor</p>
-                </a>
-
-                <a class="botao-lateral-navegacao-mobile" href="../../../app/admin/view/menuadm_usuario.html">
-                    <img class="icone-menu-lateral-mobile" src="../../../public/img/icons/gestao.svg" alt="ICONE-GESTAO">
-                    <p class="texto-bott-mobile">Gestão</p>
-                </a>
-
-                <a class="botao-lateral-navegacao-mobile" href="">
-                    <img class="icone-menu-lateral-mobile" src="../../../public/img/icons/nota.svg" alt="ICONE-RELATORIOS">
-                    <p class="texto-bott-mobile">Relatórios</p>
-                </a>
-
-                <div class="sair-mobile">
-                    <a class="botao-lateral-navegacao-mobile" href="../../../index.html">
-                        <img class="icone-menu-lateral-mobile" src="../../../public/img/icons/sair.svg" alt="ICONE-SAIR">
-                        <p class="texto-bott-mobile">Sair</p>
-                    </a>
-                </div>
-            </nav>
+        <div class="sair-navegacao">
+            <a class="botao-lateal-navegacao" href="../../../index.php">
+                <img class="icone-menu-lateral" src="../../../public/img/icons/sair.svg" alt="ICONE SAIR">
+                <div class="texto-bott">Sair</div>
+            </a>
         </div>
-        <div class="areatransp"></div>
     </div>
 
     <section class="Area-Util-Projeto">
         <!-- INICIO DA ÁREA ÚTIL DA PÁGINA -->
         <!-- INSIRA O CORPO DA SUA PÁGINA A PARTIR DESTE PONTO -->
-
-
+        <h3 class="perfil-titulo">Perfil</h3>
+        <div class="sub-area">
+            <div class="form-group">
+                <label for="nome">Nome</label>
+                <input type="text" id="nome" name="nome" placeholder="Digite o Nome do Funcionário">
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Digite o Email do Funcionário">
+                </div>
+                <div class="form-group">
+                    <label for="cpf">CPF</label>
+                    <input type="number" id="cpf" name="cpf" placeholder="Digite o CPF do Funcionário">
+                </div>
+            </div>
+            <h3 class="alt-senha-titulo"> Alterar Senha</h3>
+            <div class="form-group">
+                <label for="senha-atual">Senha Atual</label>
+                <input type="password" id="senha-atual" name="senha-atual" placeholder="Digite a Senha Atual">
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="nova-senha">Nova Senha</label>
+                    <input type="password" id="nova-senha" name="nova-senha" placeholder="Digite a Nova Senha">
+                </div>
+                <div class="form-group">
+                    <label for="confirm-nova-senha">Confirmar Nova Senha</label>
+                    <input type="password" id="confirm-nova-senha" name="confirm-nova-senha" placeholder="Digite Novamente a Nova Senha">
+                </div>
+            </div>
+        </div>
+        <div class="form-actions">
+            <button type="button" class="botao-voltar">Voltar</button>
+            <button type="submit" class="botao-salvar">Salvar</button>
+        </div>
 
         <!-- FIM DA ÁREA ÚTIL DA PÁGINA -->
-    </section>    
+    </section>
+    <main-edicao-perfil-usuario></main-edicao-perfil-usuario>         
 
     <!--MONITOR MODAL-->
     <div class="area-monitor-modal">
@@ -220,6 +218,6 @@
             </div>
         </div>
     </div>
-    
+    <script src="../../../public/js/monitor-modal.js" defer></script>
 </body>
 </html>

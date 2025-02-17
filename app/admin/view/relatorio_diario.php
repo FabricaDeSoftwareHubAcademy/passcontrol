@@ -1,22 +1,28 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- TROCA TÍTULO QUANDO FOR UTILIZAR -->
-    <title>PassControl</title> 
-    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- TROCA TÍTULO QUANDO FOR UTILIZAR -->
+        <title>PassControl</title> 
+        
+        
+        <!-- IMPORT DA FONTE -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+        
+        <!-- IMPORT DO CSS -->
+        <link rel="stylesheet" href="../../../public/css/navegacao.css">
+        <link rel="stylesheet" href="../../../public/css/menu_eli.css">
+        <link rel="stylesheet" href="../../../public/css/relatorio_diario.css">
 
-    <!-- IMPORT DA FONTE -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+        <!-- IMPORT DO JS -->
+        <script src="../../../public/js/navegacao-menu-lateral.js" defer></script>
 
-    <!-- IMPORT DO CSS -->
-    <link rel="stylesheet" href="../../../public/css/style_eli.css">
+        <link rel="shortcut icon" type="imagex/png" href="../../../public/img/Logo-Nota-Controlnt.ico">
 
-    <link rel="shortcut icon" type="imagex/png" href="../../../public/img/Logo-Nota-Controlnt.ico">
 </head>
 <body class="control-body-navegacao">
     <header class="cabeca-navegacao-control">
@@ -34,8 +40,8 @@
                         <ul class="texto-usu">
                             <li class="nome-usu">Nome do Usuário</li>
                             <li class="email-usu">funcionario123@fun.br</li>
-                            <li><a href="../../../app/admin/view/adm-logado.html">Editar Informações</a></li>
-                            <li><a class="sair" href="../../../index.html">Sair</a></li>
+                            <li><a href="../../../app/admin/view/adm-logado.php">Editar Informações</a></li>
+                            <li><a class="sair" href="../../../index.php">Sair</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -53,7 +59,7 @@
         <nav class="menu-lateral-navegacao">
 
             <div class="botao-navegacao">
-                <a class="botao-lateal-navegacao" href="../../../app/admin/view/atendimento.html">
+                <a class="botao-lateal-navegacao" href="../../../app/admin/view/atendimento.php">
                     <img class="icone-menu-lateral" src="../../../public/img/icons/atend.svg" alt="ICONE ATENDIMENTO">
                     <div class="texto-bott">Atendimento</div>
                 </a>
@@ -65,20 +71,20 @@
                 </a>
             </div>
             <div class="botao-navegacao">
-                <a class="botao-lateal-navegacao" href="">
+                <a class="botao-lateal-navegacao ativo-estacionario" href="">
                     <img class="icone-menu-lateral" src="../../../public/img/icons/nota.svg" alt="ICONE RELATORIOS">
                     <div class="texto-bott">Relatórios</div>
                 </a>
             </div>
             <div class="botao-navegacao">
-                <a class="botao-lateal-navegacao ativo-estacionario" href="../../../app/admin/view/menuadm_usuario.html">
+                <a class="botao-lateal-navegacao" href="../../../app/admin/view/menuadm_usuario.php">
                     <img class="icone-menu-lateral" src="../../../public/img/icons/gestao.svg" alt="ICONE GESTAO">
                     <div class="texto-bott">Gestão</div>
                 </a>
             </div>
         </nav>
         <div class="sair-navegacao">
-            <a class="botao-lateal-navegacao" href="../../../index.html">
+            <a class="botao-lateal-navegacao" href="../../../index.php">
                 <img class="icone-menu-lateral" src="../../../public/img/icons/sair.svg" alt="ICONE SAIR">
                 <div class="texto-bott">Sair</div>
             </a>
@@ -88,62 +94,54 @@
     <section class="Area-Util-Projeto">
         <!-- INICIO DA ÁREA ÚTIL DA PÁGINA -->
         <!-- INSIRA O CORPO DA SUA PÁGINA A PARTIR DESTE PONTO -->
-        
-        <!-- CODIGO DO ELIANDRO -->
-        <div class="nome_da_area_eli">
-            <!-- navmenu .......-->
-            <div class="menu-container">
-                <div class="menu">
-                    <button class="hamburger" onclick="toggleMenu()">☰</button>
-                    <a href="./menuadm_usuario.html">Usuários</a>
-                    <a href="./menuadm_servicos.html" class="active">Serviços</a>
-                    <a href="./menuadm_autoatendimento.html">Autoatendimento</a>
-                    <a href="./menusup_usuario.html">SUP</a>
-                </div>
-                <div class="menu-mobile" id="mobileMenu">
-                    <a href="./menuadm_usuario.html">Usuários</a>
-                    <a href="./menuadm_servicos.html" class="active">Serviços</a>
-                    <a href="./menuadm_autoatendimento.html">Autoatendimento</a>
-                    <a href="./menusup_usuario.html">SUP</a>
-                </div>
+        <div class="scrollmenu" style="display: flex; justify-content: start; align-items: start;">
+            <a href="../../../app/admin/view/atendimento_tempo_real.php">Guichês</a>
+            <a href="../../../app/admin/view/atendimento.php" class="active">Atendimento</a>
+        </div>
+
+
+
+        <div class="containerDelimitador">
+            <div class="containerRelatioTitle">
+                <h2>Relatório Diário</h2>
             </div>
-            
-            <!-- área da descrição da página de navegação  -->
-            <div class="descricao">
-                <!-- <h2>Menu de Gestão</h2> -->
-                <hr>
-                <!-- <p>Área de Gestão do Supervisor.</p> -->
-            </div>
-            <!-- área dos cards de nevegação  -->
-            <main class="area-cards">
-                <div class="container">
-                    <div class="wrapper">
-                        <div class="banner-img">
-                            <img src="../../../public/img/img-menu/pontodeatendimento.png" alt="">
+
+            <div class="areaBrancaRd">
+                <div class="containerOptionsLateral">
+                    <div class="containerFiltro">
+                        <div class="containerTitleFiltro">
+                            <h3>Filtro</h3>
                         </div>
 
-                        <!-- <h3 class="titulo-card">Atendimento</h3> -->
-                        <!-- <p>Pontos de Atendimento.</p> -->
-                    </div>
-                    <div class="button-wrapper">
-                        <button class="btn outline" onclick="window.location.href='../../../app/admin/view/atendimentocadastrados.html';">DETALHES</button>
-                    </div>
-                </div>
-                <div class="container">
-                    <div class="wrapper">
-                        <div class="banner-img">
-                            <img src="../../../public/img/img-menu/serviços.png" alt="">
+                        <div class="containerPeriodo">
+                            <div class="periodoTitle">
+                                <h3>Período</h3>
+                            </div>
+                            <div class="containerPeriodoFiltro">
+                                <div class="containerInputDate">
+                                    <input type="date" class="inputDate1">
+                                    <input type="date" class="inputDate2">
+                                </div>
+                                <div class="containerInputLocal">
+                                    <select name="local" id="inputLocal" palceholder="Profeitura de Campo Grande / MS">
+                                        <option value="CampoGrandeMS">Campo Grande / ms</option>
+                                    </select>
+                                </div>
+                                <div class="containerFiltrar">
+                                    <input type="submit" value="FIltrar" class="inputFIltrar">
+                                </div>
+                            </div>
                         </div>
-                        <!-- <h3 class="titulo-produto">Serviços</h3> -->
-                        <!-- <p>Gestão dos sehhhrviços</p> -->
                     </div>
-                    <div class="button-wrapper">
-                        <button class="btn outline" onclick="window.location.href='../../../app/admin/view/servicos.html';">Serviços</button>
-                    </div>
-                </div>    
-            </main>
-        </div>   
-    </section>
+                    
+                </div>
+                <div class="containerMainRd">
+
+                </div>
+            </div>
+        </div>
+        <!-- FIM DA ÁREA ÚTIL DA PÁGINA -->
+    </section>         
 
     <!--MONITOR MODAL-->
     <div class="area-monitor-modal">
@@ -229,5 +227,10 @@
         </div>
     </div>
     <script src="../../../public/js/monitor-modal.js" defer></script>
+    <script>
+        function toggleMenu() {
+            document.getElementById("mobileMenu").classList.toggle("active");
+        }
+    </script>
 </body>
 </html>

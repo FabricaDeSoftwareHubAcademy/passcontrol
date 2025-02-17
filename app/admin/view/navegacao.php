@@ -15,11 +15,11 @@
         
         <!-- IMPORT DO CSS -->
         <link rel="stylesheet" href="../../../public/css/navegacao.css">
-        <link rel="stylesheet" href="../../../public/css/menu_eli.css">
-        <link rel="stylesheet" href="../../../public/css/relatorio_diario.css">
+        <link rel="stylesheet" href="../../../public/css/monitor-modal.css">
 
         <!-- IMPORT DO JS -->
-        <script src="../../../public/js/navegacao-menu-lateral.js" defer></script>
+        <script src="../../../public/js/navegacao-menu-lateral-mobile.js" defer></script>
+        <script src="../../../public/js/monitor-modal.js" defer></script>
 
         <link rel="shortcut icon" type="imagex/png" href="../../../public/img/Logo-Nota-Controlnt.ico">
 
@@ -31,17 +31,18 @@
                 <img src="../../../public/img/icons/logo control.svg" alt="LOGOCONTROL" id="img-logo">
             </div>
             <H3>PassControl</H3>
-            <div class="usu">                
+            <div class="usu-nome">                
                 <!-- INFO DO USUARIO -->
                 <div class="menu-usuario">
-                    <a class="usu">Nome do Usuário</a>
+                    <a class="usu-nome">Nome do Usuário</a>
                     <nav class="usu-detalhes"> 
                         <img src="../../../public/img/icons/image 33.svg" alt="">
                         <ul class="texto-usu">
                             <li class="nome-usu">Nome do Usuário</li>
                             <li class="email-usu">funcionario123@fun.br</li>
-                            <li><a href="../../../app/admin/view/adm-logado.html">Editar Informações</a></li>
-                            <li><a class="sair" href="../../../index.html">Sair</a></li>
+                            <li><a href="../../../app/admin/view/adm-logado.php">Editar Informações</a></li>
+                            <li><a id="ACESSO-A0-MODAL-DE-ALTERACAO-DE-SENHA">Alterar Senha</a></li>
+                            <li><a class="sair" href="../../../index.php">Sair</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -51,97 +52,90 @@
     </header>
 
     <!-- MENU LATERAL -->
-    <button class="botao-menu-mobile"> <!-- Botão ainda inativo -->
-        <img class="icone-menu-lateral" src="../../../public/img/icons/DropDownIcon.svg" alt="MENU">
-    </button>
 
     <div class="area-lateral-navegacao">
         <nav class="menu-lateral-navegacao">
 
-            <div class="botao-navegacao">
-                <a class="botao-lateal-navegacao" href="../../../app/admin/view/atendimento.html">
-                    <img class="icone-menu-lateral" src="../../../public/img/icons/atend.svg" alt="ICONE ATENDIMENTO">
-                    <div class="texto-bott">Atendimento</div>
-                </a>
-            </div>
-            <div class="botao-navegacao">
-                <a class="botao-lateal-navegacao" id="openModalBtn">
-                    <img class="icone-menu-lateral" src="../../../public/img/icons/monitor.svg" alt="ICONE MONITOR">
-                    <div class="texto-bott">Monitor</div>
-                </a>
-            </div>
-            <div class="botao-navegacao">
-                <a class="botao-lateal-navegacao ativo-estacionario" href="">
-                    <img class="icone-menu-lateral" src="../../../public/img/icons/nota.svg" alt="ICONE RELATORIOS">
-                    <div class="texto-bott">Relatórios</div>
-                </a>
-            </div>
-            <div class="botao-navegacao">
-                <a class="botao-lateal-navegacao" href="../../../app/admin/view/menuadm_usuario.html">
-                    <img class="icone-menu-lateral" src="../../../public/img/icons/gestao.svg" alt="ICONE GESTAO">
-                    <div class="texto-bott">Gestão</div>
-                </a>
-            </div>
-        </nav>
-        <div class="sair-navegacao">
-            <a class="botao-lateal-navegacao" href="../../../index.html">
-                <img class="icone-menu-lateral" src="../../../public/img/icons/sair.svg" alt="ICONE SAIR">
-                <div class="texto-bott">Sair</div>
+            <a class="botao-lateal-navegacao" href="../../../app/admin/view/atendimento.php">
+                <img class="icone-menu-lateral" src="../../../public/img/icons/atend.svg" alt="ICONE-ATENDIMENTO">
+                <p class="texto-bott">Atendimento</p>
             </a>
+
+            <a class="botao-lateal-navegacao" id="openModalBtn">
+                <img class="icone-menu-lateral" src="../../../public/img/icons/monitor.svg" alt="ICONE-MONITOR">
+                <p class="texto-bott">Monitor</p>
+            </a>
+
+            <a class="botao-lateal-navegacao" href="../../../app/admin/view/menuadm_usuario.php">
+                <img class="icone-menu-lateral" src="../../../public/img/icons/gestao.svg" alt="ICONE-GESTAO">
+                <p class="texto-bott">Gestão</p>
+            </a>
+
+            <a class="botao-lateal-navegacao" href="">
+                <img class="icone-menu-lateral" src="../../../public/img/icons/nota.svg" alt="ICONE-RELATORIOS">
+                <p class="texto-bott">Relatórios</p>
+            </a>
+            <div class="sair-navegacao">
+                <a class="botao-lateal-navegacao" href="../../../index.php">
+                    <img class="icone-menu-lateral" src="../../../public/img/icons/sair.svg" alt="ICONE-SAIR">
+                    <p class="texto-bott">Sair</p>
+                </a>
+            </div>
+            
+        </nav>
+    </div>
+
+    <button class="botao-menu-mobile abrirMenuLateral" id="botao-menu-mobile"> <!-- Botão ainda inativo -->
+        <img class="icone-menu-lateral-mobile" src="../../../public/img/icons/DropDownIcon.svg" alt="MENU">
+    </button>
+    
+    <div class="background-m-mobile">
+        <div class="menu-navegacao-mobile">
+            <nav class="area-botao-navegacao-mobile">
+
+                <a class="botao-lateral-navegacao-mobile recolher-m-menu">
+                    <img class="icone-menu-lateral-mobile" src="../../../public/img/icons/Cross.svg" alt="ICONE-ATEND">
+                </a>
+
+                <a class="botao-lateral-navegacao-mobile" href="../../../app/admin/view/atendimento.php">
+                    <img class="icone-menu-lateral-mobile" src="../../../public/img/icons/atend.svg" alt="ICONE-ATEND">
+                    <p class="texto-bott-mobile">Atendimento</p>
+                </a>
+
+                <a class="botao-lateral-navegacao-mobile btnMonitorModal" id="openModalBtn">
+                    <img class="icone-menu-lateral-mobile" src="../../../public/img/icons/monitor.svg" alt="ICONE-MONITOR">
+                    <p class="texto-bott-mobile">Monitor</p>
+                </a>
+
+                <a class="botao-lateral-navegacao-mobile" href="../../../app/admin/view/menuadm_usuario.php">
+                    <img class="icone-menu-lateral-mobile" src="../../../public/img/icons/gestao.svg" alt="ICONE-GESTAO">
+                    <p class="texto-bott-mobile">Gestão</p>
+                </a>
+
+                <a class="botao-lateral-navegacao-mobile" href="">
+                    <img class="icone-menu-lateral-mobile" src="../../../public/img/icons/nota.svg" alt="ICONE-RELATORIOS">
+                    <p class="texto-bott-mobile">Relatórios</p>
+                </a>
+
+                <div class="sair-mobile">
+                    <a class="botao-lateral-navegacao-mobile" href="../../../index.php">
+                        <img class="icone-menu-lateral-mobile" src="../../../public/img/icons/sair.svg" alt="ICONE-SAIR">
+                        <p class="texto-bott-mobile">Sair</p>
+                    </a>
+                </div>
+            </nav>
         </div>
+        <div class="areatransp"></div>
     </div>
 
     <section class="Area-Util-Projeto">
         <!-- INICIO DA ÁREA ÚTIL DA PÁGINA -->
         <!-- INSIRA O CORPO DA SUA PÁGINA A PARTIR DESTE PONTO -->
-        <div class="scrollmenu" style="display: flex; justify-content: start; align-items: start;">
-            <a href="../../../app/admin/view/atendimento_tempo_real.html">Guichês</a>
-            <a href="../../../app/admin/view/atendimento.html" class="active">Atendimento</a>
-        </div>
 
 
 
-        <div class="containerDelimitador">
-            <div class="containerRelatioTitle">
-                <h2>Relatório Diário</h2>
-            </div>
-
-            <div class="areaBrancaRd">
-                <div class="containerOptionsLateral">
-                    <div class="containerFiltro">
-                        <div class="containerTitleFiltro">
-                            <h3>Filtro</h3>
-                        </div>
-
-                        <div class="containerPeriodo">
-                            <div class="periodoTitle">
-                                <h3>Período</h3>
-                            </div>
-                            <div class="containerPeriodoFiltro">
-                                <div class="containerInputDate">
-                                    <input type="date" class="inputDate1">
-                                    <input type="date" class="inputDate2">
-                                </div>
-                                <div class="containerInputLocal">
-                                    <select name="local" id="inputLocal" palceholder="Profeitura de Campo Grande / MS">
-                                        <option value="CampoGrandeMS">Campo Grande / ms</option>
-                                    </select>
-                                </div>
-                                <div class="containerFiltrar">
-                                    <input type="submit" value="FIltrar" class="inputFIltrar">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                </div>
-                <div class="containerMainRd">
-
-                </div>
-            </div>
-        </div>
         <!-- FIM DA ÁREA ÚTIL DA PÁGINA -->
-    </section>         
+    </section>    
 
     <!--MONITOR MODAL-->
     <div class="area-monitor-modal">
@@ -226,11 +220,6 @@
             </div>
         </div>
     </div>
-    <script src="../../../public/js/monitor-modal.js" defer></script>
-    <script>
-        function toggleMenu() {
-            document.getElementById("mobileMenu").classList.toggle("active");
-        }
-    </script>
+    
 </body>
 </html>

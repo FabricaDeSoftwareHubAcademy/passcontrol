@@ -73,10 +73,10 @@
                 </div>
 
                 <nav class="navEsqueciSenha">
-                    <li><a href="app/admin/view/recuperar-senha-email.html"><span class="spnEsqueciSenha">Esqueci Minha Senha</span></a></li>
+                    <li><a href="app/admin/view/recuperar-senha-email.php"><span class="spnEsqueciSenha">Esqueci Minha Senha</span></a></li>
                 </nav>
                 <div class="btnEntrar">
-                        <a href="app/admin/view/atendimento.html" type="submit" class="btn">Entrar</a>
+                        <a href="app/admin/view/atendimento.php" type="submit" class="btn">Entrar</a>
                 </div>
             </form>
             
