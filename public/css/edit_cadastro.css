@@ -447,6 +447,13 @@ input:focus {
         height: 75%;
     }
 }
+@media screen and (max-height: 770px){
+    .quadrado{
+        height: 70%;
+        scroll-behavior: smooth;
+        overflow-x: hidden;
+    }
+}
 @media screen and (max-height: 600px) {
     .quadrado{
         height: 70%;
