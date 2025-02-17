@@ -361,7 +361,7 @@
 
 /* TABELA  */
 .fundo-guiche-area-chamada{ 
-    width: 92%; 
+    width: 96%; 
     font-weight: 600; 
     height: 100%; 
     border-radius: 5px; 
@@ -947,7 +947,12 @@ thead, tbody tr {
     }
     .area-botao-atendimento{
         display: flex;
-        gap: 1rem;
+        gap: 0.5rem;
+        height: 42%;
+    }
+    .area-botao--guiche-area-chamada{
+        gap: 0.4rem;
+        margin-top: 0.2rem;
     }
     .info-area-chamada{
         display: flex;
@@ -1006,7 +1011,7 @@ thead, tbody tr {
     }
     .botao-proxima-senha-atendimento, .botao-encerrar-atendimento,.botao-consultar-fila-atendimento, .botao-intervalo-atendimento {
         width: 100%;
-        height: 4.5rem;
+        height: 4rem;
     }
     .info-atendimento-inicio {
         height: 40%;
@@ -1018,6 +1023,12 @@ thead, tbody tr {
     }
     .tabela_atendimento-guiche-area-chamada{
         margin: 3.5vw;
+    }
+    .fundo-guiche-area-chamada{
+        margin-top: 1.5rem; 
+    }
+    .meio-guiche-area-chamada{
+        margin-top: 1.6rem; 
     }
     .meio-guiche-area-chamada h3{
         font-size: 18px;
