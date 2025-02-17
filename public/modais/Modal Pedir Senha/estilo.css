@@ -180,7 +180,7 @@ button.save:hover {
 @media (max-width: 400px) and (min-width: 320px) {
     .modal {
         width: 90% !important;
-        min-width: auto !important; /* Permite ajuste dinâmico */
+        min-width: auto !important;
         padding: 15px !important;
     }
     
@@ -219,21 +219,21 @@ button.save:hover {
     }
 
     button.cancel {
-        margin-right: 0 !important; /* Remove o deslocamento para a esquerda */
+        margin-right: 0 !important;
     }
 
     button.cancel{
-        font-size: 12px !important; /* Diminui o tamanho da fonte */
-        padding: 8px 12px !important; /* Reduz o padding */
-        width: auto !important; /* Ajusta a largura automaticamente */
-        max-width: 200px !important; /* Limita o tamanho máximo da largura */
+        font-size: 12px !important;
+        padding: 8px 12px !important;
+        width: auto !important;
+        max-width: 200px !important;
     }
 
     button.save{
-        font-size: 12px !important; /* Diminui o tamanho da fonte */
-        padding: 8px 12px !important; /* Reduz o padding */
-        width: auto !important; /* Ajusta a largura automaticamente */
-        max-width: 200px !important; /* Limita o tamanho máximo da largura */
+        font-size: 12px !important;
+        padding: 8px 12px !important;
+        width: auto !important;
+        max-width: 200px !important;
     }
 
     /* Ajuste da linha horizontal */
@@ -253,22 +253,8 @@ button.save:hover {
 
     .logo {
         width: 45px !important; /* Reduzindo o tamanho da logo */
-        top: 15px !important;
+        top: 10px !important;
         right: 5px !important; /* Ajusta um pouco mais para a direita */
-    }
-}
-
-@media (max-width: 350px) and (min-width: 345px) {
-    h1 {
-        font-size: 16px !important;
-        margin-right: 50px;
-        max-width: 100% !important; /* Evita que o título fique muito largo */
-    }
-
-    .logo {
-        width: 45px !important; /* Reduzindo o tamanho da logo */
-        top: 15px;
-        right: 20px !important; /* Ajusta um pouco mais para a direita */
     }
 }
 
@@ -294,6 +280,18 @@ button.save:hover {
     button {
         font-size: 12px;
         padding: 8px 12px;
+    }
+}
+
+@media (max-width: 505px) and (min-width: 481px) {
+    h1 {
+        font-size: 18px !important;
+        margin-top: 20px; /* Ajusta o espaçamento superior */
+    }
+
+    .logo {
+        width: 80px !important; /* Ajuste opcional para o tamanho da logo */
+        top: 15px; /* Ajusta a posição da logo para garantir que não fique muito próxima */
     }
 }
 
@@ -331,7 +329,7 @@ button.save:hover {
 
 
 /* Telas médias (tablets) */
-@media (max-width: 768px) {
+@media (max-width: 769px) {
     hr {
         width: 109%; /* Aumenta a largura da linha no celular */
         margin-left: -4.4%; /* Ajusta a centralização */
