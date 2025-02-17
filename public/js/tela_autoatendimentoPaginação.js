@@ -36,7 +36,7 @@ function renderPage(page) {
     // Adiciona os itens ao HTML
     pageItems.forEach(service => {
         const box = document.createElement("a");
-        box.href = "../view/tela_autoatendimentoPage3.html";
+        box.href = "../view/tela_autoatendimentoPage2.html";
         box.classList.add("box");
 
         box.innerHTML = `

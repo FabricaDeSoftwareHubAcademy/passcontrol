@@ -5,10 +5,6 @@
     --font-main: Inter, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
-/* HEX COLOR TO FILTER CONVERTER */
-/* https://isotropic.co/tool/hex-color-to-css-filter/ */
-
-
 * {
     margin: 0;
     padding: 0;
@@ -20,8 +16,7 @@
 }
 
 
-
-cabeca {
+.head {
     background-color: var(--cinza-control);
     height: auto;
     width: auto;
@@ -29,7 +24,7 @@ cabeca {
     display: flex;
 }
 
-.nav-cabeca {
+.nav-head {
     background-color: var(--cor-fundo);
     width: 100%;
     height: 100px;
@@ -49,7 +44,7 @@ cabeca {
     width: 100%;
 }
 
-.nav-cabeca H3 {
+.nav-head H3 {
     color: var(--cinza-control);
     width: 80%;
     padding-left: 20px;
@@ -58,117 +53,258 @@ cabeca {
     font-size: 23px;
 }
 
-.area-servicos {
-    height: calc(100vh - 140px);
+.workspace {
+    height: 100%;
     width: 100%;
     display: flex;
-    background-image: url(../assets/background.png);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url('../img/Background-logo\ 2.svg');
     background-size: 400px;
     background-repeat: no-repeat;
     background-position: right bottom;
-    /* background-color: red; */
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    /* padding: 20px; */
-
-
 }
 
 
-
-.selecione-servico {
+.page-title {
     align-items: center;
     justify-content: center;
     font-size: 32px;
-    /* background-color: aliceblue; */
     text-align: center;
     font-family: var(--font-main);
+    color: #113062;
     font-weight: 800;
+    margin-bottom: 20px;
+    margin-top: 0%;
 }
 
-.espaco {
-    background-color: black; /* Define a cor preta */
-    height: 50px; /* Define a altura da linha */
-    width: 100%; /* Faz com que ocupe toda a largura disponível */
-    margin: 10px 0; /* Adiciona um espaçamento acima e abaixo, opcional */
+.border-line {
+    background-color:var(--cinza-control);
+    height: 30px;
+    width: 100%;
+    margin: 10px 0;
 }
 
-.fundo-cinza{
-     background-color: rgba(0, 0, 0, 0.1); 
-     margin-top: 26% ;
-     width: 1300px;
-     height: 1000px;
-} 
-
-.box-servicos {
-    width: auto; /* Largura ajustada com margens */
-    max-width: 1200px; /* Define uma largura máxima, opcional */
-    padding: 20px; /* Espaçamento interno para afastar o conteúdo das bordas */
-    margin: 20px auto; /* Centraliza horizontalmente a seção */
+.area-cinza {
+    background-color: rgba(0, 0, 0, 0.1); 
+    width: calc(100% - 40px);
+    min-height: 60vh;
+    height: calc(98vh - 160px);
+    top: 10px; 
+    left: 10px; 
+    right: 10px; 
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
+    justify-content:flex-start;
+    align-items: center;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
 }
 
-
-.area-quadrados {
+.box-area {
     display: flex;
-    width: auto;
-    height: auto;
+    width: 100%;
+    max-width: 1200px;
+    height: 100%;
     justify-content: center;
     flex-wrap: wrap;
-    margin-top: 50px;
-    gap: 50px;
-    /* background-color: aliceblue; */
+    margin-top: 30px;
+    gap: 30px;
     flex-direction: row;
     align-items: center;
-    border: #33404D;
-    border-radius: 5px 5px 5px 5px;
-    /* padding: 20px; */
-
+    border-radius: 5px;
 }
 
-.quadrado {
+
+.box {
     border: 4px solid var(--verde-control);
-    position: relative;
     border-radius: 5px;
+    width: calc(33,33% - 20px);
     gap: 18px;
     width: 250px;
     height: 250px;
     padding: 20px;
     background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-decoration: none;
+}
 
+.box .imagem-servico-container {
+    display: flex;
+    flex-direction: row; 
+    justify-content: center;
+    align-items: center;
+    gap: 15px; 
+    width: 100%; 
 }
 
 .imagem-servico {
-    /* display: flex; */
-    justify-content: center;
+    max-width: 50px; 
+    max-height: 50px; 
+    object-fit: contain; 
+}
+
+.box h4 {
+    color: #113062;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+    padding-top: 10px;
+}
+
+.footer{
+    display: flex;
     align-items: center;
-    height: 100px;
+    width: 100%;
+
 }
 
-.nome-servico {
+.button {
     display: flex;
+    justify-content:center;
+    width: 10%; 
+    margin-top: 30px;
+    position: relative;
+    padding: 0 20px;
+    background-color: var(--cinza-control);
+    align-items: center;
+    cursor: pointer;
+    border-radius: 5px;
+    height: 60px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.button:hover {
+    background-color: var(--cinza-control);
+}
+
+.button:hover .btn-text {
+    color: red; 
+}
+
+.btn-text { 
+    display: flex;
+    align-items: center;
     justify-content: center;
-
+    text-align: center;
+    font-size: 18px;
+    color: white;
+    text-decoration: none; 
+    font-weight: bold;
+    padding: 10px;
+    height: 100%;
+    width: 100%;
 }
 
-.seta {
-    display: flex;
-    justify-content: flex-end; /* Alinha o botão à direita */
-    align-items: flex-end; /* Alinha o botão ao fundo */
-    width: 100%; /* Garante que ocupa toda a largura do contêiner pai */
+@media (max-width: 1024px) {
+    .box {
+        width: calc(50% - 20px); 
+    }
 }
 
-.btn-proximaPagina {
-    background-color: transparent;
-    color: var(--cinza-control);
-    display: flex;
-    justify-content: center; /* Centraliza a seta horizontalmente */
-    align-items: center; /* Centraliza a seta verticalmente */
-    cursor: pointer; /* Adiciona cursor de clique */
-    font-size: 50px;
+@media (max-width: 600px){
+    .box {
+        width: 100%;
+        height: 200px; 
+    }
+
+    .nav-head h3 {
+        font-size: 18px; 
+    }
+
+    .page-title {
+        font-size: 24px;
+    }
+    .area-cinza {
+        min-height: 70vh; 
+        height: auto; 
+        margin-bottom: 10px;
+        padding: 10px; 
+    }  
+
+    .button {
+        width: 40%;
+        margin-top: 20px;
+        height: 50px;
+    }
+
+    .btn-text {
+        font-size: 16px;
+    }
+
+@media (max-width: 1024px) and (min-width: 768px) {
+    .area-cinza {
+        min-height: 70vh;
+        height: auto;
+        margin-bottom: 20px;
+        padding: 20px;
+        width: 100%;
+    }
+    
+    .box-area {
+        flex-direction: row;
+        gap: 20px;
+        justify-content: center;
+    }
+    
+    .box {
+        width: 230px;
+        height: 230px; 
+        padding: 15px; 
+    }
+    
+    .imagem-servico {
+        height: 80px;
+    }
+
+    .button {
+        width: 90%;
+        margin-top: 20px;
+        height: 50px;
+    }
+    }
+
+    @media (min-width: 1025px) {  
+        .area-cinza {
+          padding: 30px;
+          width: calc(100% - 80px); 
+        }
+    
+        .footer {
+          padding: 30px;
+        }
+      
+        .button {
+          width: 30%;  
+          margin-top: 50px;
+        }
+
+        .box-area {
+            flex-direction: row;
+            gap: 20px;
+            justify-content: center;
+        }
+    
+        .box {
+            width: 230px; 
+            height: 230px;
+            padding: 15px;
+        }
+    
+        .imagem-servico {
+            height: 80px;
+        }
+      }
+ 
 }
 
+@media (max-width: 600px) {
+        .workspace {
+            background-size: 250px;
+        }
+}
