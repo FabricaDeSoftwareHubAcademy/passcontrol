@@ -27,7 +27,7 @@ class Modal_Edição_Servico extends HTMLElement {
         <main class="modal-container">
         <section class="modal">
             <img src="../../../public/img/img-modais/Logo Nota Controlnt.png" alt="Logo Nota Control" class="logo">
-            <h1>Cadastrar Serviços</h1>
+            <h1 class="title">Cadastrar Serviços</h1>
             <hr>
             <div class="inf-modal">
                 <div class="container">

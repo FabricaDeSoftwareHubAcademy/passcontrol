@@ -41,7 +41,7 @@ body {
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.3s ease;
-    z-index: 99999;
+    z-index: 1;
 }
 
 .modal-container.show {
@@ -110,7 +110,7 @@ hr {
     width: 40px;
     height: auto;
 }
-h1 {
+.title {
     font-size: 40px;
     margin-bottom: 35px;
     font-weight: bold;
@@ -198,7 +198,7 @@ button.save:hover {
         right: 10px !important;
     }
 
-    h1 {
+    .title {
         font-size: 18px !important;
         margin-bottom: 20px !important;
     }
@@ -246,7 +246,7 @@ button.save:hover {
 }
 
 @media (max-width: 400px) and (min-width: 350px) {
-    h1 {
+    .title {
         font-size: 16px !important;
         margin-top: 10px !important; /* Afastando do topo */
         max-width: 100% !important; /* Evita que o título fique muito largo */
@@ -259,7 +259,7 @@ button.save:hover {
 }
 
 @media (max-width: 350px) and (min-width: 345px) {
-    h1 {
+    .title {
         font-size: 16px !important;
         margin-right: 50px;
         max-width: 100% !important; /* Evita que o título fique muito largo */
@@ -273,7 +273,7 @@ button.save:hover {
 }
 
 @media (max-width: 349px) and (min-width: 320px) {
-    h1 {
+    .title {
         font-size: 16px !important;
         margin-right: 50px;
         max-width: 100% !important; /* Evita que o título fique muito largo */
@@ -287,7 +287,7 @@ button.save:hover {
 }
 
 @media (max-width: 330px) and (min-width: 320px) {
-    h1 {
+    .title {
         font-size: 16px !important;
         margin-right: 50px;
         max-width: 100% !important; /* Evita que o título fique muito largo */
@@ -318,7 +318,7 @@ button.save:hover {
     .logo {
         width: 60px;
     }
-    h1 {
+    .title {
         font-size: 20px;
     }
     p {
@@ -344,7 +344,7 @@ button.save:hover {
     .logo {
         width: 80px;
     }
-    h1 {
+    .title {
         font-size: 24px;
     }
     p {
@@ -362,7 +362,7 @@ button.save:hover {
         width: 80%;
         max-width: 600px;
     }
-    h1 {
+    .title {
         font-size: 32px;
     }
     p {
@@ -384,7 +384,7 @@ button.save:hover {
         width: 80%;
         max-width: 600px;
     }
-    h1 {
+    .title {
         font-size: 32px;
     }
     p {
@@ -401,7 +401,7 @@ button.save:hover {
         width: 80%;
         max-width: 600px;
     }
-    h1 {
+    .title {
         font-size: 32px;
     }
     p {
