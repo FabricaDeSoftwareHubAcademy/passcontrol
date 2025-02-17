@@ -24,7 +24,7 @@
     border-radius: 5px;
     /* justify-content: center; */
     align-items: center;
-    margin-top: 30px;
+    margin-top: 80px;
 }
 
 .topo-area-chamada {
@@ -505,6 +505,9 @@ thead, tbody tr {
     }
 }
 @media screen and (min-width: 1200px) and (max-width: 1440px) {
+    .informacoes-area-chamada{
+        gap: 0;
+    }
     .texto-botao-atendimento{
         font-size: 18px;
     }
@@ -544,6 +547,9 @@ thead, tbody tr {
     }
 }
 @media screen and (min-width: 1000px) and (max-width: 1199px) {
+    .informacoes-area-chamada{
+        gap: 0;
+    }
     .texto-botao-atendimento{
         font-size: 18px;
     }
@@ -584,6 +590,9 @@ thead, tbody tr {
     }
 }
 @media screen and (min-width: 710px) and (max-width: 999px) {
+    .informacoes-area-chamada{
+        gap: 0;
+    }
     .texto-botao-atendimento{
         font-size: 16px;
         flex-direction: row;
@@ -604,7 +613,7 @@ thead, tbody tr {
         padding-left: 0rem;
         display: flex;
         align-items: start;
-        width: 50%;
+        width: 90%;
         margin-left: 1rem;
     }
     .servico-area-chamada{
@@ -630,6 +639,7 @@ thead, tbody tr {
         font-size: 20px;
     }
     .servico-area-chamada{
+        width: 0px;
         display: none;
     }
     .servico-area-chamada p{
