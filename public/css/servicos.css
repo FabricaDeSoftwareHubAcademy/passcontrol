@@ -18,24 +18,26 @@
   align-content: space-around;
   align-items: stretch;
 }
-.cabecalho-servico {
+.topo-tela-servico{
+  margin: 20px 0px 20px 20px; 
+  display: flex;
+  flex-direction: column;
   width: 100%;
-  text-align: center;
-  margin-bottom: 20px;
+  height: 100%;
+  /* border: 2px solid green; */
 }
 #servicos-cadastrados {
   text-align: left;
   color: var(--cinza-control);
   font-family: Arial, sans-serif;
   font-weight: bold;
-  margin-top: 50px;
-  margin-left: 23px;
 }
 .campo-busca {
-  height: 4%;
+  /* height: 0%; */
   width: 100%;
   outline: none;
   border: 1px rgb(6, 11, 95);
+  margin-bottom: -1rem;
 }
 #buscar-servico {
   width: 20%;
@@ -60,7 +62,6 @@
   width: 96%;
   max-height:339px;
   padding: 1px;
-  margin: 0 auto;
 }
 #tela-branca-servico {
   background-color: #ffffff75;
@@ -125,6 +126,7 @@
   text-align: left;
   border: 1px solid var(--cinza-control);
   font-weight: bold;
+  color: var(--cinza-control);
 }
 
 
@@ -214,6 +216,14 @@ button:hover {
 }
 
 @media screen and (max-width: 768px) {
+  .topo-tela-servico{
+    width: 100%;
+    /* border: 2px solid green; */
+    font-size: 20px;
+  }
+  .campo-busca{
+    margin-bottom: -3.5%;
+  }
   #tela-branca {
     width: 90%;
     padding: 10px;
@@ -224,19 +234,13 @@ button:hover {
   #buscar-servico{
     margin-left: 61%;
     width: 35%;
-  }
-  #servicos-cadastrados {
-    margin-left: 5%;
-
+    font-size: 12px;
   }
 
   .botoesVoltar-Cadastrar{
     margin-right: 5%;
   }
 
-  #buscar-servico {
-    font-size: 12px;
-  }
   #icone-editar {
     width: 25px;
     height: 25px;
@@ -250,8 +254,8 @@ button:hover {
     width: 85%;
     padding: 8px;
   }
-  .linha-divisoria{
-    width: 90%;
+  .campo-busca{
+    margin-bottom: -17%;
   }
   #buscar-servico{
     margin-left: 46%;
@@ -263,6 +267,13 @@ button:hover {
     margin-left: 15%;
 
   }
+  .campo-busca{
+    margin-bottom: -5%;
+  }
+  .topo-tabela-servicos{
+    margin: 50px 0px 5px 20px;
+  }
+  
 }
 
 @media screen and (max-width: 320px) {
@@ -274,8 +285,8 @@ button:hover {
     margin-left: 2%;
     width: 100%;
   }
-  .linha-divisoria{
-    width: 96%;
+  .campo-busca{
+    margin-bottom: -4%;
   }
   .tabela-servicos th,
   .tabela-servicos td {
