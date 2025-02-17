@@ -33,42 +33,58 @@
 
     <div class="border-line"></div>
 
-
     <main class="workspace">
 
         <div class="area-cinza">
-            
+        
                 <h4 class="page-title">
-                    Selecione o tipo de atendimento:
+                    Informe seus dados para atendimento:
                 </h4>
-
-                <div class="box-area">
-
-                    <a href="../../../app/usuario/view/tela_autoatendimentoPage4.html" class="box">
-                        <img class="imagem-servico" src="../../../public/img/icons/comum_img.svg" alt="Servico" id="img-servico">
-                        <h4>COMUM</h4> 
-                    </a>
-
                 
 
-                    <a href="../../../app/usuario/view/tela_autoatendimentoPage4.html" class="box">
-                        <div class="imagem-servico-container">
-                            <img class="imagem-servico" src="../../../public/img/icons/idoso_pref.svg" alt="Servico" id="img-servico">
-                            <img class="imagem-servico" src="../../../public/img/icons/gestante_pref.svg" alt="Servico" id="img-servico">
-                            <img class="imagem-servico" src="../../../public/img/icons/colo_pref.svg" alt="Servico" id="img-servico">
-                            <img class="imagem-servico" src="../../../public/img/icons/especial_pref.svg" alt="Servico" id="img-servico">
+                <div class="box-inputs">
+                    <div class="input-group">
+                        <h3 for="nome">Nome*</h3>
+                        <br>
+                        <input type="text" class="input-infos" id="nome" name="nome" placeholder="Nome">
+                    </div>
+                    <div class="input-group">
+                        <h3 for="sobrenome">Sobrenome*</h3>
+                        <br>
+                        <input type="text" class="input-infos" id="sobrenome" name="sobrenome" placeholder="Sobrenome">
+                    </div>
+                    <div class="input-group">
+                        <h3 for="telefone">Telefone</h3>
+                        <br>
+                        <input type="text" class="input-infos" id="telefone" name="telefone" placeholder="(00) 00000-0000">
+                    </div>
+                    <div class="input-group">
+                        <div class="information">
+                            * A SENHA NÃO SERÁ IMPRESSA <br><br>
+                            * INSIRA SEU NÚMERO DE TELEFONE PARA RECEBER AS INFORMAÇÕES DO SEU ATENDIMENTO VIA SMS
                         </div>
-                        <h4>PREFERENCIAL</h4>
-                    </a>
-    
+                    </div>
+                   
+                   
                 </div>
-                
+            
+
                 <div class="footer">
                     <button class="button">
-                        <a href="../../usuario/view/tela_autoatendimentoPage1.html" class="btn-text">VOLTAR</a>
+                        <a href="../../usuario/view/tela_autoatendimentoPage2.html" class="btn-voltar">VOLTAR</a>
+                    </button>   
+                    <button class="button">
+                        <a href="../../usuario/view/tela_autoatendimentoPage4.html" class="btn-confirmar">CONFIRMAR</a>
                     </button>   
                 </div>
 
+
+            </div>
+               
+               
+
+          
+            </div>
         </div>
 
     </main>

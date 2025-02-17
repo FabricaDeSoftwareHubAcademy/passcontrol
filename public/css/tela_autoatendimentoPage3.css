@@ -1,3 +1,5 @@
+
+
 :root {
     --verde-control: #3AA867;
     --cinza-control: #33404D;
@@ -14,7 +16,6 @@
     list-style: none;
     z-index: 1000;
 }
-
 
 .head {
     background-color: var(--cinza-control);
@@ -53,6 +54,13 @@
     font-size: 23px;
 }
 
+.border-line {
+    background-color: var(--cinza-control);
+    height: 30px;
+    width: 100%;
+    margin: 10px 0;
+}
+
 .workspace {
     height: 100%;
     width: 100%;
@@ -66,7 +74,6 @@
     background-position: right bottom;
 }
 
-
 .page-title {
     align-items: center;
     justify-content: center;
@@ -74,23 +81,15 @@
     text-align: center;
     font-family: var(--font-main);
     color: #113062;
-    font-weight: 800;
-    margin-bottom: 20px;
-    margin-top: 0%;
+    font-weight: 800;    
 }
 
-.border-line {
-    background-color:var(--cinza-control);
-    height: 30px;
-    width: 100%;
-    margin: 10px 0;
-}
 
 .area-cinza {
     background-color: rgba(0, 0, 0, 0.1); 
     width: calc(100% - 40px);
     min-height: 60vh;
-    height: calc(98vh - 160px);
+    height: calc(100vh - 160px);
     top: 10px; 
     left: 10px; 
     right: 10px; 
@@ -100,10 +99,9 @@
     align-items: center;
     border-radius: 10px;
     padding: 20px;
-    margin-bottom: 20px;
 }
 
-.box-area {
+.box-inputs {
     display: flex;
     width: 100%;
     max-width: 1200px;
@@ -117,57 +115,69 @@
     border-radius: 5px;
 }
 
-
-.box {
-    border: 4px solid var(--verde-control);
-    border-radius: 5px;
-    width: calc(33,33% - 20px);
-    gap: 18px;
-    width: 250px;
-    height: 250px;
-    padding: 20px;
-    background-color: transparent;
+.input-group {
     display: flex;
-    align-items: center;
-    justify-content: center;
     flex-direction: column;
-    text-decoration: none;
+    width: calc(50% - 20px); 
 }
 
-.box .imagem-servico-container {
+.input-group label {
+    margin-bottom: 5px;
+    font-size: 16px;
+    color: var(--cinza-control);
+    border-radius: 5px;
+    border: 5px;
+}
+
+.input-infos {
+   
+    width: 100%;
+    height: 60px;
+    padding: 10px;
+    background-color: white;
+    font-size: 16px;
+    border: 5px;
+    border-radius: 5px;
+}
+
+.input-infos::placeholder {
+    color: var(--cinza-control);
+}
+
+.information {
+    width: 100%;
+    /* max-width: 500px; */
+    height: auto;
+    padding: 20px;
+    background-color: white;
+    font-size: 20px;
+    color: var(--cinza-control);
+    border: 5px solid var(--cinza-control);
+    border-radius: 5px;
     display: flex;
-    flex-direction: row; 
-    justify-content: center;
     align-items: center;
-    gap: 15px; 
-    width: 100%; 
-}
-
-.imagem-servico {
-    max-width: 50px; 
-    max-height: 50px; 
-    object-fit: contain; 
-}
-
-.box h4 {
-    color: #113062;
-    font-size: 18px;
-    font-weight: bold;
-    margin-top: 10px;
-    padding-top: 10px;
+    flex-direction: column; 
+    gap: 10px;
+    line-height: 1.6;  
+    font-weight: 800;
+    word-wrap: break-word;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .footer{
     display: flex;
     align-items: center;
+    justify-content: space-between;
     width: 100%;
-
+    padding: 0 20px;
 }
 
 .button {
     display: flex;
     justify-content:center;
-    width: 10%; 
+    width: 100%; 
+    max-width: 250px;
     margin-top: 30px;
     position: relative;
     padding: 0 20px;
@@ -183,11 +193,16 @@
     background-color: var(--cinza-control);
 }
 
-.button:hover .btn-text {
-    color: red; 
+.button:hover .btn-voltar {
+    color: green; 
+}
+.button:hover .btn-confirmar {
+    color: var(--verde-control); 
 }
 
-.btn-text { 
+
+
+.btn-voltar {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -198,16 +213,40 @@
     font-weight: bold;
     padding: 10px;
     height: 100%;
-    width: 100%;
+    width: 10%;
+    position: relative;
 }
 
-@media (max-width: 1024px) {
-    .box {
-        width: calc(50% - 20px); 
-    }
+.btn-confirmar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 18px;
+    color: white;
+    text-decoration: none; 
+    font-weight: bold;
+    padding: 10px;
+    height: 100%;
+    width: 10%;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 @media (max-width: 600px) {
+    .input-group {
+        width: 100%;
+    }
+    .information {
+        width: 100%; 
+        max-width: 100%; 
+        padding: 15px; 
+        font-size: 16px;
+    }
+
+    .workspace {
+        background-size: 250px;
+    }
+
     .box {
         width: 100%;
         height: 200px; 
@@ -220,95 +259,58 @@
     .page-title {
         font-size: 24px;
     }
-}
 
-@media (max-width: 600px){
     .area-cinza {
         min-height: 70vh; 
         height: auto; 
         margin-bottom: 10px;
         padding: 10px; 
     }  
-
-    @media (max-width: 600px) {
-        .button {
-            width: 40%;
-            margin-top: 20px;
-            height: 50px;
-        }
     
-        .btn-text {
-            font-size: 16px;
-        }}
-
-@media (max-width: 1024px) and (min-width: 768px) {
-    .area-cinza {
-        min-height: 70vh;
-        height: auto;
-        margin-bottom: 20px;
-        padding: 20px;
-        width: 100%;
-    }
-    
-    .box-area {
-        flex-direction: row;
-        gap: 20px;
-        justify-content: center;
-    }
-    
-    .box {
-        width: 230px;
-        height: 230px; 
-        padding: 15px; 
-    }
-    
-    .imagem-servico {
-        height: 80px;
-    }
-
     .button {
-        width: 90%;
+        width: 40%;
         margin-top: 20px;
         height: 50px;
     }
+
+    .btn-voltar, .btn-confirmar {
+        font-size: 14px; 
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+    .information {
+        width: 100%;
+        padding: 20px;
+        font-size: 18px;
     }
 
-    @media (min-width: 1025px) {  
-        .area-cinza {
-          padding: 30px;
-          width: calc(100% - 80px); 
-        }
-    
-        .footer {
-          padding: 30px;
-        }
-      
-        .button {
-          width: 30%;  
-          margin-top: 50px;
-        }
+    .button {
+        width: 40%;
+        margin-top: 20px;
+        height: 80px;
+    }
 
-        .box-area {
-            flex-direction: row;
-            gap: 20px;
-            justify-content: center;
-        }
-    
-        .box {
-            width: 230px; 
-            height: 230px;
-            padding: 15px;
-        }
-    
-        .imagem-servico {
-            height: 80px;
-        }
-      }
- 
+    .btn-voltar, .btn-confirmar {
+        font-size: 20px;
+    }
 }
 
-@media (max-width: 600px) {
-        .workspace {
-            background-size: 250px;
-        }
+@media (min-width: 1025px) {
+    .information {
+        width: 100%;
+        font-size: 20px;
+    }
+
+    .button {
+        width: 40%;
+        margin-top: 20px;
+        height: 60px;
+    }
+
+
+    .btn-voltar, .btn-confirmar {
+        font-size: 18px;
+    }
 }
+
