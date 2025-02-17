@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <!-- TROCA TÍTULO QUANDO FOR UTILIZAR -->
+        <title>PassControl</title> 
+        
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Navegação PassControl</title> 
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+        
+        <link rel="stylesheet" href="../../../public/css/navegacao.css">
+        <link rel="stylesheet" href="../../../public/css/configuracao-autoatendimento.css">
+        <link rel="stylesheet" href="../../../public/css/style-configuracao-autoatendimento.css">
+        <link rel="stylesheet" href="../../../public/modais/Modal Confirmação dos Dados Registrados/estilo.css">
+        
+        <script src="../../../public/js/navegacao-menu-lateral.js" defer></script>
+        <script src="../../../public/js/configuracao-autoatendimento.js" defer></script>
+        <script src="../../../public/js/modal-configuracao-autoatendimento.js"></script>
+
+        <link rel="shortcut icon" type="imagex/png" href="../../../public/img/Logo-Nota-Controlnt.ico">
+</head>
+<body class="control-body-navegacao">
+    <header class="cabeca-navegacao-control">
+        <nav class="nav-cabeca">
+            <div class="logo-control">
+                <img src="../../../public/img/icons/logo control.svg" alt="LOGOCONTROL" id="img-logo">
+            </div>
+            <H3>PassControl</H3>
+            <div class="usu">                
+                <!-- INFO DO USUARIO -->
+                <div class="menu-usuario">
+                    <a class="usu">Nome do Usuário</a>
+                    <nav class="usu-detalhes"> 
+                        <img src="../../../public/img/icons/image 33.svg" alt="">
+                        <ul class="texto-usu">
+                            <li class="nome-usu">Nome do Usuário</li>
+                            <li class="email-usu">funcionario123@fun.br</li>
+                            <li><a href="../../../app/admin/view/adm-logado.php">Editar Informações</a></li>
+                            <li><a class="sair" href="../../../index.php">Sair</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </nav>
+        <div class="dark-area"></div>
+    </header>
+
+    <!-- MENU LATERAL -->
+    <button class="botao-menu-mobile"> <!-- Botão ainda inativo -->
+        <img class="icone-menu-lateral" src="../../../public/img/icons/DropDownIcon.svg" alt="MENU">
+    </button>
+
+    <div class="area-lateral-navegacao">
+        <nav class="menu-lateral-navegacao">
+
+            <div class="botao-navegacao">
+                <a class="botao-lateal-navegacao" href="../../../app/admin/view/atendimento.php">
+                    <img class="icone-menu-lateral" src="../../../public/img/icons/atend.svg" alt="ICONE ATENDIMENTO">
+                    <div class="texto-bott">Atendimento</div>
+                </a>
+            </div>
+            <div class="botao-navegacao">
+                <a class="botao-lateal-navegacao" id="openModalBtn">
+                    <img class="icone-menu-lateral" src="../../../public/img/icons/monitor.svg" alt="ICONE MONITOR">
+                    <div class="texto-bott">Monitor</div>
+                </a>
+            </div>
+            <div class="botao-navegacao">
+                <a class="botao-lateal-navegacao" href="">
+                    <img class="icone-menu-lateral" src="../../../public/img/icons/nota.svg" alt="ICONE RELATORIOS">
+                    <div class="texto-bott">Relatórios</div>
+                </a>
+            </div>
+            <div class="botao-navegacao">
+                <a class="botao-lateal-navegacao ativo-estacionario" href="../../../app/admin/view/menuadm_usuario.php">
+                    <img class="icone-menu-lateral" src="../../../public/img/icons/gestao.svg" alt="ICONE GESTAO">
+                    <div class="texto-bott">Gestão</div>
+                </a>
+            </div>
+        </nav>
+        <div class="sair-navegacao">
+            <a class="botao-lateal-navegacao" href="../../../index.php">
+                <img class="icone-menu-lateral" src="../../../public/img/icons/sair.svg" alt="ICONE SAIR">
+                <div class="texto-bott">Sair</div>
+            </a>
+        </div>
+    </div>
+    
+    <section class="Area-Util-Projeto">
+        <h1>Autoatendimento</h1>
+        <div class="area-configuracao-autoatendimento">
+            <h2>Selecione serviços do autoatendimento:</h2>
+            <div class="lista-servicos-configuracao-autoatendimento">
+                <div class="item-servico-configuracao-autoatendimento">
+                    <input type="checkbox" id="conselho-municipal">
+                    <label for="conselho-municipal">Conselho Municipal</label>
+                </div>
+
+                <div class="item-servico-configuracao-autoatendimento">
+                    <input type="checkbox" id="fiscalizacao">
+                    <label for="fiscalizacao">Fiscalização</label>
+                </div>
+
+                <div class="item-servico-configuracao-autoatendimento">
+                    <input type="checkbox" id="iluminacao-publica">
+                    <label for="iluminacao-publica">Iluminação Pública</label>
+                </div>
+
+                <div class="item-servico-configuracao-autoatendimento">
+                    <input type="checkbox" id="iptu">
+                    <label for="iptu">IPTU</label>
+                </div>
+
+                <div class="item-servico-configuracao-autoatendimento">
+                    <input type="checkbox" id="licencas">
+                    <label for="licencas">Licenças</label>
+                </div>
+
+                <div class="item-servico-configuracao-autoatendimento">
+                    <input type="checkbox" id="ouvidoria">
+                    <label for="ouvidoria">Ouvidoria</label>
+                </div>
+
+                <div class="item-servico-configuracao-autoatendimento">
+                    <input type="checkbox" id="poda-de-arvores">
+                    <label for="poda-de-arvores">Poda de Árvores</label>
+                </div>
+
+                <div class="item-servico-configuracao-autoatendimento">
+                    <input type="checkbox" id="selecionar-todos">
+                    <label for="selecionar-todos">Selecionar Todos</label>
+                </div>
+            </div>
+            <div class="btn-configuracao-autoatendimento">
+                <button>Novo Serviço</button>
+                <button>Visualizar</button>
+                <button class="salvar">Salvar</button>
+            </div>
+        </div>
+    </section>
+    <main-configuracao-autoatendimento></main-configuracao-autoatendimento>
+
+    <!--MONITOR MODAL-->
+    <div class="area-monitor-modal">
+        <div class="area-modal" id="modal">
+            <div class="modal-fundo">
+                <div class="fundo-lateral">
+                    <h1>Últimas Chamadas</h1>
+                    <div class="area-das-senhas">
+                        <div class="caixa-das-senhas">
+                            <h2>NOME DA PESSOA</h2>
+                            <div class="conjunto-senhas">
+                                <div class="senha">
+                                    <h3>SENHA</h3>
+                                    <h4>CM 001</h4>
+                                </div>
+                                <div class="guiche">
+                                    <h5>GUICHE</h5>
+                                    <h6>1</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="caixa-das-senhas">
+                            <h2>NOME DA PESSOA</h2>
+                            <div class="conjunto-senhas">
+                                <div class="senha">
+                                    <h3>SENHA</h3>
+                                    <h4>CM 001</h4>
+                                </div>
+                                <div class="guiche">
+                                    <h5>GUICHE</h5>
+                                    <h6>1</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="caixa-das-senhas">
+                            <h2>NOME DA PESSOA</h2>
+                            <div class="conjunto-senhas">
+                            <div class="senha">
+                                <h3>SENHA</h3>
+                                <h4>CM 001</h4>
+                            </div>
+                            <div class="guiche">
+                                <h5>GUICHE</h5>
+                                <h6>1</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="caixa-das-senhas">
+                        <h2>NOME DA PESSOA</h2>
+                        <div class="conjunto-senhas">
+                            <div class="senha">
+                                <h3>SENHA</h3>
+                                <h4>CM 001</h4>
+                            </div>
+                            <div class="guiche">
+                                <h5>GUICHE</h5>
+                                <h6>1</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="fundo-principal">
+                <div class="area-botao-fechar-monitor">
+                    <div class="botao-fechar-monitor">
+                        <h2>X</h2> 
+                    </div>
+                </div>
+            <div class="fundo-senha-principal">
+                <div class="caixa-senha-principal">
+                    <div class="conjunto-senha-principal">
+                        <div class="nome-pessoa">
+                            <h1>NOME DA PESSOA</h1>
+                        </div>
+                        <div class="infos-senha-principal">
+                            <h2>SERVIÇO:<span>IPTU</span></h2>
+                            <h2>SENHA:<span>CM 001</span></h2>
+                            <h2>GUICHÊ:<span>1</span></h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../../../public/js/monitor-modal.js" defer></script>
+</body>
+</html>
