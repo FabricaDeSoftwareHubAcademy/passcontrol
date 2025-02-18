@@ -19,16 +19,16 @@
         <div class="menu-container">
             <div class="menu">
                 <button class="hamburger" onclick="toggleMenu()">☰</button>
-                <a href="./menuadm_usuario.html">Usuários</a>
-                <a href="./menuadm_servicos.html">Serviços</a>
-                <a href="./menuadm_autoatendimento.html" class="active">Autoatendimento</a>
-                <a href="./menusup_usuario.html">SUP</a>
+                <a href="./menuadm_usuario.php">Usuários</a>
+                <a href="./menuadm_servicos.php">Serviços</a>
+                <a href="./menuadm_autoatendimento.php" class="active">Autoatendimento</a>
+                <a href="./menusup_usuario.php">SUP</a>
             </div>
             <div class="menu-mobile" id="mobileMenu">
-                <a href="./menuadm_usuario.html">Usuários</a>
-                <a href="./menuadm_servicos.html">Serviços</a>
-                <a href="./menuadm_autoatendimento.html" class="active">Autoatendimento</a>
-                <a href="./menusup_usuario.html">SUP</a>
+                <a href="./menuadm_usuario.php">Usuários</a>
+                <a href="./menuadm_servicos.php">Serviços</a>
+                <a href="./menuadm_autoatendimento.php" class="active">Autoatendimento</a>
+                <a href="./menusup_usuario.php">SUP</a>
             </div>
         </div>
         <script>
@@ -37,7 +37,7 @@
             }
         </script>
         <div class="descricao">
-            <h2>Menu de Gestão</h2>
+            <!-- <h2>Menu de Gestão</h2> -->
             <hr>
             <!-- <p>Área de Gestão do Admimistrador.</p> -->
         </div>

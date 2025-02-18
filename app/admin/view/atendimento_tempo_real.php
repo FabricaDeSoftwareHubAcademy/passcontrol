@@ -39,8 +39,8 @@
                         <ul class="texto-usu">
                             <li class="nome-usu">Nome do Usuário</li>
                             <li class="email-usu">funcionario123@fun.br</li>
-                            <li><a href="../../../app/admin/view/adm-logado.html">Editar Informações</a></li>
-                            <li><a class="sair" href="../../../index.html">Sair</a></li>
+                            <li><a href="../../../app/admin/view/adm-logado.php">Editar Informações</a></li>
+                            <li><a class="sair" href="../../../index.php">Sair</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -58,7 +58,7 @@
         <nav class="menu-lateral-navegacao">
 
             <div class="botao-navegacao">
-                <a class="botao-lateal-navegacao ativo-estacionario" href="../../../app/admin/view/atendimento.html">
+                <a class="botao-lateal-navegacao ativo-estacionario" href="../../../app/admin/view/atendimento.php">
                     <img class="icone-menu-lateral" src="../../../public/img/icons/atend.svg" alt="ICONE ATENDIMENTO">
                     <div class="texto-bott">Atendimento</div>
                 </a>
@@ -76,14 +76,14 @@
                 </a>
             </div>
             <div class="botao-navegacao">
-                <a class="botao-lateal-navegacao" href="../../../app/admin/view/menuadm_usuario.html">
+                <a class="botao-lateal-navegacao" href="../../../app/admin/view/menuadm_usuario.php">
                     <img class="icone-menu-lateral" src="../../../public/img/icons/gestao.svg" alt="ICONE GESTAO">
                     <div class="texto-bott">Gestão</div>
                 </a>
             </div>
         </nav>
         <div class="sair-navegacao">
-            <a class="botao-lateal-navegacao" href="../../../index.html">
+            <a class="botao-lateal-navegacao" href="../../../index.php">
                 <img class="icone-menu-lateral" src="../../../public/img/icons/sair.svg" alt="ICONE SAIR">
                 <div class="texto-bott">Sair</div>
             </a>
@@ -95,12 +95,12 @@
         <div class="menu-container">
             <div class="menu">
                 <button class="hamburger" onclick="toggleMenu()">☰</button>
-                <a href="../../../app/admin/view/atendimento_tempo_real.html" class="active">Guichês</a>
-                <a href="../../../app/admin/view/atendimento.html">Atendimento</a>
+                <a href="../../../app/admin/view/atendimento_tempo_real.php" class="active">Guichês</a>
+                <a href="../../../app/admin/view/atendimento.php">Atendimento</a>
             </div>
             <div class="menu-mobile" id="mobileMenu">
-                <a href="../../../app/admin/view/atendimento_tempo_real.html" class="active">Guichês</a>
-                <a href="../../../app/admin/view/atendimento.html">Atendimento</a>
+                <a href="../../../app/admin/view/atendimento_tempo_real.php" class="active">Guichês</a>
+                <a href="../../../app/admin/view/atendimento.php">Atendimento</a>
             </div>
         </div>
 

@@ -3,19 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <!-- TROCA TÍTULO QUANDO FOR UTILIZAR -->
     <title>PassControl</title> 
+    
+    <link rel="stylesheet" href="../../../public/css/recuperar-senha-codigo.css">
 
-    <link rel="stylesheet" href="../../../public/css/recuperar-senha-novaSenha.css">
-
-    <script src="../../../public/js/recuperar-senha-novaSenha.js" defer></script>
+    <script src="../../../public/js/recuperar-senha-codigo.js" defer></script>
 
     <link rel="shortcut icon" type="imagex/png" href="../../../public/img/Logo-Nota-Controlnt.ico">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
-<body class="recuperarSenha">
+<body class="recuperarSenha"> 
     <div class="box">
 
         <div class="GroupLine">
@@ -46,30 +45,20 @@
 
             <div class="containerRecuperar">
                 <form action="" class="formRecuperar">
+                    <label for="" class="lblRecuperar">Recuperar Senha</label>
 
-                    <div class="containerNovaSenha">
-                        <label for="" class="lblRecuperar">Insira a nova senha</label>
-                        <input id="novaSenha" type="password" class="inpRecuperar" placeholder="Nova Senha">
-                        <i class="fas fa-eye" id="togglePasswordNv"></i>
-                    </div>
+                    <div class="containerInput">
+                        <input type="text" class="inpRecuperar" id="input1" placeholder="" maxlength="1" required onKeyUp="mudaFoco(this, 1, input2)">
+                        <input type="text" class="inpRecuperar" id="input2" placeholder="" maxlength="1" required onKeyUp="mudaFoco(this, 1, input3)">
+                        <input type="text" class="inpRecuperar" id="input3" placeholder="" maxlength="1" required onKeyUp="mudaFoco(this, 1, input4)">
+                        <input type="text" class="inpRecuperar" id="input4" placeholder="" maxlength="1" required onKeyUp="mudaFoco(this, 1, input5)">
+                        <input type="text" class="inpRecuperar" id="input5" placeholder="" maxlength="1" required onKeyUp="mudaFoco(this, 1, null)">
                         
-                    <div class="containerConfNovaSenha">    
-                        <label for="" class="lblRecuperar">Confirme a nova senha</label>
-                        <input id="confirmSenha" type="password" class="inpRecuperar" placeholder="Conf. nova Senha">
-                        <i class="fas fa-eye" id="togglePassword"></i>
                     </div>
                     
-                    <div class="containerRequisitoSenhas">
-                        <h1>A senha deverá conter:</h1>
-                        <ul>
-                            <li id="digito" class="RequisitosMin " >Mínimo 8 dígitos</li>
-                            <li id="maiusca" class="RequisitosMin ">Maiúscula</li>
-                            <li id="numero" class="RequisitosMin ">Número</li>
-                            <li id="caracEspec" class="RequisitosMin " >Caractere Especial</li>
-                        </ul>
-                    </div>
+                    <span>Insira o código recebido no E-mail.</span>
                     <nav>
-                        <button type="submit"><a href="../../../index.html">Enviar</a></button>
+                        <button><a href="../../../app/admin/view/recuperar-senha-novaSenha.php">Enviar</a></button>
                     </nav>
                 </form>
             </div>
@@ -88,7 +77,5 @@
             </div>
         </div>
     </div>
-
-    <script src="../../../public/js/recuperar-senha-novaSenha.js" defer></script>
 </body>
 </html>

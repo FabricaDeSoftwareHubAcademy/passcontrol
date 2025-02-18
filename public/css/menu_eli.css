@@ -20,7 +20,10 @@ body {
 }
 .menu-container {
   background-color: var(--cinza-control);
-  padding: 0 10px;
+  padding: 0 15px;
+  position: absolute;
+  z-index: 1;
+  width: 100%;
 }
 .menu {
   padding-top: 15px;
@@ -79,6 +82,7 @@ body {
 @media (max-width: 768px) {
   .menu a {
       display: none;
+      position: absolute;
   }
   .hamburger {
       display: block;

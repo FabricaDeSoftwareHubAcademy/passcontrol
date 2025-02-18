@@ -14,15 +14,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 
     <!-- IMPORT DO CSS -->
-    <link rel="stylesheet" href="../../../public/css/navegacao.css">
-    <link rel="stylesheet" href="../../../public/css/monitor-modal.css">
-    <link rel="stylesheet" href="../../../public/css/servicos.css">
-    <!-- <link rel="stylesheet" href="../../../public/modais/Modal Confirmação dos Serviços/estilo.css"> -->
+    <link rel="stylesheet" href="../../../public/css/consultar-fila.css">
 
     <link rel="shortcut icon" type="imagex/png" href="../../../public/img/Logo-Nota-Controlnt.ico">
-
-    <!-- IMPORT DO JS -->
-    <!-- <script src="../../../public/js/modal-edicao-servicos.js"></script> -->
 
 </head>
 <body class="control-body-navegacao">
@@ -41,8 +35,8 @@
                         <ul class="texto-usu">
                             <li class="nome-usu">Nome do Usuário</li>
                             <li class="email-usu">funcionario123@fun.br</li>
-                            <li><a href="../../../app/admin/view/adm-logado.html">Editar Informações</a></li>
-                            <li><a class="sair" href="../../../index.html">Sair</a></li>
+                            <li><a href="../../../app/admin/view/adm-logado.php">Editar Informações</a></li>
+                            <li><a class="sair" href="../../../index.php">Sair</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -60,7 +54,7 @@
         <nav class="menu-lateral-navegacao">
 
             <div class="botao-navegacao">
-                <a class="botao-lateal-navegacao" href="../../../app/admin/view/atendimento.html">
+                <a class="botao-lateal-navegacao ativo-estacionario" href="../../../app/admin/view/atendimento.php">
                     <img class="icone-menu-lateral" src="../../../public/img/icons/atend.svg" alt="ICONE ATENDIMENTO">
                     <div class="texto-bott">Atendimento</div>
                 </a>
@@ -78,147 +72,115 @@
                 </a>
             </div>
             <div class="botao-navegacao">
-                <a class="botao-lateal-navegacao ativo-estacionario" href="../../../app/admin/view/menuadm_usuario.html">
+                <a class="botao-lateal-navegacao" href="../../../app/admin/view/menuadm_usuario.php">
                     <img class="icone-menu-lateral" src="../../../public/img/icons/gestao.svg" alt="ICONE GESTAO">
                     <div class="texto-bott">Gestão</div>
                 </a>
             </div>
         </nav>
         <div class="sair-navegacao">
-            <a class="botao-lateal-navegacao" href="../../../index.html">
+            <a class="botao-lateal-navegacao" href="../../../index.php">
                 <img class="icone-menu-lateral" src="../../../public/img/icons/sair.svg" alt="ICONE SAIR">
                 <div class="texto-bott">Sair</div>
             </a>
         </div>
     </div>
-
-    <section class="Area-Util-Projeto">
+    
         <!-- INICIO DA ÁREA ÚTIL DA PÁGINA -->
         <!-- INSIRA O CORPO DA SUA PÁGINA A PARTIR DESTE PONTO -->
-        <div id="servico">        
-                <div class="topo-tela-servico">
-                    <div class="campo-busca">
-                        <input id="buscar-servico" type="text" placeholder="Buscar Registro">
+    <section class="Area-Util-Projeto"> 
+        <!-- <div class="principal-consultar-fila"> -->
+        <nav class="area-comum-consultar-fila">
+            <nav class="topo-info-consultar-fila">
+                <div class="topo-consultar-fila">
+                    <div class="topo-esquerda-consultar-fila">
+                        <h3>Fila de Espera</h3>
                     </div>
-                    <div class="sev"><p id="servicos-cadastrados">Serviços Cadastrados</p></div>
-                    <div class="linha-divisoria-servico"></div>
+                    <div class="topo-direita-consultar-fila">
+                        <div class="senhas-guiche-area-chamada">
+                            <p>2</p>
+                            <p>Senhas Na Fila</p>
+                        </div>
+                    </div>
                 </div>
-            <div id="tela-branca-servico"> 
-              <div class="tabela-responsiva-servico">
-                <table class="tabela-servicos">
-                  <thead class="cabecaTabelaServicos">
-                    <tr class="topo-tabela-servicos">
-                      <th class="cabecalho-tabela1">Código do Serviço</th>
-                      <th class="cabecalho-tabela1">Serviços</th>
-                      <th class="cabecalho-tabela3">Editar</th>
-                      <th class="cabecalho-tabela1">Ativar/ Desativar</th>
+            </nav>   
+            <div class="input-search">
+                <input type="search" name="Buscar Atendente" placeholder="Buscar Atendente">
+            </div>
+            <div class="fundo-guiche-area-chamada">
+                <table class="tabela_atendimento-guiche-area-chamada">
+                    <thead>
+                        <tr>
+                            <th>Ordem</th>
+                            <th>Nome</th>
+                            <th>Serviço</th>
+                            <th>Senha</th>
+                            <th>Início</th>
+                            <th>Término</th>
+                            <th>Categoria</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>#01</td>
+                        <td>Gabriel Adernos</td>
+                        <td>IPTU</td>
+                        <td>CM002</td>
+                        <td>10:30</td>
+                        <td>11:16</td>
+                        <td>Comum</td>
+                        
                     </tr>
-                  </thead>
-                  <tbody class="resto-tabela-servicos">
-                    <tr class="linha-tabela">
-                      <td>IP</td>
-                      <td>Iluminação Pública</td>
-                      <td class="coluna-editar ">
-                        <a href=""><img id="icone-editar" src="../../../public/img/icons/Group 2924.png" alt="Editar"></a></td>
-                        <td class="coluna-inativar">
-                            <div class="toggle-btn ativo"><div class="circulo"></div></div>
-                        </td>
+                    <tr>
+                        <td>#02</td>
+                        <td>Gabriel Alvin</td>
+                        <td>Ouvidoria</td>
+                        <td>CM009</td>
+                        <td>09:12</td>
+                        <td>10:02</td>
+                        <td>Comum</td>
+                        
                     </tr>
-                    <tr class="linha-tabela">
-                      <td>IPTU</td>
-                      <td>IPTU</td>
-                      <td class="coluna-editar ">
-                        <a href=""><img id="icone-editar" src="../../../public/img/icons/Group 2924.png" alt="Editar"></a></td>
-                        <td class="coluna-inativar">
-                            <div class="toggle-btn ativo"><div class="circulo"></div></div>
-                        </td>
+                    <tr>
+                        <td>#03</td>
+                        <td>Guilherme Machado</td>
+                        <td>Licenças</td>
+                        <td>CM015</td>
+                        <td>11:18</td>
+                        <td>11:46</td>
+                        <td>Preferencial</td>
+                        
                     </tr>
-                    <tr class="linha-tabela">
-                        <td>IPTU</td>
-                        <td>IPTU</td>
-                        <td class="coluna-editar ">
-                          <a href=""><img id="icone-editar" src="../../../public/img/icons/Group 2924.png" alt="Editar"></a></td>
-                          <td class="coluna-inativar">
-                              <div class="toggle-btn ativo"><div class="circulo"></div></div>
-                          </td>
-                      </tr>
-                      <tr class="linha-tabela">
-                        <td>IPTU</td>
-                        <td>IPTU</td>
-                        <td class="coluna-editar ">
-                          <a href=""><img id="icone-editar" src="../../../public/img/icons/Group 2924.png" alt="Editar"></a></td>
-                          <td class="coluna-inativar">
-                              <div class="toggle-btn ativo"><div class="circulo"></div></div>
-                          </td>
-                      </tr>
-                      <tr class="linha-tabela">
-                        <td>IPTU</td>
-                        <td>IPTU</td>
-                        <td class="coluna-editar ">
-                          <a href=""><img id="icone-editar" src="../../../public/img/icons/Group 2924.png" alt="Editar"></a></td>
-                          <td class="coluna-inativar">
-                              <div class="toggle-btn ativo"><div class="circulo"></div></div>
-                          </td>
-                      </tr>
-                      <tr class="linha-tabela">
-                        <td>IPTU</td>
-                        <td>IPTU</td>
-                        <td class="coluna-editar ">
-                          <a href=""><img id="icone-editar" src="../../../public/img/icons/Group 2924.png" alt="Editar"></a></td>
-                          <td class="coluna-inativar">
-                              <div class="toggle-btn ativo"><div class="circulo"></div></div>
-                          </td>
-                      </tr>
-
-                    <tr class="linha-tabela">
-                      <td>LIC</td>
-                      <td>Licenças</td>
-                      <td class="coluna-editar ">
-                        <a href=""><img id="icone-editar" src="../../../public/img/icons/Group 2924.png" alt="Editar"></a></td>
-                        <td class="coluna-inativar">
-                            <div class="toggle-btn ativo"><div class="circulo"></div></div>
-                        </td>
+                    <tr>
+                        <td>#04</td>
+                        <td>João Guilherme Ortigosa</td>
+                        <td>Iluminação Publica</td>
+                        <td>CM026</td>
+                        <td>09:46</td>
+                        <td>10:28</td>
+                        <td>Comum</td>
+                        
                     </tr>
-                    <tr class="linha-tabela">
-                      <td>OUVID</td>
-                      <td>Ouvidoria</td>
-                      <td class="coluna-editar ">
-                        <a href=""><img id="icone-editar" src="../../../public/img/icons/Group 2924.png" alt="Editar"></a></td>
-                        <td class="coluna-inativar">
-                            <div class="toggle-btn ativo"><div class="circulo"></div></div>
-                        </td>
+                    <tr>
+                        <td>#05</td>
+                        <td>Juliana Barbosa</td>
+                        <td>Fiscalização</td>
+                        <td>CM032</td>
+                        <td>08:18</td>
+                        <td>09:34</td>
+                        <td>Preferencial</td>
+                        
                     </tr>
-                    <tr class="linha-tabela">
-                      <td>CM</td>
-                      <td>Conselho Municipal</td>
-                      <td class="coluna-editar ">
-                        <a href=""><img id="icone-editar" src="../../../public/img/icons/Group 2924.png" alt="Editar"></a></td>
-                        <td class="coluna-inativar">
-                            <div class="toggle-btn ativo"><div class="circulo"></div></div>
-                        </td>
-                    </tr> 
-                    <tr class="linha-tabela">
-                        <td>CM</td>
-                        <td>Conselho Municipal</td>
-                        <td class="coluna-editar ">
-                          <a href=""><img id="icone-editar" src="../../../public/img/icons/Group 2924.png" alt="Editar"></a></td>
-                          <td class="coluna-inativar">
-                              <div class="toggle-btn ativo"><div class="circulo"></div></div>
-                          </td>
-                      </tr>       
-                  </tbody>
                 </table>
-              </div>
             </div>
-            <div class="botoesVoltar-Cadastrar">
-                <button type="button" class="botao-voltar">Voltar</button>
-                <button type="submit" class="botao-cadastro">Cadastrar</button>
+            <div class="div-botao-info">
+                <button class="add-func" type="submit" onclick="window.location.href='../../../app/admin/view/atendimento.php';">Voltar</button>
             </div>
-        </div>
-        
-    </section>
-    <!-- <main-edicao-servico></main-edicao-servico> -->
-
+            
+        <!-- </div> -->
+        </nav> 
+    </section>           
+    
     <!--MONITOR MODAL-->
     <div class="area-monitor-modal">
         <div class="area-modal" id="modal">
@@ -303,6 +265,6 @@
         </div>
     </div>
     <script src="../../../public/js/monitor-modal.js" defer></script>
-    <script src="../../../public/js/ativar.js" defer></script>
+         
 </body>
 </html>

@@ -42,8 +42,8 @@
                         <ul class="texto-usu">
                             <li class="nome-usu">Nome do Usuário</li>
                             <li class="email-usu">funcionario123@fun.br</li>
-                            <li><a href="../../../app/admin/view/adm-logado.html">Editar Informações</a></li>
-                            <li><a class="sair" href="../../../index.html">Sair</a></li>
+                            <li><a href="../../../app/admin/view/adm-logado.php">Editar Informações</a></li>
+                            <li><a class="sair" href="../../../index.php">Sair</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -61,7 +61,7 @@
         <nav class="menu-lateral-navegacao">
 
             <div class="botao-navegacao">
-                <a class="botao-lateal-navegacao" href="../../../app/admin/view/atendimento.html">
+                <a class="botao-lateal-navegacao" href="../../../app/admin/view/atendimento.php">
                     <img class="icone-menu-lateral" src="../../../public/img/icons/atend.svg" alt="ICONE ATENDIMENTO">
                     <div class="texto-bott">Atendimento</div>
                 </a>
@@ -79,14 +79,14 @@
                 </a>
             </div>
             <div class="botao-navegacao">
-                <a class="botao-lateal-navegacao ativo-estacionario" href="../../../app/admin/view/menuadm_usuario.html">
+                <a class="botao-lateal-navegacao ativo-estacionario" href="../../../app/admin/view/menuadm_usuario.php">
                     <img class="icone-menu-lateral" src="../../../public/img/icons/gestao.svg" alt="ICONE GESTAO">
                     <div class="texto-bott">Gestão</div>
                 </a>
             </div>
         </nav>
         <div class="sair-navegacao">
-            <a class="botao-lateal-navegacao" href="../../../index.html">
+            <a class="botao-lateal-navegacao" href="../../../index.php">
                 <img class="icone-menu-lateral" src="../../../public/img/icons/sair.svg" alt="ICONE SAIR">
                 <div class="texto-bott">Sair</div>
             </a>
@@ -126,7 +126,7 @@
                                     <td>1</td>
                                     <td class="actions">
                                         <!-- Botão de edição -->
-                                        <a href=""> <!--Tirei para implementar o modal: editar_pont_de_atendimento.html-->
+                                        <a href=""> <!--Tirei para implementar o modal: editar_pont_de_atendimento.php-->
                                             <img src="../../../public/img/icons/editar.png" alt="Editar">
                                         </a>
                                     </td> 
@@ -142,7 +142,7 @@
                                     <td>2</td>
                                     <td class="actions">
                                             <!-- Botão de edição -->
-                                            <a href=""> <!--Tirei para implementar o modal: editar_pont_de_atendimento.html-->
+                                            <a href=""> <!--Tirei para implementar o modal: editar_pont_de_atendimento.php-->
                                                 <img src="../../../public/img/icons/editar.png" alt="Editar">
                                             </a>
                                         </td> 
@@ -157,7 +157,7 @@
                                         <td>3</td>
                                         <td class="actions">
                                             <!-- Botão de edição -->
-                                            <a href=""> <!--Tirei para implementar o modal: editar_pont_de_atendimento.html-->
+                                            <a href=""> <!--Tirei para implementar o modal: editar_pont_de_atendimento.php-->
                                                 <img src="../../../public/img/icons/editar.png" alt="Editar">
                                             </a>
                                         </td> 
@@ -174,7 +174,7 @@
                                     <td>1</td>
                                     <td class="actions">
                                         <!-- Botão de edição -->
-                                        <a href=""> <!--Tirei para implementar o modal: editar_pont_de_atendimento.html-->
+                                        <a href=""> <!--Tirei para implementar o modal: editar_pont_de_atendimento.php-->
                                             <img src="../../../public/img/icons/editar.png" alt="Editar">
                                         </a>
                                     </td> 
@@ -190,7 +190,7 @@
                                     <td>1</td>
                                     <td class="actions">
                                         <!-- Botão de edição -->
-                                        <a href=""> <!--Tirei para implementar o modal: editar_pont_de_atendimento.html-->
+                                        <a href=""> <!--Tirei para implementar o modal: editar_pont_de_atendimento.php-->
                                             <img src="../../../public/img/icons/editar.png" alt="Editar">
                                         </a>
                                     </td> 
@@ -206,7 +206,7 @@
                                     <td>1</td>
                                     <td class="actions">
                                         <!-- Botão de edição -->
-                                        <a href=""> <!--Tirei para implementar o modal: editar_pont_de_atendimento.html-->
+                                        <a href=""> <!--Tirei para implementar o modal: editar_pont_de_atendimento.php-->
                                             <img src="../../../public/img/icons/editar.png" alt="Editar">
                                         </a>
                                     </td> 
@@ -222,7 +222,7 @@
                                     <td>1</td>
                                     <td class="actions">
                                         <!-- Botão de edição -->
-                                        <a href=""> <!--Tirei para implementar o modal: editar_pont_de_atendimento.html-->
+                                        <a href=""> <!--Tirei para implementar o modal: editar_pont_de_atendimento.php-->
                                             <img src="../../../public/img/icons/editar.png" alt="Editar">
                                         </a>
                                     </td> 
@@ -238,7 +238,7 @@
                                     <td>1</td>
                                     <td class="actions">
                                         <!-- Botão de edição -->
-                                        <a href=""> <!--Tirei para implementar o modal: editar_pont_de_atendimento.html-->
+                                        <a href=""> <!--Tirei para implementar o modal: editar_pont_de_atendimento.php-->
                                             <img src="../../../public/img/icons/editar.png" alt="Editar">
                                         </a>
                                     </td> 
@@ -254,7 +254,7 @@
                                     <td>1</td>
                                     <td class="actions">
                                         <!-- Botão de edição -->
-                                        <a href=""> <!--Tirei para implementar o modal: editar_pont_de_atendimento.html-->
+                                        <a href=""> <!--Tirei para implementar o modal: editar_pont_de_atendimento.php-->
                                             <img src="../../../public/img/icons/editar.png" alt="Editar">
                                         </a>
                                     </td> 
@@ -269,7 +269,7 @@
                                     <td>1</td>
                                     <td class="actions">
                                         <!-- Botão de edição -->
-                                        <a href=""> <!--Tirei para implementar o modal: editar_pont_de_atendimento.html-->
+                                        <a href=""> <!--Tirei para implementar o modal: editar_pont_de_atendimento.php-->
                                             <img src="../../../public/img/icons/editar.png" alt="Editar">
                                         </a>
                                     </td> 
@@ -285,7 +285,7 @@
                                     <td>1</td>
                                     <td class="actions">
                                         <!-- Botão de edição -->
-                                        <a href=""> <!--Tirei para implementar o modal: editar_pont_de_atendimento.html-->
+                                        <a href=""> <!--Tirei para implementar o modal: editar_pont_de_atendimento.php-->
                                             <img src="../../../public/img/icons/editar.png" alt="Editar">
                                         </a>
                                     </td> 
@@ -301,7 +301,7 @@
                                     <td>1</td>
                                     <td class="actions">
                                         <!-- Botão de edição -->
-                                        <a href=""> <!--Tirei para implementar o modal: editar_pont_de_atendimento.html-->
+                                        <a href=""> <!--Tirei para implementar o modal: editar_pont_de_atendimento.php-->
                                             <img src="../../../public/img/icons/editar.png" alt="Editar">
                                         </a>
                                     </td> 
@@ -318,7 +318,7 @@
                                     <td>1</td>
                                     <td class="actions">
                                         <!-- Botão de edição -->
-                                        <a href=""> <!--Tirei para implementar o modal: editar_pont_de_atendimento.html-->
+                                        <a href=""> <!--Tirei para implementar o modal: editar_pont_de_atendimento.php-->
                                             <img src="../../../public/img/icons/editar.png" alt="Editar">
                                         </a>
                                     </td> 
@@ -329,11 +329,75 @@
                                         </div>
                                     </td> 
                                 </tr>
-                            
+                                  <tr>
+                                    <td>Guichê</td>
+                                    <td>1</td>
+                                    <td class="actions">
+                                        <!-- Botão de edição -->
+                                        <a href=""> <!--Tirei para implementar o modal: editar_pont_de_atendimento.php-->
+                                            <img src="../../../public/img/icons/editar.png" alt="Editar">
+                                        </a>
+                                    </td> 
+                                    <td>
+                                        <!-- Botão de ativar/desativar -->
+                                        <div class="toggle-btn active">
+                                            <div class="circle"></div>
+                                        </div>
+                                    </td> 
+                                </tr>
+                                  <tr>
+                                    <td>Guichê</td>
+                                    <td>1</td>
+                                    <td class="actions">
+                                        <!-- Botão de edição -->
+                                        <a href=""> <!--Tirei para implementar o modal: editar_pont_de_atendimento.php-->
+                                            <img src="../../../public/img/icons/editar.png" alt="Editar">
+                                        </a>
+                                    </td> 
+                                    <td>
+                                        <!-- Botão de ativar/desativar -->
+                                        <div class="toggle-btn active">
+                                            <div class="circle"></div>
+                                        </div>
+                                    </td> 
+                                </tr>
+                                <tr>
+                                    <td>Guichê</td>
+                                    <td>1</td>
+                                    <td class="actions">
+                                        <!-- Botão de edição -->
+                                        <a href=""> <!--Tirei para implementar o modal: editar_pont_de_atendimento.php-->
+                                            <img src="../../../public/img/icons/editar.png" alt="Editar">
+                                        </a>
+                                    </td> 
+                                    <td>
+                                        <!-- Botão de ativar/desativar -->
+                                        <div class="toggle-btn active">
+                                            <div class="circle"></div>
+                                        </div>
+                                    </td> 
+                                </tr>
+                                <tr>
+                                    <td>Guichê</td>
+                                    <td>1</td>
+                                    <td class="actions">
+                                        <!-- Botão de edição -->
+                                        <a href=""> <!--Tirei para implementar o modal: editar_pont_de_atendimento.php-->
+                                            <img src="../../../public/img/icons/editar.png" alt="Editar">
+                                        </a>
+                                    </td> 
+                                    <td>
+                                        <!-- Botão de ativar/desativar -->
+                                        <div class="toggle-btn active">
+                                            <div class="circle"></div>
+                                        </div>
+                                    </td> 
+                                </tr>
+                                
                             </table>
 
                             <!-- Botão para adicionar novo guichê -->
-                            <a href="../../../app/admin/view/cadastro_pont_de_atendimento.html">
+                            <a href="../../../app/admin/view/cadastro_pont_de_atendimento.php">
                                 <button class="styled-button">Novo Guichê</button>
                             </a>
                         </section>

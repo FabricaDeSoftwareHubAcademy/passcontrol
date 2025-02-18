@@ -17,7 +17,6 @@
     <link rel="stylesheet" href="../../../public/css/style_eli.css">
 
     <link rel="shortcut icon" type="imagex/png" href="../../../public/img/Logo-Nota-Controlnt.ico">
-
 </head>
 <body class="control-body-navegacao">
     <header class="cabeca-navegacao-control">
@@ -35,8 +34,8 @@
                         <ul class="texto-usu">
                             <li class="nome-usu">Nome do Usuário</li>
                             <li class="email-usu">funcionario123@fun.br</li>
-                            <li><a href="../../../app/admin/view/adm-logado.html">Editar Informações</a></li>
-                            <li><a class="sair" href="../../../index.html">Sair</a></li>
+                            <li><a href="../../../app/admin/view/adm-logado.php">Editar Informações</a></li>
+                            <li><a class="sair" href="../../../index.php">Sair</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -54,7 +53,7 @@
         <nav class="menu-lateral-navegacao">
 
             <div class="botao-navegacao">
-                <a class="botao-lateal-navegacao" href="../../../app/admin/view/atendimento.html">
+                <a class="botao-lateal-navegacao" href="../../../app/admin/view/atendimento.php">
                     <img class="icone-menu-lateral" src="../../../public/img/icons/atend.svg" alt="ICONE ATENDIMENTO">
                     <div class="texto-bott">Atendimento</div>
                 </a>
@@ -72,83 +71,80 @@
                 </a>
             </div>
             <div class="botao-navegacao">
-                <a class="botao-lateal-navegacao ativo-estacionario" href="../../../app/admin/view/menuadm_usuario.html">
+                <a class="botao-lateal-navegacao ativo-estacionario" href="../../../app/admin/view/menuadm_usuario.php">
                     <img class="icone-menu-lateral" src="../../../public/img/icons/gestao.svg" alt="ICONE GESTAO">
                     <div class="texto-bott">Gestão</div>
                 </a>
             </div>
         </nav>
         <div class="sair-navegacao">
-            <a class="botao-lateal-navegacao" href="../../../login.html">
+            <a class="botao-lateal-navegacao" href="../../../index.php">
                 <img class="icone-menu-lateral" src="../../../public/img/icons/sair.svg" alt="ICONE SAIR">
                 <div class="texto-bott">Sair</div>
             </a>
         </div>
     </div>
-    
+
     <section class="Area-Util-Projeto">
         <!-- INICIO DA ÁREA ÚTIL DA PÁGINA -->
         <!-- INSIRA O CORPO DA SUA PÁGINA A PARTIR DESTE PONTO -->
-
+        
         <!-- CODIGO DO ELIANDRO -->
-        <!-- navmenu -->
-        <div class="menu-container">
-            <div class="menu">
-                <button class="hamburger" onclick="toggleMenu()">☰</button>
-                <a href="./menusup_usuario.html" class="active">Usuários</a>
-                <a href="./menusup_servicos.html">Serviços</a>
-                <!-- <a href="./menuadm_autoatendimento.html" class="active">Autoatendimento</a> -->
-                <a href="./menuadm_usuario.html">ADM</a>
+        <div class="nome_da_area_eli">
+            <!-- navmenu .......-->
+            <div class="menu-container">
+                <div class="menu">
+                    <button class="hamburger" onclick="toggleMenu()">☰</button>
+                    <a href="./menuadm_usuario.php">Usuários</a>
+                    <a href="./menuadm_servicos.php" class="active">Serviços</a>
+                    <a href="./menuadm_autoatendimento.php">Autoatendimento</a>
+                    <a href="./menusup_usuario.php">SUP</a>
+                </div>
+                <div class="menu-mobile" id="mobileMenu">
+                    <a href="./menuadm_usuario.php">Usuários</a>
+                    <a href="./menuadm_servicos.php" class="active">Serviços</a>
+                    <a href="./menuadm_autoatendimento.php">Autoatendimento</a>
+                    <a href="./menusup_usuario.php">SUP</a>
+                </div>
             </div>
-            <div class="menu-mobile" id="mobileMenu">
-                <a href="./menusup_usuario.html" class="active">Usuários</a>
-                <a href="./menusup_servicos.html">Serviços</a>
-                <!-- <a href="./menuadm_autoatendimento.html" class="active">Autoatendimento</a> -->
-                <a href="./menuadm_usuario.html">ADM</a>
+            
+            <!-- área da descrição da página de navegação  -->
+            <div class="descricao">
+                <!-- <h2>Menu de Gestão</h2> -->
+                <hr>
+                <!-- <p>Área de Gestão do Supervisor.</p> -->
             </div>
-        </div>
-        <script>
-            function toggleMenu() {
-                document.getElementById("mobileMenu").classList.toggle("active");
-            }
-        </script>
-        <!-- área da descrição da página de navegação  -->
-        <div class="descricao">
-            <h2>Menu de Gestão</h2>
-            <hr>
-            <!-- <p>Área de Gestão do Supervisor.</p> -->
-        </div>
             <!-- área dos cards de nevegação  -->
             <main class="area-cards">
                 <div class="container">
                     <div class="wrapper">
                         <div class="banner-img">
-                            <img src="../../../public/img/img-menu/usuariocadastrado.png" alt="">
+                            <img src="../../../public/img/img-menu/pontodeatendimento.png" alt="">
                         </div>
 
-                        <!-- <h3 class="titulo-card">Usuários</h3> -->
-                        <!-- <p>Usuários Cadastrados.</p> -->
+                        <!-- <h3 class="titulo-card">Atendimento</h3> -->
+                        <!-- <p>Pontos de Atendimento.</p> -->
                     </div>
                     <div class="button-wrapper">
-                        <button class="btn outline" onclick="window.location.href='../../../app/admin/view/AtendentesCadastrados.html';">Usuários</button>
+                        <button class="btn outline" onclick="window.location.href='../../../app/admin/view/atendimentocadastrados.php';">DETALHES</button>
                     </div>
                 </div>
                 <div class="container">
                     <div class="wrapper">
                         <div class="banner-img">
-                            <img src="../../../public/img/img-menu/cadastrodeusuario.png" alt="">
+                            <img src="../../../public/img/img-menu/serviços.png" alt="">
                         </div>
-                        <!-- <h3 class="titulo-produto">Cadastro</h3> -->
-                        <!-- <p>Cadastro de Usuário</p> -->
+                        <!-- <h3 class="titulo-produto">Serviços</h3> -->
+                        <!-- <p>Gestão dos sehhhrviços</p> -->
                     </div>
                     <div class="button-wrapper">
-                        <button class="btn outline" onclick="window.location.href='../../../app/admin/view/telacadastro.html';">Cadastro</button>
+                        <button class="btn outline" onclick="window.location.href='../../../app/admin/view/servicos.php';">Serviços</button>
                     </div>
                 </div>    
             </main>
         </div>   
     </section>
-         
+
     <!--MONITOR MODAL-->
     <div class="area-monitor-modal">
         <div class="area-modal" id="modal">

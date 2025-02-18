@@ -1,26 +1,27 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <!-- TROCA TÍTULO QUANDO FOR UTILIZAR -->
-        <title>PassControl</title> 
-        
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Navegação PassControl</title> 
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-        
-        <link rel="stylesheet" href="../../../public/css/navegacao.css">
-        <link rel="stylesheet" href="../../../public/css/configuracao-autoatendimento.css">
-        <link rel="stylesheet" href="../../../public/css/style-configuracao-autoatendimento.css">
-        <link rel="stylesheet" href="../../../public/modais/Modal Confirmação dos Dados Registrados/estilo.css">
-        
-        <script src="../../../public/js/navegacao-menu-lateral.js" defer></script>
-        <script src="../../../public/js/configuracao-autoatendimento.js" defer></script>
-        <script src="../../../public/js/modal-configuracao-autoatendimento.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- TROCA TÍTULO QUANDO FOR UTILIZAR -->
+    <title>PassControl</title> 
+    
 
-        <link rel="shortcut icon" type="imagex/png" href="../../../public/img/Logo-Nota-Controlnt.ico">
+    <!-- IMPORT DA FONTE -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+    <!-- IMPORT DO CSS -->
+    <link rel="stylesheet" href="../../../public/css/navegacao.css">
+    <link rel="stylesheet" href="../../../public/css/edit_cadastro.css">
+
+    <link rel="stylesheet" href="../../../public/modais/Modal Confirmação dos Dados Registrados/estilo.css">
+    <link rel="stylesheet" href="../../../public/modais/Modal Confirmação dos Dados/estilo.css">
+
+    <link rel="shortcut icon" type="imagex/png" href="../../../public/img/Logo-Nota-Controlnt.ico">
+
 </head>
 <body class="control-body-navegacao">
     <header class="cabeca-navegacao-control">
@@ -38,8 +39,8 @@
                         <ul class="texto-usu">
                             <li class="nome-usu">Nome do Usuário</li>
                             <li class="email-usu">funcionario123@fun.br</li>
-                            <li><a href="../../../app/admin/view/adm-logado.html">Editar Informações</a></li>
-                            <li><a class="sair" href="../../../index.html">Sair</a></li>
+                            <li><a href="../../../app/admin/view/adm-logado.php">Editar Informações</a></li>
+                            <li><a class="sair" href="../../../index.php">Sair</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -57,7 +58,7 @@
         <nav class="menu-lateral-navegacao">
 
             <div class="botao-navegacao">
-                <a class="botao-lateal-navegacao" href="../../../app/admin/view/atendimento.html">
+                <a class="botao-lateal-navegacao" href="../../../app/admin/view/atendimento.php">
                     <img class="icone-menu-lateral" src="../../../public/img/icons/atend.svg" alt="ICONE ATENDIMENTO">
                     <div class="texto-bott">Atendimento</div>
                 </a>
@@ -75,74 +76,107 @@
                 </a>
             </div>
             <div class="botao-navegacao">
-                <a class="botao-lateal-navegacao ativo-estacionario" href="../../../app/admin/view/menuadm_usuario.html">
+                <a class="botao-lateal-navegacao ativo-estacionario" href="../../../app/admin/view/menuadm_usuario.php">
                     <img class="icone-menu-lateral" src="../../../public/img/icons/gestao.svg" alt="ICONE GESTAO">
                     <div class="texto-bott">Gestão</div>
                 </a>
             </div>
         </nav>
         <div class="sair-navegacao">
-            <a class="botao-lateal-navegacao" href="../../../index.html">
+            <a class="botao-lateal-navegacao" href="../../../index.php">
                 <img class="icone-menu-lateral" src="../../../public/img/icons/sair.svg" alt="ICONE SAIR">
                 <div class="texto-bott">Sair</div>
             </a>
         </div>
     </div>
-    
+
     <section class="Area-Util-Projeto">
-        <h1>Autoatendimento</h1>
-        <div class="area-configuracao-autoatendimento">
-            <h2>Selecione serviços do autoatendimento:</h2>
-            <div class="lista-servicos-configuracao-autoatendimento">
-                <div class="item-servico-configuracao-autoatendimento">
-                    <input type="checkbox" id="conselho-municipal">
-                    <label for="conselho-municipal">Conselho Municipal</label>
-                </div>
+    <!-- <section class="grupo"> -->
+        <!-- Codigo luan -->
+            
+        <div class="titulo">
+            <h1 class="cadastro_title">Cadastrar Usuário</h1><br>
+            <hr>   
+        </div>
 
-                <div class="item-servico-configuracao-autoatendimento">
-                    <input type="checkbox" id="fiscalizacao">
-                    <label for="fiscalizacao">Fiscalização</label>
-                </div>
-
-                <div class="item-servico-configuracao-autoatendimento">
-                    <input type="checkbox" id="iluminacao-publica">
-                    <label for="iluminacao-publica">Iluminação Pública</label>
-                </div>
-
-                <div class="item-servico-configuracao-autoatendimento">
-                    <input type="checkbox" id="iptu">
-                    <label for="iptu">IPTU</label>
-                </div>
-
-                <div class="item-servico-configuracao-autoatendimento">
-                    <input type="checkbox" id="licencas">
-                    <label for="licencas">Licenças</label>
-                </div>
-
-                <div class="item-servico-configuracao-autoatendimento">
-                    <input type="checkbox" id="ouvidoria">
-                    <label for="ouvidoria">Ouvidoria</label>
-                </div>
-
-                <div class="item-servico-configuracao-autoatendimento">
-                    <input type="checkbox" id="poda-de-arvores">
-                    <label for="poda-de-arvores">Poda de Árvores</label>
-                </div>
-
-                <div class="item-servico-configuracao-autoatendimento">
-                    <input type="checkbox" id="selecionar-todos">
-                    <label for="selecionar-todos">Selecionar Todos</label>
-                </div>
+        <div class="quadrado">
+            <div class="container-flex">
+                <section class="forme">
+                        <div class="nome">
+                            <label class="labeledit" for="nome">Nome*</label>    
+                            <input class="borda" type="text" name="nome" placeholder="Digite aqui o nome do usuário"> 
+                        </div>
+                        <div class="email">
+                            <label class="labeledit" for="email">Email*</label>    
+                            <input class="borda" type="text" name="email" placeholder="Digite aqui o Email do usuário">
+                        </div>
+                        <div class="cpf">    
+                            <label class="labeledit" for="cpf">CPF</label>
+                            <input class="borda" type="text" name="email" placeholder="Digite aqui o CPF do usuário">
+                        </div>
+                </section>
             </div>
-            <div class="btn-configuracao-autoatendimento">
-                <button>Novo Serviço</button>
-                <button>Visualizar</button>
-                <button class="salvar">Salvar</button>
+
+            <div class="selecionar">
+                <div class="perfild">    
+                    <label class="labeledit" for="perfil">Perfil De Acesso</label>
+
+                    <select class="selecao" name="plataforma" required="required">
+                        <option class="pi" value="admin">Administrador</option>
+                        <option class="pi" value="sup">Supervisor</option>
+                        <option class="pi" value="atend">Atendente</option>
+                        <option class="pi" value="auto-at">Terminal de Autoatendimento</option>
+                    </select>
+                </div>    
+                
+                <title class="servico">Seviços</title> 
+                    <div class="checkbox-container">
+                        <div class="column-1"> 
+                            <label class="customizado"> 
+                                <input type="checkbox" class="item" id="checkbox"> 
+                                <span class="teste">Conselho Muncipal</span> 
+                            </label> 
+                            <label class="customizado"> 
+                                <input type="checkbox" class="item" id="checkbox"> 
+                                <span class="teste">Fiscalização</span> 
+                            </label>
+                            <label class="customizado"> 
+                                <input type="checkbox" class="item" id="checkbox"> 
+                                <span class="teste">Iluminação Pública</span>
+                            </label>  
+                            <label class="customizado"> 
+                                <input type="checkbox" class="item" id="checkbox"> 
+                                <span class="teste">IPTU</span> 
+                            </label>  
+                        </div> 
+                        <div class="column-2"> 
+                            <div class="caixa"></div> 
+                            <label class="customizado">      
+                                <input type="checkbox" class="item" id="checkbox">
+                                <span class="teste">Licenças</span>
+                            </label> 
+                            <label class="customizado"> 
+                                <input type="checkbox" class="item" id="checkbox"> 
+                                <span class="teste">Ouvidoria</span> 
+                            </label> 
+                            <label class="customizado"> 
+                                <input type="checkbox" class="item" id="checkbox"> 
+                                <span class="teste">Poda De Àrvores</span> 
+                            </label>
+                            <label class="customizado"> 
+                                <input type="checkbox" id="select-all"> 
+                                <span class="teste" for="select-all">Selecionar Todos</span> 
+                            </label>   
+                        </div>
+                    </div>
             </div>
         </div>
+        <div class="form-actions2">
+            <button type="button" class="botao_volto" onclick="window.location.href='javascript:history.back()';">Voltar</button>
+            <button type="submit" class="botao_salvo open">Salvar</button>
+        </div>
     </section>
-    <main-configuracao-autoatendimento></main-configuracao-autoatendimento>
-
+    
     <!--MONITOR MODAL-->
     <div class="area-monitor-modal">
         <div class="area-modal" id="modal">
@@ -227,5 +261,8 @@
         </div>
     </div>
     <script src="../../../public/js/monitor-modal.js" defer></script>
+    <script src="../../../public/js/todos.js" defer></script>
 </body>
 </html>
+
+                                

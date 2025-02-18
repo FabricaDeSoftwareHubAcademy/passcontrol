@@ -1,22 +1,27 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- TROCA TÍTULO QUANDO FOR UTILIZAR -->
-    <title>PassControl</title> 
-    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- TROCA TÍTULO QUANDO FOR UTILIZAR -->
+        <title>PassControl</title>
+        
+        <!-- IMPORT DA FONTE -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+        
+        <!-- IMPORT DO CSS -->
+        <link rel="stylesheet" href="../../../public/css/navegacao.css">
+        <link rel="stylesheet" href="../../../public/css/adm-logado.css">
+        <link rel="stylesheet" href="../../../public/modais/Modal Confirmação dos Dados Registrados/estilo.css">
 
-    <!-- IMPORT DA FONTE -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+        <!-- IMPORT DO JS -->
+        <script src="../../../public/js/navegacao-menu-lateral-teste.js" defer></script>
+        <script src="../../../public/js/modal-adm-logado.js"></script>
 
-    <!-- IMPORT DO CSS -->
-    <link rel="stylesheet" href="../../../public/css/consultar-fila.css">
-
-    <link rel="shortcut icon" type="imagex/png" href="../../../public/img/Logo-Nota-Controlnt.ico">
+        <link rel="shortcut icon" type="imagex/png" href="../../../public/img/Logo-Nota-Controlnt.ico">
 
 </head>
 <body class="control-body-navegacao">
@@ -35,8 +40,8 @@
                         <ul class="texto-usu">
                             <li class="nome-usu">Nome do Usuário</li>
                             <li class="email-usu">funcionario123@fun.br</li>
-                            <li><a href="../../../app/admin/view/adm-logado.html">Editar Informações</a></li>
-                            <li><a class="sair" href="../../../index.html">Sair</a></li>
+                            <li><a href="../../../app/admin/view/adm-logado.php">Editar Informações</a></li>
+                            <li><a class="sair" href="../../../index.php">Sair</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -54,7 +59,7 @@
         <nav class="menu-lateral-navegacao">
 
             <div class="botao-navegacao">
-                <a class="botao-lateal-navegacao ativo-estacionario" href="../../../app/admin/view/atendimento.html">
+                <a class="botao-lateal-navegacao" href="../../../app/admin/view/atendimento.php">
                     <img class="icone-menu-lateral" src="../../../public/img/icons/atend.svg" alt="ICONE ATENDIMENTO">
                     <div class="texto-bott">Atendimento</div>
                 </a>
@@ -72,114 +77,70 @@
                 </a>
             </div>
             <div class="botao-navegacao">
-                <a class="botao-lateal-navegacao" href="../../../app/admin/view/menuadm_usuario.html">
+                <a class="botao-lateal-navegacao" href="../../../app/admin/view/menuadm_usuario.php">
                     <img class="icone-menu-lateral" src="../../../public/img/icons/gestao.svg" alt="ICONE GESTAO">
                     <div class="texto-bott">Gestão</div>
                 </a>
             </div>
         </nav>
         <div class="sair-navegacao">
-            <a class="botao-lateal-navegacao" href="../../../index.html">
+            <a class="botao-lateal-navegacao" href="../../../index.php">
                 <img class="icone-menu-lateral" src="../../../public/img/icons/sair.svg" alt="ICONE SAIR">
                 <div class="texto-bott">Sair</div>
             </a>
         </div>
     </div>
-    
-        <!-- INICIO DA ÁREA ÚTIL DA PÁGINA -->
-        <!-- INSIRA O CORPO DA SUA PÁGINA A PARTIR DESTE PONTO -->
-    <section class="Area-Util-Projeto"> 
-        <!-- <div class="principal-consultar-fila"> -->
-        <nav class="area-comum-consultar-fila">
-            <nav class="topo-info-consultar-fila">
-                <div class="topo-consultar-fila">
-                    <div class="topo-esquerda-consultar-fila">
-                        <h3>Fila de Espera</h3>
-                    </div>
-                    <div class="topo-direita-consultar-fila">
-                        <div class="senhas-guiche-area-chamada">
-                            <p>2</p>
-                            <p>Senhas Na Fila</p>
-                        </div>
-                    </div>
+
+    <section class="Area-Util-Projeto">
+    <!-- INICIO DA ÁREA ÚTIL DA PÁGINA -->
+    <h3 class="perfil-titulo">Perfil</h3>
+    <div class="sub-area">
+        <!-- Grupo de Dados Pessoais -->
+        <div class="dados-pessoais">
+            <h3>Dados Pessoais</h3>
+            <div class="form-group">
+                <label for="nome">Nome</label>
+                <input type="text" id="nome" name="nome" placeholder="Digite o Nome do Funcionário">
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Digite o Email do Funcionário">
                 </div>
-            </nav>   
-            <div class="input-search">
-                <input type="search" name="Buscar Atendente" placeholder="Buscar Atendente">
+                <div class="form-group">
+                    <label for="cpf">CPF</label>
+                    <input type="number" id="cpf" name="cpf" placeholder="Digite o CPF do Funcionário">
+                </div>
             </div>
-            <div class="fundo-guiche-area-chamada">
-                <table class="tabela_atendimento-guiche-area-chamada">
-                    <thead>
-                        <tr>
-                            <th>Ordem</th>
-                            <th>Nome</th>
-                            <th>Serviço</th>
-                            <th>Senha</th>
-                            <th>Início</th>
-                            <th>Término</th>
-                            <th>Categoria</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td>#01</td>
-                        <td>Gabriel Adernos</td>
-                        <td>IPTU</td>
-                        <td>CM002</td>
-                        <td>10:30</td>
-                        <td>11:16</td>
-                        <td>Comum</td>
-                        
-                    </tr>
-                    <tr>
-                        <td>#02</td>
-                        <td>Gabriel Alvin</td>
-                        <td>Ouvidoria</td>
-                        <td>CM009</td>
-                        <td>09:12</td>
-                        <td>10:02</td>
-                        <td>Comum</td>
-                        
-                    </tr>
-                    <tr>
-                        <td>#03</td>
-                        <td>Guilherme Machado</td>
-                        <td>Licenças</td>
-                        <td>CM015</td>
-                        <td>11:18</td>
-                        <td>11:46</td>
-                        <td>Preferencial</td>
-                        
-                    </tr>
-                    <tr>
-                        <td>#04</td>
-                        <td>João Guilherme Ortigosa</td>
-                        <td>Iluminação Publica</td>
-                        <td>CM026</td>
-                        <td>09:46</td>
-                        <td>10:28</td>
-                        <td>Comum</td>
-                        
-                    </tr>
-                    <tr>
-                        <td>#05</td>
-                        <td>Juliana Barbosa</td>
-                        <td>Fiscalização</td>
-                        <td>CM032</td>
-                        <td>08:18</td>
-                        <td>09:34</td>
-                        <td>Preferencial</td>
-                        
-                    </tr>
-                </table>
+        </div>
+
+        <!-- Grupo de Alterar Senha -->
+        <div class="alterar-senha">
+            <h3>Alterar Senha</h3>
+            <div class="form-group">
+                <label for="senha-atual">Senha Atual</label>
+                <input type="password" id="senha-atual" name="senha-atual" placeholder="Digite a Senha Atual">
             </div>
-            <div class="div-botao-info">
-                <button class="add-func" type="submit" onclick="window.location.href='../../../app/admin/view/atendimento.html';">Voltar</button>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="nova-senha">Nova Senha</label>
+                    <input type="password" id="nova-senha" name="nova-senha" placeholder="Digite a Nova Senha">
+                </div>
+                <div class="form-group">
+                    <label for="confirm-nova-senha">Confirmar Nova Senha</label>
+                    <input type="password" id="confirm-nova-senha" name="confirm-nova-senha" placeholder="Digite Novamente a Nova Senha">
+                </div>
             </div>
-            
-        <!-- </div> -->
-        </nav> 
-    </section>           
+        </div>
+    </div>
+    <div class="form-actions">
+        <button type="button" class="botao-voltar" onclick="window.location.href='javascript:history.back()';">Voltar</button>
+        <button type="submit" class="botao-salvar open">Salvar</button>
+    </div>
+        <main-modal-adm-logado></main-modal-adm-logado>
+
+        <!-- FIM DA ÁREA ÚTIL DA PÁGINA -->
+    </section>
     
     <!--MONITOR MODAL-->
     <div class="area-monitor-modal">
@@ -264,7 +225,7 @@
             </div>
         </div>
     </div>
-    <script src="../../../public/js/monitor-modal.js" defer></script>
-         
+    <script src="../../../public/js/monitor-modal.js" defer></script>  
+
 </body>
 </html>
