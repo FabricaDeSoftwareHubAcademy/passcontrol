@@ -32,9 +32,10 @@
             </div>
             <H3>PassControl</H3>
             <div class="usu-nome">                
+                Nome do Usuário
+                <!-- <p class="usu-nome">Nome do Usuário</p> -->
                 <!-- INFO DO USUARIO -->
-                <div class="menu-usuario">
-                    <a class="usu-nome">Nome do Usuário</a>
+                <!-- <div class="menu-usuario"> -->
                     <nav class="usu-detalhes"> 
                         <img src="../../../public/img/icons/image 33.svg" alt="">
                         <ul class="texto-usu">
@@ -45,7 +46,7 @@
                             <li><a class="sair" href="../../../index.php">Sair</a></li>
                         </ul>
                     </nav>
-                </div>
+                <!-- </div> -->
             </div>
         </nav>
         <div class="dark-area"></div>

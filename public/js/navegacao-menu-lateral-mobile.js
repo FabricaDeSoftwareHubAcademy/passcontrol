@@ -1,3 +1,4 @@
+// MENU MOBILE
 const menuLateralMobile = document.querySelector(".background-m-mobile");
 const abrirMenuLateral = document.querySelector(".abrirMenuLateral");
 const fecharMenuLateral = document.querySelector(".areatransp");
@@ -23,3 +24,25 @@ abrirMonitorModal.addEventListener("click", () =>{
     menuLateralMobile.classList.remove("menu-visivel");
     modal.style.display = "flex";
 })
+
+// MENU INFORMACAO DO USUARIO
+const menuInfoUsuario = document.querySelector(".usu-detalhes");
+const abrirInfoUsuario = document.querySelector(".usu-nome");
+
+// abrirInfoUsuario.addEventListener("click", () =>{
+//     menuInfoUsuario.classList.add("menu-visivel");
+// })
+
+// menuInfoUsuario.addEventListener('blur', () => {
+//     menuInfoUsuario.classList.remove('menu-visivel');
+// })
+  
+document.addEventListener('click', event => {
+    if (event.target === abrirInfoUsuario) {
+        // menuInfoUsuario.classList.remove('menu-visivel');
+        menuInfoUsuario.classList.add("menu-visivel");
+    }
+    else if (event.target !== menuInfoUsuario){
+        menuInfoUsuario.classList.remove('menu-visivel');
+    }
+});
