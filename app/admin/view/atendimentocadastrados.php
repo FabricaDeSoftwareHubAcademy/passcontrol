@@ -17,11 +17,13 @@
     <link rel="stylesheet" href="../../../public/css/navegacao.css">
     <link rel="stylesheet" href="../../../public/css/atendimentocadastrados.css">
     <link rel="stylesheet" href="../../../public/modais/Modal Edição Ponto Atendimento/estilo.css">
+    <link rel="stylesheet" href="../../../public/modais/Modal Cadastro Ponto Atendimento/estilo.css">
     <link rel="stylesheet" href="../../../public/modais/Modal Inativação Guichê/estilo.css">
 
     <!-- IMPORT DO JS -->
      <script src="../../../public/js/modal-atendimentocadastrados.js"></script>
      <script src="../../../public/js/modal-inativacao-atendimentocadastrado.js"></script>
+     <script src="../../../public/js/modal-cadastro-atendimento.js"></script>
 
      <link rel="shortcut icon" type="imagex/png" href="../../../public/img/Logo-Nota-Controlnt.ico">
 
@@ -397,8 +399,8 @@
                             </table>
 
                             <!-- Botão para adicionar novo guichê -->
-                            <a href="../../../app/admin/view/cadastro_pont_de_atendimento.php">
-                                <button class="styled-button">Novo Guichê</button>
+                            <a href="#">
+                                <button class="styled-button" id="btn-cadastro">Novo Guichê</button>
                             </a>
                         </section>
                     </div>
@@ -416,6 +418,7 @@
             <!-- </main> -->
     </section>
     <main-atendimento-cadastrado></main-atendimento-cadastrado>
+    <main-cadastro-atendimento></main-cadastro-atendimento>
     <main-inativacao_atendimento-cadastrado></main-inativacao_atendimento-cadastrado>
     
     <!--MONITOR MODAL-->

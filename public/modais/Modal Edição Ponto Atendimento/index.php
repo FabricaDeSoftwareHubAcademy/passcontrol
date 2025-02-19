@@ -19,12 +19,12 @@
             <div class="inf-modal">
                 <div class="container">
                     <label><b>Nome do Ponto de Atendimento</b></label>
-                    <input type="text" placeholder="Ex: Guichê, Baia, IPTU...">
+                    <input type="text" placeholder="Guichê">
                 </div>
             </div>
             <div class="servico">
                 <label><b>Número / Letra</b></label>
-                <input type="text" placeholder="Ex: 01, 02...">
+                <input type="text" placeholder="1">
             </div>
             <div class="button-group">
                 <button class="botao-modal cancel">Voltar</button>
