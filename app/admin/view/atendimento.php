@@ -170,7 +170,7 @@
                             </button>
                             </div>
                             <div class="area-botao-atendimento">
-                                <button class="botao-consultar-fila-atendimento">
+                                <button class="botao-consultar-fila-atendimento abrirConsultarFila">
                                     <a href="" class="texto-botao-atendimento">
                                         <img class="img-consultar-fila-atendimento" src="../../../public/img/icons/consultar-fila.svg" alt="ampulheta">
                                         <h4>Consultar Fila</h4>
