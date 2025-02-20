@@ -22,9 +22,10 @@ main {
 .barra-pesquisa {
     width: 10%; 
     position: absolute;
-    right: 3%;
+    right: 2.9%;
     top: 33px;
     max-width: 500px;
+    transition: right 0.3s ease-in-out;
 
 }
 
@@ -46,9 +47,9 @@ main {
     left: 5vh; 
     bottom: 7vh; 
     justify-content: center;
-    align-items: start; 
+    align-items: start;
     overflow: auto;
-    scroll-behavior: smooth; 
+    scroll-behavior: smooth;
 }
 
 
@@ -56,9 +57,10 @@ main {
     background-color: #2d3945;
     height: 6px;
     margin-top: -1px;
-    margin-left: 2.9%;
+    margin-left:52px;
+    margin-right: 40px;
     /* margin-right: auto; */
-    width: 94.3%;
+    width: calc(100% - 5.8%);
 }
 .tabela {
     width: 100%;
@@ -189,13 +191,14 @@ main {
     }
 
     .barra-pesquisa {
-        width: 21%;
+        width: 20%;
+        margin-right: 2.4%;
     }
 
     .linha {
         margin-top: -1px;
         margin-left: 52px;
-        width: 89%;
+        width: 89.4%;
     }
 }
 
@@ -215,8 +218,8 @@ main {
     }
 
     .barra-pesquisa {
-        width: 23.5%;
-        margin-right:2%;
+        width: 21.5%;
+        margin-right:4%;
         margin-top: 1px;
     }
 
@@ -226,12 +229,15 @@ main {
 
     .linha {
         margin-top: 3px;
-        margin-left: 42px;
-        width: 89%;
+        margin-left: 53px;
+        width: 85.7%;
     }
 }
 
 @media (max-width: 710px) {
+    .titulo{
+        font-size: 100%;
+    }
     .menu-tabela {
         width: 20%;
         padding: 5px;
@@ -242,17 +248,22 @@ main {
     }
 
     .barra-pesquisa {
-        width: 26.5%;
+        margin-top: -10px;
+        width: 23.5%;
+        margin-right: 5%;
     }
 
     .linha {
         margin-top: -1px;
-        margin-left: 42px;
-        width: 87.6%;
+        margin-left: 52px;
+        width: 84%;
     }
 
     .input-pesquisa {
-        width: 76%;
+        width: 73%;
+    }
+    .cubo-branco {
+        top: 51px;
     }
 }
 
@@ -277,7 +288,9 @@ main {
     }
 
     .linha {
-        width: 85%;
+        width: 82%;
+        margin-left:53px ;
+        margin-right: 20px;
     }
 
     .tabela-3x3 {
@@ -292,7 +305,8 @@ main {
 
 @media (max-width: 550px) {
     .titulo {
-        font-size: 12px;
+        font-size: 13px;
+        margin-left: 10.4%;
     }
 
     .menu-tabela {
@@ -303,17 +317,21 @@ main {
     .tabela-3x3 {
         width: 1900%;
     }
+    .tabela-3x3 th {
+      font-size: 16px;
+    }
 
     .barra-pesquisa {
-        width: 24.5%;
+        width: 21.5%;
+        margin-right: 7.5%;
     }
 
     .input-pesquisa {
-        width: 74.5%;
+        width: 72.5%;
     }
 
     .linha {
-        width: 81%;
+        width: 79%;
     }
 
     .actions img {
@@ -341,7 +359,7 @@ main {
     }
     .barra-pesquisa {
         width: 40%;
-        margin-top: 19px;
+        margin-top: 4px;
         margin-right: 11px;
         
     }
