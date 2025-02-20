@@ -19,7 +19,7 @@
   align-items: stretch;
 }
 .topo-tela-servico{
-  margin: 20px 0px 20px 20px; 
+  margin: 20px 0px 20px 25px; 
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -71,7 +71,7 @@
   margin: 25px auto;
 }
 .tabela-responsiva-servico {
-  max-height: 370px;
+  max-height: 420px;
   overflow-y: auto;
   border: 1px solid #dddddd;
 }
@@ -105,7 +105,10 @@
   width: 20%;
   height: 30px;
 }
-
+.colm-idit{
+  display: flex;
+  justify-content: space-between;
+}
 .tabela-servicos th {
   background-color: var(--cinza-control);
   font-size: 16px;
@@ -166,6 +169,7 @@
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s, transform 0.2s;
+  width: 7rem;
 }
 .botoesVoltar-Cadastrar{
   display: flex;
@@ -188,9 +192,6 @@
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }
 
-button:hover {
-  background-color: #455A64;
-}
 .tabela-wrapper::-webkit-scrollbar {
   width: 5px;
 }
@@ -220,9 +221,11 @@ button:hover {
     width: 100%;
     /* border: 2px solid green; */
     font-size: 20px;
+    margin-top: 40px;
+    margin-bottom: 0%;
   }
   .campo-busca{
-    margin-bottom: -3.5%;
+    margin-bottom: -3%;
   }
   #tela-branca {
     width: 90%;
@@ -240,6 +243,9 @@ button:hover {
   .botoesVoltar-Cadastrar{
     margin-right: 5%;
   }
+  .botao-voltar, .botao-cadastro{
+    width: 7rem;
+  }
 
   #icone-editar {
     width: 25px;
@@ -255,7 +261,7 @@ button:hover {
     padding: 8px;
   }
   .campo-busca{
-    margin-bottom: -17%;
+    margin-bottom: -4%;
   }
   #buscar-servico{
     margin-left: 46%;
@@ -263,15 +269,19 @@ button:hover {
   }
 }
 @media screen and (max-width: 480px) {
-  #servicos-cadastrados {
-    margin-left: 15%;
-
+  #buscar-servico{
+    margin-left: 0%;
+    width: 90%;
   }
   .campo-busca{
-    margin-bottom: -5%;
+    margin-bottom: -17%;
   }
-  .topo-tabela-servicos{
-    margin: 50px 0px 5px 20px;
+  .linha-divisoria-servico{
+    margin-top: 11%;
+    width: 90%;
+  }
+  .tabela-responsiva-servico {
+    max-height: 320px;
   }
   
 }
@@ -282,11 +292,18 @@ button:hover {
     padding: 5px;
   }
   #buscar-servico{
-    margin-left: 2%;
-    width: 100%;
+    margin-left: 0%;
+    width: 90%;
   }
   .campo-busca{
-    margin-bottom: -4%;
+    margin-bottom: -17%;
+  }
+  .linha-divisoria-servico{
+    margin-top: 10%;
+    width: 90%;
+  }
+  .tabela-responsiva-servico {
+    max-height: 340px;
   }
   .tabela-servicos th,
   .tabela-servicos td {
@@ -304,5 +321,6 @@ button:hover {
   }
   .botao-cadastro, .botao-voltar{
     font-size: 11px;
+    /* width: 36%; */
   }
 }
