@@ -382,8 +382,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 5vh;
+    margin-top: 3vh;
     width: 100%;
+    /* background-color: red; */
 }
 .sair-mobile .botao-lateral-navegacao-mobile{
     width: 50%;
