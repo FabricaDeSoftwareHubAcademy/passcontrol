@@ -33,7 +33,7 @@
 }
 
 .topo-esquerda-consultar-fila {
-    width: 100%;
+    width: 95%;
     /* height: 100%; */
     align-items: end;
     display: flex;
@@ -46,6 +46,13 @@
     font-size: 22px;
     color: #33404D;
 }
+.area-em-cima-tabela-atendimento{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    /* gap: 42rem; */
+    width: 96%;
+}
 
 .topo-direita-consultar-fila {
     /* background-color: blueviolet; */
@@ -53,29 +60,30 @@
     align-items: center;
     display: flex;
     flex-direction: row;
-    width: 50%;
+    width: 30%;
     height: 64%;
     gap: 15px;
-    margin-right: 3%;
+    margin-right: 2rem;
     /* background-color: darkturquoise; */
 }
 
 .senhas-guiche-area-chamada {
     display: flex;  
-    flex-direction: column;
-    height: 100%;
-    /* width: 50%; */
-    height: 5rem;
-    background-color: aliceblue;
+    flex-direction: row-reverse;
+    /* height: 100%; */
+    width: 100%;
+    height: 2.6rem;
+    /* background-color: aliceblue; */
     background-color: rgba(255, 255, 255, 0.3);
     justify-content: center;
     align-items: center;
     text-align: center;
-    box-shadow: 4px 4px 8px 1px rgba(0, 0, 0, 0.18);
+    /* box-shadow: 4px 4px 8px 1px rgba(0, 0, 0, 0.18); */
     font-size: 24px;
     font-weight: 700;
     color: #33404D;
     border-radius: 2%;
+    gap: 1.4rem;
 }
 .senhas-guiche-area-chamada p{
     font-size: 20px;
@@ -103,7 +111,7 @@
     width: 100%;
     height: 100%;
     display: flex;
-    margin-top: 6rem;
+    margin-top: 2.4rem;
     flex-direction: column;
     border-radius: 5px;
     /* justify-content: center; */
@@ -177,7 +185,7 @@ thead, tbody tr {
 } 
 tbody { 
     display: block; 
-    max-height: 180px; 
+    max-height: 235px; 
     overflow-y: scroll;  
     position: relative; 
 
@@ -280,16 +288,19 @@ input:checked + .slider:before {
 input:focus + .slider {
     box-shadow: 0 0 1px #4CAF50;
 }
-
-.input-search{
+.area-em-cima-tabela-atendimento{
     display: flex;
-    justify-content: start;
-    width: 95%;
+    flex-direction: row;
+}
+.input-search-atendimento{
+    display: flex;
+    /* flex-direction: row; */
+    width: 96%;
     margin-top: 2%;
     /* background-color: rebeccapurple; */
 }
 
-.input-search input{
+.input-search-atendimento input{
     border-radius: 5px 5px 0px 0px;
     border: 1px solid rgb(128, 128, 128); 
     width: 10.125rem;
@@ -359,4 +370,41 @@ input:focus + .slider {
     color: #3AA867;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
     /* text-decoration: underline #3AA867; */
+}
+
+
+@media screen and (min-width: 1141px) and (max-width: 1640px) {
+    .topo-esquerda-consultar-fila h3{
+        font-size: 28px;
+    }
+}
+
+
+@media screen and (min-width: 881px) and (max-width: 1140px) {
+    .topo-esquerda-consultar-fila h3{
+        font-size: 28px;
+    }
+    .senhas-guiche-area-chamada{
+        width: 90%;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 880px) {
+    
+    .area-em-cima-tabela-atendimento{
+        width: 100%;
+    }
+    .input-search-atendimento input{
+        height: 70%;
+        width: 45%;
+    }
+    .senhas-guiche-area-chamada{
+        gap: 1rem;
+    }
+    .senhas-guiche-area-chamada p{
+        font-size: 16px;
+    }
+    .input-search-atendimento{
+        align-items: end;
+    }
 }

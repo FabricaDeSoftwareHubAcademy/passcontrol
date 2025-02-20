@@ -170,7 +170,7 @@
                             </button>
                             </div>
                             <div class="area-botao-atendimento">
-                                <button class="botao-consultar-fila-atendimento">
+                                <button class="botao-consultar-fila-atendimento abrirConsultarFila">
                                     <a href="" class="texto-botao-atendimento">
                                         <img class="img-consultar-fila-atendimento" src="../../../public/img/icons/consultar-fila.svg" alt="ampulheta">
                                         <h4>Consultar Fila</h4>
@@ -204,138 +204,96 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>#01</td>
-                                <td>Guilherme Machado</td>
-                                <td>IPTU</td>
-                                <td>CM002</td>
-                                <td>10:30</td>
-                                <td>11:16</td>
-                                <td>Comum</td>
-                            </tr>
-                            <tr>
-                                <td>#02</td>
-                                <td>Juliana Barbosa</td>
-                                <td>Fiscalização</td>
-                                <td>CM032</td>
-                                <td>08:18</td>
-                                <td>09:34</td>
-                                <td>Preferencial</td>
-                            </tr>
-                            <tr>
-                                <td>#03</td>
-                                <td>Gabriel Alvin</td>
-                                <td>Licenças</td>
-                                <td>CM015</td>
-                                <td>11:18</td>
-                                <td>11:46</td>
-                                <td>Preferencial</td>
-                            </tr>
                         <tr>
-                            <td>#04</td>
-                            <td>Suelen Cabral</td>
-                            <td>Ouvidoria</td>
-                            <td>CM019</td>
-                            <td>09:32</td>
-                            <td>09:46</td>
+                            <td>#01</td>
+                            <td>Guilherme Machado</td>
+                            <td>IPTU</td>
+                            <td>CM002</td>
+                            <td>7:30</td>
+                            <td>7:46</td>
                             <td>Comum</td>
-                            
                         </tr>
                         <tr>
-                            <td>#05</td>
-                            <td>Fred Lopes</td>
-                            <td>Concelho Municipal</td>
-                            <td>CM033</td>
-                            <td>08:01</td>
-                            <td>08:24</td>
-                            <td>Comum</td>
-                            
+                            <td>#02</td>
+                            <td>Juliana Barbosa</td>
+                            <td>Fiscalização</td>
+                            <td>CM005</td>
+                            <td>7:48</td>
+                            <td>08:04</td>
+                            <td>Preferencial</td>
                         </tr>
                         <tr>
-                            <td>#06</td>
-                            <td>Luan Rech</td>
+                            <td>#03</td>
+                            <td>Gabriel Alvin</td>
                             <td>Licenças</td>
-                            <td>CM056</td>
-                            <td>11:53</td>
-                            <td>12:07</td>
-                            <td>Preferencial</td>
-                            
-                        </tr>
-                        <tr>
-                            <td>#07</td>
-                            <td>João Guilherme</td>
-                            <td>Licenças</td>
-                            <td>CM004</td>
-                            <td>08:59</td>
-                            <td>09:23</td>
-                            <td>Comum</td>
-                            
-                        </tr>
-                        <tr>
-                            <td>#08</td>
-                            <td>Eliandro</td>
-                            <td>Ouvidoria</td>
-                            <td>CM027</td>
-                            <td>10:04</td>
-                            <td>10:23</td>
-                            <td>Preferencial</td>
-                            
-                        </tr>
-                        <tr>
-                            <td>#02</td>
-                            <td>Juliana Barbosa</td>
-                            <td>Fiscalização</td>
-                            <td>CM032</td>
-                            <td>08:18</td>
-                            <td>09:34</td>
+                            <td>CM008</td>
+                            <td>8:08</td>
+                            <td>08:29</td>
                             <td>Preferencial</td>
                         </tr>
-                        <tr>
-                            <td>#02</td>
-                            <td>Juliana Barbosa</td>
-                            <td>Fiscalização</td>
-                            <td>CM032</td>
-                            <td>08:18</td>
-                            <td>09:34</td>
-                            <td>Preferencial</td>
-                        </tr>
-                        <tr>
-                            <td>#02</td>
-                            <td>Juliana Barbosa</td>
-                            <td>Fiscalização</td>
-                            <td>CM032</td>
-                            <td>08:18</td>
-                            <td>09:34</td>
-                            <td>Preferencial</td>
-                        </tr>
-                        <tr>
-                            <td>#02</td>
-                            <td>Juliana Barbosa</td>
-                            <td>Fiscalização</td>
-                            <td>CM032</td>
-                            <td>08:18</td>
-                            <td>09:34</td>
-                            <td>Preferencial</td>
-                        </tr>
-                        <tr>
-                            <td>#02</td>
-                            <td>Juliana Barbosa</td>
-                            <td>Fiscalização</td>
-                            <td>CM032</td>
-                            <td>08:18</td>
-                            <td>09:34</td>
-                            <td>Preferencial</td>
-                        </tr>
-                        <tr>
-                            <td>#02</td>
-                            <td>Juliana Barbosa</td>
-                            <td>Fiscalização</td>
-                            <td>CM032</td>
-                            <td>08:18</td>
-                            <td>09:34</td>
-                            <td>Preferencial</td>
-                        </tr>
-                        
+                    <tr>
+                        <td>#04</td>
+                        <td>Suelen Cabral</td>
+                        <td>Ouvidoria</td>
+                        <td>CM014</td>
+                        <td>08:32</td>
+                        <td>08:58</td>
+                        <td>Comum</td>
+                    </tr>
+                    <tr>
+                        <td>#05</td>
+                        <td>Fred Lopes</td>
+                        <td>Concelho Municipal</td>
+                        <td>CM019</td>
+                        <td>09:01</td>
+                        <td>09:23</td>
+                        <td>Comum</td>
+                    </tr>
+                    <tr>
+                        <td>#06</td>
+                        <td>Luan Rech</td>
+                        <td>Licenças</td>
+                        <td>CM023</td>
+                        <td>09:24</td>
+                        <td>09:46</td>
+                        <td>Preferencial</td>
+                    </tr>
+                    <tr>
+                        <td>#07</td>
+                        <td>João Guilherme</td>
+                        <td>Licenças</td>
+                        <td>CM028</td>
+                        <td>09:47</td>
+                        <td>09:58</td>
+                        <td>Comum</td>
+                    </tr>
+                    <tr>
+                        <td>#08</td>
+                        <td>Eliandro</td>
+                        <td>Ouvidoria</td>
+                        <td>CM030</td>
+                        <td>10:00</td>
+                        <td>10:23</td>
+                        <td>Comum</td>
+                    </tr>
+                    <tr>
+                        <td>#09</td>
+                        <td>Thiago Almeida</td>
+                        <td>Concelho Municipal</td>
+                        <td>CM034</td>
+                        <td>10:24</td>
+                        <td>10:37</td>
+                        <td>Comum</td>
+                    </tr>
+                    <tr>
+                        <td>#10</td>
+                        <td>Lucas Sesper</td>
+                        <td>Fiscalização</td>
+                        <td>CM037</td>
+                        <td>10:40</td>
+                        <td>10:53</td>
+                        <td>Preferencial</td>
+                    </tr>
                     </table>
                 </div>
             </nav>            
