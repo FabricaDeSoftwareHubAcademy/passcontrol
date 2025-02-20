@@ -19,10 +19,12 @@
     <link rel="stylesheet" href="../../../public/css/atendimento.css">
     <link rel="stylesheet" href="../../../public/modais/Modal Iniciar Intervalo/estilo.css">
     <link rel="stylesheet" href="../../../public/modais/Modal Confirmação de Presença/estilo.css">
+    <link rel="stylesheet" href="../../../public/modais/Modal Consultar Fila/estilo.css">
 
     <!-- IMPORT DO JS -->
     <script src="../../../public/js/modal-teladelogin.js"></script>
     <script src="../../../public/js/modal-proxima-senha.js"></script>
+    <script src="../../../public/modais/Modal Consultar Fila/modal.js" defer></script>
 
     <link rel="shortcut icon" type="imagex/png" href="../../../public/img/Logo-Nota-Controlnt.ico">
 </head>
