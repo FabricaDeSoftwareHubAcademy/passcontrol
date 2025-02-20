@@ -147,7 +147,7 @@ button.save:hover {
     
     .logo {
         width: 50px !important;
-        top: -5px;
+        top: 1px !important;
         right: 10px !important;
     }
 
@@ -274,14 +274,14 @@ button.save:hover {
     .modal{
         width: 80% !important;
         min-width: auto !important;
-        margin-left: 50px !important;
+        margin-left: 7px !important;
     }
     section .modal {
         width: 80%;
         padding: 15px;
     }
     .logo {
-        margin-top: 15px !important;
+        margin-top: 2px !important;
         width: 60px !important;
     }
     h1 {
@@ -326,7 +326,7 @@ button.save:hover {
 }
 
 /* Telas médias (tablets) */
-@media (max-width: 768px) {
+@media (max-width: 769px) {
     hr {
         width: 109%; /* Aumenta a largura da linha no celular */
         margin-left: -4.4%; /* Ajusta a centralização */
@@ -335,9 +335,10 @@ button.save:hover {
     .modal {
         width: 70%;
         padding: 25px;
-        margin-left: 7%;
+        margin-left: 1%;
     }
     .logo {
+        top: 30px;
         width: 80px;
     }
     h1 {
@@ -366,12 +367,13 @@ button.save:hover {
         font-size: 20px;
     }
     .logo {
+        top: 30px;
         width: 90px;
     }
 }
 
 /* Telas grandes (desktops) */
-@media (min-width: 1024px) {
+@media (min-width: 1024px) and (max-width: 1200px) {
     hr {
         width: 115.3%; /* Reduz a largura da linha em telas maiores */
         margin-left: -7.7%; /* Ajusta a centralização */
@@ -389,6 +391,7 @@ button.save:hover {
         font-size: 20px;
     }
     .logo {
+        top: 30px;
         width: 90px;
     }
 }
@@ -406,6 +409,7 @@ button.save:hover {
         font-size: 20px;
     }
     .logo {
+        top: 30px;
         width: 90px;
     }
 }
