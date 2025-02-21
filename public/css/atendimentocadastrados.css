@@ -23,9 +23,8 @@ main {
     width: 10%; 
     position: absolute;
     right: 2.9%;
-    top: 33px;
+    top: 34px;
     max-width: 500px;
-    transition: right 0.3s ease-in-out;
 
 }
 
@@ -48,25 +47,24 @@ main {
     bottom: 7vh; 
     justify-content: center;
     align-items: start;
-    overflow: auto;
-    scroll-behavior: smooth;
+   
 }
 
 
 .linha {
     background-color: #2d3945;
     height: 6px;
-    margin-top: -1px;
-    margin-left:52px;
-    margin-right: 40px;
-    /* margin-right: auto; */
-    width: calc(100% - 5.8%);
+    top: -1px;
+    margin-left: 2.9%;
+    margin-right:2.9%  ;
+    width: 94.1%;
 }
 .tabela {
     width: 100%;
     display: flex;
     justify-content: center;
     padding: 20px;
+    max-height: 650px;
 
 }
 .menu-tabela {
@@ -76,18 +74,29 @@ main {
     align-items: center;
     gap: 20px;
 }
+.tabela-container {
+    width: 300%; /* A largura do contêiner da tabela será 100% */
+    overflow-x: auto; /* Rolagem horizontal quando necessário */
+    overflow-y: auto; /* Rolagem vertical quando necessário */
+    max-height: 590px; /* Defina a altura máxima do contêiner */
+}
+
 .tabela-3x3 {
-    width: 300%;
-    table-layout: fixed;
+    width: 100%; /* A tabela ocupa 100% da largura do seu contêiner */
+    table-layout: fixed; /* Força as colunas a terem a mesma largura */
     border-collapse: collapse;
 }
-.tabela-3x3 th,
-.tabela-3x3 td {
+
+.tabela-3x3 th, .tabela-3x3 td {
     padding: 8px;
     text-align: left;
     border: 1px solid #000000;
     box-sizing: border-box;
+    word-wrap: break-word; /* Quebra o texto automaticamente */
+    white-space: normal; /* Permite que o texto se quebre em várias linhas */
+    min-width: 120px; /* Define um tamanho mínimo para as células */
 }
+
 .tabela-3x3 th {
     background-color: #2d3945;
     color: #fff;
@@ -95,22 +104,15 @@ main {
     top: 0;
     z-index: 10;
     padding: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    word-wrap: break-word; /* Quebra o texto automaticamente */
-    white-space: normal; /* Permite que o texto se quebre em várias linhas */
 }
 
 .tabela-3x3 td {
-    background-color: #ffffff; 
-     padding: 8px;
-    text-align: left;
-    border: 1px solid #000000;
-    
+    background-color: #ffffff;
+    padding: 8px;
 }
 
-
 .tabela-3x3 tr:nth-child(even) {
-    background-color: #ffffff;
+    background-color: #f7f7f7;
 }
 .actions { 
     width: 13%;
@@ -184,6 +186,11 @@ main {
         width: 35%;
         padding: 5px;
     }
+    .tabela-container {
+    
+        max-height: 590px; /* Defina a altura máxima do contêiner */
+    }
+    
 
     .tabela-3x3 th, .tabela-3x3 td {
         font-size: 18px;
@@ -216,11 +223,21 @@ main {
     .tabela-3x3 {
         width: 150%;
     }
+    .tabela-container {
+        width: 150%; /* A largura do contêiner da tabela será 100% */
+        overflow-x: auto; /* Rolagem horizontal quando necessário */
+        max-height: 590px; /* Defina a altura máxima do contêiner */
+    }
+    .tabela-3x3 {
+        width: 100%;
+        table-layout: fixed;
+        border-collapse: collapse;
+    }
 
     .barra-pesquisa {
         width: 21.5%;
         margin-right:4%;
-        margin-top: 1px;
+        margin-top: -0.5px;
     }
 
     .input-pesquisa {
@@ -234,7 +251,7 @@ main {
     }
 }
 
-@media (max-width: 710px) {
+@media (max-width: 711px) {
     .titulo{
         font-size: 100%;
     }
@@ -242,11 +259,16 @@ main {
         width: 20%;
         padding: 5px;
     }
-
-    .tabela-3x3 {
-        width: 650%;
+    .tabela-container {
+        width: 650%; /* A largura do contêiner da tabela será 100% */
+        overflow-x: auto; /* Rolagem horizontal quando necessário */
+        max-height: 590px; /* Defina a altura máxima do contêiner */
     }
-
+    .tabela-3x3 {
+        width: 100%;
+        table-layout: fixed;
+        border-collapse: collapse;
+    }
     .barra-pesquisa {
         margin-top: -10px;
         width: 23.5%;
@@ -292,9 +314,12 @@ main {
         margin-left:53px ;
         margin-right: 20px;
     }
-
+    .tabela-container {
+        width: 700%;
+        max-height: 590px; /* A largura do contêiner da tabela será 100% */
+    }
     .tabela-3x3 {
-        width: 650%;
+        width: 100%;
     }
 
     .actions img {
@@ -313,10 +338,14 @@ main {
         width: 9.5%;
         padding: 5px;
     }
+    .tabela-container {
+        width: 1600%; /* A largura do contêiner da tabela será 100% */
+    }
 
     .tabela-3x3 {
-        width: 1900%;
+        width: 100%;
     }
+    
     .tabela-3x3 th {
       font-size: 16px;
     }
@@ -352,21 +381,21 @@ main {
         bottom: 7vh; 
     }
     .titulo {
-        font-size: 12px;
+        font-size: 13px;
         margin-top: 10px;
         margin-right:40px;
         text-align: center;
     }
     .barra-pesquisa {
         width: 40%;
-        margin-top: 4px;
+        margin-top: 20px;
         margin-right: 11px;
         
     }
     .input-pesquisa {
         padding: 1px;
-        width: 43%;
-        font-size: 10px;
+        width: 100% !important;   /*para garantir que o width seja aplicado corretamente. */
+        font-size: 10px ;
         border-radius: 5px;
         height:10px;
     }
@@ -383,8 +412,14 @@ main {
         max-width: 320px;
         padding: 1px;
     }
+    .tabela-container {
+        width: 170%; /* A largura do contêiner da tabela será 100% */
+        overflow-x: auto; /* Rolagem horizontal quando necessário */
+        max-height: 650px; /* Defina a altura máxima do contêiner */
+    }
     .tabela-3x3 {
-        width: 200%;
+        width: 100%;
+        table-layout: fixed;
         border-collapse: collapse;
     }
     .tabela-3x3 th {
@@ -408,15 +443,12 @@ main {
     .toggle-btn .circle {
         width: 9px;
         height: 9px;
-        background-color: #ff0000;
-        border-radius: 50%;
-        position: absolute;
-        top: 1px;
-        left: 2px;
-        transition: left 0.3s;
+       
+        
     }
     .toggle-btn.active .circle {
-        background-color: #3AA867;
+        
+        
         left: 10px;
         top: 1px;
     }
@@ -425,10 +457,11 @@ main {
         height: 15px;
     }
     .styled-button {
-        width: 10%;  /* Aqui, o botão ocupa toda a largura */
-        right: 0%;  /* Ajuste a posição para 0, caso o botão precise ocupar toda a tela */
-        bottom: 10px;  /* Ajuste a posição para a parte inferior */
+        width: 50% !important;  /* Ajustando a largura do botão para ocupar 80% da tela */
+        position: absolute; /* Posicionando o botão de forma absoluta */
+        left: 50%; /* Colocando o botão centralizado com a largura ajustada */
+        bottom: -50px;  /* Ajustando a posição para a parte inferior */
         padding: 7px 3px;
-        font-size: 0.8rem;  /* Ajuste a fonte para tamanhos menores */
+        font-size: 0.0rem;
     }
 }
