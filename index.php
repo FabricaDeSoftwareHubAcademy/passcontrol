@@ -58,10 +58,12 @@
                 <span></span>
             </div>
         </div>
-        <div class="card">
-            <span class="title">Olá, Seja Bem-Vindo !!</span>
+        <div class="cardLogin">
+            <div class="containerBemVindoLogin">
+                <span class="titleBemVindo">Olá, Seja Bem-Vindo !!</span>
+            </div>
 
-            <form action="#" method="post" class="formBox">
+            <form action="#" method="post" class="formBoxLogin">
                 <div class="group user">
                     <label for="name">Usuário</label>
                     <input type="text" placeholder="Ex: usuario@gmail.com">

@@ -33,7 +33,7 @@ body{
 
 .containerLogin{
     width: 1400px;
-    height: 90%;
+    height: 100%;
     display: flex;
 }
 .animBox{
@@ -59,7 +59,7 @@ body{
     color: #33404D;
 }
 
-.card{
+.cardLogin{
     width: 50%;
     backdrop-filter: blur(5px);
     background-color: rgba(198, 196, 196, 0.2);
@@ -68,25 +68,35 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: 50px;
+    gap: 5%;
 }
-.title{
+.containerBemVindoLogin{
+    width: 100%;
+    height: auto;
+    /* border: 1px solid red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* margin-bottom: 30px; */
+}
+.titleBemVindo{
     text-align: center;
-    font-size: 40px;
+    font-size: 50px;
     font-weight: 600;
-    margin-bottom: 30px;
+    /* margin-bottom: 30px; */
     color: #33404D;
-
 }
-.formBox{
+.formBoxLogin{
     width: 75%;
-    height: 70%;
+    height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+
+    /* border: 1px solid red; */
 }
-.formBox .group{
+.formBoxLogin .group{
     width: 80%;
     display: flex;
     align-items: start;
@@ -104,7 +114,7 @@ body{
     cursor: pointer;
     color: #666;
 }
-.formBox .group label{
+.formBoxLogin .group label{
     color: #33404D;
     font-weight: bold;
     font-size: 23px;
@@ -112,7 +122,7 @@ body{
     /* margin-bottom: 3px; */
 }
 
-.formBox .group input{
+.formBoxLogin .group input{
     width: 100%;
     height: 40px;
     border-radius: 10px;
@@ -126,10 +136,10 @@ body{
     width: 1.3rem;
     cursor: pointer;
 }
-.formBox .group input:hover{
+.formBoxLogin .group input:hover{
     border: 3px solid #3aa867;
 }
-.formBox .group input:focus{
+.formBoxLogin .group input:focus{
     border: 3px solid #3aa867;
 }
 .btnEntrar{
@@ -403,21 +413,24 @@ body{
     }
 
     /* fomulario */
-    .card{
+    .cardLogin{
         width: 100%;
         height: 100%;
         border-radius: 0 0 10px 10px;
         /* padding: 20px; */
     }
-    .title{
-        font-size: 18px;
-        margin-top: 30px;
+    .containerBemVindoLogin{
+        width: 100%;
+        height: auto;
     }
-    .formBox{
+    .titleBemVindo{
+        font-size: 20px;
+    }
+    .formBoxLogin{
         width: 100%;
         justify-content: normal;
     }
-    .formBox .group{
+    .formBoxLogin .group{
         width: 95%;
     }
     .user{
@@ -588,21 +601,24 @@ body{
     }
 
     /* fomulario */
-    .card{
+    .cardLogin{
         width: 100%;
         height: 70%;
         border-radius: 0 0 10px 10px;
         /* padding: 20px; */
     }
-    .title{
-        font-size: 20px;
-        margin-top: 30px;
+    .containerBemVindoLogin{
+        width: 100%;
+        height: auto;
     }
-    .formBox{
+    .titleBemVindo{
+        font-size: 25px;
+    }
+    .formBoxLogin{
         width: 100%;
         justify-content: normal;
     }
-    .formBox .group{
+    .formBoxLogin .group{
         width: 95%;
     }
     .user{
@@ -765,17 +781,20 @@ body{
     }
 
     /* fomulario */
-    .card{
+    .cardLogin{
         width: 100%;
         height: 100%;
         border-radius: 0 0 10px 10px;
         padding: 20px;
     }
-    .title{
-        font-size: 30px;
-        margin-top: 30px;
+    .containerBemVindoLogin{
+        width: 100%;
+        height: auto;
     }
-    .formBox{
+    .titleBemVindo{
+        font-size: 30px;
+    }
+    .formBoxLogin{
         width: 100%;
         justify-content: normal;
     }
@@ -884,7 +903,6 @@ body{
 
 @media (min-width: 601px) and (max-width: 970px){
 
-    
 
     .login{
         background-size: 40%;
@@ -893,12 +911,14 @@ body{
     .titlePass h1{
         font-size: 20px;
     }
-    .title{
-        font-size: 25px;
+    .containerBemVindoLogin{
+        width: 100%;
+        height: auto;
     }
-    .formBox{
-        width: 95%;
+    .titleBemVindo{
+        font-size: 20px;
     }
+
 
        /* animacao logo */
 
