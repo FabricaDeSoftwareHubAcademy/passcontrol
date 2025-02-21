@@ -19,12 +19,13 @@
     <link rel="stylesheet" href="../../../public/css/atendimento.css">
     <link rel="stylesheet" href="../../../public/modais/Modal Iniciar Intervalo/estilo.css">
     <link rel="stylesheet" href="../../../public/modais/Modal Confirmação de Presença/estilo.css">
-    <link rel="stylesheet" href="../../../public/modais/Modal Consultar Fila/estilo.css">
+    <!-- <link rel="stylesheet" href="../../../public/modais/Modal Confirmação Deslogar/estilo.css"> -->
 
     <!-- IMPORT DO JS -->
     <script src="../../../public/js/modal-teladelogin.js"></script>
     <script src="../../../public/js/modal-proxima-senha.js"></script>
-    <script src="../../../public/modais/Modal Consultar Fila/modal.js" defer></script>
+    <script src="../../../public/js/modal_conf_saida.js"></script>
+    <!-- <script src="../../../public/js/modal_saida_principal.js"></script> -->
 
     <link rel="shortcut icon" type="imagex/png" href="../../../public/img/Logo-Nota-Controlnt.ico">
 </head>
@@ -45,7 +46,7 @@
                             <li class="nome-usu">Nome do Usuário</li>
                             <li class="email-usu">funcionario123@fun.br</li>
                             <li><a href="../../../app/admin/view/adm-logado.php">Editar Informações</a></li>
-                            <li><a class="sair" href="../../../index.php">Sair</a></li>
+                            <li><a class="sair" id="exit">Sair</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -88,7 +89,7 @@
             </div>
         </nav>
         <div class="sair-navegacao">
-            <a class="botao-lateal-navegacao" href="../../../index.php">
+            <a class="botao-lateal-navegacao" href = "../../../index.php">
                 <img class="icone-menu-lateral" src="../../../public/img/icons/sair.svg" alt="ICONE SAIR">
                 <div class="texto-bott">Sair</div>
             </a>
@@ -304,6 +305,8 @@
     </section> 
     <main-tela-de-login></main-tela-de-login>
     <main-proxima-senha></main-proxima-senha>
+    <main-sair-sistema></main-sair-sistema>
+    <main-saida-principal></main-saida-principal>
 
     <!--MONITOR MODAL-->
     <div class="area-monitor-modal">
