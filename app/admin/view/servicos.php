@@ -198,6 +198,97 @@
                         </td>
                     </tr> 
                     <tr class="linha-tabela">
+                      <td>CM</td>
+                      <td>Conselho Municipal</td>
+                      <td class="coluna-editar ">
+                        <a class="colm-idit" href=""><img id="icone-editar" src="../../../public/img/icons/Group 2924.png" alt="Editar"></a></td>
+                        <td class="coluna-inativar">
+                            <div class="toggle-btn ativo"><div class="circulo"></div></div>
+                        </td>
+                    </tr> 
+                    <tr class="linha-tabela">
+                      <td>CM</td>
+                      <td>Conselho Municipal</td>
+                      <td class="coluna-editar ">
+                        <a class="colm-idit" href=""><img id="icone-editar" src="../../../public/img/icons/Group 2924.png" alt="Editar"></a></td>
+                        <td class="coluna-inativar">
+                            <div class="toggle-btn ativo"><div class="circulo"></div></div>
+                        </td>
+                    </tr> 
+                    <tr class="linha-tabela">
+                      <td>CM</td>
+                      <td>Conselho Municipal</td>
+                      <td class="coluna-editar ">
+                        <a class="colm-idit" href=""><img id="icone-editar" src="../../../public/img/icons/Group 2924.png" alt="Editar"></a></td>
+                        <td class="coluna-inativar">
+                            <div class="toggle-btn ativo"><div class="circulo"></div></div>
+                        </td>
+                    </tr> 
+                    <tr class="linha-tabela">
+                      <td>CM</td>
+                      <td>Conselho Municipal</td>
+                      <td class="coluna-editar ">
+                        <a class="colm-idit" href=""><img id="icone-editar" src="../../../public/img/icons/Group 2924.png" alt="Editar"></a></td>
+                        <td class="coluna-inativar">
+                            <div class="toggle-btn ativo"><div class="circulo"></div></div>
+                        </td>
+                    </tr> 
+                    <tr class="linha-tabela">
+                      <td>CM</td>
+                      <td>Conselho Municipal</td>
+                      <td class="coluna-editar ">
+                        <a class="colm-idit" href=""><img id="icone-editar" src="../../../public/img/icons/Group 2924.png" alt="Editar"></a></td>
+                        <td class="coluna-inativar">
+                            <div class="toggle-btn ativo"><div class="circulo"></div></div>
+                        </td>
+                    </tr> 
+                    <tr class="linha-tabela">
+                      <td>CM</td>
+                      <td>Conselho Municipal</td>
+                      <td class="coluna-editar ">
+                        <a class="colm-idit" href=""><img id="icone-editar" src="../../../public/img/icons/Group 2924.png" alt="Editar"></a></td>
+                        <td class="coluna-inativar">
+                            <div class="toggle-btn ativo"><div class="circulo"></div></div>
+                        </td>
+                    </tr> 
+                    <tr class="linha-tabela">
+                      <td>CM</td>
+                      <td>Conselho Municipal</td>
+                      <td class="coluna-editar ">
+                        <a class="colm-idit" href=""><img id="icone-editar" src="../../../public/img/icons/Group 2924.png" alt="Editar"></a></td>
+                        <td class="coluna-inativar">
+                            <div class="toggle-btn ativo"><div class="circulo"></div></div>
+                        </td>
+                    </tr> 
+                    <tr class="linha-tabela">
+                      <td>CM</td>
+                      <td>Conselho Municipal</td>
+                      <td class="coluna-editar ">
+                        <a class="colm-idit" href=""><img id="icone-editar" src="../../../public/img/icons/Group 2924.png" alt="Editar"></a></td>
+                        <td class="coluna-inativar">
+                            <div class="toggle-btn ativo"><div class="circulo"></div></div>
+                        </td>
+                    </tr> 
+                    <tr class="linha-tabela">
+                      <td>CM</td>
+                      <td>Conselho Municipal</td>
+                      <td class="coluna-editar ">
+                        <a class="colm-idit" href=""><img id="icone-editar" src="../../../public/img/icons/Group 2924.png" alt="Editar"></a></td>
+                        <td class="coluna-inativar">
+                            <div class="toggle-btn ativo"><div class="circulo"></div></div>
+                        </td>
+                    </tr> 
+                    <tr class="linha-tabela">
+                      <td>CM</td>
+                      <td>Conselho Municipal</td>
+                      <td class="coluna-editar ">
+                        <a class="colm-idit" href=""><img id="icone-editar" src="../../../public/img/icons/Group 2924.png" alt="Editar"></a></td>
+                        <td class="coluna-inativar">
+                            <div class="toggle-btn ativo"><div class="circulo"></div></div>
+                        </td>
+                    </tr> 
+                    
+                    <tr class="linha-tabela">
                         <td>CM</td>
                         <td>Conselho Municipal</td>
                         <td class="coluna-editar ">
