@@ -109,7 +109,7 @@
         <div class="area-tabela">
             <div class="sub-area-tabela">
                     <table class="tabela">
-                        <div class="tr-th-tabela">
+                        <div class="th-tabela">
                             <tr>
                                 <th>Nome</th>
                                 <th>Matricula</th>
