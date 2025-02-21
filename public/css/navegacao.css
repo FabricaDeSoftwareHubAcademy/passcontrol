@@ -79,72 +79,70 @@
     font-size: 3vh;
 }
 
+/* INFO DO USUARIO */
 .usu-nome{
     color: var(--cinza-control);
-    height: 100%;
-    min-width: 15%;  
+    height: 50%;
+    min-width: 15vw;  
 
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
     font-size: 17px;
     font-size: 0.8rem;
     /* font-size: 1vw; */
     text-align: center;
-    /* background-color: red; */
-}
-
-.dark-area{
-    height: 5vh;
-    width: 100%;
-}
-
-/* INFO USUARIO */
-.menu-usuario{
-    height: 100%;
     cursor: pointer;
-    /* background-color: red; */
+    background-color: lightblue;
 }
+/* .menu-usuario{
+    display: none;
+    cursor: pointer;
+} */
 .usu-detalhes{
     background-color: var(--cor-fundo);
     display: none;
-    position: absolute;
+    position: fixed;
     padding-top: 100px;
+    height: auto;
     width: auto;
-    padding: 20px;
+    min-width: 200px;
     text-decoration: none;
     align-content: center;
     align-items: center;
     justify-content: center;
+    top: 3%;
     right: 2%;
     border-radius: 10px;
     z-index: 10;
+    padding: 20px;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    box-shadow: 2px 5px 5px 2px rgba(0, 0, 0, 0.2);
+    gap: 15px;
+    cursor: auto;
 }
-
 .usu-detalhes img{
     border-radius: 100px;
     width: 150px;
 }
-
 .texto-usu{
     display: flex;
     flex-direction: column;
     align-content: center;
     justify-content: center;
 }
-
 .texto-usu .nome-usu{
     font-size: 26px;
     font-weight: 700;
 }
-
 .texto-usu .email-usu{
     display: flex;
     padding-top: 5px;
     font-size: 15px;
     font-weight: 500;
 }
-
 .texto-usu li a{
     display: flex;
     text-decoration: none;
@@ -152,19 +150,25 @@
     color: rgb(39, 75, 238);
     padding-top: 10px;
 }
-
 .texto-usu li .sair{
     color: var(--vermelho);
 }
-
-.menu-usuario:hover .usu-detalhes{
+/* .usu-nome:hover .usu-detalhes{
     display: flex;
-    flex-direction: column;
-    min-width: 200px;
-    align-content: center;
-    justify-content: center;
-    box-shadow: 2px 5px 5px 2px rgba(0, 0, 0, 0.2);
-    gap: 15px;
+} */
+.background-block{
+    display: flex;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: red;
+}
+
+.dark-area{
+    height: 5vh;
+    width: 100%;
 }
 
 /* MENU LATERAL */
@@ -378,8 +382,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 5vh;
+    margin-top: 3vh;
     width: 100%;
+    /* background-color: red; */
 }
 .sair-mobile .botao-lateral-navegacao-mobile{
     width: 50%;

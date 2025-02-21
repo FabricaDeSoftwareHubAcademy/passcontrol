@@ -322,34 +322,32 @@ input:focus {
         margin-top: 690px;
     }
 }
-
+@media screen and (max-width: 1876px){
+    .labeledit{
+        width: 111%;
+    }
+    .perfild{
+        width: 20%;
+    }
+}
 @media screen and (max-width: 1814px){
     .form-actions2{
         margin-top: 625px;
         
     }  
 }
-
 @media screen and (max-width: 1814px){
     .form-actions2{
         margin-right: 5%;
         
     }  
 }
-
-@media screen and (max-width: 1732px){
-    .labeledit{
-        width: auto;
-    }
-}
-
 @media screen and (max-width: 1605px){
     .column-2{
         left: -73%;
         top: 22px;  
     }
 }
-
 @media screen and (max-width: 1005px){
     .quadrado{
         scroll-behavior: smooth;

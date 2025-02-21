@@ -36,15 +36,15 @@ function renderPage(page) {
     // Adiciona os itens ao HTML
     pageItems.forEach(service => {
         const box = document.createElement("a");
-        box.href = "../view/tela_autoatendimentoPage2.html";
-        box.classList.add("box");
+        box.href = "../../usuario/view/tela_autoatendimentoPage2.php"; //destino do link
+        box.classList.add("box"); //css do .box
 
         box.innerHTML = `
             <img class="imagem-servico" src="${service.img}" alt="${service.title}">
             <h4>${service.title}</h4>
         `;
 
-        boxContainer.appendChild(box);
+        boxContainer.appendChild(box); //container com os .box adicionados
     });
 
     // Atualiza os botões da quantidade de páginas

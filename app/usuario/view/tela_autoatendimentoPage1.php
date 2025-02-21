@@ -33,10 +33,18 @@
             </div>
 
             <!-- controle da paginação -->
-            <div class="pagination-controls">
+
+            <!-- <div class="footer">
                 <button id="prevPage" disabled>Anterior</button>
-                <span id="pageIndicator">Página 1</span>
+                <button id="nextPage">Próxima</button>  
+            </div> -->
+
+            <div class="pagination-controls">
+
+                <button id="prevPage" disabled>Anterior</button>
+            
                 <button id="nextPage">Próximo</button>
+
             </div>
         </div>
     </main>

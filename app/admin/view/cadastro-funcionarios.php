@@ -86,7 +86,7 @@
             </a>
         </div>
     </div>
-
+    
     <!-- INICIO DA ÁREA ÚTIL DA PÁGINA -->
     <div class="area-info">
         <div class="header-area">

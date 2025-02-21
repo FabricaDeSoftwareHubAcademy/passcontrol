@@ -119,7 +119,7 @@
                       <td>IP</td>
                       <td>Iluminação Pública</td>
                       <td class="coluna-editar ">
-                        <a href=""><img id="icone-editar" src="../../../public/img/icons/Group 2924.png" alt="Editar"></a></td>
+                        <a class="colm-idit" href=""><img id="icone-editar" src="../../../public/img/icons/Group 2924.png" alt="Editar"></a></td>
                         <td class="coluna-inativar">
                             <div class="toggle-btn ativo"><div class="circulo"></div></div>
                         </td>
@@ -128,7 +128,7 @@
                       <td>IPTU</td>
                       <td>IPTU</td>
                       <td class="coluna-editar ">
-                        <a href=""><img id="icone-editar" src="../../../public/img/icons/Group 2924.png" alt="Editar"></a></td>
+                        <a class="colm-idit" href=""><img id="icone-editar" src="../../../public/img/icons/Group 2924.png" alt="Editar"></a></td>
                         <td class="coluna-inativar">
                             <div class="toggle-btn ativo"><div class="circulo"></div></div>
                         </td>
@@ -137,7 +137,7 @@
                         <td>IPTU</td>
                         <td>IPTU</td>
                         <td class="coluna-editar ">
-                          <a href=""><img id="icone-editar" src="../../../public/img/icons/Group 2924.png" alt="Editar"></a></td>
+                          <a class="colm-idit" href=""><img id="icone-editar" src="../../../public/img/icons/Group 2924.png" alt="Editar"></a></td>
                           <td class="coluna-inativar">
                               <div class="toggle-btn ativo"><div class="circulo"></div></div>
                           </td>
@@ -146,7 +146,7 @@
                         <td>IPTU</td>
                         <td>IPTU</td>
                         <td class="coluna-editar ">
-                          <a href=""><img id="icone-editar" src="../../../public/img/icons/Group 2924.png" alt="Editar"></a></td>
+                          <a class="colm-idit" href=""><img id="icone-editar" src="../../../public/img/icons/Group 2924.png" alt="Editar"></a></td>
                           <td class="coluna-inativar">
                               <div class="toggle-btn ativo"><div class="circulo"></div></div>
                           </td>
@@ -155,7 +155,7 @@
                         <td>IPTU</td>
                         <td>IPTU</td>
                         <td class="coluna-editar ">
-                          <a href=""><img id="icone-editar" src="../../../public/img/icons/Group 2924.png" alt="Editar"></a></td>
+                          <a class="colm-idit" href=""><img id="icone-editar" src="../../../public/img/icons/Group 2924.png" alt="Editar"></a></td>
                           <td class="coluna-inativar">
                               <div class="toggle-btn ativo"><div class="circulo"></div></div>
                           </td>
@@ -164,7 +164,7 @@
                         <td>IPTU</td>
                         <td>IPTU</td>
                         <td class="coluna-editar ">
-                          <a href=""><img id="icone-editar" src="../../../public/img/icons/Group 2924.png" alt="Editar"></a></td>
+                          <a class="colm-idit" href=""><img id="icone-editar" src="../../../public/img/icons/Group 2924.png" alt="Editar"></a></td>
                           <td class="coluna-inativar">
                               <div class="toggle-btn ativo"><div class="circulo"></div></div>
                           </td>
@@ -174,7 +174,7 @@
                       <td>LIC</td>
                       <td>Licenças</td>
                       <td class="coluna-editar ">
-                        <a href=""><img id="icone-editar" src="../../../public/img/icons/Group 2924.png" alt="Editar"></a></td>
+                        <a class="colm-idit" href=""><img id="icone-editar" src="../../../public/img/icons/Group 2924.png" alt="Editar"></a></td>
                         <td class="coluna-inativar">
                             <div class="toggle-btn ativo"><div class="circulo"></div></div>
                         </td>
@@ -183,7 +183,7 @@
                       <td>OUVID</td>
                       <td>Ouvidoria</td>
                       <td class="coluna-editar ">
-                        <a href=""><img id="icone-editar" src="../../../public/img/icons/Group 2924.png" alt="Editar"></a></td>
+                        <a class="colm-idit" href=""><img id="icone-editar" src="../../../public/img/icons/Group 2924.png" alt="Editar"></a></td>
                         <td class="coluna-inativar">
                             <div class="toggle-btn ativo"><div class="circulo"></div></div>
                         </td>
@@ -192,16 +192,107 @@
                       <td>CM</td>
                       <td>Conselho Municipal</td>
                       <td class="coluna-editar ">
-                        <a href=""><img id="icone-editar" src="../../../public/img/icons/Group 2924.png" alt="Editar"></a></td>
+                        <a class="colm-idit" href=""><img id="icone-editar" src="../../../public/img/icons/Group 2924.png" alt="Editar"></a></td>
                         <td class="coluna-inativar">
                             <div class="toggle-btn ativo"><div class="circulo"></div></div>
                         </td>
                     </tr> 
                     <tr class="linha-tabela">
+                      <td>CM</td>
+                      <td>Conselho Municipal</td>
+                      <td class="coluna-editar ">
+                        <a class="colm-idit" href=""><img id="icone-editar" src="../../../public/img/icons/Group 2924.png" alt="Editar"></a></td>
+                        <td class="coluna-inativar">
+                            <div class="toggle-btn ativo"><div class="circulo"></div></div>
+                        </td>
+                    </tr> 
+                    <tr class="linha-tabela">
+                      <td>CM</td>
+                      <td>Conselho Municipal</td>
+                      <td class="coluna-editar ">
+                        <a class="colm-idit" href=""><img id="icone-editar" src="../../../public/img/icons/Group 2924.png" alt="Editar"></a></td>
+                        <td class="coluna-inativar">
+                            <div class="toggle-btn ativo"><div class="circulo"></div></div>
+                        </td>
+                    </tr> 
+                    <tr class="linha-tabela">
+                      <td>CM</td>
+                      <td>Conselho Municipal</td>
+                      <td class="coluna-editar ">
+                        <a class="colm-idit" href=""><img id="icone-editar" src="../../../public/img/icons/Group 2924.png" alt="Editar"></a></td>
+                        <td class="coluna-inativar">
+                            <div class="toggle-btn ativo"><div class="circulo"></div></div>
+                        </td>
+                    </tr> 
+                    <tr class="linha-tabela">
+                      <td>CM</td>
+                      <td>Conselho Municipal</td>
+                      <td class="coluna-editar ">
+                        <a class="colm-idit" href=""><img id="icone-editar" src="../../../public/img/icons/Group 2924.png" alt="Editar"></a></td>
+                        <td class="coluna-inativar">
+                            <div class="toggle-btn ativo"><div class="circulo"></div></div>
+                        </td>
+                    </tr> 
+                    <tr class="linha-tabela">
+                      <td>CM</td>
+                      <td>Conselho Municipal</td>
+                      <td class="coluna-editar ">
+                        <a class="colm-idit" href=""><img id="icone-editar" src="../../../public/img/icons/Group 2924.png" alt="Editar"></a></td>
+                        <td class="coluna-inativar">
+                            <div class="toggle-btn ativo"><div class="circulo"></div></div>
+                        </td>
+                    </tr> 
+                    <tr class="linha-tabela">
+                      <td>CM</td>
+                      <td>Conselho Municipal</td>
+                      <td class="coluna-editar ">
+                        <a class="colm-idit" href=""><img id="icone-editar" src="../../../public/img/icons/Group 2924.png" alt="Editar"></a></td>
+                        <td class="coluna-inativar">
+                            <div class="toggle-btn ativo"><div class="circulo"></div></div>
+                        </td>
+                    </tr> 
+                    <tr class="linha-tabela">
+                      <td>CM</td>
+                      <td>Conselho Municipal</td>
+                      <td class="coluna-editar ">
+                        <a class="colm-idit" href=""><img id="icone-editar" src="../../../public/img/icons/Group 2924.png" alt="Editar"></a></td>
+                        <td class="coluna-inativar">
+                            <div class="toggle-btn ativo"><div class="circulo"></div></div>
+                        </td>
+                    </tr> 
+                    <tr class="linha-tabela">
+                      <td>CM</td>
+                      <td>Conselho Municipal</td>
+                      <td class="coluna-editar ">
+                        <a class="colm-idit" href=""><img id="icone-editar" src="../../../public/img/icons/Group 2924.png" alt="Editar"></a></td>
+                        <td class="coluna-inativar">
+                            <div class="toggle-btn ativo"><div class="circulo"></div></div>
+                        </td>
+                    </tr> 
+                    <tr class="linha-tabela">
+                      <td>CM</td>
+                      <td>Conselho Municipal</td>
+                      <td class="coluna-editar ">
+                        <a class="colm-idit" href=""><img id="icone-editar" src="../../../public/img/icons/Group 2924.png" alt="Editar"></a></td>
+                        <td class="coluna-inativar">
+                            <div class="toggle-btn ativo"><div class="circulo"></div></div>
+                        </td>
+                    </tr> 
+                    <tr class="linha-tabela">
+                      <td>CM</td>
+                      <td>Conselho Municipal</td>
+                      <td class="coluna-editar ">
+                        <a class="colm-idit" href=""><img id="icone-editar" src="../../../public/img/icons/Group 2924.png" alt="Editar"></a></td>
+                        <td class="coluna-inativar">
+                            <div class="toggle-btn ativo"><div class="circulo"></div></div>
+                        </td>
+                    </tr> 
+                    
+                    <tr class="linha-tabela">
                         <td>CM</td>
                         <td>Conselho Municipal</td>
                         <td class="coluna-editar ">
-                          <a href=""><img id="icone-editar" src="../../../public/img/icons/Group 2924.png" alt="Editar"></a></td>
+                          <a class="colm-idit" href=""><img id="icone-editar" src="../../../public/img/icons/Group 2924.png" alt="Editar"></a></td>
                           <td class="coluna-inativar">
                               <div class="toggle-btn ativo"><div class="circulo"></div></div>
                           </td>
@@ -211,7 +302,7 @@
               </div>
             </div>
             <div class="botoesVoltar-Cadastrar">
-                <button type="button" class="botao-voltar">Voltar</button>
+                <button type="button" class="botao-voltar" onclick="window.location.href='menuadm_servicos.php';">Voltar</button>
                 <button type="submit" class="botao-cadastro">Cadastrar</button>
             </div>
         </div>

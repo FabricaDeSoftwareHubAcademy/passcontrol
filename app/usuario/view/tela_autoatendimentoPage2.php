@@ -46,14 +46,14 @@
 
                 <div class="box-area">
 
-                    <a href="../../../app/usuario/view/tela_autoatendimentoPage3.html" class="box">
+                    <a href="../../../app/usuario/view/tela_autoatendimentoPage3.php" class="box">
                         <img class="imagem-servico" src="../../../public/img/icons/comum_img.svg" alt="Servico" id="img-servico">
                         <h4>COMUM</h4> 
                     </a>
 
                 
 
-                    <a href="../../../app/usuario/view/tela_autoatendimentoPage3.html" class="box">
+                    <a href="../../../app/usuario/view/tela_autoatendimentoPage3.php" class="box">
                         <div class="imagem-servico-container">
                             <img class="imagem-servico" src="../../../public/img/icons/idoso_pref.svg" alt="Servico" id="img-servico">
                             <img class="imagem-servico" src="../../../public/img/icons/gestante_pref.svg" alt="Servico" id="img-servico">
@@ -67,7 +67,7 @@
                 
                 <div class="footer">
                     <button class="button">
-                        <a href="../../usuario/view/tela_autoatendimentoPage1.html" class="btn-text">VOLTAR</a>
+                        <a href="../../usuario/view/tela_autoatendimentoPage1.php" class="btn-text">VOLTAR</a>
                     </button>   
                 </div>
 

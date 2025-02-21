@@ -71,7 +71,7 @@
   margin: 25px auto;
 }
 .tabela-responsiva-servico {
-  max-height: 370px;
+  max-height: 420px;
   overflow-y: auto;
   border: 1px solid #dddddd;
 }
@@ -105,7 +105,10 @@
   width: 20%;
   height: 30px;
 }
-
+.colm-idit{
+  display: flex;
+  justify-content: space-between;
+}
 .tabela-servicos th {
   background-color: var(--cinza-control);
   font-size: 16px;
@@ -135,7 +138,7 @@
 }
 .toggle-btn {
   width: 60px;
-  height: 21px;
+  height: 20px;
   background-color: #ffffff;
   border-radius: 10px;
   position: relative;
@@ -166,6 +169,7 @@
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s, transform 0.2s;
+  width: 7rem;
 }
 .botoesVoltar-Cadastrar{
   display: flex;
@@ -188,9 +192,6 @@
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }
 
-button:hover {
-  background-color: #455A64;
-}
 .tabela-wrapper::-webkit-scrollbar {
   width: 5px;
 }
@@ -198,56 +199,69 @@ button:hover {
   #servico {
     left: 8vh;
   }
-
-  #tela-branca {
-    width: 95%;
-    height: auto;
-  }
-
-  .linha-divisoria {
-    width: 95%;
-    margin-left: 2%;
+  #tela-branca-servico{
+    padding: 15px;
   }
   #buscar-servico{
     margin-left: 71%;
     width: 25%;
   }
-  
+
+  .tabela-servicos td, .cabecalho-tabela1 th{
+    padding: 3px;
+  }
+  .botao-voltar, .botao-cadastro{
+    width: 7rem;
+    padding: 7px 3px;
+  }
+  .botoesVoltar-Cadastrar{
+    margin-top: -12px;
+  }
+
 }
 
-@media screen and (max-width: 768px) {
+ @media screen and (max-width: 768px) and (max-height: 600px) {
   .topo-tela-servico{
     width: 100%;
-    /* border: 2px solid green; */
     font-size: 20px;
+    margin-top: 8px;
+    margin-bottom: 0%;
+  }
+  #buscar-servico{
+    width: 30%;
   }
   .campo-busca{
-    margin-bottom: -3.5%;
+    margin-bottom: -3%;
   }
-  #tela-branca {
-    width: 90%;
+  #tela-branca-servico {
+    height: 100%;
     padding: 10px;
   }
-  .linha-divisoria{
-    width: 93%;
+  .tabela-responsiva-servico{
+    height: 150px;
+  }
+  .tabela-servicos td, .cabecalho-tabela1 th{
+    padding: 3px;
   }
   #buscar-servico{
     margin-left: 61%;
     width: 35%;
     font-size: 12px;
   }
-
   .botoesVoltar-Cadastrar{
     margin-right: 5%;
   }
-
+  .botao-voltar, .botao-cadastro{
+      width: 7rem;
+      padding: 7px 3px;
+  }
   #icone-editar {
     width: 25px;
     height: 25px;
     cursor: pointer;
     margin-right: 20px;
   }
-}
+} 
 
 @media screen and (max-width: 560px) {
   #tela-branca {
@@ -255,23 +269,36 @@ button:hover {
     padding: 8px;
   }
   .campo-busca{
-    margin-bottom: -17%;
+    margin-bottom: -4%;
   }
   #buscar-servico{
     margin-left: 46%;
     width: 50%;
   }
+  .topo-tela-servico{
+    width: 99%;
+    /* border: 2px solid green; */
+    font-size: 20px;
+    margin: 20px -30px 20px 15px;
+  }
 }
 @media screen and (max-width: 480px) {
-  #servicos-cadastrados {
-    margin-left: 15%;
-
+  #buscar-servico{
+    margin-left: 0%;
+    width: 90%;
+  }
+  .topo-tela-servico{
+    margin: 70px -30px 20px 10px;
   }
   .campo-busca{
-    margin-bottom: -5%;
+    margin-bottom: -17%;
   }
-  .topo-tabela-servicos{
-    margin: 50px 0px 5px 20px;
+  .linha-divisoria-servico{
+    margin-top: 12.5%;
+    width: 90%;
+  }
+  .tabela-responsiva-servico {
+    max-height: 320px;
   }
   
 }
@@ -282,11 +309,18 @@ button:hover {
     padding: 5px;
   }
   #buscar-servico{
-    margin-left: 2%;
-    width: 100%;
+    margin-left: 0%;
+    width: 90%;
   }
   .campo-busca{
-    margin-bottom: -4%;
+    margin-bottom: -17%;
+  }
+  .linha-divisoria-servico{
+    margin-top: 10%;
+    width: 90%;
+  }
+  .tabela-responsiva-servico {
+    max-height: 340px;
   }
   .tabela-servicos th,
   .tabela-servicos td {
@@ -303,6 +337,7 @@ button:hover {
     flex-wrap: wrap;
   }
   .botao-cadastro, .botao-voltar{
-    font-size: 11px;
+    font-size: 12px;
+    /* width: 36%; */
   }
 }
