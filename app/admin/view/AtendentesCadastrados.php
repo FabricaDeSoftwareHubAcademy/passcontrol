@@ -383,7 +383,7 @@
             <button class="add-func" type="submit" onclick="window.location.href='../../../app/admin/view/telacadastro.php';">Novo Funcionario</button>
         </div>
     </section>
-    <main-atendentes-cadastrados></main-atendentes-cadastrados>
+    <!-- <main-atendentes-cadastrados></main-atendentes-cadastrados> -->
     
     <!--MONITOR MODAL-->
     <div class="area-monitor-modal">
