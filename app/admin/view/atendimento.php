@@ -125,7 +125,7 @@
                                 <div class="info-area-chamada">
                                     <div class="senha-area-chamada">
                                         <p>Senha:</p>
-                                        <p>CM 00005</p>
+                                        <p>CM005</p>
                                     </div>
                                     <div class="servico-area-chamada">
                                         <p>Serviço:</p>

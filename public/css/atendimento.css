@@ -404,6 +404,7 @@ th {
 
 } 
 td { 
+    font-size: 16px;
     border: 1px solid black; 
     padding: 9px; 
     text-align: left; 
@@ -424,7 +425,7 @@ thead, tbody tr {
 } 
 tbody { 
     display: block; 
-    max-height: 180px; 
+    max-height: 230px; 
     overflow-y: scroll;  
     position: relative; 
 
@@ -500,6 +501,9 @@ thead, tbody tr {
         font-size: 24px; 
         font-weight: 800;
     }
+    .meio-guiche-area-chamada{
+        margin-top: 3rem; 
+    }
     .meio-guiche-area-chamada h3{
         font-size: 26px;
     }
@@ -519,28 +523,31 @@ thead, tbody tr {
         display: flex;
         padding-left: 0.6rem;
     }
-    .nome-area-chamada p{
-        font-size: 20px;
-    }
     .senha-area-chamada{
         padding-left: 0.6rem;
     }
     .senha-area-chamada p{
         font-size: 18px;
     }
+    .nome-area-chamada p{
+        font-size: 19px;
+    }
     .servico-area-chamada p{
         font-size: 18px;
     }
     .texto-info-atendimento{    
-        font-size: 18px;
+        font-size: 22px;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
     .numero--atendimento{  
-        font-size: 20px; 
+        font-size: 24px; 
         font-weight: 800;
+    }
+    .meio-guiche-area-chamada{
+        margin-top: 2.4rem; 
     }
     .meio-guiche-area-chamada h3{
         font-size: 26px;
@@ -585,8 +592,14 @@ thead, tbody tr {
         font-size: 22px; 
         font-weight: 800;
     }
+    .meio-guiche-area-chamada{
+        margin-top: 2.4rem; 
+    }
     .meio-guiche-area-chamada h3{
         font-size: 25px;
+    }
+    td { 
+        font-size: 15px;
     }
 }
 @media screen and (min-width: 710px) and (max-width: 999px) {
@@ -670,8 +683,14 @@ thead, tbody tr {
     .tabela_atendimento-guiche-area-chamada{
         margin: 2vw;
     }
+    .meio-guiche-area-chamada{
+        margin-top: 1.6rem; 
+    }
     .meio-guiche-area-chamada h3{
         font-size: 24px;
+    }
+    td { 
+        font-size: 15px;
     }
 }
 @media screen and (min-width: 635px) and (max-width: 709px) {
@@ -742,10 +761,22 @@ thead, tbody tr {
     .area-botao-atendimento{
         display: flex;
         flex-direction: column;
+        display: flex;
+        gap: 0.5rem;
+        /* height: 42%; */
+    }
+    .area-botao--guiche-area-chamada{
+        gap: 0.4rem;
+        margin-top: 0.2rem;
+        height: 32vh;
+    }
+    .senhas-na-fila-atendimento, .senhas-na-fila-atendimento-vermelho{
+        height: 85%;
+        /* background-color: #3AA867; */
     }
     .botao-proxima-senha-atendimento, .botao-encerrar-atendimento,.botao-consultar-fila-atendimento, .botao-intervalo-atendimento {
         width: 100%;
-        height: 4.5rem;
+        height: 4.2rem;
     }
     .info-atendimento-inicio {
         height: 40%;
@@ -753,17 +784,29 @@ thead, tbody tr {
     .tabela_atendimento-guiche-area-chamada{
         margin: 2.5vw;
     }
+    .meio-guiche-area-chamada{
+        margin-top: 1.2rem; 
+    }
     .meio-guiche-area-chamada h3{
         font-size: 24px;
     }
+    td { 
+        font-size: 14.5px;
+    }
 }
 @media screen and (min-width: 535px) and (max-width: 634px) {
+    .area-chamada-atendimento{
+        margin-top: 8vh;
+    }
     .texto-botao-atendimento{
         font-size: 14px;
         flex-direction: row;
         gap: 0px;
         width: 94%;
         padding: 0%;
+    }
+    .atendimento-atual-atendimento{
+        height: 18vh;
     }
     .area-botao-atendimento{
         display: flex;
@@ -825,10 +868,22 @@ thead, tbody tr {
     .area-botao-atendimento{
         display: flex;
         flex-direction: column;
+        display: flex;
+        gap: 0.5rem;
+        /* height: 42%; */
+    }
+    .area-botao--guiche-area-chamada{
+        gap: 0.4rem;
+        margin-top: 0.2rem;
+        height: 32vh;
+    }
+    .senhas-na-fila-atendimento, .senhas-na-fila-atendimento-vermelho{
+        height: 85%;
+        /* background-color: #3AA867; */
     }
     .botao-proxima-senha-atendimento, .botao-encerrar-atendimento,.botao-consultar-fila-atendimento, .botao-intervalo-atendimento {
         width: 100%;
-        height: 4.5rem;
+        height: 4rem;
     }
     .botao-proxima-senha-atendimento h4, .botao-encerrar-atendimento h4,.botao-consultar-fila-atendimento h4, .botao-intervalo-atendimento h4 {
         width: 70%;
@@ -846,11 +901,20 @@ thead, tbody tr {
     .tabela_atendimento-guiche-area-chamada{
         margin: 2.8vw;
     }
+    .meio-guiche-area-chamada{
+        margin-top: 0rem; 
+    }
     .meio-guiche-area-chamada h3{
         font-size: 22px;
     }
+    td { 
+        font-size: 14.5px;
+    }
 }
-@media screen and (min-width: 415px) and (max-width: 534px) {
+@media screen and (min-width: 435px) and (max-width: 534px) {
+    .area-chamada-atendimento{
+        margin-top: 4vh;
+    }
     .texto-botao-atendimento{
         font-size: 15px;
         flex-direction: row;
@@ -864,9 +928,23 @@ thead, tbody tr {
     .vermelho-botao{
         color: rgba(255, 0, 0, 0.774);
     }
+    .nome-tela-atendimento{
+        margin: 12px;
+    }
+    .pessoa-tela-atendimento{
+        margin-top: 0px;
+    }
+    .atendimento-atual-atendimento{
+        height: 15vh;
+    }
     .area-botao-atendimento{
         display: flex;
-        gap: 1rem;
+        gap: 0.4rem;
+        height: 40%;
+    }
+    .area-botao--guiche-area-chamada{
+        gap: 0.4rem;
+        margin-top: 0.2rem;
     }
     .info-area-chamada{
         display: flex;
@@ -894,6 +972,7 @@ thead, tbody tr {
         display: flex;
         padding-left: 0.5rem;
         gap: 0rem;
+        margin: 0px;
         flex-direction: column;
     }
     .nome-area-chamada p{
@@ -928,7 +1007,7 @@ thead, tbody tr {
         height: 4.5rem;
     }
     .info-atendimento-inicio {
-        height: 40%;
+        height: 30%;
     }
     .img-proxima-senha-atendimento, .img-encerrar-atendimento-tela, .img-consultar-fila-atendimento, .img-intervalo-atendimento{
         display: none;
@@ -939,9 +1018,24 @@ thead, tbody tr {
     .meio-guiche-area-chamada h3{
         font-size: 20px;
     }
+    .fundo-guiche-area-chamada{
+        margin-top: 1.5rem; 
+    }
+    .meio-guiche-area-chamada{
+        margin-top: 0rem; 
+    }
+    .meio-guiche-area-chamada h3{
+        font-size: 20px;
+    }
+    td { 
+        font-size: 14.5px;
+    }
 }
 
-@media screen and (min-width: 320px) and (max-width: 414px) {
+@media screen and (min-width: 200px) and (max-width: 434px) {
+    .area-chamada-atendimento{
+        margin-top: 8vh;
+    }
     .texto-botao-atendimento{
         font-size: 12px;
         flex-direction: row;
@@ -954,6 +1048,15 @@ thead, tbody tr {
     }
     .vermelho-botao{
         color: rgba(255, 0, 0, 0.774);
+    }
+    .nome-tela-atendimento{
+        margin: 5px;
+    }
+    .pessoa-tela-atendimento{
+        margin-top: 0px;
+    }
+    .atendimento-atual-atendimento{
+        height: 16vh;
     }
     .area-botao-atendimento{
         display: flex;
@@ -990,6 +1093,7 @@ thead, tbody tr {
         display: flex;
         padding-left: 0.5rem;
         gap: 0rem;
+        margin: 0px;
         flex-direction: column;
     }
     .nome-area-chamada p{
@@ -997,6 +1101,7 @@ thead, tbody tr {
     }
     .informacoes-area-chamada{
         justify-content: space-between;
+        height: 96%;
     }
     .senha-area-chamada{
         display: none;
@@ -1038,9 +1143,12 @@ thead, tbody tr {
         margin-top: 1.5rem; 
     }
     .meio-guiche-area-chamada{
-        margin-top: 1.6rem; 
+        margin-top: 1rem; 
     }
     .meio-guiche-area-chamada h3{
-        font-size: 18px;
+        font-size: 20px;
+    }
+    td { 
+        font-size: 14px;
     }
 }
