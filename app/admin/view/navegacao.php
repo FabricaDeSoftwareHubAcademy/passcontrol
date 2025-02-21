@@ -3,10 +3,8 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
-        <!-- TROCA TÍTULO QUANDO FOR UTILIZAR -->
-        <title>PassControl</title> 
-        
+
+        <title>PassControl</title>         
         
         <!-- IMPORT DA FONTE -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,32 +24,30 @@
 </head>
 <body class="control-body-navegacao">
     <header class="cabeca-navegacao-control">
-        <nav class="nav-cabeca">
+        <div class="nav-cabeca">
             <div class="logo-control">
                 <img src="../../../public/img/icons/logo control.svg" alt="LOGOCONTROL" id="img-logo">
+                <h1 class="titulo-projeto">PassControl</h1>
             </div>
-            <H3>PassControl</H3>
-            <div class="usu-nome">                
-                Nome do Usuário
-                <!-- <p class="usu-nome">Nome do Usuário</p> -->
-                <!-- INFO DO USUARIO -->
-                <!-- <div class="menu-usuario"> -->
-                    <nav class="usu-detalhes"> 
-                        <img src="../../../public/img/icons/image 33.svg" alt="">
-                        <ul class="texto-usu">
-                            <li class="nome-usu">Nome do Usuário</li>
-                            <li class="email-usu">funcionario123@fun.br</li>
-                            <li><a href="../../../app/admin/view/adm-logado.php">Editar Informações</a></li>
-                            <li><a id="ACESSO-A0-MODAL-DE-ALTERACAO-DE-SENHA">Alterar Senha</a></li>
-                            <li><a class="sair" href="../../../index.php">Sair</a></li>
-                        </ul>
-                    </nav>
-                <!-- </div> -->
-            </div>
-        </nav>
+            <p class="usu-nome">Michael Paulo dos Anjos Ferreira</p>
+        </div>
         <div class="dark-area"></div>
     </header>
 
+    <!-- INFO DO USUARIO -->
+    <div class="menu-usuario">
+        <img class="icone-usuario" src="../../../public/img/icons/image 33.svg" alt="">
+        <nav class="usu-detalhes"> 
+            <ul class="texto-usu">
+                <li class="nome-usu">Nome do Usuário</li>
+                <li class="email-usu">funcionario123@fun.br</li>
+                <li><a href="../../../app/admin/view/adm-logado.php">Editar Informações</a></li>
+                <li><a id="ACESSO-A0-MODAL-DE-ALTERACAO-DE-SENHA">Alterar Senha</a></li>
+                <li><a class="sair" href="../../../index.php">Sair</a></li>
+            </ul>
+        </nav>
+    </div>
+    
     <!-- MENU LATERAL -->
 
     <div class="area-lateral-navegacao">

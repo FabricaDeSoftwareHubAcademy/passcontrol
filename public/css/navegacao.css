@@ -54,8 +54,10 @@
     height: 10vh;
     display: flex;
     flex-direction: row;
-    align-content: space-evenly;
     align-items: center;
+    justify-content: space-between;
+    padding-left: 1vh;
+    padding-right: 2vh;
 }
 
 .logo-control{
@@ -63,6 +65,11 @@
     width: fit-content;
     padding: 2px;
     padding-left: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2vh;
 }
 
 #img-logo{
@@ -70,63 +77,84 @@
     width: 100%;
 }
 
-.nav-cabeca H3{
-    color: var(--cinza-control);
-    width: 80%;
-    padding-left: 20px;
+.titulo-projeto{
     display: flex;
     align-items: center;
+    width: 80%;
     font-size: 3vh;
+    color: var(--cinza-control);
 }
 
 /* INFO DO USUARIO */
 .usu-nome{
     color: var(--cinza-control);
-    height: 50%;
+    height: auto;
     min-width: 15vw;  
-
+    max-width: 30vw;
+    
+    border-radius: 5px;
+    font-weight: 500;
+    
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 17px;
-    font-size: 0.8rem;
-    /* font-size: 1vw; */
+    font-size: 0.85rem;
     text-align: center;
     cursor: pointer;
-    background-color: lightblue;
+    padding: 2px;
 }
-/* .menu-usuario{
-    display: none;
-    cursor: pointer;
-} */
-.usu-detalhes{
+.usu-nome:hover{
+    background-color: rgba(0, 0, 0, 0.3);
+}
+.menu-usuario{
+    z-index: 10;
+
+    min-height: 15vh;
+    min-width: 15vw;
+
+    position:absolute;
+    top: 4vh;
+    right: 2vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    
+    gap: 1vw;
+    padding: 5px;
+    background-color: var(--cor-fundo);
+    box-shadow: 2px 5px 5px 2px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+
+    /* background-color: palevioletred; */
+}
+.icone-usuario{
+    border-radius: 100px;
+    width: 50%;
+}
+/* .usu-detalhes{
     background-color: var(--cor-fundo);
     display: none;
-    position: fixed;
+    position: absolute;
     padding-top: 100px;
     height: auto;
     width: auto;
-    min-width: 200px;
+    min-width: 15vw;
     text-decoration: none;
     align-content: center;
     align-items: center;
     justify-content: center;
     top: 3%;
-    right: 2%;
     border-radius: 10px;
     z-index: 10;
     padding: 20px;
     flex-direction: column;
     align-content: center;
     justify-content: center;
-    box-shadow: 2px 5px 5px 2px rgba(0, 0, 0, 0.2);
     gap: 15px;
     cursor: auto;
-}
-.usu-detalhes img{
-    border-radius: 100px;
-    width: 150px;
-}
+} */
 .texto-usu{
     display: flex;
     flex-direction: column;
