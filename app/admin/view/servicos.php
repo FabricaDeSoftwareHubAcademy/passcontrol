@@ -302,7 +302,7 @@
               </div>
             </div>
             <div class="botoesVoltar-Cadastrar">
-                <button type="button" class="botao-voltar">Voltar</button>
+                <button type="button" class="botao-voltar" onclick="window.location.href='menuadm_servicos.php';">Voltar</button>
                 <button type="submit" class="botao-cadastro">Cadastrar</button>
             </div>
         </div>
