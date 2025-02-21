@@ -15,12 +15,12 @@
         
         <!-- IMPORT DO CSS -->
         <link rel="stylesheet" href="../../../public/css/AtendentesCadastrados.css">
-        <link rel="stylesheet" href="../../../public/modais/Modal Inativação Usuário/estilo.css">
-        <link rel="stylesheet" href="../../../public/modais/Modal Ativação Usuário/estilo.css">
+        <!-- <link rel="stylesheet" href="../../../public/modais/Modal Inativação Usuário/estilo.css"> -->
+        <!-- <link rel="stylesheet" href="../../../public/modais/Modal Ativação Usuário/estilo.css"> -->
 
         <!-- IMPORT DO JS -->
-        <script src="../../../public/js/navegacao-menu-lateral-teste.js" defer></script>
-        <script src="../../../public/js/modal-atendentes-cadastrados.js"></script>
+        <!-- <script src="../../../public/js/navegacao-menu-lateral-teste.js" defer></script> -->
+        <!-- <script src="../../../public/js/modal-atendentes-cadastrados.js"></script> -->
 
         <link rel="shortcut icon" type="imagex/png" href="../../../public/img/Logo-Nota-Controlnt.ico">
 
