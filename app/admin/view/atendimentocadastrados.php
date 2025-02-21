@@ -116,6 +116,7 @@
                     <!-- Tabela de pontos de atendimento -->
                     <div class="tabela">
                         <section class="menu-tabela">
+                            <div class="tabela-container">
                             <table class="tabela-3x3">
                                 <tr>
                                     <th>Nome do Ponto de Atendimento</th>
@@ -173,7 +174,7 @@
                                 </tr>
                                 <tr>
                                     <td>Guichê</td>
-                                    <td>1</td>
+                                    <td>4</td>
                                     <td class="actions">
                                         <!-- Botão de edição -->
                                         <a href=""> <!--Tirei para implementar o modal: editar_pont_de_atendimento.php-->
@@ -189,7 +190,7 @@
                                 </tr>
                                   <tr>
                                     <td>Guichê</td>
-                                    <td>1</td>
+                                    <td>5</td>
                                     <td class="actions">
                                         <!-- Botão de edição -->
                                         <a href=""> <!--Tirei para implementar o modal: editar_pont_de_atendimento.php-->
@@ -205,7 +206,7 @@
                                 </tr>
                                 <tr>
                                     <td>Guichê</td>
-                                    <td>1</td>
+                                    <td>6</td>
                                     <td class="actions">
                                         <!-- Botão de edição -->
                                         <a href=""> <!--Tirei para implementar o modal: editar_pont_de_atendimento.php-->
@@ -221,7 +222,7 @@
                                 </tr>
                                   <tr>
                                     <td>Guichê</td>
-                                    <td>1</td>
+                                    <td>7</td>
                                     <td class="actions">
                                         <!-- Botão de edição -->
                                         <a href=""> <!--Tirei para implementar o modal: editar_pont_de_atendimento.php-->
@@ -237,7 +238,7 @@
                                 </tr>
                                   <tr>
                                     <td>Guichê</td>
-                                    <td>1</td>
+                                    <td>8</td>
                                     <td class="actions">
                                         <!-- Botão de edição -->
                                         <a href=""> <!--Tirei para implementar o modal: editar_pont_de_atendimento.php-->
@@ -253,7 +254,7 @@
                                 </tr>
                                   <tr>
                                     <td>Guichê</td>
-                                    <td>1</td>
+                                    <td>9</td>
                                     <td class="actions">
                                         <!-- Botão de edição -->
                                         <a href=""> <!--Tirei para implementar o modal: editar_pont_de_atendimento.php-->
@@ -268,7 +269,7 @@
                                     </td> 
                                 </tr>  <tr>
                                     <td>Guichê</td>
-                                    <td>1</td>
+                                    <td>10</td>
                                     <td class="actions">
                                         <!-- Botão de edição -->
                                         <a href=""> <!--Tirei para implementar o modal: editar_pont_de_atendimento.php-->
@@ -284,7 +285,7 @@
                                 </tr>
                                 <tr>
                                     <td>Guichê</td>
-                                    <td>1</td>
+                                    <td>11</td>
                                     <td class="actions">
                                         <!-- Botão de edição -->
                                         <a href=""> <!--Tirei para implementar o modal: editar_pont_de_atendimento.php-->
@@ -300,7 +301,7 @@
                                 </tr>
                                 <tr>
                                     <td>Guichê</td>
-                                    <td>1</td>
+                                    <td>12</td>
                                     <td class="actions">
                                         <!-- Botão de edição -->
                                         <a href=""> <!--Tirei para implementar o modal: editar_pont_de_atendimento.php-->
@@ -317,7 +318,55 @@
 
                                   <tr>
                                     <td>Guichê</td>
-                                    <td>1</td>
+                                    <td>13</td>
+                                    <td class="actions">
+                                        <!-- Botão de edição -->
+                                        <a href=""> <!--Tirei para implementar o modal: editar_pont_de_atendimento.html-->
+                                            <img src="../../../public/img/icons/editar.png" alt="Editar">
+                                        </a>
+                                    </td> 
+                                    <td>
+                                        <!-- Botão de ativar/desativar -->
+                                        <div class="toggle-btn active">
+                                            <div class="circle"></div>
+                                        </div>
+                                    </td> 
+                                </tr>
+                                <tr>
+                                    <td>Guichê</td>
+                                    <td>14</td>
+                                    <td class="actions">
+                                        <!-- Botão de edição -->
+                                        <a href=""> <!--Tirei para implementar o modal: editar_pont_de_atendimento.html-->
+                                            <img src="../../../public/img/icons/editar.png" alt="Editar">
+                                        </a>
+                                    </td> 
+                                    <td>
+                                        <!-- Botão de ativar/desativar -->
+                                        <div class="toggle-btn active">
+                                            <div class="circle"></div>
+                                        </div>
+                                    </td> 
+                                </tr>
+                                <tr>
+                                    <td>Guichê</td>
+                                    <td>15</td>
+                                    <td class="actions">
+                                        <!-- Botão de edição -->
+                                        <a href=""> <!--Tirei para implementar o modal: editar_pont_de_atendimento.html-->
+                                            <img src="../../../public/img/icons/editar.png" alt="Editar">
+                                        </a>
+                                    </td> 
+                                    <td>
+                                        <!-- Botão de ativar/desativar -->
+                                        <div class="toggle-btn active">
+                                            <div class="circle"></div>
+                                        </div>
+                                    </td> 
+                                </tr>
+                                <tr>
+                                    <td>Guichê</td>
+                                    <td>16</td>
                                     <td class="actions">
                                         <!-- Botão de edição -->
                                         <a href=""> <!--Tirei para implementar o modal: editar_pont_de_atendimento.php-->
@@ -404,6 +453,7 @@
                             </a>
                         </section>
                     </div>
+                </div>
                 </div>
             
                 <script>
