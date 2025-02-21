@@ -16,11 +16,12 @@
     <!-- IMPORT DO CSS -->
     <link rel="stylesheet" href="../../../public/css/navegacao.css">
     <link rel="stylesheet" href="../../../public/css/edit_cadastro.css">
-
     <link rel="stylesheet" href="../../../public/modais/Modal Confirmação dos Dados Registrados/estilo.css">
-    <link rel="stylesheet" href="../../../public/modais/Modal Confirmação dos Dados/estilo.css">
 
     <link rel="shortcut icon" type="imagex/png" href="../../../public/img/Logo-Nota-Controlnt.ico">
+
+    <!-- IMPORT DO JS -->
+    <script src="../../../public/js/modal_salvar_cadastro.js"></script>
 
 </head>
 <body class="control-body-navegacao">
@@ -173,8 +174,9 @@
         </div>
         <div class="form-actions2">
             <button type="button" class="botao_volto" onclick="window.location.href='javascript:history.back()';">Voltar</button>
-            <button type="submit" class="botao_salvo open">Salvar</button>
+            <button type="submit" class="botao_salvo open" id="save_sucess">Salvar</button>
         </div>
+        <main-salvar-cad></main-salvar-cad>
     </section>
     
     <!--MONITOR MODAL-->
