@@ -59,7 +59,7 @@
   position: relative;
   bottom: -0.625;
 }
-.area-info .div-botao-info button{
+.area-info .div-botao-info .add-func{
   width: 90px;
   height: 40px;
   background-color: var(--cinza-control);
@@ -72,7 +72,7 @@
   font-size: 12px;
 }
 
-.area-info .div-botao-info button:hover {
+.area-info .div-botao-info .add-func:hover {
   text-decoration: none;
   color: var(--verde-control);
   filter: drop-shadow(4px 4px 2px gray);
