@@ -368,7 +368,7 @@
     background-color: rgb(255, 255, 255,0.5); 
     gap: 15px; 
     margin-top: 2rem; 
-    overflow-x: auto; 
+    /* overflow-x: auto;  */
     display: flex; 
     display: block; 
     justify-content: left; 
