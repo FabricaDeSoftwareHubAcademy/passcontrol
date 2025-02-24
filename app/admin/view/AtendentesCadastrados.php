@@ -19,7 +19,7 @@
         <link rel="stylesheet" href="../../../public/modais/Modal Ativação Usuário/estilo.css">
 
         <!-- IMPORT DO JS -->
-        <script src="../../../public/js/modal-atendentes-cadastrados.js"></script>
+        <script src="../../../public/js/modal-atendentes-cadastrados.js" defer></script>
 
         <link rel="shortcut icon" type="imagex/png" href="../../../public/img/Logo-Nota-Controlnt.ico">
 
@@ -46,7 +46,6 @@
         <div class="area-tabela">
             <div class="sub-area-tabela">
                     <table class="tabela">
-                        <div class="th-tabela">
                             <tr>
                                 <th>Nome</th>
                                 <th>Matricula</th>
@@ -55,15 +54,13 @@
                                 <th>Editar</th>
                                 <th>Ativar/Desativar</th>
                             </tr>
-                        </div>
-                        <div class="sub-sub-area-tabela">
                             <tr>
                                 <td>Guilherme F. Machado</td>
                                 <td>guilermeaxe@gmail.com</td>
                                 <td>Administrador</td>
                                 <td>Nota Fiscal</td>
                                 <td>
-                                    <div class="editar"><a href=""><img src="/public/img/icons/Group 2924.png" alt=""></a></div>
+                                    <div class="editar"><a href=""><img src="../../../public/img/icons/Group 2924.png" alt=""></a></div>
                                 </td>
                                 <td>
                                     <div class="ativarswitch"><label class="switch">
@@ -78,7 +75,7 @@
                                 <td>Atendente</td>
                                 <td>IPTU</td>
                                 <td>
-                                    <div class="editar"><a href=""><img src="/public/img/icons/Group 2924.png" alt=""></a></div>
+                                    <div class="editar"><a href=""><img src="../../../public/img/icons/Group 2924.png" alt=""></a></div>
                                 </td>
                                 <td>
                                     <div class="ativarswitch"><label class="switch">
@@ -93,7 +90,7 @@
                                 <td>Atendente</td>
                                 <td>IPTU</td>
                                 <td>
-                                    <div class="editar"><a href=""><img src="/public/img/icons/Group 2924.png" alt=""></a></div>
+                                    <div class="editar"><a href=""><img src="../../../public/img/icons/Group 2924.png" alt=""></a></div>
                                 </td>
                                 <td>
                                     <div class="ativarswitch"><label class="switch">
@@ -108,7 +105,7 @@
                                 <td>Atendente</td>
                                 <td>IPTU</td>
                                 <td>
-                                    <div class="editar"><a href=""><img src="/public/img/icons/Group 2924.png" alt=""></a></div>
+                                    <div class="editar"><a href=""><img src="../../../public/img/icons/Group 2924.png" alt=""></a></div>
                                 </td>
                                 <td>
                                     <div class="ativarswitch"><label class="switch">
@@ -123,7 +120,7 @@
                                 <td>Atendente</td>
                                 <td>IPTU</td>
                                 <td>
-                                    <div class="editar"><a href=""><img src="/public/img/icons/Group 2924.png" alt=""></a></div>
+                                    <div class="editar"><a href=""><img src="../../../public/img/icons/Group 2924.png" alt=""></a></div>
                                 </td>
                                 <td>
                                     <div class="ativarswitch"><label class="switch">
@@ -138,7 +135,7 @@
                                 <td>Atendente</td>
                                 <td>IPTU</td>
                                 <td>
-                                    <div class="editar"><a href=""><img src="/public/img/icons/Group 2924.png" alt=""></a></div>
+                                    <div class="editar"><a href=""><img src="../../../public/img/icons/Group 2924.png" alt=""></a></div>
                                 </td>
                                 <td>
                                     <div class="ativarswitch"><label class="switch">
@@ -153,7 +150,7 @@
                                 <td>Atendente</td>
                                 <td>IPTU</td>
                                 <td>
-                                    <div class="editar"><a href=""><img src="/public/img/icons/Group 2924.png" alt=""></a></div>
+                                    <div class="editar"><a href=""><img src="../../../public/img/icons/Group 2924.png" alt=""></a></div>
                                 </td>
                                 <td>
                                     <div class="ativarswitch"><label class="switch">
@@ -168,7 +165,7 @@
                                 <td>Atendente</td>
                                 <td>IPTU</td>
                                 <td>
-                                    <div class="editar"><a href=""><img src="/public/img/icons/Group 2924.png" alt=""></a></div>
+                                    <div class="editar"><a href=""><img src="../../../public/img/icons/Group 2924.png" alt=""></a></div>
                                 </td>
                                 <td>
                                     <div class="ativarswitch"><label class="switch">
@@ -183,7 +180,7 @@
                                 <td>Atendente</td>
                                 <td>IPTU</td>
                                 <td>
-                                    <div class="editar"><a href=""><img src="/public/img/icons/Group 2924.png" alt=""></a></div>
+                                    <div class="editar"><a href=""><img src="../../../public/img/icons/Group 2924.png" alt=""></a></div>
                                 </td>
                                 <td>
                                     <div class="ativarswitch"><label class="switch">
@@ -198,7 +195,7 @@
                                 <td>Atendente</td>
                                 <td>IPTU</td>
                                 <td>
-                                    <div class="editar"><a href=""><img src="/public/img/icons/Group 2924.png" alt=""></a></div>
+                                    <div class="editar"><a href=""><img src="../../../public/img/icons/Group 2924.png" alt=""></a></div>
                                 </td>
                                 <td>
                                     <div class="ativarswitch"><label class="switch">
@@ -213,7 +210,7 @@
                                 <td>Atendente</td>
                                 <td>IPTU</td>
                                 <td>
-                                    <div class="editar"><a href=""><img src="/public/img/icons/Group 2924.png" alt=""></a></div>
+                                    <div class="editar"><a href=""><img src="../../../public/img/icons/Group 2924.png" alt=""></a></div>
                                 </td>
                                 <td>
                                     <div class="ativarswitch"><label class="switch">
@@ -228,7 +225,7 @@
                                 <td>Atendente</td>
                                 <td>IPTU</td>
                                 <td>
-                                    <div class="editar"><a href=""><img src="/public/img/icons/Group 2924.png" alt=""></a></div>
+                                    <div class="editar"><a href=""><img src="../../../public/img/icons/Group 2924.png" alt=""></a></div>
                                 </td>
                                 <td>
                                     <div class="ativarswitch"><label class="switch">
@@ -243,7 +240,7 @@
                                 <td>Atendente</td>
                                 <td>IPTU</td>
                                 <td>
-                                    <div class="editar"><a href=""><img src="/public/img/icons/Group 2924.png" alt=""></a></div>
+                                    <div class="editar"><a href=""><img src="../../../public/img/icons/Group 2924.png" alt=""></a></div>
                                 </td>
                                 <td>
                                     <div class="ativarswitch"><label class="switch">
@@ -258,7 +255,7 @@
                                 <td>Atendente</td>
                                 <td>IPTU</td>
                                 <td>
-                                    <div class="editar"><a href=""><img src="/public/img/icons/Group 2924.png" alt=""></a></div>
+                                    <div class="editar"><a href=""><img src="../../../public/img/icons/Group 2924.png" alt=""></a></div>
                                 </td>
                                 <td>
                                     <div class="ativarswitch"><label class="switch">
@@ -273,7 +270,7 @@
                                 <td>Atendente</td>
                                 <td>IPTU</td>
                                 <td>
-                                    <div class="editar"><a href=""><img src="/public/img/icons/Group 2924.png" alt=""></a></div>
+                                    <div class="editar"><a href=""><img src="../../../public/img/icons/Group 2924.png" alt=""></a></div>
                                 </td>
                                 <td>
                                     <div class="ativarswitch"><label class="switch">
@@ -288,7 +285,7 @@
                                 <td>Atendente</td>
                                 <td>IPTU</td>
                                 <td>
-                                    <div class="editar"><a href=""><img src="/public/img/icons/Group 2924.png" alt=""></a></div>
+                                    <div class="editar"><a href=""><img src="../../../public/img/icons/Group 2924.png" alt=""></a></div>
                                 </td>
                                 <td>
                                     <div class="ativarswitch"><label class="switch">
@@ -303,7 +300,7 @@
                                 <td>Atendente</td>
                                 <td>IPTU</td>
                                 <td>
-                                    <div class="editar"><a href=""><img src="/public/img/icons/Group 2924.png" alt=""></a></div>
+                                    <div class="editar"><a href=""><img src="../../../public/img/icons/Group 2924.png" alt=""></a></div>
                                 </td>
                                 <td>
                                     <div class="ativarswitch"><label class="switch">
@@ -312,7 +309,7 @@
                                     </label></div>
                                 </td>
                             </tr>
-                        </div>    
+                       
                     </table>
             </div>
         </div>

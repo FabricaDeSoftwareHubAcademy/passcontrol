@@ -58,7 +58,7 @@
                             <div class="informacoes-area-chamada">
                                 <div class="nome-area-chamada">
                                     <p class="nome-tela-atendimento">Nome:</p>
-                                    <p class="pessoa-tela-atendimento">Juliana Barbosa Martins Nogueira Gomes</p>
+                                    <p class="pessoa-tela-atendimento">Juliana Barbosa Martins Gomes</p>
                                 </div>
                                 <div class="info-area-chamada">
                                     <div class="senha-area-chamada">
