@@ -34,11 +34,6 @@
 
             <!-- controle da paginação -->
 
-            <!-- <div class="footer">
-                <button id="prevPage" disabled>Anterior</button>
-                <button id="nextPage">Próxima</button>  
-            </div> -->
-
             <div class="pagination-controls">
 
                 <button id="prevPage" disabled>Anterior</button>
