@@ -70,7 +70,7 @@
                 </div>
                 <div class="group senha-telaLogin">
                     <label for="password">Senha</label>
-                    <input type="password" placeholder="*********" id="inpSenha">
+                    <input type="password" placeholder="••••••••" id="inpSenha">
                     <i class="fas fa-eye" id="togglePassword"></i>
                 </div>
 
