@@ -128,6 +128,8 @@
     border-radius: 5px;
 
     /* background-color: palevioletred; */
+
+    display: none;
 }
 .icone-usuario{
     border-radius: 100px;
