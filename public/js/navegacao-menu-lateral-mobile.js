@@ -24,7 +24,7 @@ abrirMonitorModal.addEventListener("click", () =>{
 
 
 // MENU INFORMACAO DO USUARIO
-const menuInfoUsuario = document.querySelector(".usu-detalhes");
+const menuInfoUsuario = document.querySelector(".menu-usuario");
 const abrirInfoUsuario = document.querySelector(".usu-nome");
 
 document.addEventListener('click', event => {

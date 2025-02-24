@@ -1,5 +1,4 @@
 @import url(base_area_util.css);
-@import url(monitor-modal.css);
 
 :root{
     --verde-control: #3AA867;
@@ -84,12 +83,10 @@
     font-size: 3vh;
     color: var(--cinza-control);
 }
-
-/* INFO DO USUARIO */
 .usu-nome{
     color: var(--cinza-control);
     height: auto;
-    min-width: 15vw;  
+    min-width: 10vw;  
     max-width: 30vw;
     
     border-radius: 5px;
@@ -101,22 +98,30 @@
     font-size: 0.85rem;
     text-align: center;
     cursor: pointer;
-    padding: 2px;
+    padding: 5px;
 }
 .usu-nome:hover{
     background-color: rgba(0, 0, 0, 0.3);
 }
+.dark-area{
+    height: 5vh;
+    width: 100%;
+}
+
+/* INFO DO USUARIO */
+
 .menu-usuario{
     z-index: 10;
 
     min-height: 15vh;
     min-width: 15vw;
+    max-width: 80vw;
 
     position:absolute;
     top: 4vh;
-    right: 2vh;
+    right: 3vh;
 
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
@@ -125,67 +130,57 @@
     padding: 5px;
     background-color: var(--cor-fundo);
     box-shadow: 2px 5px 5px 2px rgba(0, 0, 0, 0.2);
-    border-radius: 5px;
+    border-radius: 15px;
 
-    /* background-color: palevioletred; */
+    overflow-wrap: break-word;
 
-    display: none;
+    color: var(--cinza-control);
 }
 .icone-usuario{
     border-radius: 100px;
     width: 50%;
 }
-/* .usu-detalhes{
-    background-color: var(--cor-fundo);
-    display: none;
-    position: absolute;
-    padding-top: 100px;
+.usu-detalhes{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;    
+    padding: 1vh;
+}
+.usu-util{
     height: auto;
     width: auto;
-    min-width: 15vw;
+    color: rgb(39, 75, 238);
+    font-size: 13.5px;
     text-decoration: none;
-    align-content: center;
-    align-items: center;
-    justify-content: center;
-    top: 3%;
-    border-radius: 10px;
-    z-index: 10;
-    padding: 20px;
-    flex-direction: column;
-    align-content: center;
-    justify-content: center;
-    gap: 15px;
-    cursor: auto;
-} */
+    cursor: pointer;
+}
 .texto-usu{
+    width: 100%;
     display: flex;
     flex-direction: column;
-    align-content: center;
+    align-items: start;
     justify-content: center;
+    gap: 7px;
 }
 .texto-usu .nome-usu{
     font-size: 26px;
+    font-size: 1.5rem;
     font-weight: 700;
 }
 .texto-usu .email-usu{
-    display: flex;
-    padding-top: 5px;
-    font-size: 15px;
+    max-width: 70vw;
+
+    font-size: 1rem;
     font-weight: 500;
+    
+    text-wrap: wrap;
+    border-radius: 5px;
+    padding: 3px;
+    background-color:  rgba(0, 0, 0, 0.1);
 }
-.texto-usu li a{
-    display: flex;
-    text-decoration: none;
-    font-size: 13px;
-    color: rgb(39, 75, 238);
-    padding-top: 10px;
-}
-.texto-usu li .sair{
+.usu-sair{
     color: var(--vermelho);
 }
-/* .usu-nome:hover .usu-detalhes{
-    display: flex;
-} */
 .background-block{
     display: flex;
     position: absolute;
@@ -194,11 +189,6 @@
     width: 100%;
     height: 100%;
     background-color: red;
-}
-
-.dark-area{
-    height: 5vh;
-    width: 100%;
 }
 
 /* MENU LATERAL */
@@ -273,7 +263,7 @@
 
 .sair-navegacao{
     width: 80%;
-    height: 50%;
+    height: 40%;
     display: flex;
     margin: 0;
     padding: 0;

@@ -13,11 +13,9 @@
         
         <!-- IMPORT DO CSS -->
         <link rel="stylesheet" href="../../../public/css/navegacao.css">
-        <link rel="stylesheet" href="../../../public/css/monitor-modal.css">
 
         <!-- IMPORT DO JS -->
         <script src="../../../public/js/navegacao-menu-lateral-mobile.js" defer></script>
-        <script src="../../../public/js/monitor-modal.js" defer></script>
 
         <link rel="shortcut icon" type="imagex/png" href="../../../public/img/Logo-Nota-Controlnt.ico">
 
@@ -29,7 +27,7 @@
                 <img src="../../../public/img/icons/logo control.svg" alt="LOGOCONTROL" id="img-logo">
                 <h1 class="titulo-projeto">PassControl</h1>
             </div>
-            <p class="usu-nome">Michael Paulo dos Anjos Ferreira</p>
+            <p class="usu-nome">Nome do Usuário</p>
         </div>
         <div class="dark-area"></div>
     </header>
@@ -39,11 +37,11 @@
         <img class="icone-usuario" src="../../../public/img/icons/image 33.svg" alt="">
         <nav class="usu-detalhes"> 
             <ul class="texto-usu">
-                <li class="nome-usu">Nome do Usuário</li>
+                <li class="nome-usu">Gabriel Alvin dos Santos Moraes</li>
                 <li class="email-usu">funcionario123@fun.br</li>
-                <li><a href="../../../app/admin/view/adm-logado.php">Editar Informações</a></li>
-                <li><a id="ACESSO-A0-MODAL-DE-ALTERACAO-DE-SENHA">Alterar Senha</a></li>
-                <li><a class="sair" href="../../../index.php">Sair</a></li>
+                <li><a class="usu-util" href="../../../app/admin/view/adm-logado.php">Editar Informações</a></li>
+                <li><a class="usu-util" id="ACESSO-A0-MODAL-DE-ALTERACAO-DE-SENHA">Alterar Senha</a></li>
+                <li><a class="usu-util usu-sair" href="../../../index.php">Sair</a></li>
             </ul>
         </nav>
     </div>
@@ -124,99 +122,4 @@
         </div>
         <div class="areatransp"></div>
     </div>
-
-    <section class="Area-Util-Projeto">
-        <!-- INICIO DA ÁREA ÚTIL DA PÁGINA -->
-        <!-- INSIRA O CORPO DA SUA PÁGINA A PARTIR DESTE PONTO -->
-
-
-
-        <!-- FIM DA ÁREA ÚTIL DA PÁGINA -->
-    </section>    
-
-    <!--MONITOR MODAL-->
-    <div class="area-monitor-modal">
-        <div class="area-modal" id="modal">
-            <div class="modal-fundo">
-                <div class="fundo-lateral">
-                    <h1>Últimas Chamadas</h1>
-                    <div class="area-das-senhas">
-                        <div class="caixa-das-senhas">
-                            <h2>NOME DA PESSOA</h2>
-                            <div class="conjunto-senhas">
-                                <div class="senha">
-                                    <h3>SENHA</h3>
-                                    <h4>CM 001</h4>
-                                </div>
-                                <div class="guiche">
-                                    <h5>GUICHE</h5>
-                                    <h6>1</h6>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="caixa-das-senhas">
-                            <h2>NOME DA PESSOA</h2>
-                            <div class="conjunto-senhas">
-                                <div class="senha">
-                                    <h3>SENHA</h3>
-                                    <h4>CM 001</h4>
-                                </div>
-                                <div class="guiche">
-                                    <h5>GUICHE</h5>
-                                    <h6>1</h6>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="caixa-das-senhas">
-                            <h2>NOME DA PESSOA</h2>
-                            <div class="conjunto-senhas">
-                            <div class="senha">
-                                <h3>SENHA</h3>
-                                <h4>CM 001</h4>
-                            </div>
-                            <div class="guiche">
-                                <h5>GUICHE</h5>
-                                <h6>1</h6>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="caixa-das-senhas">
-                        <h2>NOME DA PESSOA</h2>
-                        <div class="conjunto-senhas">
-                            <div class="senha">
-                                <h3>SENHA</h3>
-                                <h4>CM 001</h4>
-                            </div>
-                            <div class="guiche">
-                                <h5>GUICHE</h5>
-                                <h6>1</h6>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="fundo-principal">
-                <div class="area-botao-fechar-monitor">
-                    <div class="botao-fechar-monitor">
-                        <h2>X</h2> 
-                    </div>
-                </div>
-            <div class="fundo-senha-principal">
-                <div class="caixa-senha-principal">
-                    <div class="conjunto-senha-principal">
-                        <div class="nome-pessoa">
-                            <h1>NOME DA PESSOA</h1>
-                        </div>
-                        <div class="infos-senha-principal">
-                            <h2>SERVIÇO:<span>IPTU</span></h2>
-                            <h2>SENHA:<span>CM 001</span></h2>
-                            <h2>GUICHÊ:<span>1</span></h2>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-</body>
-</html>
+    <!-- INICIO DA ÁREA ÚTIL DA PÁGINA -->
