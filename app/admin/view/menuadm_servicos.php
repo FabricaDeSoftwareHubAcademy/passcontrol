@@ -15,6 +15,8 @@
 
     <!-- IMPORT DO CSS -->
     <link rel="stylesheet" href="../../../public/css/style_eli.css">
+    <link rel="stylesheet" href="../../../public/modais/Modal Cadastro Ponto Atendimento/estilo.css">
+    <script src="../../../public/js/modal_cadastro_guiche_adm.js"></script>
 
     <link rel="shortcut icon" type="imagex/png" href="../../../public/img/Logo-Nota-Controlnt.ico">
 
@@ -100,6 +102,7 @@
                 <a href="./menuadm_autoatendimento.php">Autoatendimento</a>
                 <a href="./menusup_usuario.php">SUP</a>
             </div>
+            
             <div class="menu-mobile" id="mobileMenu">
                 <a href="./menuadm_usuario.php">Usuários</a>
                 <a href="./menuadm_servicos.php" class="active">Serviços</a>
@@ -111,12 +114,12 @@
             <!-- área da descrição da página de navegação  -->
             <div class="descricao">
                 <!-- <h2>Menu de Gestão</h2> -->
-                <hr>
+                <!-- <hr> -->
                 <!-- <p>Área de Gestão do Admimistrador.</p> -->
             </div>
             <!-- área dos cards de nevegação  -->
             <main class="area-cards">
-                <div class="container">
+                <div class="container_menu">
                     <div class="wrapper">
                         <div class="banner-img">
                             <img src="../../../public/img/img-menu/pontodeatendimento.png" alt="">
@@ -127,24 +130,58 @@
 
                     </div>
                     <div class="button-wrapper">
-                        <button class="btn outline" onclick="window.location.href='atendimentocadastrados.php';">Atendimento</button>
+                        <button class="btn outline" onclick="window.location.href='atendimentocadastrados.php';">Lista de Guichês</button>
                     </div>
                 </div>
-                <div class="container">
+
+                <div class="container_menu">
+                    <div class="wrapper">
+                        <div class="banner-img">
+                            <img src="../../../public/img/img-menu/pontodeatendimento.png" alt="">
+                        </div>
+
+                        <!-- <h3 class="titulo-card">Atendimento</h3> -->
+                        <!-- <p>Pontos de Atendimento.</p> -->
+
+                    </div>
+                    <div class="button-wrapper">
+                        <button id="btn_cadastrar_adm" class="btn outline">Cadastro de Guichês</button>
+                    </div>
+                </div>
+                
+                <div class="container_menu">
                     <div class="wrapper">
                         <div class="banner-img">
                             <img src="../../../public/img/img-menu/serviços.png" alt="">
-                        </div>
+                    </div>
+
                         <!-- <h3 class="titulo-produto">Serviços</h3> -->
                         <!-- <p>Gestão dos serviços</p> -->
                     </div>
                     <div class="button-wrapper">
-                        <button class="btn outline" onclick="window.location.href='servicos.php';">Serviços</button>
+                        <button class="btn outline" onclick="window.location.href='servicos.php';">Lista de Serviços</button>
                     </div>
                 </div>    
+
+                <div class="container_menu">
+                    <div class="wrapper">
+                        <div class="banner-img">
+                            <img src="../../../public/img/img-menu/serviços.png" alt="">
+                    </div>
+
+                        <!-- <h3 class="titulo-produto">Serviços</h3> -->
+                        <!-- <p>Gestão dos serviços</p> -->
+                    </div>
+                    <div class="button-wrapper">
+                        <button class="btn outline" onclick="window.location.href='servicos.php';">Cadastrar Serviços</button>
+                    </div>
+                </div> 
+
+                
             </main>
         </div>
     </section>
+    <main-cadastro-cadastro-adm></main-cadastro-cadastro-adm>
     <script>
         function toggleMenu() {
             document.getElementById("mobileMenu").classList.toggle("active");

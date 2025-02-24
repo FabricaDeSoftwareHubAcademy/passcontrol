@@ -111,12 +111,12 @@
             <!-- área da descrição da página de navegação  -->
             <div class="descricao">
                 <!-- <h2>Menu de Gestão</h2> -->
-                <hr>
+            
                 <!-- <p>Área de Gestão do Admimistrador.</p> -->
             </div>
             <!-- área dos cards de nevegação  -->
             <main class="area-cards">
-                <div class="container">
+                <div class="container_menu">
                     <div class="wrapper">
                         <div class="banner-img">
                             <img src="../../../public/img/img-menu/pontodeatendimento.png" alt="">
@@ -127,10 +127,10 @@
 
                     </div>
                     <div class="button-wrapper">
-                        <button class="btn outline" onclick="window.location.href='atendimentocadastrados.php';">Atendimento</button>
+                        <button class="btn outline" onclick="window.location.href='atendimentocadastrados.php';">Lista de Usuários</button>
                     </div>
                 </div>
-                <div class="container">
+                <div class="container_menu">
                     <div class="wrapper">
                         <div class="banner-img">
                             <img src="../../../public/img/img-menu/serviços.png" alt="">
@@ -139,7 +139,7 @@
                         <!-- <p>Gestão dos serviços</p> -->
                     </div>
                     <div class="button-wrapper">
-                        <button class="btn outline" onclick="window.location.href='servicos.php';">Serviços</button>
+                        <button class="btn outline" onclick="window.location.href='servicos.php';">Listar Serviços</button>
                     </div>
                 </div>    
             </main>
