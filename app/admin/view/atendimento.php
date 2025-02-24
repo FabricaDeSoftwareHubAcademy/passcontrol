@@ -305,8 +305,8 @@
     </section> 
     <main-tela-de-login></main-tela-de-login>
     <main-proxima-senha></main-proxima-senha>
-    <main-sair-sistema></main-sair-sistema>
-    <main-saida-principal></main-saida-principal>
+    <!-- <main-sair-sistema></main-sair-sistema> -->
+    <!-- <main-saida-principal></main-saida-principal> -->
 
     <!--MONITOR MODAL-->
     <div class="area-monitor-modal">
