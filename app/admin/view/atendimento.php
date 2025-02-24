@@ -212,8 +212,8 @@
                             <td>Guilherme Machado</td>
                             <td>IPTU</td>
                             <td>CM002</td>
-                            <td>7:30</td>
-                            <td>7:46</td>
+                            <td>07:30</td>
+                            <td>07:46</td>
                             <td>Comum</td>
                         </tr>
                         <tr>
@@ -221,7 +221,7 @@
                             <td>Juliana Barbosa</td>
                             <td>Fiscalização</td>
                             <td>CM005</td>
-                            <td>7:48</td>
+                            <td>07:48</td>
                             <td>08:04</td>
                             <td>Preferencial</td>
                         </tr>
@@ -230,7 +230,7 @@
                             <td>Gabriel Alvin</td>
                             <td>Licenças</td>
                             <td>CM008</td>
-                            <td>8:08</td>
+                            <td>08:08</td>
                             <td>08:29</td>
                             <td>Preferencial</td>
                         </tr>
