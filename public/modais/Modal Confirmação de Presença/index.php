@@ -9,13 +9,13 @@
 
     <link rel="stylesheet" href="./estilo.css">
 </head>
-<body>
+<body class="estruct-pass">
     <button class="botao-modal open">Abrir Modal</button>
     <main class="modal-container">
         <section class="modal">
             <img src="../../../public/img/img-modais/Logo Nota Controlnt.png" alt="Logo Nota Control" class="logo">
-            <h1>Confirmar Presença</h1>
-            <hr>
+            <h1 class="title">Confirmar Presença</h1>
+            <hr class="row">
             <p class="desk-info"><b>Guichê 1</b></p>
             <p class="name"><b>João Guilherme Ortigosa</b></p>
             <p class="info"><b>Senha:</b> <span class="senha">CM 001</span></p>
