@@ -4,9 +4,6 @@ function validarSenha(novaSenha) {
     const liNumero = document.getElementById('numero');
     const liCaracEspec = document.getElementById('caracEspec');
 
-
-
-    
     if (novaSenha.length >= 8) {
         liDigito.classList.add('requisitosValidos');
     } else {
@@ -70,3 +67,15 @@ togglePasswordNv.addEventListener("click", function(){
 
 
 
+function validarConfSenha(){
+    const senha = document.getElementById("novaSenha");
+    const confSenha = document.getElementById("confirmSenha");
+
+    if(senha.value == "" || confSenha.value == ""){
+        alert("Preencha todos os campos");
+    }else if(senha.value != confSenha.value){
+        alert("Senha e Confirmar Senha não confere!");
+    }else{
+        window.location.replace('../../index.php');
+    }
+}

@@ -69,7 +69,7 @@
                         </ul>
                     </div>
                     <nav>
-                        <button type="submit"><a href="../../../index.php">Enviar</a></button>
+                        <button type="submit" onclick="return validarConfSenha()">Enviar</button>
                     </nav>
                 </form>
             </div>
