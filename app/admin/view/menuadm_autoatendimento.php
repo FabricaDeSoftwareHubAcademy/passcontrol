@@ -53,12 +53,12 @@
             <!-- área da descrição da página de navegação  -->
             <div class="descricao">
                 <!-- <h2>Menu de Gestão</h2> -->
-                <hr>
+            
                 <!-- <p>Área de Gestão do Admimistrador.</p> -->
             </div>
             <!-- área dos cards de nevegação  -->
             <main class="area-cards">
-                <div class="container">
+                <div class="container_menu">
                     <div class="wrapper">
                         <div class="banner-img">
                             <img src="../../../public/img/img-menu/gestaodoautoatendimento.png" alt="">
@@ -68,10 +68,10 @@
                         <!-- <p>Gestão do Autoatendimento.</p> -->
                     </div>
                     <div class="button-wrapper">
-                        <button class="btn outline" onclick="window.location.href='configuracao-autoatendimento.php';">Autoatendimento</button>
+                        <button class="btn outline" onclick="window.location.href='configuracao-autoatendimento.php';">visualizar Autoatendimento</button>
                     </div>
                 </div>
-                <div class="container">
+                <div class="container_menu">
                     <div class="wrapper">
                         <div class="banner-img">
                             <img src="../../../public/img/img-menu/visualizaçaomonitordeautoatendimento.png" alt="">
@@ -80,7 +80,7 @@
                         <!-- <p>Visualizar Monitor de Autoatendimento</p> -->
                     </div>
                     <div class="button-wrapper">
-                        <button class="btn outline" onclick="window.location.href='../../../app/admin/view/monitor-modal.php';">Monitor</button>
+                        <button class="btn outline" onclick="window.location.href='monitor-modal.php';">Visualizar Monitor</button>
                     </div>
                 </div>      
             </main>

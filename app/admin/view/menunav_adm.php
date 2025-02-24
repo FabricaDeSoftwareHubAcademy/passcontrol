@@ -38,7 +38,7 @@
         </script>
         <div class="descricao">
             <!-- <h2>Menu de Gestão</h2> -->
-            <hr>
+            
             <!-- <p>Área de Gestão do Admimistrador.</p> -->
         </div>
 </body>

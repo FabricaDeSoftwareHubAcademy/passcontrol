@@ -53,12 +53,12 @@
         <!-- área da descrição da página de navegação  -->
         <div class="descricao">
             <!-- <h2>Menu de Gestão</h2> -->
-            <hr>
+            
             <!-- <p>Área de Gestão do Supervisor.</p> -->
         </div>
             <!-- área dos cards de nevegação  -->
             <main class="area-cards">
-                <div class="container">
+                <div class="container_menu">
                     <div class="wrapper">
                         <div class="banner-img">
                             <img src="../../../public/img/img-menu/usuariocadastrado.png" alt="">
@@ -68,10 +68,10 @@
                         <!-- <p>Usuários Cadastrados.</p> -->
                     </div>
                     <div class="button-wrapper">
-                        <button class="btn outline" onclick="window.location.href='../../../app/admin/view/AtendentesCadastrados.php';">Usuários</button>
+                        <button class="btn outline" onclick="window.location.href='../../../app/admin/view/AtendentesCadastrados.php';">Lista de Usuários</button>
                     </div>
                 </div>
-                <div class="container">
+                <div class="container_menu">
                     <div class="wrapper">
                         <div class="banner-img">
                             <img src="../../../public/img/img-menu/cadastrodeusuario.png" alt="">
@@ -80,7 +80,7 @@
                         <!-- <p>Cadastro de Usuário</p> -->
                     </div>
                     <div class="button-wrapper">
-                        <button class="btn outline" onclick="window.location.href='../../../app/admin/view/telacadastro.php';">Cadastro</button>
+                        <button class="btn outline" onclick="window.location.href='../../../app/admin/view/telacadastro.php';">Cadastrar Usuários</button>
                     </div>
                 </div>    
             </main>
