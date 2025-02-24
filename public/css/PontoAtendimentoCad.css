@@ -95,19 +95,14 @@
   justify-content: left;
 }
 
-.cabecalho-tabela1{
+.cabecalho-tabela1, .cabecalho-tabela2, .cabecalho-tabela4{
   color: #ffffff;
-  width: 20%;
+  width: 30%;
   height: 10%;
-}
-.cabecalho-tabela2{
-  color: #ffffff;
-  width: 40%;
-  height: 30px;
 }
 .cabecalho-tabela3{
   color: #ffffff;
-  width: 7%;
+  width: 20%;
   height: 30px;
 }
 .colm-idit{
@@ -140,7 +135,6 @@
 
 #icone-editar {
   cursor: pointer;
-  height: 25px;
 }
 .toggle-btn {
   width: 60px;
@@ -198,23 +192,9 @@
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }
 
-::-webkit-scrollbar {
-  width: 10px;
-  height: 10px; 
+.tabela-wrapper::-webkit-scrollbar {
+  width: 5px;
 }
-
-::-webkit-scrollbar-track {
-  background-color: #ffffff75;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #33404d77;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background:var(--cinza-control);
-}
-
 @media screen and (max-width: 1024px) {
   #servico {
     left: 8vh;

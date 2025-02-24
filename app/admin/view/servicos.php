@@ -47,7 +47,7 @@
                   <thead class="cabecaTabelaServicos">
                     <tr class="topo-tabela-servicos">
                       <th class="cabecalho-tabela1">Código do Serviço</th>
-                      <th class="cabecalho-tabela1">Serviços</th>
+                      <th class="cabecalho-tabela2">Serviços</th>
                       <th class="cabecalho-tabela3">Editar</th>
                       <th class="cabecalho-tabela1">Ativar/ Desativar</th>
                     </tr>
