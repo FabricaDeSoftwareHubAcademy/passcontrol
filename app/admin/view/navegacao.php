@@ -1,26 +1,11 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+    <!-- IMPORT DO CSS -->
+    <link rel="stylesheet" href="../../../public/css/navegacao.css">
 
-        <title>PassControl</title>         
-        
-        <!-- IMPORT DA FONTE -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-        
-        <!-- IMPORT DO CSS -->
-        <link rel="stylesheet" href="../../../public/css/navegacao.css">
-
-        <!-- IMPORT DO JS -->
-        <script src="../../../public/js/navegacao-menu-lateral-mobile.js" defer></script>
-
-        <link rel="shortcut icon" type="imagex/png" href="../../../public/img/Logo-Nota-Controlnt.ico">
-
+    <!-- IMPORT DO JS -->
+    <script src="../../../public/js/navegacao-menu-lateral-mobile.js" defer></script>
 </head>
-<body class="control-body-navegacao">
+<!-- <body class="control-body-navegacao"> -->
     <header class="cabeca-navegacao-control">
         <div class="nav-cabeca">
             <div class="logo-control">
@@ -37,7 +22,7 @@
         <img class="icone-usuario" src="../../../public/img/icons/image 33.svg" alt="">
         <nav class="usu-detalhes"> 
             <ul class="texto-usu">
-                <li class="nome-usu">Gabriel Alvin dos Santos Moraes</li>
+                <li class="nome-usu">Nome do Usuário</li>
                 <li class="email-usu">funcionario123@fun.br</li>
                 <li><a class="usu-util" href="../../../app/admin/view/adm-logado.php">Editar Informações</a></li>
                 <li><a class="usu-util" id="ACESSO-A0-MODAL-DE-ALTERACAO-DE-SENHA">Alterar Senha</a></li>

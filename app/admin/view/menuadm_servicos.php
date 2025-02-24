@@ -20,72 +20,9 @@
 
 </head>
 <body class="control-body-navegacao">
-    <header class="cabeca-navegacao-control">
-        <nav class="nav-cabeca">
-            <div class="logo-control">
-                <img src="../../../public/img/icons/logo control.svg" alt="LOGOCONTROL" id="img-logo">
-            </div>
-            <H3>PassControl</H3>
-            <div class="usu">                
-                <!-- INFO DO USUARIO -->
-                <div class="menu-usuario">
-                    <a class="usu">Nome do Usuário</a>
-                    <nav class="usu-detalhes"> 
-                        <img src="../../../public/img/icons/image 33.svg" alt="">
-                        <ul class="texto-usu">
-                            <li class="nome-usu">Nome do Usuário</li>
-                            <li class="email-usu">funcionario123@fun.br</li>
-                            <li><a href="adm-logado.php">Editar Informações</a></li>
-                            <li><a href=".../../../index.php">Sair</a></li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
-        </nav>
-        <div class="dark-area"></div>
-    </header>
-
-    <!-- MENU LATERAL -->
-    <button class="botao-menu-mobile"> <!-- Botão ainda inativo -->
-        <img class="icone-menu-lateral" src="../../../public/img/icons/DropDownIcon.svg" alt="MENU">
-    </button>
-
-    <div class="area-lateral-navegacao">
-        <nav class="menu-lateral-navegacao">
-
-            <div class="botao-navegacao">
-                <a class="botao-lateal-navegacao" href="atendimento.php">
-                    <img class="icone-menu-lateral" src="../../../public/img/icons/atend.svg" alt="ICONE ATENDIMENTO">
-                    <div class="texto-bott">Atendimento</div>
-                </a>
-            </div>
-            <div class="botao-navegacao">
-                <a class="botao-lateal-navegacao" href="Monitor.php">
-                    <img class="icone-menu-lateral" src="../../../public/img/icons/monitor.svg" alt="ICONE MONITOR">
-                    <div class="texto-bott">Monitor</div>
-                </a>
-            </div>
-            <div class="botao-navegacao">
-                <a class="botao-lateal-navegacao" href="">
-                    <img class="icone-menu-lateral" src="../../../public/img/icons/nota.svg" alt="ICONE RELATORIOS">
-                    <div class="texto-bott">Relatórios</div>
-                </a>
-            </div>
-            <div class="botao-navegacao">
-                <a class="botao-lateal-navegacao ativo-estacionario" href="menuadm_usuario.php">
-                    <img class="icone-menu-lateral ativo-estacionario" src="../../../public/img/icons/gestao.svg" alt="ICONE GESTAO">
-                    <div class="texto-bott">Gestão</div>
-                </a>
-            </div>
-        </nav>
-        <div class="sair-navegacao">
-            <a class="botao-lateal-navegacao" href="login.php">
-                <img class="icone-menu-lateral" src="../../../public/img/icons/sair.svg" alt="ICONE SAIR">
-                <div class="texto-bott">Sair</div>
-            </a>
-        </div>
-    </div>
-
+    <?php
+    include "./navegacao.php";
+    ?>
     <section class="Area-Util-Projeto">
         <!-- INICIO DA ÁREA ÚTIL DA PÁGINA -->
         <!-- INSIRA O CORPO DA SUA PÁGINA A PARTIR DESTE PONTO -->
@@ -145,6 +82,12 @@
             </main>
         </div>
     </section>
+    
+    <!--MONITOR MODAL-->
+    <?php
+    include "./monitor-modal.php";
+    ?>
+    
     <script>
         function toggleMenu() {
             document.getElementById("mobileMenu").classList.toggle("active");
