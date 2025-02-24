@@ -437,7 +437,7 @@ tbody {
 } 
 .tabela_atendimento-guiche-area-chamada:hover tbody::-webkit-scrollbar { 
     opacity: 1;  
-    width: 9px; 
+    width: 5px; 
 } 
 .tabela_atendimento-guiche-area-chamada tbody::-webkit-scrollbar-thumb { 
     background-color: rgba(0, 0, 0, 0.5); 
@@ -450,11 +450,11 @@ tbody {
 
 .tabela_atendimento-guiche-area-chamada tbody::-webkit-scrollbar-thumb:hover { 
     background-color: rgba(0, 0, 0, 0.7); 
-    width: 9px; 
+    width: 5px; 
 } 
 
 .tabela_atendimento-guiche-area-chamada:hover tbody,thead{ 
-    margin-right: -9px;
+    margin-right: -5px;
     /* display: flex; */
 } 
 
