@@ -23,8 +23,8 @@
             <div class="button-group">
                 <button class="botao-modal ausente">Ausente</button>
                 <button class="botao-modal presente">Presente</button>
+                <button class="botao-modal chamar">Chamar Novamente</button>
             </div>
-            <button class="botao-modal chamar">Chamar Novamente</button>
         </section>
     </main>
     <script src="./modal.js"></script>

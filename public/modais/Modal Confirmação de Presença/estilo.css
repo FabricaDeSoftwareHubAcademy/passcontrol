@@ -17,14 +17,14 @@
 
 /* Estilo dos botões */
 .botao-modal {
-    padding: 10px 20px;
-    background-color: rgb(47, 128, 128);
+    padding: 12px 20px;
     border: 0;
     border-radius: 10px;
     font-size: 18px;
     color: #FFFFFF;
     font-weight: 500;
     cursor: pointer;
+    text-align: center;
 }
 
 /* Estilo do container do modal */
@@ -52,10 +52,10 @@
 /* Estilo do modal */
 .modal {
     background-color: #e0e0e0;
-    width: 80%;
-    max-width: 1200px; /* Limita o tamanho máximo */
-    min-width: 400px; /* Evita que fique pequeno demais */
-    height: auto; /* Altura ajustável automaticamente */
+    width: 90%;
+    max-width: 800px; /* Ajustado para um tamanho melhor */
+    min-width: 400px;
+    height: auto;
     padding: 40px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     position: relative;
@@ -64,13 +64,13 @@
     border-radius: 0;
 }
 
-/* Estilo da linha horizontal */
+/* Linha horizontal */
 .row {
     border: none;
     border-top: 3px solid #000;
-    width: 32.4vw; /* Largura total da tela (viewport) */
-    margin-left: calc(-16.2vw + 50%); /* Centraliza a linha no modal */
-    margin-right: calc(-20vw + 50%); /* Centraliza a linha no modal */
+    width: 32.4vw;
+    margin-left: calc(-16.2vw + 50%);
+    margin-right: calc(-20vw + 50%);
     margin-top: 20px;
     margin-bottom: 20px;
 }
@@ -80,19 +80,20 @@
     position: absolute;
     top: 10px;
     right: 20px;
-    width: 10%; /* Ocupa 10% da largura do modal */
-    max-width: 200px; /* Limita o tamanho máximo */
+    width: 10%;
+    max-width: 200px;
     height: auto;
 }
 
-/* Estilo do título */
+/* Título */
 .title {
     font-size: 28px;
     margin-bottom: 40px;
     font-weight: bold;
+    text-align: center;
 }
 
-/* Estilo do parágrafo */
+/* Parágrafo */
 .desk-info .name .info {
     font-size: 18px;
     margin: 20px 0;
@@ -103,62 +104,70 @@
 .button-group {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 15px;
     margin-bottom: 20px;
 }
 
+.button-group button {
+    flex-grow: 1; /* Faz com que os botões fiquem com o mesmo tamanho */
+    text-align: center;
+    width: auto;
+    padding: 12px 20px;
+    margin: 10px;
+}
+
+/* Botões específicos */
 .senha {
-    margin-right: 15px;
-    color: red;
+    margin-right: 30px;
+    color: red !important;
     font-weight: bold;
 }
 
-/* Estilo do botão cancelar */
+/* Botão cancelar */
 .ausente {
-    background-color: #33404D;
+    background-color: #33404D !important;
     color: white;
-    margin-right: 30px;
     border-radius: 5px;
     font-size: 14px;
-    padding: 10px 30px;
+    padding: 12px 20px;
+    text-align: center;
+    transition: 0.3s;
 }
 
-/* Estilo do botão cancelar no hover */
 .ausente:hover {
     color: #FF0000;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }
 
-/* Estilo do botão salvar */
+/* Botão salvar */
 .presente {
-    background-color: #33404D;
+    background-color: #33404D !important;
     color: white;
     border-radius: 5px;
     font-size: 14px;
-    padding: 10px 30px;
+    padding: 12px 20px;
+    text-align: center;
+    transition: 0.3s;
 }
 
-/* Estilo do botão salvar no hover */
 .presente:hover {
     color: #3AA867;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }
 
+/* Botão Chamar Novamente */
 .chamar {
-    background-color: #33404D;
+    background-color: #33404D !important;
     color: white;
     border-radius: 5px;
     font-size: 14px;
-    padding: 10px 30px;
-    position: relative; /* Permite usar margin-top para distanciar */
-    margin-top: 10px; /* Adiciona o espaço entre o botão "Chamar Novamente" e os outros botões */
-    align-items: center; /* Garante que o botão ficará centralizado */
+    padding: 12px 20px;
+    text-align: center;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 10px auto;
+    transition: 0.3s;
 }
 
-/* Estilo do botão salvar no hover */
 .chamar:hover {
     color: white;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
@@ -166,11 +175,11 @@
 
 /* Media Queries */
 
-/* Telas pequenas (até 320px) */
-@media (max-width: 400px) and (min-width: 320px) {
+/* Celulares pequenos */
+@media (max-width: 400px) {
     .modal {
         width: 90% !important;
-        min-width: auto !important; /* Permite ajuste dinâmico */
+        min-width: auto !important;
         padding: 15px !important;
     }
     
@@ -186,34 +195,14 @@
     }
 
     .button-group {
-        flex-direction: row !important;
-        align-items: center !important;
-        gap: 10px !important;
-        font-size: 12px !important;
-        padding: 8px 15px !important;
-        width: 100% !important;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
     }
 
-    .ausente{
-        font-size: 12px !important; /* Diminui o tamanho da fonte */
-        padding: 8px 12px !important; /* Reduz o padding */
-        width: auto !important; /* Ajusta a largura automaticamente */
-        max-width: 200px !important; /* Limita o tamanho máximo da largura */
-        margin-right: 0 !important; /* Remove o deslocamento para a esquerda */
-    }
-
-    .presente{
-        font-size: 12px !important; /* Diminui o tamanho da fonte */
-        padding: 8px 12px !important; /* Reduz o padding */
-        width: auto !important; /* Ajusta a largura automaticamente */
-        max-width: 200px !important; /* Limita o tamanho máximo da largura */
-    }
-
-    .chamar{
-        font-size: 12px !important; /* Diminui o tamanho da fonte */
-        padding: 8px 12px !important; /* Reduz o padding */
-        width: auto !important; /* Ajusta a largura automaticamente */
-        max-width: 200px !important; /* Limita o tamanho máximo da largura */
+    .button-group button {
+        font-size: 12px;
+        padding: 8px 12px;
     }
 
     /* Ajuste da linha horizontal */
@@ -224,192 +213,60 @@
     }
 }
 
-@media (max-width: 400px) and (min-width: 350px) {
-    .title {
-        font-size: 16px !important;
-        margin-top: 10px !important; /* Afastando do topo */
-        max-width: 100% !important; /* Evita que o título fique muito largo */
-    }
-
-    .logo {
-        width: 45px !important; /* Reduzindo o tamanho da logo */
-        right: 20   px !important; /* Ajusta um pouco mais para a direita */
-    }
-}
-
-@media (max-width: 350px) and (min-width: 345px) {
-    .title {
-        font-size: 16px !important;
-        margin-right: 50px;
-        max-width: 100% !important; /* Evita que o título fique muito largo */
-    }
-
-    .logo {
-        width: 45px !important; /* Reduzindo o tamanho da logo */
-        top: 15px;
-        right: 20px !important; /* Ajusta um pouco mais para a direita */
-    }
-}
-
-@media (max-width: 349px) and (min-width: 320px) {
-    .title {
-        font-size: 16px !important;
-        margin-right: 50px;
-        max-width: 100% !important; /* Evita que o título fique muito largo */
-    }
-
-    .logo {
-        width: 45px !important; /* Reduzindo o tamanho da logo */
-        top: 7px;
-        right: 20px !important; /* Ajusta um pouco mais para a direita */
-    }
-}
-
-/* Telas pequenas (celulares) */
+/* Celulares médios */
 @media (max-width: 480px) {
-    .row {
-        width: 114%; /* Aumenta a largura da linha no celular */
-        margin-left: -7%; /* Ajusta a centralização */
-        margin-right: 10%; /* Ajusta a centralização */
-    }
     .modal {
         width: 95%;
         padding: 20px;
     }
-    .logo {
-        width: 60px;
+
+    .row {
+        width: 114%;
+        margin-left: -7%;
+        margin-right: 10%;
     }
+
     .title {
         font-size: 20px;
     }
+
     .desk-info .name .info {
         font-size: 14px;
     }
-    .button-group {
-        font-size: 12px;
-        padding: 8px 12px;
-    }
-
-    /* Ajuste do botão Chamar Novamente */
-    .chamar {
-        width: auto; /* Retorna à largura padrão */
-        margin-left: auto; /* Centraliza o botão */
-        margin-right: auto; /* Centraliza o botão */
-        margin-top: 10px; /* Mantém o espaçamento acima do botão */
-    }
 }
 
-/* Telas médias (tablets) */
+/* Tablets */
 @media (max-width: 768px) {
-    .row {
-        width: 109%; /* Aumenta a largura da linha no celular */
-        margin-left: -4.4%; /* Ajusta a centralização */
-        margin-right: 10%; /* Ajusta a centralização */
-    }
     .modal {
         width: 80%;
         padding: 25px;
     }
-    .logo {
-        width: 80px;
+
+    .row {
+        width: 109%;
+        margin-left: -4.4%;
+        margin-right: 10%;
     }
+
     .title {
         font-size: 24px;
     }
-    .desk-info .name .info {
-        font-size: 16px;
-    }
-
-    /* Ajuste do botão Chamar Novamente */
-    .chamar {
-        width: auto; /* Retorna à largura padrão */
-        margin-left: auto; /* Centraliza o botão */
-        margin-right: auto; /* Centraliza o botão */
-        margin-top: 10px; /* Mantém o espaçamento acima do botão */
-    }
 }
 
-/* Telas médias (entre 770px e 1022px) */
-@media (min-width: 770px) and (max-width: 1023px) {
-    .row {
-        width: 115.3%; /* Ajusta a largura da linha para que não ultrapasse a tela */
-        margin-left: -7.7%; /* Centraliza um pouco à esquerda */
-        margin-right: 5%; /* Centraliza um pouco à direita */
-    }
-    .modal {
-        width: 80%;
-        max-width: 600px;
-    }
-    .title {
-        font-size: 32px;
-    }
-    .desk-info .name .info {
-        font-size: 20px;
-    }
-    .logo {
-        width: 90px;
-    }
-
-    /* Ajuste do botão Chamar Novamente */
-    .chamar {
-        width: auto; /* Retorna à largura padrão */
-        margin-left: auto; /* Centraliza o botão */
-        margin-right: auto; /* Centraliza o botão */
-        margin-top: 10px; /* Mantém o espaçamento acima do botão */
-    }
-}
-
-/* Telas grandes (desktops) */
+/* Notebooks e desktops */
 @media (min-width: 1024px) {
+    .modal {
+        width: 80%;
+        max-width: 600px;
+    }
+
     .row {
-        width: 115.3%; /* Reduz a largura da linha em telas maiores */
-        margin-left: -7.7%; /* Ajusta a centralização */
-        margin-right: 10%; /* Ajusta a centralização */
+        width: 115.3%;
+        margin-left: -7.7%;
+        margin-right: 10%;
     }
-    .modal {
-        width: 80%;
-        max-width: 600px;
-    }
+
     .title {
         font-size: 32px;
-    }
-    .desk-info .name .info {
-        font-size: 20px;
-    }
-    .logo {
-        width: 90px;
-    }
-
-    /* Ajuste do botão Chamar Novamente */
-    .chamar {
-        width: auto; /* Retorna à largura padrão */
-        margin-left: auto; /* Centraliza o botão */
-        margin-right: auto; /* Centraliza o botão */
-        margin-top: 10px; /* Mantém o espaçamento acima do botão */
-    }
-}
-
-/* Telas grandes (desktops grandes) */
-@media (min-width: 1200px) {
-    .modal {
-        width: 80%;
-        max-width: 600px;
-    }
-    .title {
-        font-size: 32px;
-    }
-    .desk-info .name .info {
-        font-size: 20px;
-    }
-    .logo {
-        width: 90px;
-    }
-
-    /* Ajuste do botão Chamar Novamente */
-    .chamar {
-        width: auto; /* Retorna à largura padrão */
-        margin-left: auto; /* Centraliza o botão */
-        margin-right: auto; /* Centraliza o botão */
-        margin-top: 10px; /* Mantém o espaçamento acima do botão */
     }
 }
