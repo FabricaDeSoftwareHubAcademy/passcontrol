@@ -48,13 +48,13 @@
     height: 100%;
     width: 70%;
     font-size: 28px;
-    gap: 0.6rem;
+    /* gap: 0.6rem; */
 }
 .atendimento-atual-atendimento{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    height: 26vh;
+    height: 23vh;
     width: 100%;
     gap: 2%;
     /* background-color: aqua; */
@@ -160,7 +160,7 @@
     color: #33404D;
     background-color: rgba(255, 255, 255, 0.5);
     flex-direction: column;
-    gap: 1.5rem;
+    /* gap: 1.5rem; */
 }
 .nome-area-chamada{
     display: flex;
@@ -465,10 +465,18 @@ thead, tbody tr {
     
 }
 
+@media screen and (min-width: 1641px) and (max-width: 1840px) {
+    .info-area-chamada{
+        margin-top: -20px;
+    }
+}
 
 @media screen and (min-width: 1441px) and (max-width: 1640px) {
     .texto-botao-atendimento{
         font-size: 20px;
+    }
+    .info-area-chamada{
+        margin-top: -30px;
     }
     .area-botao-atendimento{
         display: flex;
@@ -511,6 +519,9 @@ thead, tbody tr {
 @media screen and (min-width: 1200px) and (max-width: 1440px) {
     .informacoes-area-chamada{
         gap: 0;
+    }
+    .info-area-chamada{
+        margin-top: -30px;
     }
     .texto-botao-atendimento{
         font-size: 18px;
@@ -559,6 +570,12 @@ thead, tbody tr {
     }
     .informacoes-area-chamada{
         gap: 0;
+    }
+    .info-area-chamada{
+        margin-top: -30px;
+    }
+    .info-area-chamada{
+        margin-top: -20px;
     }
     .texto-botao-atendimento{
         font-size: 18px;
@@ -609,6 +626,9 @@ thead, tbody tr {
     .fundo-guiche-area-chamada{
         overflow-x: auto;
     }
+    .info-area-chamada{
+        margin-top: -30px;
+    }
     .informacoes-area-chamada{
         gap: 0;
     }
@@ -634,6 +654,7 @@ thead, tbody tr {
         align-items: start;
         width: 90%;
         margin-left: 1rem;
+        margin-top: -20px;
     }
     .servico-area-chamada{
         margin-left: 1rem;
@@ -703,6 +724,9 @@ thead, tbody tr {
     .fundo-guiche-area-chamada{
         overflow-x: auto;
     }
+    .info-area-chamada{
+        margin-top: -20px;
+    }
     .texto-botao-atendimento{
         font-size: 15px;
         flex-direction: row;
@@ -727,6 +751,7 @@ thead, tbody tr {
         align-items: start;
         width: 50%;
         margin-left: 0.5rem;
+        margin-top: -20px;
     }
     .servico-area-chamada{
         margin-left: 1rem;
@@ -832,11 +857,7 @@ thead, tbody tr {
         align-content: flex-start;
     }
     .senha-area-chamada{
-        padding-left: 0rem;
-        display: flex;
-        align-items: start;
-        width: 50%;
-        margin-left: 1rem;
+        display: none;
     }
     .servico-area-chamada{
         margin-left: 1rem;
@@ -969,11 +990,7 @@ thead, tbody tr {
         align-content: flex-start;
     }
     .senha-area-chamada{
-        padding-left: 0rem;
-        display: flex;
-        align-items: start;
-        width: 50%;
-        margin-left: 0.5rem;
+        display: none;
     }
     .servico-area-chamada{
         margin-left: 1rem;
@@ -1093,11 +1110,7 @@ thead, tbody tr {
         align-content: flex-start;
     }
     .senha-area-chamada{
-        padding-left: 0rem;
-        display: flex;
-        align-items: start;
-        width: 50%;
-        margin-left: 0.5rem;
+        display: none;
     }
     .servico-area-chamada{
         margin-left: 1rem;
