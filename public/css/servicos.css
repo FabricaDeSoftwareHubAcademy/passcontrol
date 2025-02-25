@@ -149,7 +149,7 @@
   border-radius: 10px;
   position: relative;
   border: 1px solid var(--cinza-control);
-  
+  cursor: pointer;
 }
 
 .toggle-btn .circulo {
