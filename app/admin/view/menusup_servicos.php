@@ -24,7 +24,7 @@
     include "./navegacao.php";
     ?>
 
-    <section class="Area-Util-Projeto">
+    <section class="Area-Util-Projeto-Eli">
         <!-- INICIO DA ÁREA ÚTIL DA PÁGINA -->
         <!-- INSIRA O CORPO DA SUA PÁGINA A PARTIR DESTE PONTO -->
 
@@ -56,10 +56,11 @@
             <main class="area-cards">
                 <div class="container_menu">
                     <div class="wrapper">
+                        <a href="atendimentocadastrados.php">
                         <div class="banner-img">
                             <img src="../../../public/img/img-menu/pontodeatendimento.png" alt="">
                         </div>
-
+                        </a>
                         <!-- <h3 class="titulo-card">Atendimento</h3> -->
                         <!-- <p>Pontos de Atendimento.</p> -->
 
@@ -70,9 +71,11 @@
                 </div>
                 <div class="container_menu">
                     <div class="wrapper">
+                        <a href="servicos.php">
                         <div class="banner-img">
                             <img src="../../../public/img/img-menu/serviços.png" alt="">
                         </div>
+                        </a>
                         <!-- <h3 class="titulo-produto">Serviços</h3> -->
                         <!-- <p>Gestão dos serviços</p> -->
                     </div>

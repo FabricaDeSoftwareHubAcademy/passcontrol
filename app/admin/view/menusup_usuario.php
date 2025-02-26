@@ -24,7 +24,7 @@
     include "./navegacao.php";
     ?>
     
-    <section class="Area-Util-Projeto">
+    <section class="Area-Util-Projeto-Eli">
         <!-- INICIO DA ÁREA ÚTIL DA PÁGINA -->
         <!-- INSIRA O CORPO DA SUA PÁGINA A PARTIR DESTE PONTO -->
 
@@ -60,10 +60,11 @@
             <main class="area-cards">
                 <div class="container_menu">
                     <div class="wrapper">
+                        <a href="../../../app/admin/view/AtendentesCadastrados.php">
                         <div class="banner-img">
                             <img src="../../../public/img/img-menu/usuariocadastrado.png" alt="">
                         </div>
-
+                        </a>
                         <!-- <h3 class="titulo-card">Usuários</h3> -->
                         <!-- <p>Usuários Cadastrados.</p> -->
                     </div>
@@ -73,9 +74,11 @@
                 </div>
                 <div class="container_menu">
                     <div class="wrapper">
+                        <a href="../../../app/admin/view/telacadastro.php">
                         <div class="banner-img">
                             <img src="../../../public/img/img-menu/cadastrodeusuario.png" alt="">
                         </div>
+                        </a>
                         <!-- <h3 class="titulo-produto">Cadastro</h3> -->
                         <!-- <p>Cadastro de Usuário</p> -->
                     </div>

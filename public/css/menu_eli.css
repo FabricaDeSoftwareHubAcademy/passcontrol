@@ -43,11 +43,11 @@ body {
 }
 .menu a.active {
   background-color: var(--cor-active);
-  color: var(--verde-control);
-}
-.menu a.active:hover {
   color: var(--font-main);
 }
+/* .menu a.active:hover {
+  color: var(--font-main); */
+/* } */
 .menu-mobile {
   display: none;
   flex-direction: column;
