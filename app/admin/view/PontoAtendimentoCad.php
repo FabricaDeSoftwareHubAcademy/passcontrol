@@ -14,7 +14,7 @@
     <!-- IMPORT DO CSS -->
     <link rel="stylesheet" href="../../../public/css/navegacao.css">
     <link rel="stylesheet" href="../../../public/css/monitor-modal.css">
-    <link rel="stylesheet" href="../../../public/css/servicos.css">
+    <link rel="stylesheet" href="../../../public/css/PontoAtendimentoCad.css">
     <link rel="stylesheet" href="../../../public/modais/Modal Confirmação dos Serviços/estilo.css">
 
     <link rel="shortcut icon" type="imagex/png" href="../../../public/img/Logo-Nota-Controlnt.ico">
@@ -25,82 +25,67 @@
     include "./navegacao.php";
     ?>
 
-    <section class="Area-Util-Projeto">
+<section class="Area-Util-Projeto">
         <!-- INICIO DA ÁREA ÚTIL DA PÁGINA -->
         <!-- INSIRA O CORPO DA SUA PÁGINA A PARTIR DESTE PONTO -->
-        <div id="servico">        
-              <div class="cabecalho">
-                <h1 id="servicos-cadastrados">Serviços Cadastrados</h1>
-                <div class="campo-busca">
-                    <input id="buscar-servico" type="text" placeholder="Buscar Registro">
-                  </div>
-                <div class="linha-divisoria"></div>
-            <div id="tela-branca"> 
-              <div class="tabela-wrapper">
-                <table class="tabela-servicos">
-                  <thead>
-                    <tr class="topo-tabela">
-                      <th class="cabecalho-tabela1">Código do Serviço</th>
-                      <th class="cabecalho-tabela2">Serviços</th>
+        <div id="PontoAtendimentoCad">        
+                <div class="topo-tela-PontoAtendimentoCad">
+                    <div class="campo-busca">
+                        <input id="buscar-Ponto-atendimento" type="text" placeholder="Buscar Registro">
+                    </div>
+                    <div class="sev"><p id="Ponto-atendimento">Ponto de Atendimento</p></div>
+                    <div class="linha-divisoria-Ponto-atendimento"></div>
+                </div>
+            <div id="tela-branca-Ponto-atendimento"> 
+              <div class="tabela-responsiva-Ponto-atendimento">
+                <table class="tabela-Ponto-atendimento">
+                  <thead class="cabecaTabelaPonto-atendimento">
+                    <tr class="topo-tabela-servicos">
+                      <th class="cabecalho-tabela1">Tipo</th>
+                      <th class="cabecalho-tabela2">Identificador</th>
                       <th class="cabecalho-tabela3">Editar</th>
-                      <th class="cabecalho-tabela4">Ativar/Desativar</th>
+                      <th class="cabecalho-tabela1">Ativar/ Desativar</th>
                     </tr>
                   </thead>
-                  <tbody class="separacao">
+                  <tbody class="resto-tabela-Ponto-atendimento">
                     <tr class="linha-tabela">
-                      <td>IP</td>
-                      <td>Iluminação Pública</td>
+                      <td>Guichê</td>
+                      <td>01</td>
                       <td class="coluna-editar ">
-                        <a href="editar"><img id="icone-editar" src="../../../public/img/icons/editar.png" alt="Editar"></a></td>
+                        <a class="colm-idit" href=""><img id="icone-editar" src="../../../public/img/icons/Group 2924.png" alt="Editar"></a></td>
                         <td class="coluna-inativar">
                             <div class="toggle-btn ativo"><div class="circulo"></div></div>
                         </td>
                     </tr>
                     <tr class="linha-tabela">
-                      <td>IPTU</td>
-                      <td>IPTU</td>
+                      <td>Guichê</td>
+                      <td>02</td>
                       <td class="coluna-editar ">
-                        <a href="editar"><img id="icone-editar" src="../../../public/img/icons/editar.png" alt="Editar"></a></td>
+                        <a class="colm-idit" href=""><img id="icone-editar" src="../../../public/img/icons/Group 2924.png" alt="Editar"></a></td>
                         <td class="coluna-inativar">
                             <div class="toggle-btn ativo"><div class="circulo"></div></div>
                         </td>
-                    </tr>
+                    </tr>  
                     <tr class="linha-tabela">
-                      <td>LIC</td>
-                      <td>Licenças</td>
+                      <td>Guichê</td>
+                      <td>03</td>
                       <td class="coluna-editar ">
-                        <a href="editar"><img id="icone-editar" src="../../../public/img/icons/editar.png" alt="Editar"></a></td>
+                        <a class="colm-idit" href=""><img id="icone-editar" src="../../../public/img/icons/Group 2924.png" alt="Editar"></a></td>
                         <td class="coluna-inativar">
                             <div class="toggle-btn ativo"><div class="circulo"></div></div>
                         </td>
-                    </tr>
-                    <tr class="linha-tabela">
-                      <td>OUVID</td>
-                      <td>Ouvidoria</td>
-                      <td class="coluna-editar ">
-                        <a href="editar"><img id="icone-editar" src="../../../public/img/icons/editar.png" alt="Editar"></a></td>
-                        <td class="coluna-inativar">
-                            <div class="toggle-btn ativo"><div class="circulo"></div></div>
-                        </td>
-                    </tr>
-                    <tr class="linha-tabela">
-                      <td>CM</td>
-                      <td>Conselho Municipal</td>
-                      <td class="coluna-editar ">
-                        <a href="editar"><img id="icone-editar" src="../../../public/img/icons/editar.png" alt="Editar"></a></td>
-                        <td class="coluna-inativar">
-                            <div class="toggle-btn ativo"><div class="circulo"></div></div>
-                        </td>
-                    </tr>       
+                    </tr>    
                   </tbody>
                 </table>
               </div>
             </div>
-            <div class="button-container1"><button class="botaoCadastrar">Cadastrar</button></div>
-          </div>
+            <div class="botoesVoltar-Cadastrar">
+                <button type="button" class="botao-voltar" onclick="window.location.href='menuadm_servicos.php';">Voltar</button>
+                <button type="submit" class="botao-cadastro">Cadastrar</button>
+            </div>
         </div>
         
-    </section> 
+    </section>
 
     <!--MONITOR MODAL-->
     <?php
