@@ -143,8 +143,10 @@
     }
 
     .row {
-        width: 100%;
-        margin: 15px 0;
+        border: none;
+        border-top: 3px solid #000;
+        width: 106.50%; /* Garante que a linha ocupe toda a largura do modal */
+        margin-left: -3.25%; /* Ajusta a centralização */
     }
 }
 
@@ -155,8 +157,10 @@
     }
 
     .row {
-        width: 100%;
-        margin: 12px 0;
+        border: none;
+        border-top: 3px solid #000;
+        width: 106.75%; /* Garante que a linha ocupe toda a largura do modal */
+        margin-left: -3.50%; /* Ajusta a centralização */
     }
 }
 
@@ -168,45 +172,48 @@
     }
 
     .modal-title {
-        font-size: 20px;
+        font-size: 25px;
     }
 
     .modal-icon {
-        width: 50px;
+        width: 70px;
     }
 
     .botao-modal, .close {
         padding: 10px 20px;
         font-size: 14px;
     }
+
+    .row {
+        border: none;
+        border-top: 3px solid #000;
+        width: 105.30%; /* Garante que a linha ocupe toda a largura do modal */
+        margin-left: -2.75%; /* Ajusta a centralização */
+    }
 }
 
 /* Ajustes para telas menores que 480px */
 @media (max-width: 480px) {
     .modal {
-        width: 100%;
-        padding: 10px;
+        width: 95%;
+        padding: 15px;
         border-radius: 5px;
     }
 
-    .modal-header {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
     .modal-title {
-        font-size: 18px;
+        font-size: 25px;
     }
 
     .modal-icon {
-        width: 40px;
+        width: 70px;
         margin-top: 5px;
     }
 
     .row {
-        width: 100%;
-        margin: 5px 0;
+        border: none;
+        border-top: 3px solid #000;
+        width: 107%; /* Garante que a linha ocupe toda a largura do modal */
+        margin-left: -3.50%; /* Ajusta a centralização */
     }
 
     .status-table td, .status-table th {
@@ -222,8 +229,8 @@
 /* Ajustes para telas menores que 320px */
 @media (max-width: 320px) {
     .modal {
-        width: 100%;
-        padding: 8px;
+        width: 95%;
+        padding: 15px;
     }
 
     .modal-title {
@@ -231,16 +238,18 @@
     }
 
     .modal-icon {
-        width: 35px;
+        width: 50px;
     }
 
     .row {
-        width: 100%;
-        margin: 4px 0 !important;
+        border: none;
+        border-top: 3px solid #000;
+        width: 111%; /* Garante que a linha ocupe toda a largura do modal */
+        margin-left: -5.50%; /* Ajusta a centralização */
     }
 
     .botao-modal, .close {
-        padding: 6px 12px;
-        font-size: 10px;
+        padding: 6px 15px;
+        font-size: 20px;
     }
 }
