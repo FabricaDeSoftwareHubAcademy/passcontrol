@@ -156,7 +156,7 @@ body{
     background-color: #33404D;
     color: white;
     border-radius: 12px;
-    margin-right: 20px;
+    /* margin-right: 20px; */
     font-size: 16px;
     cursor: pointer;
     display: flex;
@@ -167,7 +167,7 @@ body{
 
 .btn:hover{
     background-color: #181f26;
-    color: var(--verde-control);
+    color: #3aa867;
     transition: linear 0.04s;
 }
 

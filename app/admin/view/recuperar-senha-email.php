@@ -47,9 +47,9 @@
                     <input type="email" class="inpRecuperar" placeholder="Email">
                     <span>Você receberá um código de segurança em seu e-mail cadastrado para validar sua nova senha </span>
 
-                    <nav>
-                        <button class="btnEnviarRecuperarSenha"><a href="../../../app/admin/view/recuperar-senha-codigo.php">Enviar</a></button>
-                    </nav>
+                    <div class="btnEntrar">
+                        <a href="./recuperar-senha-codigo.php" type="submit" class="btn">Entrar</a>
+                    </div>
                 </form>
             </div>
         </main>

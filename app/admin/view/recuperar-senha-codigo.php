@@ -17,7 +17,7 @@
 <body class="recuperarSenha"> 
     <div class="box">
 
-        <div class="GroupLine">
+        <div class="GroupLine groupLeft">
             <div class="line">
                 <span></span>
             </div>
@@ -57,9 +57,10 @@
                     </div>
                     
                     <span>Insira o código recebido no E-mail.</span>
-                    <nav>
-                        <button><a href="../../../app/admin/view/recuperar-senha-novaSenha.php">Enviar</a></button>
-                    </nav>
+
+                    <div class="btnEnviar">
+                        <a href="./recuperar-senha-novaSenha.php" type="submit" class="btn">Entrar</a>
+                    </div>
                 </form>
             </div>
         </main>

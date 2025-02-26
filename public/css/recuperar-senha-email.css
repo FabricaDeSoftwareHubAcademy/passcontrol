@@ -276,7 +276,7 @@ main{
 }
 .formRecuperar nav a {
     width: 100%;
-    height: 100%;
+    /* height: 100%; */
     color: #fff;
     font-size: 16px;
     font-style: none;
@@ -285,25 +285,32 @@ main{
     justify-content: center;
     text-decoration: none;
 }
-.formRecuperar nav button{
+.btnEntrar{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin-top: 20%;
+}
+.btn{
     width: 100px;
     height: 40px;
     background-color: #33404D;
     color: white;
     border-radius: 12px;
-    margin-right: 20px;
+    /* margin-right: 20px; */
     font-size: 16px;
     cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
     text-decoration: none;
-    border: none;
 }
 
-.formRecuperar nav button:hover{
+.btn:hover{
     background-color: #181f26;
-    color: #3AA867;
+    color: #3aa867;
     transition: linear 0.04s;
 }
 
