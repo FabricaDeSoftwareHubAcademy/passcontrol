@@ -202,6 +202,7 @@
     left: 0;
     bottom: 0;
     width: 25vh;
+    min-width: 30px;
     justify-content: start;
     align-content: end;
     z-index: 2;
@@ -442,6 +443,7 @@
 @media screen and (max-width: 1200px) {
     .area-lateral-navegacao{
         width: 6vh;
+        min-width: 30px;
     }
     .botao-lateal-navegacao{
         justify-content: center;
@@ -458,6 +460,7 @@
     
     .area-lateral-navegacao:hover{
         width: 25vh;
+        min-width: 180px;
         transition: all .1s ease;
     }
     .area-lateral-navegacao:hover .botao-lateal-navegacao{
@@ -490,6 +493,7 @@
 @media screen and (max-height: 625px) and (min-height: 611px){
     .area-lateral-navegacao{
         width: 6vh;
+        min-width: 30px;
     }
     
     .botao-lateal-navegacao .icone-menu-lateral{
@@ -502,6 +506,7 @@
     
     .area-lateral-navegacao:hover .botao-lateal-navegacao{
         width: 25vh;
+        min-width: 100px;
         transition: all .1s ease;
     }
     
