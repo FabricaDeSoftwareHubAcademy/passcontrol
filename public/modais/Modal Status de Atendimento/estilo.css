@@ -1,0 +1,152 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.estruct-pass {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f5f5f5;
+}
+
+.botao-modal {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: #33404D;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.modal-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    align-items: center;
+    justify-content: center;
+}
+
+.modal {
+    background: #fff;
+    padding: 20px;
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+    border-radius: 2px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.modal-title {
+    font-size: 25px;
+    font-weight: bold;
+    color: black;
+}
+
+.modal-icon {
+    width: 70px; /* Ajuste conforme necessário */
+    height: auto;
+}
+
+.row {
+    width: calc(100% + 40px); /* Aumenta um pouco além da largura do modal */
+    border: 1px solid #000; /* Mantém a borda visível */
+    margin-left: -16.2vw; /* Move para a esquerda metade da largura da tela */
+    left: 50%; /* Centraliza no modal */
+    position: relative; /* Mantém a posição relativa ao modal */
+}
+
+/* Estilização da tabela */
+.status-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.table-header {
+    background-color: #33404D;
+    color: white;
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.status-table td, .status-table th {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+.status-name {
+    font-weight: bold;
+}
+
+/* Cores dos status */
+.em-atendimento {
+    color: blue;
+}
+
+.disponivel {
+    color: green;
+}
+
+.intervalo {
+    color: orange;
+}
+
+/* Botão de fechar */
+.close {
+    margin-top: 20px;
+    background-color: #33404D;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.close:hover {
+    transform: scale(1.05); /* Pequeno efeito de zoom */
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 1200px) {
+    .row {
+        width: calc(100% - 20px); /* Redução leve para evitar cortes */
+    }
+}
+
+@media (max-width: 768px) {
+    .row {
+        width: calc(100% - 10px); /* Ajuste menor para telas médias */
+    }
+}
+
+@media (max-width: 480px) {
+    .row {
+        width: 100%; /* Em telas menores, usa 100% para manter a proporção */
+    }
+}
+
+@media (max-width: 320px) {
+    .row {
+        width: 100%; /* Mantém largura total do modal */
+        margin: 5px 0; /* Reduz o espaçamento vertical */
+    }
+}
