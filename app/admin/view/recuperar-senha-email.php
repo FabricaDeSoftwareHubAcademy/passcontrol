@@ -15,7 +15,7 @@
 <body class="recuperarSenha">
     <div class="box">
 
-        <div class="GroupLine">
+        <div class="GroupLine groupLeft">
             <div class="line">
                 <span></span>
             </div>
@@ -48,7 +48,7 @@
                     <span>Você receberá um código de segurança em seu e-mail cadastrado para validar sua nova senha </span>
 
                     <nav>
-                        <button><a href="../../../app/admin/view/recuperar-senha-codigo.php">Enviar</a></button>
+                        <button class="btnEnviarRecuperarSenha"><a href="../../../app/admin/view/recuperar-senha-codigo.php">Enviar</a></button>
                     </nav>
                 </form>
             </div>
