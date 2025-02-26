@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="../../../public/css/edit_cadastro.css">
     <link rel="stylesheet" href="../../../public/modais/Modal Confirmação dos Dados Registrados/estilo.css">
 
-    <link rel="shortcut icon" type="imagex/png" href="../../../public/img/Logo-Nota-Controlnt.ico">
+    <link rel="shortcut icon" type="imagex/png" href="https://public/img/Logo-Nota-Controlnt.ico">
 
     <!-- IMPORT DO JS -->
     <script src="../../../public/js/modal_salvar_cadastro.js"></script>
@@ -122,7 +122,7 @@
     include "./monitor-modal.php";
     ?>
     
-    <script src="../../../public/js/todos.js" defer></script>
+    <script src="https://public/js/todos.js" defer></script>
 </body>
 </html>
 
