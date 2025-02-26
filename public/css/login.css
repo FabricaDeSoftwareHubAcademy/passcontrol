@@ -97,7 +97,7 @@ body{
     /* border: 1px solid red; */
 }
 .formBoxLogin .group{
-    width: 80%;
+    width: 100%;
     display: flex;
     align-items: start;
     justify-content: center;
@@ -156,7 +156,7 @@ body{
     background-color: #33404D;
     color: white;
     border-radius: 12px;
-    margin-right: 20px;
+    /* margin-right: 20px; */
     font-size: 16px;
     cursor: pointer;
     display: flex;
@@ -167,12 +167,12 @@ body{
 
 .btn:hover{
     background-color: #181f26;
-    color: var(--verde-control);
+    color: #3aa867;
     transition: linear 0.04s;
 }
 
 .navEsqueciSenha{
-    width: 80%;
+    width: 100%;
     height: 20px;
     display: flex;
     align-items: center;
@@ -341,7 +341,7 @@ body{
 .spnEsqueciSenha::after{
     content: " ";
     width: 0;
-    height: 3px;
+    height: 2px;
     background-color: #3aa867;
     position: absolute;
     top: 15px;

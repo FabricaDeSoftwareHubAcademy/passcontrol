@@ -66,7 +66,7 @@
             <form action="#" method="post" class="formBoxLogin">
                 <div class="group user">
                     <label for="name">Usuário</label>
-                    <input type="text" placeholder="Ex: usuario@gmail.com">
+                    <input type="text" placeholder="usuario@gmail.com">
                 </div>
                 <div class="group senha-telaLogin">
                     <label for="password">Senha</label>

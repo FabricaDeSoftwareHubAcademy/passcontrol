@@ -18,7 +18,7 @@
 <body class="recuperarSenha">
     <div class="box">
 
-        <div class="GroupLine">
+        <div class="GroupLine groupLeft">
             <div class="line">
                 <span></span>
             </div>
@@ -55,17 +55,17 @@
                         
                     <div class="containerConfNovaSenha">    
                         <label for="" class="lblRecuperar">Confirme a nova senha</label>
-                        <input id="confirmSenha" type="password" class="inpRecuperar" placeholder="Conf. nova Senha">
+                        <input id="confirmSenha" type="password" class="inpRecuperar" placeholder="Confirme">
                         <i class="fas fa-eye" id="togglePassword"></i>
                     </div>
                     
                     <div class="containerRequisitoSenhas">
                         <h1>A senha deverá conter:</h1>
                         <ul>
-                            <li id="digito" class="RequisitosMin " >Mínimo 8 dígitos</li>
-                            <li id="maiusca" class="RequisitosMin ">Maiúscula</li>
-                            <li id="numero" class="RequisitosMin ">Número</li>
-                            <li id="caracEspec" class="RequisitosMin " >Caractere Especial</li>
+                            <li id="digito" class="RequisitosMin " >Mínimo de 8 Digitos</li>
+                            <li id="maiusca" class="RequisitosMin ">1 Letra Maúscula</li>
+                            <li id="numero" class="RequisitosMin ">1 Número</li>
+                            <li id="caracEspec" class="RequisitosMin " >1 Caractere Especial</li>
                         </ul>
                     </div>
                     <nav>
