@@ -24,7 +24,7 @@
     include "./navegacao.php";
     ?>
 
-    <section class="Area-Util-Projeto">
+    <section class="Area-Util-Projeto-Eli">
         <!-- INICIO DA ÁREA ÚTIL DA PÁGINA -->
         <!-- INSIRA O CORPO DA SUA PÁGINA A PARTIR DESTE PONTO -->
 
@@ -60,10 +60,11 @@
             <main class="area-cards">
                 <div class="container_menu">
                     <div class="wrapper">
+                        <a href="configuracao-autoatendimento.php">
                         <div class="banner-img">
                             <img src="../../../public/img/img-menu/gestaodoautoatendimento.png" alt="">
                         </div>
-
+                        </a>
                         <!-- <h3 class="titulo-card">Autoatendimento</h3> -->
                         <!-- <p>Gestão do Autoatendimento.</p> -->
                     </div>
@@ -73,9 +74,11 @@
                 </div>
                 <div class="container_menu">
                     <div class="wrapper">
+                        <a href="./monitor-modal.php">
                         <div class="banner-img">
                             <img src="../../../public/img/img-menu/visualizaçaomonitordeautoatendimento.png" alt="">
                         </div>
+                        </a>
                         <!-- <h3 class="titulo-produto">Monitor</h3> -->
                         <!-- <p>Visualizar Monitor de Autoatendimento</p> -->
                     </div>

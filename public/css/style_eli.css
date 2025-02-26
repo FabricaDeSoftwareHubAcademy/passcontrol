@@ -1,6 +1,7 @@
 @import url(navegacao.css);
 @import url(base_area_util_eli.css);
 @import url(menu_eli.css);
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 *{
@@ -112,6 +113,7 @@
 .outline:hover{
   background-color: transparent;
   color: rgb(7, 34, 156);
+  border: none;
 }
 @media screen and (max-width:1200px){
   .nome_da_area_eli{
