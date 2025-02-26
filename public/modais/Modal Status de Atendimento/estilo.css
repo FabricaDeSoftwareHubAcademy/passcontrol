@@ -10,6 +10,7 @@
     align-items: center;
     justify-content: center;
     height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
     background-color: #f5f5f5;
 }
 
@@ -36,7 +37,7 @@
 }
 
 .modal {
-    background: #fff;
+    background: #e0e0e0;
     padding: 20px;
     width: 90%;
     max-width: 600px;
@@ -55,7 +56,7 @@
 }
 
 .modal-title {
-    font-size: 25px;
+    font-size: 28px;
     font-weight: bold;
     color: black;
 }
@@ -66,11 +67,13 @@
 }
 
 .row {
-    width: calc(100% + 40px); /* Aumenta um pouco além da largura do modal */
-    border: 1px solid #000; /* Mantém a borda visível */
-    margin-left: -16.2vw; /* Move para a esquerda metade da largura da tela */
-    left: 50%; /* Centraliza no modal */
-    position: relative; /* Mantém a posição relativa ao modal */
+    border: none;
+    border-top: 3px solid #000;
+    width: 32.4vw; /* Largura total da tela (viewport) */
+    margin-left: calc(-16.2vw + 50%); /* Centraliza a linha no modal */
+    margin-right: calc(-20vw + 50%); /* Centraliza a linha no modal */
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 /* Estilização da tabela */
@@ -83,6 +86,7 @@
 .table-header {
     background-color: #33404D;
     color: white;
+    font-weight: bold;
     padding: 10px;
     text-align: left;
     border: 1px solid #ddd;
@@ -90,7 +94,7 @@
 
 .status-table td, .status-table th {
     padding: 10px;
-    border: 1px solid #ddd;
+    border: 1px solid #33404D;
 }
 
 .status-name {
@@ -110,12 +114,16 @@
     color: orange;
 }
 
+.status-desc{
+    font-weight: bold;
+}
+
 /* Botão de fechar */
 .close {
     margin-top: 20px;
     background-color: #33404D;
     color: white;
-    padding: 10px;
+    padding: 12px 27px;
     border: none;
     cursor: pointer;
     border-radius: 5px;
@@ -126,27 +134,113 @@
 }
 
 /* RESPONSIVIDADE */
+
+/* Ajustes para telas entre 1024px e 1200px */
 @media (max-width: 1200px) {
+    .modal {
+        width: 85%;
+        max-width: 650px;
+    }
+
     .row {
-        width: calc(100% - 20px); /* Redução leve para evitar cortes */
+        width: 100%;
+        margin: 15px 0;
     }
 }
 
+@media (max-width: 1024px) {
+    .modal {
+        width: 90%;
+        max-width: 600px;
+    }
+
+    .row {
+        width: 100%;
+        margin: 12px 0;
+    }
+}
+
+/* Ajustes para telas menores que 768px */
 @media (max-width: 768px) {
-    .row {
-        width: calc(100% - 10px); /* Ajuste menor para telas médias */
+    .modal {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .modal-title {
+        font-size: 20px;
+    }
+
+    .modal-icon {
+        width: 50px;
+    }
+
+    .botao-modal, .close {
+        padding: 10px 20px;
+        font-size: 14px;
     }
 }
 
+/* Ajustes para telas menores que 480px */
 @media (max-width: 480px) {
+    .modal {
+        width: 100%;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    .modal-header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .modal-title {
+        font-size: 18px;
+    }
+
+    .modal-icon {
+        width: 40px;
+        margin-top: 5px;
+    }
+
     .row {
-        width: 100%; /* Em telas menores, usa 100% para manter a proporção */
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    .status-table td, .status-table th {
+        padding: 8px;
+    }
+
+    .botao-modal, .close {
+        padding: 8px 16px;
+        font-size: 12px;
     }
 }
 
+/* Ajustes para telas menores que 320px */
 @media (max-width: 320px) {
+    .modal {
+        width: 100%;
+        padding: 8px;
+    }
+
+    .modal-title {
+        font-size: 16px;
+    }
+
+    .modal-icon {
+        width: 35px;
+    }
+
     .row {
-        width: 100%; /* Mantém largura total do modal */
-        margin: 5px 0; /* Reduz o espaçamento vertical */
+        width: 100%;
+        margin: 4px 0 !important;
+    }
+
+    .botao-modal, .close {
+        padding: 6px 12px;
+        font-size: 10px;
     }
 }
