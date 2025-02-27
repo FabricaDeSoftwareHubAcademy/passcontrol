@@ -102,15 +102,15 @@
 
 /* Cores dos status */
 .em-atendimento {
-    color: blue;
+    color: #0080C8;
 }
 
 .disponivel {
-    color: green;
+    color: #3AA867;
 }
 
 .intervalo {
-    color: orange;
+    color: #FFA800;
 }
 
 .status-desc{
