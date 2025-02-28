@@ -35,6 +35,14 @@ main {
     border-radius: 3px;
 }
 
+.linha {
+    background-color: #2d3945;
+    height: 6px;
+    top: -1px;
+    margin-left: 2.9%;
+    margin-right:2.9%  ;
+    width: 94.1%;
+}
 
 .cubo-branco {
     padding: 30px;
@@ -51,46 +59,72 @@ main {
 }
 
 
-.linha {
-    background-color: #2d3945;
-    height: 6px;
-    top: -1px;
-    margin-left: 2.9%;
-    margin-right:2.9%  ;
-    width: 94.1%;
-}
 .tabela {
     width: 100%;
     display: flex;
     justify-content: center;
     padding: 20px;
-    max-height: 650px;
+    max-height: 615px;
 
 }
-.menu-tabela {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-}
+/* Contêiner da tabela */
 .tabela-container {
-    width: 300%; /* A largura do contêiner da tabela será 100% */
-    overflow-x: auto; /* Rolagem horizontal quando necessário */
-    overflow-y: auto; /* Rolagem vertical quando necessário */
-    max-height: 590px; /* Defina a altura máxima do contêiner */
+    width: 300%;
+    max-height: 594px; /* Limite de altura para a rolagem */
+    overflow-y: auto; /* Permite a rolagem vertical */
 }
 
+/* Tabela */
 .tabela-3x3 {
-    width: 100%; /* A tabela ocupa 100% da largura do seu contêiner */
-    table-layout: fixed; /* Força as colunas a terem a mesma largura */
-    border-collapse: collapse;
+    width: 100%;
+    table-layout: fixed; /* As colunas terão o mesmo tamanho */
+    border-collapse: collapse; /* Remove espaços entre as células */
 }
 
-.tabela-3x3 th, .tabela-3x3 td {
+/* Cabeçalhos das colunas */
+.tabela-3x3 th {
+    background-color: #2d3945;
+    color: white;
+    padding: 10px;
+    border: 1px solid #000;
+    text-align: center;
+    position: sticky; /* Fixa o cabeçalho no topo */
+    top: 0;
+    z-index: 10;
+}
+
+/* Células da tabela */
+.tabela-3x3 td {
     padding: 8px;
-    text-align: left;
+    border: 1px solid #000;
+    text-align: center;
+    background-color: #fff;
+}
+
+/* Linhas alternadas */
+.tabela-3x3 tr:nth-child(even) {
+    background-color: #f7f7f7;
+}
+
+/* Barra de rolagem personalizada */
+.tabela-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.tabela-container::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 4px;
+}
+
+.tabela-container::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+
+.tabela-3x3 td {
+    padding: 8px;
     border: 1px solid #000000;
+    background-color: #ffffff;
     box-sizing: border-box;
     word-wrap: break-word; /* Quebra o texto automaticamente */
     white-space: normal; /* Permite que o texto se quebre em várias linhas */
@@ -100,16 +134,13 @@ main {
 .tabela-3x3 th {
     background-color: #2d3945;
     color: #fff;
+    border: 1px solid #000000;
     position: sticky; /* Fixa o cabeçalho durante o scroll */
     top: 0;
     z-index: 10;
     padding: 10px;
 }
 
-.tabela-3x3 td {
-    background-color: #ffffff;
-    padding: 8px;
-}
 
 .tabela-3x3 tr:nth-child(even) {
     background-color: #f7f7f7;
@@ -187,21 +218,16 @@ main {
         padding: 5px;
     }
     .tabela-container {
-    
-        max-height: 590px; /* Defina a altura máxima do contêiner */
+    max-height: 590px; /* Defina a altura máxima do contêiner */
     }
-    
-
     .tabela-3x3 th, .tabela-3x3 td {
         font-size: 18px;
         padding: 6px;
     }
-
     .barra-pesquisa {
         width: 20%;
         margin-right: 2.4%;
     }
-
     .linha {
         margin-top: -1px;
         margin-left: 52px;
@@ -233,6 +259,14 @@ main {
         table-layout: fixed;
         border-collapse: collapse;
     }
+    .tabela-3x3 td {
+        font-size: 13px;
+        padding: 6px;
+    }
+    .tabela-3x3 th{
+        font-size: 14px;
+        padding: 6px;
+    }
 
     .barra-pesquisa {
         width: 21.5%;
@@ -255,19 +289,32 @@ main {
     .titulo{
         font-size: 100%;
     }
+    .tabela {
+        padding: 1px;
+    }
     .menu-tabela {
-        width: 20%;
-        padding: 5px;
+        width: 65%;
+        max-width: 320px;
+        padding: 1px;
     }
     .tabela-container {
-        width: 650%; /* A largura do contêiner da tabela será 100% */
+        width: 170%; /* A largura do contêiner da tabela será 100% */
         overflow-x: auto; /* Rolagem horizontal quando necessário */
-        max-height: 590px; /* Defina a altura máxima do contêiner */
+        max-height: 509px !important; /* Defina a altura máxima do contêiner */
     }
     .tabela-3x3 {
         width: 100%;
         table-layout: fixed;
         border-collapse: collapse;
+    }
+    .tabela-3x3 th {
+        font-size: 12px;
+     
+    }
+    .tabela-3x3 td {
+        font-size: 10.5px;
+        padding: 3px;
+        align-items: left;
     }
     .barra-pesquisa {
         margin-top: -10px;
@@ -314,12 +361,32 @@ main {
         margin-left:53px ;
         margin-right: 20px;
     }
+    .tabela {
+        padding: 1px;
+    }
+    .menu-tabela {
+        width: 65%;
+        max-width: 320px;
+        padding: 1px;
+    }
     .tabela-container {
-        width: 700%;
-        max-height: 590px; /* A largura do contêiner da tabela será 100% */
+        width: 170%; /* A largura do contêiner da tabela será 100% */
+        overflow-x: auto; /* Rolagem horizontal quando necessário */
+        max-height: 650px; /* Defina a altura máxima do contêiner */
     }
     .tabela-3x3 {
         width: 100%;
+        table-layout: fixed;
+        border-collapse: collapse;
+    }
+    .tabela-3x3 th {
+        font-size: 10px;
+     
+    }
+    .tabela-3x3 td {
+        font-size: 10.5px;
+        padding: 3px;
+        align-items: left;
     }
 
     .actions img {
@@ -333,23 +400,33 @@ main {
         font-size: 13px;
         margin-left: 10.4%;
     }
-
+    .tabela {
+        padding: 1px;
+    }
     .menu-tabela {
-        width: 9.5%;
-        padding: 5px;
+        width: 65%;
+        max-width: 320px;
+        padding: 1px;
     }
     .tabela-container {
-        width: 1600%; /* A largura do contêiner da tabela será 100% */
+        width: 170%; /* A largura do contêiner da tabela será 100% */
+        overflow-x: auto; /* Rolagem horizontal quando necessário */
+        max-height: 650px; /* Defina a altura máxima do contêiner */
     }
-
     .tabela-3x3 {
         width: 100%;
+        table-layout: fixed;
+        border-collapse: collapse;
     }
-    
     .tabela-3x3 th {
-      font-size: 16px;
+        font-size: 10px;
+     
     }
-
+    .tabela-3x3 td {
+        font-size: 10.5px;
+        padding: 3px;
+        align-items: left;
+    }
     .barra-pesquisa {
         width: 21.5%;
         margin-right: 7.5%;
@@ -366,6 +443,100 @@ main {
     .actions img {
         width: 20px;
         height: 20px;
+    }
+}
+@media (max-width: 514px) {
+
+    .cubo-branco {
+        top: 78px; 
+        right:20px; 
+        left: 20px; 
+        bottom: 7vh; 
+    }
+    .titulo {
+        font-size: 13px;
+        margin-top: 40px;
+        margin-right:100px !important;
+        
+    }
+    .linha {
+        width: 91.5% !important;
+    }
+    .barra-pesquisa {
+        width: 25%;
+        margin-top: 1px;
+        margin-right: 6px !important;
+        
+    }
+    .input-pesquisa {
+        padding: 1px;
+        width: 100% !important;   /*para garantir que o width seja aplicado corretamente. */
+        font-size: 10px ;
+        border-radius: 5px;
+        height:5px;
+    }
+    .linha {
+        margin-top:-1px;
+        margin-left: 20px;
+        width: 86%;
+    }
+    .tabela {
+        padding: 1px;
+    }
+    .menu-tabela {
+        width: 65%;
+        max-width: 320px;
+        padding: 1px;
+    }
+    .tabela-container {
+        width: 160%; /* A largura do contêiner da tabela será 100% */
+        overflow-x: auto; /* Rolagem horizontal quando necessário */
+        max-height: 650px; /* Defina a altura máxima do contêiner */
+    }
+    .tabela-3x3 {
+        width: 100%;
+        table-layout: fixed;
+        border-collapse: collapse;
+    }
+    .tabela-3x3 th {
+        font-size: 11px;
+     
+    }
+    .tabela-3x3 td {
+        font-size: 13.5px;
+        padding: 3px;
+        align-items: left;
+    }
+    .toggle-btn {
+        width: 23.5px;
+        height: 13px;
+        background-color: #ffffff;
+        border-radius: 40px;
+        border: 1px solid #000000;
+        position: relative;
+        top:1px;
+    }
+    .toggle-btn .circle {
+        width: 9px;
+        height: 9px;
+       
+        
+    }
+    .toggle-btn.active .circle {
+        left: 10px;
+        top: 1px;
+    }
+    .actions img {
+        width: 15px;
+        height: 15px;
+    }
+    .styled-button {
+        width: 20%;  /* Ajustando a largura do botão para ocupar 80% da tela */
+        position: absolute; /* Posicionando o botão de forma absoluta */
+        left: 80%; /* Colocando o botão centralizado com a largura ajustada */
+        bottom: -50px;  /* Ajustando a posição para a parte inferior */
+        padding: 7px 3px;
+        font-size: 10px;
     }
 }
 @media (max-width: 320px) {
