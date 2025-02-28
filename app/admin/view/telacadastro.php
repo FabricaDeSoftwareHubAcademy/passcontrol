@@ -33,43 +33,37 @@
     <!-- <section class="grupo"> -->
         <!-- Codigo luan -->
             
-        <div class="titulo">
-            <h1 class="cadastro_title">Cadastrar Usuário</h1><br>
+        <div class="titulo_cds">
+            <h1>Cadastrar Usuário<br></h1>
             <hr>   
         </div>
 
         <div class="quadrado">
-            <div class="container-flex">
-                <section class="forme">
-                        <div class="nome">
-                            <label class="labeledit" for="nome">Nome*</label>    
-                            <input class="borda" type="text" name="nome" placeholder="Digite aqui o nome do usuário"> 
-                        </div>
-                        <div class="email">
-                            <label class="labeledit" for="email">Email*</label>    
-                            <input class="borda" type="text" name="email" placeholder="Digite aqui o Email do usuário">
-                        </div>
+                    <div class="nome">
+                        <label class="labeledit" for="nome">Nome*</label>    
+                        <input class="borda" type="text" name="nome" placeholder="Digite aqui o nome do usuário"> 
+                    </div>
+                    <div class="email">
+                        <label class="labeledit" for="email">Email*</label>    
+                        <input class="borda" type="text" name="email" placeholder="Digite aqui o Email do usuário">
+                    </div>
                         <div class="cpf">    
-                            <label class="labeledit" for="cpf">CPF</label>
-                            <input class="borda" type="text" name="email" placeholder="Digite aqui o CPF do usuário">
-                        </div>
-                </section>
-            </div>
-
+                        <label class="labeledit" for="cpf">Cpf*</label>
+                    <input class="borda" type="text" name="email" placeholder="Digite aqui o CPF do usuário">
+                 </div>
             <div class="selecionar">
-                <div class="perfild">    
-                    <label class="labeledit" for="perfil">Perfil De Acesso</label>
-
-                    <select class="selecao" name="plataforma" required="required">
+                <div class="perfild">   
+                        <label class="labeledit" for="perfil">Perfil De Acesso</label>
+                    <select class="selecao" name="plataforma" required>
                         <option class="pi" value="admin">Administrador</option>
                         <option class="pi" value="sup">Supervisor</option>
                         <option class="pi" value="atend">Atendente</option>
                         <option class="pi" value="auto-at">Terminal de Autoatendimento</option>
                     </select>
-                </div>    
-                
-                <title class="servico">Seviços</title> 
-                    <div class="checkbox-container">
+                </div>
+            </div>    
+            <title class="servico">Seviços</title> 
+                <div class="checkbox-container">
                         <div class="column-1"> 
                             <label class="customizado"> 
                                 <input type="checkbox" class="item" id="checkbox"> 
@@ -90,24 +84,24 @@
                         </div> 
                         <div class="column-2"> 
                             <div class="caixa"></div> 
-                            <label class="customizado">      
-                                <input type="checkbox" class="item" id="checkbox">
-                                <span class="teste">Licenças</span>
-                            </label> 
-                            <label class="customizado"> 
-                                <input type="checkbox" class="item" id="checkbox"> 
-                                <span class="teste">Ouvidoria</span> 
-                            </label> 
-                            <label class="customizado"> 
-                                <input type="checkbox" class="item" id="checkbox"> 
-                                <span class="teste">Poda De Àrvores</span> 
-                            </label>
-                            <label class="customizado"> 
-                                <input type="checkbox" id="select-all"> 
-                                <span class="teste" for="select-all">Selecionar Todos</span> 
-                            </label>   
-                        </div>
+                        <label class="customizado">      
+                            <input type="checkbox" class="item" id="checkbox">
+                            <span class="teste">Licenças</span>
+                        </label> 
+                        <label class="customizado"> 
+                            <input type="checkbox" class="item" id="checkbox"> 
+                            <span class="teste">Ouvidoria</span> 
+                        </label> 
+                        <label class="customizado"> 
+                            <input type="checkbox" class="item" id="checkbox"> 
+                            <span class="teste">Poda De Àrvores</span> 
+                        </label>
+                        <label class="customizado"> 
+                            <input type="checkbox" id="select-all"> 
+                            <span class="teste" for="select-all">Selecionar Todos</span> 
+                        </label>   
                     </div>
+                </div>
             </div>
         </div>
         <div class="form-actions2">
@@ -116,13 +110,11 @@
         </div>
         <main-salvar-cad></main-salvar-cad>
     </section>
-    
+    <script src="../../../public/js/todos.js" defer></script>
     <!--MONITOR MODAL-->
     <?php
     include "./monitor-modal.php";
     ?>
-    
-    <script src="https://public/js/todos.js" defer></script>
 </body>
 </html>
 
