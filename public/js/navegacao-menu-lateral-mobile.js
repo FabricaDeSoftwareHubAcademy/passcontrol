@@ -35,3 +35,10 @@ document.addEventListener('click', event => {
         menuInfoUsuario.classList.remove('menu-visivel');
     }
 });
+
+// MENU-ESTACIONARIO 
+// const btnAtivoMenu = document.querySelector(".")
+
+// function toggleMenu() {
+//     document.getElementById("mobileMenu").classList.toggle("ativo-estacionario");
+// }
