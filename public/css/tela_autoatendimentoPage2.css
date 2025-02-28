@@ -220,6 +220,11 @@
     .page-title {
         font-size: 24px;
     }
+
+    .workspace {
+        background-size: 250px;
+    }
+
     .area-cinza {
         min-height: 70vh; 
         height: auto; 
@@ -303,8 +308,3 @@
  
 }
 
-@media (max-width: 600px) {
-        .workspace {
-            background-size: 250px;
-        }
-}
