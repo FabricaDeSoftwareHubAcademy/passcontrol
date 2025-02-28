@@ -180,7 +180,7 @@
     display: flex;
     flex-direction: row;
     width: 100%;
-    margin-top: 45px;
+    margin-top: 40px;
     /* align-items: flex-end; */
     align-content: flex-end;
     /* justify-content: space-between; */
@@ -431,7 +431,7 @@ thead, tbody tr {
 } 
 tbody { 
     display: block; 
-    max-height: 230px; 
+    max-height: 160px;  
     overflow-y: scroll;  
     position: relative; 
 
@@ -523,6 +523,9 @@ thead, tbody tr {
     .meio-guiche-area-chamada h3{
         font-size: 26px;
     }
+    tbody { 
+        max-height: 140px; 
+    } 
 }
 @media screen and (min-width: 1200px) and (max-width: 1440px) {
     .informacoes-area-chamada{
@@ -573,6 +576,12 @@ thead, tbody tr {
     .meio-guiche-area-chamada h3{
         font-size: 26px;
     }
+    .fundo-guiche-area-chamada{
+        overflow-x: auto; 
+    }
+    tbody { 
+        max-height: 140px; 
+    } 
 }
 @media screen and (min-width: 1000px) and (max-width: 1199px) {
     .fundo-guiche-area-chamada{
@@ -629,6 +638,9 @@ thead, tbody tr {
     td { 
         font-size: 15px;
     }
+    tbody { 
+        max-height: 160px; 
+    } 
 }
 @media screen and (min-width: 710px) and (max-width: 999px) {
     .fundo-guiche-area-chamada{
@@ -728,6 +740,9 @@ thead, tbody tr {
     td { 
         font-size: 15px;
     }
+    tbody { 
+        max-height: 150px; 
+    } 
 }
 @media screen and (min-width: 635px) and (max-width: 709px) {
     .direita-guiche-area-chamada{
@@ -837,6 +852,9 @@ thead, tbody tr {
     td { 
         font-size: 14.5px;
     }
+    tbody { 
+        max-height: 190px; 
+    } 
 }
 @media screen and (min-width: 535px) and (max-width: 634px) {
     .direita-guiche-area-chamada{
@@ -963,6 +981,9 @@ thead, tbody tr {
     td { 
         font-size: 14.5px;
     }
+    tbody { 
+        max-height: 170px; 
+    } 
 }
 @media screen and (min-width: 435px) and (max-width: 534px) {
     .topo-area-chamada{
@@ -1088,6 +1109,9 @@ thead, tbody tr {
     td { 
         font-size: 14.5px;
     }
+    tbody { 
+        max-height: 230px; 
+    } 
 }
 
 @media screen and (min-width: 200px) and (max-width: 434px) {
@@ -1212,6 +1236,9 @@ thead, tbody tr {
     td { 
         font-size: 14px;
     }
+    tbody { 
+        max-height: 220px; 
+    } 
 }
 
 @media screen and (min-height: 200px) and (max-height: 670px) {
