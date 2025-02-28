@@ -5,13 +5,13 @@
     box-sizing: border-box;
 }
 
-.body {
+.body-container {
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #f5f5f5;
+    background-color: #F5F5F5
 }
 
 /* Botões gerais */
@@ -50,64 +50,36 @@
 
 /* Estilo do modal */
 .modal {
-    background-color: #e0e0e0;
-    width: 80%; /* Aumenta a largura inicial */
-    max-width: 600px;
-    padding: 40px; /* Mais espaço interno */
+    background-color: #ddd;
+    width: 60%;
+    max-width: 550px;
+    padding: 30px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     position: relative;
-    text-align: left;
+    text-align: center;
 }
 
-.linha-separadora {
+.modal-divider {
     border: none;
     border-top: 3px solid #000;
-    width: 32.4vw; /* Largura total da tela (viewport) */
-    margin-left: calc(-16.2vw + 50%); /* Centraliza a linha no modal */
-    margin-right: calc(-20vw + 50%); /* Centraliza a linha no modal */
+    width: calc(100% + 60px); /* Adiciona o padding do modal */
+    margin-left: -30px; /* Ajusta para expandir até as bordas */
     margin-top: 20px;
     margin-bottom: 20px;
 }
 
 .logo {
-    width: 10%; /* Ocupa 20% da largura do modal */
+    width: 60px;
     position: absolute;
-    top: 28px;
-    right: 20px;
+    top: 15px;
+    right: 15px;
 }
 
 /* Tipografia */
-.titulo-modal {
-    font-size: 28px;
-    margin-bottom: 40px;
+.modal-title {
+    font-size: 24px;
     font-weight: bold;
-}
-
-.texto-confirmacao {
-    font-size: 18px;
-    margin: 20px 0;
-    text-align: center;
-}
-
-/* Grupo de botões */
-.button-group {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 20px;
-}
-
-.Okay {
-    background-color: #33404D;
-    color: white;
-    border-radius: 5px;
-    font-size: 14px;
-    padding: 10px 30px;
-}
-
-.Okay:hover {
-    color: #3AA867;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    text-align: left;
 }
 
 .check-image{
@@ -117,111 +89,146 @@
     margin: 0 auto;
 }
 
+/* Tipografia */
+.modal-title {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.modal-message {
+    margin-top: 40px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Grupo de botões */
+.button-group {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.botao-modal.Okay {
+    background-color: #33404D;
+    color: white;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 12px 30px;
+    margin-bottom: 30px;
+}
+
+.botao-modal.Okay:hover {
+    color: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
 /* Responsividade */
-
-/* Telas pequenas (320px a 399px) */
-@media (min-width: 320px) and (max-width: 399px) {
-    .modal {
-        width: 95%;
-        padding: 15px;
-    }
-
-    .titulo-modal {
-        font-size: 14px;
-    }
-
-    .logo {
-        top: 15px;
-        width: 40px;
-    }
-
-    .linha-separadora {
-        border: none;
-        border-top: 3px solid #000;
-        width: 111%; /* Garante que a linha ocupe toda a largura do modal */
-        margin-left: -5.50%; /* Ajusta a centralização */
-        margin-right: 0; /* Garante que a linha fique centralizada */
-    }
-}
-
-/* Telas pequenas (400px a 480px) */
-@media (min-width: 400px) and (max-width: 480px) {
-    .modal {
-        width: 95%;
-        padding: 20px;
-    }
-
-    .titulo-modal {
-        font-size: 18px;
-    }
-
-    .logo {
-        top: 10px;
-        width: 50px;
-    }
-
-    .linha-separadora {
-        border: none;
-        border-top: 3px solid #000;
-        width: 108.5%; /* Garante que a linha ocupe toda a largura do modal */
-        margin-left: -4.25%; /* Ajusta a centralização */
-        margin-right: 0; /* Garante que a linha fique centralizada */
-    }
-}
-
-/* Telas médias (até 480px) */
-@media (max-width: 480px) {
-    .modal {
-        width: 80%;
-        padding: 25px;
-    }
-
-    .linha-separadora {
-        width: 100%; /* Garante que a linha ocupe toda a largura do modal */
-        margin-left: 0; /* Centraliza a linha no modal */
-        margin-right: 0; /* Remove qualquer margem que distorça */
-    }
-}
-
-/* Telas médias (até 768px) */
-@media (max-width: 768px) {
-    .modal {
-        width: 70%;
-    }
-
-    .linha-separadora {
-        width: 115%; /* Garante que a linha ocupe toda a largura do modal */
-        margin-left: -7.50%; /* Ajusta a centralização */
-        margin-right: 0; /* Remove qualquer margem que distorça */
-    }
-}
-
-/* Telas grandes (até 1024px) */
-@media (max-width: 1024px) {
-    .modal {
-        width: 80%;
-    }
-
-    .linha-separadora {
-        width: 115%; /* Garante que a linha ocupe toda a largura do modal */
-        margin-left: -7.50%; /* Ajusta a centralização */
-        margin-right: 0; /* Remove qualquer margem que distorça */
-    }
-}
-
-/* Telas grandes (até 1200px) */
 @media (max-width: 1200px) {
     .modal {
-        width: 70%;
+        width: 100%;
     }
-
-    .titulo-modal {
-        margin-bottom: 30px;
+    .modal-title {
+        font-size: 28px;
     }
+    .modal-message {
+        font-size: 22px;
+    }
+    .logo {
+        width: 70px;
+        top: 10px;
+    }
+}
 
-    .linha-separadora {
-        width: 115%; /* Garante que a linha ocupe toda a largura do modal */
-        margin-left: -7.50%; /* Ajusta a centralização */
-        margin-right: 0; /* Remove qualquer margem que distorça */
+@media (max-width: 1024px) {
+    .modal {
+        width: 100%;
+    }
+    .modal-title {
+        font-size: 28px;
+    }
+    .modal-message {
+        font-size: 22px;
+    }
+    .logo {
+        width: 60px;
+        top: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .modal {
+        width: 100%;
+    }
+    .modal-title {
+        font-size: 25px;
+    }
+    .modal-message {
+        font-size: 20px;
+    }
+    .logo {
+        width: 60px;
+        top: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .modal {
+        width: 90%;
+    }
+    .modal-title {
+        font-size: 22px;
+    }
+    .modal-message {
+        font-size: 18px;
+    }
+    .logo {
+        margin-top: 5px;
+        width: 50px;
+    }
+    .check-image{
+        margin-top: 30px;
+        width: 70px;
+    }
+}
+
+@media (max-width: 400px) {
+    .modal {
+        width: 90%;
+    }
+    .modal-title {
+        font-size: 20px;
+    }
+    .modal-message {
+        font-size: 16px;
+    }
+    .logo {
+        margin-top: 1px;
+        width: 50px;
+    }
+    .check-image{
+        margin-top: 30px;
+        width: 70px;
+    }
+}
+
+@media (max-width: 320px) {
+    .modal {
+        width: 90%;
+    }
+    .modal-title {
+        font-size: 18px;
+    }
+    .modal-message {
+        font-size: 15px;
+    }
+    .logo {
+        margin-top: 5px;
+        width: 40px;
+    }
+    .check-image{
+        margin-top: 30px;
+        width: 60px;
     }
 }
