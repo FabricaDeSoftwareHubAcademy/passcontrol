@@ -19,12 +19,17 @@
   align-items: stretch;
 }
 .topo-tela-servico{
-  margin: 20px 0px 20px 20px; 
+  margin: 3% 0px 2% 5%; 
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 90%;
   height: 100%;
+  font-size: 20px;
   /* border: 2px solid green; */
+}
+.sev {
+  width: 50%;
+  height: 56%;
 }
 #servicos-cadastrados {
   text-align: left;
@@ -54,30 +59,32 @@
   background-position: right 10px center;
   background-repeat: no-repeat;
   box-sizing: border-box;
-  margin-left: 76%;
+  margin-left: 80%;
 }
 .linha-divisoria-servico {
   background-color: var(--cinza-control);
   height: 1px;
-  width: 96%;
+  width: 100%;
   max-height:339px;
   padding: 1px;
 }
 #tela-branca-servico {
   background-color: #ffffff75;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
-  width: 96%;
+  width: 90%;
   padding: 20px;
   margin: 25px auto;
 }
 .tabela-responsiva-servico {
   max-height: 420px;
   overflow-y: auto;
+  overflow-x: hidden;
   border: 1px solid #dddddd;
 }
 .tabela-servicos {
   width: 100%;
-  border-collapse: collapse;
+  border-collapse: separate;
+  border-spacing: 0;
 }
 .cabecaTabelaServicos{
   width: fit-content;
@@ -183,7 +190,7 @@
   gap: 16px;
   margin-top: auto;
   margin-bottom: 40px;
-  margin-right: 2%;
+  margin-right: 5%;
 }
 .botao-voltar {
   background-color: var(--cinza-control);
@@ -198,22 +205,34 @@
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }
 
-::-webkit-scrollbar {
-  width: 10px;
-  height: 10px; 
-}
+.tabela-responsiva-servico .resto-tabela-servicos::-webkit-scrollbar { 
+  width: 0.1px; 
+  opacity: 0;  
+  transition: opacity 0.3s ease;  
+} 
+.tabela-responsiva-servico :hover .resto-tabela-servicos::-webkit-scrollbar { 
+  opacity: 1;  
+  width: 5px; 
+} 
+.tabela-responsiva-servico .resto-tabela-servicos::-webkit-scrollbar-thumb { 
+  background-color: rgba(0, 0, 0, 0.5); 
+  border-radius: 4px;
 
-::-webkit-scrollbar-track {
-  background-color: #ffffff75;
-}
+} 
+.tabela-responsiva-servico .resto-tabela-servicos::-webkit-scrollbar-track { 
+  background: transparent; 
+} 
 
-::-webkit-scrollbar-thumb {
-  background: #33404d77;
-}
+.tabela-responsiva-servico .resto-tabela-servicos::-webkit-scrollbar-thumb:hover { 
+  background-color: rgba(0, 0, 0, 0.7); 
+  width: 5px; 
+} 
 
-::-webkit-scrollbar-thumb:hover {
-  background:var(--cinza-control);
-}
+.tabela-responsiva-servico:hover .resto-tabela-servicos,.cabecaTabelaServicos{ 
+  margin-right: -5px;
+} 
+
+
 
 @media screen and (max-width: 1024px) {
   #servico {
@@ -223,7 +242,7 @@
     padding: 15px;
   }
   #buscar-servico{
-    margin-left: 71%;
+    margin-left: 75%;
     width: 25%;
   }
 
@@ -240,9 +259,46 @@
 
 }
 
- @media screen and (max-width: 768px) and (max-height: 600px) {
+ @media screen and (max-width: 768px) {
   .topo-tela-servico{
-    width: 100%;
+    font-size: 20px;
+    margin-top: 8px;
+    margin-bottom: 0%;
+  }
+  .sev {
+    width: 55%;
+    height: 56%;
+  }
+  #tela-branca-servico {
+    height: 100%;
+    padding: 10px;
+  }
+
+  .tabela-servicos td, .cabecalho-tabela1 th{
+    padding: 3px;
+  }
+  #buscar-servico{
+    margin-left: 60%;
+    width: 40%;
+    font-size: 12px;
+  }
+  .botoesVoltar-Cadastrar{
+    margin-right: 5%;
+  }
+  .botao-voltar, .botao-cadastro{
+      width: 7rem;
+      padding: 7px 3px;
+  }
+  #icone-editar {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    margin-right: 20px;
+  }
+} 
+
+@media screen and (max-width: 768px) and (max-height: 600px) {
+  .topo-tela-servico{
     font-size: 20px;
     margin-top: 8px;
     margin-bottom: 0%;
@@ -292,30 +348,31 @@
     margin-bottom: -4%;
   }
   #buscar-servico{
-    margin-left: 46%;
-    width: 50%;
+    margin-left: 55%;
+    width: 45%;
   }
   .topo-tela-servico{
-    width: 99%;
-    /* border: 2px solid green; */
+    margin: 12% 0% 0% 5%;
     font-size: 20px;
-    margin: 20px -30px 20px 15px;
   }
 }
 @media screen and (max-width: 480px) {
   #buscar-servico{
     margin-left: 0%;
-    width: 90%;
+    width: 100%;
   }
   .topo-tela-servico{
-    margin: 70px -30px 20px 10px;
+    margin: 12% 0% 0% 5%;
   }
+  .sev {
+    width: 90%;
+    height: 56%;
+}
   .campo-busca{
     margin-bottom: -17%;
   }
   .linha-divisoria-servico{
     margin-top: 12.5%;
-    width: 90%;
   }
   .tabela-responsiva-servico {
     max-height: 320px;
