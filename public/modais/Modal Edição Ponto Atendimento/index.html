@@ -3,29 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Passcontrol</title>
+    <!-- TROCA TÍTULO QUANDO FOR UTILIZAR -->
+    <title>PassControl</title> 
     <link rel="stylesheet" href="./estilo.css">
 </head>
-<body>
+<body class="pagina">
     <button class="botao-modal open">Abrir Modal</button>
     <main class="modal-container">
         <section class="modal">
             <img src="../../../public/img/img-modais/Logo Nota Controlnt.png" alt="Logo Nota Control" class="logo">
-            <h1>Alterar Senha</h1>
-            <hr>
-            <div class="senha-atual">
+            <h1 class="titulo">Edição Ponto de Atendimento</h1>
+            <hr class="linha-horizontal">
+            <div class="inf-modal">
                 <div class="container">
-                    <label><b>Senha Atual</b></label>
-                    <input type="text" placeholder="Digite a sua senha atual">
+                    <label class="label"><b>Nome do Ponto de Atendimento</b></label>
+                    <input type="text" class="input-text" placeholder="Guichê">
                 </div>
             </div>
-            <div class="nova-senha">
-                <label><b>Nova Senha</b></label>
-                <input type="text" placeholder="Digite a nova senha">
-            </div>
-            <div class="conf-senha">
-                <label><b>Confirmar Nova Senha</b></label>
-                <input type="text" placeholder="Digite novamente a nova senha">
+            <div class="servico">
+                <label class="label"><b>Número / Letra</b></label>
+                <input type="text" class="input-text" placeholder="1">
             </div>
             <div class="button-group">
                 <button class="botao-modal cancel">Voltar</button>

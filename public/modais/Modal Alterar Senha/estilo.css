@@ -6,7 +6,7 @@
 }
 
 /* Estilo do corpo da página */
-body {
+.body {
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -41,6 +41,7 @@ body {
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.3s ease;
+    z-index: 1;
 }
 
 .modal-container.show {
@@ -52,24 +53,20 @@ body {
 .modal {
     background-color: #e0e0e0;
     width: 80%;
-    max-width: 1200px; /* Limita o tamanho máximo */
-    min-width: 400px; /* Evita que fique pequeno demais */
-    height: auto; /* Altura ajustável automaticamente */
+    max-width: 600px;
     padding: 40px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     position: relative;
     text-align: left;
-    box-sizing: border-box;
-    border-radius: 0;
 }
 
 /* Estilo da linha horizontal */
-hr {
+.linha {
     border: none;
     border-top: 3px solid #000;
-    width: 32.4vw; /* Largura total da tela (viewport) */
-    margin-left: calc(-16.2vw + 50%); /* Centraliza a linha no modal */
-    margin-right: calc(-20vw + 50%); /* Centraliza a linha no modal */
+    width: 32.4vw;
+    margin-left: calc(-16.2vw + 50%);
+    margin-right: calc(-20vw + 50%);
     margin-top: 20px;
     margin-bottom: 20px;
 }
@@ -77,56 +74,50 @@ hr {
 /* Estilo do logo */
 .logo {
     position: absolute;
-    top: 10px;
+    top: 20px;
     right: 20px;
-    width: 10%; /* Ocupa 10% da largura do modal */
-    max-width: 200px; /* Limita o tamanho máximo */
-    height: auto;
+    width: 10%;
 }
-.senha-atual{
+
+/* Estilo do container do nome */
+.senha-atual-container {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     flex-direction: row;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
-.nova-senha{
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 20px;
-}
-.conf-senha{
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 20px;
-}
-.container{
+
+.container {
     flex: 1;
     margin-right: 20px;
 }
+
 .container:last-child {
-    margin-right: 0; /*Remove o espaçamento do último grupo*/
+    margin-right: 0;
 }
-.file-input{
+
+/* Estilo do container de email */
+.nova-senha-container {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    margin-bottom: 20px;
 }
-.folder-icon{
-    width: 40px;
-    height: auto;
+
+/* Estilo do container de CPF */
+.conf-nova-senha-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
 }
-h1 {
-    font-size: 25px !important;
-    margin-bottom: 35px;
-    font-weight: bold;
-}
-label {
+
+/* Estilo dos inputs e labels */
+.label-senha-atual, .nova-senha-container, .conf-nova-senha-container {
     font-size: 16px;
     margin-bottom: 5px;
 }
-input[type="number"], 
-input[type="text"],
-input[type="file"] {
+
+.input-senha-atual, .input-nova-senha, .input-conf-nova-senha {
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
@@ -134,15 +125,7 @@ input[type="file"] {
     border-radius: 4px;
     background-color: white;
 }
-input[type="file"] {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    background-color: white;
-    cursor: pointer;
-}
+
 /* Grupo de botões */
 .button-group {
     display: flex;
@@ -152,7 +135,7 @@ input[type="file"] {
 }
 
 /* Estilo do botão cancelar */
-button.cancel {
+.botao-modal.cancel {
     background-color: #33404D;
     color: white;
     margin-right: 30px;
@@ -161,14 +144,13 @@ button.cancel {
     padding: 10px 30px;
 }
 
-/* Estilo do botão cancelar no hover */
-button.cancel:hover {
+.botao-modal.cancel:hover {
     color: #FFF;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }
 
 /* Estilo do botão salvar */
-button.save {
+.botao-modal.save {
     background-color: #33404D;
     color: white;
     border-radius: 5px;
@@ -176,298 +158,146 @@ button.save {
     padding: 10px 30px;
 }
 
-/* Estilo do botão salvar no hover */
-button.save:hover {
+.botao-modal.save:hover {
     color: #3AA867;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }
 
-/* Media Queries */
-
-/* Telas pequenas (celulares) */
-
-/* Telas pequenas (até 320px) */
-@media (max-width: 400px) and (min-width: 320px) {
+/* Responsividade */
+@media (max-width: 1200px) {
     .modal {
-        width: 90% !important;
-        min-width: auto !important; /* Permite ajuste dinâmico */
-        padding: 15px !important;
+        width: 70%;
     }
-    
-    .modal .logo {
-        width: 50px !important;
-        top: 5px !important;
-        right: 10px !important;
-    }
-
-    h1 {
-        font-size: 18px !important;
-        margin-bottom: 20px !important;
-    }
-
-    label {
-        font-size: 14px !important;
-    }
-
-    input[type="number"], 
-    input[type="text"],
-    input[type="file"] {
-        padding: 8px !important;
-        font-size: 14px !important;
-    }
-
-    .button-group {
-        flex-direction: row !important;
-        align-items: center !important;
-        gap: 10px !important;
-    }
-
-    button {
-        font-size: 12px !important;
-        padding: 8px 15px !important;
-        width: 100% !important;
-    }
-
-    button.cancel {
-        margin-right: 0 !important; /* Remove o deslocamento para a esquerda */
-    }
-
-    button.cancel{
-        font-size: 12px !important; /* Diminui o tamanho da fonte */
-        padding: 8px 12px !important; /* Reduz o padding */
-        width: auto !important; /* Ajusta a largura automaticamente */
-        max-width: 200px !important; /* Limita o tamanho máximo da largura */
-    }
-
-    button.save{
-        font-size: 12px !important; /* Diminui o tamanho da fonte */
-        padding: 8px 12px !important; /* Reduz o padding */
-        width: auto !important; /* Ajusta a largura automaticamente */
-        max-width: 200px !important; /* Limita o tamanho máximo da largura */
-    }
-
-    /* Ajuste da linha horizontal */
-    hr {
-        width: 100%;
-        margin-left: 0;
-        margin-right: 0;
+    .linha{
+        border: none;
+        border-top: 3px solid #000;
+        width: 115%; /* Garante que a linha ocupe toda a largura do modal */
+        margin-left: -7.50%; /* Ajusta a centralização */
     }
 }
 
-@media (max-width: 400px) and (min-width: 350px) {
-    h1 {
-        font-size: 16px !important;
-        margin-top: -1px !important; /* Afastando do topo */
-        max-width: 100% !important; /* Evita que o título fique muito largo */
+@media (max-width: 1024px) {
+    .modal {
+        width: 80%;
     }
-
-    .logo {
-        width: 45px !important; /* Reduzindo o tamanho da logo */
-        right: 5px !important; /* Ajusta um pouco mais para a direita */
+    .linha{
+        border: none;
+        border-top: 3px solid #000;
+        width: 115%; /* Garante que a linha ocupe toda a largura do modal */
+        margin-left: -7.50%; /* Ajusta a centralização */ 
     }
 }
 
-@media (max-width: 350px) and (min-width: 345px) {
-    h1 {
-        font-size: 16px !important;
-        margin-right: 50px;
-        max-width: 100% !important; /* Evita que o título fique muito largo */
+@media (max-width: 768px) {
+    .modal {
+        width: 90%;
     }
-
-    .logo {
-        width: 45px !important; /* Reduzindo o tamanho da logo */
-        top: 15px;
-        right: 20px !important; /* Ajusta um pouco mais para a direita */
+    .titulo{
+        margin-bottom: 20px;
+    }
+    .linha{
+        border: none;
+        border-top: 3px solid #000;
+        width: 115%; /* Garante que a linha ocupe toda a largura do modal */
+        margin-left: -7.50%; /* Ajusta a centralização */
     }
 }
 
 @media (max-width: 480px) {
-    hr {
-        width: 114%; /* Aumenta a largura da linha no celular */
-        margin-left: -7%; /* Ajusta a centralização */
-        margin-right: 10%; /* Ajusta a centralização */
+    .button-group {
+        flex-direction: row;
+        justify-content: flex-end;
     }
+    .botao-modal {
+        width: auto;
+    }
+    .linha{
+        border: none;
+        border-top: 3px solid #000;
+        width: 123%; /* Garante que a linha ocupe toda a largura do modal */
+        margin-left: -11.25%; /* Ajusta a centralização */
+    }
+}
+
+@media (min-width: 401px) and (max-width: 550px){
     .modal {
         width: 95%;
         padding: 20px;
     }
-    .logo {
-        top: 15px !important;
-        width: 60px !important;
-    }
-    h1 {
+    .titulo{
+        margin-top: 7px;
         font-size: 20px;
     }
-    p {
-        font-size: 14px;
+    .logo{
+        top: 10px;
+        width: 50px;
     }
-    button {
-        font-size: 12px;
-        padding: 8px 12px;
-    }
-}
-
-/* Telas entre 481px e 510px */
-@media (min-width: 481px) and (max-width: 510px) {
-    .modal {
-        width: 90% !important;
-        padding: 20px !important;
-    }
-
-    /* Ajuste da posição da logo */
-    .modal .logo {
-        width: 60px !important; /* Ajusta a largura da logo */
-        top: 30px !important;  /* Ajusta a posição para mais afastada */
-        right: 15px !important; /* Ajusta a posição à direita, se necessário */
-    }
-
-    /* Dando mais espaço para o h1 */
-    h1 {
-        margin-top: 30px !important;  /* Ajusta o espaçamento entre a logo e o título */
-        font-size: 22px !important;
-    }
-
-    /* Ajuste de outros elementos */
-    label {
-        font-size: 14px !important;
-    }
-
-    input[type="number"], 
-    input[type="text"],
-    input[type="file"] {
-        padding: 8px !important;
-        font-size: 14px !important;
-    }
-
     .button-group {
-        flex-direction: row !important;
-        align-items: center !important;
-        gap: 10px !important;
+        flex-direction: row;
+        justify-content: flex-end;
     }
-
-    button {
-        font-size: 12px !important;
-        padding: 8px 15px !important;
-        width: 100% !important;
+    .botao-modal {
+        width: auto;
     }
-
-    button.cancel {
-        margin-right: 0 !important; /* Remove o deslocamento para a esquerda */
-    }
-
-    button.cancel {
-        font-size: 12px !important; /* Diminui o tamanho da fonte */
-        padding: 8px 12px !important; /* Reduz o padding */
-        width: auto !important; /* Ajusta a largura automaticamente */
-        max-width: 200px !important; /* Limita o tamanho máximo da largura */
-    }
-
-    button.save {
-        font-size: 12px !important; /* Diminui o tamanho da fonte */
-        padding: 8px 12px !important; /* Reduz o padding */
-        width: auto !important; /* Ajusta a largura automaticamente */
-        max-width: 200px !important; /* Limita o tamanho máximo da largura */
-    }
-
-    hr {
-        width: 100%;
-        margin-left: 0;
-        margin-right: 0;
+    .linha{
+        border: none;
+        border-top: 3px solid #000;
+        width: 108.50%; /* Garante que a linha ocupe toda a largura do modal */
+        margin-left: -4.25%; /* Ajusta a centralização */ 
     }
 }
 
-@media (min-width: 550px) and (max-width: 767px) {
-    .modal h1 {
-        margin-top: 20px;
-        font-size: 20px !important; /* Diminui o tamanho para evitar quebra */
-        word-wrap: break-word; /* Quebra a palavra caso necessário */
-    }
-    .modal .logo {
-        margin-top: 7px;
-        width: 15% !important; /* Diminui o tamanho da logo */
-        max-width: 120px; /* Evita que fique grande demais */
-    }
-}
-
-
-/* Telas médias (tablets) */
-@media (max-width: 768px) {
-    hr {
-        width: 109%; /* Aumenta a largura da linha no celular */
-        margin-left: -4.4%; /* Ajusta a centralização */
-        margin-right: 10%; /* Ajusta a centralização */
-    }
+@media (max-width: 400px) {
     .modal {
-        width: 80%;
-        padding: 25px;
+        width: 95%;
+        padding: 15px;
     }
-    .logo {
-        width: 80px;
+    .titulo{
+        margin-top: 7px;
+        font-size: 20px;
     }
-    h1 {
-        font-size: 24px;
+    .logo{
+        top: 10px;
+        width: 50px;
     }
-    p {
+    .button-group {
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+    .botao-modal {
+        width: auto;
+    }
+    .linha{
+        border: none;
+        border-top: 3px solid #000;
+        width: 108.50%; /* Garante que a linha ocupe toda a largura do modal */
+        margin-left: -4.25%; /* Ajusta a centralização */ 
+    }
+}
+
+@media (min-width: 320px) and (max-width: 340px) {
+    .modal {
+        width: 90%;
+        padding: 15px;
+    }
+    .titulo{
         font-size: 16px;
     }
-}
-
-@media (min-width: 770px) and (max-width: 1023px) {
-    hr {
-        width: 115.3%; /* Ajusta a largura da linha para que não ultrapasse a tela */
-        margin-left: -7.7%; /* Centraliza um pouco à esquerda */
-        margin-right: 5%; /* Centraliza um pouco à direita */
+    .logo{
+        top: 15px;
+        width: 40px;
     }
-    .modal {
-        width: 80%;
-        max-width: 600px;
+    .button-group {
+        flex-direction: row;
+        justify-content: flex-end;
     }
-    h1 {
-        font-size: 32px;
+    .botao-modal {
+        width: auto;
     }
-    p {
-        font-size: 20px;
-    }
-    .logo {
-        width: 90px;
-    }
-}
-
-/* Telas grandes (desktops) */
-@media (min-width: 1024px) {
-    hr {
-        width: 115.3%; /* Reduz a largura da linha em telas maiores */
-        margin-left: -7.7%; /* Ajusta a centralização */
-        margin-right: 10%; /* Ajusta a centralização */
-    }
-    .modal {
-        width: 80%;
-        max-width: 600px;
-    }
-    h1 {
-        font-size: 32px;
-    }
-    p {
-        font-size: 20px;
-    }
-    .logo {
-        width: 90px;
-    }
-}
-
-/* Telas grandes (desktops grandes) */
-@media (min-width: 1200px) {
-    .modal {
-        width: 80%;
-        max-width: 600px;
-    }
-    h1 {
-        font-size: 32px;
-    }
-    p {
-        font-size: 20px;
-    }
-    .logo {
-        width: 90px;
+    .linha{
+        border: none;
+        border-top: 3px solid #000;
+        width: 111%; /* Garante que a linha ocupe toda a largura do modal */
+        margin-left: -5.50%; /* Ajusta a centralização */
     }
 }

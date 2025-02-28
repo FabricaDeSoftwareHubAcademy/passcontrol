@@ -6,7 +6,7 @@
 }
 
 /* Estilo do corpo da página */
-body {
+.body {
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -41,7 +41,7 @@ body {
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.3s ease;
-    z-index: 99999;
+    z-index: 1;
 }
 
 .modal-container.show {
@@ -53,44 +53,44 @@ body {
 .modal {
     background-color: #e0e0e0;
     width: 80%;
-    max-width: 1200px; /* Limita o tamanho máximo */
-    min-width: 400px; /* Evita que fique pequeno demais */
-    height: auto; /* Altura ajustável automaticamente */
+    max-width: 600px;
     padding: 40px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     position: relative;
     text-align: left;
-    box-sizing: border-box;
 }
 
 /* Estilo da linha horizontal */
-hr {
+.linha {
     border: none;
     border-top: 3px solid #000;
-    width: 32.4vw; /* Largura total da tela (viewport) */
-    margin: 20px auto; /* Centraliza a linha horizontalmente */
+    width: 32.4vw;
+    margin-left: calc(-16.2vw + 50%);
+    margin-right: calc(-20vw + 50%);
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 /* Estilo do logo */
 .logo {
     position: absolute;
-    top: 10px;
+    top: 20px;
     right: 20px;
-    width: 10%; /* Ocupa 10% da largura do modal */
-    max-width: 200px; /* Limita o tamanho máximo */
+    width: 12%;
+    max-width: 200px;
     height: auto;
 }
 
 /* Estilo do título */
-h1 {
+.titulo {
     font-size: 28px;
     margin-bottom: 40px;
     font-weight: bold;
 }
 
 /* Estilo do parágrafo */
-p {
-    font-size: 18px;
+.texto {
+    font-size: 22px;
     margin: 40px 0;
     text-align: center;
 }
@@ -104,7 +104,7 @@ p {
 }
 
 /* Estilo do botão cancelar */
-button.cancel {
+.cancel {
     background-color: #33404D;
     color: white;
     margin-right: 30px;
@@ -113,14 +113,13 @@ button.cancel {
     padding: 10px 30px;
 }
 
-/* Estilo do botão cancelar no hover */
-button.cancel:hover {
+.cancel:hover {
     color: #FF0000;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }
 
 /* Estilo do botão salvar */
-button.save {
+.save {
     background-color: #33404D;
     color: white;
     border-radius: 5px;
@@ -128,288 +127,152 @@ button.save {
     padding: 10px 30px;
 }
 
-/* Estilo do botão salvar no hover */
-button.save:hover {
+.save:hover {
     color: #3AA867;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }
 
-/* Media Queries */
-
-/* Telas pequenas (até 320px) */
-@media (max-width: 400px) and (min-width: 320px) {
+/* Responsividade */
+@media (max-width: 1200px) {
     .modal {
-        width: 90% !important;
-        min-width: auto !important; /* Permite ajuste dinâmico */
-        padding: 15px !important;
-        margin-left: 72px !important;
+        width: 70%;
     }
-    
-    .logo {
-        width: 50px !important;
-        top: 1px !important;
-        right: 10px !important;
-    }
-
-    h1 {
-        font-size: 18px !important;
-        margin-bottom: 20px !important;
-    }
-
-    label {
-        font-size: 14px !important;
-    }
-
-    .button-group {
-        flex-direction: row !important;
-        align-items: center !important;
-        gap: 10px !important;
-    }
-
-    button {
-        font-size: 12px !important;
-        padding: 8px 15px !important;
-        width: 100% !important;
-    }
-
-    button.cancel {
-        margin-right: 0 !important; /* Remove o deslocamento para a esquerda */
-    }
-
-    button.cancel{
-        font-size: 12px !important; /* Diminui o tamanho da fonte */
-        padding: 8px 12px !important; /* Reduz o padding */
-        width: auto !important; /* Ajusta a largura automaticamente */
-        max-width: 200px !important; /* Limita o tamanho máximo da largura */
-    }
-
-    button.save{
-        font-size: 12px !important; /* Diminui o tamanho da fonte */
-        padding: 8px 12px !important; /* Reduz o padding */
-        width: auto !important; /* Ajusta a largura automaticamente */
-        max-width: 200px !important; /* Limita o tamanho máximo da largura */
-    }
-
-    /* Ajuste da linha horizontal */
-    hr {
-        width: 100%;
-        margin-left: 0;
-        margin-right: 0;
+    .linha{
+        border: none;
+        border-top: 3px solid #000;
+        width: 115%; /* Garante que a linha ocupe toda a largura do modal */
+        margin-left: -7.50%; /* Ajusta a centralização */
     }
 }
 
-@media (max-width: 400px) and (min-width: 350px) {
-    h1 {
-        font-size: 16px !important;
-        margin-top: 10px !important; /* Afastando do topo */
-        max-width: 100% !important; /* Evita que o título fique muito largo */
-    }
-
-    .logo {
-        width: 45px !important; /* Reduzindo o tamanho da logo */
-        right: 20px !important; /* Ajusta um pouco mais para a direita */
-    }
-}
-
-@media (max-width: 350px) and (min-width: 345px) {
-    h1 {
-        font-size: 16px !important;
-        margin-right: 50px;
-        max-width: 100% !important; /* Evita que o título fique muito largo */
-    }
-
-    .logo {
-        width: 45px !important; /* Reduzindo o tamanho da logo */
-        top: 15px;
-        right: 20px !important; /* Ajusta um pouco mais para a direita */
-    }
-}
-
-@media (max-width: 349px) and (min-width: 320px) {
-    h1 {
-        font-size: 16px !important;
-        margin-right: 50px;
-        max-width: 100% !important; /* Evita que o título fique muito largo */
-    }
-
-    .logo {
-        width: 45px !important; /* Reduzindo o tamanho da logo */
-        top: 7px;
-        right: 20px !important; /* Ajusta um pouco mais para a direita */
-    }
-}
-
-/* Telas pequenas (celulares) */
-@media (max-width: 360px) {
-    hr {
-        width: 114%; /* Aumenta a largura da linha no celular */
-        margin-left: -7%; /* Ajusta a centralização */
-        margin-right: 10%; /* Ajusta a centralização */
-    }
+@media (max-width: 1024px) {
     .modal {
-        width: 95%;
-        padding: 20px;
-        margin-left: 80%;
-    }
-    .logo {
-        width: 60px;
-    }
-    h1 {
-        font-size: 20px;
-    }
-    p {
-        font-size: 14px;
-    }
-    button {
-        font-size: 12px;
-        padding: 8px 12px;
-    }
-}
-
-@media (max-width: 410px) {
-    hr {
-        width: 90%; /* Aumenta a largura da linha no celular */
-        margin: 0 auto;
-    }
-    .modal{
-        width: 80% !important;
-        min-width: auto !important;
-        margin-left: 7px !important;
-    }
-    section .modal {
         width: 80%;
-        padding: 15px;
     }
-    .logo {
-        margin-top: 2px !important;
-        width: 60px !important;
+    .linha{
+        border: none;
+        border-top: 3px solid #000;
+        width: 115%; /* Garante que a linha ocupe toda a largura do modal */
+        margin-left: -7.50%; /* Ajusta a centralização */ 
     }
-    h1 {
-        margin-top: 20px !important;
-        font-size: 20px;
+}
+
+@media (max-width: 768px) {
+    .modal {
+        width: 90%;
     }
-    p {
-        font-size: 14px;
+    .titulo{
+        margin-bottom: 20px;
     }
-    button {
-        font-size: 12px;
-        padding: 8px 12px;
+    .linha{
+        border: none;
+        border-top: 3px solid #000;
+        width: 115%; /* Garante que a linha ocupe toda a largura do modal */
+        margin-left: -7.50%; /* Ajusta a centralização */
     }
 }
 
 @media (max-width: 480px) {
-    hr {
-        width: 90%; /* Aumenta a largura da linha no celular */
-        margin: 0 auto;
+    .button-group {
+        flex-direction: row;
+        justify-content: flex-end;
     }
-    .modal{
-        margin-right: 5px;
+    .botao-modal {
+        width: auto;
     }
-    section .modal {
-        width: 1%;
-        padding: 15px;
-        margin-left: 10%;
-    }
-    .logo {
-        width: 60px;
-    }
-    h1 {
-        font-size: 20px;
-    }
-    p {
-        font-size: 14px;
-    }
-    button {
-        font-size: 12px;
-        padding: 8px 12px;
+    .linha{
+        border: none;
+        border-top: 3px solid #000;
+        width: 123%; /* Garante que a linha ocupe toda a largura do modal */
+        margin-left: -11.25%; /* Ajusta a centralização */
     }
 }
 
-/* Telas médias (tablets) */
-@media (max-width: 769px) {
-    hr {
-        width: 109%; /* Aumenta a largura da linha no celular */
-        margin-left: -4.4%; /* Ajusta a centralização */
-        margin-right: 10%; /* Ajusta a centralização */
-    }
+@media (min-width: 401px) and (max-width: 550px){
     .modal {
-        width: 70%;
-        padding: 25px;
-        margin-left: 1%;
+        width: 95%;
+        padding: 20px;
     }
-    .logo {
-        top: 30px;
-        width: 80px;
+    .titulo{
+        margin-top: 7px;
+        font-size: 20px;
     }
-    h1 {
-        font-size: 24px;
+    .logo{
+        top: 10px;
+        width: 50px;
     }
-    p {
+    .button-group {
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+    .botao-modal {
+        width: auto;
+    }
+    .linha{
+        border: none;
+        border-top: 3px solid #000;
+        width: 108.50%; /* Garante que a linha ocupe toda a largura do modal */
+        margin-left: -4.25%; /* Ajusta a centralização */ 
+    }
+}
+
+@media (max-width: 400px) {
+    .modal {
+        width: 95%;
+        padding: 15px;
+    }
+    .titulo{
+        margin-top: 7px;
+        font-size: 20px;
+    }
+    .texto{
+        font-size: 18px;
+    }
+    .logo{
+        top: 10px;
+        width: 50px;
+    }
+    .button-group {
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+    .botao-modal {
+        width: auto;
+    }
+    .linha{
+        border: none;
+        border-top: 3px solid #000;
+        width: 108.50%; /* Garante que a linha ocupe toda a largura do modal */
+        margin-left: -4.25%; /* Ajusta a centralização */ 
+    }
+}
+
+@media (min-width: 320px) and (max-width: 340px) {
+    .modal {
+        width: 90%;
+        padding: 15px;
+    }
+    .titulo{
         font-size: 16px;
     }
-}
-
-@media (min-width: 770px) and (max-width: 1023px) {
-    hr {
-        width: 115.3%; /* Ajusta a largura da linha para que não ultrapasse a tela */
-        margin-left: -7.7%; /* Centraliza um pouco à esquerda */
-        margin-right: 5%; /* Centraliza um pouco à direita */
+    .texto{
+        font-size: 16px;
     }
-    .modal {
-        width: 80%;
-        max-width: 600px;
-        margin-left: 8%;
+    .logo{
+        top: 15px;
+        width: 40px;
     }
-    h1 {
-        font-size: 32px;
+    .button-group {
+        flex-direction: row;
+        justify-content: flex-end;
     }
-    p {
-        font-size: 20px;
+    .botao-modal {
+        width: auto;
     }
-    .logo {
-        top: 30px;
-        width: 90px;
-    }
-}
-
-/* Telas grandes (desktops) */
-@media (min-width: 1024px) and (max-width: 1200px) {
-    hr {
-        width: 115.3%; /* Reduz a largura da linha em telas maiores */
-        margin-left: -7.7%; /* Ajusta a centralização */
-        margin-right: 10%; /* Ajusta a centralização */
-    }
-    .modal {
-        width: 80%;
-        max-width: 600px;
-        margin-left: 8%;
-    }
-    h1 {
-        font-size: 32px;
-    }
-    p {
-        font-size: 20px;
-    }
-    .logo {
-        top: 30px;
-        width: 90px;
-    }
-}
-
-/* Telas grandes (desktops grandes) */
-@media (min-width: 1200px) {
-    .modal {
-        width: 80%;
-        max-width: 600px;
-    }
-    h1 {
-        font-size: 32px;
-    }
-    p {
-        font-size: 20px;
-    }
-    .logo {
-        top: 30px;
-        width: 90px;
+    .linha{
+        border: none;
+        border-top: 3px solid #000;
+        width: 111%; /* Garante que a linha ocupe toda a largura do modal */
+        margin-left: -5.50%; /* Ajusta a centralização */
     }
 }
