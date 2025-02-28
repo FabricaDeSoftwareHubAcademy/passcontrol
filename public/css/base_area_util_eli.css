@@ -1,0 +1,43 @@
+/* CONFIGURAÇÃO DA BASE DA ÁREA ÚTIL */
+/* NAO MEXER!! */
+
+.Area-Util-Projeto-Eli{
+    /* z-index: 1; */
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    top: 17vh;
+    right: 2vh;
+    left: 27vh;
+    bottom: 2vh;
+    height: auto;
+    width: auto;
+    background-color: rgba(0, 0, 0, 0.12);
+    overflow: hidden;
+    scroll-behavior: smooth;
+    display: flex;
+    /* overflow-x: hidden;
+    overflow-y: hidden; */
+    
+}
+
+
+/* MEDIA */
+
+@media screen and (max-width: 1200px){
+    .Area-Util-Projeto-Eli{
+        left: 8vh;
+    }
+}
+
+@media screen and (max-height: 625px){
+    .Area-Util-Projeto-Eli{
+        left: 8vh;
+    }
+}
+
+@media screen and (max-width: 810px) and (max-height: 1080px){
+    .Area-Util-Projeto-Eli{
+        left: 2vh;        
+    }
+}
