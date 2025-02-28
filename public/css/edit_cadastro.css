@@ -190,7 +190,7 @@ input:focus {
     margin: 5px 0; 
 } 
 .checkbox-container input[type="checkbox"]{ 
-    margin-right: 10px;
+    margin-left: -11px;
 } 
 .servico-checkbox input[type="checkbox"]{
     color: var(--verde-control);
@@ -239,12 +239,10 @@ input:focus {
 .customizado::before {
     content: ''; 
     position: relative;
-    left: -5%;
-    padding: 1%;
+    left: -10px;
     top: 0px;
-    width: auto;
-    padding-inline: 3%;
-    height: 10px;
+    width: 15px;
+    height: 15px;
     border: 1px solid #000000;
     border-radius: 2px;
     background-color: white;
@@ -263,12 +261,12 @@ input:focus {
     
 }
 .customizado  .teste:after {
-    left: -25px;
-    top: 10px;
-    width: 3.5%;
-    height: auto;
+    left: -19px;
+    top: 6px;
+    width: 0px;
+    height: 0px;
     border: solid var(--verde-control);
-    border-width: 2 50px 50px 2;
+    border-width: 2 10px 10px 2;
     transform: rotate(1deg);
 } 
 
