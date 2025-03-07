@@ -1,18 +1,18 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+<!-- <!DOCTYPE html>
+<html lang="pt-br"> -->
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
 
     <!-- TROCA TÍTULO QUANDO FOR UTILIZAR -->
-    <title>PassControl</title> 
+    <!-- <title>PassControl</title>  -->
 
     <link rel="stylesheet" href="./estilo.css">
     <link rel="stylesheet" href="./consultar-fila.css">
 </head>
-<body>
-    <button class="botao-modal abrirConsultarFila">Abrir Modal</button>
-    <main class="modal-consultar">
+<!-- <body> -->
+    <!-- <button class="botao-modal abrirConsultarFila">Abrir Modal</button> -->
+    <div class="modal-consultar">
         <section class="modal">
             <img src="../../../public/img/img-modais/Logo Nota Controlnt.png" alt="Logo Nota Control" class="logo">
             <section class="Area-Util-Projeto"> 
@@ -146,12 +146,13 @@
             </div>
         <!-- </div> -->
         </nav> 
-    </section>
+        </section>
             <div class="button-group">
                 <button class="botao-modal return">Retornar</button>
             </div>
-        </section>
-    </main>
+    </section>
+    </S>
     <script src="./modal.js"></script>
-</body>
-</html>
+    </div>
+<!-- </body> -->
+<!-- </html> -->
