@@ -23,19 +23,14 @@
 .container-flex{
     flex: 1 1 35%;
 }
-.titulo h1{
-    text-align:  center;
-    font-size: 2em;
-    margin-bottom: 20px;
+.titulo_cds h1{
+    position: absolute;
+    display: flex;
+    margin-top: 15px;
+    margin-left: 77px;  
+    font-family: var(--font-main);
 }
-.titulo .cadastro_title{
-   font-family: var(--font-main);
-   position: absolute;
-   top: 20px;
-   left: 5%;
-   font-size: 110%;
-}
-.titulo hr{
+.titulo_cds hr{
     position: absolute;
     border: 0;
     height: 1px;
@@ -95,49 +90,46 @@ input:focus {
 }
 
 
-/* seleção de usuario */
-.labeledit{
-    font-family: var(--font-main);
-    width: 60%;
-    height: 15px;
-    font-weight: bold;
-    display: block;
-}
-.perfil{
-    position: relative;
-    top: 40px;
-    left: 189px;
-    width: 35%;
-    display: flex;
-    flex-direction: column;
-    font-size: 90%;
-    border-radius: 5px solid black;
+/* seleção de perfil de acesso */;
+.selecionar{
+    margin: 20px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 300px;
 }
 .perfild{
-    position: absolute;
-    width: 16%;
-    left: 15%;
-    top: 330px
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
 }
-
-.selecao .pi{
-    height: 40px;
-    border-radius: 5px solid black;
-    margin-top: 12px;
+.labeledit{
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
 }
 .selecao{
-    display: flex;
-    position: absolute;
-    top: 15px;
+    top: 50px;
+    left: 20px;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
     width: 100%;
-    height: 45px;
-    border-radius: 5px;
-    margin-top: 12px;
-    background-color: white;
-    font-size: var(--font-main);
+    outline: none;
 }
-
-
+.selecao option{
+    padding: 10px;
+    font-size: 14px;
+}
+.selecao:focus{
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+.pi{
+    color: #555;
+}
 /* checkbox de serviço */
 .checkbox-container{ 
     display: flex;
@@ -261,12 +253,12 @@ input:focus {
     
 }
 .customizado  .teste:after {
-    left: -19px;
-    top: 6px;
+    left: -24px;
+    top: 4px;
     width: 0px;
     height: 0px;
     border: solid var(--verde-control);
-    border-width: 2 10px 10px 2;
+    border-width: 1px 10px 10px 1px;
     transform: rotate(1deg);
 } 
 
@@ -410,7 +402,7 @@ input:focus {
         width: 150%;
     }
 }
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 550px){
     .form-actions2{
         margin-right: 13%;
     }
@@ -440,7 +432,7 @@ input:focus {
     .form-actions2{
         margin-left: 13%;
     }
-    .titulo .cadastro_title{
+    .titulo_cds h1{
         top: 8px;
     }
 }

@@ -428,11 +428,10 @@
 
 /* CLASSE ACTIVE */
 
-.botao-lateal-navegacao.ativo-estacionario{
+.ativo-estacionario{
     background-color: var(--cor-fundo);
     color: var(--verde-control);
-    /* text-decoration: underline var(--verde-control);     */
-    
+
     .icone-menu-lateral{
         filter: invert(51%) sepia(58%) saturate(446%) hue-rotate(92deg) brightness(96%) contrast(89%);        
     }
