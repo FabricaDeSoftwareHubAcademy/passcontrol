@@ -20,7 +20,12 @@ main {
     color: var(--cinza-control);
 }
 .barra-pesquisa {
-    width: 10%; 
+    width: 10%;
+    font-style: italic;
+    font-size: 14px;
+    border: 2px solid var(--cinza-control)3;
+    opacity: 0.5;
+    margin-left: 76%;
     position: absolute;
     right: 2.9%;
     top: 34px;
@@ -160,6 +165,7 @@ main {
 .toggle-btn {
     width: 40px;
     height: 20px;
+    cursor: pointer !important;
     background-color: #ffffff;
     border-radius: 40px;
     border: 1px solid #000000;
@@ -170,6 +176,7 @@ main {
 .toggle-btn .circle {
     width: 16px;
     height: 16px;
+    cursor: pointer;
     background-color: #ff0000;
     border-radius: 50%;
     position: absolute;
@@ -192,7 +199,6 @@ main {
     bottom: 30px; /* Ajuste para a posição desejada */
     right: 90px;  /* Ajuste a distância da borda direita */
     cursor: pointer;
-    border-radius: 8px;
     transition-duration: 0.4s;
     box-sizing: border-box;
     z-index: 1000;
@@ -539,6 +545,7 @@ main {
         font-size: 10px;
     }
 }
+
 @media (max-width: 320px) {
     main {   
     top: 157px; 
@@ -554,13 +561,13 @@ main {
     .titulo {
         font-size: 13px;
         margin-top: 10px;
-        margin-right:40px;
+        margin-right:40px !important;
         text-align: center;
     }
     .barra-pesquisa {
         width: 40%;
-        margin-top: 20px;
-        margin-right: 11px;
+        margin-top: 19px;
+        margin-right: 10px !important;
         
     }
     .input-pesquisa {
@@ -573,7 +580,7 @@ main {
     .linha {
         margin-top: 28px;
         margin-left: 20px;
-        width: 86%;
+        width: 86% !important;
     }
     .tabela {
         padding: 1px;
@@ -602,6 +609,7 @@ main {
         padding: 3px;
         align-items: left;
     }
+    
     .toggle-btn {
         width: 23.5px;
         height: 13px;
