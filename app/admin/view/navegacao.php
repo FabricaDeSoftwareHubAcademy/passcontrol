@@ -36,7 +36,7 @@
     <div class="area-lateral-navegacao">
         <nav class="menu-lateral-navegacao">
 
-            <a class="botao-lateal-navegacao" href="../../../app/admin/view/atendimento.php">
+            <a class="botao-lateal-navegacao aaa" href="../../../app/admin/view/atendimento.php">
                 <img class="icone-menu-lateral" src="../../../public/img/icons/atend.svg" alt="ICONE-ATENDIMENTO">
                 <p class="texto-bott">Atendimento</p>
             </a>
@@ -65,7 +65,7 @@
         </nav>
     </div>
 
-    <button class="botao-menu-mobile abrirMenuLateral" id="botao-menu-mobile"> <!-- Botão ainda inativo -->
+    <button class="botao-menu-mobile abrirMenuLateral" id="botao-menu-mobile">
         <img class="icone-menu-lateral-mobile" src="../../../public/img/icons/DropDownIcon.svg" alt="MENU">
     </button>
     
@@ -107,4 +107,16 @@
         </div>
         <div class="areatransp"></div>
     </div>
+
+    <script>
+        // const link_pag = window.location.href;
+        // const current = 'aaa';
+        // alert(link_pag)
+        // document.querySelectorAll(".menu-lateral-navegacao a").forEach(function(elem){ 
+        //     if(elem.href.includes(link_pag)){
+        //         elem.classList.add(".ativo-estacionario");
+        //     }
+        // });
+    </script>
+
     <!-- INICIO DA ÁREA ÚTIL DA PÁGINA -->
