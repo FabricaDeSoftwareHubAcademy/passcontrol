@@ -1,3 +1,10 @@
+<?php
+require'../../../app/CLASSE/guiche.php';
+
+$guiche = new Guiche();
+$guiches = $guiche->buscar();
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -17,7 +24,12 @@
     <link rel="stylesheet" href="../../../public/css/PontoAtendimentoCad.css">
     <link rel="stylesheet" href="../../../public/modais/Modal Confirmação dos Serviços/estilo.css">
 
-    <link rel="shortcut icon" type="imagex/png" href="../../../public/img/Logo-Nota-Controlnt.ico">
+   <!-- IMPORT DO JS -->
+   <!-- <script src="../../../public/js/modal-atendimentocadastrados.js"></script>
+     <script src="../../../public/js/modal-inativacao-atendimentocadastrado.js"></script>
+     <script src="../../../public/js/modal-cadastro-atendimento.js"></script> -->
+
+     <link rel="shortcut icon" type="imagex/png" href="../../../public/img/Logo-Nota-Controlnt.ico">
 
 </head>
 <body class="control-body-navegacao">
@@ -36,45 +48,44 @@
                     <div class="sev"><p id="Ponto-atendimento">Ponto de Atendimento</p></div>
                     <div class="linha-divisoria-Ponto-atendimento"></div>
                 </div>
-            <div id="tela-branca-Ponto-atendimento"> 
+                <div id="tela-branca-Ponto-atendimento"> 
               <div class="tabela-responsiva-Ponto-atendimento">
-                <table class="tabela-Ponto-atendimento">
+                <table id="table table-striped" class="tabela-Ponto-atendimento">
                   <thead class="cabecaTabelaPonto-atendimento">
                     <tr class="topo-tabela-servicos">
-                      <th class="cabecalho-tabela1">Tipo</th>
-                      <th class="cabecalho-tabela2">Identificador</th>
-                      <th class="cabecalho-tabela3">Editar</th>
-                      <th class="cabecalho-tabela1">Ativar/ Desativar</th>
+                      <th scope="col" class="cabecalho-tabela1">Tipo</th>
+                      <th scope="col" class="cabecalho-tabela2">Identificador</th>
+                      <th scope="col" class="cabecalho-tabela3">Editar</th>
+                      <th scope="col" class="cabecalho-tabela1">Desativar/Ativar</th>
                     </tr>
                   </thead>
                   <tbody class="resto-tabela-Ponto-atendimento">
-                    <tr class="linha-tabela">
-                      <td>Guichê</td>
-                      <td>01</td>
-                      <td class="coluna-editar ">
-                        <a class="colm-idit" href=""><img id="icone-editar" src="../../../public/img/icons/Group 2924.png" alt="Editar"></a></td>
-                        <td class="coluna-inativar">
-                            <div class="toggle-btn ativo"><div class="circulo"></div></div>
-                        </td>
-                    </tr>
-                    <tr class="linha-tabela">
-                      <td>Guichê</td>
-                      <td>02</td>
-                      <td class="coluna-editar ">
-                        <a class="colm-idit" href=""><img id="icone-editar" src="../../../public/img/icons/Group 2924.png" alt="Editar"></a></td>
-                        <td class="coluna-inativar">
-                            <div class="toggle-btn ativo"><div class="circulo"></div></div>
-                        </td>
-                    </tr>  
-                    <tr class="linha-tabela">
-                      <td>Guichê</td>
-                      <td>03</td>
-                      <td class="coluna-editar ">
-                        <a class="colm-idit" href=""><img id="icone-editar" src="../../../public/img/icons/Group 2924.png" alt="Editar"></a></td>
-                        <td class="coluna-inativar">
-                            <div class="toggle-btn ativo"><div class="circulo"></div></div>
-                        </td>
-                    </tr>    
+
+
+                  <?php
+                        foreach($guiches as $guiche) {
+                            $estadoAtivo = ($guiche->ativo == 'ATIVO') ? 'active' : '';
+                            echo '
+                            <tr>
+                            <td>'.$guiche->nome_guiche.'</td>
+                            <td>'.$guiche->num_guiche.'</td>
+                            <td>
+                              <a href=" ../../../editar_guiche.php?id_guiche='.$guiche->id_guiche.'">
+                                <img id="icone-editar" src="../../../public/img/icons/Group 2924.png" alt="Editar">
+                              </a>
+                            </td>
+                            <td>
+                              <a href="../../../inativar_guiche.php?id_guiche='.$guiche->id_guiche.'">
+                                <div class="toggle-btn '.$estadoAtivo.'">
+                                  <div class="circulo"></div>
+                                </div>
+                              </a>
+                            </td>
+                          </tr>
+                          
+                            ';
+                        }
+                  ?>
                   </tbody>
                 </table>
               </div>
@@ -86,7 +97,10 @@
         </div>
         
     </section>
-
+    <!-- <main-atendimento-cadastrado></main-atendimento-cadastrado>
+    <main-cadastro-atendimento></main-cadastro-atendimento>
+    <main-inativacao_atendimento-cadastrado></main-inativacao_atendimento-cadastrado> -->
+    
     <!--MONITOR MODAL-->
     <?php
     include "./monitor-modal.php"
