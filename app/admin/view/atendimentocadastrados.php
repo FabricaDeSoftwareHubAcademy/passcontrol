@@ -15,9 +15,9 @@
 
     <!-- IMPORT DO CSS -->
     <link rel="stylesheet" href="../../../public/css/atendimentocadastrados.css">
-    <link rel="stylesheet" href="../../../public/modais/Modal Edição Ponto Atendimento/estilo.css">
-    <link rel="stylesheet" href="../../../public/modais/Modal Cadastro Ponto Atendimento/estilo.css">
-    <link rel="stylesheet" href="../../../public/modais/Modal Inativação Guichê/estilo.css">
+    <link rel="stylesheet" href="../../../public/modais/Modal Edição Ponto Atendimento/edicao_ponto_atendimento.css">
+    <link rel="stylesheet" href="../../../public/modais/Modal Cadastro Ponto Atendimento/cadastro_ponto_atendimento.css">
+    <link rel="stylesheet" href="../../../public/modais/Modal Inativação Guichê/inativacao_guiche.css">
 
     <!-- IMPORT DO JS -->
      <script src="../../../public/js/modal-atendimentocadastrados.js"></script>

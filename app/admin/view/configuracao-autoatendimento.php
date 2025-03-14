@@ -14,7 +14,7 @@
         <link rel="stylesheet" href="../../../public/css/navegacao.css">
         <link rel="stylesheet" href="../../../public/css/configuracao-autoatendimento.css">
         <link rel="stylesheet" href="../../../public/css/style-configuracao-autoatendimento.css">
-        <link rel="stylesheet" href="../../../public/modais/Modal Confirmação dos Dados Registrados/estilo.css">
+        <link rel="stylesheet" href="../../../public/modais/Modal Confirmação dos Dados Registrados/confirmacao_dados_registrados.css">
         
         <script src="../../../public/js/configuracao-autoatendimento.js" defer></script>
         <script src="../../../public/js/modal-configuracao-autoatendimento.js"></script>

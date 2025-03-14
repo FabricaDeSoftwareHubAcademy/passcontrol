@@ -15,7 +15,7 @@
         <!-- IMPORT DO CSS -->
         <link rel="stylesheet" href="../../../public/css/navegacao.css">
         <link rel="stylesheet" href="../../../public/css/adm-logado.css">
-        <link rel="stylesheet" href="../../../public/modais/Modal Confirmação dos Dados Registrados/estilo.css">
+        <link rel="stylesheet" href="../../../public/modais/Modal Confirmação dos Dados Registrados/confirmacao_dados_registrados.css">
 
         <!-- IMPORT DO JS -->
         <script src="../../../public/js/navegacao-menu-lateral-teste.js" defer></script>

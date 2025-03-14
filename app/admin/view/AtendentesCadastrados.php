@@ -15,8 +15,8 @@
         
         <!-- IMPORT DO CSS -->
         <link rel="stylesheet" href="../../../public/css/AtendentesCadastrados.css">
-        <link rel="stylesheet" href="../../../public/modais/Modal Inativação Usuário/estilo.css">
-        <link rel="stylesheet" href="../../../public/modais/Modal Ativação Usuário/estilo.css">
+        <link rel="stylesheet" href="../../../public/modais/Modal Inativação Usuário/inativacao_usuario.css">
+        <link rel="stylesheet" href="../../../public/modais/Modal Ativação Usuário/ativacao_usuario.css">
 
         <!-- IMPORT DO JS -->
         <script src="../../../public/js/modal-atendentes-cadastrados.js" defer></script>
