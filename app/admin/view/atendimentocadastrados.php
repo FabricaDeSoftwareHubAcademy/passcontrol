@@ -55,12 +55,16 @@
                         <section class="menu-tabela">
                             <div class="tabela-container">
                             <table class="tabela-3x3">
-                                <tr>
-                                    <th>Nome do Ponto de Atendimento</th>
-                                    <th>Identificador</th>
-                                    <th>Ações</th>
-                                    <th>Ativar/Desativar</th>
-                                </tr>
+                                <thead>
+                                    <tr>
+                                        <th>Nome do Ponto de Atendimento</th>
+                                        <th>Identificador</th>
+                                        <th>Ações</th>
+                                        <th>Ativar/Desativar</th>
+                                
+                                    </tr>
+                                </thead>
+                                <tbody>
                                 <tr>
                                     <td>Guichê</td>
                                     <td>1</td>
@@ -381,7 +385,8 @@
                                         </div>
                                     </td> 
                                 </tr>
-                                
+                            </tbody>
+                            
                             </table>
 
                             <!-- Botão para adicionar novo guichê -->
