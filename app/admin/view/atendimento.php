@@ -245,9 +245,11 @@
     <!-- <main-sair-sistema></main-sair-sistema> -->
     <!-- <main-saida-principal></main-saida-principal> -->
 
-    <!--MONITOR MODAL-->
     <?php
-    include "./monitor-modal.php"
+    //MONITOR MODAL
+    include "../../../public/modais/Modal Consultar Fila/index.php";
+    include "./monitor-modal.php";
+    //MODAL CONSULTAR FILA
     ?>
 
     <script>
