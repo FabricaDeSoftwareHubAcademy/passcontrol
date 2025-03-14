@@ -14,12 +14,11 @@
         
         <!-- IMPORT DO CSS -->
         <link rel="stylesheet" href="../../../public/css/adm-logado.css">
-        <link rel="stylesheet" href="../../../public/modais/Modal Confirmação dos Dados Registrados/estilo.css">
+        <!-- <link rel="stylesheet" href="../../../public/modais/Modal Confirmação dos Dados Registrados/estilo.css"> -->
 
         <!-- IMPORT DO JS -->
-        <script src="../../../public/js/modal-adm-logado.js"></script>
-
-        <link rel="shortcut icon" type="imagex/png" href="../../../public/img/Logo-Nota-Controlnt.ico">
+        <!-- <script src="../../../public/js/modal-adm-logado.js"></script> -->
+        <!-- <link rel="shortcut icon" type="imagex/png" href="../../../public/img/Logo-Nota-Controlnt.ico"> -->
 
 </head>
 <body class="control-body-navegacao">
@@ -73,8 +72,7 @@
         <button type="button" class="botao-voltar" onclick="window.location.href='javascript:history.back()';">Voltar</button>
         <button type="submit" class="botao-salvar open">Salvar</button>
     </div>
-        <main-modal-adm-logado></main-modal-adm-logado>
-
+        <!-- <main-modal-adm-logado></main-modal-adm-logado> -->
         <!-- FIM DA ÁREA ÚTIL DA PÁGINA -->
     </section>
     

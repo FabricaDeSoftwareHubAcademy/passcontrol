@@ -3,11 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <!-- TROCA TÍTULO QUANDO FOR UTILIZAR -->
     <title>PassControl</title> 
-
-    <link rel="stylesheet" href="./estilo.css">
+    <link rel="stylesheet" href="./iniciar_intervalo.css">
 </head>
 <body class="body">
     <button class="botao-modal open">Abrir Modal</button>
@@ -16,13 +14,14 @@
             <img src="../../../public/img/img-modais/Logo Nota Controlnt.png" alt="Logo Nota Control" class="logo">
             <h1 class="titulo">Confirmação</h1>
             <hr class="linha">
-            <p class="texto"><b>Deseja Salvar o Serviço Cadastrado?</b></p>
+            <p id="horario"><b>12:00</b></p>
+            <p class="texto"><b>Iniciar o Período de Intervalo?</b></p>
             <div class="button-group">
                 <button class="botao-modal cancel">Não</button>
                 <button class="botao-modal save">Sim</button>
             </div>
         </section>
     </main>
-    <script src="./modal.js"></script>
+    <script src="./iniciar_intervalo.js"></script>
 </body>
 </html>
