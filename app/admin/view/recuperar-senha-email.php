@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- TROCA TÍTULO QUANDO FOR UTILIZAR -->
     <title>PassControl</title> 
 
     <link rel="stylesheet" href="../../../public/css/recuperar-senha-email.css">
@@ -69,5 +68,4 @@
     </div>
 
 </body>
-
 </html>

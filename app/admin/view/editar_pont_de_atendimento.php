@@ -4,29 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- TROCA TÍTULO QUANDO FOR UTILIZAR -->
     <title>PassControl</title> 
-    
 
-    <!-- IMPORT DA FONTE -->
+    <!-- FONTE -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 
-    <!-- IMPORT DO CSS -->
+    <!-- CSS -->
     <link rel="stylesheet" href="../../../public/css/navegacao.css">
+    <link rel="stylesheet" href="../../../public/css/monitor-modal.css">
     <link rel="stylesheet" href="../../../public/css/editar_pont_de_atendimento.css">
+    
+    <!-- JS -->
+    <script src="../../../public/js/navegacao-menu-lateral.js" defer></script>
+    <script src="../../../public/js/monitor-modal.js" defer></script>
 
     <link rel="shortcut icon" type="imagex/png" href="../../../public/img/Logo-Nota-Controlnt.ico">
-
 </head>
+
 <body class="control-body-navegacao">
     <?php
     include "./navegacao.php";
     ?>
-
-<!-- INICIO DA ÁREA ÚTIL DA PÁGINA -->
-<!-- INSIRA O CORPO DA SUA PÁGINA A PARTIR DESTE PONTO -->
 
     <section class="Area-Util-Projeto">
         <div class="cubo-branco">
