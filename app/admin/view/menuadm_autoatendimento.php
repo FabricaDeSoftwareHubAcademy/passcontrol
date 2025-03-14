@@ -83,7 +83,7 @@
                         <!-- <p>Visualizar Monitor de Autoatendimento</p> -->
                     </div>
                     <div class="button-wrapper">
-                        <button class="btn outline" onclick="window.location.href='monitor-modal.php';">Visualizar Monitor</button>
+                        <button class="btn outline" id="visualisarMonitor">Visualizar Monitor</button>
                     </div>
                 </div>      
             </main>
