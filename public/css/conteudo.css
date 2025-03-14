@@ -78,9 +78,21 @@
   filter: drop-shadow(4px 4px 2px gray);
 }
 .input-search input{
-  border-radius: 5px 5px 0px 0px;
-  border: 1px solid rgb(128, 128, 128); 
-  width: 10.125rem;
+  width: 100%;
+  height: 100%;
+  font-style: italic;
+  font-size: 14px;
+  border: 2px solid var(--cinza-control)3;
+  border-radius: 10px 10px 0 0;
+  opacity: 0.5;
+  z-index: -1;
+  outline: none;
+  background-image: url(../../public/img/icons/lupa.png);
+  background-size: contain;
+  background-position: right 10px center;
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+  /* margin-left: 76%; */
 }
 
 @media screen and (max-width:1430px) {
