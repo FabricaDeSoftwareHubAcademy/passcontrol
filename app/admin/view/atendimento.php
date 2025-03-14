@@ -17,9 +17,9 @@
     <link rel="stylesheet" href="../../../public/css/menu_eli.css">
     <link rel="stylesheet" href="../../../public/css/atendimento.css">
     <link rel="stylesheet" href="../../../public/css/monitor-modal.css">
-    <link rel="stylesheet" href="../../../public/modais/Modal Iniciar Intervalo/estilo.css">
-    <link rel="stylesheet" href="../../../public/modais/Modal Confirmação de Presença/estilo.css">
-    <link rel="stylesheet" href="../../../public/modais/Modal Confirmação Deslogar/estilo.css">
+    <link rel="stylesheet" href="../../../public/modais/Modal Iniciar Intervalo/iniciar_intervalo.css">
+    <link rel="stylesheet" href="../../../public/modais/Modal Confirmação de Presença/confirmacao_presenca.css">
+    <link rel="stylesheet" href="../../../public/modais/Modal Confirmação Deslogar/confirmacao_deslogar.css">
     
     <link rel="stylesheet" href="../../../public/modais/Modal Consultar Fila/consultar-fila.css">
     <link rel="stylesheet" href="../../../public/modais/Modal Consultar Fila/estilo.css">
