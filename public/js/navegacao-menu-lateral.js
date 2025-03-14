@@ -42,3 +42,12 @@ document.addEventListener('click', event => {
 // function toggleMenu() {
 //     document.getElementById("mobileMenu").classList.toggle("ativo-estacionario");
 // }
+
+// //ATIVO POR PAGINA
+// const link_pag = window.location.href;
+// alert(link_pag)
+// document.querySelectorAll(".menu-lateral-navegacao a").forEach(function(elem){ 
+//     if(elem.href.includes(link_pag)){
+//         elem.classList.add(".ativo-estacionario");
+//     }
+// });

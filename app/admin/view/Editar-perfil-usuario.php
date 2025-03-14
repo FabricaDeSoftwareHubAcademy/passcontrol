@@ -1,37 +1,36 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
-        <!-- TROCA TÍTULO QUANDO FOR UTILIZAR -->
-        <title>PassControl</title> 
-        
-        <!-- IMPORT DA FONTE -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-        
-        <!-- IMPORT DO CSS -->
-        <link rel="stylesheet" href="../../../public/css/navegacao.css">
-        <link rel="stylesheet" href="../../../public/css/adm-logado.css">
-        <link rel="stylesheet" href="../../../public/modais/Modal Confirmação dos Dados Registrados/confirmacao_dados_registrados.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>PassControl</title> 
+    
+    <!-- FONTE -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="../../../public/css/navegacao.css">
+    <link rel="stylesheet" href="../../../public/css/monitor-modal.css">
+    <link rel="stylesheet" href="../../../public/css/adm-logado.css">
+    <link rel="stylesheet" href="../../../public/modais/Modal Confirmação dos Dados Registrados/estilo.css">
+    
+    <!-- JS -->
+    <script src="../../../public/js/navegacao-menu-lateral.js" defer></script>
+    <script src="../../../public/js/monitor-modal.js" defer></script>
+    <script src="../../../public/js/modal-editar-perfil-usuario.js"></script>
 
-        <!-- IMPORT DO JS -->
-        <script src="../../../public/js/navegacao-menu-lateral-teste.js" defer></script>
-        <script src="../../../public/js/modal-editar-perfil-usuario.js"></script>
-
-        <link rel="shortcut icon" type="imagex/png" href="../../../public/img/Logo-Nota-Controlnt.ico">
-
+    <link rel="shortcut icon" type="imagex/png" href="../../../public/img/Logo-Nota-Controlnt.ico">
 </head>
+
 <body class="control-body-navegacao">
     <?php
     include "./navegacao.php";
     ?>
 
     <section class="Area-Util-Projeto">
-        <!-- INICIO DA ÁREA ÚTIL DA PÁGINA -->
-        <!-- INSIRA O CORPO DA SUA PÁGINA A PARTIR DESTE PONTO -->
         <h3 class="perfil-titulo">Perfil</h3>
         <div class="sub-area">
             <div class="form-group">
@@ -69,7 +68,6 @@
             <button type="submit" class="botao-salvar">Salvar</button>
         </div>
 
-        <!-- FIM DA ÁREA ÚTIL DA PÁGINA -->
     </section>
     <main-edicao-perfil-usuario></main-edicao-perfil-usuario>         
 

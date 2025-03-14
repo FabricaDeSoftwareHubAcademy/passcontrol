@@ -28,22 +28,24 @@ body {
 }
 
 /* Estilo do container do modal */
-.modal-container {
+.modal-consultar {
     background: rgba(0, 0, 0, 0.5);
     width: 100vw;
     height: 100vh;
     position: fixed;
     top: 0;
     left: 0;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.3s ease;
+    z-index: 5;
 }
 
-.modal-container.show {
+.show {
+    display: flex;
     opacity: 1;
     pointer-events: auto;
 }
