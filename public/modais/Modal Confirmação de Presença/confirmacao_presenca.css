@@ -25,6 +25,7 @@
     font-weight: 500;
     cursor: pointer;
     text-align: center;
+    background-color: #000;
 }
 
 /* Estilo do container do modal */
@@ -78,11 +79,10 @@
 /* Estilo do logo */
 .logo {
     position: absolute;
-    top: 10px;
-    right: 20px;
-    width: 10%;
+    top: 25px;
+    right: 30px;
+    width: 12%;
     max-width: 200px;
-    height: auto;
 }
 
 /* Título */
@@ -90,12 +90,12 @@
     font-size: 28px;
     margin-bottom: 40px;
     font-weight: bold;
-    text-align: center;
+    text-align: start;
 }
 
 /* Parágrafo */
-.desk-info .name .info {
-    font-size: 18px;
+.desk-info, .name, .info {
+    font-size: 22px;
     margin: 20px 0;
     text-align: center;
 }
@@ -103,29 +103,34 @@
 /* Grupo de botões */
 .button-group {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.button-row {
+    display: flex;
     justify-content: center;
-    gap: 15px;
-    margin-bottom: 20px;
+    gap: 20px;
 }
 
 .button-group button {
-    flex-grow: 1; /* Faz com que os botões fiquem com o mesmo tamanho */
     text-align: center;
     width: auto;
-    padding: 12px 20px;
-    margin: 10px;
+    padding: 12px 40px;
+    margin: 5px;
 }
 
 /* Botões específicos */
 .senha {
     margin-right: 30px;
-    color: red !important;
+    color: red;
     font-weight: bold;
 }
 
 /* Botão cancelar */
 .ausente {
-    background-color: #33404D !important;
+    background-color: #33404D;
     color: white;
     border-radius: 5px;
     font-size: 14px;
@@ -141,7 +146,7 @@
 
 /* Botão salvar */
 .presente {
-    background-color: #33404D !important;
+    background-color: #33404D;
     color: white;
     border-radius: 5px;
     font-size: 14px;
@@ -157,7 +162,7 @@
 
 /* Botão Chamar Novamente */
 .chamar {
-    background-color: #33404D !important;
+    background-color: #33404D;
     color: white;
     border-radius: 5px;
     font-size: 14px;
@@ -176,7 +181,7 @@
 /* Media Queries */
 
 /* Responsividade para telas de 320px */
-@media (max-width: 320px) {
+@media (min-width: 320px) and (max-width: 350px) {
     .modal {
         width: 95% !important;
         min-width: auto !important;
@@ -195,7 +200,7 @@
     }
 
     .button-group {
-        flex-direction: column;
+        flex-direction: column !important;
         align-items: center;
         gap: 5px;
     }
@@ -204,6 +209,13 @@
         font-size: 10px;
         padding: 6px 10px;
         width: 100%;
+    }
+
+    .chamar {
+        width: 60% !important; /* Garante que tenha o mesmo tamanho dos outros botões */
+        white-space: nowrap; /* Impede a quebra de linha */
+        padding: 10px 20px !important; /* Mesmo padding dos outros botões */
+        font-size: 10px; /* Mantém a consistência do tamanho da fonte */
     }
 
     .row {
@@ -223,56 +235,8 @@
     }
 }
 
-/* Responsividade para telas de 320px até 349px */
-@media (max-width: 349px) {
-    .modal {
-        width: 95% !important;
-        min-width: auto !important;
-        padding: 10px !important;
-    }
-    
-    .logo {
-        width: 40px !important;
-        top: 5px !important;
-        right: 5px !important;
-    }
-
-    .title {
-        font-size: 16px !important;
-        margin-bottom: 15px !important;
-    }
-
-    .button-group {
-        flex-direction: column;
-        align-items: center;
-        gap: 5px;
-    }
-
-    .button-group button {
-        font-size: 10px;
-        padding: 6px 10px;
-        width: 100%;
-    }
-
-    .row {
-        width: 100%;
-        margin-left: 0;
-        margin-right: 0;
-    }
-
-    .desk-info, .name, .info {
-        font-size: 18px !important;
-    }
-
-    .senha {
-        display: inline-block;
-        text-align: center;
-        margin-left: 30px !important; /* Ajuste fino para alinhar com o texto */
-    }
-}
-
 /* Celulares pequenos */
-@media (max-width: 400px) {
+@media (min-width: 351px) and (max-width: 400px) {
     .modal {
         width: 90% !important;
         min-width: auto !important;
@@ -280,18 +244,19 @@
     }
     
     .logo {
-        width: 50px !important;
-        top: 15px;
-        right: 10px !important;
+        width: 15% !important;
+        top: 15px !important;
+        right: 10px;
     }
 
     .title {
-        font-size: 18px !important;
-        margin-bottom: 20px !important;
+        font-size: 20px !important;
+        position: relative !important;
+        top: 15px !important;
     }
 
     .button-group {
-        flex-direction: row;
+        flex-direction: column;
         align-items: center;
         gap: 10px;
     }
@@ -299,6 +264,13 @@
     .button-group button {
         font-size: 12px;
         padding: 8px 12px;
+    }
+
+    .chamar .ausente .presente {
+        width: 60% !important; /* Garante que tenha o mesmo tamanho dos outros botões */
+        white-space: nowrap; /* Impede a quebra de linha */
+        padding: 10px 20px !important; /* Mesmo padding dos outros botões */
+        font-size: 10px; /* Mantém a consistência do tamanho da fonte */
     }
 
     /* Ajuste da linha horizontal */
@@ -320,7 +292,7 @@
 }
 
 /* Celulares médios */
-@media (max-width: 480px) {
+@media (min-width: 480px) and (max-width: 767px) {
     .modal {
         width: 95%;
         padding: 20px;
@@ -332,6 +304,11 @@
         margin-right: 10%;
     }
 
+    .logo{
+        width: 10% !important;
+        top: 30px !important;
+    }
+
     .title {
         font-size: 20px;
     }
@@ -339,7 +316,7 @@
     .senha {
         display: inline-block;
         text-align: center;
-        margin-left: 40px !important; /* Ajuste fino para alinhar com o texto */
+        margin-left: 40px; /* Ajuste fino para alinhar com o texto */
     }
 }
 
@@ -356,16 +333,54 @@
         margin-right: 10%;
     }
 
+    .logo{
+        width: 10%;
+        top: 20px;
+    }
+
     .title {
         font-size: 24px;
+        position: relative;
+        top: 10px;
     }
 
     .senha {
         display: inline-block;
         text-align: center;
-        margin-left: 30px !important; /* Ajuste fino para alinhar com o texto */
+        margin-left: 30px; /* Ajuste fino para alinhar com o texto */
     }
 }
+
+/* Tablets grandes e telas intermediárias */
+@media (min-width: 769px) and (max-width: 1023px) {
+    .modal {
+        width: 75%;
+        padding: 30px;
+    }
+
+    .row {
+        width: 108.5%;
+        margin-left: -4.2%;
+        margin-right: 10%;
+    }
+
+    .logo{
+        width: 10%;
+        top: 25px;
+    }
+
+    .title {
+        font-size: 26px;
+        position: relative;
+        top: 10px;
+    }
+
+    .senha {
+        text-align: center;
+        margin-left: 30px;
+    }
+}
+
 
 /* Notebooks e desktops */
 @media (min-width: 1024px) {
@@ -387,13 +402,13 @@
     .senha {
         display: inline-block;
         text-align: center;
-        margin-left: 30px !important; /* Ajuste fino para alinhar com o texto */
+        margin-left: 30px; /* Ajuste fino para alinhar com o texto */
     }
 }
 
 @media (min-width: 1200px) {
     .modal {
-        width: 80%;
+        width: 80% !important;
         max-width: 600px;
     }
 
@@ -410,6 +425,6 @@
     .senha {
         display: inline-block;
         text-align: center;
-        margin-left: 30px !important; /* Ajuste fino para alinhar com o texto */
+        margin-left: 30px; /* Ajuste fino para alinhar com o texto */
     }
 }
