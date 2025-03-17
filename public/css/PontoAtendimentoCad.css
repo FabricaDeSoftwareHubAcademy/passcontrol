@@ -19,10 +19,10 @@
   align-items: stretch;
 }
 .topo-tela-PontoAtendimentoCad{
-  margin: 20px 0px 20px 20px; 
+  margin: 2% 0% 1% 5%; 
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 94%;
   height: 100%;
   /* border: 2px solid green; */
 }
@@ -66,18 +66,19 @@
 #tela-branca-Ponto-atendimento {
   background-color: #ffffff75;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
-  width: 96%;
+  width: 90%;
   padding: 20px;
   margin: 25px auto;
 }
 .tabela-responsiva-Ponto-atendimento {
-  max-height: 420px;
+  max-height: 520px;
   overflow-y: auto;
   border: 1px solid #dddddd;
 }
 .tabela-Ponto-atendimento {
   width: 100%;
-  border-collapse: collapse;
+  border-collapse: separate;
+  border-spacing:0 ;
 }
 .cabecaTabelaPonto-atendimento{
   width: fit-content;
@@ -200,16 +201,95 @@
 .tabela-wrapper::-webkit-scrollbar {
   width: 5px;
 }
+/* Estilo do container do modal */
+.modal-container {
+  background: rgba(0, 0, 0, 0.5); /* Fundo transparente */
+  width: 100vw;
+  height: 100vh;
+  position: fixed; /* Fixa o modal na tela */
+  top: 0;
+  left: 0;
+  display: none; /* Inicialmente o modal está escondido */
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; /* Asegura que o modal fique acima de outros elementos */
+}
+
+/* Estilo para mostrar o modal */
+.modal-container.show {
+  display: flex; /* Exibe o modal quando a classe 'show' for adicionada */
+}
+
+/* Estilo do modal */
+.modal {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 300px;
+  max-width: 90%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo da linha horizontal */
+.linha {
+  border: none;
+  border-top: 3px solid #000;
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* Estilo do logo */
+.logo {
+  max-width: 100px;
+  margin-bottom: 20px;
+}
+
+/* Estilo do título */
+.titulo {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+/* Estilo do parágrafo */
+.texto {
+  font-size: 22px;
+  margin: 40px 0;
+}
+
+/* Grupo de botões */
+.button-group {
+  display: flex;
+  justify-content: space-around;
+}
+
+.botao-modal {
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+}
+
+.cancel {
+  background-color: #f44336; /* Cor de fundo para o "Cancelar" */
+  color: white;
+}
+
+.save {
+  background-color: #4CAF50; /* Cor de fundo para o "Salvar" */
+  color: white;
+}
+
 @media screen and (max-width: 1024px) {
   #tabela-Ponto-atendimento {
     left: 8vh;
   }
-  #tela-branca-tabela-Ponto-atendimento{
-    padding: 15px;
-  }
+  
   #buscar-tabela-Ponto-atendimento{
     margin-left: 71%;
-    width: 25%;
+    width: 45%;
   }
 
   .tabela-tabela-Ponto-atendimento td, .cabecalho-tabela1 th{
@@ -224,7 +304,13 @@
   }
 
 }
+@media screen and (max-width: 760px){
 
+  #buscar-Ponto-atendimento{
+    width: 30%;
+    margin-right: 5%;
+  }
+}
  @media screen and (max-width: 768px) and (max-height: 600px) {
   .topo-tela-Ponto-atendimento{
     width: 100%;
@@ -288,12 +374,12 @@
   }
 }
 @media screen and (max-width: 480px) {
+  .topo-tela-PontoAtendimentoCad{
+    margin: 20% 0% 3% 5%;
+  }
   #buscar-Ponto-atendimento{
     margin-left: 0%;
     width: 90%;
-  }
-  .topo-tela-Ponto-atendimento{
-    margin: 70px -30px 20px 10px;
   }
   .campo-busca{
     margin-bottom: -17%;
@@ -313,6 +399,7 @@
     width: 100%;
     padding: 5px;
   }
+ 
   #buscar-tabela-Ponto-atendimento{
     margin-left: 0%;
     width: 90%;

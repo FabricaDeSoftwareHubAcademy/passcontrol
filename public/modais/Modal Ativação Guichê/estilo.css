@@ -1,278 +1,63 @@
-/* Reset básico */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Estilo do corpo da página */
-.body {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #f5f5f5;
-}
-
-/* Estilo dos botões */
-.botao-modal {
-    padding: 10px 20px;
-    background-color: rgb(47, 128, 128);
-    border: 0;
-    border-radius: 10px;
-    font-size: 18px;
-    color: #FFFFFF;
-    font-weight: 500;
-    cursor: pointer;
-}
-
-/* Estilo do container do modal */
+/* Estilos do modal container */
 .modal-container {
-    background: rgba(0, 0, 0, 0.5);
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
+    position: fixed;   
     top: 0;
     left: 0;
-    display: flex;
-    align-items: center;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);  
+    display: none;  
     justify-content: center;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.3s ease;
-    z-index: 1;
+    align-items: center;
+    z-index: 9999; 
 }
 
 .modal-container.show {
-    opacity: 1;
-    pointer-events: auto;
+    display: flex; 
 }
 
-/* Estilo do modal */
+
 .modal {
-    background-color: #e0e0e0;
-    width: 80%;
-    max-width: 600px;
-    padding: 40px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    position: relative;
-    text-align: left;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 300px;
+    max-width: 90%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
-/* Estilo da linha horizontal */
-.linha {
-    border: none;
-    border-top: 3px solid #000;
-    width: 32.4vw;
-    margin-left: calc(-16.2vw + 50%);
-    margin-right: calc(-20vw + 50%);
-    margin-top: 20px;
+/* Outros estilos do modal (se necessário) */
+.modal .logo {
+    max-width: 100px;
     margin-bottom: 20px;
 }
 
-/* Estilo do logo */
-.logo {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    width: 12%;
-    max-width: 200px;
-    height: auto;
+.modal .titulo {
+    font-size: 1.5em;
+    margin-bottom: 10px;
 }
 
-/* Estilo do título */
-.titulo {
-    font-size: 28px;
-    margin-bottom: 40px;
-    font-weight: bold;
-}
-
-/* Estilo do parágrafo */
-.texto {
-    font-size: 22px;
-    margin: 40px 0;
-    text-align: center;
-}
-
-/* Grupo de botões */
-.button-group {
+.modal .button-group {
     display: flex;
-    justify-content: right;
-    gap: 0px;
-    margin-top: 20px;
+    justify-content: space-around;
 }
 
-/* Estilo do botão cancelar */
-.cancel {
-    background-color: #33404D;
-    color: white;
-    margin-right: 30px;
+.modal .botao-modal {
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border: none;
     border-radius: 5px;
-    font-size: 14px;
-    padding: 10px 30px;
 }
 
-.cancel:hover {
-    color: #FF0000;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-}
-
-/* Estilo do botão salvar */
-.save {
-    background-color: #33404D;
+.modal .cancel {
+    background-color: #f44336; /* Cor de fundo para o "Cancelar" */
     color: white;
-    border-radius: 5px;
-    font-size: 14px;
-    padding: 10px 30px;
 }
 
-.save:hover {
-    color: #3AA867;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+.modal .save {
+    background-color: #4CAF50; /* Cor de fundo para o "Salvar" */
+    color: white;
 }
 
-/* Responsividade */
-@media (max-width: 1200px) {
-    .modal {
-        width: 70%;
-    }
-    .linha{
-        border: none;
-        border-top: 3px solid #000;
-        width: 115%; /* Garante que a linha ocupe toda a largura do modal */
-        margin-left: -7.50%; /* Ajusta a centralização */
-    }
-}
-
-@media (max-width: 1024px) {
-    .modal {
-        width: 80%;
-    }
-    .linha{
-        border: none;
-        border-top: 3px solid #000;
-        width: 115%; /* Garante que a linha ocupe toda a largura do modal */
-        margin-left: -7.50%; /* Ajusta a centralização */ 
-    }
-}
-
-@media (max-width: 768px) {
-    .modal {
-        width: 90%;
-    }
-    .titulo{
-        margin-bottom: 20px;
-    }
-    .linha{
-        border: none;
-        border-top: 3px solid #000;
-        width: 115%; /* Garante que a linha ocupe toda a largura do modal */
-        margin-left: -7.50%; /* Ajusta a centralização */
-    }
-}
-
-@media (max-width: 480px) {
-    .button-group {
-        flex-direction: row;
-        justify-content: flex-end;
-    }
-    .botao-modal {
-        width: auto;
-    }
-    .linha{
-        border: none;
-        border-top: 3px solid #000;
-        width: 123%; /* Garante que a linha ocupe toda a largura do modal */
-        margin-left: -11.25%; /* Ajusta a centralização */
-    }
-}
-
-@media (min-width: 401px) and (max-width: 550px){
-    .modal {
-        width: 95%;
-        padding: 20px;
-    }
-    .titulo{
-        margin-top: 7px;
-        font-size: 20px;
-    }
-    .logo{
-        top: 10px;
-        width: 50px;
-    }
-    .button-group {
-        flex-direction: row;
-        justify-content: flex-end;
-    }
-    .botao-modal {
-        width: auto;
-    }
-    .linha{
-        border: none;
-        border-top: 3px solid #000;
-        width: 108.50%; /* Garante que a linha ocupe toda a largura do modal */
-        margin-left: -4.25%; /* Ajusta a centralização */ 
-    }
-}
-
-@media (max-width: 400px) {
-    .modal {
-        width: 95%;
-        padding: 15px;
-    }
-    .titulo{
-        margin-top: 7px;
-        font-size: 20px;
-    }
-    .texto{
-        font-size: 18px;
-    }
-    .logo{
-        top: 10px;
-        width: 50px;
-    }
-    .button-group {
-        flex-direction: row;
-        justify-content: flex-end;
-    }
-    .botao-modal {
-        width: auto;
-    }
-    .linha{
-        border: none;
-        border-top: 3px solid #000;
-        width: 108.50%; /* Garante que a linha ocupe toda a largura do modal */
-        margin-left: -4.25%; /* Ajusta a centralização */ 
-    }
-}
-
-@media (min-width: 320px) and (max-width: 340px) {
-    .modal {
-        width: 90%;
-        padding: 15px;
-    }
-    .titulo{
-        font-size: 16px;
-    }
-    .texto{
-        font-size: 16px;
-    }
-    .logo{
-        top: 15px;
-        width: 40px;
-    }
-    .button-group {
-        flex-direction: row;
-        justify-content: flex-end;
-    }
-    .botao-modal {
-        width: auto;
-    }
-    .linha{
-        border: none;
-        border-top: 3px solid #000;
-        width: 111%; /* Garante que a linha ocupe toda a largura do modal */
-        margin-left: -5.50%; /* Ajusta a centralização */
-    }
-}

@@ -5,21 +5,21 @@
 
 #servico {
   z-index: 1;
-  top: 157px;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  top: 17vh;
   right: 2vh;
   left: 27vh;
   bottom: 2vh;
   height: auto;
   width: auto;
+  background-color: rgba(0, 0, 0, 0.12);
   overflow: hidden;
-  scroll-behavior: auto;
-  display: flex;
-  flex-direction: column;
-  align-content: space-around;
-  align-items: stretch;
+  scroll-behavior: smooth;
 }
 .topo-tela-servico{
-  margin: 20px 0px 20px 20px; 
+  margin: 20px 0px 20px 30px; 
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -66,12 +66,12 @@
 #tela-branca-servico {
   background-color: #ffffff75;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
-  width: 96%;
+  width: 90%;
   padding: 20px;
   margin: 25px auto;
 }
 .tabela-responsiva-servico {
-  max-height: 420px;
+  max-height: 520px;
   overflow-y: auto;
   border: 1px solid #dddddd;
 }
