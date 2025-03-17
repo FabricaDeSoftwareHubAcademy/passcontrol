@@ -1,7 +1,6 @@
 
 main {  
     z-index: 1; 
-    position: absolute; 
     background-color:rgba(205, 205, 205, 0.52);
     top: 157px; 
     right: 2vh; 
@@ -12,42 +11,65 @@ main {
     overflow: auto;
     scroll-behavior: smooth; 
 }
+.container-da-tabela {
+    display: flex;
+    align-items: center; /* Alinha verticalmente */
+    justify-content: space-between; /* Espaça os elementos */
+    width: calc(100% - 60px); /* Mantém dentro dos limites do cubo-branco */
+    max-width: 100%;
+    padding: 10px 30px; /* Adiciona um espaçamento interno */
+    position: absolute;
+    top: 0; /* Mantém acima da linha */
+    left: 0;
+    right: 0;
+    margin: 0 auto; /* Centraliza */
+  }
 .titulo {
-    font-size: 25px;
-    margin-left: 54px;
-    margin-top:24px;
-    margin-bottom: 3px;
-    color: var(--cinza-control);
+  text-align: left;
+  color: var(--cinza-control);
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  margin-top: 34px;
+  margin-left: 51px;
+  font-size: 18px
 }
 .barra-pesquisa {
-    width: 10%;
-    font-style: italic;
-    font-size: 14px;
-    border: 2px solid var(--cinza-control)3;
-    opacity: 0.5;
-    margin-left: 76%;
+    width: 250px; /* Define um tamanho fixo */
+    height: 21px;
     position: absolute;
-    right: 2.9%;
-    top: 34px;
-    max-width: 500px;
+    right: 52px;
+    margin-left: 83.5%;
+    margin-top: -28px;
+}
+.input-pesquisa{
+width: 77%;
+height:29px;
+font-style: italic;
+font-size: 14px;
+border: 2px solid var(--cinza-control);
+border-radius: 5px;
+opacity: 0.8;
+outline: none;
+background-image: url(../../public/img/icons/lupa.png);
+background-size: 18px; /* Ajustando o tamanho da lupa */
+background-position: right 10px center;
+background-repeat: no-repeat;
+box-sizing: border-box;
+margin-top: 2px;
 
 }
-
-.input-pesquisa {
-    width: 77%;
-    height:22px;
-    border: 1px solid #000000;
-    border-radius: 3px;
-}
-
 .linha {
-    background-color: #2d3945;
-    height: 6px;
-    top: -1px;
-    margin-left: 2.9%;
-    margin-right:2.9%  ;
-    width: 94.1%;
+    background-color: var(--cinza-control);
+    height: 4px;
+    width: calc(100% - 60px); /* Ocupa 100% do cubo branco, menos um pequeno espaço */
+    max-width: 94%; /* Garante que não ultrapasse */
+    position: absolute;
+    top: 58px; /* Alinha no topo do cubo branco */
+    left: 0px; /* Encosta na lateral esquerda */
+    right: 0px; /* Encosta na lateral direita */
+    margin: 0 auto; /* Mantém centralizada */
 }
+
 
 .cubo-branco {
     padding: 30px;
@@ -234,11 +256,7 @@ main {
         width: 20%;
         margin-right: 2.4%;
     }
-    .linha {
-        margin-top: -1px;
-        margin-left: 52px;
-        width: 89.4%;
-    }
+
 }
 
 @media (max-width: 860px) {
