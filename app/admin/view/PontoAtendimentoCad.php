@@ -30,7 +30,6 @@ $guiches = $guiche->buscar();
     include "./navegacao.php";
     ?>
 
-    <!-- Seu conteúdo principal, antes do modal -->
 <section class="Area-Util-Projeto">
     <!-- INICIO DA ÁREA ÚTIL DA PÁGINA -->
     <div id="PontoAtendimentoCad">
