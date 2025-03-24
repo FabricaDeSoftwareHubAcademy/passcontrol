@@ -15,12 +15,14 @@
     <link rel="stylesheet" href="../../../public/css/navegacao.css">
     <link rel="stylesheet" href="../../../public/css/monitor-modal.css">
     <link rel="stylesheet" href="../../../public/css/servicos.css">
+    <!-- <link rel="stylesheet" href="../../../public/modais/Modal Inativação Serviço/inativacao_servico.css"> -->
     <!-- <link rel="stylesheet" href="../../../public/modais/Modal Confirmação dos Serviços/estilo.css"> -->
     
     <!-- JS -->
     <script src="../../../public/js/navegacao-menu-lateral.js" defer></script>
     <script src="../../../public/js/monitor-modal.js" defer></script>
     <script src="../../../public/js/ativar.js" defer></script>
+    <!-- <script src="../../../public/js/modal-inativacao-servicos.js" defer></script> -->
     <!-- <script src="../../../public/js/modal-edicao-servicos.js" defer></script> -->
     
     <link rel="shortcut icon" type="imagex/png" href="../../../public/img/Logo-Nota-Controlnt.ico">
@@ -58,7 +60,7 @@
                       <td class="coluna-editar ">
                         <a class="colm-idit" href=""><img id="icone-editar" src="../../../public/img/icons/Group 2924.png" alt="Editar"></a></td>
                         <td class="coluna-inativar">
-                            <div class="toggle-btn ativo"><div class="circulo"></div></div>
+                            <div class="toggle-btn ativo" id="btnteste"><div class="circulo"></div></div>
                         </td>
                     </tr>
                     <tr class="linha-tabela">
@@ -245,6 +247,7 @@
         </div>
         
     </section>
+    <main-inativacao_servico></main-inativacao_servico>
     <!-- <main-edicao-servico></main-edicao-servico> -->
 
     <!--MONITOR MODAL-->
