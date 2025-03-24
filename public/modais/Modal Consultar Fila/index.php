@@ -12,8 +12,9 @@
             </div>
 
             <div class="area-em-cima-tabela-atendimento">
-                <div class="input-search-atendimento">
-                    <input type="search" name="Buscar Atendente" placeholder="Buscar Atendente">
+                
+                <div id="divBusca">
+                    <input type="text" id="txtBusca" placeholder="Buscar..."/>
                 </div>
                 <div class="topo-direita-consultar-fila">
                     <div class="senhas-guiche-area-chamada">
