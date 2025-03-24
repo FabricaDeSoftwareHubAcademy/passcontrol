@@ -1,17 +1,17 @@
-const buttonAbrir = document.querySelector(".open");
-const modalContainer = document.querySelector(".modal-container");
+var buttonAbrir = document.getElementById("open_editar_dados");
+const modalContainerEditar = document.querySelector(".modal-editar-dados");
 const buttonFechar = document.querySelector(".close");
 const buttonCancelar = document.querySelector(".cancel");
 const buttonSalvar = document.querySelector(".save");
 
 buttonAbrir.addEventListener("click", () => {
-    modalContainer.classList.add("show");
+    modalContainerEditar.classList.add("show");
 });
 
 buttonCancelar.addEventListener("click", () => {
-    modalContainer.classList.remove("show");
+    modalContainerEditar.classList.remove("show");
 });
 
 buttonSalvar.addEventListener("click", () => {
-    modalContainer.classList.remove("show");
+    modalContainerEditar.classList.remove("show");
 });

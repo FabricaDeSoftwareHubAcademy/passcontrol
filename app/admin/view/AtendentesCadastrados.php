@@ -14,15 +14,17 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="../../../public/css/AtendentesCadastrados.css">
-    <link rel="stylesheet" href="../../../public/modais/Modal Inativação Usuário/estilo.css">
-    <link rel="stylesheet" href="../../../public/modais/Modal Ativação Usuário/estilo.css">
     <link rel="stylesheet" href="../../../public/css/navegacao.css">
     <link rel="stylesheet" href="../../../public/css/monitor-modal.css">
+    <link rel="stylesheet" href="../../../public/modais/Modal Inativação Usuário/inativacao_usuario.css">
+    <link rel="stylesheet" href="../../../public/modais/Modal Ativação Usuário/ativacao_usuario.css">
+    <link rel="stylesheet" href="../../../public/modais/Modal Alterar Dados Pessoais/alterar_dados_pessoais.css">
 
     <!-- JS -->
     <script src="../../../public/js/navegacao-menu-lateral.js" defer></script>
     <script src="../../../public/js/monitor-modal.js" defer></script>
     <script src="../../../public/js/modal-atendentes-cadastrados.js" defer></script>
+    <script src="../../../public/modais/Modal Alterar Dados Pessoais/alterar_dados_pessoais.js" defer></script>
 
     <link rel="shortcut icon" type="imagex/png" href="../../../public/img/Logo-Nota-Controlnt.ico">
 </head>
@@ -63,7 +65,7 @@
                             <td>Administrador</td>
                             <td>Nota Fiscal</td>
                             <td>
-                                <div class="editar"><a href=""><img src="../../../public/img/icons/Group 2924.png" alt=""></a></div>
+                                <div class="editar"><a id="open_editar_dados" href="#"><img src="../../../public/img/icons/Group 2924.png" alt=""></a></div>
                             </td>
                             <td>
                                 <div class="ativarswitch"><label class="switch">
@@ -78,7 +80,7 @@
                             <td>Atendente</td>
                             <td>IPTU</td>
                             <td>
-                                <div class="editar"><a href=""><img src="../../../public/img/icons/Group 2924.png" alt=""></a></div>
+                                <div class="editar"><a id="open_editar_dados" href="#"><img src="../../../public/img/icons/Group 2924.png" alt=""></a></div>
                             </td>
                             <td>
                                 <div class="ativarswitch"><label class="switch">
@@ -87,244 +89,21 @@
                                     </label></div>
                             </td>
                         </tr>
-                        <tr>
-                            <td>Joao Pedro Sampaio</td>
-                            <td>joaozinhodelasedeles@gmail.com</td>
-                            <td>Atendente</td>
-                            <td>IPTU</td>
-                            <td>
-                                <div class="editar"><a href=""><img src="../../../public/img/icons/Group 2924.png" alt=""></a></div>
-                            </td>
-                            <td>
-                                <div class="ativarswitch"><label class="switch">
-                                        <input type="checkbox">
-                                        <span class="slider"></span>
-                                    </label></div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Joao Pedro Sampaio</td>
-                            <td>joaozinhodelasedeles@gmail.com</td>
-                            <td>Atendente</td>
-                            <td>IPTU</td>
-                            <td>
-                                <div class="editar"><a href=""><img src="../../../public/img/icons/Group 2924.png" alt=""></a></div>
-                            </td>
-                            <td>
-                                <div class="ativarswitch"><label class="switch">
-                                        <input type="checkbox">
-                                        <span class="slider"></span>
-                                    </label></div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Joao Pedro Sampaio</td>
-                            <td>joaozinhodelasedeles@gmail.com</td>
-                            <td>Atendente</td>
-                            <td>IPTU</td>
-                            <td>
-                                <div class="editar"><a href=""><img src="../../../public/img/icons/Group 2924.png" alt=""></a></div>
-                            </td>
-                            <td>
-                                <div class="ativarswitch"><label class="switch">
-                                        <input type="checkbox">
-                                        <span class="slider"></span>
-                                    </label></div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Joao Pedro Sampaio</td>
-                            <td>joaozinhodelasedeles@gmail.com</td>
-                            <td>Atendente</td>
-                            <td>IPTU</td>
-                            <td>
-                                <div class="editar"><a href=""><img src="../../../public/img/icons/Group 2924.png" alt=""></a></div>
-                            </td>
-                            <td>
-                                <div class="ativarswitch"><label class="switch">
-                                        <input type="checkbox">
-                                        <span class="slider"></span>
-                                    </label></div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Joao Pedro Sampaio</td>
-                            <td>joaozinhodelasedeles@gmail.com</td>
-                            <td>Atendente</td>
-                            <td>IPTU</td>
-                            <td>
-                                <div class="editar"><a href=""><img src="../../../public/img/icons/Group 2924.png" alt=""></a></div>
-                            </td>
-                            <td>
-                                <div class="ativarswitch"><label class="switch">
-                                        <input type="checkbox">
-                                        <span class="slider"></span>
-                                    </label></div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Joao Pedro Sampaio</td>
-                            <td>joaozinhodelasedeles@gmail.com</td>
-                            <td>Atendente</td>
-                            <td>IPTU</td>
-                            <td>
-                                <div class="editar"><a href=""><img src="../../../public/img/icons/Group 2924.png" alt=""></a></div>
-                            </td>
-                            <td>
-                                <div class="ativarswitch"><label class="switch">
-                                        <input type="checkbox">
-                                        <span class="slider"></span>
-                                    </label></div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Joao Pedro Sampaio</td>
-                            <td>joaozinhodelasedeles@gmail.com</td>
-                            <td>Atendente</td>
-                            <td>IPTU</td>
-                            <td>
-                                <div class="editar"><a href=""><img src="../../../public/img/icons/Group 2924.png" alt=""></a></div>
-                            </td>
-                            <td>
-                                <div class="ativarswitch"><label class="switch">
-                                        <input type="checkbox">
-                                        <span class="slider"></span>
-                                    </label></div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Joao Pedro Sampaio</td>
-                            <td>joaozinhodelasedeles@gmail.com</td>
-                            <td>Atendente</td>
-                            <td>IPTU</td>
-                            <td>
-                                <div class="editar"><a href=""><img src="../../../public/img/icons/Group 2924.png" alt=""></a></div>
-                            </td>
-                            <td>
-                                <div class="ativarswitch"><label class="switch">
-                                        <input type="checkbox">
-                                        <span class="slider"></span>
-                                    </label></div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Joao Pedro Sampaio</td>
-                            <td>joaozinhodelasedeles@gmail.com</td>
-                            <td>Atendente</td>
-                            <td>IPTU</td>
-                            <td>
-                                <div class="editar"><a href=""><img src="../../../public/img/icons/Group 2924.png" alt=""></a></div>
-                            </td>
-                            <td>
-                                <div class="ativarswitch"><label class="switch">
-                                        <input type="checkbox">
-                                        <span class="slider"></span>
-                                    </label></div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Joao Pedro Sampaio</td>
-                            <td>joaozinhodelasedeles@gmail.com</td>
-                            <td>Atendente</td>
-                            <td>IPTU</td>
-                            <td>
-                                <div class="editar"><a href=""><img src="../../../public/img/icons/Group 2924.png" alt=""></a></div>
-                            </td>
-                            <td>
-                                <div class="ativarswitch"><label class="switch">
-                                        <input type="checkbox">
-                                        <span class="slider"></span>
-                                    </label></div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Joao Pedro Sampaio</td>
-                            <td>joaozinhodelasedeles@gmail.com</td>
-                            <td>Atendente</td>
-                            <td>IPTU</td>
-                            <td>
-                                <div class="editar"><a href=""><img src="../../../public/img/icons/Group 2924.png" alt=""></a></div>
-                            </td>
-                            <td>
-                                <div class="ativarswitch"><label class="switch">
-                                        <input type="checkbox">
-                                        <span class="slider"></span>
-                                    </label></div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Joao Pedro Sampaio</td>
-                            <td>joaozinhodelasedeles@gmail.com</td>
-                            <td>Atendente</td>
-                            <td>IPTU</td>
-                            <td>
-                                <div class="editar"><a href=""><img src="../../../public/img/icons/Group 2924.png" alt=""></a></div>
-                            </td>
-                            <td>
-                                <div class="ativarswitch"><label class="switch">
-                                        <input type="checkbox">
-                                        <span class="slider"></span>
-                                    </label></div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Joao Pedro Sampaio</td>
-                            <td>joaozinhodelasedeles@gmail.com</td>
-                            <td>Atendente</td>
-                            <td>IPTU</td>
-                            <td>
-                                <div class="editar"><a href=""><img src="../../../public/img/icons/Group 2924.png" alt=""></a></div>
-                            </td>
-                            <td>
-                                <div class="ativarswitch"><label class="switch">
-                                        <input type="checkbox">
-                                        <span class="slider"></span>
-                                    </label></div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Joao Pedro Sampaio</td>
-                            <td>joaozinhodelasedeles@gmail.com</td>
-                            <td>Atendente</td>
-                            <td>IPTU</td>
-                            <td>
-                                <div class="editar"><a href=""><img src="../../../public/img/icons/Group 2924.png" alt=""></a></div>
-                            </td>
-                            <td>
-                                <div class="ativarswitch"><label class="switch">
-                                        <input type="checkbox">
-                                        <span class="slider"></span>
-                                    </label></div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Joao Pedro Sampaio</td>
-                            <td>joaozinhodelasedeles@gmail.com</td>
-                            <td>Atendente</td>
-                            <td>IPTU</td>
-                            <td>
-                                <div class="editar"><a href=""><img src="../../../public/img/icons/Group 2924.png" alt=""></a></div>
-                            </td>
-                            <td>
-                                <div class="ativarswitch"><label class="switch">
-                                        <input type="checkbox">
-                                        <span class="slider"></span>
-                                    </label></div>
-                            </td>
-                        </tr>
-
                     </table>
                 </div>
             </div>
             <div class="div-botao-info">
                 <button class="add-func" type="submit" onclick="window.location.href='../../../app/admin/view/telacadastro.php';">Novo Funcionario</button>
             </div>
+        </div>
     </section>
     <!-- <main-atendentes-cadastrados></main-atendentes-cadastrados> -->
 
     <!--MONITOR MODAL-->
     <?php
     include "./monitor-modal.php";
+
+    include '../../../public/modais/Modal Alterar Dados Pessoais/alterar_dados_pessoais.html'
     ?>
 </body>
 </html>

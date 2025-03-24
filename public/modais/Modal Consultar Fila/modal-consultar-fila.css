@@ -87,7 +87,7 @@ hr {
 }
 
 /* Estilo do título */
-h1 {
+.topo-esquerda-consultar-fila h3{
     font-size: 28px;
     margin-bottom: 40px;
     font-weight: bold;
@@ -140,7 +140,7 @@ button.return:hover {
         right: 10px !important;
     }
 
-    h1 {
+    .topo-esquerda-consultar-fila h3 {
         font-size: 18px !important;
         margin-bottom: 20px !important;
     }
@@ -181,7 +181,7 @@ button.return:hover {
 }
 
 @media (max-width: 400px) and (min-width: 350px) {
-    h1 {
+    .topo-esquerda-consultar-fila h3 {
         font-size: 16px !important;
         margin-top: 10px !important; /* Afastando do topo */
         max-width: 100% !important; /* Evita que o título fique muito largo */
@@ -194,7 +194,7 @@ button.return:hover {
 }
 
 @media (max-width: 350px) and (min-width: 345px) {
-    h1 {
+    .topo-esquerda-consultar-fila h3 {
         font-size: 16px !important;
         margin-right: 50px;
         max-width: 100% !important; /* Evita que o título fique muito largo */
@@ -208,7 +208,7 @@ button.return:hover {
 }
 
 @media (max-width: 349px) and (min-width: 320px) {
-    h1 {
+    .topo-esquerda-consultar-fila h3 {
         font-size: 16px !important;
         margin-right: 50px;
         max-width: 100% !important; /* Evita que o título fique muito largo */
@@ -235,7 +235,7 @@ button.return:hover {
     .logo {
         width: 60px;
     }
-    h1 {
+    .topo-esquerda-consultar-fila h3 {
         font-size: 20px;
     }
     p {
@@ -261,7 +261,7 @@ button.return:hover {
     .logo {
         width: 80px;
     }
-    h1 {
+    .topo-esquerda-consultar-fila h3 {
         font-size: 24px;
     }
     p {
@@ -275,7 +275,7 @@ button.return:hover {
         margin-left: -7.7%; /* Centraliza um pouco à esquerda */
         margin-right: 5%; /* Centraliza um pouco à direita */
     }
-    h1 {
+    .topo-esquerda-consultar-fila h3 {
         font-size: 32px;
     }
     p {
@@ -293,7 +293,7 @@ button.return:hover {
         margin-left: -7.7%; /* Ajusta a centralização */
         margin-right: 10%; /* Ajusta a centralização */
     }
-    h1 {
+    .topo-esquerda-consultar-fila h3 {
         font-size: 32px;
     }
     p {
@@ -310,7 +310,7 @@ button.return:hover {
         width: 100%;
         max-width: 1200px;
     }
-    h1 {
+    .topo-esquerda-consultar-fila h3 {
         font-size: 32px;
     }
     p {

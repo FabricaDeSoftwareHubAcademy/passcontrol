@@ -28,7 +28,7 @@
 }
 
 /* Estilo do container do modal */
-.modal-container {
+.modal-editar-dados {
     background: rgba(0, 0, 0, 0.5);
     width: 100vw;
     height: 100vh;
@@ -44,7 +44,7 @@
     z-index: 1;
 }
 
-.modal-container.show {
+.show {
     opacity: 1;
     pointer-events: auto;
 }

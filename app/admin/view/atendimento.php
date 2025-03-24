@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="../../../public/modais/Modal Confirmação Deslogar/confirmacao_deslogar.css">
     
     <link rel="stylesheet" href="../../../public/modais/Modal Consultar Fila/consultar-fila.css">
-    <link rel="stylesheet" href="../../../public/modais/Modal Consultar Fila/estilo.css">
+    <link rel="stylesheet" href="../../../public/modais/Modal Consultar Fila/modal-consultar-fila.css">
 
     <!-- JS -->
     <script src="../../../public/js/navegacao-menu-lateral.js" defer></script>
