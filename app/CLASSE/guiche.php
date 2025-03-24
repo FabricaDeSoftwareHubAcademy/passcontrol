@@ -41,6 +41,7 @@ Class Guiche{
         );
         return $res;
     }
+    
 
     public function editar(){
         $db = new Database('guiche');

@@ -80,22 +80,33 @@ $guiches = $guiche->buscar();
         </div>
         <div class="botoesVoltar-Cadastrar">
             <button type="button" class="botao-voltar" onclick="window.location.href='menuadm_servicos.php';">Voltar</button>
-            <button type="submit" class="botao-cadastro">Cadastrar</button>
+            <button type="button" class="botao-cadastro" onclick="abrirModalCadastro()">Cadastrar</button>
         </div>
+
     </div>
 </section>
 
-<!-- Modal de Confirmação -->
-<main class="modal-container">
+<!-- Modal de Cadastro -->
+<main class="modal-container" id="modalCadastro">
     <section class="modal">
         <img src="../../../public/img/img-modais/Logo Nota Controlnt.png" alt="Logo Nota Control" class="logo">
-        <h1 class="titulo">Confirmação</h1>
+        <h1 class="titulo">Cadastrar Guichê</h1>
         <hr class="linha">
-        <p class="texto"><b>Deseja Ativar Esse Guichê?</b></p>
-        <div class="button-group">
-            <button class="botao-modal cancel">Não</button>
-            <button class="botao-modal save">Sim</button>
-        </div>
+        
+        <form id="formCadastroGuiche" action="cadastrar_guiche.php" method="POST">
+            <div>
+                <label for="num_guiche">Número do Guichê:</label>
+                <input type="text" id="num_guiche" name="num_guiche" required>
+            </div>
+            <div>
+                <label for="nome_guiche">Nome do Guichê:</label>
+                <input type="text" id="nome_guiche" name="nome_guiche" required>
+            </div>
+            <div class="button-group">
+                <button type="button" class="botao-modal cancel" onclick="fecharModal()">Cancelar</button>
+                <button type="submit" class="botao-modal save">Cadastrar</button>
+            </div>
+        </form>
     </section>
 </main>
 

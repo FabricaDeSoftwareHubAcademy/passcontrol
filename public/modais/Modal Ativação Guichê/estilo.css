@@ -16,7 +16,6 @@
     display: flex; 
 }
 
-
 .modal {
     background-color: white;
     padding: 20px;
@@ -27,7 +26,7 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
-/* Outros estilos do modal (se necessário) */
+/* Outros estilos do modal */
 .modal .logo {
     max-width: 100px;
     margin-bottom: 20px;
@@ -60,4 +59,3 @@
     background-color: #4CAF50; /* Cor de fundo para o "Salvar" */
     color: white;
 }
-
