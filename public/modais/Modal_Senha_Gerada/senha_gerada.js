@@ -1,5 +1,5 @@
-const buttonAbrir = document.querySelector(".open");
-const modalContainer = document.querySelector(".modal-container");
+const buttonAbrir = document.querySelector(".abrir-senha-gerada");
+const modalContainer = document.querySelector(".fundo-senha-gerada");
 const buttonFechar = document.querySelector(".Okay");
 
 buttonAbrir.addEventListener("click", () => {

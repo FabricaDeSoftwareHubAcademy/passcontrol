@@ -5,19 +5,10 @@
     box-sizing: border-box;
 }
 
-.body-container {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #F5F5F5
-}
-
 /* Botões gerais */
 .botao-modal {
+    background-color: #33404D;
     padding: 10px 20px;
-    background-color: rgb(47, 128, 128);
     border: 0;
     border-radius: 10px;
     font-size: 18px;
@@ -26,30 +17,31 @@
     cursor: pointer;
 }
 
-/* Estilo do container do modal */
-.modal-container {
+/* Estilo do background do modal */
+.fundo-conf-relatorio-gerado {
     background: rgba(0, 0, 0, 0.5);
     width: 100vw;
     height: 100vh;
     position: fixed;
     top: 0;
     left: 0;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.3s ease;
-    z-index: 1;
+    z-index: 10;
 }
 
-.modal-container.show {
+.show {
     opacity: 1;
     pointer-events: auto;
+    display: flex;
 }
 
 /* Estilo do modal */
-.modal {
+.modal-conf-relatorio-gerado {
     background-color: #ddd;
     width: 60%;
     max-width: 550px;
@@ -57,18 +49,19 @@
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     position: relative;
     text-align: center;
+    border-radius: 5px;
 }
 
-.modal-divider {
+.modal-conf-relatorio-gerado .linha-divisoria {
     border: none;
     border-top: 3px solid #000;
-    width: calc(100% + 60px); /* Adiciona o padding do modal */
-    margin-left: -30px; /* Ajusta para expandir até as bordas */
+    width: calc(100% + 60px);
+    margin: -30px;
     margin-top: 20px;
     margin-bottom: 20px;
 }
 
-.logo {
+.modal-conf-relatorio-gerado .logo {
     width: 60px;
     position: absolute;
     top: 15px;
@@ -76,14 +69,14 @@
 }
 
 /* Tipografia */
-.modal-title {
+.modal-conf-relatorio-gerado .titulo-modal {
     font-size: 24px;
     font-weight: bold;
     text-align: left;
     margin-bottom: 30px;
 }
 
-.modal-message {
+.modal-conf-relatorio-gerado .modal-message {
     margin-top: 40px;
     font-size: 18px;
     font-weight: bold;
@@ -91,13 +84,13 @@
 }
 
 /* Grupo de botões */
-.button-group {
+.modal-conf-relatorio-gerado .button-group {
     display: flex;
     justify-content: flex-end   ;
     margin-top: 15px;
 }
 
-.botao-modal.Okay {
+.modal-conf-relatorio-gerado .botao-modal .Okay {
     background-color: #33404D;
     color: white;
     border-radius: 5px;
@@ -106,96 +99,96 @@
     margin-bottom: 10px;
 }
 
-.botao-modal.Okay:hover {
+.modal-conf-relatorio-gerado .botao-modal .Okay:hover {
     color: white;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }
 
 /* Responsividade */
 @media (max-width: 1200px) {
-    .modal {
+    .modal-conf-relatorio-gerado {
         width: 100%;
     }
-    .modal-title {
+    .modal-conf-relatorio-gerado .titulo-modal {
         font-size: 25px;
     }
-    .modal-message {
+    .modal-conf-relatorio-gerado .modal-message {
         font-size: 22px;
     }
-    .logo {
+    .modal-conf-relatorio-gerado .logo {
         width: 70px;
         top: 15px;
     }
 }
 
 @media (max-width: 1024px) {
-    .modal {
+    .modal-conf-relatorio-gerado {
         width: 100%;
     }
-    .modal-title {
+    .modal-conf-relatorio-gerado .titulo-modal {
         font-size: 25px;
     }
-    .modal-message {
+    .modal-conf-relatorio-gerado .modal-message {
         font-size: 22px;
     }
-    .logo {
+    .modal-conf-relatorio-gerado .logo {
         width: 70px;
         top: 15px;
     }
 }
 
 @media (max-width: 768px) {
-    .modal {
+    .modal-conf-relatorio-gerado {
         width: 100%;
     }
-    .modal-title {
+    .modal-conf-relatorio-gerado .titulo-modal {
         font-size: 25px;
     }
-    .modal-message {
+    .modal-conf-relatorio-gerado .modal-message {
         font-size: 22px;
     }
-    .logo {
+    .modal-conf-relatorio-gerado .logo {
         width: 70px;
         top: 15px;
     }
 }
 
 @media (max-width: 480px) {
-    .modal {
+    .modal-conf-relatorio-gerado {
         width: 90%;
     }
-    .modal-title {
+    .modal-conf-relatorio-gerado .titulo-modal {
         font-size: 20px;
     }
-    .modal-message {
+    .modal-conf-relatorio-gerado .modal-message {
         font-size: 20px;
     }
-    .logo {
+    .modal-conf-relatorio-gerado .logo {
         margin-top: 2px;
         width: 60px;
     }
 }
 
 @media (max-width: 400px){
-    .modal-message{
+    .modal-conf-relatorio-gerado .modal-message{
         font-size: 18px;
     }
-    .botao-modal.Okay{
+    .modal-conf-relatorio-gerado .botao-modal.Okay{
         margin-top: 20px;
     }
-    .button-group{
+    .modal-conf-relatorio-gerado .button-group{
         justify-content: center;
     }
 }
 
 @media (max-width: 320px){
-    .modal-message{
+    .modal-conf-relatorio-gerado .modal-message{
         font-size: 18px;
     }
-    .botao-modal.Okay{
+    .modal-conf-relatorio-gerado .botao-modal.Okay{
         margin-top: 20px;
     }
-    .button-group{
+    .modal-conf-relatorio-gerado .button-group{
         justify-content: center;
     }
 }

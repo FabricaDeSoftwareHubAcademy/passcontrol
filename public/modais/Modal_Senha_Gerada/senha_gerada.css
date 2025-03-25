@@ -5,19 +5,10 @@
     box-sizing: border-box;
 }
 
-.body-container {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #F5F5F5
-}
-
 /* Botões gerais */
 .botao-modal {
+    background-color: #33404D;
     padding: 10px 20px;
-    background-color: rgb(47, 128, 128);
     border: 0;
     border-radius: 10px;
     font-size: 18px;
@@ -26,30 +17,31 @@
     cursor: pointer;
 }
 
-/* Estilo do container do modal */
-.modal-container {
+/* Estilo do background do modal */
+.fundo-senha-gerada {
     background: rgba(0, 0, 0, 0.5);
     width: 100vw;
     height: 100vh;
     position: fixed;
     top: 0;
     left: 0;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     opacity: 0;
     pointer-events: none;
-    transition: opacity 0.3s ease;
-    z-index: 1;
+    transition: opacity 0.15s ease;
+    z-index: 10;
 }
 
-.modal-container.show {
+.show {
     opacity: 1;
+    display: flex;
     pointer-events: auto;
 }
 
 /* Estilo do modal */
-.modal {
+.modal-senha-gerada {
     background-color: #ddd;
     width: 60%;
     max-width: 550px;
@@ -57,9 +49,10 @@
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     position: relative;
     text-align: center;
+    border-radius: 5px;
 }
 
-.modal-divider {
+.modal-senha-gerada .modal-divider {
     border: none;
     border-top: 3px solid #000;
     width: calc(100% + 60px); /* Adiciona o padding do modal */
@@ -68,7 +61,7 @@
     margin-bottom: 20px;
 }
 
-.logo {
+.modal-senha-gerada .logo {
     width: 60px;
     position: absolute;
     top: 15px;
@@ -76,13 +69,13 @@
 }
 
 /* Tipografia */
-.modal-title {
+.modal-senha-gerada .modal-title {
     font-size: 24px;
     font-weight: bold;
     text-align: left;
 }
 
-.check-image{
+.modal-senha-gerada .check-image{
     width: 20%;
     max-width: 200px; /* Limita o tamanho máximo */
     display: block;
@@ -90,13 +83,13 @@
 }
 
 /* Tipografia */
-.modal-title {
+.modal-senha-gerada .modal-title {
     font-size: 24px;
     font-weight: bold;
     text-align: left;
 }
 
-.modal-message {
+.modal-senha-gerada .modal-message {
     margin-top: 40px;
     font-size: 18px;
     font-weight: bold;
@@ -104,13 +97,13 @@
 }
 
 /* Grupo de botões */
-.button-group {
+.modal-senha-gerada .button-group {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     margin-top: 15px;
 }
 
-.botao-modal.Okay {
+.modal-senha-gerada .botao-modal .Okay {
     background-color: #33404D;
     color: white;
     border-radius: 5px;
@@ -119,14 +112,14 @@
     margin-bottom: 30px;
 }
 
-.botao-modal.Okay:hover {
+.modal-senha-gerada .botao-modal .Okay:hover {
     color: white;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }
 
 /* Responsividade */
 @media (max-width: 1200px) {
-    .modal {
+    .modal-senha-gerada {
         width: 100%;
     }
     .modal-title {
@@ -142,92 +135,92 @@
 }
 
 @media (max-width: 1024px) {
-    .modal {
+    .modal-senha-gerada {
         width: 100%;
     }
-    .modal-title {
+    .modal-senha-gerada .modal-title {
         font-size: 28px;
     }
-    .modal-message {
+    .modal-senha-gerada .modal-message {
         font-size: 22px;
     }
-    .logo {
+    .modal-senha-gerada .logo {
         width: 60px;
         top: 15px;
     }
 }
 
 @media (max-width: 768px) {
-    .modal {
+    .modal-senha-gerada {
         width: 100%;
     }
-    .modal-title {
+    .modal-senha-gerada .modal-title {
         font-size: 25px;
     }
-    .modal-message {
+    .modal-senha-gerada .modal-message {
         font-size: 20px;
     }
-    .logo {
+    .modal-senha-gerada .logo {
         width: 60px;
         top: 15px;
     }
 }
 
 @media (max-width: 480px) {
-    .modal {
+    .modal-senha-gerada {
         width: 90%;
     }
-    .modal-title {
+    .modal-senha-gerada .modal-title {
         font-size: 22px;
     }
-    .modal-message {
+    .modal-senha-gerada .modal-message {
         font-size: 18px;
     }
-    .logo {
+    .modal-senha-gerada .logo {
         margin-top: 5px;
         width: 50px;
     }
-    .check-image{
+    .modal-senha-gerada .check-image{
         margin-top: 30px;
         width: 70px;
     }
 }
 
 @media (max-width: 400px) {
-    .modal {
+    .modal-senha-gerada {
         width: 90%;
     }
-    .modal-title {
+    .modal-senha-gerada .modal-title {
         font-size: 20px;
     }
-    .modal-message {
+    .modal-senha-gerada .modal-message {
         font-size: 16px;
     }
-    .logo {
+    .modal-senha-gerada .logo {
         margin-top: 1px;
         width: 50px;
     }
-    .check-image{
+    .modal-senha-gerada .check-image{
         margin-top: 30px;
         width: 70px;
     }
 }
 
 @media (max-width: 320px) {
-    .modal {
+    .modal-senha-gerada {
         width: 90%;
     }
-    .modal-title {
+    .modal-senha-gerada .modal-title {
         font-size: 18px;
     }
-    .modal-message {
+    .modal-senha-gerada .modal-message {
         font-size: 15px;
     }
-    .logo {
+    .modal-senha-gerada .logo {
         margin-top: 5px;
         width: 40px;
     }
-    .check-image{
+    .modal-senha-gerada .check-image{
         margin-top: 30px;
         width: 60px;
     }

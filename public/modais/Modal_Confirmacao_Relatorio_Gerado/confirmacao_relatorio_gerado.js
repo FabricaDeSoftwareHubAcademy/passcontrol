@@ -1,5 +1,5 @@
-const buttonAbrir = document.querySelector(".open");
-const modalContainer = document.querySelector(".modal-container");
+const buttonAbrir = document.querySelector(".abrir-conf-relatorio-gerado");
+const modalContainer = document.querySelector(".fundo-conf-relatorio-gerado");
 const buttonFechar = document.querySelector(".Okay");
 
 buttonAbrir.addEventListener("click", () => {

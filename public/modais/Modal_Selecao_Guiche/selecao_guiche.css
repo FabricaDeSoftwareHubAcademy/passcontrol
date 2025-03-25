@@ -15,8 +15,8 @@
 
 /* Botões gerais */
 .botao-modal {
+    background-color: #33404D;
     padding: 10px 20px;
-    background-color: rgb(47, 128, 128);
     border: 0;
     border-radius: 10px;
     font-size: 18px;
@@ -25,30 +25,31 @@
     cursor: pointer;
 }
 
-/* Estilo do container do modal */
-.modal-container {
+/* Estilo do background do modal */
+.fundo-selecao-guiche {
     background: rgba(0, 0, 0, 0.5);
     width: 100vw;
     height: 100vh;
     position: fixed;
     top: 0;
     left: 0;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.3s ease;
-    z-index: 1;
+    z-index: 10;
 }
 
-.modal-container.show {
+.show {
     opacity: 1;
+    display: flex;
     pointer-events: auto;
 }
 
 /* Estilo do modal */
-.modal {
+.modal-selecao-guiche {
     background-color: #ddd;
     width: 60%;
     max-width: 550px;
@@ -56,9 +57,10 @@
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     position: relative;
     text-align: center;
+    border-radius: 5px;
 }
 
-.modal-divider {
+.modal-selecao-guiche .modal-divider {
     border: none;
     border-top: 3px solid #000;
     width: calc(100% + 60px); /* Adiciona o padding do modal */
@@ -67,7 +69,7 @@
     margin-bottom: 20px;
 }
 
-.logo {
+.modal-selecao-guiche .logo {
     width: 60px;
     position: absolute;
     top: 15px;
@@ -75,26 +77,26 @@
 }
 
 /* Tipografia */
-.modal-title {
+.modal-selecao-guiche .modal-title {
     font-size: 24px;
     font-weight: bold;
     text-align: left;
 }
 
-.modal-message {
+.modal-selecao-guiche .modal-message {
     margin-top: 40px;
     font-size: 18px;
     font-weight: bold;
     text-align: center;
 }
 
-.select-container{
+.modal-selecao-guiche .select-container{
     margin: 20px 0;
     display: flex;
     justify-content: center;
 }
 
-.menu{
+.modal-selecao-guiche .select-container .menu{
     padding: 10px;
     font-size: 18px;
     border: 1px solid #ccc;
@@ -103,13 +105,13 @@
 }
 
 /* Grupo de botões */
-.button-group {
+.modal-selecao-guiche .button-group {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     margin-top: 15px;
 }
 
-.botao-modal.confirm {
+.modal-selecao-guiche .botao-modal .confirm {
     background-color: #33404D;
     color: white;
     border-radius: 5px;
@@ -118,122 +120,122 @@
     margin-bottom: 30px;
 }
 
-.botao-modal.confirm:hover {
+.modal-selecao-guiche .botao-modal .confirm:hover {
     color: #3AA867;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }
 
 /* Responsividade */
 @media (max-width: 1200px) {
-    .modal {
+    .modal-selecao-guiche {
         width: 100%;
     }
-    .modal-title {
+    .modal-selecao-guiche .modal-title {
         font-size: 25px;
     }
-    .modal-message {
+    .modal-selecao-guiche .modal-message {
         font-size: 22px;
     }
-    .logo {
+    .modal-selecao-guiche .logo {
         width: 70px;
         top: 10px;
     }
-    .menu{
+    .modal-selecao-guiche .select-container .menu{
         width: 120px;
     }
 }
 
 @media (max-width: 1024px) {
-    .modal {
+    .modal-selecao-guiche {
         width: 100%;
     }
-    .modal-title {
+    .modal-selecao-guiche .modal-title {
         font-size: 25px;
     }
-    .modal-message {
+    .modal-selecao-guiche .modal-message {
         font-size: 22px;
     }
-    .logo {
+    .modal-selecao-guiche .logo {
         width: 70px;
         top: 10px;
     }
-    .menu{
+    .modal-selecao-guiche .select-container .menu{
         width: 120px;
     }
 }
 
 @media (max-width: 768px) {
-    .modal {
+    .modal-selecao-guiche {
         width: 100%;
     }
-    .modal-title {
+    .modal-selecao-guiche .modal-title {
         font-size: 25px;
     }
-    .modal-message {
+    .modal-selecao-guiche .modal-message {
         font-size: 20px;
     }
-    .logo {
+    .modal-selecao-guiche .logo {
         width: 70px;
         top: 10px;
     }
-    .menu{
+    .modal-selecao-guiche .select-container .menu{
         width: 120px;
     }
 }
 
 @media (max-width: 480px) {
-    .modal {
+    .modal-selecao-guiche {
         width: 90%;
     }
-    .modal-title {
+    .modal-selecao-guiche .modal-title {
         font-size: 22px;
     }
-    .modal-message {
+    .modal-selecao-guiche .modal-message {
         font-size: 18px;
     }
-    .logo {
+    .modal-selecao-guiche .logo {
         margin-top: 5px;
         width: 60px;
     }
-    .menu{
+    .modal-selecao-guiche .select-container .menu{
         width: 120px;
     }
 }
 
 @media (max-width: 400px) {
-    .modal {
+    .modal-selecao-guiche {
         width: 90%;
     }
-    .modal-title {
+    .modal-selecao-guiche .modal-title {
         font-size: 20px;
     }
-    .modal-message {
+    .modal-selecao-guiche .modal-message {
         font-size: 18px;
     }
-    .logo {
+    .modal-selecao-guiche .logo {
         margin-top: 5px;
         width: 50px;
     }
-    .menu{
+    .modal-selecao-guiche .select-container .menu{
         width: 120px;
     }
 }
 
 @media (max-width: 320px) {
-    .modal {
+    .modal-selecao-guiche {
         width: 90%;
     }
-    .modal-title {
+    .modal-selecao-guiche .modal-title {
         font-size: 18px;
     }
-    .modal-message {
+    .modal-selecao-guiche .modal-message {
         font-size: 16px;
     }
-    .logo {
+    .modal-selecao-guiche .logo {
         margin-top: 10px;
         width: 40px;
     }
-    .menu{
+    .modal-selecao-guiche .select-container .menu{
         width: 120px;
     }
 }

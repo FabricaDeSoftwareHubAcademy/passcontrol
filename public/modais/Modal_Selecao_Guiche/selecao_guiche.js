@@ -1,5 +1,5 @@
-const buttonAbrir = document.querySelector(".open");
-const modalContainer = document.querySelector(".modal-container");
+const buttonAbrir = document.querySelector(".open-selecao-guiche");
+const modalContainer = document.querySelector(".fundo-selecao-guiche");
 const buttonConfirmar = document.querySelector(".confirm");
 
 buttonAbrir.addEventListener("click", () => {
