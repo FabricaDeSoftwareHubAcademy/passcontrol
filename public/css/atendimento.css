@@ -366,7 +366,7 @@
 
 
 /* TABELA  */
-.fundo-guiche-area-chamada{ 
+    .fundo-guiche-area-chamada{ 
     width: 96%; 
     font-weight: 600; 
     height: 100%; 
@@ -375,6 +375,7 @@
     gap: 15px; 
     margin-top: 2rem; 
     /* overflow-x: auto;  */
+    /* overflow-x: hidden; */
     display: flex; 
     display: block; 
     justify-content: left; 
@@ -385,7 +386,7 @@
     background-color: rgba(255, 255, 255, 0.5); 
     width: 95%; 
     margin: 2vw; 
-    max-height: 230px; 
+    max-height: 100px; 
     position: relative; 
     overflow-x: auto;  
     /* display: block;   */

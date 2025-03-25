@@ -24,8 +24,8 @@
                 </div>
             </div>
 
-            <div class="fundo-guiche-area-chamada">
-                <table class="tabela_atendimento-guiche-area-chamada">
+            <div class="fundo-tabela-fila">
+                <table class="tabela_atendimento-fila">
                     <thead>
                         <tr>
                             <th>Ordem</th>
