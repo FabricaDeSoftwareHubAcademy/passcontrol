@@ -28,7 +28,7 @@
 }
 
 /* Estilo do container do modal */
-.modal-editar-dados {
+.fundo-editar-dados {
     background: rgba(0, 0, 0, 0.5);
     width: 100vw;
     height: 100vh;
@@ -50,7 +50,7 @@
 }
 
 /* Estilo do modal */
-.modal {
+.modal-editar-dados {
     background-color: #e0e0e0;
     width: 80%;
     max-width: 600px;
@@ -58,15 +58,15 @@
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     position: relative;
     text-align: left;
+    border-radius: 5px;
 }
 
 /* Estilo da linha horizontal */
-.linha {
+.linha-alterar-dados {
     border: none;
     border-top: 3px solid #000;
-    width: 32.4vw;
-    margin-left: calc(-16.2vw + 50%);
-    margin-right: calc(-20vw + 50%);
+    width: calc(100% + 80px);
+    margin-left: -40px; 
     margin-top: 20px;
     margin-bottom: 20px;
 }
@@ -80,7 +80,7 @@
 }
 
 /* Estilo do container do nome */
-.nome-container {
+.nome-container-alterar-dados {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -88,7 +88,7 @@
     margin-bottom: 20px;
 }
 
-.container {
+.container-dados {
     flex: 1;
     margin-right: 20px;
 }
@@ -98,21 +98,21 @@
 }
 
 /* Estilo do container de email */
-.email-container {
+.email-container-alterar-dados {
     display: flex;
     flex-direction: column;
     margin-bottom: 20px;
 }
 
 /* Estilo do container de CPF */
-.cpf-container {
+.cpf-container-alterar-dados {
     display: flex;
     flex-direction: column;
     margin-bottom: 20px;
 }
 
 /* Estilo dos inputs e labels */
-.label-nome, .label-email, .label-cpf, .label-file {
+.label-nome-alterar-dados, .label-email-alterar-dados, .label-cpf-alterar-dados, .label-file-alterar-dados {
     font-size: 16px;
     margin-bottom: 5px;
 }
@@ -127,14 +127,14 @@
 }
 
 /* Estilização do container do input file */
-.file-container {
+.file-container-alterar-dados {
     display: flex;
     flex-direction: column;
     margin-bottom: 20px;
 }
 
 /* Grupo de botões */
-.button-group {
+.button-group-alterar-dados {
     display: flex;
     justify-content: right;
     gap: 0px;
@@ -142,7 +142,7 @@
 }
 
 /* Estilo do botão cancelar */
-.botao-modal.cancel {
+.botao-modal-alterar-dados.cancel {
     background-color: #33404D;
     color: white;
     margin-right: 30px;
@@ -151,13 +151,13 @@
     padding: 10px 30px;
 }
 
-.botao-modal.cancel:hover {
+.botao-modal-alterar-dados.cancel:hover {
     color: #FFF;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }
 
 /* Estilo do botão salvar */
-.botao-modal.save {
+.botao-modal-alterar-dados.save {
     background-color: #33404D;
     color: white;
     border-radius: 5px;
@@ -165,17 +165,17 @@
     padding: 10px 30px;
 }
 
-.botao-modal.save:hover {
+.botao-modal-alterar-dados.save:hover {
     color: #3AA867;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }
 
 /* Responsividade */
 @media (max-width: 1200px) {
-    .modal {
+    .modal-editar-dados {
         width: 70%;
     }
-    .linha{
+    .linha-alterar-dados{
         border: none;
         border-top: 3px solid #000;
         width: 115%; /* Garante que a linha ocupe toda a largura do modal */
@@ -184,10 +184,10 @@
 }
 
 @media (max-width: 1024px) {
-    .modal {
+    .modal-editar-dados {
         width: 80%;
     }
-    .linha{
+    .linha-alterar-dados{
         border: none;
         border-top: 3px solid #000;
         width: 115%; /* Garante que a linha ocupe toda a largura do modal */
@@ -196,7 +196,7 @@
 }
 
 @media (max-width: 768px) {
-    .modal {
+    .modal-editar-dados {
         width: 90%;
     }
     .titulo{
@@ -215,10 +215,10 @@
         flex-direction: row;
         justify-content: flex-end;
     }
-    .botao-modal {
+    .botao-modal-alterar-dados {
         width: auto;
     }
-    .linha{
+    .linha-alterar-dados{
         border: none;
         border-top: 3px solid #000;
         width: 123%; /* Garante que a linha ocupe toda a largura do modal */
@@ -227,7 +227,7 @@
 }
 
 @media (min-width: 401px) and (max-width: 550px){
-    .modal {
+    .modal-editar-dados {
         width: 95%;
         padding: 20px;
     }
@@ -243,10 +243,10 @@
         flex-direction: row;
         justify-content: flex-end;
     }
-    .botao-modal {
+    .botao-modal-alterar-dados {
         width: auto;
     }
-    .linha{
+    .linha-alterar-dados{
         border: none;
         border-top: 3px solid #000;
         width: 108.50%; /* Garante que a linha ocupe toda a largura do modal */
@@ -255,7 +255,7 @@
 }
 
 @media (max-width: 400px) {
-    .modal {
+    .modal-editar-dados {
         width: 95%;
         padding: 15px;
     }
@@ -271,10 +271,10 @@
         flex-direction: row;
         justify-content: flex-end;
     }
-    .botao-modal {
+    .botao-modal-alterar-dados {
         width: auto;
     }
-    .linha{
+    .linha-alterar-dados{
         border: none;
         border-top: 3px solid #000;
         width: 108.50%; /* Garante que a linha ocupe toda a largura do modal */
@@ -283,7 +283,7 @@
 }
 
 @media (min-width: 320px) and (max-width: 340px) {
-    .modal {
+    .modal-editar-dados {
         width: 90%;
         padding: 15px;
     }
@@ -298,10 +298,10 @@
         flex-direction: row;
         justify-content: flex-end;
     }
-    .botao-modal {
+    .botao-modal-alterar-dados {
         width: auto;
     }
-    .linha{
+    .linha-alterar-dados{
         border: none;
         border-top: 3px solid #000;
         width: 111%; /* Garante que a linha ocupe toda a largura do modal */
