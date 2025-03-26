@@ -1,5 +1,5 @@
-const buttonAbrir = document.querySelector(".open");
-const modalContainer = document.querySelector(".modal-container");
+const buttonAbrir = document.querySelector(".open-cadastro-novo-perfil-acesso");
+const modalContainer = document.querySelector(".fundo-cadastro-novo-perfil-acesso");
 const buttonFechar = document.querySelector(".close");
 const buttonCancelar = document.querySelector(".cancel");
 const buttonSalvar = document.querySelector(".save");
@@ -14,6 +14,8 @@ buttonCancelar.addEventListener("click", () => {
 buttonSalvar.addEventListener("click", () => {
     modalContainer.classList.remove("show");
 });
+
+
 
 document.addEventListener('DOMContentLoaded', function () {
     // Seleciona o checkbox "Selecionar Todos"

@@ -4,19 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- TROCA TÍTULO QUANDO FOR UTILIZAR -->
     <title>PassControl</title> 
 
-    <link rel="stylesheet" href="./novo_perfil_acesso.css">
+    <link rel="stylesheet" href="./cadastro_novo_perfil_acesso.css">
 </head>
 <body>
-    <button class="botao-modal open">Abrir Modal</button>
-    <main class="modal-container">
-        <section class="modal">
+    <button class="botao-modal open-cadastro-novo-perfil-acesso">Abrir Modal</button>
+    
+    <div class="fundo-cadastro-novo-perfil-acesso">
+        <section class="modal-cadastro-novo-perfil-acesso">
             <img src="../../../public/img/img-modais/Logo Nota Controlnt.png" alt="Logo Nota Control" class="logo">
-            <h1>Novo Perfil de Acesso</h1>
-            <hr>
-            <p>Nome do perfil</p>
+            <h1 class="titulo-modal">Novo Perfil de Acesso</h1>
+            
+            <hr class="divisoria-modal">
+
+            <p class="texto-modal">Nome do perfil</p>
             <input type="text" placeholder="Digite o nome do perfil">
 
             <article class="checkbox-container">
@@ -59,7 +61,8 @@
                 <button class="botao-modal save">Salvar</button>
             </div>
         </section>
-    </main>
-    <script src="./novo_perfil_acesso.js"></script>
+    </div>
+    <script src="./cadastro_novo_perfil_acesso.js"></script>
+    
 </body>
 </html>

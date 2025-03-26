@@ -1,0 +1,156 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo dos botões */
+.botao-modal {
+    padding: 10px 20px;
+    background-color: #33404D;
+    border: 0;
+    border-radius: 10px;
+    font-size: 18px;
+    color: #FFFFFF;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+/* Estilo do container do modal */
+.fundo-cadastro-novo-perfil-acesso {
+    background: rgba(0, 0, 0, 0.5);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+    z-index: 10;
+}
+
+.show {
+    opacity: 1;
+    display: flex;
+    pointer-events: auto;
+}
+
+/* Estilo do modal */
+.modal-cadastro-novo-perfil-acesso {
+    background-color: #e0e0e0;
+    width: 80%;
+    max-width: 900px; /* Limita o tamanho máximo */
+    min-width: 400px; /* Evita que fique pequeno demais */
+    height: auto; /* Altura ajustável automaticamente */
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+    text-align: left;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+/* Estilo da linha horizontal */
+.divisoria-modal {
+    border: none;
+    border-top: 2px solid #000;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* Estilo do logo */
+.logo {
+    position: absolute;
+    top: 15px;
+    right: 30px;
+    width: 80px;
+    height: auto;
+}
+
+/* Estilo do título */
+.titulo-modal {
+    font-size: 28px;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+/* Estilo do parágrafo */
+.texto-modal {
+    font-size: 18px;
+    margin: 20px 0;
+    text-align: left;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.checkbox-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    width: 45%;
+}
+.checkbox-group input {
+    margin-right: 10px;
+}
+
+/* Grupo de botões */
+.button-group {
+    display: flex;
+    justify-content: right;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+/* Estilo do botão cancelar */
+button.cancel {
+    background-color: #33404D;
+    color: white;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 10px 30px;
+}
+
+/* Estilo do botão cancelar no hover */
+button.cancel:hover {
+    color: #FF0000;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Estilo do botão salvar */
+button.save {
+    background-color: #33404D;
+    color: white;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 10px 30px;
+}
+
+/* Estilo do botão salvar no hover */
+button.save:hover {
+    color: #3AA867;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Media Queries */
+
+@media (max-width: 600px) {
+    .logo{
+        width: 60px;
+    }
+}

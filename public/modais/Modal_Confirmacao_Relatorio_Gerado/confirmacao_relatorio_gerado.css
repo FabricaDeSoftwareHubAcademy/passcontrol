@@ -54,9 +54,8 @@
 
 .modal-conf-relatorio-gerado .linha-divisoria {
     border: none;
-    border-top: 3px solid #000;
-    width: calc(100% + 60px);
-    margin: -30px;
+    border-top: 2px solid #000;
+    width: 100%;
     margin-top: 20px;
     margin-bottom: 20px;
 }
@@ -65,7 +64,7 @@
     width: 60px;
     position: absolute;
     top: 15px;
-    right: 15px;
+    right: 30px;
 }
 
 /* Tipografia */
@@ -86,7 +85,7 @@
 /* Grupo de botões */
 .modal-conf-relatorio-gerado .button-group {
     display: flex;
-    justify-content: flex-end   ;
+    justify-content: flex-end;
     margin-top: 15px;
 }
 
@@ -99,7 +98,7 @@
     margin-bottom: 10px;
 }
 
-.modal-conf-relatorio-gerado .botao-modal .Okay:hover {
+.modal-conf-relatorio-gerado .button-group .Okay:hover {
     color: white;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }

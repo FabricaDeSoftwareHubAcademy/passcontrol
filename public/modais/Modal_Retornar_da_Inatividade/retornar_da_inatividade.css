@@ -4,18 +4,6 @@
     box-sizing: border-box;
 }
 
-/* Estilo dos botões */
-.botao-modal {
-    background-color: #33404D;
-    padding: 10px 20px;
-    border: 0;
-    border-radius: 10px;
-    font-size: 18px;
-    color: #FFFFFF;
-    font-weight: 500;
-    cursor: pointer;
-}
-
 /* Estilo do background do modal */
 .fundo-retornar-da-inatividade {
     background: rgba(0, 0, 0, 0.5);
@@ -53,10 +41,8 @@
 /* Estilo da linha horizontal */
 .modal-retornar-da-inatividade .linha {
     border: none;
-    border-top: 3px solid #000;
-    width: 32.4vw;
-    margin-left: calc(-16.2vw + 50%);
-    margin-right: calc(-20vw + 50%);
+    border-top: 2px solid #000;
+    width: 100%;
     margin-top: 20px;
     margin-bottom: 20px;
 }
@@ -65,7 +51,7 @@
 .modal-retornar-da-inatividade .logo {
     position: absolute;
     top: 20px;
-    right: 20px;
+    right: 30px;
     width: 10%;
 }
 
@@ -109,22 +95,25 @@
 }
 
 /* Estilo do botão */
-.botao-modal{
+.modal-retornar-da-inatividade .button-group .botao-modal{
     background-color: #33404D;
-    color: white;
+    border: 0;
+    color: #FFFFFF;
+    font-weight: 500;
     border-radius: 5px;
     font-size: 14px;
     padding: 10px 30px;
+    cursor: pointer;
 }
 
 /* Estilo do botão cancelar*/
-.botao-modal.sair:hover {
+.modal-retornar-da-inatividade .button-group .botao-modal.sair:hover {
     color: #ff0000;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }
 
 /* Estilo do botão salvar */
-.botao-modal.save:hover {
+.modal-retornar-da-inatividade .button-group .botao-modal.confirma:hover {
     color: #3AA867;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }
@@ -174,7 +163,7 @@
         flex-direction: row;
         justify-content: flex-end;
     }
-    .botao-modal {
+    .modal-retornar-da-inatividade .button-group .botao-modal {
         width: auto;
     }
     .modal-retornar-da-inatividade .linha{
@@ -202,7 +191,7 @@
         flex-direction: row;
         justify-content: flex-end;
     }
-    .botao-modal {
+    .modal-retornar-da-inatividade .button-group .botao-modal {
         width: auto;
     }
     .modal-retornar-da-inatividade .linha{
@@ -230,7 +219,7 @@
         flex-direction: row;
         justify-content: flex-end;
     }
-    .botao-modal {
+    .modal-retornar-da-inatividade .button-group .botao-modal {
         width: auto;
     }
     .modal-retornar-da-inatividade .linha{
@@ -257,7 +246,7 @@
         flex-direction: row;
         justify-content: flex-end;
     }
-    .botao-modal {
+    .modal-retornar-da-inatividade .button-group .botao-modal {
         width: auto;
     }
     .modal-retornar-da-inatividade .linha{
