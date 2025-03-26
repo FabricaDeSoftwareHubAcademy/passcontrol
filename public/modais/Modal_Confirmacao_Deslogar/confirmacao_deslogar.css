@@ -6,7 +6,7 @@
 }
 
 /* Estilo do corpo da página */
-.pagina {
+.body {
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -14,11 +14,10 @@
     font-family: Arial, Helvetica, sans-serif;
     background-color: #f5f5f5;
 }
-
+ 
 /* Estilo dos botões */
-.botao-modal {
+.botao-modal-confirmacao-deslogar {
     padding: 10px 20px;
-    background-color: rgb(47, 128, 128);
     border: 0;
     border-radius: 10px;
     font-size: 18px;
@@ -28,7 +27,7 @@
 }
 
 /* Estilo do container do modal */
-.modal-container {
+.fundo-container-confirmacao-deslogar {
     background: rgba(0, 0, 0, 0.5);
     width: 100vw;
     height: 100vh;
@@ -44,13 +43,13 @@
     z-index: 1;
 }
 
-.modal-container.show {
+.fundo-container-confirmacao-deslogar.show {
     opacity: 1;
     pointer-events: auto;
 }
 
 /* Estilo do modal */
-.modal {
+.modal-confirmacao-deslogar {
     background-color: #e0e0e0;
     width: 80%;
     max-width: 600px;
@@ -61,12 +60,11 @@
 }
 
 /* Estilo da linha horizontal */
-.linha-horizontal {
+.linha-confirmacao-deslogar {
     border: none;
     border-top: 3px solid #000;
-    width: 32.4vw;
-    margin-left: calc(-16.2vw + 50%);
-    margin-right: calc(-20vw + 50%);
+    width: calc(100% + 80px);
+    margin-left: -40px; 
     margin-top: 20px;
     margin-bottom: 20px;
 }
@@ -74,29 +72,29 @@
 /* Estilo do logo */
 .logo {
     position: absolute;
-    top: 25px;
+    top: 20px;
     right: 20px;
-    width: 10%;
+    width: 12%;
+    max-width: 200px;
+    height: auto;
 }
 
-/* Estilo dos labels */
-.label {
-    font-size: 16px;
-    margin-bottom: 5px;
+/* Estilo do título */
+.titulo-confirmacao-deslogar {
+    font-size: 28px;
+    margin-bottom: 40px;
+    font-weight: bold;
 }
 
-/* Estilo dos inputs */
-.input-text {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    background-color: white;
+/* Estilo do parágrafo */
+.texto-confirmacao-deslogar {
+    font-size: 22px;
+    margin: 40px 0;
+    text-align: center;
 }
 
 /* Grupo de botões */
-.button-group {
+.button-group-confirmacao-deslogar {
     display: flex;
     justify-content: right;
     gap: 0px;
@@ -114,7 +112,7 @@
 }
 
 .cancel:hover {
-    color: #FFF;
+    color: #FF0000;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }
 
@@ -134,13 +132,10 @@
 
 /* Responsividade */
 @media (max-width: 1200px) {
-    .modal {
+    .modal-confirmacao-deslogar {
         width: 70%;
     }
-    .titulo{
-        margin-bottom: 30px;
-    }
-    .linha-horizontal{
+    .linha-confirmacao-deslogar{
         border: none;
         border-top: 3px solid #000;
         width: 115%; /* Garante que a linha ocupe toda a largura do modal */
@@ -149,13 +144,10 @@
 }
 
 @media (max-width: 1024px) {
-    .modal {
+    .modal-confirmacao-deslogar {
         width: 80%;
     }
-    .titulo{
-        margin-bottom: 30px;
-    }
-    .linha-horizontal{
+    .linha-confirmacao-deslogar{
         border: none;
         border-top: 3px solid #000;
         width: 115%; /* Garante que a linha ocupe toda a largura do modal */
@@ -164,13 +156,13 @@
 }
 
 @media (max-width: 768px) {
-    .modal {
+    .modal-confirmacao-deslogar {
         width: 90%;
     }
-    .titulo{
-        margin-bottom: 30px;
+    .titulo-confirmacao-deslogar{
+        margin-bottom: 20px;
     }
-    .linha-horizontal{
+    .linha-confirmacao-deslogar{
         border: none;
         border-top: 3px solid #000;
         width: 115%; /* Garante que a linha ocupe toda a largura do modal */
@@ -179,7 +171,14 @@
 }
 
 @media (max-width: 480px) {
-    .linha-horizontal{
+    .button-group-confirmacao-deslogar {
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+    .botao-modal-confirmacao-deslogar {
+        width: auto;
+    }
+    .linha-confirmacao-deslogar{
         border: none;
         border-top: 3px solid #000;
         width: 123%; /* Garante que a linha ocupe toda a largura do modal */
@@ -188,19 +187,26 @@
 }
 
 @media (min-width: 401px) and (max-width: 550px){
-    .modal {
+    .modal-confirmacao-deslogar {
         width: 95%;
         padding: 20px;
     }
-    .titulo{
-        margin-top: 5px;
-        font-size: 18px;
+    .titulo-confirmacao-deslogar{
+        margin-top: 7px;
+        font-size: 20px;
     }
     .logo{
         top: 10px;
         width: 50px;
     }
-    .linha-horizontal{
+    .button-group-confirmacao-deslogar {
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+    .botao-modal-confirmacao-deslogar {
+        width: auto;
+    }
+    .linha-confirmacao-deslogar{
         border: none;
         border-top: 3px solid #000;
         width: 108.50%; /* Garante que a linha ocupe toda a largura do modal */
@@ -209,19 +215,29 @@
 }
 
 @media (max-width: 400px) {
-    .modal {
+    .modal-confirmacao-deslogar {
         width: 95%;
         padding: 15px;
     }
-    .titulo{
+    .titulo-confirmacao-deslogar{
         margin-top: 7px;
+        font-size: 20px;
+    }
+    .texto-confirmacao-deslogar{
         font-size: 18px;
     }
     .logo{
         top: 10px;
         width: 50px;
     }
-    .linha-horizontal{
+    .button-group-confirmacao-deslogar {
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+    .botao-modal-confirmacao-deslogar {
+        width: auto;
+    }
+    .linha-confirmacao-deslogar{
         border: none;
         border-top: 3px solid #000;
         width: 108.50%; /* Garante que a linha ocupe toda a largura do modal */
@@ -229,19 +245,29 @@
     }
 }
 
-@media (min-width: 320px) and (max-width: 399px) {
-    .modal {
-        width: 95%;
+@media (min-width: 320px) and (max-width: 340px) {
+    .modal-confirmacao-deslogar {
+        width: 90%;
         padding: 15px;
     }
-    .titulo{
-        font-size: 14px;
+    .titulo-confirmacao-deslogar{
+        font-size: 16px;
+    }
+    .texto-confirmacao-deslogar{
+        font-size: 16px;
     }
     .logo{
         top: 15px;
         width: 40px;
     }
-    .linha-horizontal{
+    .button-group-confirmacao-deslogar {
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+    .botao-modal-confirmacao-deslogar {
+        width: auto;
+    }
+    .linha-confirmacao-deslogar{
         border: none;
         border-top: 3px solid #000;
         width: 111%; /* Garante que a linha ocupe toda a largura do modal */

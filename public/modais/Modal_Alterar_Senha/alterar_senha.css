@@ -16,9 +16,8 @@
 }
 
 /* Estilo dos botões */
-.botao-modal {
+.botao-modal-alterar-senha {
     padding: 10px 20px;
-    background-color: rgb(47, 128, 128);
     border: 0;
     border-radius: 10px;
     font-size: 18px;
@@ -28,7 +27,7 @@
 }
 
 /* Estilo do container do modal */
-.modal-container {
+.fundo-container-alterar-senha {
     background: rgba(0, 0, 0, 0.5);
     width: 100vw;
     height: 100vh;
@@ -40,17 +39,17 @@
     justify-content: center;
     opacity: 0;
     pointer-events: none;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.2s ease;
     z-index: 1;
 }
 
-.modal-container.show {
+.fundo-container-alterar-senha.show {
     opacity: 1;
     pointer-events: auto;
 }
 
 /* Estilo do modal */
-.modal {
+.modal-alterar-senha {
     background-color: #e0e0e0;
     width: 80%;
     max-width: 600px;
@@ -61,7 +60,7 @@
 }
 
 /* Estilo da linha horizontal */
-.linha {
+.linha-alterar-senha {
     border: none;
     border-top: 3px solid #000;
     width: 32.4vw;
@@ -76,27 +75,58 @@
     position: absolute;
     top: 20px;
     right: 20px;
-    width: 12%;
-    max-width: 200px;
-    height: auto;
+    width: 10%;
 }
 
-/* Estilo do título */
-.titulo {
-    font-size: 28px;
-    margin-bottom: 40px;
-    font-weight: bold;
+/* Estilo do container do nome */
+.senha-atual-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: row;
+    margin-bottom: 10px;
 }
 
-/* Estilo do parágrafo */
-.texto {
-    font-size: 22px;
-    margin: 40px 0;
-    text-align: center;
+.container-alterar-senha {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.container-alterar-senha:last-child {
+    margin-right: 0;
+}
+
+/* Estilo do container de email */
+.nova-senha-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+/* Estilo do container de CPF */
+.conf-nova-senha-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+/* Estilo dos inputs e labels */
+.label-senha-atual, .nova-senha-container, .conf-nova-senha-container {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.input-senha-atual, .input-nova-senha, .input-conf-nova-senha {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: white;
 }
 
 /* Grupo de botões */
-.button-group {
+.button-group-alterar-senha {
     display: flex;
     justify-content: right;
     gap: 0px;
@@ -104,7 +134,7 @@
 }
 
 /* Estilo do botão cancelar */
-.cancel {
+.botao-modal-alterar-senha.cancel {
     background-color: #33404D;
     color: white;
     margin-right: 30px;
@@ -113,13 +143,13 @@
     padding: 10px 30px;
 }
 
-.cancel:hover {
-    color: #FF0000;
+.botao-modal-alterar-senha.cancel:hover {
+    color: #FFF;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }
 
 /* Estilo do botão salvar */
-.save {
+.botao-modal-alterar-senha.save {
     background-color: #33404D;
     color: white;
     border-radius: 5px;
@@ -127,17 +157,17 @@
     padding: 10px 30px;
 }
 
-.save:hover {
+.botao-modal-alterar-senha.save:hover {
     color: #3AA867;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }
 
 /* Responsividade */
 @media (max-width: 1200px) {
-    .modal {
+    .modal-alterar-senha {
         width: 70%;
     }
-    .linha{
+    .linha-alterar-senha{
         border: none;
         border-top: 3px solid #000;
         width: 115%; /* Garante que a linha ocupe toda a largura do modal */
@@ -146,10 +176,10 @@
 }
 
 @media (max-width: 1024px) {
-    .modal {
+    .modal-alterar-senha {
         width: 80%;
     }
-    .linha{
+    .linha-alterar-senha{
         border: none;
         border-top: 3px solid #000;
         width: 115%; /* Garante que a linha ocupe toda a largura do modal */
@@ -158,13 +188,13 @@
 }
 
 @media (max-width: 768px) {
-    .modal {
+    .modal-alterar-senha {
         width: 90%;
     }
-    .titulo{
+    .titulo-alterar-senha{
         margin-bottom: 20px;
     }
-    .linha{
+    .linha-alterar-senha{
         border: none;
         border-top: 3px solid #000;
         width: 115%; /* Garante que a linha ocupe toda a largura do modal */
@@ -173,14 +203,14 @@
 }
 
 @media (max-width: 480px) {
-    .button-group {
+    .button-group-alterar-senha {
         flex-direction: row;
         justify-content: flex-end;
     }
-    .botao-modal {
+    .botao-modal-alterar-senha {
         width: auto;
     }
-    .linha{
+    .linha-alterar-senha{
         border: none;
         border-top: 3px solid #000;
         width: 123%; /* Garante que a linha ocupe toda a largura do modal */
@@ -189,11 +219,11 @@
 }
 
 @media (min-width: 401px) and (max-width: 550px){
-    .modal {
+    .modal-alterar-senha {
         width: 95%;
         padding: 20px;
     }
-    .titulo{
+    .titulo-alterar-senha{
         margin-top: 7px;
         font-size: 20px;
     }
@@ -201,14 +231,14 @@
         top: 10px;
         width: 50px;
     }
-    .button-group {
+    .button-group-alterar-senha {
         flex-direction: row;
         justify-content: flex-end;
     }
-    .botao-modal {
+    .botao-modal-alterar-senha {
         width: auto;
     }
-    .linha{
+    .linha-alterar-senha{
         border: none;
         border-top: 3px solid #000;
         width: 108.50%; /* Garante que a linha ocupe toda a largura do modal */
@@ -217,29 +247,26 @@
 }
 
 @media (max-width: 400px) {
-    .modal {
+    .modal-alterar-senha {
         width: 95%;
         padding: 15px;
     }
-    .titulo{
+    .titulo-alterar-senha{
         margin-top: 7px;
         font-size: 20px;
-    }
-    .texto{
-        font-size: 18px;
     }
     .logo{
         top: 10px;
         width: 50px;
     }
-    .button-group {
+    .button-group-alterar-senha {
         flex-direction: row;
         justify-content: flex-end;
     }
-    .botao-modal {
+    .botao-modal-alterar-senha {
         width: auto;
     }
-    .linha{
+    .linha-alterar-senha{
         border: none;
         border-top: 3px solid #000;
         width: 108.50%; /* Garante que a linha ocupe toda a largura do modal */
@@ -248,28 +275,25 @@
 }
 
 @media (min-width: 320px) and (max-width: 340px) {
-    .modal {
+    .modal-alterar-senha {
         width: 90%;
         padding: 15px;
     }
-    .titulo{
-        font-size: 16px;
-    }
-    .texto{
+    .titulo-alterar-senha{
         font-size: 16px;
     }
     .logo{
         top: 15px;
         width: 40px;
     }
-    .button-group {
+    .button-group-alterar-senha {
         flex-direction: row;
         justify-content: flex-end;
     }
-    .botao-modal {
+    .botao-modal-alterar-senha {
         width: auto;
     }
-    .linha{
+    .linha-alterar-senha{
         border: none;
         border-top: 3px solid #000;
         width: 111%; /* Garante que a linha ocupe toda a largura do modal */

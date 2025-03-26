@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
@@ -7,10 +7,8 @@
     <link rel="stylesheet" href="./cadastro_servicos.css">
 </head>
 <body class="body">
-    <button class="botao-modal open">Abrir Modal</button>
+    <button class="botao-modal open">Abrir Modal</button> -->
 
-
-    
     <div class="modal-container-cadas-servicos">
         <section class="modal-cadas-servicos">
             <img src="../../../public/img/img-modais/Logo Nota Controlnt.png" alt="Logo Nota Control" class="logo">
@@ -41,5 +39,5 @@
     </div>
 
     <script src="./cadastro_servicos.js"></script>
-</body>
-</html>
+<!-- </body>
+</html> -->

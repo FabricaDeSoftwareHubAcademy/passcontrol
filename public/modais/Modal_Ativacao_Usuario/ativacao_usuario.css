@@ -4,7 +4,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+ 
 /* Estilo do corpo da página */
 .body {
     min-height: 100vh;
@@ -16,8 +16,9 @@
 }
 
 /* Estilo dos botões */
-.botao-modal {
+.botao-modal-ativacao-usuario {
     padding: 10px 20px;
+    background-color: rgb(47, 128, 128);
     border: 0;
     border-radius: 10px;
     font-size: 18px;
@@ -27,7 +28,7 @@
 }
 
 /* Estilo do container do modal */
-.modal-container {
+.fundo-container-ativacao-usuario{
     background: rgba(0, 0, 0, 0.5);
     width: 100vw;
     height: 100vh;
@@ -43,13 +44,13 @@
     z-index: 1;
 }
 
-.modal-container.show {
+.fundo-container-ativacao-usuario.show {
     opacity: 1;
     pointer-events: auto;
 }
 
 /* Estilo do modal */
-.modal {
+.modal-ativacao-usuario {
     background-color: #e0e0e0;
     width: 80%;
     max-width: 600px;
@@ -60,12 +61,11 @@
 }
 
 /* Estilo da linha horizontal */
-.linha {
+.linha-ativacao-usuario {
     border: none;
     border-top: 3px solid #000;
-    width: 32.4vw;
-    margin-left: calc(-16.2vw + 50%);
-    margin-right: calc(-20vw + 50%);
+    width: calc(100% + 80px);
+    margin-left: -40px; 
     margin-top: 20px;
     margin-bottom: 20px;
 }
@@ -81,21 +81,21 @@
 }
 
 /* Estilo do título */
-.titulo {
+.titulo-ativacao-usuario {
     font-size: 28px;
     margin-bottom: 40px;
     font-weight: bold;
 }
 
 /* Estilo do parágrafo */
-.texto {
+.texto-ativacao-usuario {
     font-size: 22px;
     margin: 40px 0;
     text-align: center;
 }
 
 /* Grupo de botões */
-.button-group {
+.button-group-ativacao-usuario {
     display: flex;
     justify-content: right;
     gap: 0px;
@@ -133,10 +133,10 @@
 
 /* Responsividade */
 @media (max-width: 1200px) {
-    .modal {
+    .modal-ativacao-usuario {
         width: 70%;
     }
-    .linha{
+    .linha-ativacao-usuario{
         border: none;
         border-top: 3px solid #000;
         width: 115%; /* Garante que a linha ocupe toda a largura do modal */
@@ -145,10 +145,10 @@
 }
 
 @media (max-width: 1024px) {
-    .modal {
+    .modal-ativacao-usuario {
         width: 80%;
     }
-    .linha{
+    .linha-ativacao-usuario{
         border: none;
         border-top: 3px solid #000;
         width: 115%; /* Garante que a linha ocupe toda a largura do modal */
@@ -157,13 +157,13 @@
 }
 
 @media (max-width: 768px) {
-    .modal {
+    .modal-ativacao-usuario {
         width: 90%;
     }
-    .titulo{
+    .titulo-ativacao-usuario{
         margin-bottom: 20px;
     }
-    .linha{
+    .linha-ativacao-usuario{
         border: none;
         border-top: 3px solid #000;
         width: 115%; /* Garante que a linha ocupe toda a largura do modal */
@@ -172,14 +172,14 @@
 }
 
 @media (max-width: 480px) {
-    .button-group {
+    .button-group-ativacao-usuario {
         flex-direction: row;
         justify-content: flex-end;
     }
-    .botao-modal {
+    .botao-modal-ativacao-usuario {
         width: auto;
     }
-    .linha{
+    .linha-ativacao-usuario{
         border: none;
         border-top: 3px solid #000;
         width: 123%; /* Garante que a linha ocupe toda a largura do modal */
@@ -188,11 +188,11 @@
 }
 
 @media (min-width: 401px) and (max-width: 550px){
-    .modal {
+    .modal-ativacao-usuario {
         width: 95%;
         padding: 20px;
     }
-    .titulo{
+    .titulo-ativacao-usuario{
         margin-top: 7px;
         font-size: 20px;
     }
@@ -200,14 +200,14 @@
         top: 10px;
         width: 50px;
     }
-    .button-group {
+    .button-group-ativacao-usuario {
         flex-direction: row;
         justify-content: flex-end;
     }
-    .botao-modal {
+    .botao-modal-ativacao-usuario {
         width: auto;
     }
-    .linha{
+    .linha-ativacao-usuario{
         border: none;
         border-top: 3px solid #000;
         width: 108.50%; /* Garante que a linha ocupe toda a largura do modal */
@@ -216,29 +216,29 @@
 }
 
 @media (max-width: 400px) {
-    .modal {
+    .modal-ativacao-usuario {
         width: 95%;
         padding: 15px;
     }
-    .titulo{
+    .titulo-ativacao-usuario{
         margin-top: 7px;
         font-size: 20px;
     }
-    .texto{
+    .texto-ativacao-usuario{
         font-size: 18px;
     }
     .logo{
         top: 10px;
         width: 50px;
     }
-    .button-group {
+    .button-group-ativacao-usuario {
         flex-direction: row;
         justify-content: flex-end;
     }
-    .botao-modal {
+    .botao-modal-ativacao-usuario {
         width: auto;
     }
-    .linha{
+    .linha-ativacao-usuario{
         border: none;
         border-top: 3px solid #000;
         width: 108.50%; /* Garante que a linha ocupe toda a largura do modal */
@@ -247,28 +247,28 @@
 }
 
 @media (min-width: 320px) and (max-width: 340px) {
-    .modal {
+    .modal-ativacao-usuario {
         width: 90%;
         padding: 15px;
     }
-    .titulo{
+    .titulo-ativacao-usuario{
         font-size: 16px;
     }
-    .texto{
+    .texto-ativacao-usuario{
         font-size: 16px;
     }
     .logo{
         top: 15px;
         width: 40px;
     }
-    .button-group {
+    .button-group-ativacao-usuario {
         flex-direction: row;
         justify-content: flex-end;
     }
-    .botao-modal {
+    .botao-modal-ativacao-usuario {
         width: auto;
     }
-    .linha{
+    .linha-ativacao-usuario{
         border: none;
         border-top: 3px solid #000;
         width: 111%; /* Garante que a linha ocupe toda a largura do modal */

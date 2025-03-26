@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
@@ -7,8 +7,7 @@
     <link rel="stylesheet" href="./alterar_senha.css">
 </head>
 <body class="body">
-    <button class="botao-modal open">Abrir Modal</button>
-
+    <button class="botao-modal open">Abrir Modal</button> -->
 
     <div class="fundo-container-alterar-senha">
         <section class="modal-alterar-senha">
@@ -36,5 +35,5 @@
         </section>
     </div>
     <script src="./alterar_senha.js"></script>
-</body>
-</html>
+<!-- </body>
+</html> -->

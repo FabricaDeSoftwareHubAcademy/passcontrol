@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./alerta_fila_zerada.css">
 </head>
 <body class="body-container">
-    <button class="botao-modal open">Abrir Modal</button>
+    <button class="botao-modal open">Abrir Modal</button> -->
 
 
     <div class="modal-container-alertar-fila">
@@ -23,5 +23,5 @@
         </section>
     </div>
     <script src="./alerta_fila_zerada.js"></script>
-</body>
-</html>
+<!-- </body>
+</html> -->

@@ -6,7 +6,7 @@
 }
 
 /* Estilo do corpo da página */
-.body {
+.pagina {
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -16,9 +16,8 @@
 }
 
 /* Estilo dos botões */
-.botao-modal-alterar-senha {
+.botao-modal-ponto-atendimento {
     padding: 10px 20px;
-    background-color: rgb(47, 128, 128);
     border: 0;
     border-radius: 10px;
     font-size: 18px;
@@ -28,7 +27,7 @@
 }
 
 /* Estilo do container do modal */
-.fundo-container-alterar-senha {
+.fundo-container-ponto-atendimento{
     background: rgba(0, 0, 0, 0.5);
     width: 100vw;
     height: 100vh;
@@ -44,13 +43,13 @@
     z-index: 1;
 }
 
-.fundo-container-alterar-senha.show {
+.fundo-container-ponto-atendimento.show {
     opacity: 1;
     pointer-events: auto;
 }
 
 /* Estilo do modal */
-.modal-alterar-senha {
+.modal-ponto-atendimento {
     background-color: #e0e0e0;
     width: 80%;
     max-width: 600px;
@@ -61,12 +60,11 @@
 }
 
 /* Estilo da linha horizontal */
-.linha-alterar-senha {
+.linha-horizontal-ponto-atendimento {
     border: none;
     border-top: 3px solid #000;
-    width: 32.4vw;
-    margin-left: calc(-16.2vw + 50%);
-    margin-right: calc(-20vw + 50%);
+    width: calc(100% + 80px);
+    margin-left: -40px; 
     margin-top: 20px;
     margin-bottom: 20px;
 }
@@ -74,60 +72,29 @@
 /* Estilo do logo */
 .logo {
     position: absolute;
-    top: 20px;
+    top: 25px;
     right: 20px;
     width: 10%;
 }
 
-/* Estilo do container do nome */
-.senha-atual-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-direction: row;
-    margin-bottom: 10px;
-}
-
-.container-alterar-senha {
-    flex: 1;
-    margin-right: 20px;
-}
-
-.container-alterar-senha:last-child {
-    margin-right: 0;
-}
-
-/* Estilo do container de email */
-.nova-senha-container {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 20px;
-}
-
-/* Estilo do container de CPF */
-.conf-nova-senha-container {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 20px;
-}
-
-/* Estilo dos inputs e labels */
-.label-senha-atual, .nova-senha-container, .conf-nova-senha-container {
+/* Estilo dos labels */
+.label-ponto-atendimento {
     font-size: 16px;
     margin-bottom: 5px;
 }
 
-.input-senha-atual, .input-nova-senha, .input-conf-nova-senha {
+/* Estilo dos inputs */
+.input-text-ponto-atendimento {
     width: 100%;
     padding: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     border: 1px solid #ccc;
     border-radius: 4px;
     background-color: white;
 }
 
 /* Grupo de botões */
-.button-group-alterar-senha {
+.button-group-ponto-atendimento {
     display: flex;
     justify-content: right;
     gap: 0px;
@@ -135,7 +102,7 @@
 }
 
 /* Estilo do botão cancelar */
-.botao-modal-alterar-senha.cancel {
+.cancel {
     background-color: #33404D;
     color: white;
     margin-right: 30px;
@@ -144,13 +111,13 @@
     padding: 10px 30px;
 }
 
-.botao-modal-alterar-senha.cancel:hover {
+.cancel:hover {
     color: #FFF;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }
 
 /* Estilo do botão salvar */
-.botao-modal-alterar-senha.save {
+.save {
     background-color: #33404D;
     color: white;
     border-radius: 5px;
@@ -158,17 +125,20 @@
     padding: 10px 30px;
 }
 
-.botao-modal-alterar-senha.save:hover {
+.save:hover {
     color: #3AA867;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }
 
 /* Responsividade */
 @media (max-width: 1200px) {
-    .modal-alterar-senha {
+    .modal-ponto-atendimento {
         width: 70%;
     }
-    .linha-alterar-senha{
+    .titulo-ponto-atendimento{
+        margin-bottom: 30px;
+    }
+    .linha-horizontal-ponto-atendimento-horizontal{
         border: none;
         border-top: 3px solid #000;
         width: 115%; /* Garante que a linha ocupe toda a largura do modal */
@@ -177,10 +147,13 @@
 }
 
 @media (max-width: 1024px) {
-    .modal-alterar-senha {
+    .modal-ponto-atendimento {
         width: 80%;
     }
-    .linha-alterar-senha{
+    .titulo-ponto-atendimento{
+        margin-bottom: 30px;
+    }
+    .linha-horizontal-ponto-atendimento-horizontal{
         border: none;
         border-top: 3px solid #000;
         width: 115%; /* Garante que a linha ocupe toda a largura do modal */
@@ -189,13 +162,13 @@
 }
 
 @media (max-width: 768px) {
-    .modal-alterar-senha {
+    .modal-ponto-atendimento {
         width: 90%;
     }
-    .titulo-alterar-senha{
-        margin-bottom: 20px;
+    .titulo-ponto-atendimento{
+        margin-bottom: 30px;
     }
-    .linha-alterar-senha{
+    .linha-horizontal-ponto-atendimento-horizontal{
         border: none;
         border-top: 3px solid #000;
         width: 115%; /* Garante que a linha ocupe toda a largura do modal */
@@ -204,14 +177,7 @@
 }
 
 @media (max-width: 480px) {
-    .button-group-alterar-senha {
-        flex-direction: row;
-        justify-content: flex-end;
-    }
-    .botao-modal-alterar-senha {
-        width: auto;
-    }
-    .linha-alterar-senha{
+    .linha-horizontal-ponto-atendimento-horizontal{
         border: none;
         border-top: 3px solid #000;
         width: 123%; /* Garante que a linha ocupe toda a largura do modal */
@@ -220,26 +186,19 @@
 }
 
 @media (min-width: 401px) and (max-width: 550px){
-    .modal-alterar-senha {
+    .modal-ponto-atendimento {
         width: 95%;
         padding: 20px;
     }
-    .titulo-alterar-senha{
-        margin-top: 7px;
-        font-size: 20px;
+    .titulo-ponto-atendimento{
+        margin-top: 5px;
+        font-size: 18px;
     }
     .logo{
         top: 10px;
         width: 50px;
     }
-    .button-group-alterar-senha {
-        flex-direction: row;
-        justify-content: flex-end;
-    }
-    .botao-modal-alterar-senha {
-        width: auto;
-    }
-    .linha-alterar-senha{
+    .linha-horizontal-ponto-atendimento-horizontal{
         border: none;
         border-top: 3px solid #000;
         width: 108.50%; /* Garante que a linha ocupe toda a largura do modal */
@@ -248,26 +207,19 @@
 }
 
 @media (max-width: 400px) {
-    .modal-alterar-senha {
+    .modal-ponto-atendimento {
         width: 95%;
         padding: 15px;
     }
-    .titulo-alterar-senha{
+    .titulo-ponto-atendimento{
         margin-top: 7px;
-        font-size: 20px;
+        font-size: 18px;
     }
     .logo{
         top: 10px;
         width: 50px;
     }
-    .button-group-alterar-senha {
-        flex-direction: row;
-        justify-content: flex-end;
-    }
-    .botao-modal-alterar-senha {
-        width: auto;
-    }
-    .linha-alterar-senha{
+    .linha-horizontal-ponto-atendimento-horizontal{
         border: none;
         border-top: 3px solid #000;
         width: 108.50%; /* Garante que a linha ocupe toda a largura do modal */
@@ -275,26 +227,19 @@
     }
 }
 
-@media (min-width: 320px) and (max-width: 340px) {
-    .modal-alterar-senha {
-        width: 90%;
+@media (min-width: 320px) and (max-width: 399px) {
+    .modal-ponto-atendimento {
+        width: 95%;
         padding: 15px;
     }
-    .titulo-alterar-senha{
-        font-size: 16px;
+    .titulo-ponto-atendimento{
+        font-size: 14px;
     }
     .logo{
         top: 15px;
         width: 40px;
     }
-    .button-group-alterar-senha {
-        flex-direction: row;
-        justify-content: flex-end;
-    }
-    .botao-modal-alterar-senha {
-        width: auto;
-    }
-    .linha-alterar-senha{
+    .linha-horizontal-ponto-atendimento-horizontal{
         border: none;
         border-top: 3px solid #000;
         width: 111%; /* Garante que a linha ocupe toda a largura do modal */

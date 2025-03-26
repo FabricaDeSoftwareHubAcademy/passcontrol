@@ -13,11 +13,10 @@
     font-family: Arial, Helvetica, sans-serif;
     background-color: #F5F5F5
 }
-
+ 
 /* Botões gerais */
-.botao-modal {
+.botao-modal-confirmacao-senha {
     padding: 10px 20px;
-    background-color: rgb(47, 128, 128);
     border: 0;
     border-radius: 10px;
     font-size: 18px;
@@ -27,7 +26,7 @@
 }
 
 /* Estilo do container do modal */
-.modal-container {
+.fundo-container-confirmacao-senha {
     background: rgba(0, 0, 0, 0.5);
     width: 100vw;
     height: 100vh;
@@ -43,13 +42,13 @@
     z-index: 1;
 }
 
-.modal-container.show {
+.fundo-container-confirmacao-senha.show {
     opacity: 1;
     pointer-events: auto;
 }
 
 /* Estilo do modal */
-.modal {
+.modal-confirmacao-senha {
     background-color: #ddd;
     width: 60%;
     max-width: 550px;
@@ -59,7 +58,7 @@
     text-align: center;
 }
 
-.modal-divider {
+.modal-divider-confirmacao-senha {
     border: none;
     border-top: 3px solid #000;
     width: calc(100% + 60px); /* Adiciona o padding do modal */
@@ -76,13 +75,13 @@
 }
 
 /* Tipografia */
-.modal-title {
+.modal-title-confirmacao-senha{
     font-size: 24px;
     font-weight: bold;
     text-align: left;
 }
 
-.check-image{
+.check-image-confirmacao-senha{
     width: 20%;
     max-width: 200px; /* Limita o tamanho máximo */
     display: block;
@@ -90,13 +89,13 @@
 }
 
 /* Tipografia */
-.modal-title {
+.modal-title-confirmacao-senha {
     font-size: 24px;
     font-weight: bold;
     text-align: left;
 }
 
-.modal-message {
+.modal-message-confirmacao-senha {
     margin-top: 40px;
     font-size: 18px;
     font-weight: bold;
@@ -104,35 +103,35 @@
 }
 
 /* Grupo de botões */
-.button-group {
+.button-group-confirmacao-senha {
     display: flex;
     justify-content: center;
-    margin-top: 15px;
+    margin-top: 45px;
 }
 
-.botao-modal.Okay {
+.botao-modal-confirmacao-senha.Okay {
     background-color: #33404D;
     color: white;
     border-radius: 5px;
     font-size: 14px;
     padding: 12px 30px;
-    margin-bottom: 30px;
+    /* margin-bottom: 30px; */
 }
 
-.botao-modal.Okay:hover {
+.botao-modal-confirmacao-senha.Okay:hover {
     color: white;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }
 
 /* Responsividade */
 @media (max-width: 1200px) {
-    .modal {
+    .modal-confirmacao-senha {
         width: 100%;
     }
-    .modal-title {
+    .modal-title-confirmacao-senha {
         font-size: 28px;
     }
-    .modal-message {
+    .modal-message-confirmacao-senha {
         font-size: 22px;
     }
     .logo {
@@ -145,10 +144,10 @@
     .modal {
         width: 100%;
     }
-    .modal-title {
+    .modal-title-confirmacao-senha {
         font-size: 28px;
     }
-    .modal-message {
+    .modal-message-confirmacao-senha {
         font-size: 22px;
     }
     .logo {
@@ -158,13 +157,13 @@
 }
 
 @media (max-width: 768px) {
-    .modal {
+    .modal-confirmacao-senha {
         width: 100%;
     }
-    .modal-title {
+    .modal-title-confirmacao-senha {
         font-size: 25px;
     }
-    .modal-message {
+    .modal-message-confirmacao-senha {
         font-size: 20px;
     }
     .logo {
@@ -174,60 +173,60 @@
 }
 
 @media (max-width: 480px) {
-    .modal {
+    .modal-confirmacao-senha {
         width: 90%;
     }
-    .modal-title {
+    .modal-title-confirmacao-senha {
         font-size: 22px;
     }
-    .modal-message {
+    .modal-message-confirmacao-senha {
         font-size: 18px;
     }
     .logo {
         margin-top: 5px;
         width: 50px;
     }
-    .check-image{
+    .check-image-confirmacao-senha{
         margin-top: 30px;
         width: 70px;
     }
 }
 
 @media (max-width: 400px) {
-    .modal {
+    .modal-confirmacao-senha {
         width: 90%;
     }
-    .modal-title {
+    .modal-title-confirmacao-senha {
         font-size: 20px;
     }
-    .modal-message {
+    .modal-message-confirmacao-senha {
         font-size: 16px;
     }
     .logo {
         margin-top: 1px;
         width: 50px;
     }
-    .check-image{
+    .check-image-confirmacao-senha{
         margin-top: 30px;
         width: 70px;
     }
 }
 
 @media (max-width: 320px) {
-    .modal {
+    .modal-confirmacao-senha {
         width: 90%;
     }
-    .modal-title {
+    .modal-title-confirmacao-senha {
         font-size: 18px;
     }
-    .modal-message {
+    .modal-message-confirmacao-senha {
         font-size: 15px;
     }
     .logo {
         margin-top: 5px;
         width: 40px;
     }
-    .check-image{
+    .check-image-confirmacao-senha{
         margin-top: 30px;
         width: 60px;
     }

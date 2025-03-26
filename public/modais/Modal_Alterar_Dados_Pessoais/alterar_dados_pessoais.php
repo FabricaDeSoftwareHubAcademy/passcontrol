@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
@@ -9,7 +9,7 @@
 <body class="body">
     <button class="botao-modal" id="open_editar_dados">Abrir Modal</button>
 
-    
+-->
     <div class="fundo-editar-dados">
         <section class="modal-editar-dados">
             <img src="../../../public/img/img-modais/Logo Nota Controlnt.png" alt="Logo Nota Control" class="logo">
@@ -40,5 +40,5 @@
         </section>
     </div>
     <script src="./alterar_dados_pessoais.js"></script>
-</body>
-</html>
+<!-- </body>
+</html> -->
