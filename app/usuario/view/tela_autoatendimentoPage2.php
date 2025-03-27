@@ -69,6 +69,8 @@
         </div>
 
     </main>
+
+    <script src="../../../public/js/tela_autoatendimentoPage2.js"></script>
 </body>
 
 </html>

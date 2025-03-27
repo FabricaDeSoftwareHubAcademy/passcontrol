@@ -70,7 +70,7 @@
                     <a href="../../usuario/view/tela_autoatendimentoPage2.php" class="btn-voltar">VOLTAR</a>
                 </button>
                 <button class="button">
-                    <a href="../../usuario/view/tela_autoatendimentoPage4.php" class="btn-confirmar">CONFIRMAR</a>
+                    <a href="../../usuario/view/tela_autoatendimentoPage4.php" class="btn-confirmar" id="confirmarBtn">CONFIRMAR</a>
                 </button>
             </div>
 
@@ -79,5 +79,7 @@
         </div>
         </div>
     </main>
+
+    <script src="../../../public/js/tela_autoatendimentoPage3.js"></script>
 </body>
 </html>
