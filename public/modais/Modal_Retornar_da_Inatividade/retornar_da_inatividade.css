@@ -1,0 +1,228 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo do background do modal */
+.fundo-retornar-da-inatividade {
+    background: rgba(0, 0, 0, 0.5);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+    z-index: 10;
+}
+
+.show {
+    opacity: 1;
+    display: flex;
+    pointer-events: auto;
+}
+
+/* Estilo do modal */
+.modal-retornar-da-inatividade {
+    background-color: #e0e0e0;
+    width: 80%;
+    max-width: 600px;
+    padding: 40px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+    text-align: left;
+    border-radius: 5px;
+}
+
+/* Estilo da linha horizontal */
+.modal-retornar-da-inatividade .linha {
+    border: none;
+    border-top: 2px solid #000;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* Estilo do logo */
+.modal-retornar-da-inatividade .logo {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    width: 10%;
+}
+
+.modal-retornar-da-inatividade .titulo{
+    font-size: 28px;
+}
+
+.modal-retornar-da-inatividade .senha {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: row;
+    margin-bottom: 10px;
+}
+
+.modal-retornar-da-inatividade .container {
+    flex: 1;
+    margin-right: 20px;
+    gap: 5px;
+}   
+
+.modal-retornar-da-inatividade .container:last-child {
+    margin-right: 0;
+}
+
+.modal-retornar-da-inatividade .container .label-senha {
+    font-size: 18px;
+}
+
+.modal-retornar-da-inatividade .container .input-senha {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: white;
+}
+
+/* Grupo de botões */
+.modal-retornar-da-inatividade .button-group {
+    display: flex;
+    justify-content: right;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+/* Estilo do botão */
+.modal-retornar-da-inatividade .button-group .botao-modal{
+    background-color: #33404D;
+    border: 0;
+    color: #FFFFFF;
+    font-weight: 500;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 10px 30px;
+    cursor: pointer;
+}
+
+/* Estilo do botão cancelar*/
+.modal-retornar-da-inatividade .button-group .botao-modal.sair:hover {
+    color: #ff0000;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Estilo do botão salvar */
+.modal-retornar-da-inatividade .button-group .botao-modal.confirma:hover {
+    color: #3AA867;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+
+/* Responsividade */
+@media (max-width: 1200px) {
+    .modal-retornar-da-inatividade {
+        width: 70%;
+    }
+}
+
+@media (max-width: 1024px) {
+    .modal-retornar-da-inatividade {
+        width: 80%;
+    }
+}
+
+@media (max-width: 768px) {
+    .modal-retornar-da-inatividade {
+        width: 90%;
+    }
+    .modal-retornar-da-inatividade .titulo{
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 550px){
+    .modal-retornar-da-inatividade {
+        width: 95%;
+        padding: 20px;
+    }
+    .modal-retornar-da-inatividade .titulo{
+        margin-top: 7px;
+        font-size: 20px;
+    }
+    .modal-retornar-da-inatividade .logo{
+        top: 15px;
+        right: 20px;
+        width: 50px;
+    }
+    .modal-retornar-da-inatividade .button-group {
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+    .modal-retornar-da-inatividade .button-group .botao-modal {
+        width: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .modal-retornar-da-inatividade .button-group {
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+    .modal-retornar-da-inatividade .button-group .botao-modal {
+        width: auto;
+    }
+    .modal-retornar-da-inatividade .container .label-senha {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 400px) {
+    .modal-retornar-da-inatividade {
+        width: 95%;
+        padding: 15px;
+    }
+    .modal-retornar-da-inatividade .titulo{
+        margin-top: 7px;
+        font-size: 20px;
+        max-width: 80%;
+    }
+    .modal-retornar-da-inatividade .logo{
+        top: 10px;
+        width: 50px;
+    }
+    .modal-retornar-da-inatividade .button-group {
+        flex-direction: row;
+        justify-content: flex-end;
+        gap: 10px;
+    }
+    .modal-retornar-da-inatividade .button-group .botao-modal {
+        width: auto;
+    }
+}
+
+@media (max-width: 340px) {
+    .modal-retornar-da-inatividade {
+        width: 90%;
+        padding: 15px;
+    }
+    .modal-retornar-da-inatividade .titulo{
+        font-size: 16px;
+    }
+    .modal-retornar-da-inatividade .logo{
+        top: 15px;
+        width: 40px;
+    }
+    .modal-retornar-da-inatividade .button-group {
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+    .modal-retornar-da-inatividade .button-group .botao-modal {
+        width: auto;
+    }
+}

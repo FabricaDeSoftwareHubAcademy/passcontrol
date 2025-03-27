@@ -1,4 +1,4 @@
-const buttonAbrir = document.querySelector(".open");
+const buttonAbrir = document.querySelector(".open-ativacao-guiche");
 const modalContainer = document.querySelector(".fundo-container-ativacao-guiche");
 const buttonFechar = document.querySelector(".close");
 const buttonCancelar = document.querySelector(".cancel");

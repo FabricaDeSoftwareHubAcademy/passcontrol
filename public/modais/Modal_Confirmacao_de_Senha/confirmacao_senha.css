@@ -4,18 +4,10 @@
     padding: 0;
     box-sizing: border-box;
 }
-
-.body-container {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #F5F5F5
-}
  
 /* Botões gerais */
 .botao-modal-confirmacao-senha {
+    background-color: #33404D;
     padding: 10px 20px;
     border: 0;
     border-radius: 10px;
@@ -33,17 +25,18 @@
     position: fixed;
     top: 0;
     left: 0;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.3s ease;
-    z-index: 1;
+    z-index: 10;
 }
 
 .fundo-container-confirmacao-senha.show {
     opacity: 1;
+    display: flex;
     pointer-events: auto;
 }
 

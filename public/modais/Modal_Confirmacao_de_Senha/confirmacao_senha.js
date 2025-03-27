@@ -1,4 +1,4 @@
-const buttonAbrir = document.querySelector(".open");
+const buttonAbrir = document.querySelector(".open-confirmacao-senha");
 const modalContainer = document.querySelector(".fundo-container-confirmacao-senha");
 const buttonFechar = document.querySelector(".Okay");
 

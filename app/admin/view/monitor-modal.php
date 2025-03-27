@@ -1,4 +1,3 @@
-<!--MONITOR MODAL-->
 <div class="area-monitor-modal">
     <div class="area-modal" id="modal">
         <div class="modal-fundo">

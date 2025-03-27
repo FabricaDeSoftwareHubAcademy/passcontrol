@@ -1,4 +1,4 @@
-const buttonAbrir = document.querySelector(".open");
+const buttonAbrir = document.querySelector(".open-confirmacao-deslogar");
 const modalContainer = document.querySelector(".fundo-container-confirmacao-deslogar");
 const buttonFechar = document.querySelector(".close");
 const buttonCancelar = document.querySelector(".cancel");
@@ -11,6 +11,7 @@ buttonAbrir.addEventListener("click", () => {
 buttonCancelar.addEventListener("click", () => {
     modalContainer.classList.remove("show");
 });
+
 buttonSalvar.addEventListener("click", () => {
     modalContainer.classList.remove("show");
 });

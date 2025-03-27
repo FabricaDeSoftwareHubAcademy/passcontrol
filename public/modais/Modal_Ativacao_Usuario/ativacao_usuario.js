@@ -1,4 +1,4 @@
-const buttonAbrir = document.querySelector(".open");
+const buttonAbrir = document.querySelector(".open-ativacao-usuario");
 const modalContainer = document.querySelector(".fundo-container-ativacao-usuario");
 const buttonFechar = document.querySelector(".close");
 const buttonCancelar = document.querySelector(".cancel");

@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>PassControl</title> 
-    
+
+    <title>PassControl</title>
+
     <!-- FONTE -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,7 +16,9 @@
     <link rel="stylesheet" href="../../../public/css/navegacao.css">
     <link rel="stylesheet" href="../../../public/css/monitor-modal.css">
     <link rel="stylesheet" href="../../../public/css/style_eli.css">
-    
+    <link rel="stylesheet" href="../../../public/modais/Modal_Alterar_Dados_Pessoais/alterar_dados_pessoais.css">
+    <link rel="stylesheet" href="../../../public/modais/Modal_Alterar_Senha/alterar_senha.css">
+
     <!-- JS -->
     <script src="../../../public/js/navegacao-menu-lateral.js" defer></script>
     <script src="../../../public/js/monitor-modal.js" defer></script>
@@ -50,50 +53,50 @@
                 document.getElementById("mobileMenu").classList.toggle("active");
             }
         </script>
-            <!-- área da descrição da página de navegação  -->
-            <div class="descricao">
-                <!-- <h2>Menu de Gestão</h2> -->
-            
-                <!-- <p>Área de Gestão do Admimistrador.</p> -->
-            </div>
-            <!-- área dos cards de nevegação  -->
-            <main class="area-cards">
-                <div class="container_menu">
-                    <div class="wrapper">
-                        <a href="configuracao-autoatendimento.php">
+        <!-- área da descrição da página de navegação  -->
+        <div class="descricao">
+            <!-- <h2>Menu de Gestão</h2> -->
+
+            <!-- <p>Área de Gestão do Admimistrador.</p> -->    
+        </div>
+        <!-- área dos cards de nevegação  -->
+        <main class="area-cards">
+            <div class="container_menu">
+                <div class="wrapper">
+                    <a href="">
                         <div class="banner-img">
                             <img src="../../../public/img/img-menu/gestaodoautoatendimento.png" alt="">
                         </div>
-                        </a>
-                        <!-- <h3 class="titulo-card">Autoatendimento</h3> -->
-                        <!-- <p>Gestão do Autoatendimento.</p> -->
-                    </div>
-                    <div class="button-wrapper">
-                        <button class="btn outline" onclick="window.location.href='configuracao-autoatendimento.php';">visualizar Autoatendimento</button>
-                    </div>
+                    </a>
+                    <!-- <h3 class="titulo-card">Autoatendimento</h3> -->
+                    <!-- <p>Gestão do Autoatendimento.</p> -->
                 </div>
-                <div class="container_menu">
-                    <div class="wrapper">
-                        <a href="./monitor-modal.php">
+                <div class="button-wrapper">
+                    <button class="btn outline" onclick="window.location.href='';">visualizar Autoatendimento</button>
+                </div>
+            </div>
+            <div class="container_menu">
+                <div class="wrapper">
+                    <a href="./monitor-modal.php">
                         <div class="banner-img">
                             <img src="../../../public/img/img-menu/visualizaçaomonitordeautoatendimento.png" alt="">
                         </div>
-                        </a>
-                        <!-- <h3 class="titulo-produto">Monitor</h3> -->
-                        <!-- <p>Visualizar Monitor de Autoatendimento</p> -->
-                    </div>
-                    <div class="button-wrapper">
-                        <button class="btn outline" id="visualisarMonitor">Visualizar Monitor</button>
-                    </div>
-                </div>      
-            </main>
+                    </a>
+                    <!-- <h3 class="titulo-produto">Monitor</h3> -->
+                    <!-- <p>Visualizar Monitor de Autoatendimento</p> -->
+                </div>
+                <div class="button-wrapper">
+                    <button class="btn outline" id="visualisarMonitor">Visualizar Monitor</button>
+                </div>
+            </div>
+        </main>
         </div>
     </section>
-    
+
     <!--MONITOR MODAL-->
     <?php
     include "./monitor-modal.php";
     ?>
 </body>
-</html>
 
+</html>

@@ -1,4 +1,4 @@
-const buttonAbrir = document.querySelector(".open");
+const buttonAbrir = document.querySelector(".open-confirmacao-dados-registrados");
 const modalContainer = document.querySelector(".fundo-container-confirmacao-dados-registrados");
 const buttonFechar = document.querySelector(".close");
 const buttonCancelar = document.querySelector(".cancel");

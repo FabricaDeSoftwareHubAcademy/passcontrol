@@ -16,6 +16,8 @@
     <link rel="stylesheet" href="../../../public/css/navegacao.css">
     <link rel="stylesheet" href="../../../public/css/atendimentocadastrados.css">
     <link rel="stylesheet" href="../../../public/css/monitor-modal.css">
+    <link rel="stylesheet" href="../../../public/modais/Modal_Alterar_Dados_Pessoais/alterar_dados_pessoais.css">
+    <link rel="stylesheet" href="../../../public/modais/Modal_Alterar_Senha/alterar_senha.css">
     <link rel="stylesheet" href="../../../public/modais/Modal Edição Ponto Atendimento/edicao_ponto_atendimento.css">
     <link rel="stylesheet" href="../../../public/modais/Modal Cadastro Ponto Atendimento/cadastro_ponto_atendimento.css">
     <link rel="stylesheet" href="../../../public/modais/Modal Inativação Guichê/inativacao_guiche.css">

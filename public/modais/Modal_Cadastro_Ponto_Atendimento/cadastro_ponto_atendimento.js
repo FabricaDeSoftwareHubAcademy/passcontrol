@@ -1,5 +1,5 @@
-const buttonAbrir = document.querySelector(".open");
-const modalContainer = document.querySelector(".fundo-container-ponto-atendimento");
+const buttonAbrir = document.querySelector(".open-cad-ponto-atendimento");
+const modalContainer = document.querySelector(".fundo-container-cad-ponto-atendimento");
 const buttonFechar = document.querySelector(".close");
 const buttonCancelar = document.querySelector(".cancel");
 const buttonSalvar = document.querySelector(".save");

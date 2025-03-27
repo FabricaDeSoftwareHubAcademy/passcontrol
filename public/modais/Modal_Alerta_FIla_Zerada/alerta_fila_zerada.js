@@ -1,4 +1,4 @@
-const buttonAbrir = document.querySelector(".open");
+const buttonAbrir = document.querySelector(".open-alertar-fila");
 const modalContainer = document.querySelector(".modal-container-alertar-fila");
 const buttonFechar = document.querySelector(".close");
 const buttonVoltar = document.querySelector(".voltar");

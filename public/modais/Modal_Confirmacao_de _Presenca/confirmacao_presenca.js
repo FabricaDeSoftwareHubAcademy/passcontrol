@@ -1,4 +1,4 @@
-const buttonAbrir = document.querySelector(".open");
+const buttonAbrir = document.querySelector(".open-confirmacao-presenca");
 const modalContainer = document.querySelector(".fundo-container-confirmacao-presenca");
 const buttonAusente = document.querySelector(".ausente");
 const buttonPresente = document.querySelector(".presente");

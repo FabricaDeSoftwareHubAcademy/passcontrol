@@ -20,6 +20,8 @@
     <link rel="stylesheet" href="../../../public/css/atendimento_tempo_real.css">
     <link rel="stylesheet" href="../../../public/css/style_atendimento_tempo_real.css">
     <link rel="stylesheet" href="../../../public/css/monitor-modal.css">
+    <link rel="stylesheet" href="../../../public/modais/Modal_Alterar_Dados_Pessoais/alterar_dados_pessoais.css">
+    <link rel="stylesheet" href="../../../public/modais/Modal_Alterar_Senha/alterar_senha.css">
 
     <!-- JS -->
     <script src="../../../public/js/navegacao-menu-lateral.js" defer></script>

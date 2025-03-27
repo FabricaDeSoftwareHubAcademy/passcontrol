@@ -1,4 +1,4 @@
-var buttonAbrir = document.getElementById("open_editar_dados");
+var buttonAbrir = document.querySelector("open-editar-dados");
 const modalContainerEditar = document.querySelector(".fundo-editar-dados");
 const buttonFechar = document.querySelector(".close");
 const buttonCancelar = document.querySelector(".cancel");

@@ -18,7 +18,8 @@
     <link rel="stylesheet" href="../../../public/css/monitor-modal.css">
     <link rel="stylesheet" href="../../../public/modais/Modal Inativação Usuário/inativacao_usuario.css">
     <link rel="stylesheet" href="../../../public/modais/Modal Ativação Usuário/ativacao_usuario.css">
-    <link rel="stylesheet" href="../../../public/modais/Modal Alterar Dados Pessoais/alterar_dados_pessoais.css">
+    <link rel="stylesheet" href="../../../public/modais/Modal_Alterar_Dados_Pessoais/alterar_dados_pessoais.css">
+    <link rel="stylesheet" href="../../../public/modais/Modal_Alterar_Senha/alterar_senha.css">
 
     <!-- JS -->
     <script src="../../../public/js/navegacao-menu-lateral.js" defer></script>

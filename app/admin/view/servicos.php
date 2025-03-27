@@ -15,8 +15,8 @@
     <link rel="stylesheet" href="../../../public/css/navegacao.css">
     <link rel="stylesheet" href="../../../public/css/monitor-modal.css">
     <link rel="stylesheet" href="../../../public/css/servicos.css">
-    <!-- <link rel="stylesheet" href="../../../public/modais/Modal Inativação Serviço/inativacao_servico.css"> -->
-    <!-- <link rel="stylesheet" href="../../../public/modais/Modal Confirmação dos Serviços/estilo.css"> -->
+    <link rel="stylesheet" href="../../../public/modais/Modal_Alterar_Dados_Pessoais/alterar_dados_pessoais.css">
+    <link rel="stylesheet" href="../../../public/modais/Modal_Alterar_Senha/alterar_senha.css">
     
     <!-- JS -->
     <script src="../../../public/js/navegacao-menu-lateral.js" defer></script>
