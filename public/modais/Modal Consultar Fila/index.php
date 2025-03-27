@@ -20,8 +20,7 @@
 
     <div class="fundo-consultar-fila">
         <section class="modal-consultar-fila">
-            <img src="../../../public/img/img-modais/Logo Nota Controlnt.png" alt="Logo Nota Control"
-                class="logo-consultar-fila">
+            
             <!-- <section class="Area-Util-Projeto"> -->
 
             <nav class="area-comum-consultar-fila">
@@ -30,6 +29,7 @@
                     <div class="topo-esquerda-consultar-fila">
                         <h3>Fila de Espera</h3>
                     </div>
+                    <img src="../../../public/img/img-modais/Logo Nota Controlnt.png" alt="Logo Nota Control"class="logo-consultar-fila">
                 </div>
 
                 <div class="area-em-cima-tabela-fila">

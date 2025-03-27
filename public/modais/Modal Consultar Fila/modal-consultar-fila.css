@@ -67,7 +67,6 @@ body {
 
 /* Estilo do logo */
 .logo-consultar-fila {
-    position: absolute;
     top: 10px;
     right: 20px;
     width: 10%; /* Ocupa 10% da largura do modal */
@@ -80,6 +79,8 @@ body {
     font-size: 28px;
     margin-bottom: 40px;
     font-weight: bold;
+    justify-content: left;
+    align-items: center;
 }
 
 
@@ -106,184 +107,45 @@ button.return:hover {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }
 
+
+
+
+
+
+
 /* Media Queries */
 
 /* Telas pequenas (até 320px) */
 @media (max-width: 400px) and (min-width: 320px) {
     .modal-consultar-fila {
-        
         width: 90% !important;
         min-width: auto !important; /* Permite ajuste dinâmico */
         padding: 15px !important;
     }
+    .topo-esquerda-consultar-fila h3{
+        font-size: 18px;
+        margin-bottom: 0px;
+    }
+    .logo-consultar-fila{
+        right: 30px;
+        width: 60px;
+    }
     
-    .logo-consultar-fila {
-        width: 50px !important;
-        top: 15px;
-        right: 10px !important;
-    }
-
-    .topo-esquerda-consultar-fila h3 {
-        font-size: 18px !important;
-        margin-bottom: 20px !important;
-    }
-
-    label {
-        font-size: 14px !important;
-    }
-
-    .button-group {
-        flex-direction: column !important;
-        align-items: center !important;
-        gap: 10px !important;
-    }
-
-    button {
-        font-size: 12px !important;
-        padding: 8px 15px !important;
-        width: 100% !important;
-    }
-
-    button.cancel {
-        margin-right: 0 !important; /* Remove o deslocamento para a esquerda */
-    }
-
-    button.return{
-        font-size: 12px !important; /* Diminui o tamanho da fonte */
-        padding: 8px 12px !important; /* Reduz o padding */
-        width: auto !important; /* Ajusta a largura automaticamente */
-        max-width: 200px !important; /* Limita o tamanho máximo da largura */
-    }
-
-    /* Ajuste da linha horizontal */
-    hr {
-        width: 100%;
-        margin-left: 0;
-        margin-right: 0;
-    }
-}
-
-@media (max-width: 400px) and (min-width: 350px) {
-    .topo-esquerda-consultar-fila h3 {
-        font-size: 16px !important;
-        margin-top: 10px !important; /* Afastando do topo */
-        max-width: 100% !important; /* Evita que o título fique muito largo */
-    }
-
-    .logo-consultar-fila {
-        width: 45px !important; /* Reduzindo o tamanho da logo */
-        right: 20   px !important; /* Ajusta um pouco mais para a direita */
-    }
-}
-
-@media (max-width: 350px) and (min-width: 345px) {
-    .topo-esquerda-consultar-fila h3 {
-        font-size: 16px !important;
-        margin-right: 50px;
-        max-width: 100% !important; /* Evita que o título fique muito largo */
-    }
-
-    .logo-consultar-fila {
-        width: 45px !important; /* Reduzindo o tamanho da logo */
-        top: 15px;
-        right: 20px !important; /* Ajusta um pouco mais para a direita */
-    }
-}
-
-@media (max-width: 349px) and (min-width: 320px) {
-    .topo-esquerda-consultar-fila h3 {
-        font-size: 16px !important;
-        margin-right: 50px;
-        max-width: 100% !important; /* Evita que o título fique muito largo */
-    }
-
-    .logo-consultar-fila {
-        width: 45px !important; /* Reduzindo o tamanho da logo */
-        top: 7px;
-        right: 20px !important; /* Ajusta um pouco mais para a direita */
-    }
 }
 
 /* Telas pequenas (celulares) */
 @media (max-width: 480px) {
-    hr {
-        width: 114%; /* Aumenta a largura da linha no celular */
-        margin-left: -7%; /* Ajusta a centralização */
-        margin-right: 10%; /* Ajusta a centralização */
-    }
     .modal-consultar-fila {
         width: 95%;
         padding: 20px;
-    }
-    .logo-consultar-fila {
-        width: 60px;
-    }
-    .topo-esquerda-consultar-fila h3 {
-        font-size: 20px;
-    }
-    p {
-        font-size: 14px;
-    }
-    button {
-        font-size: 12px;
-        padding: 8px 12px;
     }
 }
 
 /* Telas médias (tablets) */
 @media (max-width: 769px) {
-    hr {
-        width: 109%; /* Aumenta a largura da linha no celular */
-        margin-left: -4.4%; /* Ajusta a centralização */
-        margin-right: 10%; /* Ajusta a centralização */
-    }
     .modal-consultar-fila {
         width: 80%;
         padding: 25px;
-    }
-    .logo-consultar-fila {
-        width: 80px;
-    }
-    .topo-esquerda-consultar-fila h3 {
-        font-size: 24px;
-    }
-    p {
-        font-size: 16px;
-    }
-}
-
-@media (min-width: 770px) and (max-width: 1023px) {
-    hr {
-        width: 115.3%; /* Ajusta a largura da linha para que não ultrapasse a tela */
-        margin-left: -7.7%; /* Centraliza um pouco à esquerda */
-        margin-right: 5%; /* Centraliza um pouco à direita */
-    }
-    .topo-esquerda-consultar-fila h3 {
-        font-size: 32px;
-    }
-    p {
-        font-size: 20px;
-    }
-    .logo-consultar-fila {
-        width: 90px;
-    }
-}
-
-/* Telas grandes (desktops) */
-@media (min-width: 1024px) {
-    hr {
-        width: 115.3%; /* Reduz a largura da linha em telas maiores */
-        margin-left: -7.7%; /* Ajusta a centralização */
-        margin-right: 10%; /* Ajusta a centralização */
-    }
-    .topo-esquerda-consultar-fila h3 {
-        font-size: 32px;
-    }
-    p {
-        font-size: 20px;
-    }
-    .logo-consultar-fila {
-        width: 90px;
     }
 }
 
@@ -292,14 +154,5 @@ button.return:hover {
     .modal-consultar-fila {
         width: 100%;
         max-width: 1200px;
-    }
-    .topo-esquerda-consultar-fila h3 {
-        font-size: 32px;
-    }
-    p {
-        font-size: 20px;
-    }
-    .logo-consultar-fila {
-        width: 90px;
     }
 }

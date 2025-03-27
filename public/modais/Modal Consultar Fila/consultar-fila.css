@@ -28,24 +28,12 @@
     flex-direction: row;
     width: 100%;
     height: 100%;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    align-items: center;
     /* background-color: chartreuse; */
-    justify-content: center;
 }
 
-.topo-esquerda-consultar-fila {
-    width: 95%;
-    /* height: 100%; */
-    align-items: end;
-    display: flex;
-    /* background-color: coral; */
-    padding-left: 2%;
-} 
-
-.topo-esquerda-consultar-fila h3 {
-    font-weight: 700;
-    font-size: 22px;
-    color: #33404D;
-}
 .area-em-cima-tabela-fila{
     display: flex;
     flex-direction: row;
@@ -302,6 +290,10 @@ thead, tbody tr {
     } 
 }
 @media screen and (min-width: 635px) and (max-width: 709px) {
+    .senhas-guiche-area-chamada{
+        height: 3.4rem;
+        gap: 1rem;
+    }
     .fundo-guiche-area-chamada{
         overflow-x: auto;
     }
@@ -312,7 +304,11 @@ thead, tbody tr {
         max-height: 190px; 
     } 
 }
-@media screen and (min-width: 535px) and (max-width: 634px) {
+@media screen and (min-width: 570px) and (max-width: 634px) {
+    .senhas-guiche-area-chamada{
+        height: 4rem;
+        gap: 1rem;
+    }
     .fundo-guiche-area-chamada{
         overflow-x: auto;
     }
@@ -323,7 +319,22 @@ thead, tbody tr {
         max-height: 170px; 
     } 
 }
-@media screen and (min-width: 435px) and (max-width: 534px) {
+@media screen and (min-width: 435px) and (max-width: 569px) {
+    #divBusca{
+        margin: 0;
+    }
+    #txtBusca{
+        width: 180px;
+        margin: 0;
+    }
+    .senhas-guiche-area-chamada{
+        height: 4rem;
+        gap: 1rem;
+        margin: 0;
+    }
+    .senhas-guiche-area-chamada p{
+        font-size: 18px;
+    }
     .fundo-guiche-area-chamada{
         overflow-x: auto;
     }
@@ -336,6 +347,22 @@ thead, tbody tr {
 }
 
 @media screen and (min-width: 200px) and (max-width: 434px) {
+    #divBusca{
+        margin: 0;
+    }
+    #txtBusca{
+        width: 140px;
+        margin: 0;
+    }
+    .senhas-guiche-area-chamada{
+        height: 4rem;
+        gap: 1rem;
+        margin: 0;
+        width: 680px;
+    }
+    .senhas-guiche-area-chamada p{
+        font-size: 18px;
+    }
     .fundo-guiche-area-chamada{
         overflow-x: auto;
     }
