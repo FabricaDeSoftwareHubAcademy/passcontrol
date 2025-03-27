@@ -72,7 +72,7 @@
 }
 
 /* Estilo do logo */
-.logo {
+.logo-cadas-servicos {
     position: absolute;
     top: 10px;
     right: 30px;
@@ -170,13 +170,6 @@
     .modal-cadas-servicos {
         width: 70%;
     }
-
-    .divider-servicos{
-        border: none;
-        border-top: 3px solid #000;
-        width: 111.50%; /* Garante que a linha ocupe toda a largura do modal */
-        margin-left: -5.75%; /* Ajusta a centralização */
-    }
 }
 
 @media (max-width: 1024px) {
@@ -190,15 +183,8 @@
         width: 90%;
         padding: 20px;
     }
-    .logo {
-        width: 60px;
-    }
-
-    .divider-servicos{
-        border: none;
-        border-top: 3px solid #000;
-        width: 107.25%; /* Garante que a linha ocupe toda a largura do modal */
-        margin-left: -3.75%; /* Ajusta a centralização */
+    .logo-cadas-servicos {
+        width: 50px;
     }
 }
 
@@ -206,29 +192,15 @@
     .modal-cadas-servicos {
         width: 95%;
     }
-    
-    .divider-servicos{
-        border: none;
-        border-top: 3px solid #000;
-        width: 109.50%; /* Garante que a linha ocupe toda a largura do modal */
-        margin-left: -4.75%; /* Ajusta a centralização */
-    }
 }
 
 @media (max-width: 400px) {
     .modal-cadas-servicos {
         width: 95%;
     }
-
-    .divider-servicos{
-        border: none;
-        border-top: 3px solid #000;
-        width: 111.30%; /* Garante que a linha ocupe toda a largura do modal */
-        margin-left: -5.75%; /* Ajusta a centralização */
-    }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 350px) {
     .modal-cadas-servicos {
         width: 95%;
         padding: 15px;
@@ -239,7 +211,7 @@
     .input-number{
         margin-bottom: 10px;
     }
-    .logo{
+    .logo-cadas-servicos{
         width: 40px;
     }
     .button-group-cadastro-servico {

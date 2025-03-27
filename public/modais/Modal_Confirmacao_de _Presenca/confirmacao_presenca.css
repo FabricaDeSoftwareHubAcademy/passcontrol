@@ -249,7 +249,7 @@
     }
 
     .title-confirmacao-presenca {
-        font-size: 20px;
+        font-size: 16px;
         position: relative;
         top: 15px;
     }
@@ -329,12 +329,12 @@
     }
 
     .logo-confirmacao-presenca{
-        width: 10%;
+        width: 50px;
         top: 20px;
     }
 
     .title-confirmacao-presenca {
-        font-size: 24px;
+        font-size: 20px;
         position: relative;
         top: 10px;
     }

@@ -1,18 +1,18 @@
-<!-- <!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Passcontrol</title>
-    <link rel="stylesheet" href="../Modal Alterar Dados Pessoais/alterar_dados_pessoais.css">
-</head>
-<body class="body">
-    <button class="botao-modal" id="open_editar_dados">Abrir Modal</button>
+    <!DOCTYPE html>
+    <html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Passcontrol</title>
+        <link rel="stylesheet" href="./alterar_dados_pessoais.css">
+    </head>
+    <body class="body">
+        <button class="botao-modal-alterar-dados" id="open_editar_dados">Abrir Modal</button>
 
--->
+
     <div class="fundo-editar-dados">
         <section class="modal-editar-dados">
-            <img src="../../../public/img/img-modais/Logo Nota Controlnt.png" alt="Logo Nota Control" class="logo">
+            <img src="../../../public/img/img-modais/Logo Nota Controlnt.png" alt="Logo Nota Control" class="logo-alterar-dados">
             <h1 class="titulo">Alterar Dados Pessoais</h1>
             <hr class="linha-alterar-dados">
             <div class="nome-container-alterar-dados">
@@ -40,5 +40,5 @@
         </section>
     </div>
     <script src="./alterar_dados_pessoais.js"></script>
-<!-- </body>
-</html> -->
+</body>
+</html>

@@ -63,18 +63,17 @@
 /* Estilo da linha horizontal */
 .linha-alterar-dados {
     border: none;
-    border-top: 3px solid #000;
-    width: calc(100% + 80px);
-    margin-left: -40px; 
+    border-top: 2px solid #000;
+    width: 100%; 
     margin-top: 20px;
     margin-bottom: 20px;
 }
 
 /* Estilo do logo */
-.logo {
+.logo-alterar-dados {
     position: absolute;
     top: 20px;
-    right: 20px;
+    right: 30px;
     width: 10%;
 }
 
@@ -174,23 +173,11 @@
     .modal-editar-dados {
         width: 70%;
     }
-    .linha-alterar-dados{
-        border: none;
-        border-top: 3px solid #000;
-        width: 115%; /* Garante que a linha ocupe toda a largura do modal */
-        margin-left: -7.50%; /* Ajusta a centralização */
-    }
 }
 
 @media (max-width: 1024px) {
     .modal-editar-dados {
         width: 80%;
-    }
-    .linha-alterar-dados{
-        border: none;
-        border-top: 3px solid #000;
-        width: 115%; /* Garante que a linha ocupe toda a largura do modal */
-        margin-left: -7.50%; /* Ajusta a centralização */ 
     }
 }
 
@@ -201,12 +188,6 @@
     .titulo{
         margin-bottom: 20px;
     }
-    .linha{
-        border: none;
-        border-top: 3px solid #000;
-        width: 115%; /* Garante que a linha ocupe toda a largura do modal */
-        margin-left: -7.50%; /* Ajusta a centralização */
-    }
 }
 
 @media (max-width: 480px) {
@@ -216,12 +197,6 @@
     }
     .botao-modal-alterar-dados {
         width: auto;
-    }
-    .linha-alterar-dados{
-        border: none;
-        border-top: 3px solid #000;
-        width: 123%; /* Garante que a linha ocupe toda a largura do modal */
-        margin-left: -11.25%; /* Ajusta a centralização */
     }
 }
 
@@ -234,7 +209,7 @@
         margin-top: 7px;
         font-size: 20px;
     }
-    .logo{
+    .logo-alterar-dados{
         top: 10px;
         width: 50px;
     }
@@ -244,12 +219,6 @@
     }
     .botao-modal-alterar-dados {
         width: auto;
-    }
-    .linha-alterar-dados{
-        border: none;
-        border-top: 3px solid #000;
-        width: 108.50%; /* Garante que a linha ocupe toda a largura do modal */
-        margin-left: -4.25%; /* Ajusta a centralização */ 
     }
 }
 
@@ -262,7 +231,7 @@
         margin-top: 7px;
         font-size: 20px;
     }
-    .logo{
+    .logo-alterar-dados{
         top: 10px;
         width: 50px;
     }
@@ -272,12 +241,6 @@
     }
     .botao-modal-alterar-dados {
         width: auto;
-    }
-    .linha-alterar-dados{
-        border: none;
-        border-top: 3px solid #000;
-        width: 108.50%; /* Garante que a linha ocupe toda a largura do modal */
-        margin-left: -4.25%; /* Ajusta a centralização */ 
     }
 }
 
@@ -289,7 +252,7 @@
     .titulo{
         font-size: 16px;
     }
-    .logo{
+    .logo-alterar-dados{
         top: 15px;
         width: 40px;
     }
@@ -299,11 +262,5 @@
     }
     .botao-modal-alterar-dados {
         width: auto;
-    }
-    .linha-alterar-dados{
-        border: none;
-        border-top: 3px solid #000;
-        width: 111%; /* Garante que a linha ocupe toda a largura do modal */
-        margin-left: -5.50%; /* Ajusta a centralização */
     }
 }

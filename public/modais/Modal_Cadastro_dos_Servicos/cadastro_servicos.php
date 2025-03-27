@@ -11,7 +11,7 @@
 
     <div class="modal-container-cadas-servicos">
         <section class="modal-cadas-servicos">
-            <img src="../../../public/img/img-modais/Logo Nota Controlnt.png" alt="Logo Nota Control" class="logo">
+            <img src="../../../public/img/img-modais/Logo Nota Controlnt.png" alt="Logo Nota Control" class="logo-cadas-servicos">
             <h1 class="title-cadas-servicos">Cadastrar Serviços</h1>
             <hr class="divider-servicos">
             <div class="inf-modal-cadas-servico">
