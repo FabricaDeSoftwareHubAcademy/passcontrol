@@ -42,7 +42,7 @@
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.3s ease;
-    z-index: 99999;
+    z-index: 10;
 }
 
 .fundo-container-confirmacao-presenca.show {
@@ -63,25 +63,24 @@
     text-align: left;
     box-sizing: border-box;
     border-radius: 0;
+    border-radius: 5px;
 }
 
 /* Linha horizontal */
 .row-confirmacao-presenca {
     border: none;
-    border-top: 3px solid #000;
-    width: 32.4vw;
-    margin-left: calc(-16.2vw + 50%);
-    margin-right: calc(-20vw + 50%);
+    border-top: 2px solid #000;
+    width: 100%;
     margin-top: 20px;
     margin-bottom: 20px;
 }
 
 /* Estilo do logo */
-.logo {
+.logo-confirmacao-presenca {
     position: absolute;
     top: 25px;
     right: 30px;
-    width: 12%;
+    width: 60px;
     max-width: 200px;
 }
 
@@ -183,24 +182,24 @@
 /* Responsividade para telas de 320px */
 @media (min-width: 320px) and (max-width: 350px) {
     .modal-confirmacao-presenca {
-        width: 95% !important;
-        min-width: auto !important;
-        padding: 10px !important;
+        width: 95%;
+        min-width: auto;
+        padding: 10px;
     }
     
-    .logo {
-        width: 40px !important;
-        top: 5px !important;
-        right: 5px !important;
+    .logo-confirmacao-presenca {
+        width: 40px;
+        top: 5px;
+        right: 5px;
     }
 
     .title-confirmacao-presenca {
-        font-size: 16px !important;
-        margin-bottom: 15px !important;
+        font-size: 16px;
+        margin-bottom: 15px;
     }
 
     .button-group-confirmacao-presenca {
-        flex-direction: column !important;
+        flex-direction: column;
         align-items: center;
         gap: 5px;
     }
@@ -212,47 +211,47 @@
     }
 
     .chamar {
-        width: 60% !important; /* Garante que tenha o mesmo tamanho dos outros botões */
+        width: 60%; /* Garante que tenha o mesmo tamanho dos outros botões */
         white-space: nowrap; /* Impede a quebra de linha */
-        padding: 10px 20px !important; /* Mesmo padding dos outros botões */
+        padding: 10px 20px; /* Mesmo padding dos outros botões */
         font-size: 10px; /* Mantém a consistência do tamanho da fonte */
     }
 
     .row-confirmacao-presenca {
         width: 100%;
-        margin-left: 0;
-        margin-right: 0;
+        /* margin-left: 0;
+        margin-right: 0; */
     }
 
     .desk-info-confirmacao-presenca, .name-confirmacao-presenca, .info-confirmacao-presenca {
-        font-size: 18px !important;
+        font-size: 18px;
     }
 
     .senha-confirmacao-presenca {
         display: inline-block;
         text-align: center;
-        margin-left: 20px !important; /* Ajuste fino para alinhar com o texto */
+        margin-left: 20px; /* Ajuste fino para alinhar com o texto */
     }
 }
 
 /* Celulares pequenos */
 @media (min-width: 351px) and (max-width: 400px) {
     .modal-confirmacao-presenca {
-        width: 90% !important;
-        min-width: auto !important;
-        padding: 15px !important;
+        width: 90%;
+        min-width: auto;
+        padding: 15px;
     }
     
-    .logo {
-        width: 15% !important;
-        top: 15px !important;
+    .logo-confirmacao-presenca {
+        width: 15%;
+        top: 15px;
         right: 10px;
     }
 
     .title-confirmacao-presenca {
-        font-size: 20px !important;
-        position: relative !important;
-        top: 15px !important;
+        font-size: 20px;
+        position: relative;
+        top: 15px;
     }
 
     .button-group-confirmacao-presenca {
@@ -267,27 +266,27 @@
     }
 
     .chamar .ausente .presente {
-        width: 60% !important; /* Garante que tenha o mesmo tamanho dos outros botões */
+        width: 60%; /* Garante que tenha o mesmo tamanho dos outros botões */
         white-space: nowrap; /* Impede a quebra de linha */
-        padding: 10px 20px !important; /* Mesmo padding dos outros botões */
+        padding: 10px 20px; /* Mesmo padding dos outros botões */
         font-size: 10px; /* Mantém a consistência do tamanho da fonte */
     }
 
     /* Ajuste da linha horizontal */
     .row-confirmacao-presenca {
         width: 100%;
-        margin-left: 0;
-        margin-right: 0;
+        /* margin-left: 0;
+        margin-right: 0; */
     }
 
     .desk-info-confirmacao-presenca, .name-confirmacao-presenca, .info-confirmacao-presenca {
-        font-size: 18px !important;
+        font-size: 18px;
     }
 
     .senha-confirmacao-presenca {
         display: inline-block;
         text-align: center;
-        margin-left: 29px !important; /* Ajuste fino para alinhar com o texto */
+        margin-left: 29px; /* Ajuste fino para alinhar com o texto */
     }
 }
 
@@ -300,13 +299,11 @@
 
     .row-confirmacao-presenca {
         width: 114%;
-        margin-left: -7%;
-        margin-right: 10%;
     }
 
-    .logo{
-        width: 10% !important;
-        top: 30px !important;
+    .logo-confirmacao-presenca{
+        width: 10%;
+        top: 30px;
     }
 
     .title-confirmacao-presenca {
@@ -328,12 +325,10 @@
     }
 
     .row-confirmacao-presenca {
-        width: 109%;
-        margin-left: -4.4%;
-        margin-right: 10%;
+        width: 100%;
     }
 
-    .logo{
+    .logo-confirmacao-presenca{
         width: 10%;
         top: 20px;
     }
@@ -359,12 +354,10 @@
     }
 
     .row-confirmacao-presenca {
-        width: 108.5%;
-        margin-left: -4.2%;
-        margin-right: 10%;
+        width: 100%;
     }
 
-    .logo{
+    .logo-confirmacao-presenca{
         width: 10%;
         top: 25px;
     }
@@ -390,9 +383,7 @@
     }
 
     .row-confirmacao-presenca {
-        width: 115.3%;
-        margin-left: -7.7%;
-        margin-right: 10%;
+        width: 100%;
     }
 
     .title-confirmacao-presenca {
@@ -408,14 +399,12 @@
 
 @media (min-width: 1200px) {
     .modal-confirmacao-presenca {
-        width: 80% !important;
+        width: 80%;
         max-width: 600px;
     }
 
     .row-confirmacao-presenca {
-        width: 115.3%;
-        margin-left: -7.7%;
-        margin-right: 10%;
+        width: 100%;
     }
 
     .title-confirmacao-presenca {

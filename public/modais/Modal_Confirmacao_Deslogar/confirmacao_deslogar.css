@@ -57,20 +57,20 @@
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     position: relative;
     text-align: left;
+    border-radius: 5px;
 }
 
 /* Estilo da linha horizontal */
 .linha-confirmacao-deslogar {
     border: none;
-    border-top: 3px solid #000;
-    width: calc(100% + 80px);
-    margin-left: -40px; 
+    border-top: 2px solid #000;
+    width: 100%;
     margin-top: 20px;
     margin-bottom: 20px;
 }
 
 /* Estilo do logo */
-.logo {
+.logo-confirmacao-deslogar {
     position: absolute;
     top: 20px;
     right: 20px;
@@ -135,24 +135,13 @@
     .modal-confirmacao-deslogar {
         width: 70%;
     }
-    .linha-confirmacao-deslogar{
-        border: none;
-        border-top: 3px solid #000;
-        width: 115%; /* Garante que a linha ocupe toda a largura do modal */
-        margin-left: -7.50%; /* Ajusta a centralização */
-    }
 }
 
 @media (max-width: 1024px) {
     .modal-confirmacao-deslogar {
         width: 80%;
     }
-    .linha-confirmacao-deslogar{
-        border: none;
-        border-top: 3px solid #000;
-        width: 115%; /* Garante que a linha ocupe toda a largura do modal */
-        margin-left: -7.50%; /* Ajusta a centralização */ 
-    }
+
 }
 
 @media (max-width: 768px) {
@@ -161,12 +150,6 @@
     }
     .titulo-confirmacao-deslogar{
         margin-bottom: 20px;
-    }
-    .linha-confirmacao-deslogar{
-        border: none;
-        border-top: 3px solid #000;
-        width: 115%; /* Garante que a linha ocupe toda a largura do modal */
-        margin-left: -7.50%; /* Ajusta a centralização */
     }
 }
 
@@ -178,12 +161,7 @@
     .botao-modal-confirmacao-deslogar {
         width: auto;
     }
-    .linha-confirmacao-deslogar{
-        border: none;
-        border-top: 3px solid #000;
-        width: 123%; /* Garante que a linha ocupe toda a largura do modal */
-        margin-left: -11.25%; /* Ajusta a centralização */
-    }
+
 }
 
 @media (min-width: 401px) and (max-width: 550px){
@@ -195,7 +173,7 @@
         margin-top: 7px;
         font-size: 20px;
     }
-    .logo{
+    .logo-confirmacao-deslogar{
         top: 10px;
         width: 50px;
     }
@@ -205,12 +183,6 @@
     }
     .botao-modal-confirmacao-deslogar {
         width: auto;
-    }
-    .linha-confirmacao-deslogar{
-        border: none;
-        border-top: 3px solid #000;
-        width: 108.50%; /* Garante que a linha ocupe toda a largura do modal */
-        margin-left: -4.25%; /* Ajusta a centralização */ 
     }
 }
 
@@ -226,7 +198,7 @@
     .texto-confirmacao-deslogar{
         font-size: 18px;
     }
-    .logo{
+    .logo-confirmacao-deslogar{
         top: 10px;
         width: 50px;
     }
@@ -236,12 +208,6 @@
     }
     .botao-modal-confirmacao-deslogar {
         width: auto;
-    }
-    .linha-confirmacao-deslogar{
-        border: none;
-        border-top: 3px solid #000;
-        width: 108.50%; /* Garante que a linha ocupe toda a largura do modal */
-        margin-left: -4.25%; /* Ajusta a centralização */ 
     }
 }
 
@@ -256,7 +222,7 @@
     .texto-confirmacao-deslogar{
         font-size: 16px;
     }
-    .logo{
+    .logo-confirmacao-deslogar{
         top: 15px;
         width: 40px;
     }
@@ -266,11 +232,5 @@
     }
     .botao-modal-confirmacao-deslogar {
         width: auto;
-    }
-    .linha-confirmacao-deslogar{
-        border: none;
-        border-top: 3px solid #000;
-        width: 111%; /* Garante que a linha ocupe toda a largura do modal */
-        margin-left: -5.50%; /* Ajusta a centralização */
     }
 }

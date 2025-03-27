@@ -15,9 +15,8 @@
 }
 
 /* Botões gerais */
-.botao-modal {
+.botao-modal-confirmacao-dados {
     padding: 10px 20px;
-    background-color: rgb(47, 128, 128);
     border: 0;
     border-radius: 10px;
     font-size: 18px;
@@ -27,7 +26,7 @@
 }
 
 /* Estilo do container do modal */
-.modal-container {
+.fundo-container-confirmacao-dados {
     background: rgba(0, 0, 0, 0.5);
     width: 100vw;
     height: 100vh;
@@ -43,13 +42,13 @@
     z-index: 1;
 }
 
-.modal-container.show {
+.fundo-container-confirmacao-dados.show {
     opacity: 1;
     pointer-events: auto;
 }
 
 /* Estilo do modal */
-.modal {
+.modal-confirmacao-dados {
     background-color: #ddd;
     width: 60%;
     max-width: 550px;
@@ -57,33 +56,33 @@
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     position: relative;
     text-align: center;
+    border-radius: 5px;
 }
 
-.modal-divider {
+.modal-divider-confirmacao-dados {
     border: none;
-    border-top: 3px solid #000;
-    width: calc(100% + 60px); /* Adiciona o padding do modal */
-    margin-left: -30px; /* Ajusta para expandir até as bordas */
+    border-top: 2px solid #000;
+    width: 100%;
     margin-top: 20px;
     margin-bottom: 20px;
 }
 
-.logo {
+.logo-confirmacao-dados {
     width: 60px;
     position: absolute;
     top: 15px;
-    right: 15px;
+    right: 30px;
 }
 
 /* Tipografia */
-.modal-title {
+.modal-title-confirmacao-dados {
     font-size: 24px;
     font-weight: bold;
     text-align: left;
     margin-bottom: 30px;
 }
 
-.modal-message {
+.modal-message-confirmacao-dados {
     margin-top: 40px;
     font-size: 18px;
     font-weight: bold;
@@ -91,13 +90,13 @@
 }
 
 /* Grupo de botões */
-.button-group {
+.button-group-confirmacao-dados {
     display: flex;
     justify-content: flex-end   ;
     margin-top: 15px;
 }
 
-.botao-modal.Okay {
+.botao-modal-confirmacao-dados.Okay {
     background-color: #33404D;
     color: white;
     border-radius: 5px;
@@ -106,96 +105,96 @@
     margin-bottom: 10px;
 }
 
-.botao-modal.Okay:hover {
+.botao-modal-confirmacao-dados.Okay:hover {
     color: white;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }
 
 /* Responsividade */
 @media (max-width: 1200px) {
-    .modal {
+    .modal-confirmacao-dados {
         width: 100%;
     }
-    .modal-title {
+    .modal-title-confirmacao-dados {
         font-size: 25px;
     }
-    .modal-message {
+    .modal-message-confirmacao-dados {
         font-size: 22px;
     }
-    .logo {
+    .logo-confirmacao-dados  {
         width: 70px;
         top: 15px;
     }
 }
 
 @media (max-width: 1024px) {
-    .modal {
+    .modal-confirmacao-dados {
         width: 100%;
     }
-    .modal-title {
+    .modal-title-confirmacao-dados {
         font-size: 25px;
     }
-    .modal-message {
+    .modal-message-confirmacao-dados {
         font-size: 22px;
     }
-    .logo {
+    .logo-confirmacao-dados  {
         width: 70px;
         top: 15px;
     }
 }
 
 @media (max-width: 768px) {
-    .modal {
+    .modal-confirmacao-dados {
         width: 100%;
     }
-    .modal-title {
+    .modal-title-confirmacao-dados {
         font-size: 25px;
     }
-    .modal-message {
+    .modal-message-confirmacao-dados {
         font-size: 22px;
     }
-    .logo {
+    .logo-confirmacao-dados  {
         width: 70px;
         top: 15px;
     }
 }
 
 @media (max-width: 480px) {
-    .modal {
+    .modal-confirmacao-dados {
         width: 90%;
     }
-    .modal-title {
+    .modal-title-confirmacao-dados {
         font-size: 20px;
     }
-    .modal-message {
+    .modal-message-confirmacao-dados {
         font-size: 20px;
     }
-    .logo {
+    .logo-confirmacao-dados  {
         margin-top: 2px;
         width: 60px;
     }
 }
 
 @media (max-width: 400px){
-    .modal-message{
+    .modal-message-confirmacao-dados{
         font-size: 18px;
     }
-    .botao-modal.Okay{
+    .botao-modal-confirmacao-dados.Okay{
         margin-top: 20px;
     }
-    .button-group{
+    .button-group-confirmacao-dados{
         justify-content: center;
     }
 }
 
 @media (max-width: 320px){
-    .modal-message{
+    .modal-message-confirmacao-dados{
         font-size: 18px;
     }
-    .botao-modal.Okay{
+    .botao-modal-confirmacao-dados.Okay{
         margin-top: 20px;
     }
-    .button-group{
+    .button-group-confirmacao-dados{
         justify-content: center;
     }
 }

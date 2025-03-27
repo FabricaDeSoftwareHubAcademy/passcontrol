@@ -57,24 +57,24 @@
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     position: relative;
     text-align: left;
+    border-radius: 5px;
 }
 
 /* Estilo da linha horizontal */
 .linha-ativacao-guiche {
     border: none;
-    border-top: 3px solid #000;
-    width: calc(100% + 80px);
-    margin-left: -40px; 
+    border-top: 2px solid #000;
+    width: 100%;
     margin-top: 20px;
     margin-bottom: 20px;
 }
 
 /* Estilo do logo */
-.logo {
+.logo-ativacao-guiche {
     position: absolute;
     top: 20px;
-    right: 20px;
-    width: 12%;
+    right: 30px;
+    width: 60px;
     max-width: 200px;
     height: auto;
 }
@@ -135,23 +135,11 @@
     .modal-ativacao-guiche {
         width: 70%;
     }
-    .linha-ativacao-guiche{
-        border: none;
-        border-top: 3px solid #000;
-        width: 115%; /* Garante que a linha ocupe toda a largura do modal */
-        margin-left: -7.50%; /* Ajusta a centralização */
-    }
 }
 
 @media (max-width: 1024px) {
     .modal-ativacao-guiche {
         width: 80%;
-    }
-    .linha-ativacao-guiche{
-        border: none;
-        border-top: 3px solid #000;
-        width: 115%; /* Garante que a linha ocupe toda a largura do modal */
-        margin-left: -7.50%; /* Ajusta a centralização */ 
     }
 }
 
@@ -162,12 +150,6 @@
     .titulo-ativacao-guiche{
         margin-bottom: 20px;
     }
-    .linha-ativacao-guiche{
-        border: none;
-        border-top: 3px solid #000;
-        width: 115%; /* Garante que a linha ocupe toda a largura do modal */
-        margin-left: -7.50%; /* Ajusta a centralização */
-    }
 }
 
 @media (max-width: 480px) {
@@ -177,12 +159,6 @@
     }
     .botao-modal-ativacao-guiche {
         width: auto;
-    }
-    .linha-ativacao-guiche{
-        border: none;
-        border-top: 3px solid #000;
-        width: 123%; /* Garante que a linha ocupe toda a largura do modal */
-        margin-left: -11.25%; /* Ajusta a centralização */
     }
 }
 
@@ -195,7 +171,7 @@
         margin-top: 7px;
         font-size: 20px;
     }
-    .logo{
+    .logo-ativacao-guiche{
         top: 10px;
         width: 50px;
     }
@@ -205,12 +181,6 @@
     }
     .botao-modal-ativacao-guiche {
         width: auto;
-    }
-    .linha-ativacao-guiche{
-        border: none;
-        border-top: 3px solid #000;
-        width: 108.50%; /* Garante que a linha ocupe toda a largura do modal */
-        margin-left: -4.25%; /* Ajusta a centralização */ 
     }
 }
 
@@ -226,7 +196,7 @@
     .texto-ativacao-guiche{
         font-size: 18px;
     }
-    .logo{
+    .logo-ativacao-guiche{
         top: 10px;
         width: 50px;
     }
@@ -236,12 +206,6 @@
     }
     .botao-modal-ativacao-guiche {
         width: auto;
-    }
-    .linha-ativacao-guiche{
-        border: none;
-        border-top: 3px solid #000;
-        width: 108.50%; /* Garante que a linha ocupe toda a largura do modal */
-        margin-left: -4.25%; /* Ajusta a centralização */ 
     }
 }
 
@@ -256,7 +220,7 @@
     .texto-ativacao-guiche{
         font-size: 16px;
     }
-    .logo{
+    .logo-ativacao-guiche{
         top: 15px;
         width: 40px;
     }
@@ -266,11 +230,5 @@
     }
     .botao-modal-ativacao-guiche {
         width: auto;
-    }
-    .linha-ativacao-guiche{
-        border: none;
-        border-top: 3px solid #000;
-        width: 111%; /* Garante que a linha ocupe toda a largura do modal */
-        margin-left: -5.50%; /* Ajusta a centralização */
     }
 }

@@ -57,24 +57,24 @@
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     position: relative;
     text-align: left;
+    border-radius: 5px;
 }
 
 /* Estilo da linha horizontal */
 .linha-horizontal-ponto-atendimento {
     border: none;
-    border-top: 3px solid #000;
-    width: calc(100% + 80px);
-    margin-left: -40px; 
+    border-top: 2px solid #000;
+    width: 100%;
     margin-top: 20px;
     margin-bottom: 20px;
 }
 
 /* Estilo do logo */
-.logo {
+.logo-ponto-atendimento {
     position: absolute;
     top: 25px;
-    right: 20px;
-    width: 10%;
+    right: 30px;
+    width: 60px;
 }
 
 /* Estilo dos labels */
@@ -194,7 +194,7 @@
         margin-top: 5px;
         font-size: 18px;
     }
-    .logo{
+    .logo-ponto-atendimento{
         top: 10px;
         width: 50px;
     }
@@ -215,7 +215,7 @@
         margin-top: 7px;
         font-size: 18px;
     }
-    .logo{
+    .logo-ponto-atendimento{
         top: 10px;
         width: 50px;
     }
@@ -235,7 +235,7 @@
     .titulo-ponto-atendimento{
         font-size: 14px;
     }
-    .logo{
+    .logo-ponto-atendimento{
         top: 15px;
         width: 40px;
     }

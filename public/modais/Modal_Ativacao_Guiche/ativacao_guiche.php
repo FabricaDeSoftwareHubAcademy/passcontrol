@@ -1,4 +1,4 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
@@ -7,12 +7,12 @@
     <link rel="stylesheet" href="./ativacao_guiche.css">
 </head>
 <body class="body">
-    <button class="botao-modal open">Abrir Modal</button> -->
+    <button class="botao-modal open">Abrir Modal</button>
 
 
     <div class="fundo-container-ativacao-guiche">
         <section class="modal-ativacao-guiche">
-            <img src="../../../public/img/img-modais/Logo Nota Controlnt.png" alt="Logo Nota Control" class="logo">
+            <img src="../../../public/img/img-modais/Logo Nota Controlnt.png" alt="Logo Nota Control" class="logo-ativacao-guiche">
             <h1 class="titulo-ativacao-guiche">Confirmação</h1>
             <hr class="linha-ativacao-guiche">
             <p class="texto-ativacao-guiche"><b>Deseja Ativar Esse Guichê?</b></p>
@@ -23,5 +23,5 @@
         </section>
     </div>
     <script src="./ativacao_guiche.js"></script>
-<!-- </body>
-</html>  -->
+</body>
+</html> 

@@ -14,7 +14,7 @@
 
     <div class="fundo-container-confirmacao-senha">
         <section class="modal-confirmacao-senha">
-            <img src="../../../public/img/img-modais/Logo Nota Controlnt.png" alt="Logo Nota Control" class="logo">
+            <img src="../../../public/img/img-modais/Logo Nota Controlnt.png" alt="Logo Nota Control" class="logo-confirmacao-senha">
             <h1 class="modal-title-confirmacao-senha">Confirmação</h1>
             <hr class="modal-divider-confirmacao-senha">
             <img src="../../../public/img/img-modais/tick-circlecheck.png" alt="Check" class="check-image-confirmacao-senha">

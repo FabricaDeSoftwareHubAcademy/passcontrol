@@ -56,22 +56,22 @@
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     position: relative;
     text-align: center;
+    border-radius: 5px;
 }
 
 .modal-divider-confirmacao-senha {
     border: none;
-    border-top: 3px solid #000;
-    width: calc(100% + 60px); /* Adiciona o padding do modal */
-    margin-left: -30px; /* Ajusta para expandir até as bordas */
+    border-top: 2px solid #000;
+    width: 100%; 
     margin-top: 20px;
     margin-bottom: 20px;
 }
 
-.logo {
+.logo-confirmacao-senha {
     width: 60px;
     position: absolute;
     top: 15px;
-    right: 15px;
+    right: 30px;
 }
 
 /* Tipografia */
@@ -105,7 +105,7 @@
 /* Grupo de botões */
 .button-group-confirmacao-senha {
     display: flex;
-    justify-content: center;
+    justify-content: end;
     margin-top: 45px;
 }
 
@@ -134,7 +134,7 @@
     .modal-message-confirmacao-senha {
         font-size: 22px;
     }
-    .logo {
+    .logo-confirmacao-senha {
         width: 70px;
         top: 10px;
     }
@@ -150,7 +150,7 @@
     .modal-message-confirmacao-senha {
         font-size: 22px;
     }
-    .logo {
+    .logo-confirmacao-senha {
         width: 60px;
         top: 15px;
     }
@@ -166,7 +166,7 @@
     .modal-message-confirmacao-senha {
         font-size: 20px;
     }
-    .logo {
+    .logo-confirmacao-senha {
         width: 60px;
         top: 15px;
     }
@@ -182,7 +182,7 @@
     .modal-message-confirmacao-senha {
         font-size: 18px;
     }
-    .logo {
+    .logo-confirmacao-senha {
         margin-top: 5px;
         width: 50px;
     }
@@ -202,7 +202,7 @@
     .modal-message-confirmacao-senha {
         font-size: 16px;
     }
-    .logo {
+    .logo-confirmacao-senha {
         margin-top: 1px;
         width: 50px;
     }
@@ -222,7 +222,7 @@
     .modal-message-confirmacao-senha {
         font-size: 15px;
     }
-    .logo {
+    .logo-confirmacao-senha {
         margin-top: 5px;
         width: 40px;
     }

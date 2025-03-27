@@ -1,4 +1,4 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
@@ -7,12 +7,11 @@
     <link rel="stylesheet" href="./cadastro_ponto_atendimento.css">
 </head>
 <body class="pagina">
-    <button class="botao-modal open">Abrir Modal</button> -->
-
+    <button class="botao-modal open">Abrir Modal</button>
 
     <div class="fundo-container-ponto-atendimento">
         <section class="modal-ponto-atendimento">
-            <img src="../../../public/img/img-modais/Logo Nota Controlnt.png" alt="Logo Nota Control" class="logo">
+            <img src="../../../public/img/img-modais/Logo Nota Controlnt.png" alt="Logo Nota Control" class="logo-ponto-atendimento">
             <h1 class="titulo-ponto-atendimento">Cadastrar Ponto de Atendimento</h1>
             <hr class="linha-horizontal-ponto-atendimento">
             <div class="inf-modal-ponto-atendimento">
@@ -32,5 +31,5 @@
         </section>
     </div>
     <script src="./cadastro_ponto_atendimento.js"></script>
-<!-- </body>
-</html> -->
+</body>
+</html>

@@ -18,7 +18,6 @@
 /* Estilo dos botões */
 .botao-modal-ativacao-usuario {
     padding: 10px 20px;
-    background-color: rgb(47, 128, 128);
     border: 0;
     border-radius: 10px;
     font-size: 18px;
@@ -41,7 +40,7 @@
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.3s ease;
-    z-index: 1;
+    z-index: 10;
 }
 
 .fundo-container-ativacao-usuario.show {
@@ -58,24 +57,24 @@
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     position: relative;
     text-align: left;
+    border-radius: 5px;
 }
 
 /* Estilo da linha horizontal */
 .linha-ativacao-usuario {
     border: none;
-    border-top: 3px solid #000;
-    width: calc(100% + 80px);
-    margin-left: -40px; 
+    border-top: 2px solid #000;
+    width: 100%; 
     margin-top: 20px;
     margin-bottom: 20px;
 }
 
 /* Estilo do logo */
-.logo {
+.logo-ativacao-usuario {
     position: absolute;
     top: 20px;
-    right: 20px;
-    width: 12%;
+    right: 30px;
+    width: 60px;
     max-width: 200px;
     height: auto;
 }
@@ -136,23 +135,11 @@
     .modal-ativacao-usuario {
         width: 70%;
     }
-    .linha-ativacao-usuario{
-        border: none;
-        border-top: 3px solid #000;
-        width: 115%; /* Garante que a linha ocupe toda a largura do modal */
-        margin-left: -7.50%; /* Ajusta a centralização */
-    }
 }
 
 @media (max-width: 1024px) {
     .modal-ativacao-usuario {
         width: 80%;
-    }
-    .linha-ativacao-usuario{
-        border: none;
-        border-top: 3px solid #000;
-        width: 115%; /* Garante que a linha ocupe toda a largura do modal */
-        margin-left: -7.50%; /* Ajusta a centralização */ 
     }
 }
 
@@ -163,12 +150,6 @@
     .titulo-ativacao-usuario{
         margin-bottom: 20px;
     }
-    .linha-ativacao-usuario{
-        border: none;
-        border-top: 3px solid #000;
-        width: 115%; /* Garante que a linha ocupe toda a largura do modal */
-        margin-left: -7.50%; /* Ajusta a centralização */
-    }
 }
 
 @media (max-width: 480px) {
@@ -178,12 +159,6 @@
     }
     .botao-modal-ativacao-usuario {
         width: auto;
-    }
-    .linha-ativacao-usuario{
-        border: none;
-        border-top: 3px solid #000;
-        width: 123%; /* Garante que a linha ocupe toda a largura do modal */
-        margin-left: -11.25%; /* Ajusta a centralização */
     }
 }
 
@@ -196,7 +171,7 @@
         margin-top: 7px;
         font-size: 20px;
     }
-    .logo{
+    .logo-ativacao-usuario{
         top: 10px;
         width: 50px;
     }
@@ -206,12 +181,6 @@
     }
     .botao-modal-ativacao-usuario {
         width: auto;
-    }
-    .linha-ativacao-usuario{
-        border: none;
-        border-top: 3px solid #000;
-        width: 108.50%; /* Garante que a linha ocupe toda a largura do modal */
-        margin-left: -4.25%; /* Ajusta a centralização */ 
     }
 }
 
@@ -227,7 +196,7 @@
     .texto-ativacao-usuario{
         font-size: 18px;
     }
-    .logo{
+    .logo-ativacao-usuario{
         top: 10px;
         width: 50px;
     }
@@ -237,12 +206,6 @@
     }
     .botao-modal-ativacao-usuario {
         width: auto;
-    }
-    .linha-ativacao-usuario{
-        border: none;
-        border-top: 3px solid #000;
-        width: 108.50%; /* Garante que a linha ocupe toda a largura do modal */
-        margin-left: -4.25%; /* Ajusta a centralização */ 
     }
 }
 
@@ -257,7 +220,7 @@
     .texto-ativacao-usuario{
         font-size: 16px;
     }
-    .logo{
+    .logo-ativacao-usuario{
         top: 15px;
         width: 40px;
     }
@@ -267,11 +230,5 @@
     }
     .botao-modal-ativacao-usuario {
         width: auto;
-    }
-    .linha-ativacao-usuario{
-        border: none;
-        border-top: 3px solid #000;
-        width: 111%; /* Garante que a linha ocupe toda a largura do modal */
-        margin-left: -5.50%; /* Ajusta a centralização */
     }
 }

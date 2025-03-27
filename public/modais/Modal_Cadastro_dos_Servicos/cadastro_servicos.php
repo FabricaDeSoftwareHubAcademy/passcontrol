@@ -1,4 +1,4 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./cadastro_servicos.css">
 </head>
 <body class="body">
-    <button class="botao-modal open">Abrir Modal</button> -->
+    <button class="botao-modal open">Abrir Modal</button>
 
     <div class="modal-container-cadas-servicos">
         <section class="modal-cadas-servicos">
@@ -32,12 +32,12 @@
                 <input type="text" class="input-text-servicos" placeholder="Digite o nome do novo serviço">
             </div>
             <div class="button-group-cadastro-servico">
-                <button class="botao-modal cancel">Cancelar</button>
-                <button class="botao-modal save">Salvar</button>
+                <button class="botao-modal-cadastro-servico cancel">Cancelar</button>
+                <button class="botao-modal-cadastro-servico save">Salvar</button>
             </div>
         </section>
     </div>
 
     <script src="./cadastro_servicos.js"></script>
-<!-- </body>
-</html> -->
+</body>
+</html>

@@ -1,4 +1,4 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
@@ -7,12 +7,12 @@
     <link rel="stylesheet" href="./ativacao_usuario.css">
 </head>
 <body class="body">
-    <button class="botao-modal open">Abrir Modal</button> -->
+    <button class="botao-modal open">Abrir Modal</button>
 
 
     <div class="fundo-container-ativacao-usuario">
         <section class="modal-ativacao-usuario">
-            <img src="../../../public/img/img-modais/Logo Nota Controlnt.png" alt="Logo Nota Control" class="logo">
+            <img src="../../../public/img/img-modais/Logo Nota Controlnt.png" alt="Logo Nota Control" class="logo-ativacao-usuario">
             <h1 class="titulo-ativacao-usuario">Confirmação</h1>
             <hr class="linha-ativacao-usuario">
             <p class="texto-ativacao-usuario"><b>Deseja Ativar Esse Usuário?</b></p>
@@ -23,5 +23,5 @@
         </section>
     </div>
     <script src="./ativacao_usuario.js"></script>
-<!-- </body>
-</html> -->
+</body>
+</html>

@@ -16,9 +16,8 @@
 }
 
 /* Estilo dos botões */
-.botao-modal {
+.botao-modal-cadastro-servico {
     padding: 10px 20px;
-    background-color: rgb(47, 128, 128);
     border: 0;
     border-radius: 10px;
     font-size: 18px;
@@ -41,7 +40,7 @@
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.2s ease;
-    z-index: 1;
+    z-index: 10;
 }
 
 .show {
@@ -66,10 +65,8 @@
 /* Estilo da linha horizontal */
 .divider-servicos {
     border: none;
-    border-top: 3px solid #000;
-    width: calc(100% + 60px);
-    margin-left: -30px; 
-    /* margin-right: calc(-20vw + 50%);  */
+    border-top: 2px solid #000;
+    width: 100%;
     margin-top: 20px;
     margin-bottom: 20px;
 }
@@ -78,8 +75,8 @@
 .logo {
     position: absolute;
     top: 10px;
-    right: 20px;
-    width: 70px;
+    right: 30px;
+    width: 60px;
 }
 
 .inf-modal-cadas-servico{
@@ -134,7 +131,6 @@
     display: flex;
     justify-content: flex-end;
     gap: 15px;
-    margin-bottom: 20px;
 }
 
 /* Estilo do botão cancelar */
