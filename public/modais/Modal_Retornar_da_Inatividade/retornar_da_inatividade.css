@@ -18,7 +18,7 @@
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.2s ease;
-    z-index: 1;
+    z-index: 10;
 }
 
 .show {
@@ -36,6 +36,7 @@
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     position: relative;
     text-align: left;
+    border-radius: 5px;
 }
 
 /* Estilo da linha horizontal */
@@ -50,9 +51,13 @@
 /* Estilo do logo */
 .modal-retornar-da-inatividade .logo {
     position: absolute;
-    top: 20px;
+    top: 30px;
     right: 30px;
     width: 10%;
+}
+
+.modal-retornar-da-inatividade .titulo{
+    font-size: 28px;
 }
 
 .modal-retornar-da-inatividade .senha {
@@ -66,21 +71,21 @@
 .modal-retornar-da-inatividade .container {
     flex: 1;
     margin-right: 20px;
-}
+    gap: 5px;
+}   
 
 .modal-retornar-da-inatividade .container:last-child {
     margin-right: 0;
 }
 
 .modal-retornar-da-inatividade .container .label-senha {
-    font-size: 16px;
-    margin-bottom: 5px;
+    font-size: 18px;
 }
 
 .modal-retornar-da-inatividade .container .input-senha {
     width: 100%;
     padding: 10px;
-    margin-bottom: 10px;
+    margin-top: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
     background-color: white;
@@ -118,28 +123,17 @@
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }
 
+
 /* Responsividade */
 @media (max-width: 1200px) {
     .modal-retornar-da-inatividade {
         width: 70%;
-    }
-    .modal-retornar-da-inatividade .linha{
-        border: none;
-        border-top: 3px solid #000;
-        width: 115%; /* Garante que a linha ocupe toda a largura do modal */
-        margin-left: -7.50%; /* Ajusta a centralização */
     }
 }
 
 @media (max-width: 1024px) {
     .modal-retornar-da-inatividade {
         width: 80%;
-    }
-    .modal-retornar-da-inatividade .linha{
-        border: none;
-        border-top: 3px solid #000;
-        width: 115%; /* Garante que a linha ocupe toda a largura do modal */
-        margin-left: -7.50%; /* Ajusta a centralização */ 
     }
 }
 
@@ -150,11 +144,28 @@
     .modal-retornar-da-inatividade .titulo{
         margin-bottom: 20px;
     }
-    .modal-retornar-da-inatividade .linha{
-        border: none;
-        border-top: 3px solid #000;
-        width: 115%; /* Garante que a linha ocupe toda a largura do modal */
-        margin-left: -7.50%; /* Ajusta a centralização */
+}
+
+@media (max-width: 550px){
+    .modal-retornar-da-inatividade {
+        width: 95%;
+        padding: 20px;
+    }
+    .modal-retornar-da-inatividade .titulo{
+        margin-top: 7px;
+        font-size: 20px;
+    }
+    .modal-retornar-da-inatividade .logo{
+        top: 15px;
+        right: 20px;
+        width: 50px;
+    }
+    .modal-retornar-da-inatividade .button-group {
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+    .modal-retornar-da-inatividade .button-group .botao-modal {
+        width: auto;
     }
 }
 
@@ -166,39 +177,8 @@
     .modal-retornar-da-inatividade .button-group .botao-modal {
         width: auto;
     }
-    .modal-retornar-da-inatividade .linha{
-        border: none;
-        border-top: 3px solid #000;
-        width: 123%; /* Garante que a linha ocupe toda a largura do modal */
-        margin-left: -11.25%; /* Ajusta a centralização */
-    }
-}
-
-@media (min-width: 401px) and (max-width: 550px){
-    .modal-retornar-da-inatividade {
-        width: 95%;
-        padding: 20px;
-    }
-    .modal-retornar-da-inatividade .titulo{
-        margin-top: 7px;
-        font-size: 20px;
-    }
-    .modal-retornar-da-inatividade .logo{
-        top: 10px;
-        width: 50px;
-    }
-    .modal-retornar-da-inatividade .button-group {
-        flex-direction: row;
-        justify-content: flex-end;
-    }
-    .modal-retornar-da-inatividade .button-group .botao-modal {
-        width: auto;
-    }
-    .modal-retornar-da-inatividade .linha{
-        border: none;
-        border-top: 3px solid #000;
-        width: 108.50%; /* Garante que a linha ocupe toda a largura do modal */
-        margin-left: -4.25%; /* Ajusta a centralização */ 
+    .modal-retornar-da-inatividade .container .label-senha {
+        font-size: 15px;
     }
 }
 
@@ -210,6 +190,7 @@
     .modal-retornar-da-inatividade .titulo{
         margin-top: 7px;
         font-size: 20px;
+        max-width: 80%;
     }
     .modal-retornar-da-inatividade .logo{
         top: 10px;
@@ -218,19 +199,14 @@
     .modal-retornar-da-inatividade .button-group {
         flex-direction: row;
         justify-content: flex-end;
+        gap: 10px;
     }
     .modal-retornar-da-inatividade .button-group .botao-modal {
         width: auto;
     }
-    .modal-retornar-da-inatividade .linha{
-        border: none;
-        border-top: 3px solid #000;
-        width: 108.50%; /* Garante que a linha ocupe toda a largura do modal */
-        margin-left: -4.25%; /* Ajusta a centralização */ 
-    }
 }
 
-@media (min-width: 320px) and (max-width: 340px) {
+@media (max-width: 340px) {
     .modal-retornar-da-inatividade {
         width: 90%;
         padding: 15px;
@@ -248,11 +224,5 @@
     }
     .modal-retornar-da-inatividade .button-group .botao-modal {
         width: auto;
-    }
-    .modal-retornar-da-inatividade .linha{
-        border: none;
-        border-top: 3px solid #000;
-        width: 111%; /* Garante que a linha ocupe toda a largura do modal */
-        margin-left: -5.50%; /* Ajusta a centralização */
     }
 }

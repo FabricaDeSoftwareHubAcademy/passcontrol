@@ -5,19 +5,10 @@
     box-sizing: border-box;
 }
 
-.body-container {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #F5F5F5
-}
-
 /* Botões gerais */
 .botao-modal {
+    background-color: #33404D;
     padding: 10px 20px;
-    background-color: rgb(47, 128, 128);
     border: 0;
     border-radius: 10px;
     font-size: 18px;
@@ -27,129 +18,98 @@
 }
 
 /* Estilo do container do modal */
-.modal-container {
+.fundo-intervalo {
     background: rgba(0, 0, 0, 0.5);
     width: 100vw;
     height: 100vh;
     position: fixed;
     top: 0;
     left: 0;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     opacity: 0;
     pointer-events: none;
-    transition: opacity 0.3s ease;
-    z-index: 1;
+    transition: opacity 0.2s ease;
+    z-index: 10;
 }
 
-.modal-container.show {
+.show {
     opacity: 1;
+    display: flex;
     pointer-events: auto;
 }
 
 /* Estilo do modal */
-.modal {
+.modal-intervalo {
     background-color: #ddd;
     width: 60%;
     max-width: 550px;
+    min-width: 290px;
     padding: 30px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     position: relative;
     text-align: center;
+    border-radius: 5px;
 }
 
-.modal-divider {
+.modal-intervalo .modal-divider {
     border: none;
-    border-top: 3px solid #000;
-    width: calc(100% + 60px); /* Adiciona o padding do modal */
-    margin-left: -30px; /* Ajusta para expandir até as bordas */
+    border-top: 2px solid #000;
+    width: 100%;
     margin-top: 20px;
     margin-bottom: 20px;
 }
 
-#horario{
-    margin-top: 30px;
-    font-size: 30px;
-    text-align: center;
-}
-
-.logo {
+.modal-intervalo .logo {
     width: 60px;
     position: absolute;
     top: 15px;
-    right: 15px;
+    right: 30px;
 }
 
 /* Tipografia */
-.modal-title {
+.modal-intervalo .modal-title {
     font-size: 24px;
     font-weight: bold;
     text-align: left;
 }
 
-.modal-message {
-    margin-top: 40px;
+.modal-intervalo .modal-message {
     font-size: 18px;
     font-weight: bold;
+    text-align: center;    
+}
+
+.modal-intervalo .timer-intervalo{
+    margin-bottom: 10px;
+    font-size: 30px;
     text-align: center;
+    margin: 30px;
 }
 
 /* Grupo de botões */
-.button-group {
+.modal-intervalo .button-group {
     display: flex;
     justify-content: center;
     margin-top: 15px;
 }
 
-.botao-modal.return {
+.modal-intervalo .button-group .return {
     background-color: #33404D;
     color: white;
     border-radius: 5px;
     font-size: 14px;
     padding: 10px 15px;
-    margin-bottom: 30px;
 }
 
-.botao-modal.return:hover {
+.modal-intervalo .button-group .return:hover {
     color: white;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }
 
 /* Responsividade */
-@media (max-width: 768px) {
-    .modal {
-        width: 100%;
-    }
-    .modal-title {
-        font-size: 20px;
-    }
-    .modal-message {
-        font-size: 16px;
-    }
-    .logo {
-        width: 50px;
-        top: 15px;
-        right: 10px;
-    }
-}
+/* @media (max-width: ) {
 
-@media (max-width: 480px) {
-    .modal {
-        width: 90%;
-    }
-    .modal-title {
-        font-size: 18px;
-    }
-    .modal-message {
-        font-size: 14px;
-    }
-    .botao-modal {
-        font-size: 16px;
-        padding: 8px 15px;
-    }
-    .logo {
-        margin-top: 5px;
-        width: 40px;
-    }
-}
+} */
+

@@ -1,5 +1,5 @@
-const buttonAbrir = document.querySelector(".open");
-const modalContainer = document.querySelector(".modal-container");
+const buttonAbrir = document.querySelector(".open-intervalo");
+const modalContainer = document.querySelector(".fundo-intervalo");
 const buttonFechar = document.querySelector(".close");
 const buttonRetornar = document.querySelector(".return");
 
