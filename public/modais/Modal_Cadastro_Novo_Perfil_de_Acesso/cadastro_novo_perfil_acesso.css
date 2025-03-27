@@ -45,7 +45,7 @@
     background-color: #e0e0e0;
     width: 80%;
     max-width: 900px; /* Limita o tamanho máximo */
-    min-width: 400px; /* Evita que fique pequeno demais */
+    min-width: 290px; /* Evita que fique pequeno demais */
     height: auto; /* Altura ajustável automaticamente */
     padding: 30px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
@@ -56,7 +56,7 @@
 }
 
 /* Estilo da linha horizontal */
-.divisoria-modal {
+.modal-cadastro-novo-perfil-acesso .divisoria-modal {
     border: none;
     border-top: 2px solid #000;
     width: 100%;
@@ -65,52 +65,60 @@
 }
 
 /* Estilo do logo */
-.logo {
+.modal-cadastro-novo-perfil-acesso .logo {
     position: absolute;
-    top: 15px;
+    top: 10px;
     right: 30px;
     width: 80px;
     height: auto;
 }
 
 /* Estilo do título */
-.titulo-modal {
+.modal-cadastro-novo-perfil-acesso .titulo-modal {
     font-size: 28px;
     margin-bottom: 30px;
     font-weight: bold;
 }
 
 /* Estilo do parágrafo */
-.texto-modal {
+.modal-cadastro-novo-perfil-acesso .texto-modal {
     font-size: 18px;
     margin: 20px 0;
     text-align: left;
 }
 
-input[type="text"] {
+.input-novo-perf-nome {
     width: 100%;
     padding: 10px;
     margin-bottom: 20px;
     border: 1px solid #ccc;
     border-radius: 4px;
 }
-.checkbox-container {
+.modal-cadastro-novo-perfil-acesso .checkbox-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    gap: 5px;
+    background-color: hsla(0, 0%, 100%, 0.4);
+    border-radius: 5px;
+    padding: 3px;
 }
-.checkbox-group {
+.modal-cadastro-novo-perfil-acesso .checkbox-container .checkbox-group {
     display: flex;
     align-items: center;
     margin-bottom: 10px;
     width: 45%;
 }
-.checkbox-group input {
+.modal-cadastro-novo-perfil-acesso .checkbox-container .selecionar-todos{
+    width: 90%;
+    margin-bottom: 20px;
+}
+.modal-cadastro-novo-perfil-acesso .checkbox-container .checkbox-group input {
     margin-right: 10px;
 }
 
 /* Grupo de botões */
-.button-group {
+.modal-cadastro-novo-perfil-acesso .button-group {
     display: flex;
     justify-content: right;
     gap: 30px;
@@ -118,7 +126,7 @@ input[type="text"] {
 }
 
 /* Estilo do botão cancelar */
-button.cancel {
+.modal-cadastro-novo-perfil-acesso .button-group .cancel {
     background-color: #33404D;
     color: white;
     border-radius: 5px;
@@ -127,13 +135,13 @@ button.cancel {
 }
 
 /* Estilo do botão cancelar no hover */
-button.cancel:hover {
+.modal-cadastro-novo-perfil-acesso .button-group .cancel:hover {
     color: #FF0000;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }
 
 /* Estilo do botão salvar */
-button.save {
+.modal-cadastro-novo-perfil-acesso .button-group .save {
     background-color: #33404D;
     color: white;
     border-radius: 5px;
@@ -142,7 +150,7 @@ button.save {
 }
 
 /* Estilo do botão salvar no hover */
-button.save:hover {
+.modal-cadastro-novo-perfil-acesso .button-group .save:hover {
     color: #3AA867;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }
@@ -150,7 +158,42 @@ button.save:hover {
 /* Media Queries */
 
 @media (max-width: 600px) {
-    .logo{
+    .modal-cadastro-novo-perfil-acesso .logo{
+        top: 15px;
         width: 60px;
+    }
+    .modal-cadastro-novo-perfil-acesso .titulo-modal{
+        font-size: 22px;
+        max-width: 80%;
+    }
+    .modal-cadastro-novo-perfil-acesso .checkbox-container{
+        max-height: calc(50vh);
+        overflow-y: auto;
+        gap: 10px;
+    }
+    .modal-cadastro-novo-perfil-acesso .checkbox-container .checkbox-group {
+        width: 90%;
+    }
+}
+@media (max-width: 410px) {
+    .modal-cadastro-novo-perfil-acesso{
+        padding: 20px;
+        max-width: 370px;
+    }
+    .modal-cadastro-novo-perfil-acesso .titulo-modal{
+        max-width: 65%;
+    }
+    .modal-cadastro-novo-perfil-acesso .checkbox-container{
+        max-height: calc(30vh);
+        overflow-y: auto;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        gap: 10px;
+    }
+    .modal-cadastro-novo-perfil-acesso .checkbox-container .checkbox-group {
+        width: 90%;
+    }
+    .modal-cadastro-novo-perfil-acesso .button-group{
+        gap: 10px;
     }
 }
