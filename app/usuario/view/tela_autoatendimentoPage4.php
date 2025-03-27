@@ -57,5 +57,7 @@
         </div>
 
     </main>
+
+    <script src="../../../public/js/tela_autoatendimentoPage4.js"></script>
 </body>
 </html>

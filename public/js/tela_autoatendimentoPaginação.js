@@ -44,6 +44,14 @@ function renderPage(page) {
             <h4>${service.title}</h4>
         `;
 
+        box.addEventListener("click", () => {
+            let dadosUsuario = JSON.parse(localStorage.getItem("dadosUsuario")) || {};
+
+            dadosUsuario.servicoSelecionado = service.title;
+
+            localStorage.setItem("dadosUsuario", JSON.stringify(dadosUsuario));
+        });
+
         boxContainer.appendChild(box); //container com os .box adicionados
     });
 
