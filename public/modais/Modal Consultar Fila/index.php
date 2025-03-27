@@ -1,58 +1,70 @@
-<div class="modal-consultar">
-    <section class="modal">
-        <img src="../../../public/img/img-modais/Logo Nota Controlnt.png" alt="Logo Nota Control" class="logo">
-        <!-- <section class="Area-Util-Projeto"> -->
+<!DOCTYPE html>
+<html lang="pt-br">
 
-        <nav class="area-comum-consultar-fila">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-            <div class="topo-consultar-fila">
-                <div class="topo-esquerda-consultar-fila">
-                    <h3>Fila de Espera</h3>
-                </div>
-            </div>
+    <!-- TROCA TÍTULO QUANDO FOR UTILIZAR -->
+    <title>PassControl</title>
 
-            <div class="area-em-cima-tabela-atendimento">
-                
-                <div id="divBusca">
-                    <input type="text" id="txtBusca" placeholder="Buscar..."/>
-                </div>
-                <div class="topo-direita-consultar-fila">
-                    <div class="senhas-guiche-area-chamada">
-                        <p class="">2</p>
-                        <p>Senhas Na Fila:</p>
+    <link rel="stylesheet" href="./estilo.css">
+    <link rel="stylesheet" href="./consultar-fila.css">
+
+    <script src="./modal.js" defer></script>
+</head>
+
+<body>
+
+    <button class="botao-modal abrirConsultarFila">Abrir Modal</button>
+
+    <div class="fundo-consultar-fila">
+        <section class="modal-consultar-fila">
+            <img src="../../../public/img/img-modais/Logo Nota Controlnt.png" alt="Logo Nota Control"
+                class="logo-consultar-fila">
+            <!-- <section class="Area-Util-Projeto"> -->
+
+            <nav class="area-comum-consultar-fila">
+
+                <div class="topo-consultar-fila">
+                    <div class="topo-esquerda-consultar-fila">
+                        <h3>Fila de Espera</h3>
                     </div>
                 </div>
-            </div>
 
-            <div class="fundo-tabela-fila">
-                <table class="tabela_atendimento-fila">
-                    <thead>
-                        <tr>
-                            <th>Ordem</th>
-                            <th>Nome</th>
-                            <th>Serviço</th>
-                            <th>Senha</th>
-                            <th>Início</th>
-                            <th>Término</th>
-                            <th>Categoria</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>#01</td>
-                            <td>Guilherme Machado</td>
-                            <td>IPTU</td>
-                            <td>CM002</td>
-                            <td>7:30</td>
-                            <td>7:46</td>
-                            <td>Comum</td>
+                <div class="area-em-cima-tabela-fila">
+                    <div id="divBusca">
+                        <input type="text" id="txtBusca" placeholder="Buscar..." />
+                    </div>
+                    <div class="topo-direita-consultar-fila">
+                        <div class="senhas-guiche-area-chamada">
+                            <p class="">2</p>
+                            <p>Senhas Na Fila:</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="fundo-guiche-area-chamada">
+                    <table class="tabela_atendimento-guiche-area-chamada">
+                        <thead>
+                            <tr>
+                                <th>Ordem</th>
+                                <th>Nome</th>
+                                <th>Serviço</th>
+                                <th>Senha</th>
+                                <th>Início</th>
+                                <th>Término</th>
+                                <th>Categoria</th>
+                            </tr>
+                        </thead>
+
                         </tr>
                         <tr>
                             <td>#02</td>
                             <td>Juliana Barbosa</td>
                             <td>Fiscalização</td>
                             <td>CM005</td>
-                            <td>7:48</td>
+                            <td>07:48</td>
                             <td>08:04</td>
                             <td>Preferencial</td>
                         </tr>
@@ -61,7 +73,7 @@
                             <td>Gabriel Alvin</td>
                             <td>Licenças</td>
                             <td>CM008</td>
-                            <td>8:08</td>
+                            <td>08:08</td>
                             <td>08:29</td>
                             <td>Preferencial</td>
                         </tr>
@@ -128,11 +140,14 @@
                             <td>10:53</td>
                             <td>Preferencial</td>
                         </tr>
-                </table>
+                    </table>
+                </div>
+            </nav>
+            <div class="button-group">
+                <button class="botao-modal return">Retornar</button>
             </div>
-        </nav>
-        <div class="button-group">
-            <button class="botao-modal return">Retornar</button>
-        </div>
-    </section>
-</div>
+        </section>
+    </div>
+
+</body>
+</html

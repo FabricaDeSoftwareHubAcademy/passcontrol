@@ -46,11 +46,11 @@
     font-size: 22px;
     color: #33404D;
 }
-.area-em-cima-tabela-atendimento{
+.area-em-cima-tabela-fila{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    gap: 20rem;
+    justify-content: space-between;
+    /* gap: 20rem; */
     width: 96%;
 }
 
@@ -84,6 +84,7 @@
     color: #33404D;
     border-radius: 2%;
     gap: 1.4rem;
+    margin-right: 28px;
 }
 .senhas-guiche-area-chamada p{
     font-size: 20px;
@@ -117,39 +118,63 @@
     /* justify-content: center; */
     align-items: center;
 }
+#divBusca{
+    display: flex;
+    padding: 0;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin-left: 26px;
+}
+
+  
+  #txtBusca{
+    float:left;
+    padding: 5px;
+    padding-left: 5px;
+    font-style:italic;
+    font-size:14px;
+    outline: 5px;
+    border-radius: 5px;
+    background-image: url(../img/icons/lupa.png);
+    background-position: 142px; 
+    background-repeat: no-repeat;
+    opacity: 0.5;
+    border: 2px solid #333;
+  }
 
 
 
 /* TABELA  */
-.fundo-tabela-fila{ 
+.fundo-guiche-area-chamada{ 
     width: 96%; 
     font-weight: 600; 
     height: 100%; 
     border-radius: 5px; 
     background-color: rgb(255, 255, 255,0.5); 
     gap: 15px; 
-    margin-top: 0rem; 
+    /* margin-top: 2rem;  */
     /* overflow-x: auto;  */
+    /* overflow-x: hidden; */
     display: flex; 
-    /* display: block;  */
+    display: block; 
     justify-content: left; 
 } 
-.tabela_atendimento-fila { 
+.tabela_atendimento-guiche-area-chamada { 
     /* border: 1px solid black;  */
     border-collapse: collapse; 
     background-color: rgba(255, 255, 255, 0.5); 
     width: 95%; 
     margin: 2vw; 
-    max-height: 230px; 
+    max-height: 100px; 
     position: relative; 
     overflow-x: auto;  
     /* display: block;   */
     transition: overflow 0.3s ease;  
 } 
-.tabela_atendimento-fila :hover { 
+.tabela_atendimento-guiche-area-chamada:hover { 
     overflow-y: auto;  
 } 
-.tabela_atendimento-fila  th { 
+.tabela_atendimento-guiche-area-chamada th { 
     background-color: var(--cinza-control); 
     color: var(--cor-fundo); 
 } 
@@ -165,6 +190,7 @@ th {
 
 } 
 td { 
+    font-size: 16px;
     border: 1px solid black; 
     padding: 9px; 
     text-align: left; 
@@ -185,36 +211,36 @@ thead, tbody tr {
 } 
 tbody { 
     display: block; 
-    max-height: 235px; 
+    max-height: 160px;  
     overflow-y: scroll;  
     position: relative; 
 
 } 
-.tabela_atendimento-fila  tbody::-webkit-scrollbar { 
+.tabela_atendimento-guiche-area-chamada tbody::-webkit-scrollbar { 
     width: 0.1px; 
     opacity: 0;  
     transition: opacity 0.3s ease;  
 } 
-.tabela_atendimento-fila :hover tbody::-webkit-scrollbar { 
+.tabela_atendimento-guiche-area-chamada:hover tbody::-webkit-scrollbar { 
     opacity: 1;  
-    width: 9px; 
+    width: 5px; 
 } 
-.tabela_atendimento-fila tbody::-webkit-scrollbar-thumb { 
+.tabela_atendimento-guiche-area-chamada tbody::-webkit-scrollbar-thumb { 
     background-color: rgba(0, 0, 0, 0.5); 
     border-radius: 4px;
 
 } 
-.tabela_atendimento-fila tbody::-webkit-scrollbar-track { 
+.tabela_atendimento-guiche-area-chamada tbody::-webkit-scrollbar-track { 
     background: transparent; 
 } 
 
-.tabela_atendimento-fila tbody::-webkit-scrollbar-thumb:hover { 
+.tabela_atendimento-guiche-area-chamada tbody::-webkit-scrollbar-thumb:hover { 
     background-color: rgba(0, 0, 0, 0.7); 
-    width: 9px; 
+    width: 5px; 
 } 
 
-.tabela_atendimento-fila :hover tbody,thead{ 
-    margin-right: -9px;
+.tabela_atendimento-guiche-area-chamada:hover tbody,thead{ 
+    margin-right: -5px;
     /* display: flex; */
 } 
 
@@ -229,127 +255,95 @@ thead, tbody tr {
 
 
 
-#divBusca{
-    width: 185px;
-    height: 30px;
-    border-radius:5px;
-    border: 2px;
-  }
-  
-  #txtBusca{
-    float:left;
-    padding: 5px;
-    padding-left: 5px;
-    font-style:italic;
-    font-size:14px;
-    outline: 5px;
-    border-radius: 5px;
-    /* height: 16px; */
-    background-image: url(../../img/icons/lupa.svg);
-    background-position: 142px; 
-    background-repeat: no-repeat;
-    opacity: 0.5;
-    border: 2px solid #333;
-  }
 
 
+/* RESPONSIVIDADE */
 
-.area-botao-voltar-fila {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    /* background-color: blue; */
-    height: 100%;
-    width: 40%;
-    margin-left: 2%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%; 
-    margin: 0;
-    padding: 0;
-}
-.div-botao-info{
-    width: 90%;
-    height: 8%;
-    align-items: flex-end;
-    display: flex;
-    flex-direction: column;
-}
-.Area-Util-Projeto .div-botao-info button{
-    width: 95px;
-    height: 35px;
-    background-color: var(--cinza-control);
-    color: rgb(255, 255, 255);
-    border-radius: 5px;
-    outline: none;
-    border: none;
-    margin-top: 15px;
-    cursor: pointer;
-    font-size: 12px;
-}
-
-.Area-Util-Projeto .div-botao-info button:hover {
-    text-decoration: underline;
-    color: var(--verde-control);
-    filter: drop-shadow(4px 4px 2px gray);
-}
-/* .input-search input{
-    border-radius: 5px 5px 0px 0px;
-    border: 1px solid rgb(128, 128, 128); 
-    width: 10.125rem;
-} */
-
-.botao-voltar{
-    cursor: pointer;
-    background-color: #33404D;
-    color: white;
-    margin-right: 30px;
-    border-radius: 5px;
-    font-size: 14px;
-    padding: 10px 30px;
-}
-
-.botao-voltar:hover {
-    color: #3AA867;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-    /* text-decoration: underline #3AA867; */
-}
-
-
-@media screen and (min-width: 1141px) and (max-width: 1640px) {
-    .topo-esquerda-consultar-fila h3{
-        font-size: 28px;
+@media screen and (min-width: 1641px) and (max-width: 1840px) {
+    .info-area-chamada{
+        margin-top: 30px;
     }
 }
 
-
-@media screen and (min-width: 881px) and (max-width: 1140px) {
-    .topo-esquerda-consultar-fila h3{
-        font-size: 28px;
+@media screen and (min-width: 1441px) and (max-width: 1640px) {
+    tbody { 
+        max-height: 140px; 
+    } 
+}
+@media screen and (min-width: 1311px) and (max-width: 1440px) {
+    tbody { 
+        max-height: 140px; 
+    } 
+}
+@media screen and (min-width: 1000px) and (max-width: 1310px) {
+    .fundo-guiche-area-chamada{
+        overflow-x: auto;
+    }   
+    td { 
+        font-size: 15px;
     }
+    tbody { 
+        max-height: 160px; 
+    } 
+}
+@media screen and (min-width: 710px) and (max-width: 999px) {
     .senhas-guiche-area-chamada{
-        width: 90%;
-    }
-}
-
-@media screen and (min-width: 320px) and (max-width: 880px) {
-    
-    .area-em-cima-tabela-atendimento{
-        width: 100%;
-    }
-    .input-search-atendimento input{
-        height: 70%;
-        width: 45%;
-    }
-    .senhas-guiche-area-chamada{
+        height: 3.4rem;
         gap: 1rem;
     }
-    .senhas-guiche-area-chamada p{
-        font-size: 16px;
+    .fundo-guiche-area-chamada{
+        overflow-x: auto;
     }
-    .input-search-atendimento{
-        align-items: end;
+    td { 
+        font-size: 15px;
     }
+    tbody { 
+        max-height: 150px; 
+    } 
 }
+@media screen and (min-width: 635px) and (max-width: 709px) {
+    .fundo-guiche-area-chamada{
+        overflow-x: auto;
+    }
+    td { 
+        font-size: 14.5px;
+    }
+    tbody { 
+        max-height: 190px; 
+    } 
+}
+@media screen and (min-width: 535px) and (max-width: 634px) {
+    .fundo-guiche-area-chamada{
+        overflow-x: auto;
+    }
+    td { 
+        font-size: 14.5px;
+    }
+    tbody { 
+        max-height: 170px; 
+    } 
+}
+@media screen and (min-width: 435px) and (max-width: 534px) {
+    .fundo-guiche-area-chamada{
+        overflow-x: auto;
+    }
+    td { 
+        font-size: 14.5px;
+    }
+    tbody { 
+        max-height: 230px; 
+    } 
+}
+
+@media screen and (min-width: 200px) and (max-width: 434px) {
+    .fundo-guiche-area-chamada{
+        overflow-x: auto;
+    }
+    td { 
+        font-size: 14px;
+    }
+    tbody { 
+        max-height: 220px; 
+    } 
+}
+

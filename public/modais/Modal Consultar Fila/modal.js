@@ -1,5 +1,5 @@
 const buttonAbrir = document.querySelector(".abrirConsultarFila");
-const modalContainer = document.querySelector(".modal-consultar");
+const modalContainer = document.querySelector(".fundo-consultar-fila");
 const buttonFechar = document.querySelector(".close");
 const buttonRetornar = document.querySelector(".return");
 

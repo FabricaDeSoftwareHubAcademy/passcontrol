@@ -17,6 +17,7 @@ body {
 
 /* Estilo dos botões */
 .botao-modal {
+    background-color: #33404D;
     padding: 10px 20px;
     border: 0;
     border-radius: 10px;
@@ -27,7 +28,7 @@ body {
 }
 
 /* Estilo do container do modal */
-.modal-consultar {
+.fundo-consultar-fila{
     background: rgba(0, 0, 0, 0.5);
     width: 100vw;
     height: 100vh;
@@ -50,7 +51,7 @@ body {
 }
 
 /* Estilo do modal */
-.modal {
+.modal-consultar-fila {
     background-color: #e0e0e0;
     width: 80%;
     max-width: 1200px; /* Limita o tamanho máximo */
@@ -64,19 +65,8 @@ body {
     border-radius: 0;
 }
 
-/* Estilo da linha horizontal */
-hr {
-    border: none;
-    border-top: 3px solid #000;
-    width: 32.4vw; /* Largura total da tela (viewport) */
-    margin-left: calc(-16.2vw + 50%); /* Centraliza a linha no modal */
-    margin-right: calc(-20vw + 50%); /* Centraliza a linha no modal */
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-
 /* Estilo do logo */
-.logo {
+.logo-consultar-fila {
     position: absolute;
     top: 10px;
     right: 20px;
@@ -92,19 +82,11 @@ hr {
     font-weight: bold;
 }
 
-#horario{
-    font-size: 30px;
-    text-align: center;
-}
 
-
-
-/* Grupo de botões */
-.button-group {
+.button-group{
     display: flex;
-    justify-content: center;
-    gap: 0px;
-    margin-top: 30px;
+    justify-content: end;
+    margin-right: 1rem;
 }
 
 /* Estilo do botão salvar */
@@ -114,6 +96,8 @@ button.return {
     border-radius: 5px;
     font-size: 14px;
     padding: 10px 30px;
+    margin-top: 3rem;
+    
 }
 
 /* Estilo do botão salvar no hover */
@@ -126,14 +110,14 @@ button.return:hover {
 
 /* Telas pequenas (até 320px) */
 @media (max-width: 400px) and (min-width: 320px) {
-    .modal {
+    .modal-consultar-fila {
         
         width: 90% !important;
         min-width: auto !important; /* Permite ajuste dinâmico */
         padding: 15px !important;
     }
     
-    .logo {
+    .logo-consultar-fila {
         width: 50px !important;
         top: 15px;
         right: 10px !important;
@@ -186,7 +170,7 @@ button.return:hover {
         max-width: 100% !important; /* Evita que o título fique muito largo */
     }
 
-    .logo {
+    .logo-consultar-fila {
         width: 45px !important; /* Reduzindo o tamanho da logo */
         right: 20   px !important; /* Ajusta um pouco mais para a direita */
     }
@@ -199,7 +183,7 @@ button.return:hover {
         max-width: 100% !important; /* Evita que o título fique muito largo */
     }
 
-    .logo {
+    .logo-consultar-fila {
         width: 45px !important; /* Reduzindo o tamanho da logo */
         top: 15px;
         right: 20px !important; /* Ajusta um pouco mais para a direita */
@@ -213,7 +197,7 @@ button.return:hover {
         max-width: 100% !important; /* Evita que o título fique muito largo */
     }
 
-    .logo {
+    .logo-consultar-fila {
         width: 45px !important; /* Reduzindo o tamanho da logo */
         top: 7px;
         right: 20px !important; /* Ajusta um pouco mais para a direita */
@@ -227,11 +211,11 @@ button.return:hover {
         margin-left: -7%; /* Ajusta a centralização */
         margin-right: 10%; /* Ajusta a centralização */
     }
-    .modal {
+    .modal-consultar-fila {
         width: 95%;
         padding: 20px;
     }
-    .logo {
+    .logo-consultar-fila {
         width: 60px;
     }
     .topo-esquerda-consultar-fila h3 {
@@ -253,11 +237,11 @@ button.return:hover {
         margin-left: -4.4%; /* Ajusta a centralização */
         margin-right: 10%; /* Ajusta a centralização */
     }
-    .modal {
+    .modal-consultar-fila {
         width: 80%;
         padding: 25px;
     }
-    .logo {
+    .logo-consultar-fila {
         width: 80px;
     }
     .topo-esquerda-consultar-fila h3 {
@@ -280,7 +264,7 @@ button.return:hover {
     p {
         font-size: 20px;
     }
-    .logo {
+    .logo-consultar-fila {
         width: 90px;
     }
 }
@@ -298,14 +282,14 @@ button.return:hover {
     p {
         font-size: 20px;
     }
-    .logo {
+    .logo-consultar-fila {
         width: 90px;
     }
 }
 
 /* Telas grandes (desktops grandes) */
 @media (min-width: 1200px) {
-    .modal {
+    .modal-consultar-fila {
         width: 100%;
         max-width: 1200px;
     }
@@ -315,7 +299,7 @@ button.return:hover {
     p {
         font-size: 20px;
     }
-    .logo {
+    .logo-consultar-fila {
         width: 90px;
     }
 }
