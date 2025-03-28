@@ -44,8 +44,8 @@
                     </div>
                 </div>
 
-                <div class="fundo-guiche-area-chamada">
-                    <table class="tabela_atendimento-guiche-area-chamada">
+                <div class="fundo-fila-tabela">
+                    <table class="tabela-atendimento-consultar-fila">
                         <thead>
                             <tr>
                                 <th>Ordem</th>
@@ -143,8 +143,8 @@
                     </table>
                 </div>
             </nav>
-            <div class="button-group">
-                <button class="botao-modal return">Retornar</button>
+            <div class="button-group-consultar-fila">
+                <button class="botao-modal-consultar-fila return">Retornar</button>
             </div>
         </section>
     </div>

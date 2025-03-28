@@ -42,7 +42,7 @@
     include "./navegacao.php";
 
     //MODAL CONSULTAR FILA
-    include "../../../public/modais/Modal Consultar Fila/index.php"
+    // include "../../../public/modais/Modal Consultar Fila/index.php"
     // include "../../modais/consultar-fila.php"
     ?>
 

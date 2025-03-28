@@ -301,7 +301,7 @@
     width: 90%;
     height: 0%;
     /* background-color: chartreuse; */
-    margin-top: 5rem; 
+    margin-top: 3rem; 
     justify-content: space-between;
     text-align: end;
 }
@@ -529,6 +529,9 @@ thead, tbody tr {
     } 
 }
 @media screen and (min-width: 1200px) and (max-width: 1440px) {
+    .fundo-guiche-area-chamada{
+        overflow-x: auto;
+    }
     .informacoes-area-chamada{
         gap: 0;
     }
@@ -1242,7 +1245,7 @@ thead, tbody tr {
     } 
 }
 
-@media screen and (min-height: 200px) and (max-height: 670px) {
+@media screen and (min-height: 200px) and (max-height: 620px) {
     .senha-area-chamada{
         display: none;
     }
@@ -1250,15 +1253,14 @@ thead, tbody tr {
         display: none;
     }
 }
-@media screen and (min-height: 245px) and (max-height: 700px) {
+@media screen and (min-height: 245px) and (max-height: 1060px) {
+    .tabela_atendimento-guiche-area-chamada{
+        max-height: 50px; 
+    }
+}
+@media screen and (min-height: 245px) and (max-height: 760px) {
     .area-chamada-atendimento{
         overflow: auto;
-    }
-    .senha-area-chamada{
-        display: none;
-    }
-    .servico-area-chamada{
-        display: none;
     }
 }
 @media screen and (min-height: 245px) and (max-height: 490px) {
