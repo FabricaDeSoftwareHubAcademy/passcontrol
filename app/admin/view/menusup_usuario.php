@@ -30,7 +30,7 @@
     include "./navegacao.php";
     ?>
 
-    <section class="Area-Util-Projeto-Eli">
+    <section class="Area-Util-Projeto">
         <!-- navmenu -->
         <div class="menu-container">
             <div class="menu">

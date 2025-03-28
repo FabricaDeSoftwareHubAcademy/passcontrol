@@ -1,20 +1,20 @@
-const modal = document.getElementById("modal");
-const openModalBtn = document.getElementById("openModalBtn");
-const openModalBtnGestao = document.getElementById("visualisarMonitor");
-const botaofecharmonitor = document.querySelector(".botao-fechar-monitor");
+const modal_monitor = document.getElementById("modal-monitor");
+const openModalMonitorBtn = document.getElementById("openModalBtn");
+const openModalMonitorBtnGestao = document.getElementById("visualisarMonitor");
+const botaofecharmonitor = document.getElementById("fechar-monitor");
 
-openModalBtn.onclick = function() {
-    modal.style.display = "flex";
+openModalMonitorBtn.onclick = function() {
+    modal_monitor.style.display = "flex";
 }
-openModalBtnGestao.onclick = function() {
-    modal.style.display = "flex";
+openModalMonitorBtnGestao.onclick = function() {
+    modal_monitor.style.display = "flex";
 }
+
 botaofecharmonitor.onclick = function() {
-    modal.style.display = "none";
+    modal_monitor.style.display = "none";
 }
-
 window.onclick = function(event) {
     if (event.target === modal) {
-        modal.style.display = "none";
+        modal_monitor.style.display = "none";
     }
 }
