@@ -59,8 +59,10 @@
                 <div class="perfild">
                     <label class="labeledit" for="perfil">Perfil De Acesso</label>
                     <select class="selecao" name="id_perfil" placeholder="Digite aqui o CPF do usuário" required>
-                        <option class="pi" value="" disabled selected>Selecione</option>
-                        <option class="pi" value="" >Opção 1</option>
+                        <option class="pi" value="" disabled selected>Selecione Aqui</option>
+                        <option class="pi" value="" >Administrador</option>
+                        <option class="pi" value="" >Supervisor</option>
+                        <option class="pi" value="" >Atendente</option>
                     </select>
                 </div>
             </div>
