@@ -4,25 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- TROCA TÍTULO QUANDO FOR UTILIZAR -->
     <title>PassControl</title> 
 
     <link rel="stylesheet" href="./fila_zerada.css">
 </head>
 <body class="body">
-    <button class="botao-modal open">Abrir Modal</button>
-    <main class="modal-container">
-        <section class="modal">
+    <button class="botao-modal open-fila-zerada">Abrir Modal</button>
+
+    <div class="fundo-fila-zerada">
+        <section class="modal-fila-zerada">
             <img src="../../../public/img/img-modais/Logo Nota Controlnt.png" alt="Logo Nota Control" class="logo">
-            <h1 class="titulo">Confirmação</h1>
+            <h1 class="titulo">Fila Vazia</h1>
+
             <hr class="linha">
-            <p class="texto"><b>Fila Zerada, deseja finalizar o atendimento?</b></p>
+
+            <p class="texto"><b>No Momento a Fila Está Vazia, Aguarde Novas Senhas!</b></p>
             <div class="button-group">
-                <button class="botao-modal cancel">Não</button>
-                <button class="botao-modal save">Sim</button>
+                <button class="botao-modal voltar">Fechar</button>
             </div>
         </section>
-    </main>
-    <script src="./fila_zerada.js"></script>
+    </div>
+    <script src="./fila_zerada.js" defer></script>
+
 </body>
 </html>
