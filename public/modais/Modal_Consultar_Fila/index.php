@@ -1,22 +1,3 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- TROCA TÍTULO QUANDO FOR UTILIZAR -->
-    <title>PassControl</title>
-
-    <link rel="stylesheet" href="./estilo.css">
-    <link rel="stylesheet" href="./consultar-fila.css">
-
-    <script src="./modal.js" defer></script>
-</head>
-
-<body>
-
-    <button class="botao-modal abrirConsultarFila">Abrir Modal</button>
 
     <div class="fundo-consultar-fila">
         <section class="modal-consultar-fila">

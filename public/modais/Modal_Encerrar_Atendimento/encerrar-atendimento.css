@@ -1,0 +1,212 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo do corpo da página */
+.body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f5f5f5;
+}
+
+/* Estilo dos botões */
+.botao-modal {
+    background-color: #33404D;
+    padding: 10px 20px;
+    border: 0;
+    border-radius: 10px;
+    font-size: 18px;
+    color: #FFFFFF;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+/* Estilo do container do modal */
+.fundo-encerrar-atendimento {
+    background: rgba(0, 0, 0, 0.5);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+    z-index: 10;
+}
+
+.show {
+    opacity: 1;
+    display: flex;
+    pointer-events: auto;
+}
+
+/* Estilo do modal */
+.modal-encerrar-atendimento {
+    background-color: #e0e0e0;
+    width: 80%;
+    max-width: 600px;
+    padding: 40px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+    text-align: left;
+}
+
+/* Estilo da linha horizontal */
+.modal-encerrar-atendimento .linha {
+    border: none;
+    border-top: 2px solid #000;
+    width: 100%;
+    margin: 20px 0;
+}
+
+/* Estilo do logo */
+.modal-encerrar-atendimento .logo {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    width: 60px;
+    max-width: 200px;
+    height: auto;
+}
+
+/* Estilo do título */
+.modal-encerrar-atendimento .titulo {
+    font-size: 28px;
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+
+/* Estilo do parágrafo */
+.modal-encerrar-atendimento .texto {
+    font-size: 22px;
+    margin: 40px 0;
+    text-align: center;
+}
+
+/* Grupo de botões */
+.modal-encerrar-atendimento .button-group {
+    display: flex;
+    justify-content: right;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+/* Estilo do botão cancelar */
+.modal-encerrar-atendimento .button-group .cancel {
+    background-color: #33404D;
+    color: white;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 10px 30px;
+}
+
+.modal-encerrar-atendimento .button-group .cancel:hover {
+    color: #FF0000;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Estilo do botão salvar */
+.modal-encerrar-atendimento .button-group .save {
+    background-color: #33404D;
+    color: white;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 10px 30px;
+}
+
+.modal-encerrar-atendimento .button-group .save:hover {
+    color: #3AA867;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Responsividade */
+
+
+@media (max-width: 550px){
+    .modal-encerrar-atendimento {
+        width: 95%;
+    }
+    .modal-encerrar-atendimento .titulo{
+        font-size: 24px;
+    }
+    .modal-encerrar-atendimento .logo{
+        top: 25px;
+        width: 50px;
+    }
+    .modal-encerrar-atendimento .texto{
+        font-size: 20px;
+    }
+    .modal-encerrar-atendimento .button-group {
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+    .modal-encerrar-atendimento .button-group .botao-modal {
+        width: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .modal-encerrar-atendimento .button-group {
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+    .modal-encerrar-atendimento .button-group .botao-modal {
+        width: auto;
+    }
+}
+
+@media (max-width: 400px) {
+    .modal-encerrar-atendimento {
+        width: 95%;
+        padding: 20px;
+    }
+    .modal-encerrar-atendimento .titulo{
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    .modal-encerrar-atendimento .logo{
+        top: 15px;
+        right: 20px;
+    }
+    .modal-encerrar-atendimento .texto{
+        font-size: 18px;
+    }
+    .modal-encerrar-atendimento .button-group {
+        flex-direction: row;
+        justify-content: flex-end;
+        gap: 10px;
+    }
+    .modal-encerrar-atendimento .button-group .botao-modal {
+        width: auto;
+    }
+}
+
+@media (max-width: 340px) {
+    .modal-encerrar-atendimento {
+        width: 90%;
+    }
+    .modal-encerrar-atendimento .texto{
+        font-size: 16px;
+    }
+    .modal-encerrar-atendimento .logo{
+        /* top: 15px; */
+        width: 40px;
+    }
+    .modal-encerrar-atendimento .button-group {
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+    .modal-encerrar-atendimento .button-group .botao-modal {
+        width: auto;
+    }
+}
