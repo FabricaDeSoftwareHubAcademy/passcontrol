@@ -32,7 +32,7 @@
             <p class="texto-bott">Atendimento</p>
         </a>
 
-        <a class="botao-lateal-navegacao" id="openModalBtn">
+        <a class="botao-lateal-navegacao" id="openMonitorModal">
             <img class="icone-menu-lateral" src="../../../public/img/icons/monitor.svg" alt="ICONE-MONITOR">
             <p class="texto-bott">Monitor</p>
         </a>

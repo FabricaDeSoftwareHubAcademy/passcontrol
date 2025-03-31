@@ -9,8 +9,7 @@
         <p class="timer-intervalo" id="horario"><b>12:00</b></p>
 
         <div class="button-group">
-            <button class="botao-modal return">Retornar</button>
+            <button class="botao-modal return_Intervalo">Retornar</button>
         </div>
     </section>
 </div>
-<script src="./intervalo.js" defer></script>

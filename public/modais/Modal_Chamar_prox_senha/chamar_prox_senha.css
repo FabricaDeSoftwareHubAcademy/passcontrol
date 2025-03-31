@@ -31,7 +31,7 @@
     justify-content: center;
     opacity: 0;
     pointer-events: none;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.2s ease;
     z-index: 10;
 }
 
@@ -119,7 +119,7 @@
 }
 
 /* Botão cancelar */
-.ausente {
+.ausente_ChamarSenha {
     background-color: #33404D;
     color: white;
     border-radius: 5px;
@@ -129,13 +129,13 @@
     transition: 0.3s;
 }
 
-.ausente:hover {
+.ausente_ChamarSenhahover {
     color: #FF0000;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }
 
 /* Botão salvar */
-.presente {
+.presente_ChamarSenha {
     background-color: #33404D;
     color: white;
     border-radius: 5px;
@@ -145,13 +145,13 @@
     transition: 0.3s;
 }
 
-.presente:hover {
+.presente_ChamarSenha:hover {
     color: #3AA867;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }
 
 /* Botão Chamar Novamente */
-.chamar {
+.chamar_ChamarSenha {
     background-color: #33404D;
     color: white;
     border-radius: 5px;
@@ -163,7 +163,7 @@
     transition: 0.3s;
 }
 
-.chamar:hover {
+.chamar_ChamarSenha:hover {
     color: white;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }

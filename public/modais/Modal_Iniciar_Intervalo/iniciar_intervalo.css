@@ -100,7 +100,7 @@
 }
 
 /* Estilo do botão cancelar */
-.modal-iniciar-intervalo .button-group .cancel {
+.cancel_IniciarIntervalo {
     background-color: #33404D;
     color: white;
     border-radius: 5px;
@@ -108,13 +108,13 @@
     padding: 10px 30px;
 }
 
-.modal-iniciar-intervalo .button-group .cancel:hover {
+.cancel_IniciarIntervalo:hover {
     color: #FF0000;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }
 
 /* Estilo do botão salvar */
-.modal-iniciar-intervalo .button-group .save {
+.save_IniciarIntervalo {
     background-color: #33404D;
     color: white;
     border-radius: 5px;
@@ -122,7 +122,7 @@
     padding: 10px 30px;
 }
 
-.modal-iniciar-intervalo .button-group .save:hover {
+.save_IniciarIntervalo:hover {
     color: #3AA867;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }

@@ -122,11 +122,3 @@
     height: 100vh;
     width: 20vw;
 }
-/* CONFIG MENUS */
-
-.menu-inativo{
-    display: none;
-}
-.menu-visivel{
-    display: flex;
-}

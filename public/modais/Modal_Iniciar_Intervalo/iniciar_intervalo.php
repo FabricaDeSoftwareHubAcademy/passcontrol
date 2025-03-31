@@ -10,9 +10,8 @@
         <p class="texto"><b>Iniciar?</b></p>
 
         <div class="button-group">
-            <button class="botao-modal cancel">Não</button>
-            <button class="botao-modal save">Sim</button>
+            <button class="botao-modal cancel_IniciarIntervalo">Não</button>
+            <button class="botao-modal save_IniciarIntervalo">Sim</button>
         </div>
     </section>
 </div>
-<script src="./iniciar_intervalo.js" defer></script>

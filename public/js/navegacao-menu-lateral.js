@@ -3,7 +3,9 @@ const menuLateralMobile = document.querySelector(".background-m-mobile");
 const abrirMenuLateral = document.querySelector(".abrirMenuLateral");
 const fecharMenuLateral = document.querySelector(".areatransp");
 const recolherMenuLateral = document.querySelector(".recolher-m-menu");
+
 const abrirMonitorModal = document.querySelector(".btnMonitorModal");
+const MonitorModal = document.getElementById("modal-monitor");
 
 abrirMenuLateral.addEventListener("click", () =>{
     menuLateralMobile.classList.add("menu-visivel");
@@ -19,7 +21,7 @@ recolherMenuLateral.addEventListener("click", () =>{
 
 abrirMonitorModal.addEventListener("click", () =>{
     menuLateralMobile.classList.remove("menu-visivel");
-    modal.style.display = "flex";
+    MonitorModal.style.display = "flex";
 })
 
 

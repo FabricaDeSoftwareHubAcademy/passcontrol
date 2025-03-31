@@ -1,16 +1,15 @@
-const buttonAbrir = document.querySelector(".open-iniciar-intervalo");
-const modalContainer = document.querySelector(".fundo-iniciar-intervalo");
-const buttonFechar = document.querySelector(".close");
-const buttonCancelar = document.querySelector(".cancel");
-const buttonSalvar = document.querySelector(".save");
+const buttonAbrir_IniciarIntervalo = document.querySelector(".open-iniciar-intervalo");
+const modalContainer_IniciarIntervalo = document.querySelector(".fundo-iniciar-intervalo");
+const buttonCancelar_IniciarIntervalo = document.querySelector(".cancel_IniciarIntervalo");
+const buttonSalvar_IniciarIntervalo = document.querySelector(".save_IniciarIntervalo");
 
-buttonAbrir.addEventListener("click", () => {
-    modalContainer.classList.add("show");
+buttonAbrir_IniciarIntervalo.addEventListener("click", () => {
+    modalContainer_IniciarIntervalo.classList.add("show");
 });
 
-buttonCancelar.addEventListener("click", () => {
-    modalContainer.classList.remove("show");
+buttonCancelar_IniciarIntervalo.addEventListener("click", () => {
+    modalContainer_IniciarIntervalo.classList.remove("show");
 });
-buttonSalvar.addEventListener("click", () => {
-    modalContainer.classList.remove("show");
+buttonSalvar_IniciarIntervalo.addEventListener("click", () => {
+    modalContainer_IniciarIntervalo.classList.remove("show");
 });

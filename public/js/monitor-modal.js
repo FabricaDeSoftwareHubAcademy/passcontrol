@@ -1,20 +1,27 @@
-const modal_monitor = document.getElementById("modal-monitor");
-const openModalMonitorBtn = document.getElementById("openModalBtn");
-const openModalMonitorBtnGestao = document.getElementById("visualisarMonitor");
-const botaofecharmonitor = document.getElementById("fechar-monitor");
+const modal_monitor = document.getElementById("modalMonitor");
+const openModalMonitorBtn = document.getElementById("openMonitorModal");
+var openModalMonitorBtnGestao = document.getElementById("visualisarMonitor");
+const botaofecharmonitor = document.getElementById("fecharMonitor");
 
 openModalMonitorBtn.onclick = function() {
-    modal_monitor.style.display = "flex";
+    modal_monitor.classList.add("visualizar");
 }
-openModalMonitorBtnGestao.onclick = function() {
-    modal_monitor.style.display = "flex";
+try{
+    openModalMonitorBtnGestao.onclick = function() {
+        modal_monitor.classList.add("visualizar");
+    }
+}
+catch{
+    openModalMonitorBtnGestao = null;
 }
 
 botaofecharmonitor.onclick = function() {
-    modal_monitor.style.display = "none";
+    // modal_monitor.style.display = "none";
+    modal_monitor.classList.remove("visualizar");
 }
 window.onclick = function(event) {
-    if (event.target === modal) {
-        modal_monitor.style.display = "none";
+    if (event.target === modal_monitor) {
+        // modal_monitor.style.display = "none";
+        modal_monitor.classList.remove("visualizar");
     }
 }

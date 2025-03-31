@@ -9,11 +9,10 @@
         <p class="info-confirmacao-presenca"><b>Serviço:</b> <strong>IPTU</strong></p>
         <div class="button-group-confirmacao-presenca">
             <div class="button-row-confirmacao-presenca">
-                <button class="botao-modal-confirmacao-presenca ausente">Ausente</button>
-                <button class="botao-modal-confirmacao-presenca presente">Presente</button>
+                <button class="botao-modal-confirmacao-presenca ausente_ChamarSenha">Ausente</button>
+                <button class="botao-modal-confirmacao-presenca presente_ChamarSenha">Presente</button>
             </div>
-            <button class="botao-modal-confirmacao-presenca chamar">Chamar Novamente</button>
+            <button class="botao-modal-confirmacao-presenca chamar_ChamarSenha">Chamar Novamente</button>
         </div>            
     </section>
 </div>
-<script src="./confirmacao_presenca.js" defer></script>

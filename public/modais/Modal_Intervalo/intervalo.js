@@ -1,11 +1,10 @@
-const buttonAbrir = document.querySelector(".open-intervalo");
-const modalContainer = document.querySelector(".fundo-intervalo");
-const buttonFechar = document.querySelector(".close");
-const buttonRetornar = document.querySelector(".return");
+const buttonAbrir_Intervalo = document.querySelector(".open-intervalo");
+const modalContainer_Intervalo = document.querySelector(".fundo-intervalo");
+const buttonRetornar_Intervalo = document.querySelector(".return_Intervalo");
 
-buttonAbrir.addEventListener("click", () => {
-    modalContainer.classList.add("show");
+buttonAbrir_Intervalo.addEventListener("click", () => {
+    modalContainer_Intervalo.classList.add("show");
 });
-buttonRetornar.addEventListener("click", () => {
-    modalContainer.classList.remove("show");
+buttonRetornar_Intervalo.addEventListener("click", () => {
+    modalContainer_Intervalo.classList.remove("show");
 });

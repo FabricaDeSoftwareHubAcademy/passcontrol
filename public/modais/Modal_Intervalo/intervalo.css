@@ -95,7 +95,7 @@
     margin-top: 15px;
 }
 
-.modal-intervalo .button-group .return {
+.return_Intervalo {
     background-color: #33404D;
     color: white;
     border-radius: 5px;
@@ -103,13 +103,7 @@
     padding: 10px 15px;
 }
 
-.modal-intervalo .button-group .return:hover {
+.return_Intervalo:hover {
     color: white;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }
-
-/* Responsividade */
-/* @media (max-width: ) {
-
-} */
-

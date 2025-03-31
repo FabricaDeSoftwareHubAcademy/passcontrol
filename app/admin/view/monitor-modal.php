@@ -1,5 +1,5 @@
 <div class="area-monitor-modal">
-    <div class="area-modal" id="modal-monitor">
+    <div class="area-modal" id="modalMonitor">
         <div class="modal-fundo">
             <div class="fundo-lateral">
                 <h1>Últimas Chamadas</h1>
@@ -60,7 +60,7 @@
             </div>
             <div class="fundo-principal">
                 <div class="area-botao-fechar-monitor">
-                    <div class="botao-fechar-monitor" id="fechar-monitor">
+                    <div class="botao-fechar-monitor" id="fecharMonitor">
                         <h2>X</h2>
                     </div>
                 </div>
