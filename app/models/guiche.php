@@ -1,5 +1,6 @@
 <?php
-require_once __DIR__ . '../../../config/DBGuiche.php';
+require_once __DIR__ . '../../classe/classeGuiche.php';
+
 
 class Guiche {
     public int $id_guiche;
@@ -10,7 +11,7 @@ class Guiche {
     private $db;
 
     public function __construct() {
-        $this->db = new Database('guiche');
+        $this->db = new ClasseGuiche('guiche');
     }
 
     public function buscar($where = null, $order = null, $limit = null) {
