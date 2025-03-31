@@ -60,8 +60,10 @@
                 <div class="perfild">
                     <label class="labeledit" for="perfil">Perfil De Acesso</label>
                     <select class="selecao" name="id_perfil" placeholder="Digite aqui o CPF do usuário" required>
-                        <option class="pi" value="" disabled selected>Selecione</option>
-                        <option class="pi" value="" >Opção 1</option>
+                        <option class="pi" value="" disabled selected>Selecione Aqui</option>
+                        <option class="pi" value="" >Administrador</option>
+                        <option class="pi" value="" >Supervisor</option>
+                        <option class="pi" value="" >Atendente</option>
                     </select>
                 </div>
             </div>
@@ -69,39 +71,39 @@
             <div class="checkbox-container">
                 <div class="column-1">
                     <label class="customizado">
-                        <input type="checkbox" class="item" id="checkbox">
+                        <input type="checkbox" class="item" id="checkbox1">
                         <span class="teste">Conselho Muncipal</span>
                     </label>
                     <label class="customizado">
-                        <input type="checkbox" class="item" id="checkbox">
+                        <input type="checkbox" class="item" id="checkbox2">
                         <span class="teste">Fiscalização</span>
                     </label>
                     <label class="customizado">
-                        <input type="checkbox" class="item" id="checkbox">
+                        <input type="checkbox" class="item" id="checkbox3">
                         <span class="teste">Iluminação Pública</span>
                     </label>
                     <label class="customizado">
-                        <input type="checkbox" class="item" id="checkbox">
+                        <input type="checkbox" class="item" id="checkbox4">
                         <span class="teste">IPTU</span>
                     </label>
                 </div>
                 <div class="column-2">
                     <div class="caixa"></div>
                     <label class="customizado">
-                        <input type="checkbox" class="item" id="checkbox">
+                        <input type="checkbox" class="item" id="checkbox5">
                         <span class="teste">Licenças</span>
                     </label>
                     <label class="customizado">
-                        <input type="checkbox" class="item" id="checkbox">
+                        <input type="checkbox" class="item" id="checkbox6">
                         <span class="teste">Ouvidoria</span>
                     </label>
                     <label class="customizado">
-                        <input type="checkbox" class="item" id="checkbox">
+                        <input type="checkbox" class="item" id="checkbo7">
                         <span class="teste">Poda De Àrvores</span>
                     </label>
                     <label class="customizado">
                         <input type="checkbox" id="select-all">
-                        <span class="teste" for="select-all">Selecionar Todos</span>
+                        <span class="teste">Selecionar Todos</span>
                     </label>
                 </div>
             </div>
