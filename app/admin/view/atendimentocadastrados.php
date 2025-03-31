@@ -18,9 +18,10 @@
     <link rel="stylesheet" href="../../../public/css/monitor-modal.css">
     <link rel="stylesheet" href="../../../public/modais/Modal_Alterar_Dados_Pessoais/alterar_dados_pessoais.css">
     <link rel="stylesheet" href="../../../public/modais/Modal_Alterar_Senha/alterar_senha.css">
-    <link rel="stylesheet" href="../../../public/modais/Modal Edição Ponto Atendimento/edicao_ponto_atendimento.css">
-    <link rel="stylesheet" href="../../../public/modais/Modal Cadastro Ponto Atendimento/cadastro_ponto_atendimento.css">
-    <link rel="stylesheet" href="../../../public/modais/Modal Inativação Guichê/inativacao_guiche.css">
+
+    <!-- <link rel="stylesheet" href="../../../public/modais/Modal Edição Ponto Atendimento/edicao_ponto_atendimento.css"> -->
+    <!-- <link rel="stylesheet" href="../../../public/modais/Modal Cadastro Ponto Atendimento/cadastro_ponto_atendimento.css"> -->
+    <!-- <link rel="stylesheet" href="../../../public/modais/Modal Inativação Guichê/inativacao_guiche.css"> -->
 
     <!-- JS -->
     <script src="../../../public/js/navegacao-menu-lateral.js" defer></script>
@@ -396,11 +397,10 @@
         </div>
 
     </section>
-    <main-atendimento-cadastrado></main-atendimento-cadastrado>
-    <main-cadastro-atendimento></main-cadastro-atendimento>
-    <main-inativacao_atendimento-cadastrado></main-inativacao_atendimento-cadastrado>
+    <!-- <main-atendimento-cadastrado></main-atendimento-cadastrado> -->
+    <!-- <main-cadastro-atendimento></main-cadastro-atendimento> -->
+    <!-- <main-inativacao_atendimento-cadastrado></main-inativacao_atendimento-cadastrado> -->
 
-    <!--MONITOR MODAL-->
     <?php
     include "./monitor-modal.php";
     ?>

@@ -18,7 +18,8 @@
     <link rel="stylesheet" href="../../../public/css/edit_cadastro.css">
     <link rel="stylesheet" href="../../../public/modais/Modal_Alterar_Dados_Pessoais/alterar_dados_pessoais.css">
     <link rel="stylesheet" href="../../../public/modais/Modal_Alterar_Senha/alterar_senha.css">
-    <link rel="stylesheet" href="../../../public/modais/Modal Confirmação dos Dados Registrados/confirmacao_dados_registrados.css">
+
+    <!-- <link rel="stylesheet" href="../../../public/modais/Modal Confirmação dos Dados Registrados/confirmacao_dados_registrados.css"> -->
 
     <!-- JS -->
     <script src="../../../public/js/navegacao-menu-lateral.js" defer></script>
@@ -111,7 +112,7 @@
         </div>
     </section>
 
-    <main-salvar-cad></main-salvar-cad>
+    <!-- <main-salvar-cad></main-salvar-cad> -->
     
     <!--MONITOR MODAL-->
     <?php

@@ -19,12 +19,12 @@
     <link rel="stylesheet" href="../../../public/css/monitor-modal.css">
     <link rel="stylesheet" href="../../../public/modais/Modal_Alterar_Dados_Pessoais/alterar_dados_pessoais.css">
     <link rel="stylesheet" href="../../../public/modais/Modal_Alterar_Senha/alterar_senha.css">
-    <link rel="stylesheet" href="../../../public/modais/Modal Iniciar Intervalo/iniciar_intervalo.css">
-    <link rel="stylesheet" href="../../../public/modais/Modal Confirmação de Presença/confirmacao_presenca.css">
-    <link rel="stylesheet" href="../../../public/modais/Modal Confirmação Deslogar/confirmacao_deslogar.css">
-    
-    <link rel="stylesheet" href="../../../public/modais/Modal Consultar Fila/consultar-fila.css">
-    <link rel="stylesheet" href="../../../public/modais/Modal Consultar Fila/modal-consultar-fila.css">
+
+    <!-- <link rel="stylesheet" href="../../../public/modais/Modal Iniciar Intervalo/iniciar_intervalo.css"> -->
+    <!-- <link rel="stylesheet" href="../../../public/modais/Modal Confirmação de Presença/confirmacao_presenca.css"> -->
+    <!-- <link rel="stylesheet" href="../../../public/modais/Modal Confirmação Deslogar/confirmacao_deslogar.css"> -->
+    <!-- <link rel="stylesheet" href="../../../public/modais/Modal Consultar Fila/consultar-fila.css"> -->
+    <!-- <link rel="stylesheet" href="../../../public/modais/Modal Consultar Fila/modal-consultar-fila.css"> -->
 
     <!-- JS -->
     <script src="../../../public/js/navegacao-menu-lateral.js" defer></script>
@@ -33,7 +33,7 @@
     <script src="../../../public/js/modal_conf_saida.js"></script>
     <script src="../../../public/js/monitor-modal.js" defer></script>
     
-    <script src="../../../public/modais/Modal Consultar Fila/modal.js" defer></script>
+    <!-- <script src="../../../public/modais/Modal Consultar Fila/modal.js" defer></script> -->
     <!-- <script src="../../../public/js/modal_saida_principal.js"></script> -->
 
     <link rel="shortcut icon" type="imagex/png" href="../../../public/img/Logo-Nota-Controlnt.ico">
@@ -44,8 +44,7 @@
     include "./navegacao.php";
 
     //MODAL CONSULTAR FILA
-    include "../../../public/modais/Modal Consultar Fila/index.php"
-    // include "../../modais/consultar-fila.php"
+    // include "../../../public/modais/Modal Consultar Fila/index.php"
     ?>
 
     <section class="Area-Util-Projeto">
@@ -252,13 +251,12 @@
         </div>
     </section>
     
-    <main-tela-de-login></main-tela-de-login>
-    <main-proxima-senha></main-proxima-senha>
+    <!-- <main-tela-de-login></main-tela-de-login> -->
+    <!-- <main-proxima-senha></main-proxima-senha> -->
     <!-- <main-sair-sistema></main-sair-sistema> -->
     <!-- <main-saida-principal></main-saida-principal> -->
 
     <?php
-    //MONITOR MODAL
     include "./monitor-modal.php";
     ?>
 

@@ -247,10 +247,9 @@
         </div>
         
     </section>
-    <main-inativacao_servico></main-inativacao_servico>
+    <!-- <main-inativacao_servico></main-inativacao_servico> -->
     <!-- <main-edicao-servico></main-edicao-servico> -->
 
-    <!--MONITOR MODAL-->
     <?php
     include "./monitor-modal.php";
     ?>

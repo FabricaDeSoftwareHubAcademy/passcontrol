@@ -92,7 +92,6 @@
         </div>   
     </section>
          
-    <!--MONITOR MODAL-->
     <?php
     include "./monitor-modal.php";
     ?>

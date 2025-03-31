@@ -24,7 +24,8 @@
     <script src="../../../public/js/navegacao-menu-lateral.js" defer></script>
     <script src="../../../public/js/monitor-modal.js" defer></script>
     <!-- <script src="../../../public/js/modal-adm-logado.js" defer></script> -->
-    <!-- <link rel="shortcut icon" type="imagex/png" href="../../../public/img/Logo-Nota-Controlnt.ico"> -->
+
+    <link rel="shortcut icon" type="imagex/png" href="../../../public/img/Logo-Nota-Controlnt.ico">
 </head>
 
 <body class="control-body-navegacao">
@@ -78,10 +79,9 @@
             <button type="submit" class="botao-salvar open">Salvar</button>
         </div>
         
-        <main-modal-adm-logado></main-modal-adm-logado>
+        <!-- <main-modal-adm-logado></main-modal-adm-logado> -->
     </section>
 
-    <!--MONITOR MODAL-->
     <?php
     include "./monitor-modal.php";
     ?>

@@ -90,7 +90,6 @@
         });
     </script>
 
-    <!--MONITOR MODAL-->
     <?php
     include "./monitor-modal.php";
     ?>
