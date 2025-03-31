@@ -58,7 +58,7 @@
             <main class="area-cards">
                 <div class="container_menu">
                     <div class="wrapper">
-                        <a href="atendimentocadastrados.php">
+                        <a href="PontoAtendimentoCad.php">
                         <div class="banner-img">
                             <img src="../../../public/img/img-menu/pontodeatendimento.png" alt="">
                         </div>
@@ -68,7 +68,7 @@
 
                     </div>
                     <div class="button-wrapper">
-                        <button class="btn outline" onclick="window.location.href='atendimentocadastrados.php';">Lista de Guichês</button>
+                        <button class="btn outline" onclick="window.location.href='PontoAtendimentoCad.php';">Lista de Guichês</button>
                     </div>
                 </div>
 

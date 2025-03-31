@@ -4,8 +4,14 @@
         private $db_name = 'passcontrol';
         private $username = 'fabrica32';
         private $password = 'fabrica2025';
+        private string $table = 'guiche';
         private $conn;
 
+        function __construct($table = null){
+            $this->table = $table;
+            $this->getConnection();
+    
+        }
         public function getConnection() {
             $this->conn = null;
 

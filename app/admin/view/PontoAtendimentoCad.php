@@ -1,3 +1,10 @@
+<?php
+require '../../../app/models/guiche.php'; 
+require '../../../app/controller/guicheController.php'; 
+
+$guiche = new Guiche();
+$guiches = $guiche->buscar();
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -30,75 +37,60 @@
   include "./navegacao.php";
   ?>
 
-  <section class="Area-Util-Projeto">
+<section class="Area-Util-Projeto">
     <div id="PontoAtendimentoCad">
-      <div class="topo-tela-PontoAtendimentoCad">
-        <div class="campo-busca">
-          <input id="buscar-Ponto-atendimento" type="text" placeholder="Buscar Registro">
+        <div class="topo-tela-PontoAtendimentoCad">
+            <div class="campo-busca">
+                <input id="buscar-Ponto-atendimento" type="text" placeholder="Buscar Registro">
+            </div>
+            <div class="sev"><p id="Ponto-atendimento">Ponto de Atendimento</p></div>
+            <div class="linha-divisoria-Ponto-atendimento"></div>
         </div>
-        <div class="sev">
-          <p id="Ponto-atendimento">Ponto de Atendimento</p>
+        <div id="tela-branca-Ponto-atendimento"> 
+            <div class="tabela-responsiva-Ponto-atendimento">
+                <table id="table table-striped" class="tabela-Ponto-atendimento">
+                    <thead class="cabecaTabelaPonto-atendimento">
+                        <tr class="topo-tabela-servicos">
+                            <th scope="col" class="cabecalho-tabela1">Tipo</th>
+                            <th scope="col" class="cabecalho-tabela2">Identificador</th>
+                            <th scope="col" class="cabecalho-tabela3">Editar</th>
+                            <th scope="col" class="cabecalho-tabela1">Desativar/Ativar</th>
+                        </tr>
+                    </thead>
+                    <tbody class="resto-tabela-Ponto-atendimento">
+                            <?php
+                                foreach($guiches as $guiche) {
+                                    $estadoAtivo = ($guiche->ativo == 'ATIVO') ? 'active' : '';
+                                    echo '
+                                    <tr>
+                                        <td>'.$guiche->nome_guiche.'</td>
+                                        <td>'.$guiche->num_guiche.'</td>
+                                        <td>
+                                            <a href=" ../../../editar_guiche.php?id_guiche='.$guiche->id_guiche.'">
+                                                <img id="icone-editar" src="../../../public/img/icons/Group 2924.png" alt="Editar">
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <a href="../../../inativar_guiche.php?id_guiche='.$guiche->id_guiche.'">
+                                          <div class="toggle-btn '.$estadoAtivo.'">
+                                            <div class="circulo"></div>
+                                          </div>
+                                        </a>
+                                      </td>
+                                    </tr>';
+                                }
+                            ?>
+                        </tbody>
+                </table>
+            </div>
         </div>
-        <div class="linha-divisoria-Ponto-atendimento"></div>
-      </div>
-      <div id="tela-branca-Ponto-atendimento">
-        <div class="tabela-responsiva-Ponto-atendimento">
-          <table class="tabela-Ponto-atendimento">
-            <thead class="cabecaTabelaPonto-atendimento">
-              <tr class="topo-tabela-servicos">
-                <th class="cabecalho-tabela1">Tipo</th>
-                <th class="cabecalho-tabela2">Identificador</th>
-                <th class="cabecalho-tabela3">Editar</th>
-                <th class="cabecalho-tabela1">Ativar/ Desativar</th>
-              </tr>
-            </thead>
-            <tbody class="resto-tabela-Ponto-atendimento">
-              <tr class="linha-tabela">
-                <td>Guichê</td>
-                <td>01</td>
-                <td class="coluna-editar ">
-                  <a class="colm-idit" href=""><img id="icone-editar" src="../../../public/img/icons/Group 2924.png" alt="Editar"></a>
-                </td>
-                <td class="coluna-inativar">
-                  <div class="toggle-btn ativo">
-                    <div class="circulo"></div>
-                  </div>
-                </td>
-              </tr>
-              <tr class="linha-tabela">
-                <td>Guichê</td>
-                <td>02</td>
-                <td class="coluna-editar ">
-                  <a class="colm-idit" href=""><img id="icone-editar" src="../../../public/img/icons/Group 2924.png" alt="Editar"></a>
-                </td>
-                <td class="coluna-inativar">
-                  <div class="toggle-btn ativo">
-                    <div class="circulo"></div>
-                  </div>
-                </td>
-              </tr>
-              <tr class="linha-tabela">
-                <td>Guichê</td>
-                <td>03</td>
-                <td class="coluna-editar ">
-                  <a class="colm-idit" href=""><img id="icone-editar" src="../../../public/img/icons/Group 2924.png" alt="Editar"></a>
-                </td>
-                <td class="coluna-inativar">
-                  <div class="toggle-btn ativo">
-                    <div class="circulo"></div>
-                  </div>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+        <div class="botoesVoltar-Cadastrar">
+            <button type="button" class="botao-voltar" onclick="window.location.href='menuadm_servicos.php';">Voltar</button>
+            <button type="button" class="botao-cadastro" onclick="abrirModalCadastro()">Cadastrar</button>
         </div>
-      </div>
-      <div class="botoesVoltar-Cadastrar">
-        <button type="button" class="botao-voltar" onclick="window.location.href='menuadm_servicos.php';">Voltar</button>
-        <button type="submit" class="botao-cadastro">Cadastrar</button>
-      </div>
+
     </div>
-  </section>
+</section>
 
   <!--MONITOR MODAL-->
   <?php
