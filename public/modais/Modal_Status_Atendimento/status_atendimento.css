@@ -7,11 +7,9 @@
 
 .botao-modal {
     background-color: #33404D;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 10px;
-    color: #fff;
-    font-size: 16px;
+    color: #FFFFFF;
+    border: 0;
+    font-weight: 500;
     cursor: pointer;
 }
 

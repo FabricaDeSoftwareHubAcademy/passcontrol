@@ -102,12 +102,9 @@
 /* Estilo do botão */
 .modal-retornar-da-inatividade .button-group .botao-modal{
     background-color: #33404D;
-    border: 0;
     color: #FFFFFF;
+    border: 0;
     font-weight: 500;
-    border-radius: 5px;
-    font-size: 14px;
-    padding: 10px 30px;
     cursor: pointer;
 }
 

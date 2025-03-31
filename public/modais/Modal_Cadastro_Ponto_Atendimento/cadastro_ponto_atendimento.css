@@ -18,11 +18,8 @@
 /* Estilo dos botões */
 .botao-modal-ponto-atendimento {
     background-color: #33404D;
-    padding: 10px 20px;
-    border: 0;
-    border-radius: 10px;
-    font-size: 18px;
     color: #FFFFFF;
+    border: 0;
     font-weight: 500;
     cursor: pointer;
 }
