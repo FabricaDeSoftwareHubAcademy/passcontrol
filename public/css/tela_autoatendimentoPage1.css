@@ -195,6 +195,16 @@
     cursor: not-allowed;
 }
 
+
+@media (min-heigh: 500px) and (max-heigh: 696px){
+    /* .area-cinza {
+        min-height: 700px;
+    } */
+    /* .box {
+        height: 30px;
+    }
+} */
+
 @media (max-width: 600px) {
 
     .workspace {
@@ -369,4 +379,3 @@
         height: 80px;
     }
 }
-
