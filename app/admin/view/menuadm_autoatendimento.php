@@ -81,6 +81,8 @@
                     <a href="./monitor-modal.php">
                         <div class="banner-img">
                             <img src="../../../public/img/img-menu/visualizaçaomonitordeautoatendimento.png" alt="">
+                            <!-- <img src="../../../public/img/Menus/MONITOR.png" alt=""> -->
+
                         </div>
                     </a>
                     <!-- <h3 class="titulo-produto">Monitor</h3> -->
@@ -99,4 +101,4 @@
     ?>
 </body>
 
-</html>
+</html>i
