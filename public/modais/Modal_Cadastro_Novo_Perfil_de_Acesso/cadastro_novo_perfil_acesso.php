@@ -49,4 +49,4 @@
         </div>
     </section>
 </div>
-<script src="./cadastro_novo_perfil_acesso.js"></script>
+<script src="./cadastro_novo_perfil_acesso.js" defer></script>
