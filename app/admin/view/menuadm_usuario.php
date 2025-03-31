@@ -63,7 +63,8 @@
                     <div class="wrapper">
                         <a href="../../../app/admin/view/AtendentesCadastrados.php">
                         <div class="banner-img">
-                            <img src="../../../public/img/img-menu/usuariocadastrado.png" alt="">
+                            <!-- <img src="../../../public/img/img-menu/usuariocadastrado.png" alt=""> -->
+                            <img src="../../../public/img/Menus/3.png" alt="">
                         </div>
                         </a>
                         <!-- <h3 class="titulo-card">Usuários</h3> -->
@@ -77,7 +78,8 @@
                     <div class="wrapper">
                         <a href="../../../app/admin/view/telacadastro.php">
                         <div class="banner-img">
-                            <img src="../../../public/img/img-menu/cadastrodeusuario.png" alt="">
+                            <!-- <img src="../../../public/img/img-menu/cadastrodeusuario.png" alt=""> -->
+                            <img src="../../../public/img/Menus/2.png" alt="">
                         </div>
                         </a>
                         <!-- <h3 class="titulo-produto">Cadastro</h3> -->

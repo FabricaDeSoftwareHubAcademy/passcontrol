@@ -65,14 +65,15 @@
                 <div class="wrapper">
                     <a href="">
                         <div class="banner-img">
-                            <img src="../../../public/img/img-menu/gestaodoautoatendimento.png" alt="">
+                            <!-- <img src="../../../public/img/img-menu/gestaodoautoatendimento.png" alt=""> -->
+                            <img src="../../../public/img/Menus/TotemPassControl.png" alt="">
                         </div>
                     </a>
                     <!-- <h3 class="titulo-card">Autoatendimento</h3> -->
                     <!-- <p>Gestão do Autoatendimento.</p> -->
                 </div>
                 <div class="button-wrapper">
-                    <button class="btn outline" onclick="window.location.href='';">visualizar Autoatendimento</button>
+                    <button class="btn outline" onclick="window.location.href='';">Visualizar Autoatendimento</button>
                 </div>
             </div>
             <div class="container_menu">
