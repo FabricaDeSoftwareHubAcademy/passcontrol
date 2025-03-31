@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="../../../public/modais/Modal_Consultar_Fila/consultar-fila.css">
     <link rel="stylesheet" href="../../../public/modais/Modal_Chamar_prox_senha/chamar_prox_senha.css">
     <link rel="stylesheet" href="../../../public/modais/Modal_Iniciar_Intervalo/iniciar_intervalo.css">
-    <link rel="stylesheet" href="../../../">
+    <link rel="stylesheet" href="../../../public/modais/Modal_Encerrar_Atendimento/encerrar-atendimento.css">
 
     <!-- JS -->
     <script src="../../../public/js/navegacao-menu-lateral.js" defer></script>
@@ -35,7 +35,7 @@
     <script src="../../../public/modais/Modal_Consultar_Fila/modal.js" defer></script>
     <script src="../../../public/modais/Modal_Chamar_prox_senha/chamar_prox_senha.js" defer></script>
     <script src="../../../public/modais/Modal_Iniciar_Intervalo/iniciar_intervalo.js" defer></script>
-    <script src="../../../" defer></script>
+    <script src="../../../public/modais/Modal_Encerrar_Atendimento/encerrar-atendimento.js" defer></script>
 
 
 
@@ -116,8 +116,8 @@
                                     <h4>Próxima Senha</h4>
                                 </a>
                             </button>
-                            <button class="botao-encerrar-atendimento">
-                                <a href="" class="texto-botao-atendimento vermelho-botao">
+                            <button class="botao-encerrar-atendimento open-encerrar-atendimento">
+                                <a class="texto-botao-atendimento vermelho-botao">
                                     <img class="img-encerrar-atendimento-tela" src="../../../public/img/icons/cancelar.svg" alt="ampulheta">
                                     <h4>Encerrar Atendimento</h4>
                                 </a>
@@ -130,8 +130,8 @@
                                     <h4>Consultar Fila</h4>
                                 </a>
                             </button>
-                            <button class="botao-intervalo-atendimento open-iniciar-intervalo" id="chm-intervalo">
-                                <a href="" class="texto-botao-atendimento">
+                            <button class="botao-intervalo-atendimento open-iniciar-intervalo">
+                                <a class="texto-botao-atendimento">
                                     <img class="img-intervalo-atendimento" src="../../../public/img/icons/ampulheta.svg" alt="ampulheta">
                                     <h4>Intervalo</h4>
                                 </a>
@@ -263,7 +263,8 @@
     include "./monitor-modal.php"; 
     include "../../../public/modais/Modal_Consultar_Fila/index.php";
     include "../../../public/modais/Modal_Chamar_prox_senha/chamar_prox_senha.php"; 
-    include "../../../public/modais/Modal_Iniciar_Intervalo/iniciar_intervalo.php"; 
+    include "../../../public/modais/Modal_Iniciar_Intervalo/iniciar_intervalo.php";
+    include "../../../public/modais/Modal_Encerrar_Atendimento/encerrar-atendimento.php";
     ?>
 
     <script>
