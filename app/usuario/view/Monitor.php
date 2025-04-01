@@ -23,7 +23,7 @@
             <h1>Últimas<br>Chamadas</h1>
             <div class="area-das-senhas">
                 <div class="caixa-das-senhas">
-                    <h2>NOME DA PESSOA</h2>
+                    <h2>ALEXANDRE OLIVEIRA</h2>
                     <div class="conjunto-senhas">
                         <div class="senha">
                             <h3>SENHA:</h3>
@@ -36,7 +36,7 @@
                     </div>
                 </div>
                 <div class="caixa-das-senhas">
-                    <h2>NOME DA PESSOA</h2>
+                    <h2>THIAGO ALMEIDA</h2>
                     <div class="conjunto-senhas">
                         <div class="senha">
                             <h3>SENHA:</h3>
@@ -49,7 +49,7 @@
                     </div>
                 </div>
                 <div class="caixa-das-senhas">
-                    <h2>NOME DA PESSOA</h2>
+                    <h2>MÁRIO MÁRCIO</h2>
                     <div class="conjunto-senhas">
                         <div class="senha">
                             <h3>SENHA:</h3>
@@ -62,7 +62,7 @@
                     </div>
                 </div>
                 <div class="caixa-das-senhas">
-                    <h2>NOME DA PESSOA</h2>
+                    <h2>ANA OLÍRIA</h2>
                     <div class="conjunto-senhas">
                         <div class="senha">
                             <h3>SENHA:</h3>
@@ -79,7 +79,7 @@
         <div class="fundo-senha-principal">
             <div class="fundo-senha-principal-wrap">
                 <div class="nome-pessoa">
-                    <h1>Alan Turing de Melo Henrique</h1>
+                    <h1>SILVANA NASCIMENTO</h1>
                 </div>
                 <div class="infos-senha-principal">
                     <li><h2>SENHA:</h2> <span>CM 005</span></li>

@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="../../../public/css/navegacao.css">
     <link rel="stylesheet" href="../../../public/css/monitor-modal.css">
     <link rel="stylesheet" href="../../../public/css/style_eli.css">
+    <link rel="stylesheet" href="../../../public/modais/Modal_Alterar_Dados_Pessoais/alterar_dados_pessoais.css">
+    <link rel="stylesheet" href="../../../public/modais/Modal_Alterar_Senha/alterar_senha.css">
 
     <!-- JS -->
     <script src="../../../public/js/navegacao-menu-lateral.js" defer></script>
@@ -27,7 +29,7 @@
     include "./navegacao.php";
     ?>
     
-    <section class="Area-Util-Projeto-Eli">
+    <section class="Area-Util-Projeto">
         <!-- navmenu -->
         <div class="menu-container">
             <div class="menu">
@@ -61,7 +63,8 @@
                     <div class="wrapper">
                         <a href="../../../app/admin/view/AtendentesCadastrados.php">
                         <div class="banner-img">
-                            <img src="../../../public/img/img-menu/usuariocadastrado.png" alt="">
+                            <!-- <img src="../../../public/img/img-menu/usuariocadastrado.png" alt=""> -->
+                            <img src="../../../public/img/Menus/3.png" alt="">
                         </div>
                         </a>
                         <!-- <h3 class="titulo-card">Usuários</h3> -->
@@ -75,7 +78,8 @@
                     <div class="wrapper">
                         <a href="../../../app/admin/view/telacadastro.php">
                         <div class="banner-img">
-                            <img src="../../../public/img/img-menu/cadastrodeusuario.png" alt="">
+                            <!-- <img src="../../../public/img/img-menu/cadastrodeusuario.png" alt=""> -->
+                            <img src="../../../public/img/Menus/2.png" alt="">
                         </div>
                         </a>
                         <!-- <h3 class="titulo-produto">Cadastro</h3> -->
@@ -89,7 +93,6 @@
         </div>
     </section>
 
-    <!--MONITOR MODAL-->
     <?php
     include "./monitor-modal.php";
     ?>

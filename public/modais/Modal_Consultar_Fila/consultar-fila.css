@@ -1,0 +1,351 @@
+@import url(modal-consultar-fila.css);
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+:root {
+    --verde-control: #3AA867;
+    --cinza-control: #33404D;
+    --cor-fundo: #f9f9f9;
+    --font-main: Inter, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+
+*{
+    font-family: var(--font-main);
+}
+
+
+.topo-info-consultar-fila {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.topo-consultar-fila {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.area-em-cima-tabela-fila{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 96%;
+}
+
+.topo-direita-consultar-fila {
+    justify-content: right;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    width: 30%;
+    height: 64%;
+    gap: 15px;
+}
+
+.senhas-guiche-area-chamada {
+    display: flex;  
+    flex-direction: row-reverse;
+    width: 100%;
+    height: 2.6rem;
+    background-color: rgb(255, 255, 255, 0.5);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+    color: #33404D;
+    border-radius: 2%;
+    gap: 1.4rem;
+    margin-right: 28px;
+    border-radius: 5px 5px 0px 5px;
+}
+.senhas-guiche-area-chamada p{
+    font-size: 20px;
+}
+
+.principal-consultar-fila{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    position: absolute;
+    top: 17vh;
+    right: 2vh;
+    left: 27vh;
+    bottom: 2vh;
+    height: auto;
+    width: auto;
+    overflow: auto;
+    scroll-behavior: smooth;
+}
+
+.area-comum-consultar-fila {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    margin-top: 2.4rem;
+    flex-direction: column;
+    border-radius: 5px;
+    align-items: center;
+}
+#divBusca{
+    display: flex;
+    padding: 0;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin-left: 26px;
+}
+
+  
+  #txtBusca{
+    float:left;
+    padding: 5px;
+    padding-left: 5px;
+    font-style:italic;
+    font-size:14px;
+    outline: 5px;
+    border-radius: 5px;
+    background-image: url(../img/icons/lupa.png);
+    background-position: 142px; 
+    background-repeat: no-repeat;
+    opacity: 0.5;
+    border: 2px solid #333;
+  }
+
+
+
+/* TABELA  */
+.fundo-fila-tabela{ 
+    width: 96%; 
+    font-weight: 600; 
+    height: 100%; 
+    border-radius: 5px; 
+    background-color: rgb(255, 255, 255,0.5); 
+    gap: 15px; 
+    display: flex; 
+    display: block; 
+    justify-content: left; 
+} 
+.tabela-atendimento-consultar-fila { 
+    border-collapse: collapse; 
+    background-color: rgba(255, 255, 255, 0.5); 
+    width: 95%; 
+    margin: 2vw; 
+    max-height: 100px; 
+    position: relative; 
+    overflow-x: auto;
+    transition: overflow 0.3s ease;  
+} 
+.tabela-atendimento-consultar-fila:hover { 
+    overflow-y: auto;  
+} 
+.tabela-atendimento-consultar-fila th { 
+    background-color: var(--cinza-control); 
+    color: var(--cor-fundo); 
+} 
+th { 
+    position: sticky; 
+    top: 0; 
+    background-color: #f4f4f4; 
+    z-index: 2; 
+    padding: 10px; 
+    text-align: left; 
+    border: 1px solid black; 
+    min-width: 50px; 
+
+} 
+td { 
+    font-size: 16px;
+    border: 1px solid black; 
+    padding: 9px; 
+    text-align: left; 
+    min-width: 50px; 
+    color: var(--cinza-control); 
+} 
+td, th {
+    width: calc(+140px);
+}
+thead, tbody tr { 
+    display: table; 
+    width: 100%; 
+    table-layout: fixed; 
+} 
+tbody { 
+    display: block; 
+    max-height: 160px;  
+    overflow-y: scroll;  
+    position: relative; 
+
+} 
+.tabela-atendimento-consultar-fila tbody::-webkit-scrollbar { 
+    width: 0.1px; 
+    opacity: 0;  
+    transition: opacity 0.3s ease;  
+} 
+.tabela-atendimento-consultar-fila:hover tbody::-webkit-scrollbar { 
+    opacity: 1;  
+    width: 5px; 
+} 
+.tabela-atendimento-consultar-fila tbody::-webkit-scrollbar-thumb { 
+    background-color: rgba(0, 0, 0, 0.5); 
+    border-radius: 4px;
+
+} 
+.tabela-atendimento-consultar-fila tbody::-webkit-scrollbar-track { 
+    background: transparent; 
+} 
+
+.tabela-atendimento-consultar-fila tbody::-webkit-scrollbar-thumb:hover { 
+    background-color: rgba(0, 0, 0, 0.7); 
+    width: 5px; 
+} 
+
+.tabela-atendimento-consultar-fila:hover tbody,thead{ 
+    margin-right: -5px;
+} 
+
+thead, tbody tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed; 
+    
+}
+
+
+
+/* RESPONSIVIDADE */
+
+@media screen and (min-width: 1641px) and (max-width: 1840px) {
+    .info-area-chamada{
+        margin-top: 30px;
+    }
+}
+
+@media screen and (min-width: 1441px) and (max-width: 1640px) {
+    tbody { 
+        max-height: 220px; 
+    } 
+}
+@media screen and (min-width: 1311px) and (max-width: 1440px) {
+    .fundo-fila-tabela{
+        overflow-x: auto;
+    } 
+    tbody { 
+        max-height: 140px; 
+    } 
+}
+@media screen and (min-width: 1000px) and (max-width: 1310px) {
+    .fundo-fila-tabela{
+        overflow-x: auto;
+    }   
+    td { 
+        font-size: 15px;
+    }
+    tbody { 
+        max-height: 160px; 
+    } 
+}
+@media screen and (min-width: 710px) and (max-width: 999px) {
+    .senhas-guiche-area-chamada{
+        height: 3.4rem;
+        gap: 1rem;
+    }
+    .fundo-fila-tabela{
+        overflow-x: auto;
+    }
+    td { 
+        font-size: 15px;
+    }
+    tbody { 
+        max-height: 150px; 
+    } 
+}
+@media screen and (min-width: 635px) and (max-width: 709px) {
+    .senhas-guiche-area-chamada{
+        height: 3.4rem;
+        gap: 1rem;
+    }
+    .fundo-fila-tabela{
+        overflow-x: auto;
+    }
+    td { 
+        font-size: 14.5px;
+    }
+    tbody { 
+        max-height: 190px; 
+    } 
+}
+@media screen and (min-width: 570px) and (max-width: 634px) {
+    .senhas-guiche-area-chamada{
+        height: 4rem;
+        gap: 1rem;
+    }
+    .fundo-fila-tabela{
+        overflow-x: auto;
+    }
+    td { 
+        font-size: 14.5px;
+    }
+    tbody { 
+        max-height: 170px; 
+    } 
+}
+@media screen and (min-width: 435px) and (max-width: 569px) {
+    #divBusca{
+        margin: 0;
+    }
+    #txtBusca{
+        width: 180px;
+        margin: 0;
+    }
+    .senhas-guiche-area-chamada{
+        height: 4rem;
+        gap: 1rem;
+        margin: 0;
+    }
+    .senhas-guiche-area-chamada p{
+        font-size: 18px;
+    }
+    .fundo-fila-tabela{
+        overflow-x: auto;
+    }
+    td { 
+        font-size: 14.5px;
+    }
+    tbody { 
+        max-height: 230px; 
+    } 
+}
+
+@media screen and (min-width: 200px) and (max-width: 434px) {
+    #divBusca{
+        margin: 0;
+    }
+    #txtBusca{
+        width: 140px;
+        margin: 0;
+    }
+    .senhas-guiche-area-chamada{
+        height: 4rem;
+        gap: 1rem;
+        margin: 0;
+        width: 680px;
+    }
+    .senhas-guiche-area-chamada p{
+        font-size: 18px;
+    }
+    .fundo-fila-tabela{
+        overflow-x: auto;
+    }
+    td { 
+        font-size: 14px;
+    }
+    tbody { 
+        max-height: 220px; 
+    } 
+}
+

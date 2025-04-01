@@ -16,8 +16,8 @@
         <ul class="texto-usu">
             <li class="nome-usu">Nome do Usuário</li>
             <li class="email-usu">funcionario123@fun.br</li>
-            <li><a class="usu-util" href="../../../app/admin/view/adm-logado.php">Editar Informações</a></li>
-            <li><a class="usu-util" id="ACESSO-A0-MODAL-DE-ALTERACAO-DE-SENHA">Alterar Senha</a></li>
+            <li><a class="usu-util open-editar-dados">Editar Informações</a></li>
+            <li><a class="usu-util open-alterar-senha">Alterar Senha</a></li>
             <li><a class="usu-util usu-sair" href="../../../index.php">Sair</a></li>
         </ul>
     </nav>
@@ -32,7 +32,7 @@
             <p class="texto-bott">Atendimento</p>
         </a>
 
-        <a class="botao-lateal-navegacao" id="openModalBtn">
+        <a class="botao-lateal-navegacao" id="openMonitorModal">
             <img class="icone-menu-lateral" src="../../../public/img/icons/monitor.svg" alt="ICONE-MONITOR">
             <p class="texto-bott">Monitor</p>
         </a>
@@ -99,4 +99,7 @@
     <div class="areatransp"></div>
 </div>
 
-<!-- INICIO DA ÁREA ÚTIL DA PÁGINA -->
+<?php
+    include "../../../public/modais/Modal_Alterar_Dados_Pessoais/alterar_dados_pessoais.php";
+    include "../../../public/modais/Modal_Alterar_Senha/alterar_senha.php";
+?>

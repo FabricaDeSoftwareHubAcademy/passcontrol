@@ -1,0 +1,189 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo do corpo da página */
+.pagina {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f5f5f5;
+}
+
+/* Estilo dos botões */
+.botao-modal-ponto-atendimento {
+    background-color: #33404D;
+    color: #FFFFFF;
+    border: 0;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+/* Estilo do container do modal */
+.fundo-container-cad-ponto-atendimento{
+    background: rgba(0, 0, 0, 0.5);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+    z-index: 10;
+}
+
+.show {
+    opacity: 1;
+    display: flex;
+    pointer-events: auto;
+}
+
+/* Estilo do modal */
+.modal-ponto-atendimento {
+    background-color: #e0e0e0;
+    width: 80%;
+    max-width: 600px;
+    padding: 40px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+    text-align: left;
+    border-radius: 5px;
+}
+
+/* Estilo da linha horizontal */
+.linha-horizontal-ponto-atendimento {
+    border: none;
+    border-top: 2px solid #000;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* Estilo do logo */
+.logo-ponto-atendimento {
+    position: absolute;
+    top: 25px;
+    right: 30px;
+    width: 60px;
+}
+
+/* Estilo dos labels */
+.label-ponto-atendimento {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+/* Estilo dos inputs */
+.input-text-ponto-atendimento {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: white;
+}
+
+/* Grupo de botões */
+.button-group-ponto-atendimento {
+    display: flex;
+    justify-content: right;
+    gap: 0px;
+    margin-top: 20px;
+}
+
+/* Estilo do botão cancelar */
+.cancel {
+    background-color: #33404D;
+    color: white;
+    margin-right: 30px;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 10px 30px;
+}
+
+.cancel:hover {
+    color: #ff0000;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Estilo do botão salvar */
+.save {
+    background-color: #33404D;
+    color: white;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 10px 30px;
+}
+
+.save:hover {
+    color: #3AA867;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Responsividade */
+@media (max-width: 1200px) {
+    .modal-ponto-atendimento {
+        width: 70%;
+    }
+    .titulo-ponto-atendimento{
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .modal-ponto-atendimento {
+        width: 80%;
+    }
+    .titulo-ponto-atendimento{
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 700px) {
+    .modal-ponto-atendimento {
+        width: 90%;
+    }
+    .titulo-ponto-atendimento{
+        margin-bottom: 30px;
+        max-width: 75%;
+    }
+}
+
+@media (max-width: 520px){
+    .modal-ponto-atendimento {
+        width: 95%;
+        padding: 20px;
+    }
+    .titulo-ponto-atendimento{
+        margin-top: 5px;
+        font-size: 18px;
+        max-width: 70%;
+    }
+    .logo-ponto-atendimento{
+        top: 10px;
+        width: 50px;
+    }
+}
+
+@media (max-width: 400px) {
+    .modal-ponto-atendimento {
+        width: 95%;
+        padding: 15px;
+    }
+    .titulo-ponto-atendimento{
+        font-size: 14px;
+        max-width: 70%;
+    }
+    .logo-ponto-atendimento{
+        right: 15px;
+    }
+}

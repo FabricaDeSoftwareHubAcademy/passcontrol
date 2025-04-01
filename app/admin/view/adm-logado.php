@@ -16,13 +16,16 @@
     <link rel="stylesheet" href="../../../public/css/navegacao.css">
     <link rel="stylesheet" href="../../../public/css/adm-logado.css">
     <link rel="stylesheet" href="../../../public/css/monitor-modal.css">
+    <link rel="stylesheet" href="../../../public/modais/Modal_Alterar_Dados_Pessoais/alterar_dados_pessoais.css">
+    <link rel="stylesheet" href="../../../public/modais/Modal_Alterar_Senha/alterar_senha.css">
     <!-- <link rel="stylesheet" href="../../../public/modais/Modal Confirmação dos Dados Registrados/estilo.css"> -->
     
     <!-- JS -->
     <script src="../../../public/js/navegacao-menu-lateral.js" defer></script>
     <script src="../../../public/js/monitor-modal.js" defer></script>
     <!-- <script src="../../../public/js/modal-adm-logado.js" defer></script> -->
-    <!-- <link rel="shortcut icon" type="imagex/png" href="../../../public/img/Logo-Nota-Controlnt.ico"> -->
+
+    <link rel="shortcut icon" type="imagex/png" href="../../../public/img/Logo-Nota-Controlnt.ico">
 </head>
 
 <body class="control-body-navegacao">
@@ -76,10 +79,9 @@
             <button type="submit" class="botao-salvar open">Salvar</button>
         </div>
         
-        <main-modal-adm-logado></main-modal-adm-logado>
+        <!-- <main-modal-adm-logado></main-modal-adm-logado> -->
     </section>
 
-    <!--MONITOR MODAL-->
     <?php
     include "./monitor-modal.php";
     ?>

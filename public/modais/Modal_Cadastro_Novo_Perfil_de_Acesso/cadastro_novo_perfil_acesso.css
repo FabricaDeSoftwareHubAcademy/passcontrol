@@ -1,0 +1,196 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo dos botões */
+.botao-modal {
+    background-color: #33404D;
+    color: #FFFFFF;
+    border: 0;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+/* Estilo do container do modal */
+.fundo-cadastro-novo-perfil-acesso {
+    background: rgba(0, 0, 0, 0.5);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+    z-index: 10;
+}
+
+.show {
+    opacity: 1;
+    display: flex;
+    pointer-events: auto;
+}
+
+/* Estilo do modal */
+.modal-cadastro-novo-perfil-acesso {
+    background-color: #e0e0e0;
+    width: 80%;
+    max-width: 900px; /* Limita o tamanho máximo */
+    min-width: 290px; /* Evita que fique pequeno demais */
+    height: auto; /* Altura ajustável automaticamente */
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+    text-align: left;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+/* Estilo da linha horizontal */
+.modal-cadastro-novo-perfil-acesso .divisoria-modal {
+    border: none;
+    border-top: 2px solid #000;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* Estilo do logo */
+.modal-cadastro-novo-perfil-acesso .logo {
+    position: absolute;
+    top: 10px;
+    right: 30px;
+    width: 80px;
+    height: auto;
+}
+
+/* Estilo do título */
+.modal-cadastro-novo-perfil-acesso .titulo-modal {
+    font-size: 28px;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+/* Estilo do parágrafo */
+.modal-cadastro-novo-perfil-acesso .texto-modal {
+    font-size: 18px;
+    margin: 20px 0;
+    text-align: left;
+}
+
+.input-novo-perf-nome {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.modal-cadastro-novo-perfil-acesso .checkbox-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 5px;
+    background-color: hsla(0, 0%, 100%, 0.4);
+    border-radius: 5px;
+    padding: 3px;
+}
+.modal-cadastro-novo-perfil-acesso .checkbox-container .checkbox-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    width: 45%;
+}
+.modal-cadastro-novo-perfil-acesso .checkbox-container .selecionar-todos{
+    width: 90%;
+    margin-bottom: 20px;
+}
+.modal-cadastro-novo-perfil-acesso .checkbox-container .checkbox-group input {
+    margin-right: 10px;
+}
+
+/* Grupo de botões */
+.modal-cadastro-novo-perfil-acesso .button-group {
+    display: flex;
+    justify-content: right;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+/* Estilo do botão cancelar */
+.modal-cadastro-novo-perfil-acesso .button-group .cancel {
+    background-color: #33404D;
+    color: white;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 10px 30px;
+}
+
+/* Estilo do botão cancelar no hover */
+.modal-cadastro-novo-perfil-acesso .button-group .cancel:hover {
+    color: #FF0000;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Estilo do botão salvar */
+.modal-cadastro-novo-perfil-acesso .button-group .save {
+    background-color: #33404D;
+    color: white;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 10px 30px;
+}
+
+/* Estilo do botão salvar no hover */
+.modal-cadastro-novo-perfil-acesso .button-group .save:hover {
+    color: #3AA867;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Media Queries */
+
+@media (max-width: 600px) {
+    .modal-cadastro-novo-perfil-acesso .logo{
+        top: 15px;
+        width: 60px;
+    }
+    .modal-cadastro-novo-perfil-acesso .titulo-modal{
+        font-size: 22px;
+        max-width: 80%;
+    }
+    .modal-cadastro-novo-perfil-acesso .checkbox-container{
+        max-height: calc(50vh);
+        overflow-y: auto;
+        gap: 10px;
+    }
+    .modal-cadastro-novo-perfil-acesso .checkbox-container .checkbox-group {
+        width: 90%;
+    }
+}
+@media (max-width: 410px) {
+    .modal-cadastro-novo-perfil-acesso{
+        padding: 20px;
+        max-width: 370px;
+    }
+    .modal-cadastro-novo-perfil-acesso .titulo-modal{
+        max-width: 65%;
+    }
+    .modal-cadastro-novo-perfil-acesso .checkbox-container{
+        max-height: calc(30vh);
+        overflow-y: auto;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        gap: 10px;
+    }
+    .modal-cadastro-novo-perfil-acesso .checkbox-container .checkbox-group {
+        width: 90%;
+    }
+    .modal-cadastro-novo-perfil-acesso .button-group{
+        gap: 10px;
+    }
+}

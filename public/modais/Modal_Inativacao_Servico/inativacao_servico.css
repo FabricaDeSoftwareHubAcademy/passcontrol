@@ -1,0 +1,139 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo dos botões */
+.botao-modal {
+    background-color: #33404D;
+    color: #FFFFFF;
+    border: 0;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+/* Estilo do container do modal */
+.fundo-inativar-servico {
+    background: rgba(0, 0, 0, 0.5);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+    z-index: 10;
+}
+
+.show {
+    opacity: 1;
+    display: flex;
+    pointer-events: auto;
+}
+
+/* Estilo do modal */
+.modal-inativar-servico {
+    background-color: #e0e0e0;
+    width: 80%;
+    max-width: 600px;
+    min-width: 300px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+    text-align: left;
+    border-radius: 5px;
+}
+
+/* Estilo da linha horizontal */
+.linha {
+    border: none;
+    border-top: 2px solid #000;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* Estilo do logo */
+.logo {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    width: 60px;
+    max-width: 200px;
+    height: auto;
+}
+
+/* Estilo do título */
+.titulo {
+    font-size: 28px;
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+
+/* Estilo do parágrafo */
+.texto {
+    font-size: 22px;
+    margin: 40px 0;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Grupo de botões */
+.button-group {
+    display: flex;
+    justify-content: right;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+/* Estilo do botão cancelar */
+.cancel {
+    background-color: #33404D;
+    color: white;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 10px 30px;
+}
+
+.cancel:hover {
+    color: #FF0000;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Estilo do botão salvar */
+.save {
+    background-color: #33404D;
+    color: white;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 10px 30px;
+}
+
+.save:hover {
+    color: #3AA867;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Responsividade */
+@media (max-width: 370px) {
+    .logo{
+        /* top: 25px; */
+        width: 50px;
+    }
+    .titulo{
+        margin-bottom: 10px;
+        font-size: 24px;
+    }
+    .texto{
+        font-size: 18px;
+    }
+    .button-group{
+        gap: 10px;
+    }
+}

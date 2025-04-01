@@ -1,14 +1,14 @@
 /* CONFIGURAÇÃO DA BASE DA ÁREA ÚTIL */
-/* NAO MEXER!! */
+/* NAO ALTERAR!! */
 
 .Area-Util-Projeto{
     z-index: 1;
     position: fixed;
     display: flex;
     flex-direction: column;
+    left: 27vh;
     top: 17vh;
     right: 2vh;
-    left: 27vh;
     bottom: 2vh;
     height: auto;
     width: auto;
@@ -16,28 +16,21 @@
     overflow: hidden;
     scroll-behavior: smooth;
     display: flex;
-    /* overflow-x: hidden;
-    overflow-y: hidden; */
-    
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 
 /* MEDIA */
 
-@media screen and (max-width: 1200px){
+@media screen and (max-width: 900px){
     .Area-Util-Projeto{
-        left: 8vh;
+        left: 2vh;
     }
 }
 
-@media screen and (max-height: 625px){
+@media screen and (max-height: 620px){
     .Area-Util-Projeto{
-        left: 8vh;
-    }
-}
-
-@media screen and (max-width: 810px) and (max-height: 1080px){
-    .Area-Util-Projeto{
-        left: 2vh;        
+        left: 2vh;
     }
 }

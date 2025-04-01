@@ -1,0 +1,223 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo dos botões */
+.botao-modal {
+    background-color: #33404D;
+    color: #FFFFFF;
+    border: 0;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+/* Estilo do container do modal */
+.fundo-container-confirmacao-servico-cadastrado {
+    background: rgba(0, 0, 0, 0.5);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+    z-index: 10;
+}
+
+.fundo-container-confirmacao-servico-cadastrado.show {
+    opacity: 1;
+    display: flex;
+    pointer-events: auto;
+}
+
+/* Estilo do modal */
+.modal-confirmacao-servico-cadastrado {
+    background-color: #e0e0e0;
+    width: 80%;
+    max-width: 600px;
+    padding: 40px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+    text-align: left;
+    border-radius: 5px;
+}
+
+/* Estilo da linha horizontal */
+.linha-confirmacao-servico-cadastrado {
+    border: none;
+    border-top: 2px solid #000;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* Estilo do logo */
+.logo-confirmacao-servico-cadastrado {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    width: 60px;
+    max-width: 200px;
+    height: auto;
+}
+
+/* Estilo do título */
+.titulo-confirmacao-servico-cadastrado {
+    font-size: 28px;
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+
+/* Estilo do parágrafo */
+.texto-confirmacao-servico-cadastrado {
+    font-size: 22px;
+    margin: 40px 0;
+    text-align: center;
+}
+
+/* Grupo de botões */
+.button-group-confirmacao-servico-cadastrado {
+    display: flex;
+    justify-content: right;
+    gap: 0px;
+    margin-top: 20px;
+}
+
+/* Estilo do botão cancelar */
+.cancel {
+    background-color: #33404D;
+    color: white;
+    margin-right: 30px;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 10px 30px;
+}
+
+.cancel:hover {
+    color: #FF0000;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Estilo do botão salvar */
+.save {
+    background-color: #33404D;
+    color: white;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 10px 30px;
+}
+
+.save:hover {
+    color: #3AA867;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Responsividade */
+@media (max-width: 1200px) {
+    .modal-confirmacao-servico-cadastrado {
+        width: 70%;
+    }
+}
+
+@media (max-width: 1024px) {
+    .modal-confirmacao-servico-cadastrado {
+        width: 80%;
+    }
+}
+
+@media (max-width: 768px) {
+    .modal-confirmacao-servico-cadastrado {
+        width: 90%;
+    }
+    .titulo-confirmacao-servico-cadastrado{
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .button-group-confirmacao-servico-cadastrado {
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+    .botao-modal-confirmacao-servico-cadastrado {
+        width: auto;
+    }
+}
+
+@media (min-width: 401px) and (max-width: 550px){
+    .modal-confirmacao-servico-cadastrado {
+        width: 95%;
+        padding: 20px;
+    }
+    .titulo-confirmacao-servico-cadastrado{
+        margin-top: 7px;
+        font-size: 20px;
+    }
+    .logo-confirmacao-servico-cadastrado{
+        top: 10px;
+        width: 50px;
+    }
+    .button-group-confirmacao-servico-cadastrado {
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+    .botao-modal-confirmacao-servico-cadastrado {
+        width: auto;
+    }
+}
+
+@media (max-width: 400px) {
+    .modal-confirmacao-servico-cadastrado {
+        width: 95%;
+        padding: 15px;
+    }
+    .titulo-confirmacao-servico-cadastrado{
+        margin-top: 7px;
+        font-size: 20px;
+    }
+    .texto-confirmacao-servico-cadastrado{
+        font-size: 18px;
+    }
+    .logo-confirmacao-servico-cadastrado{
+        top: 10px;
+        width: 50px;
+    }
+    .button-group-confirmacao-servico-cadastrado{
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+    .botao-modal-confirmacao-servico-cadastrado{
+        width: auto;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 340px) {
+    .modal-confirmacao-servico-cadastrado {
+        width: 90%;
+        padding: 15px;
+    }
+    .titulo-confirmacao-servico-cadastrado{
+        font-size: 16px;
+    }
+    .texto-confirmacao-servico-cadastrado{
+        font-size: 16px;
+    }
+    .logo-confirmacao-servico-cadastrado{
+        top: 15px;
+        width: 40px;
+    }
+    .button-group-confirmacao-servico-cadastrado {
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+    .botao-modal-confirmacao-servico-cadastrado {
+        width: auto;
+    }
+}

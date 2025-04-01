@@ -1,0 +1,223 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Botões gerais */
+.botao-modal {
+    background-color: #33404D;
+    color: #FFFFFF;
+    border: 0;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+/* Estilo do background do modal */
+.fundo-senha-gerada {
+    background: rgba(0, 0, 0, 0.5);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.15s ease;
+    z-index: 10;
+}
+
+.show {
+    opacity: 1;
+    display: flex;
+    pointer-events: auto;
+}
+
+/* Estilo do modal */
+.modal-senha-gerada {
+    background-color: #ddd;
+    width: 60%;
+    max-width: 550px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.modal-senha-gerada .modal-divider {
+    border: none;
+    border-top: 2px solid #000;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.modal-senha-gerada .logo {
+    position: absolute;
+    top: 15px;
+    right: 30px;
+    width: 60px;
+}
+
+/* Tipografia */
+.modal-senha-gerada .modal-title {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.modal-senha-gerada .check-image{
+    width: 20%;
+    max-width: 200px; /* Limita o tamanho máximo */
+    display: block;
+    margin: 0 auto;
+}
+
+/* Tipografia */
+.modal-senha-gerada .modal-title {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.modal-senha-gerada .modal-message {
+    margin-top: 40px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Grupo de botões */
+.modal-senha-gerada .button-group {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 15px;
+}
+
+.modal-senha-gerada .botao-modal .Okay {
+    background-color: #33404D;
+    color: white;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 12px 30px;
+    margin-bottom: 30px;
+}
+
+.modal-senha-gerada .button-group .Okay:hover {
+    color: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Responsividade */
+@media (max-width: 1200px) {
+    .modal-senha-gerada {
+        width: 100%;
+    }
+    .modal-title {
+        font-size: 28px;
+    }
+    .modal-message {
+        font-size: 22px;
+    }
+    .logo {
+        width: 70px;
+        top: 10px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .modal-senha-gerada {
+        width: 100%;
+    }
+    .modal-senha-gerada .modal-title {
+        font-size: 28px;
+    }
+    .modal-senha-gerada .modal-message {
+        font-size: 22px;
+    }
+    .modal-senha-gerada .logo {
+        width: 60px;
+        top: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .modal-senha-gerada {
+        width: 100%;
+    }
+    .modal-senha-gerada .modal-title {
+        font-size: 25px;
+    }
+    .modal-senha-gerada .modal-message {
+        font-size: 20px;
+    }
+    .modal-senha-gerada .logo {
+        width: 60px;
+        top: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .modal-senha-gerada {
+        width: 90%;
+    }
+    .modal-senha-gerada .modal-title {
+        font-size: 22px;
+    }
+    .modal-senha-gerada .modal-message {
+        font-size: 18px;
+    }
+    .modal-senha-gerada .logo {
+        margin-top: 5px;
+        width: 50px;
+    }
+    .modal-senha-gerada .check-image{
+        margin-top: 30px;
+        width: 70px;
+    }
+}
+
+@media (max-width: 400px) {
+    .modal-senha-gerada {
+        width: 90%;
+    }
+    .modal-senha-gerada .modal-title {
+        font-size: 20px;
+    }
+    .modal-senha-gerada .modal-message {
+        font-size: 16px;
+    }
+    .modal-senha-gerada .logo {
+        margin-top: 1px;
+        width: 50px;
+    }
+    .modal-senha-gerada .check-image{
+        margin-top: 30px;
+        width: 70px;
+    }
+}
+
+@media (max-width: 320px) {
+    .modal-senha-gerada {
+        width: 90%;
+    }
+    .modal-senha-gerada .modal-title {
+        font-size: 18px;
+    }
+    .modal-senha-gerada .modal-message {
+        font-size: 15px;
+    }
+    .modal-senha-gerada .logo {
+        margin-top: 5px;
+        width: 40px;
+    }
+    .modal-senha-gerada .check-image{
+        margin-top: 30px;
+        width: 60px;
+    }
+}

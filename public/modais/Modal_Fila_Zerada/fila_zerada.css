@@ -1,0 +1,182 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo dos botões */
+.botao-modal {
+    background-color: #33404D;
+    color: #FFFFFF;
+    border: 0;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+/* Estilo do container do modal */
+.fundo-fila-zerada {
+    background: rgba(0, 0, 0, 0.5);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 10;
+}
+
+.show {
+    opacity: 1;
+    display: flex;
+    pointer-events: auto;
+}
+
+/* Estilo do modal */
+.modal-fila-zerada {
+    background-color: #e0e0e0;
+    width: 80%;
+    max-width: 600px;
+    padding: 40px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+    text-align: left;
+}
+
+/* Estilo da linha horizontal */
+.modal-fila-zerada .linha {
+    border: none;
+    border-top: 2px solid #000;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* Estilo do logo */
+.modal-fila-zerada .logo {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    width: 80px;
+    max-width: 200px;
+    height: auto;
+}
+
+/* Estilo do título */
+.modal-fila-zerada .titulo {
+    font-size: 28px;
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+
+/* Estilo do parágrafo */
+.modal-fila-zerada .texto {
+    font-size: 22px;
+    margin: 40px 0;
+    text-align: center;
+}
+
+/* Grupo de botões */
+.modal-fila-zerada .button-group {
+    display: flex;
+    justify-content: right;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+/* Estilo do botão fechar */
+.modal-fila-zerada .voltar {
+    background-color: #33404D;
+    color: white;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 10px 15px;
+}
+
+.modal-fila-zerada .voltar:hover {
+    color: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {  
+    .modal-fila-zerada .titulo{
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 550px){
+    .modal-fila-zerada {
+        padding: 20px;
+    }
+    .modal-fila-zerada .titulo{
+        margin-top: 10px;
+        font-size: 20px;
+    }
+    .modal-fila-zerada .logo{
+        right: 20px;
+        width: 50px;
+    }
+    .modal-fila-zerada .button-group {
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+    .modal-fila-zerada .button-group .botao-modal {
+        width: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .modal-fila-zerada .button-group {
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+    .modal-fila-zerada .button-group .botao-modal {
+        width: auto;
+    }
+}
+
+@media (max-width: 400px) {
+    .modal-fila-zerada .titulo{
+        font-size: 20px;
+    }
+    .modal-fila-zerada .texto{
+        font-size: 18px;
+    }
+    .modal-fila-zerada .logo{
+        right: 15px;
+        width: 50px;
+    }
+    .modal-fila-zerada .button-group {
+        flex-direction: row;
+        justify-content: flex-end;
+        gap: 10px;
+    }
+    .modal-fila-zerada .button-group .botao-modal {
+        width: auto;
+    }
+}
+
+@media (max-width: 340px) {
+    .modal-fila-zerada .titulo{
+        font-size: 16px;
+    }
+    .modal-fila-zerada .texto{
+        font-size: 16px;
+    }
+    .modal-fila-zerada .logo{
+        width: 40px;
+    }
+    .modal-fila-zerada .button-group {
+        flex-direction: row;
+        justify-content: center;
+    }
+    .modal-fila-zerada .button-group .botao-modal {
+        width: auto;
+    }
+}

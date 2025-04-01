@@ -16,7 +16,10 @@
   <link rel="stylesheet" href="../../../public/css/navegacao.css">
   <link rel="stylesheet" href="../../../public/css/monitor-modal.css">
   <link rel="stylesheet" href="../../../public/css/PontoAtendimentoCad.css">
-  <link rel="stylesheet" href="../../../public/modais/Modal Confirmação dos Serviços/estilo.css">
+  <link rel="stylesheet" href="../../../public/modais/Modal_Alterar_Dados_Pessoais/alterar_dados_pessoais.css">
+  <link rel="stylesheet" href="../../../public/modais/Modal_Alterar_Senha/alterar_senha.css">
+
+  <!-- <link rel="stylesheet" href="../../../public/modais/Modal Confirmação dos Serviços/estilo.css"> -->
 
   <!-- JS -->
   <script src="../../../public/js/navegacao-menu-lateral.js" defer></script>
@@ -100,7 +103,6 @@
     </div>
   </section>
 
-  <!--MONITOR MODAL-->
   <?php
   include "./monitor-modal.php"
   ?>

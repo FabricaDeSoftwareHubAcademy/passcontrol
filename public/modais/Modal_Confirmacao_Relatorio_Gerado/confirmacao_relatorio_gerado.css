@@ -1,0 +1,187 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Botões gerais */
+.botao-modal {
+    background-color: #33404D;
+    color: #FFFFFF;
+    border: 0;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+/* Estilo do background do modal */
+.fundo-conf-relatorio-gerado {
+    background: rgba(0, 0, 0, 0.5);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+    z-index: 10;
+}
+
+.show {
+    opacity: 1;
+    display: flex;
+    pointer-events: auto;
+}
+
+/* Estilo do modal */
+.modal-conf-relatorio-gerado {
+    background-color: #ddd;
+    width: 60%;
+    max-width: 550px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.modal-conf-relatorio-gerado .linha-divisoria {
+    border: none;
+    border-top: 2px solid #000;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.modal-conf-relatorio-gerado .logo {
+    position: absolute;
+    top: 15px;
+    right: 30px;
+    width: 60px;
+}
+
+/* Tipografia */
+.modal-conf-relatorio-gerado .titulo-modal {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.modal-conf-relatorio-gerado .modal-message {
+    margin-top: 40px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Grupo de botões */
+.modal-conf-relatorio-gerado .button-group {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 15px;
+}
+
+.modal-conf-relatorio-gerado .botao-modal .Okay {
+    background-color: #33404D;
+    color: white;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 10px 30px;
+    margin-bottom: 10px;
+}
+
+.modal-conf-relatorio-gerado .button-group .Okay:hover {
+    color: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Responsividade */
+@media (max-width: 1200px) {
+    .modal-conf-relatorio-gerado {
+        width: 100%;
+    }
+    .modal-conf-relatorio-gerado .titulo-modal {
+        font-size: 25px;
+    }
+    .modal-conf-relatorio-gerado .modal-message {
+        font-size: 22px;
+    }
+    .modal-conf-relatorio-gerado .logo {
+        width: 70px;
+        top: 15px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .modal-conf-relatorio-gerado {
+        width: 100%;
+    }
+    .modal-conf-relatorio-gerado .titulo-modal {
+        font-size: 25px;
+    }
+    .modal-conf-relatorio-gerado .modal-message {
+        font-size: 22px;
+    }
+    .modal-conf-relatorio-gerado .logo {
+        width: 70px;
+        top: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .modal-conf-relatorio-gerado {
+        width: 100%;
+    }
+    .modal-conf-relatorio-gerado .titulo-modal {
+        font-size: 25px;
+    }
+    .modal-conf-relatorio-gerado .modal-message {
+        font-size: 22px;
+    }
+    .modal-conf-relatorio-gerado .logo {
+        width: 70px;
+        top: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .modal-conf-relatorio-gerado {
+        width: 90%;
+    }
+    .modal-conf-relatorio-gerado .titulo-modal {
+        font-size: 20px;
+    }
+    .modal-conf-relatorio-gerado .modal-message {
+        font-size: 20px;
+    }
+    .modal-conf-relatorio-gerado .logo {
+        margin-top: 2px;
+        width: 60px;
+    }
+}
+
+@media (max-width: 400px){
+    .modal-conf-relatorio-gerado .modal-message{
+        font-size: 18px;
+    }
+    .modal-conf-relatorio-gerado .botao-modal.Okay{
+        margin-top: 20px;
+    }
+    .modal-conf-relatorio-gerado .button-group{
+        justify-content: center;
+    }
+}
+
+@media (max-width: 320px){
+    .modal-conf-relatorio-gerado .modal-message{
+        font-size: 18px;
+    }
+    .modal-conf-relatorio-gerado .botao-modal.Okay{
+        margin-top: 20px;
+    }
+}

@@ -1,20 +1,27 @@
-const modal = document.getElementById("modal");
-const openModalBtn = document.getElementById("openModalBtn");
-const openModalBtnGestao = document.getElementById("visualisarMonitor");
-const botaofecharmonitor = document.querySelector(".botao-fechar-monitor");
+const modal_monitor = document.getElementById("modalMonitor");
+const openModalMonitorBtn = document.getElementById("openMonitorModal");
+var openModalMonitorBtnGestao = document.getElementById("visualisarMonitor");
+const botaofecharmonitor = document.getElementById("fecharMonitor");
 
-openModalBtn.onclick = function() {
-    modal.style.display = "flex";
+openModalMonitorBtn.onclick = function() {
+    modal_monitor.classList.add("visualizar");
 }
-openModalBtnGestao.onclick = function() {
-    modal.style.display = "flex";
+try{
+    openModalMonitorBtnGestao.onclick = function() {
+        modal_monitor.classList.add("visualizar");
+    }
 }
+catch{
+    openModalMonitorBtnGestao = null;
+}
+
 botaofecharmonitor.onclick = function() {
-    modal.style.display = "none";
+    // modal_monitor.style.display = "none";
+    modal_monitor.classList.remove("visualizar");
 }
-
 window.onclick = function(event) {
-    if (event.target === modal) {
-        modal.style.display = "none";
+    if (event.target === modal_monitor) {
+        // modal_monitor.style.display = "none";
+        modal_monitor.classList.remove("visualizar");
     }
 }

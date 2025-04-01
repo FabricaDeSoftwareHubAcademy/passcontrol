@@ -17,22 +17,27 @@
     <link rel="stylesheet" href="../../../public/css/menu_eli.css">
     <link rel="stylesheet" href="../../../public/css/atendimento.css">
     <link rel="stylesheet" href="../../../public/css/monitor-modal.css">
-    <link rel="stylesheet" href="../../../public/modais/Modal Iniciar Intervalo/iniciar_intervalo.css">
-    <link rel="stylesheet" href="../../../public/modais/Modal Confirmação de Presença/confirmacao_presenca.css">
-    <link rel="stylesheet" href="../../../public/modais/Modal Confirmação Deslogar/confirmacao_deslogar.css">
-    
-    <link rel="stylesheet" href="../../../public/modais/Modal Consultar Fila/consultar-fila.css">
-    <link rel="stylesheet" href="../../../public/modais/Modal Consultar Fila/modal-consultar-fila.css">
+    <link rel="stylesheet" href="../../../public/modais/Modal_Alterar_Dados_Pessoais/alterar_dados_pessoais.css">
+    <link rel="stylesheet" href="../../../public/modais/Modal_Alterar_Senha/alterar_senha.css">
+
+    <link rel="stylesheet" href="../../../public/modais/Modal_Consultar_Fila/consultar-fila.css">
+    <link rel="stylesheet" href="../../../public/modais/Modal_Chamar_prox_senha/chamar_prox_senha.css">
+    <link rel="stylesheet" href="../../../public/modais/Modal_Iniciar_Intervalo/iniciar_intervalo.css">
+    <link rel="stylesheet" href="../../../public/modais/Modal_Encerrar_Atendimento/encerrar-atendimento.css">
 
     <!-- JS -->
     <script src="../../../public/js/navegacao-menu-lateral.js" defer></script>
-    <script src="../../../public/js/modal-teladelogin.js"></script>
-    <script src="../../../public/js/modal-proxima-senha.js"></script>
-    <script src="../../../public/js/modal_conf_saida.js"></script>
+    <script src="../../../public/js/modal-teladelogin.js" defer></script>
+    <script src="../../../public/js/modal-proxima-senha.js" defer></script>
+    <script src="../../../public/js/modal_conf_saida.js" defer></script>
     <script src="../../../public/js/monitor-modal.js" defer></script>
-    
-    <script src="../../../public/modais/Modal Consultar Fila/modal.js" defer></script>
-    <!-- <script src="../../../public/js/modal_saida_principal.js"></script> -->
+
+    <script src="../../../public/modais/Modal_Consultar_Fila/modal.js" defer></script>
+    <script src="../../../public/modais/Modal_Chamar_prox_senha/chamar_prox_senha.js" defer></script>
+    <script src="../../../public/modais/Modal_Iniciar_Intervalo/iniciar_intervalo.js" defer></script>
+    <script src="../../../public/modais/Modal_Encerrar_Atendimento/encerrar-atendimento.js" defer></script>
+
+
 
     <link rel="shortcut icon" type="imagex/png" href="../../../public/img/Logo-Nota-Controlnt.ico">
 </head>
@@ -42,8 +47,7 @@
     include "./navegacao.php";
 
     //MODAL CONSULTAR FILA
-    include "../../../public/modais/Modal Consultar Fila/index.php"
-    // include "../../modais/consultar-fila.php"
+    // include "../../../public/modais/Modal Consultar Fila/index.php"
     ?>
 
     <section class="Area-Util-Projeto">
@@ -106,14 +110,14 @@
                 <ul class="direita-guiche-area-chamada">
                     <div class="area-botao--guiche-area-chamada">
                         <div class="area-botao-atendimento">
-                            <button class="botao-proxima-senha-atendimento" id="chm-senha">
-                                <a href="" class="texto-botao-atendimento">
+                            <button class="botao-proxima-senha-atendimento abrirChamarProxSenha">
+                                <a class="texto-botao-atendimento">
                                     <img class="img-proxima-senha-atendimento" src="../../../public/img/icons/proxima-senha.svg" alt="ampulheta">
                                     <h4>Próxima Senha</h4>
                                 </a>
                             </button>
-                            <button class="botao-encerrar-atendimento">
-                                <a href="" class="texto-botao-atendimento vermelho-botao">
+                            <button class="botao-encerrar-atendimento open-encerrar-atendimento">
+                                <a class="texto-botao-atendimento vermelho-botao">
                                     <img class="img-encerrar-atendimento-tela" src="../../../public/img/icons/cancelar.svg" alt="ampulheta">
                                     <h4>Encerrar Atendimento</h4>
                                 </a>
@@ -126,8 +130,8 @@
                                     <h4>Consultar Fila</h4>
                                 </a>
                             </button>
-                            <button class="botao-intervalo-atendimento" id="chm-intervalo">
-                                <a href="" class="texto-botao-atendimento">
+                            <button class="botao-intervalo-atendimento open-iniciar-intervalo">
+                                <a class="texto-botao-atendimento">
                                     <img class="img-intervalo-atendimento" src="../../../public/img/icons/ampulheta.svg" alt="ampulheta">
                                     <h4>Intervalo</h4>
                                 </a>
@@ -250,14 +254,17 @@
         </div>
     </section>
     
-    <main-tela-de-login></main-tela-de-login>
-    <main-proxima-senha></main-proxima-senha>
+    <!-- <main-tela-de-login></main-tela-de-login> -->
+    <!-- <main-proxima-senha></main-proxima-senha> -->
     <!-- <main-sair-sistema></main-sair-sistema> -->
     <!-- <main-saida-principal></main-saida-principal> -->
 
     <?php
-    //MONITOR MODAL
-    include "./monitor-modal.php";
+    include "./monitor-modal.php"; 
+    include "../../../public/modais/Modal_Consultar_Fila/index.php";
+    include "../../../public/modais/Modal_Chamar_prox_senha/chamar_prox_senha.php"; 
+    include "../../../public/modais/Modal_Iniciar_Intervalo/iniciar_intervalo.php";
+    include "../../../public/modais/Modal_Encerrar_Atendimento/encerrar-atendimento.php";
     ?>
 
     <script>
