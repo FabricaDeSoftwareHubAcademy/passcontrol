@@ -85,7 +85,7 @@
     margin-top: 45px;
 }
 
-.botao-modal-alertar.voltar {
+.voltar_AlertaFilaZerada {
     background-color: #33404D;
     color: white;
     border-radius: 5px;
@@ -94,7 +94,7 @@
     /* margin-bottom: 30px; */
 }
 
-.botao-modal-alertar.voltar:hover {
+.voltar_AlertaFilaZerada:hover {
     color: white;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }

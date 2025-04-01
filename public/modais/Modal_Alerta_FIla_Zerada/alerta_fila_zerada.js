@@ -1,11 +1,11 @@
-const buttonAbrir = document.querySelector(".open-alertar-fila");
-const modalContainer = document.querySelector(".modal-container-alertar-fila");
-const buttonFechar = document.querySelector(".close");
-const buttonVoltar = document.querySelector(".voltar");
+const buttonAbrir_AlertaFilaZerada = document.querySelector(".open-alertar-fila");
+const modalContainer_AlertaFilaZerada = document.querySelector(".modal-container-alertar-fila");
+const buttonFechar_AlertaFilaZerada = document.querySelector(".close_AlertaFilaZerada");
+const buttonVoltar_AlertaFilaZerada = document.querySelector(".voltar_AlertaFilaZerada");
 
-buttonAbrir.addEventListener("click", () => {
-    modalContainer.classList.add("show");
+buttonAbrir_AlertaFilaZerada.addEventListener("click", () => {
+    modalContainer_AlertaFilaZerada.classList.add("show");
 });
-buttonVoltar.addEventListener("click", () => {
-    modalContainer.classList.remove("show");
+buttonVoltar_AlertaFilaZerada.addEventListener("click", () => {
+    modalContainer_AlertaFilaZerada.classList.remove("show");
 });

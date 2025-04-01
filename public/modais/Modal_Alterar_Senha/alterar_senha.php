@@ -18,9 +18,8 @@
             <input type="text" class="input-conf-nova-senha" placeholder="Repita a nova senha">
         </div>
         <div class="button-group-alterar-senha">
-            <button class="botao-modal-alterar-senha cancel">Voltar</button>
-            <button class="botao-modal-alterar-senha save">Salvar</button>
+            <button class="botao-modal-alterar-senha cancel_AltSenha">Voltar</button>
+            <button class="botao-modal-alterar-senha save_AltSenha">Salvar</button>
         </div>
     </section>
 </div>
-<script src="./alterar_senha.js" defer></script>

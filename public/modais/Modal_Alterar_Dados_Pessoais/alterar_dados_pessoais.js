@@ -1,17 +1,17 @@
-var buttonAbrir = document.querySelector("open-editar-dados");
-const modalContainerEditar = document.querySelector(".fundo-editar-dados");
-const buttonFechar = document.querySelector(".close");
-const buttonCancelar = document.querySelector(".cancel");
-const buttonSalvar = document.querySelector(".save");
+const buttonAbrir_AltDadosPessoais = document.querySelector(".open-editar-dados");
+const modalContainerEditar_AltDadosPessoais = document.querySelector(".fundo-editar-dados");
+const buttonFechar_AltDadosPessoais = document.querySelector(".close_AltDadosPessoais");
+const buttonCancelar_AltDadosPessoais = document.querySelector(".cancel_AltDadosPessoais");
+const buttonSalvar_AltDadosPessoais = document.querySelector(".save_AltDadosPessoais");
 
-buttonAbrir.addEventListener("click", () => {
-    modalContainerEditar.classList.add("show");
+buttonAbrir_AltDadosPessoais.addEventListener("click", () => {
+    modalContainerEditar_AltDadosPessoais.classList.add("show");
 });
 
-buttonCancelar.addEventListener("click", () => {
-    modalContainerEditar.classList.remove("show");
+buttonCancelar_AltDadosPessoais.addEventListener("click", () => {
+    modalContainerEditar_AltDadosPessoais.classList.remove("show");
 });
 
-buttonSalvar.addEventListener("click", () => {
-    modalContainerEditar.classList.remove("show");
+buttonSalvar_AltDadosPessoais.addEventListener("click", () => {
+    modalContainerEditar_AltDadosPessoais.classList.remove("show");
 });

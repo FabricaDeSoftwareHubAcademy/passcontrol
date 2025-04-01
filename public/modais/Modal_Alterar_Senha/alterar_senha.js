@@ -1,17 +1,17 @@
-const buttonAbrir = document.querySelector(".open-alterar-senha");
-const modalContainer = document.querySelector(".fundo-container-alterar-senha");
-const buttonFechar = document.querySelector(".close");
-const buttonCancelar = document.querySelector(".cancel");
-const buttonSalvar = document.querySelector(".save");
+const buttonAbrir_AltSenha = document.querySelector(".open-alterar-senha");
+const modalContainer_AltSenha = document.querySelector(".fundo-container-alterar-senha");
+const buttonFechar_AltSenha = document.querySelector(".close_AltSenha");
+const buttonCancelar_AltSenha = document.querySelector(".cancel_AltSenha");
+const buttonSalvar_AltSenha = document.querySelector(".save_AltSenha");
 
-buttonAbrir.addEventListener("click", () => {
-    modalContainer.classList.add("show");
+buttonAbrir_AltSenha.addEventListener("click", () => {
+    modalContainer_AltSenha.classList.add("show");
 });
 
-buttonCancelar.addEventListener("click", () => {
-    modalContainer.classList.remove("show");
+buttonCancelar_AltSenha.addEventListener("click", () => {
+    modalContainer_AltSenha.classList.remove("show");
 });
 
-buttonSalvar.addEventListener("click", () => {
-    modalContainer.classList.remove("show");
+buttonSalvar_AltSenha.addEventListener("click", () => {
+    modalContainer_AltSenha.classList.remove("show");
 });

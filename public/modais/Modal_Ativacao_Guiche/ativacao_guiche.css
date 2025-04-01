@@ -86,27 +86,26 @@
 .button-group-ativacao-guiche{
     display: flex;
     justify-content: right;
-    gap: 0px;
+    gap: 30px;
     margin-top: 20px;
 }
 
 /* Estilo do botão cancelar */
-.cancel {
+.cancel_AtivGuiche {
     background-color: #33404D;
     color: white;
-    margin-right: 30px;
     border-radius: 5px;
     font-size: 14px;
     padding: 10px 30px;
 }
 
-.cancel:hover {
+.cancel_AtivGuiche:hover {
     color: #FF0000;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }
 
 /* Estilo do botão salvar */
-.save {
+.save_AtivGuiche {
     background-color: #33404D;
     color: white;
     border-radius: 5px;
@@ -114,7 +113,7 @@
     padding: 10px 30px;
 }
 
-.save:hover {
+.save_AtivGuiche:hover {
     color: #3AA867;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }

@@ -1,16 +1,16 @@
-const buttonAbrir = document.querySelector(".open-ativacao-guiche");
-const modalContainer = document.querySelector(".fundo-container-ativacao-guiche");
-const buttonFechar = document.querySelector(".close");
-const buttonCancelar = document.querySelector(".cancel");
-const buttonSalvar = document.querySelector(".save");
+const buttonAbrir_AtivGuiche = document.querySelector(".open-ativacao-guiche");
+const modalContainer_AtivGuiche = document.querySelector(".fundo-container-ativacao-guiche");
+const buttonFechar_AtivGuiche = document.querySelector(".close_AtivGuiche");
+const buttonCancelar_AtivGuiche = document.querySelector(".cancel_AtivGuiche");
+const buttonSalvar_AtivGuiche = document.querySelector(".save_AtivGuiche");
 
-buttonAbrir.addEventListener("click", () => {
-    modalContainer.classList.add("show");
+buttonAbrir_AtivGuiche.addEventListener("click", () => {
+    modalContainer_AtivGuiche.classList.add("show");
 });
 
-buttonCancelar.addEventListener("click", () => {
-    modalContainer.classList.remove("show");
+buttonCancelar_AtivGuiche.addEventListener("click", () => {
+    modalContainer_AtivGuiche.classList.remove("show");
 });
-buttonSalvar.addEventListener("click", () => {
-    modalContainer.classList.remove("show");
+buttonSalvar_AtivGuiche.addEventListener("click", () => {
+    modalContainer_AtivGuiche.classList.remove("show");
 }); 

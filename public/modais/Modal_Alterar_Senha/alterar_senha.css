@@ -122,7 +122,7 @@
 }
 
 /* Estilo do botão cancelar */
-.botao-modal-alterar-senha.cancel {
+.cancel_AltSenha {
     background-color: #33404D;
     color: white;
     margin-right: 30px;
@@ -131,13 +131,13 @@
     padding: 10px 30px;
 }
 
-.botao-modal-alterar-senha.cancel:hover {
-    color: #FFF;
+.cancel_AltSenha:hover {
+    color: #ff0000;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }
 
 /* Estilo do botão salvar */
-.botao-modal-alterar-senha.save {
+.save_AltSenha {
     background-color: #33404D;
     color: white;
     border-radius: 5px;
@@ -145,7 +145,7 @@
     padding: 10px 30px;
 }
 
-.botao-modal-alterar-senha.save:hover {
+.save_AltSenha:hover {
     color: #3AA867;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }

@@ -5,9 +5,8 @@
         <hr class="linha-ativacao-servico">
         <p class="texto-ativacao-servico"><b>Deseja Ativar Esse Serviço?</b></p>
         <div class="button-group-ativacao-servico">
-            <button class="botao-modal-ativacao-servico cancel">Não</button>
-            <button class="botao-modal-ativacao-servico save">Sim</button>
+            <button class="botao-modal-ativacao-servico cancel_AtivServico">Não</button>
+            <button class="botao-modal-ativacao-servico save_AtivServico">Sim</button>
         </div>
     </section>
 </div>
-<script src="./ativacao_servico.js" defer></script>

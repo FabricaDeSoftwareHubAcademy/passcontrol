@@ -21,8 +21,8 @@
             <input type="text" class="input-text-servicos" placeholder="Digite o nome do novo serviço">
         </div>
         <div class="button-group-cadastro-servico">
-            <button class="botao-modal-cadastro-servico cancel">Cancelar</button>
-            <button class="botao-modal-cadastro-servico save">Salvar</button>
+            <button class="botao-modal-cadastro-servico cancel_CadServico">Cancelar</button>
+            <button class="botao-modal-cadastro-servico save_CadServico">Salvar</button>
         </div>
     </section>
 </div>

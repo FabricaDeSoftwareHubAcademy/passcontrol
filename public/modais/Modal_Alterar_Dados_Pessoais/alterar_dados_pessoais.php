@@ -22,9 +22,8 @@
             <input type="file" class="input-file">
         </div>
         <div class="button-group-alterar-dados">
-            <button class="botao-modal-alterar-dados cancel">Voltar</button>
-            <button class="botao-modal-alterar-dados save">Salvar</button>
+            <button class="botao-modal-alterar-dados cancel_AltDadosPessoais">Voltar</button>
+            <button class="botao-modal-alterar-dados save_AltDadosPessoais">Salvar</button>
         </div>            
     </section>
 </div>
-<script src="./alterar_dados_pessoais.js" defer></script>

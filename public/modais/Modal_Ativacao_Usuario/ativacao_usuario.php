@@ -5,9 +5,8 @@
         <hr class="linha-ativacao-usuario">
         <p class="texto-ativacao-usuario"><b>Deseja Ativar Esse Usuário?</b></p>
         <div class="button-group-ativacao-usuario">
-            <button class="botao-modal-ativacao-usuario cancel">Não</button>
-            <button class="botao-modal-ativacao-usuario save">Sim</button>
+            <button class="botao-modal-ativacao-usuario cancel_AtivUsuario">Não</button>
+            <button class="botao-modal-ativacao-usuario save_AtivUsuario">Sim</button>
         </div>
     </section>
 </div>
-<script src="./ativacao_usuario.js" defer></script>

@@ -1,16 +1,16 @@
-const buttonAbrir = document.querySelector(".open-ativacao-servico");
-const modalContainer = document.querySelector(".fundo-container-ativacao-servico");
-const buttonFechar = document.querySelector(".close");
-const buttonCancelar = document.querySelector(".cancel");
-const buttonSalvar = document.querySelector(".save");
+const buttonAbrir_AtivServico = document.querySelector(".open-ativacao-servico");
+const modalContainer_AtivServico = document.querySelector(".fundo-container-ativacao-servico");
+const buttonFechar_AtivServico = document.querySelector(".close_AtivServico");
+const buttonCancelar_AtivServico = document.querySelector(".cancel_AtivServico");
+const buttonSalvar_AtivServico = document.querySelector(".save_AtivServico");
 
-buttonAbrir.addEventListener("click", () => {
-    modalContainer.classList.add("show");
+buttonAbrir_AtivServico.addEventListener("click", () => {
+    modalContainer_AtivServico.classList.add("show");
 });
 
-buttonCancelar.addEventListener("click", () => {
-    modalContainer.classList.remove("show");
+buttonCancelar_AtivServico.addEventListener("click", () => {
+    modalContainer_AtivServico.classList.remove("show");
 });
-buttonSalvar.addEventListener("click", () => {
-    modalContainer.classList.remove("show");
+buttonSalvar_AtivServico.addEventListener("click", () => {
+    modalContainer_AtivServico.classList.remove("show");
 });

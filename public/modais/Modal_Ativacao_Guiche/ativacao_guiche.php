@@ -5,9 +5,8 @@
         <hr class="linha-ativacao-guiche">
         <p class="texto-ativacao-guiche"><b>Deseja Ativar Esse Guichê?</b></p>
         <div class="button-group-ativacao-guiche">
-            <button class="botao-modal-ativacao-guiche cancel">Não</button>
-            <button class="botao-modal-ativacao-guiche save">Sim</button>
+            <button class="botao-modal-ativacao-guiche cancel_AtivGuiche">Não</button>
+            <button class="botao-modal-ativacao-guiche save_AtivGuiche">Sim</button>
         </div>
     </section>
 </div>
-<script src="./ativacao_guiche.js" defer></script>
