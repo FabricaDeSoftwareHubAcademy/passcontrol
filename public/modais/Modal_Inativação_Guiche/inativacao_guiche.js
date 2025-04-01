@@ -1,16 +1,15 @@
-const buttonAbrir = document.querySelector(".open-inativacao-guiche");
-const modalContainer = document.querySelector(".fundo-inativacao-guiche");
-const buttonFechar = document.querySelector(".close");
-const buttonCancelar = document.querySelector(".cancel");
-const buttonSalvar = document.querySelector(".save");
+const buttonAbrir_InativacaoGuiche = document.querySelector(".open-inativacao-guiche");
+const modalContainer_InativacaoGuiche = document.querySelector(".fundo-inativacao-guiche");
+const buttonCancelar_InativacaoGuiche = document.querySelector(".cancel_InativacaoGuiche");
+const buttonSalvar_InativacaoGuiche = document.querySelector(".save_InativacaoGuiche");
 
-buttonAbrir.addEventListener("click", () => {
-    modalContainer.classList.add("show");
+buttonAbrir_InativacaoGuiche.addEventListener("click", () => {
+    modalContainer_InativacaoGuiche.classList.add("show");
 });
 
-buttonCancelar.addEventListener("click", () => {
-    modalContainer.classList.remove("show");
+buttonCancelar_InativacaoGuiche.addEventListener("click", () => {
+    modalContainer_InativacaoGuiche.classList.remove("show");
 });
-buttonSalvar.addEventListener("click", () => {
-    modalContainer.classList.remove("show");
+buttonSalvar_InativacaoGuiche.addEventListener("click", () => {
+    modalContainer_InativacaoGuiche.classList.remove("show");
 });

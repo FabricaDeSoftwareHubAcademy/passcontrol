@@ -1,16 +1,16 @@
-const buttonAbrir = document.querySelector(".open-inativar-servico");
-const modalContainer = document.querySelector(".fundo-inativar-servico");
-const buttonFechar = document.querySelector(".close");
-const buttonCancelar = document.querySelector(".cancel");
-const buttonSalvar = document.querySelector(".save");
+const buttonAbrir_InativacaoServico = document.querySelector(".open-inativar-servico");
+const modalContainer_InativacaoServico = document.querySelector(".fundo-inativar-servico");
+const buttonFechar_InativacaoServico = document.querySelector(".close");
+const buttonCancelar_InativacaoServico = document.querySelector(".cancel_InativacaoServico");
+const buttonSalvar_InativacaoServico = document.querySelector(".save_InativacaoServico");
 
-buttonAbrir.addEventListener("click", () => {
-    modalContainer.classList.add("show");
+buttonAbrir_InativacaoServico.addEventListener("click", () => {
+    modalContainer_InativacaoServico.classList.add("show");
 });
 
-buttonCancelar.addEventListener("click", () => {
-    modalContainer.classList.remove("show");
+buttonCancelar_InativacaoServico.addEventListener("click", () => {
+    modalContainer_InativacaoServico.classList.remove("show");
 });
-buttonSalvar.addEventListener("click", () => {
-    modalContainer.classList.remove("show");
+buttonSalvar_InativacaoServico.addEventListener("click", () => {
+    modalContainer_InativacaoServico.classList.remove("show");
 });

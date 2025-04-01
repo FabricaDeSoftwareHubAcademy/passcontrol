@@ -1,21 +1,21 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const modalContainer = document.querySelector(".fundo-status-atendimento");
-    const openModal = document.querySelector(".open-status-atendimento");
-    const closeModal = document.querySelector(".close");
+    const modalContainer_StatusAtendimento = document.querySelector(".fundo-status-atendimento");
+    const openModal_StatusAtendimento = document.querySelector(".open-status-atendimento");
+    const closeModal_StatusAtendimento = document.querySelector(".close_StatusAtendimento");
 
-    if (openModal && closeModal && modalContainer) {
-        openModal.addEventListener("click", function () {
-            modalContainer.style.display = "flex";
+    if (openModal_StatusAtendimento && closeModal_StatusAtendimento && modalContainer_StatusAtendimento) {
+        openModal_StatusAtendimento.addEventListener("click", function () {
+            modalContainer_StatusAtendimento.style.display = "flex";
         });
 
-        closeModal.addEventListener("click", function () {
-            modalContainer.style.display = "none";
+        closeModal_StatusAtendimento.addEventListener("click", function () {
+            modalContainer_StatusAtendimento.style.display = "none";
         });
 
         // Fechar o modal ao clicar fora dele
-        modalContainer.addEventListener("click", function (event) {
-            if (event.target === modalContainer) {
-                modalContainer.style.display = "none";
+        modalContainer_StatusAtendimento.addEventListener("click", function (event) {
+            if (event.target === modalContainer_StatusAtendimento) {
+                modalContainer_StatusAtendimento.style.display = "none";
             }
         });
     } else {

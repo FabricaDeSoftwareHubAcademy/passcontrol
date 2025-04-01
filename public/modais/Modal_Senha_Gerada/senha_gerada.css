@@ -99,16 +99,15 @@
     margin-top: 15px;
 }
 
-.modal-senha-gerada .botao-modal .Okay {
+.okay_SenhaGerada {
     background-color: #33404D;
     color: white;
     border-radius: 5px;
     font-size: 14px;
     padding: 12px 30px;
-    margin-bottom: 30px;
 }
 
-.modal-senha-gerada .button-group .Okay:hover {
+.okay_SenhaGerada:hover {
     color: white;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }

@@ -1,10 +1,10 @@
-const buttonAbrir = document.querySelector(".open-fila-zerada");
-const modalContainer = document.querySelector(".fundo-fila-zerada");
-const buttonVoltar = document.querySelector(".voltar");
+const buttonAbrir_FilaZerada = document.querySelector(".open-fila-zerada");
+const modalContainer_FilaZerada = document.querySelector(".fundo-fila-zerada");
+const buttonVoltar_FilaZerada = document.querySelector(".voltar_FilaZerada");
 
-buttonAbrir.addEventListener("click", () => {
-    modalContainer.classList.add("show");
+buttonAbrir_FilaZerada.addEventListener("click", () => {
+    modalContainer_FilaZerada.classList.add("show");
 });
-buttonVoltar.addEventListener("click", () => {
-    modalContainer.classList.remove("show");
+buttonVoltar_FilaZerada.addEventListener("click", () => {
+    modalContainer_FilaZerada.classList.remove("show");
 });

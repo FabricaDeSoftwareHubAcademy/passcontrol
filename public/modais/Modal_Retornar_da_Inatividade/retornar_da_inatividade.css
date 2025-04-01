@@ -4,6 +4,15 @@
     box-sizing: border-box;
 }
 
+/* Estilo dos botões */
+.botao-modal {
+    background-color: #33404D;
+    color: #FFFFFF;
+    border: 0;
+    font-weight: 500;
+    cursor: pointer;
+}
+
 /* Estilo do background do modal */
 .fundo-retornar-da-inatividade {
     background: rgba(0, 0, 0, 0.5);
@@ -106,16 +115,18 @@
     border: 0;
     font-weight: 500;
     cursor: pointer;
+    padding: 10px 30px;
+    border-radius: 5px;
 }
 
 /* Estilo do botão cancelar*/
-.modal-retornar-da-inatividade .button-group .botao-modal.sair:hover {
+.sair_RetornarInatividade:hover {
     color: #ff0000;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }
 
 /* Estilo do botão salvar */
-.modal-retornar-da-inatividade .button-group .botao-modal.confirma:hover {
+.confirma_RetornarInatividade:hover {
     color: #3AA867;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }

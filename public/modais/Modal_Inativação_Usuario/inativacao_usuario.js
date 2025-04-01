@@ -1,16 +1,16 @@
-const buttonAbrir = document.querySelector(".open-inativar-usuario");
-const modalContainer = document.querySelector(".fundo-inativar-usuario");
-const buttonFechar = document.querySelector(".close");
-const buttonCancelar = document.querySelector(".cancel");
-const buttonSalvar = document.querySelector(".save");
+const buttonAbrir_InativacaoUsuario = document.querySelector(".open-inativar-usuario");
+const modalContainer_InativacaoUsuario = document.querySelector(".fundo-inativar-usuario");
+const buttonFechar_InativacaoUsuario = document.querySelector(".close");
+const buttonCancelar_InativacaoUsuario = document.querySelector(".cancel_InativacaoUsuario");
+const buttonSalvar_InativacaoUsuario = document.querySelector(".save_InativacaoUsuario");
 
-buttonAbrir.addEventListener("click", () => {
-    modalContainer.classList.add("show");
+buttonAbrir_InativacaoUsuario.addEventListener("click", () => {
+    modalContainer_InativacaoUsuario.classList.add("show");
 });
 
-buttonCancelar.addEventListener("click", () => {
-    modalContainer.classList.remove("show");
+buttonCancelar_InativacaoUsuario.addEventListener("click", () => {
+    modalContainer_InativacaoUsuario.classList.remove("show");
 });
-buttonSalvar.addEventListener("click", () => {
-    modalContainer.classList.remove("show");
+buttonSalvar_InativacaoUsuario.addEventListener("click", () => {
+    modalContainer_InativacaoUsuario.classList.remove("show");
 });
