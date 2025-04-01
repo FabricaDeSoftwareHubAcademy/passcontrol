@@ -16,9 +16,8 @@
             <input type="text" class="input-text-ponto-atendimento" placeholder="Ex: 01, 02...">
         </div>
         <div class="button-group-ponto-atendimento">
-            <button class="botao-modal-ponto-atendimento cancel">Voltar</button>
-            <button class="botao-modal-ponto-atendimento save">Salvar</button>
+            <button class="botao-modal-ponto-atendimento cancel_CadPontoAtend">Voltar</button>
+            <button class="botao-modal-ponto-atendimento save_CadPontoAtend">Salvar</button>
         </div>
     </section>
 </div>
-<script src="./cadastro_ponto_atendimento.js" defer></script>

@@ -1,11 +1,11 @@
-const buttonAbrir = document.querySelector(".open-confirmacao-senha");
-const modalContainer = document.querySelector(".fundo-container-confirmacao-senha");
-const buttonFechar = document.querySelector(".Okay");
+const buttonAbrir_ConfSenha = document.querySelector(".open-confirmacao-senha");
+const modalContainer_ConfSenha = document.querySelector(".fundo-container-confirmacao-senha");
+const buttonFechar_ConfSenha = document.querySelector(".Okay_ConfSenha");
 
-buttonAbrir.addEventListener("click", () => {
-    modalContainer.classList.add("show");
+buttonAbrir_ConfSenha.addEventListener("click", () => {
+    modalContainer_ConfSenha.classList.add("show");
 });
 
-buttonFechar.addEventListener("click", () => {
-    modalContainer.classList.remove("show");
+buttonFechar_ConfSenha.addEventListener("click", () => {
+    modalContainer_ConfSenha.classList.remove("show");
 });

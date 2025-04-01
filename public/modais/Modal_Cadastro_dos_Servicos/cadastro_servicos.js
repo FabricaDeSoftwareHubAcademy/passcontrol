@@ -1,16 +1,16 @@
-const buttonAbrir = document.querySelector(".open-cadas-servicos");
-const modalContainer = document.querySelector(".modal-container-cadas-servicos");
-const buttonFechar = document.querySelector(".close");
-const buttonCancelar = document.querySelector(".cancel");
-const buttonSalvar = document.querySelector(".save");
+const buttonAbrir_CadServico = document.querySelector(".open-cadast-servicos");
+const modalContainer_CadServico = document.querySelector(".modal-container-cadas-servicos");
+const buttonFechar_CadServico = document.querySelector(".close_CadServico");
+const buttonCancelar_CadServico = document.querySelector(".cancel_CadServico");
+const buttonSalvar_CadServico = document.querySelector(".save_CadServico");
 
-buttonAbrir.addEventListener("click", () => {
-    modalContainer.classList.add("show");
+buttonAbrir_CadServico.addEventListener("click", () => {
+    modalContainer_CadServico.classList.add("show");
 });
 
-buttonCancelar.addEventListener("click", () => {
-    modalContainer.classList.remove("show");
+buttonCancelar_CadServico.addEventListener("click", () => {
+    modalContainer_CadServico.classList.remove("show");
 });
-buttonSalvar.addEventListener("click", () => {
-    modalContainer.classList.remove("show");
+buttonSalvar_CadServico.addEventListener("click", () => {
+    modalContainer_CadServico.classList.remove("show");
 });

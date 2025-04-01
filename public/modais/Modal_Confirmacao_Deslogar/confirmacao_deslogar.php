@@ -5,9 +5,8 @@
         <hr class="linha-confirmacao-deslogar">
         <p class="texto-confirmacao-deslogar"><b>Deseja Realmente Sair do Sistema?</b></p>
         <div class="button-group-confirmacao-deslogar">
-            <button class="botao-modal-confirmacao-deslogar cancel">Não</button>
-            <button class="botao-modal-confirmacao-deslogar save">Sim</button>
+            <button class="botao-modal-confirmacao-deslogar cancel_ConfDeslog">Não</button>
+            <button class="botao-modal-confirmacao-deslogar save_ConfDeslog">Sim</button>
         </div>
     </section>
 </div>
-<script src="./confirmacao_deslogar.js" defer></script>

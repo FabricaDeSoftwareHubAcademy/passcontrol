@@ -123,7 +123,7 @@
 }
 
 /* Estilo do botão cancelar */
-.modal-cadastro-novo-perfil-acesso .button-group .cancel {
+.cancel_CadNovoPerfilAcesso {
     background-color: #33404D;
     color: white;
     border-radius: 5px;
@@ -132,13 +132,13 @@
 }
 
 /* Estilo do botão cancelar no hover */
-.modal-cadastro-novo-perfil-acesso .button-group .cancel:hover {
+.cancel_CadNovoPerfilAcesso:hover {
     color: #FF0000;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }
 
 /* Estilo do botão salvar */
-.modal-cadastro-novo-perfil-acesso .button-group .save {
+.save_CadNovoPerfilAcesso {
     background-color: #33404D;
     color: white;
     border-radius: 5px;
@@ -147,7 +147,7 @@
 }
 
 /* Estilo do botão salvar no hover */
-.modal-cadastro-novo-perfil-acesso .button-group .save:hover {
+.save_CadNovoPerfilAcesso:hover {
     color: #3AA867;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }

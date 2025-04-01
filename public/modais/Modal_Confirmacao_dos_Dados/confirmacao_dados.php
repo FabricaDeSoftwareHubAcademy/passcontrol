@@ -5,8 +5,7 @@
         <hr class="modal-divider-confirmacao-dados">
         <p class="modal-message-confirmacao-dados"><b>Salvo com sucesso!</b></p>
         <div class="button-group-confirmacao-dados">
-            <button class="botao-modal-confirmacao-dados Okay">Ok</button>
+            <button class="botao-modal-confirmacao-dados Okay_ConfDados">Ok</button>
         </div>
     </section>
 </div>
-<script src="./confirmacao_dados.js" defer></script>

@@ -1,18 +1,18 @@
-const buttonAbrir = document.querySelector(".open-cadastro-novo-perfil-acesso");
-const modalContainer = document.querySelector(".fundo-cadastro-novo-perfil-acesso");
-const buttonFechar = document.querySelector(".close");
-const buttonCancelar = document.querySelector(".cancel");
-const buttonSalvar = document.querySelector(".save");
+const buttonAbrir_CadNovoPerfilAcesso = document.querySelector(".open-cadastro-novo-perfil-acesso");
+const modalContainer_CadNovoPerfilAcesso = document.querySelector(".fundo-cadastro-novo-perfil-acesso");
+const buttonFechar_CadNovoPerfilAcesso = document.querySelector(".close_CadNovoPerfilAcesso");
+const buttonCancelar_CadNovoPerfilAcesso = document.querySelector(".cancel_CadNovoPerfilAcesso");
+const buttonSalvar_CadNovoPerfilAcesso = document.querySelector(".save_CadNovoPerfilAcesso");
 
-buttonAbrir.addEventListener("click", () => {
-    modalContainer.classList.add("show");
+buttonAbrir_CadNovoPerfilAcesso.addEventListener("click", () => {
+    modalContainer_CadNovoPerfilAcesso.classList.add("show");
 });
 
-buttonCancelar.addEventListener("click", () => {
+buttonCancelar_CadNovoPerfilAcesso.addEventListener("click", () => {
     modalContainer.classList.remove("show");
 });
-buttonSalvar.addEventListener("click", () => {
-    modalContainer.classList.remove("show");
+buttonSalvar_CadNovoPerfilAcesso.addEventListener("click", () => {
+    modalContainer_CadNovoPerfilAcesso.classList.remove("show");
 });
 
 

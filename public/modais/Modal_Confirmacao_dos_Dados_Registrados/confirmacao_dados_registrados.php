@@ -5,9 +5,8 @@
         <hr class="linha-confirmacao-dados-registrados">
         <p class="texto-confirmacao-dados-registrados"><b>Deseja Salvar as Edições Feitas?</b></p>
         <div class="button-group-confirmacao-dados-registrados">
-            <button class="botao-modal-confirmacao-dados-registrados cancel">Não</button>
-            <button class="botao-modal-confirmacao-dados-registrados save">Sim</button>
+            <button class="botao-modal-confirmacao-dados-registrados cancel_ConfDadosRegist">Não</button>
+            <button class="botao-modal-confirmacao-dados-registrados save_ConfDadosRegist">Sim</button>
         </div>
     </section>
 </div>
-<script src="./confirmacao_dados_registrados.js" defer></script>

@@ -1,16 +1,16 @@
-const buttonAbrir = document.querySelector(".open");
-const modalContainer = document.querySelector(".fundo-container-confirmacao-servico-cadastrado");
-const buttonFechar = document.querySelector(".close");
-const buttonCancelar = document.querySelector(".cancel");
-const buttonSalvar = document.querySelector(".save");
+const buttonAbrir_ConfServCadastr = document.querySelector(".open-conf-servico-cadastrado");
+const modalContainer_ConfServCadastr = document.querySelector(".fundo-container-confirmacao-servico-cadastrado");
+const buttonFechar_ConfServCadastr = document.querySelector(".close_ConfServCadastr");
+const buttonCancelar_ConfServCadastr = document.querySelector(".cancel_ConfServCadastr");
+const buttonSalvar_ConfServCadastr = document.querySelector(".save_ConfServCadastr");
 
-buttonAbrir.addEventListener("click", () => {
-    modalContainer.classList.add("show");
+buttonAbrir_ConfServCadastr.addEventListener("click", () => {
+    modalContainer_ConfServCadastr.classList.add("show");
 });
 
-buttonCancelar.addEventListener("click", () => {
-    modalContainer.classList.remove("show");
+buttonCancelar_ConfServCadastr.addEventListener("click", () => {
+    modalContainer_ConfServCadastr.classList.remove("show");
 });
-buttonSalvar.addEventListener("click", () => {
-    modalContainer.classList.remove("show");
+buttonSalvar_ConfServCadastr.addEventListener("click", () => {
+    modalContainer_ConfServCadastr.classList.remove("show");
 });

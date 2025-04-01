@@ -44,9 +44,8 @@
         </article>
 
         <div class="button-group">
-            <button class="botao-modal cancel">Cancelar</button>
-            <button class="botao-modal save">Salvar</button>
+            <button class="botao-modal cancel_CadNovoPerfilAcesso">Cancelar</button>
+            <button class="botao-modal save_CadNovoPerfilAcesso">Salvar</button>
         </div>
     </section>
 </div>
-<script src="./cadastro_novo_perfil_acesso.js" defer></script>

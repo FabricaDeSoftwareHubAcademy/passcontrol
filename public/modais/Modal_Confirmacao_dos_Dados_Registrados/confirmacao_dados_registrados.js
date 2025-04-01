@@ -1,16 +1,16 @@
-const buttonAbrir = document.querySelector(".open-confirmacao-dados-registrados");
-const modalContainer = document.querySelector(".fundo-container-confirmacao-dados-registrados");
-const buttonFechar = document.querySelector(".close");
-const buttonCancelar = document.querySelector(".cancel");
-const buttonSalvar = document.querySelector(".save");
+const buttonAbrir_ConfDadosRegist = document.querySelector(".open-confirmacao-dados-registrados");
+const modalContainer_ConfDadosRegist = document.querySelector(".fundo-container-confirmacao-dados-registrados");
+const buttonFechar_ConfDadosRegist = document.querySelector(".close_ConfDadosRegist");
+const buttonCancelar_ConfDadosRegist = document.querySelector(".cancel_ConfDadosRegist");
+const buttonSalvar_ConfDadosRegist = document.querySelector(".save_ConfDadosRegist");
 
-buttonAbrir.addEventListener("click", () => {
-    modalContainer.classList.add("show");
+buttonAbrir_ConfDadosRegist.addEventListener("click", () => {
+    modalContainer_ConfDadosRegist.classList.add("show");
 });
 
-buttonCancelar.addEventListener("click", () => {
-    modalContainer.classList.remove("show");
+buttonCancelar_ConfDadosRegist.addEventListener("click", () => {
+    modalContainer_ConfDadosRegist.classList.remove("show");
 });
-buttonSalvar.addEventListener("click", () => {
-    modalContainer.classList.remove("show");
+buttonSalvar_ConfDadosRegist.addEventListener("click", () => {
+    modalContainer_ConfDadosRegist.classList.remove("show");
 });

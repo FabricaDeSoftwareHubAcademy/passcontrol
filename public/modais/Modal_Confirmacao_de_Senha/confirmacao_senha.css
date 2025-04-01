@@ -99,7 +99,7 @@
     margin-top: 45px;
 }
 
-.botao-modal-confirmacao-senha.Okay {
+.Okay_ConfSenha {
     background-color: #33404D;
     color: white;
     border-radius: 5px;
@@ -108,7 +108,7 @@
     /* margin-bottom: 30px; */
 }
 
-.botao-modal-confirmacao-senha.Okay:hover {
+.Okay_ConfSenha:hover {
     color: white;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }

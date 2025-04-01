@@ -86,7 +86,7 @@
     margin-top: 15px;
 }
 
-.botao-modal-confirmacao-dados.Okay {
+.Okay_ConfDados {
     background-color: #33404D;
     color: white;
     border-radius: 5px;
@@ -95,7 +95,7 @@
     margin-bottom: 10px;
 }
 
-.botao-modal-confirmacao-dados.Okay:hover {
+.Okay_ConfDados:hover {
     color: white;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }

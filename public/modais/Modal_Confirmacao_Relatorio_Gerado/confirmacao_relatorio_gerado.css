@@ -86,7 +86,7 @@
     margin-top: 15px;
 }
 
-.modal-conf-relatorio-gerado .botao-modal .Okay {
+.Okay_ConfRelatGerad {
     background-color: #33404D;
     color: white;
     border-radius: 5px;
@@ -95,7 +95,7 @@
     margin-bottom: 10px;
 }
 
-.modal-conf-relatorio-gerado .button-group .Okay:hover {
+.Okay_ConfRelatGerad:hover {
     color: white;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }

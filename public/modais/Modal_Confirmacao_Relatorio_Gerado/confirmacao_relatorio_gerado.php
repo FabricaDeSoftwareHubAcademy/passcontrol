@@ -7,8 +7,7 @@
 
         <p class="modal-message"><b>Relatório Gerado com sucesso</b></p>
         <div class="button-group">
-            <button class="botao-modal Okay">Ok</button>
+            <button class="botao-modal Okay_ConfRelatGerad">Ok</button>
         </div>
     </section>
 </div>
-<script src="./confirmacao_relatorio_gerado.js" defer></script>

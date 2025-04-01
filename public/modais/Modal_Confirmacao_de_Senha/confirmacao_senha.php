@@ -6,8 +6,7 @@
         <img src="../../../public/img/img-modais/tick-circlecheck.png" alt="Check" class="check-image-confirmacao-senha">
         <p class="modal-message-confirmacao-senha"><b>Código enviado com sucesso para fri****@gmail.com</b></p>
         <div class="button-group-confirmacao-senha">
-            <button class="botao-modal-confirmacao-senha Okay">Ok</button>
+            <button class="botao-modal-confirmacao-senha Okay_ConfSenha">Ok</button>
         </div>
     </section>
 </div>
-<script src="./confirmacao_senha.js" defer></script>

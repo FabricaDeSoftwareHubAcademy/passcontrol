@@ -26,5 +26,3 @@
         </div>
     </section>
 </div>
-
-<script src="./cadastro_servicos.js" defer></script>

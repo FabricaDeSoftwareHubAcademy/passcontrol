@@ -92,7 +92,7 @@
 }
 
 /* Estilo do botão cancelar */
-.cancel {
+.cancel_ConfDeslog {
     background-color: #33404D;
     color: white;
     margin-right: 30px;
@@ -101,13 +101,13 @@
     padding: 10px 30px;
 }
 
-.cancel:hover {
+.cancel_ConfDeslog:hover {
     color: #FF0000;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }
 
 /* Estilo do botão salvar */
-.save {
+.save_ConfDeslog {
     background-color: #33404D;
     color: white;
     border-radius: 5px;
@@ -115,7 +115,7 @@
     padding: 10px 30px;
 }
 
-.save:hover {
+.save_ConfDeslog:hover {
     color: #3AA867;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }
