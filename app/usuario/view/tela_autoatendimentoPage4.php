@@ -59,5 +59,6 @@
     </main>
 
     <script src="../../../public/js/tela_autoatendimentoPage4.js"></script>
+    <script src="../../../public/js/enviarDadosFilaSenha.js"></script>
 </body>
 </html>
