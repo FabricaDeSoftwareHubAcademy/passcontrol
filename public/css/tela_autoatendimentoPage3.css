@@ -84,22 +84,27 @@
     font-weight: 800;    
 }
 
-
 .area-cinza {
     background-color: rgba(0, 0, 0, 0.1); 
     width: calc(100% - 40px);
-    min-height: 60vh;
-    height: calc(100vh - 160px);
-    top: 10px; 
-    left: 10px; 
-    right: 10px; 
+    /* min-height: 60vh;  */
+    height: calc(98vh - 160px);
+    min-height: calc(98vh - 160px);
+    /* height: auto; */
     display: flex;
     flex-direction: column;
-    justify-content:flex-start;
+    justify-content: space-between;
     align-items: center;
     border-radius: 10px;
     padding: 20px;
+    margin-bottom: 20px; 
+    position: relative; 
+    flex-grow: 1;
+    height: auto;
 }
+
+
+
 
 .box-inputs {
     display: flex;
@@ -118,8 +123,10 @@
 .input-group {
     display: flex;
     flex-direction: column;
-    width: calc(50% - 20px); 
+    width: 100%;
+    max-width: 500px;
 }
+
 
 .input-group label {
     margin-bottom: 5px;
@@ -146,7 +153,6 @@
 
 .information {
     width: 100%;
-    /* max-width: 500px; */
     height: auto;
     padding: 20px;
     background-color: white;
@@ -165,13 +171,17 @@
     text-overflow: ellipsis;
 }
 
-.footer{
+
+.footer {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     width: 100%;
-    padding: 0 20px;
+    padding: 20px 20px;
+    justify-content: space-between;
+    margin-top: auto; 
+    position: relative;
 }
+
 
 .button {
     display: flex;
@@ -194,7 +204,7 @@
 }
 
 .button:hover .btn-voltar {
-    color: green; 
+    color: red; 
 }
 .button:hover .btn-confirmar {
     color: var(--verde-control); 
