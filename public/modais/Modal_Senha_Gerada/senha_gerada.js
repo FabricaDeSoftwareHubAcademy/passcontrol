@@ -1,11 +1,11 @@
-const buttonAbrir = document.querySelector(".abrir-senha-gerada");
-const modalContainer = document.querySelector(".fundo-senha-gerada");
-const buttonFechar = document.querySelector(".Okay");
+const buttonAbrir_SenhaGerada = document.querySelector(".abrir-senha-gerada");
+const modalContainer_SenhaGerada = document.querySelector(".fundo-senha-gerada");
+const buttonFechar_SenhaGerada = document.querySelector(".okay_SenhaGerada");
 
-buttonAbrir.addEventListener("click", () => {
-    modalContainer.classList.add("show");
+buttonAbrir_SenhaGerada.addEventListener("click", () => {
+    modalContainer_SenhaGerada.classList.add("show");
 });
 
-buttonFechar.addEventListener("click", () => {
-    modalContainer.classList.remove("show");
+buttonFechar_SenhaGerada.addEventListener("click", () => {
+    modalContainer_SenhaGerada.classList.remove("show");
 });

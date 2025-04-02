@@ -1,16 +1,16 @@
-const buttonAbrirEncerrarAtendimento = document.querySelector(".open-encerrar-atendimento");
-const modalContainerEncerrarAtendimento = document.querySelector(".fundo-encerrar-atendimento");
-const buttonFecharEncerrarAtendimento = document.querySelector(".close");
-const buttonCancelarEncerrarAtendimento = document.querySelector(".cancel-encerrar-atendimento");
-const buttonSalvarEncerrarAtendimento = document.querySelector(".save-encerrar-atendimento");
+const buttonAbrir_EncerrarAtendimento = document.querySelector(".open-encerrar-atendimento");
+const modalContainer_EncerrarAtendimento = document.querySelector(".fundo-encerrar-atendimento");
+const buttonFechar_EncerrarAtendimento = document.querySelector(".close");
+const buttonCancelar_EncerrarAtendimento = document.querySelector(".cancel_EncerrarAtendimento");
+const buttonSalvar_EncerrarAtendimento = document.querySelector(".save_EncerrarAtendimento");
 
-buttonAbrirEncerrarAtendimento.addEventListener("click", () => {
-    modalContainerEncerrarAtendimento.classList.add("show");
+buttonAbrir_EncerrarAtendimento.addEventListener("click", () => {
+    modalContainer_EncerrarAtendimento.classList.add("show");
 });
 
-buttonCancelarEncerrarAtendimento.addEventListener("click", () => {
-    modalContainerEncerrarAtendimento.classList.remove("show");
+buttonCancelar_EncerrarAtendimento.addEventListener("click", () => {
+    modalContainer_EncerrarAtendimento.classList.remove("show");
 });
-buttonSalvarEncerrarAtendimento.addEventListener("click", () => {
-    modalContainerEncerrarAtendimento.classList.remove("show");
+buttonSalvar_EncerrarAtendimento.addEventListener("click", () => {
+    modalContainer_EncerrarAtendimento.classList.remove("show");
 });

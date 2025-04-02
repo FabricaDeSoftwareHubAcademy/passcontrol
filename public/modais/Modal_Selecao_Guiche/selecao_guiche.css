@@ -98,7 +98,7 @@
     margin-top: 15px;
 }
 
-.modal-selecao-guiche .button-group .confirm {
+.modal-selecao-guiche .button-group .confirm_SelecaoGuiche{
     background-color: #33404D;
     color: white;
     border-radius: 5px;
@@ -106,7 +106,7 @@
     padding: 10px 15px;
 }
 
-.modal-selecao-guiche .button-group .confirm:hover {
+.modal-selecao-guiche .button-group .confirm_SelecaoGuiche:hover {
     color: #3AA867;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }

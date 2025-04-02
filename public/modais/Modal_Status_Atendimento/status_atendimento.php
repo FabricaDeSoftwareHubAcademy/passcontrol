@@ -1,14 +1,3 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PassControl</title>
-    <link rel="stylesheet" href="status_atendimento.css">
-</head>
-<body class="estruct-pass">
-    <button class="botao-modal open-status-atendimento">Abrir Modal</button>
-
     <div class="fundo-status-atendimento">
         <section class="modal-status-atendimento">
             <div class="modal-header">
@@ -44,6 +33,3 @@
         </section>        
     </div>
     <script src="status_atendimento.js" defer></script>
-
-</body>
-</html>

@@ -89,7 +89,7 @@
 }
 
 /* Estilo do botão cancelar */
-.cancel-encerrar-atendimento {
+.cancel_EncerrarAtendimento {
     background-color: #33404D;
     color: white;
     border-radius: 5px;
@@ -97,13 +97,13 @@
     padding: 10px 30px;
 }
 
-.cancel-encerrar-atendimento:hover {
+.cancel_EncerrarAtendimento:hover {
     color: #FF0000;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }
 
 /* Estilo do botão salvar */
-.modal-encerrar-atendimento .button-group .save-encerrar-atendimento {
+.modal-encerrar-atendimento .button-group .save_EncerrarAtendimento {
     background-color: #33404D;
     color: white;
     border-radius: 5px;
@@ -111,7 +111,7 @@
     padding: 10px 30px;
 }
 
-.modal-encerrar-atendimento .button-group .save-encerrar-atendimento:hover {
+.modal-encerrar-atendimento .button-group .save_EncerrarAtendimento:hover {
     color: #3AA867;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }

@@ -5,8 +5,8 @@
             <hr class="linha">
             <p class="texto"><b>Deseja Encerrar o Atendimento?</b></p>
             <div class="button-group">
-                <button class="botao-modal cancel-encerrar-atendimento">Não</button>
-                <button class="botao-modal save-encerrar-atendimento">Sim</button>
+                <button class="botao-modal cancel_EncerrarAtendimento">Não</button>
+                <button class="botao-modal save_EncerrarAtendimento">Sim</button>
             </div>
         </section>
     </div>
