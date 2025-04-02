@@ -1,4 +1,3 @@
-// Lista de serviços disponíveis
 const services = [
     { img: "../../../public/img/icons/iptu_img.svg", title: "IPTU" },
     { img: "../../../public/img/icons/iluminaçao_img.png", title: "Iluminação Pública" },
@@ -80,3 +79,76 @@ nextButton.addEventListener("click", () => {
 
 //abre a primeira página
 renderPage(currentPage);
+
+// document.addEventListener("DOMContentLoaded", async function () {
+//     const boxContainer = document.getElementById("box-container");
+//     const prevButton = document.getElementById("prevPage");
+//     const nextButton = document.getElementById("nextPage");
+//     const pageIndicator = document.createElement("span"); // Indicador de página
+//     nextButton.parentNode.insertBefore(pageIndicator, nextButton);
+
+//     let currentPage = 1;
+//     const itemsPerPage = 8;
+//     let totalPages = 1;
+
+//     async function fetchServicos(page) {
+//         try {
+//             const response = await fetch(`http://localhost/passcontrol/app/usuario/view/tela_autoatendimentoPage1.php?pagina=${page}`);
+//             const data = await response.json();
+
+//             totalPages = data.total_paginas;
+//             renderPage(data.servicos);
+//             updatePaginationButtons();
+//         } catch (error) {
+//             console.error("Erro ao buscar serviços:", error);
+//         }
+//     }
+
+//     function renderPage(servicos) {
+//         boxContainer.innerHTML = "";
+
+//         servicos.forEach(servico => {
+//             const box = document.createElement("a");
+//             box.href = "../../app/usuario/view/tela_autoatendimentoPage2.php";
+//             box.classList.add("box");
+
+//             box.innerHTML = `
+//                 <img class="imagem-servico" src="${servico.imagem}" alt="${servico.nome_servico}">
+//                 <h4>${servico.nome_servico}</h4>
+//             `;
+
+//             box.addEventListener("click", () => {
+//                 let dadosUsuario = JSON.parse(localStorage.getItem("dadosUsuario")) || {};
+//                 dadosUsuario.servicoSelecionado = servico.nome_servico;
+//                 localStorage.setItem("dadosUsuario", JSON.stringify(dadosUsuario));
+//             });
+
+//             boxContainer.appendChild(box);
+//         });
+
+//         pageIndicator.textContent = `Página ${currentPage}`;
+//     }
+
+//     function updatePaginationButtons() {
+//         prevButton.disabled = currentPage === 1;
+//         nextButton.disabled = currentPage === totalPages;
+//     }
+
+//     prevButton.addEventListener("click", () => {
+//         if (currentPage > 1) {
+//             currentPage--;
+//             fetchServicos(currentPage);
+//         }
+//     });
+
+//     nextButton.addEventListener("click", () => {
+//         if (currentPage < totalPages) {
+//             currentPage++;
+//             fetchServicos(currentPage);
+//         }
+//     });
+
+//     fetchServicos(currentPage);
+// });
+
+// Lista de serviços disponíveis
