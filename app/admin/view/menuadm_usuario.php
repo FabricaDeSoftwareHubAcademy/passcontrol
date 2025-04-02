@@ -96,5 +96,6 @@
     <?php
     include "./monitor-modal.php";
     ?>
+    
 </body>
 </html>

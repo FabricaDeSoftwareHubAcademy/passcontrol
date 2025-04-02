@@ -17,8 +17,6 @@
     <link rel="stylesheet" href="../../../public/css/style_eli.css">
     <link rel="stylesheet" href="../../../public/modais/Modal_Alterar_Dados_Pessoais/alterar_dados_pessoais.css">
     <link rel="stylesheet" href="../../../public/modais/Modal_Alterar_Senha/alterar_senha.css">
-
-    <!-- <link rel="stylesheet" href="../../../public/modais/Modal Cadastro Ponto Atendimento/cadastro_ponto_atendimento.css"> -->
     
     <!-- JS -->
     <script src="../../../public/js/navegacao-menu-lateral.js" defer></script>
@@ -123,7 +121,6 @@
             </main>
         </div>
     </section>
-    <!-- <main-cadastro-cadastro-adm></main-cadastro-cadastro-adm> -->
     
     <?php
     include "./monitor-modal.php";

@@ -72,7 +72,6 @@
         </div>
 
     </section>
-    <!-- <main-edicao-perfil-usuario></main-edicao-perfil-usuario>          -->
 
     <?php
     include "./monitor-modal.php";

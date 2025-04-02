@@ -19,8 +19,6 @@
   <link rel="stylesheet" href="../../../public/modais/Modal_Alterar_Dados_Pessoais/alterar_dados_pessoais.css">
   <link rel="stylesheet" href="../../../public/modais/Modal_Alterar_Senha/alterar_senha.css">
 
-  <!-- <link rel="stylesheet" href="../../../public/modais/Modal Confirmação dos Serviços/estilo.css"> -->
-
   <!-- JS -->
   <script src="../../../public/js/navegacao-menu-lateral.js" defer></script>
   <script src="../../../public/js/monitor-modal.js" defer></script>
@@ -108,6 +106,6 @@
   ?>
 
   <script src="../../../public/js/ativar.js" defer></script>
+  
 </body>
-
 </html>

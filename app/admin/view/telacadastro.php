@@ -114,9 +114,6 @@
         </div>
     </section>
 
-    <!-- <main-salvar-cad></main-salvar-cad> -->
-    
-    <!--MONITOR MODAL-->
     <?php
     include "./monitor-modal.php";
     ?>

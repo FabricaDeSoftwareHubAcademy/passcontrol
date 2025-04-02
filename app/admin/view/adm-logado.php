@@ -79,7 +79,6 @@
             <button type="submit" class="botao-salvar open">Salvar</button>
         </div>
         
-        <!-- <main-modal-adm-logado></main-modal-adm-logado> -->
     </section>
 
     <?php

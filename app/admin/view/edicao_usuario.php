@@ -116,9 +116,7 @@
             </div>
         </div>
     </section>
-    <!-- <main-edicao-usuario></main-edicao-usuario> -->
 
-    <!--MONITOR MODAL-->
     <?php
     include "./monitor-modal.php";
     ?>

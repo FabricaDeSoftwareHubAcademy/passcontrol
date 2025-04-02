@@ -87,8 +87,6 @@
             </div>
         </div>
     </section>
-    
-    <!-- <main-configuracao-autoatendimento></main-configuracao-autoatendimento> -->
 
     <?php
     include "./monitor-modal.php";

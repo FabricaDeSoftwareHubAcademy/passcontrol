@@ -37,8 +37,6 @@
     <script src="../../../public/modais/Modal_Iniciar_Intervalo/iniciar_intervalo.js" defer></script>
     <script src="../../../public/modais/Modal_Encerrar_Atendimento/encerrar-atendimento.js" defer></script>
 
-
-
     <link rel="shortcut icon" type="imagex/png" href="../../../public/img/Logo-Nota-Controlnt.ico">
 </head>
 
@@ -253,11 +251,6 @@
         </nav>
         </div>
     </section>
-    
-    <!-- <main-tela-de-login></main-tela-de-login> -->
-    <!-- <main-proxima-senha></main-proxima-senha> -->
-    <!-- <main-sair-sistema></main-sair-sistema> -->
-    <!-- <main-saida-principal></main-saida-principal> -->
 
     <?php
     include "./monitor-modal.php"; 
