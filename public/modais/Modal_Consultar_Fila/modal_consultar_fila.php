@@ -1,8 +1,6 @@
 <div class="fundo-consultar-fila">
     <section class="modal-consultar-fila">
 
-        <!-- <section class="Area-Util-Projeto"> -->
-
         <nav class="area-comum-consultar-fila">
 
             <div class="topo-consultar-fila">
@@ -124,7 +122,7 @@
             </div>
         </nav>
         <div class="button-group-consultar-fila">
-            <button class="botao-modal-consultar-fila return">Retornar</button>
+            <button class="botao-modal-consultar-fila return_ConsultarFila">Retornar</button>
         </div>
     </section>
 </div>

@@ -90,7 +90,7 @@
 }
 
 /* Estilo do botão fechar */
-.modal-fila-zerada .voltar_FilaZerada {
+.voltar_FilaZerada {
     background-color: #33404D;
     color: white;
     border-radius: 5px;
@@ -98,7 +98,7 @@
     padding: 10px 15px;
 }
 
-.modal-fila-zerada .voltar_FilaZerada:hover {
+.voltar_FilaZerada:hover {
     color: white;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }

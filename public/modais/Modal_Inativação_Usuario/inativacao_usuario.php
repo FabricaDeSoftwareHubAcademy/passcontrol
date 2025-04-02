@@ -12,4 +12,3 @@
         </div>
     </section>
 </div>
-<script src="./inativacao_usuario.js" defer></script>

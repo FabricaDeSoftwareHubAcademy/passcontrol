@@ -1,12 +1,12 @@
-const buttonAbrir = document.querySelector(".abrirConsultarFila");
-const modalContainer = document.querySelector(".fundo-consultar-fila");
-const buttonFechar = document.querySelector(".close");
-const buttonRetornar = document.querySelector(".return");
+const buttonAbrir_ConsultarFila = document.querySelector(".abrirConsultarFila");
+const modalContainer_ConsultarFila = document.querySelector(".fundo-consultar-fila");
+const buttonFechar_ConsultarFila = document.querySelector(".close_ConsultarFila");
+const buttonRetornar_ConsultarFila = document.querySelector(".return_ConsultarFila");
 
-buttonAbrir.addEventListener("click", () => {
-    modalContainer.classList.add("show");
+buttonAbrir_ConsultarFila.addEventListener("click", () => {
+    modalContainer_ConsultarFila.classList.add("show");
 });
 
-buttonRetornar.addEventListener("click", () => {
-    modalContainer.classList.remove("show");
+buttonRetornar_ConsultarFila.addEventListener("click", () => {
+    modalContainer_ConsultarFila.classList.remove("show");
 });

@@ -1,6 +1,6 @@
 const buttonAbrir_InativacaoServico = document.querySelector(".open-inativar-servico");
 const modalContainer_InativacaoServico = document.querySelector(".fundo-inativar-servico");
-const buttonFechar_InativacaoServico = document.querySelector(".close");
+const buttonFechar_InativacaoServico = document.querySelector(".close_InativacaoServico");
 const buttonCancelar_InativacaoServico = document.querySelector(".cancel_InativacaoServico");
 const buttonSalvar_InativacaoServico = document.querySelector(".save_InativacaoServico");
 

@@ -110,7 +110,7 @@
 }
 
 /* Botão de fechar */
-.modal-status-atendimento .close_StatusAtendimento {
+.close_StatusAtendimento {
     margin-top: 20px;
     background-color: #33404D;
     color: white;

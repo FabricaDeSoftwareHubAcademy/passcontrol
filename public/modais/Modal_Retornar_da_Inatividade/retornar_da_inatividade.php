@@ -13,9 +13,8 @@
         </div>
 
         <div class="button-group">
-            <button class="botao-modal sair">Sair</button>
-            <button class="botao-modal confirma">Confirmar</button>
+            <button class="botao-modal sair_RetornarInatividade">Sair</button>
+            <button class="botao-modal confirma_RetornarInatividade">Confirmar</button>
         </div>
     </section>
 </div>
-<script src="./retornar_da_inatividade.js" defer></script>

@@ -1,17 +1,17 @@
-const buttonAbrir = document.querySelector(".open-editar-ponto-atendimento");
-const modalContainer = document.querySelector(".fundo-editar-ponto-atendimento");
-const buttonFechar = document.querySelector(".close");
-const buttonCancelar = document.querySelector(".cancel");
-const buttonSalvar = document.querySelector(".save");
+const buttonAbrir_EdicaoPontoAtendimento = document.querySelector(".open-editar-ponto-atendimento");
+const modalContainer_EdicaoPontoAtendimento = document.querySelector(".fundo-editar-ponto-atendimento");
+const buttonFechar_EdicaoPontoAtendimento = document.querySelector(".close_EdicaoPontoAtendimento");
+const buttonCancelar_EdicaoPontoAtendimento = document.querySelector(".cancel_EdicaoPontoAtendimento");
+const buttonSalvar_EdicaoPontoAtendimento = document.querySelector(".save_EdicaoPontoAtendimento");
 
-buttonAbrir.addEventListener("click", () => {
-    modalContainer.classList.add("show");
+buttonAbrir_EdicaoPontoAtendimento.addEventListener("click", () => {
+    modalContainer_EdicaoPontoAtendimento.classList.add("show");
 });
 
-buttonCancelar.addEventListener("click", () => {
-    modalContainer.classList.remove("show");
+buttonCancelar_EdicaoPontoAtendimento.addEventListener("click", () => {
+    modalContainer_EdicaoPontoAtendimento.classList.remove("show");
 });
 
-buttonSalvar.addEventListener("click", () => {
-    modalContainer.classList.remove("show");
+buttonSalvar_EdicaoPontoAtendimento.addEventListener("click", () => {
+    modalContainer_EdicaoPontoAtendimento.classList.remove("show");
 });

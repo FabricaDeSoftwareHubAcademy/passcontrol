@@ -1,5 +1,5 @@
-@import url(modal-consultar-fila.css);
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
 :root {
     --verde-control: #3AA867;
     --cinza-control: #33404D;
@@ -7,11 +7,109 @@
     --font-main: Inter, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
-
 *{
     font-family: var(--font-main);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+/* Estilo dos botões */
+.botao-modal-consultar-fila {
+    background-color: #33404D;
+    color: #FFFFFF;
+    border: 0;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+/* Estilo do container do modal */
+.fundo-consultar-fila{
+    background: rgba(0, 0, 0, 0.5);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 5;
+}
+
+.show {
+    display: flex;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Estilo do modal */
+.modal-consultar-fila {
+    background-color: #e0e0e0;
+    width: 80%;
+    max-width: 1200px; /* Limita o tamanho máximo */
+    min-width: 400px; /* Evita que fique pequeno demais */
+    height: auto; /* Altura ajustável automaticamente */
+    padding: 0px 20px 20px 20px ;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+    text-align: left;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+/* Estilo do logo */
+.logo-consultar-fila {
+    margin-right: 48px;
+    top: 10px;
+    right: 20px;
+    width: 80px; 
+    max-width: 200px; /* Limita o tamanho máximo */
+    height: auto;
+}
+
+/* Estilo do título */
+.topo-esquerda-consultar-fila{
+    margin-left: 48px;
+    align-items: end;
+    justify-content: center;
+    display: flex;
+}
+
+.topo-esquerda-consultar-fila h3{
+    display: flex;
+    font-size: 28px;
+    /* margin-bottom: 40px; */
+    font-weight: bold;
+    justify-content: left;
+    align-items: center;
+    color: #33404D;
+}
+
+.button-group-consultar-fila{
+    display: flex;
+    justify-content: end;
+    margin-right: 1rem;
+}
+
+/* Estilo do botão salvar */
+.return_ConsultarFila {
+    background-color: #33404D;
+    color: white;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 10px 30px;
+    margin-top: 3rem;
+}
+
+/* Estilo do botão salvar no hover */
+.return_ConsultarFila:hover {
+    color: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
 
 .topo-info-consultar-fila {
     width: 100%;
@@ -99,14 +197,13 @@
     align-items: flex-end;
     margin-left: 26px;
 }
-
-  
-  #txtBusca{
-    float:left;
+ 
+#txtBusca{
+    float: left;
     padding: 5px;
     padding-left: 5px;
-    font-style:italic;
-    font-size:14px;
+    font-style: italic;
+    font-size: 14px;
     outline: 5px;
     border-radius: 5px;
     background-image: url(../img/icons/lupa.png);
@@ -114,9 +211,7 @@
     background-repeat: no-repeat;
     opacity: 0.5;
     border: 2px solid #333;
-  }
-
-
+}
 
 /* TABELA  */
 .fundo-fila-tabela{ 
@@ -211,10 +306,8 @@ tbody {
 thead, tbody tr {
     display: table;
     width: 100%;
-    table-layout: fixed; 
-    
+    table-layout: fixed;
 }
-
 
 
 /* RESPONSIVIDADE */

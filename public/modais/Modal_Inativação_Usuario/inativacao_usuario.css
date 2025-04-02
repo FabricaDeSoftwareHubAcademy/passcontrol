@@ -93,7 +93,7 @@
 }
 
 /* Estilo do botão cancelar */
-.modal-inativar-usuario .button-group .cancel_InativacaoUsuario {
+.cancel_InativacaoUsuario {
     background-color: #33404D;
     color: white;
     border-radius: 5px;
@@ -101,13 +101,13 @@
     padding: 10px 30px;
 }
 
-.modal-inativar-usuario .button-group .cancel_InativacaoUsuario:hover {
+.cancel_InativacaoUsuario:hover {
     color: #FF0000;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }
 
 /* Estilo do botão salvar */
-.modal-inativar-usuario .button-group .save_InativacaoUsuario {
+.save_InativacaoUsuario {
     background-color: #33404D;
     color: white;
     border-radius: 5px;
@@ -115,7 +115,7 @@
     padding: 10px 30px;
 }
 
-.modal-inativar-usuario .button-group .save_InativacaoUsuario:hover {
+.save_InativacaoUsuario:hover {
     color: #3AA867;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }
