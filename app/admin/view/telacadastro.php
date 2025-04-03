@@ -94,7 +94,7 @@
                         </label> 
                         <label class="customizado"> 
                             <input type="checkbox" class="item" id="checkbox"> 
-                            <span class="teste">Poda De Àrvores</span> 
+                            <span class="teste">Poda de Àrvores</span> 
                         </label>
                         <label class="customizado"> 
                             <input type="checkbox" id="select-all"> 

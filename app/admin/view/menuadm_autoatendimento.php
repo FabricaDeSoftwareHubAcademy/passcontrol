@@ -69,7 +69,7 @@
                         <!-- <p>Gestão do Autoatendimento.</p> -->
                     </div>
                     <div class="button-wrapper">
-                        <button class="btn outline" onclick="window.location.href='configuracao-autoatendimento.php';">visualizar Autoatendimento</button>
+                        <button class="btn outline" onclick="window.location.href='configuracao-autoatendimento.php';">Visualizar Autoatendimento</button>
                     </div>
                 </div>
                 <div class="container_menu">

@@ -1,5 +1,5 @@
 <?php
-require '../../../app/CLASSE/guiche.php';
+require '../../../app/classe/guiche.php';
 
 $guiche = new Guiche();
 $guiches = $guiche->buscar();
@@ -65,12 +65,13 @@ $guiches = $guiche->buscar();
                                             </a>
                                         </td>
                                         <td>
-                                            <a href="javascript:void(0);" class="open-modal" data-id="'.$guiche->id_guiche.'" data-status="'.$guiche->ativo.'">
-                                                <div class="toggle-btn '.$estadoAtivo.'">
-                                                    <div class="circulo"></div>
-                                                </div>
+                                            <a href="../../../inativar_guiche.php?id_guiche='.$guiche->id_guiche.'">
+                                            <div class="toggle-btn '.$estadoAtivo.'">
+                                                <div class="circulo"></div>
+                                            </div>
                                             </a>
                                         </td>
+    
                                     </tr>';
                                 }
                             ?>
@@ -90,7 +91,7 @@ $guiches = $guiche->buscar();
 <main class="modal-container" id="modalCadastro">
     <section class="modal">
         <img src="../../../public/img/img-modais/Logo Nota Controlnt.png" alt="Logo Nota Control" class="logo">
-        <h1 class="titulo">Cadastrar Guichê</h1>
+        <h1 class="titulo">Editar Guichê</h1>
         <hr class="linha">
         
         <form id="formCadastroGuiche" action="cadastrar_guiche.php" method="POST">

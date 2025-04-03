@@ -1,22 +1,13 @@
 <?php
-require './app/CLASSE/guiche.php';
-
-if (isset($_GET['id_guiche']) && isset($_GET['status'])) {
+require './APP/CLASSE/guiche.php';
+if(isset($_GET['id_guiche'])){
     $id_guiche = $_GET['id_guiche'];
-    $status = $_GET['status']; 
-
-    $guiche = new Guiche();
-    $guicheInfo = $guiche->buscar_por_id($id_guiche);
-
-   
-    $result = $guiche->alternar_ativo($id_guiche, $status);
-
-    if ($result) {
-        echo "Status alterado com sucesso."; 
-    } else {
-        echo "Erro ao alterar o status.";
+    $objUser = new Guiche();
+    $user_alternar = $objUser->buscar_por_id($id_guiche);
+    $user_alternar->alternar_ativo($user_alternar->id_guiche, $user_alternar->ativo);
+    if($user_alternar){
+        header('location: app/admin/view/PontoAtendimentoCad.php');
     }
-} else {
-    echo "Erro: Dados não enviados corretamente.";
 }
+ 
 ?>

@@ -1,5 +1,5 @@
 <?php
-require_once './app/CLASSE/guiche.php';
+require_once './app/classe/guiche.php';
 
 if (isset($_GET['id_guiche'])) {
     $id_guiche = $_GET['id_guiche'];

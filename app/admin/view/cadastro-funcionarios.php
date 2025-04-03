@@ -28,7 +28,7 @@
     <div class="area-info">
         <div class="header-area">
             <div class="titulo-area">
-                <span>Usuarios Cadastrados</span>
+                <span>Usuários Cadastrados</span>
             </div>
             <div class="input-search">
                 <input type="search" name="Buscar Atendente" placeholder="Buscar Atendente">
@@ -41,10 +41,10 @@
             <table class="tabela">
                 <tr>
                     <th>Nome</th>
-                    <th>Matricula</th>
+                    <th>Matrícula</th>
                     <th>Perfil</th>
                     <th>Serviços</th>
-                    <th>Açoes</th>
+                    <th>Ações</th>
                 </tr>
                 <tr>
                     <td>Guilherme F. Machado</td>

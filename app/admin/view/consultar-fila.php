@@ -37,7 +37,7 @@
                     <div class="topo-direita-consultar-fila">
                         <div class="senhas-guiche-area-chamada">
                             <p>2</p>
-                            <p>Senhas Na Fila</p>
+                            <p>Senhas na Fila</p>
                         </div>
                     </div>
                 </div>
