@@ -555,13 +555,13 @@ thead, tbody tr {
         padding-left: 0.6rem;
     }
     .senha-area-chamada p{
-        font-size: 18px;
+        font-size: 20px;
     }
     .nome-area-chamada p{
-        font-size: 18px;
+        font-size: 20px;
     }
     .servico-area-chamada p{
-        font-size: 18px;
+        font-size: 20px;
     }
     .texto-info-atendimento{    
         font-size: 22px;
@@ -621,6 +621,10 @@ thead, tbody tr {
     }
     .servico-area-chamada p{
         font-size: 20px;
+    }
+    .servico-area-chamada{
+        width: 0px;
+        display: none;
     }
     .texto-info-atendimento{    
         font-size: 20px;
