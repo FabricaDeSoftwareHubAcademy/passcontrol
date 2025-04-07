@@ -27,9 +27,10 @@
   /* border: 2px solid green; */
 }
 #servicos-cadastrados {
-  text-align: left;
-  color: var(--cinza-control);
+  /* text-align: left; */
+  font-size: 20px;
   font-family: Arial, sans-serif;
+  color: var(--cinza-control);
   font-weight: bold;
 }
 .campo-busca {
@@ -41,7 +42,7 @@
 }
 #buscar-servico {
   width: 20%;
-  height: 100%;
+  height: 130%;
   font-style: italic;
   font-size: 14px;
   border: 2px solid var(--cinza-control)3;
@@ -54,14 +55,14 @@
   background-position: right 10px center;
   background-repeat: no-repeat;
   box-sizing: border-box;
-  margin-left: 76%;
+  margin-left: 76.7%;
 }
 .linha-divisoria-servico {
   background-color: var(--cinza-control);
   height: 1px;
-  width: 96%;
+  width: 96.8%;
   max-height:339px;
-  padding: 1px;
+  padding: 2.5px;
 }
 #tela-branca-servico {
   background-color: #ffffff75;
