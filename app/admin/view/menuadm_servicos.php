@@ -17,11 +17,13 @@
     <link rel="stylesheet" href="../../../public/css/style_eli.css">
     <link rel="stylesheet" href="../../../public/modais/Modal_Alterar_Dados_Pessoais/alterar_dados_pessoais.css">
     <link rel="stylesheet" href="../../../public/modais/Modal_Alterar_Senha/alterar_senha.css">
+    <link rel="stylesheet" href="../../../public/modais/ModalCadastrodosServicos/cadastro_servicos.css">
     
     <!-- JS -->
     <script src="../../../public/js/navegacao-menu-lateral.js" defer></script>
     <script src="../../../public/js/monitor-modal.js" defer></script>
     <script src="../../../public/js/modal_cadastro_guiche_adm.js" defer></script>
+    <script src="../../../public/modais/ModalCadastrodosServicos/cadastro_servicos.js" defer></script>
 
     <link rel="shortcut icon" type="imagex/png" href="../../../public/img/Logo-Nota-Controlnt.ico">
 </head>
@@ -29,6 +31,7 @@
 <body class="control-body-navegacao">
     <?php
     include "./navegacao.php";
+    include "../../../public/modais/ModalCadastrodosServicos/cadastro_servicos.php";
     ?>
     <section class="Area-Util-Projeto">
         <!-- navmenu -->
@@ -104,18 +107,16 @@
                     </div>
                 </div>    
 
-                <div class="container_menu">
+                <div class="container_menu" id="abrirModalCadastro">
                     <div class="wrapper">
-                        <a href="servicos.php">
                         <div class="banner-img">
                             <img src="../../../public/img/img-menu/serviços.png" alt="">
                         </div>
-                        </a>
                         <!-- <h3 class="titulo-produto">Serviços</h3> -->
                         <!-- <p>Gestão dos serviços</p> -->
                     </div>
                     <div class="button-wrapper">
-                        <button class="btn outline" onclick="window.location.href='servicos.php';">Cadastrar Serviços</button>
+                        <button class="btn outline">Cadastrar Serviços</button>
                     </div>
                 </div> 
             </main>
