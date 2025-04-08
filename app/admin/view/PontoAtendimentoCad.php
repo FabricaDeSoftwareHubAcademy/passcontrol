@@ -23,6 +23,7 @@ $guiches = $guiche->buscar();
     <link rel="stylesheet" href="../../../public/css/PontoAtendimentoCad.css">
     <link rel="stylesheet" href="../../../public/modais/ModalEdicaoPontoAtendimento/estilo.css">
     <link rel="stylesheet" href="../../../public/modais/ModalInativacaoGuiche/estilo.css">
+    <link rel="stylesheet" href="../../../public/modais/ModalInativacaoGuiche/cadatro.css">
 
 
     <link rel="shortcut icon" type="imagex/png" href="../../../public/img/Logo-Nota-Controlnt.ico">
@@ -62,7 +63,7 @@ $guiches = $guiche->buscar();
                                         <td>'.$guiche->nome_guiche.'</td>
                                         <td>'.$guiche->num_guiche.'</td>
                                         <td>
-                                            <button id="chamamodal" id_value ='.$guiche->id_guiche.'>
+                                            <button class="bot-editar" id="chamamodal" id_value ='.$guiche->id_guiche.'>
                                                 <img id="icone-editar" src="../../../public/img/icons/Group 2924.png" alt="Editar">
                                             </button>
                                         </td>
@@ -81,7 +82,7 @@ $guiches = $guiche->buscar();
         </div>
         <div class="botoesVoltar-Cadastrar">
             <button type="button" class="botao-voltar" onclick="window.location.href='menuadm_servicos.php';">Voltar</button>
-            <button type="button" class="botao-cadastro" onclick="abrirModalCadastro()">Cadastrar</button>
+            <button type="button" id="abrirModal" class="botao-cadastro">Cadastrar</button>
         </div>
 
     </div>
@@ -97,7 +98,7 @@ $guiches = $guiche->buscar();
                     <div class="container">
                         <label class="label"><b>Nome do Ponto de Atendimento</b></label>
                         <input type="text" id="nome_guiche" name="nome_guiche" class="input-text" placeholder="Guichê">
-                        <input type="hidden" id="id_guiche" name="id_guiche" value="<?=$guiche->id_guiche?>" class="input-text" placeholder="Guichê">
+                        <input type="hidden" id="id_guiche" name="id_guiche">
                     </div>
                 </div>
                 <div class="servico">
@@ -138,10 +139,10 @@ document.addEventListener("DOMContentLoaded", function() {
             let response = await dados_php.json();
 
             console.log(response);
-
-                  // Preenche os campos do modal com os dados do usuário
+            // Preenche os campos do modal com os dados do usuário
             document.getElementById("nome_guiche").value = response.nome_guiche;
             document.getElementById("num_guiche").value = response.num_guiche;
+            document.getElementById("id_guiche").value = response.id_guiche; 
 
             modalContainer.classList.add("show");
 
@@ -166,6 +167,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     let response2 = await dados2_php.json()
 
                     console.log(response2);  
+                    location.reload();
 
                     modalContainer.classList.remove("show");
                 });
@@ -187,7 +189,7 @@ document.addEventListener("DOMContentLoaded", function() {
             <img src="../../../public/img/img-modais/Logo Nota Controlnt.png" alt="Logo Nota Control" class="logo">
             <h1 class="titulo">Confirmação</h1>
             <hr class="linha">
-            <p class="texto"><b>Deseja Inativar Esse Guichê?</b></p>
+            <p class="texto"><b>Deseja Alterar Esse Guichê?</b></p>
             <div class="button-group">
                 <button class="botao-modal cancel">Não</button>
                 <button id="salvar" class="botao-modal save">Sim</button>
@@ -221,34 +223,16 @@ document.addEventListener("DOMContentLoaded", function() {
                 }); 
 
                 let response = await dados_php.json();
-
+                    
                 console.log(response);
+                location.reload();
 
             })
-  
 
-
-
-  
-
-
-              // Fazer requisição AJAX para buscar os dados do usuário
 
         })
 
     })
-
-
-
-
-        // buttonAbrir.addEventListener("click", () => {
-        //     modalContainer.classList.add("show");
-        // });
-
-        // buttonCancelar.addEventListener("click", () => {
-        //     modalContainer.classList.remove("show");
-        // });
-
 
 
 
@@ -258,7 +242,79 @@ document.addEventListener("DOMContentLoaded", function() {
 
 </script>
 
+<!-- Modal -->
+<main id="modalCadastro" class="modal-inativar-container">
+    <section class="modal">
+        <form id="formCadastroGuiche" method="POST">
+            <img src="../../../public/img/img-modais/Logo Nota Controlnt.png" alt="Logo Nota Control" class="logo">
+            <h1 class="titulo">Cadastrar Ponto de Atendimento</h1>
+            <hr class="linha-horizontal">
+            <div class="inf-modal">
+                <div class="container">
+                    <label class="label"><b>Nome do Ponto de Atendimento</b></label>
+                    <input type="text" class="input-text" name="nome_guiche" placeholder="Ex: Guichê, Baia, IPTU..." required>
+                </div>
+            </div>
+            <div class="servico">
+                <label class="label"><b>Número / Letra</b></label>
+                <input type="text" class="input-text" name="num_guiche" placeholder="Ex: 01, 02..." required>
+            </div>
+            <div class="button-group">
+                <button type="button" class="botao-modal cancel" id="fecharModal">Voltar</button>
+                <button type="submit" class="botao-modal save">Salvar</button>
+            </div>
+        </form>
+    </section>
+</main>
 
+
+
+  <script>
+document.addEventListener("DOMContentLoaded", function () {
+    const modalCadastro = document.getElementById("modalCadastro");
+    const botaoAbrir = document.querySelector("#abrirModal"); 
+    const botaoCancelar = document.querySelector("#fecharModal");
+    const botaoSalvar = modalCadastro.querySelector(".save");
+    const formulario = document.getElementById("formCadastroGuiche");
+
+    botaoAbrir.addEventListener("click", function () {
+        modalCadastro.classList.add("show");
+    });
+
+    botaoCancelar.addEventListener("click", function () {
+        modalCadastro.classList.remove("show");
+    });
+
+    botaoSalvar.addEventListener("click", async function (event) {
+        event.preventDefault();
+
+        const formData = new FormData(formulario);
+
+        try {
+            const response = await fetch("../../classe/criar_guiche.php", {
+                method: "POST",
+                body: formData
+            });
+
+            const result = await response.json();
+
+            if (result.status === "ok") {
+                alert("Cadastro realizado com sucesso!");
+                modalCadastro.classList.remove("show");
+                formulario.reset();
+                location.reload();
+            } else {
+                alert("Erro: " + result.erro);
+            }
+        } catch (error) {
+            console.error("Erro na requisição:", error);
+            alert("Erro ao cadastrar. Tente novamente.");
+        }
+    });
+});
+
+
+  </script>
 
 </html>
 

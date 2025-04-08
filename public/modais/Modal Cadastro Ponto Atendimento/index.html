@@ -8,27 +8,34 @@
 </head>
 <body class="pagina">
     <button class="botao-modal open">Abrir Modal</button>
-    <main class="modal-container">
-        <section class="modal">
+<!-- Botão para abrir o modal -->
+<button class="botao-cadastro">Cadastrar Guichê</button>
+
+<!-- Modal -->
+<main id="modalCadastro" class="modal-inativar-container">
+    <section class="modal">
+        <form id="formCadastroGuiche" method="POST">
             <img src="../../../public/img/img-modais/Logo Nota Controlnt.png" alt="Logo Nota Control" class="logo">
             <h1 class="titulo">Cadastrar Ponto de Atendimento</h1>
             <hr class="linha-horizontal">
             <div class="inf-modal">
                 <div class="container">
                     <label class="label"><b>Nome do Ponto de Atendimento</b></label>
-                    <input type="text" class="input-text" placeholder="Ex: Guichê, Baia, IPTU...">
+                    <input type="text" class="input-text" name="nome_guiche" placeholder="Ex: Guichê, Baia, IPTU..." required>
                 </div>
             </div>
             <div class="servico">
                 <label class="label"><b>Número / Letra</b></label>
-                <input type="text" class="input-text" placeholder="Ex: 01, 02...">
+                <input type="text" class="input-text" name="num_guiche" placeholder="Ex: 01, 02..." required>
             </div>
             <div class="button-group">
-                <button class="botao-modal cancel">Voltar</button>
-                <button class="botao-modal save">Salvar</button>
+                <button type="button" class="botao-modal cancel" id="fecharModal">Voltar</button>
+                <button type="submit" class="botao-modal save">Salvar</button>
             </div>
-        </section>
-    </main>
+        </form>
+    </section>
+</main>
+
     <script src="./modal.js"></script>
 </body>
 </html>
