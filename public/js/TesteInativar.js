@@ -40,11 +40,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
     confirmarInativacao?.addEventListener("click", () => {
         const id = confirmarInativacao.getAttribute("data-id");
-        window.location.href = `../../app/controllers/ServicoController.php?id_servico=${id}&acao=inativar`;
+        window.location.href = `../../app/controller/ServicoController.php?id_servico=${id}&acao=inativar`;
     });
 
     confirmarAtivacao?.addEventListener("click", () => {
         const id = confirmarAtivacao.getAttribute("data-id");
-        window.location.href = `../../app/controllers/ServicoController.php?id_servico=${id}&acao=ativar`;
+        window.location.href = `../../app/controller/ServicoController.php?id_servico=${id}&acao=ativar`;
     });
 });

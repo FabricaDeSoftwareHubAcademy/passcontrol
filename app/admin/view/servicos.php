@@ -16,7 +16,8 @@
     <link rel="stylesheet" href="../../../public/css/servicos.css">
     <link rel="stylesheet" href="../../../public/modais/ModalCadastrodosServicos/cadastro_servicos.css">
     <link rel="stylesheet" href="../../../public/modais/ModalInativacaoServico/inativacao_servico.css">
-
+    <link rel="stylesheet" href="../../../public/modais/Modal_Alterar_Dados_Pessoais/alterar_dados_pessoais.css">
+    <link rel="stylesheet" href="../../../public/modais/Modal_Alterar_Senha/alterar_senha.css">
 
     <!-- JS -->
     <script src="../../../public/js/navegacao-menu-lateral.js" defer></script>
