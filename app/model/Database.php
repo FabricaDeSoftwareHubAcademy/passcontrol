@@ -6,7 +6,7 @@ error_reporting(E_ALL);
 class Database {
     private $conn;
     private string $local = 'localhost';
-    private string $db = 'passcontroltestes666';
+    private string $db = 'passcontrol';
     private string $user = 'root';
     private string $password = '';
 
