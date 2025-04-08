@@ -22,6 +22,7 @@ $guiches = $guiche->buscar();
     <link rel="stylesheet" href="../../../public/css/monitor-modal.css">
     <link rel="stylesheet" href="../../../public/css/PontoAtendimentoCad.css">
     <link rel="stylesheet" href="../../../public/modais/ModalEdicaoPontoAtendimento/estilo.css">
+    <link rel="stylesheet" href="../../../public/modais/ModalInativacaoGuiche/estilo.css">
 
 
     <link rel="shortcut icon" type="imagex/png" href="../../../public/img/Logo-Nota-Controlnt.ico">
@@ -66,10 +67,8 @@ $guiches = $guiche->buscar();
                                             </button>
                                         </td>
                                         <td>
-                                            <button href="../../../inativar_guiche.php?id_guiche='.$guiche->id_guiche.'">
-                                            <div class="toggle-btn '.$estadoAtivo.'">
+                                            <button id="switch_status" id_value_switch="'.$guiche->id_guiche.'"  class="toggle-btn '.$estadoAtivo.'">
                                                 <div class="circulo"></div>
-                                            </div>
                                             </button>
                                         </td>
     
@@ -113,22 +112,6 @@ $guiches = $guiche->buscar();
             </form>
         </section>
 </div>
-
-<!-- ModalGuicheInativar -->
-<main class="modal-container">
-        <section class="modal">
-            <img src="../../../public/img/img-modais/Logo Nota Controlnt.png" alt="Logo Nota Control" class="logo">
-            <h1 class="titulo">Confirmação</h1>
-            <hr class="linha">
-            <p class="texto"><b>Deseja Inativar Esse Guichê?</b></p>
-            <div class="button-group">
-                <button class="botao-modal cancel">Não</button>
-                <button class="botao-modal save">Sim</button>
-            </div>
-        </section>
-    </main>
-
-
 <script>
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -197,6 +180,84 @@ document.addEventListener("DOMContentLoaded", function() {
  
  
 </script>
+
+<!-- ModalGuicheInativar -->
+<div class="modal-inativar-container">
+        <section class="modal">
+            <img src="../../../public/img/img-modais/Logo Nota Controlnt.png" alt="Logo Nota Control" class="logo">
+            <h1 class="titulo">Confirmação</h1>
+            <hr class="linha">
+            <p class="texto"><b>Deseja Inativar Esse Guichê?</b></p>
+            <div class="button-group">
+                <button class="botao-modal cancel">Não</button>
+                <button id="salvar" class="botao-modal save">Sim</button>
+            </div>
+        </section>
+</div>
+
+
+<script>
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    document.querySelectorAll("#switch_status").forEach(button => {
+
+        button.addEventListener("click",  function(event) {
+
+            let id_value_switch = button.getAttribute("id_value_switch");
+            const modalContainer = document.querySelector(".modal-inativar-container");
+            const buttonFechar = document.querySelector(".close");
+            const buttonCancelar = document.querySelector(".cancel");
+   
+            modalContainer.classList.add("show");
+
+            const buttonSalvar = document.querySelector("#salvar");
+
+            
+            buttonSalvar.addEventListener("click", async function(event){
+
+                let dados_php = await fetch("../../classe/inativar_guiche.php?id_guiche="+id_value_switch , {
+                method: 'GET'
+                }); 
+
+                let response = await dados_php.json();
+
+                console.log(response);
+
+            })
+  
+
+
+
+  
+
+
+              // Fazer requisição AJAX para buscar os dados do usuário
+
+        })
+
+    })
+
+
+
+
+        // buttonAbrir.addEventListener("click", () => {
+        //     modalContainer.classList.add("show");
+        // });
+
+        // buttonCancelar.addEventListener("click", () => {
+        //     modalContainer.classList.remove("show");
+        // });
+
+
+
+
+
+})
+
+
+</script>
+
 
 
 </html>
