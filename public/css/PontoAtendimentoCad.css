@@ -71,7 +71,7 @@
   margin: 25px auto;
 }
 .tabela-responsiva-Ponto-atendimento {
-  max-height: 520px;
+  max-height: 340px;
   overflow-y: auto;
   border: 1px solid #dddddd;
 }
@@ -137,8 +137,13 @@
   font-weight: bold;
   color: var(--cinza-control);
 }
-
-
+.bot-editar {
+  all: unset;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
 #icone-editar {
   cursor: pointer;
 }
@@ -183,7 +188,7 @@
   gap: 16px;
   margin-top: auto;
   margin-bottom: 40px;
-  margin-right: 2%;
+  margin-right: 5%;
 }
 .botao-voltar {
   background-color: var(--cinza-control);
@@ -200,86 +205,6 @@
 
 .tabela-wrapper::-webkit-scrollbar {
   width: 5px;
-}
-/* Estilo do container do modal */
-.modal-container {
-  background: rgba(0, 0, 0, 0.5); /* Fundo transparente */
-  width: 100vw;
-  height: 100vh;
-  position: fixed; /* Fixa o modal na tela */
-  top: 0;
-  left: 0;
-  display: none; /* Inicialmente o modal está escondido */
-  justify-content: center;
-  align-items: center;
-  z-index: 9999; /* Asegura que o modal fique acima de outros elementos */
-}
-
-/* Estilo para mostrar o modal */
-.modal-container.show {
-  display: flex; /* Exibe o modal quando a classe 'show' for adicionada */
-}
-
-/* Estilo do modal */
-.modal {
-  background-color: white;
-  padding: 20px;
-  border-radius: 10px;
-  text-align: center;
-  width: 300px;
-  max-width: 90%;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-}
-
-/* Estilo da linha horizontal */
-.linha {
-  border: none;
-  border-top: 3px solid #000;
-  width: 100%;
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
-/* Estilo do logo */
-.logo {
-  max-width: 100px;
-  margin-bottom: 20px;
-}
-
-/* Estilo do título */
-.titulo {
-  font-size: 1.5em;
-  margin-bottom: 10px;
-}
-
-/* Estilo do parágrafo */
-.texto {
-  font-size: 22px;
-  margin: 40px 0;
-}
-
-/* Grupo de botões */
-.button-group {
-  display: flex;
-  justify-content: space-around;
-}
-
-.botao-modal {
-  padding: 10px 20px;
-  font-size: 1em;
-  cursor: pointer;
-  border: none;
-  border-radius: 5px;
-}
-
-.cancel {
-  background-color: #f44336; /* Cor de fundo para o "Cancelar" */
-  color: white;
-}
-
-.save {
-  background-color: #4CAF50; /* Cor de fundo para o "Salvar" */
-  color: white;
 }
 
 @media screen and (max-width: 1024px) {
