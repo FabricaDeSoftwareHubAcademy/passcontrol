@@ -6,7 +6,7 @@
         <div class="inf-modal-cadas-servico">
             <div class="container-cadas-servico">
                 <label class="label-servico"><b>Código do Serviço</b></label>
-                <input type="number" class="input-number-servicos" placeholder="Digite o código do serviço">
+                <input type="text" class="input-number-servicos" placeholder="Digite o código do serviço">
             </div>
             <div class="container-cadas-servico">
                 <label class="label-servico"><b>Ícone</b></label>

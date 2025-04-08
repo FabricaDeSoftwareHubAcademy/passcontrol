@@ -52,9 +52,9 @@
 
 /* Estilo da linha horizontal */
 .divider-servicos {
-    border: none;
+   border: none;
     border-top: 2px solid #000;
-    width: 100%;
+    width:  100%;
     margin-top: 20px;
     margin-bottom: 20px;
 }

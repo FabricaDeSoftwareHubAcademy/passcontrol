@@ -1,29 +1,28 @@
 .modal-container,
 .container-modal-confirmacao,
 .container-modal-sucesso {
+    background: rgba(0, 0, 0, 0.5);
+    width: 100vw;
+    height: 100vh;
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.5);
     display: none;
     align-items: center;
     justify-content: center;
-    z-index: 1000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+    z-index: 10;
 }
-
 .modal,
 .estrutura-modal-confirmacao,
 .estrutura-modal-sucesso {
-    background-color: #e0e0e0;
-    padding: 25px;
-    width: 90%;
-    max-width: 500px;
-    border-radius: 8px;
-    text-align: center;
-    position: relative;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
 }
 
 .logo,
