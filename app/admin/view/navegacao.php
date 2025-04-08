@@ -5,6 +5,9 @@
             <h1 class="titulo-projeto">PassControl</h1>
         </div>
         <p class="usu-nome">Nome do Usuário</p>
+        <!-- <a href="">
+            <img class="usu-nome" src="../../../public/img/icons/image 33.svg" alt="Loading..."">
+        </a> -->
     </div>
     <div class="dark-area"></div>
 </header>
