@@ -1,5 +1,3 @@
-@import url(style_main.css);
-
 .area-tabela{
   width: 90%;
   background-color: rgb(255, 255, 255,0.4);
@@ -14,12 +12,16 @@
   height: 100%; 
   overflow: auto; 
   width: 100%;
-} 
+}
 
 .tabela {
   border: 0.5px solid black;
   border-collapse: separate;
+  border-spacing: 0;
+  background-color: rgb(255, 255, 255,0.4);
+  width: 100%;
   /* height: 30%; */
+
 }
 
 th, td {
@@ -39,16 +41,17 @@ th {
   top: 0;
 }
 
-.editar{
+.editar a{
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .editar a img:hover{
-  content: url(../../public/img/icons/Group\ 2925.png);
-  transition: 1s;
-  cursor:pointer;
+  /* content: url(/public/img/icons/Group\ 2925.png); */
+  transition: 0.2s;
+  background-color: rgba(0, 0, 0, 0.096);
+  border-radius: 5px;
 }
 
 .ativarswitch{
@@ -106,8 +109,6 @@ input:checked + .slider:before {
 input:focus + .slider {
   box-shadow: 0 0 1px #4CAF50;
 }
-
-
 .toggle-btn {
   width: 60px;
   height: 20px;
