@@ -1,5 +1,4 @@
 <?php
-
     $db_profiles = new Database("perfil");
     $perfis = $db_profiles->execute("SELECT * FROM perfil");
 
