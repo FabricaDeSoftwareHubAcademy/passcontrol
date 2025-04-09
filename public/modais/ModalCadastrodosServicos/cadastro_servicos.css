@@ -1,0 +1,150 @@
+.modal-container,
+.container-modal-confirmacao,
+.container-modal-sucesso {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modal,
+.estrutura-modal-confirmacao,
+.estrutura-modal-sucesso {
+    background-color: #e0e0e0;
+    padding: 25px;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 8px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.logo,
+.logo-confirmacao,
+.logo-sucesso {
+    width: 60px;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+}
+
+.titulo,
+.modal-title,
+.titulo-modal-confirmacao,
+.titulo-modal-sucesso {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.linha,
+.modal-divider,
+.linha-modal-confirmacao,
+.linha-modal-sucesso {
+    width: 100%;
+    border: none;
+    border-top: 2px solid #000;
+    margin-bottom: 20px;
+}
+
+.texto,
+.modal-message,
+.texto-modal-confirmacao,
+.mensagem-modal-sucesso {
+    font-size: 16px;
+    margin-bottom: 25px;
+}
+
+.button-group,
+.grupo-botoes-confirmacao,
+.grupo-botoes-sucesso {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.botao-modal,
+.botao-confirmacao,
+.botao-sucesso {
+    background-color: #33404D;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    min-width: 90px;
+}
+
+.cancel,
+.cancelar-confirmacao:hover {
+    color: #FF0000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.save,
+.salvar-confirmacao:hover {
+    color: #3AA867;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.Okay,
+.okay-sucesso:hover {
+    color: #3AA867;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+@media screen and (max-width: 480px) {
+    .modal,
+    .estrutura-modal-confirmacao,
+    .estrutura-modal-sucesso {
+        width: 90%;
+        padding: 20px 15px;
+    }
+
+    .logo,
+    .logo-confirmacao,
+    .logo-sucesso {
+        width: 50px;
+        top: 10px;
+        right: 15px;
+    }
+
+    .titulo,
+    .modal-title,
+    .titulo-modal-confirmacao,
+    .titulo-modal-sucesso {
+        font-size: 18px;
+    }
+
+    .texto,
+    .modal-message,
+    .texto-modal-confirmacao,
+    .mensagem-modal-sucesso {
+        font-size: 14px;
+    }
+
+    .botao-modal,
+    .botao-confirmacao,
+    .botao-sucesso {
+        font-size: 13px;
+        padding: 8px 18px;
+        min-width: unset;
+        flex: 1;
+    }
+
+    .button-group,
+    .grupo-botoes-confirmacao,
+    .grupo-botoes-sucesso {
+        flex-direction: column;
+        gap: 12px;
+    }
+}
