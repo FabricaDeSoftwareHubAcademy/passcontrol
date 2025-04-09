@@ -72,38 +72,38 @@
                 <div class="column-1">
                     <label class="customizado">
                         <input type="checkbox" class="item" id="checkbox1">
-                        <span class="teste">Conselho Muncipal</span>
+                        <span class="teste"></span>Conselho Muncipal
                     </label>
                     <label class="customizado">
                         <input type="checkbox" class="item" id="checkbox2">
-                        <span class="teste">Fiscalização</span>
+                        <span class="teste"></span>Fiscalização
                     </label>
                     <label class="customizado">
                         <input type="checkbox" class="item" id="checkbox3">
-                        <span class="teste">Iluminação Pública</span>
+                        <span class="teste"></span>Iluminação Pública
                     </label>
                     <label class="customizado">
                         <input type="checkbox" class="item" id="checkbox4">
-                        <span class="teste">IPTU</span>
+                        <span class="teste"></span>IPTU
                     </label>
                 </div>
                 <div class="column-2">
                     <div class="caixa"></div>
                     <label class="customizado">
                         <input type="checkbox" class="item" id="checkbox5">
-                        <span class="teste">Licenças</span>
+                        <span class="teste"></span>Licenças
                     </label>
                     <label class="customizado">
                         <input type="checkbox" class="item" id="checkbox6">
-                        <span class="teste">Ouvidoria</span>
+                        <span class="teste"></span>Ouvidoria
                     </label>
                     <label class="customizado">
                         <input type="checkbox" class="item" id="checkbo7">
-                        <span class="teste">Poda De Àrvores</span>
+                        <span class="teste"></span>Poda De Àrvores
                     </label>
                     <label class="customizado">
                         <input type="checkbox" id="select-all">
-                        <span class="teste">Selecionar Todos</span>
+                        <span class="teste"></span>Selecionar Todos
                     </label>
                 </div>
             </div>
