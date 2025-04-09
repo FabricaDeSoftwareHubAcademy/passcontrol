@@ -1,5 +1,5 @@
 <?php
-require 'app/controller/Usuario.php';
+require './app/controller/Usuario.php';
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
@@ -9,7 +9,7 @@ if(isset($_POST['email'])){
 
     $usuario = new Usuario();
     if($usuario->logar($email, $senha)){
-        header("location: app/admin/view/atendimento.php");
+        header("location: ./app/admin/view/atendimento.php");
     }else{
         echo "<script>alert('Email ou Senha incorreto!') </script>";
     }
