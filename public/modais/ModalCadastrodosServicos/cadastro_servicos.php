@@ -6,11 +6,11 @@
         
 
         <div class="inf-modal">
-            <div class="container">
+            <div class="container1">
                 <label class="label"><b>Código do Serviço</b></label>
                 <input type="text" class="input-number" placeholder="Digite o código do serviço">
             </div>
-            <div class="container">
+            <div class="container2">
                 <label class="label"><b>Ícone</b></label>
                 <div class="file-input">
                     <input type="file" id="fileInput" class="file-input-field" accept="image/*">
