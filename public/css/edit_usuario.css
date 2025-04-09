@@ -183,6 +183,17 @@
     font-size: var(--font-main);
     font-weight: bold;
 }
+<<<<<<< Updated upstream:public/css/edit_usuario.css
+=======
+.servico{
+    display: flex;
+    position: absolute;
+    top: 370px;
+    left: 630px;
+    font-size: var(--font-main);
+    font-weight: bold;
+}
+>>>>>>> Stashed changes:css/edit.css
 
 .customizado input[type="checkbox"] {
     position: absolute;
@@ -190,7 +201,10 @@
     cursor: pointer;  
 }
 
+<<<<<<< Updated upstream:public/css/edit_usuario.css
 
+=======
+>>>>>>> Stashed changes:css/edit.css
 .customizado .teste {
     position: relative;
     /* height: 50px; */
@@ -200,11 +214,13 @@
     display: flex;
     vertical-align: middle;
     margin-right: 10px;
-    
-    
+       
 } 
 
+<<<<<<< Updated upstream:public/css/edit_usuario.css
 
+=======
+>>>>>>> Stashed changes:css/edit.css
 /* .customizado input[type="checkbox"]:checked + .teste {
     background-color: #4CAF50;
     border: 1px solid black;
@@ -217,6 +233,7 @@
 
 } 
 
+<<<<<<< Updated upstream:public/css/edit_usuario.css
 .customizado::before {
     content: ''; 
     position: relative;
@@ -228,13 +245,20 @@
     border-radius: 2px;
     background-color: white;
 }
+=======
+>>>>>>> Stashed changes:css/edit.css
 
 .customizado input[type="checkbox"]:checked + .teste:after {
     display: block;
   
 } 
 
+<<<<<<< Updated upstream:public/css/edit_usuario.css
 .customizado  .teste::before {
+=======
+
+.customizado  .teste:after {
+>>>>>>> Stashed changes:css/edit.css
     left: -20px;
     top: 5px;
     width: 0px;
