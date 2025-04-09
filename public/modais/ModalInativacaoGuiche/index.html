@@ -3,27 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <!-- TROCA TÍTULO QUANDO FOR UTILIZAR -->
     <title>PassControl</title> 
-
-    <link rel="stylesheet" href="./inativacao_guiche.css">
+    <link rel="stylesheet" href="./estilo.css">
 </head>
 <body class="body">
-    <button class="botao-modal open-inativacao-guiche">Abrir Modal</button>
-
-    <div class="fundo-inativacao-guiche">
-        <section class="modal-inativacao-guiche">
+    <button class="botao-modal open">Abrir Modal</button>
+    <main class="modal-container">
+        <section class="modal">
             <img src="../../../public/img/img-modais/Logo Nota Controlnt.png" alt="Logo Nota Control" class="logo">
-            <h1 class="titulo">Inativação</h1>
+            <h1 class="titulo">Confirmação</h1>
             <hr class="linha">
             <p class="texto"><b>Deseja Inativar Esse Guichê?</b></p>
             <div class="button-group">
-                <button class="botao-modal cancel_InativacaoGuiche">Não</button>
-                <button class="botao-modal save_InativacaoGuiche">Sim</button>
+                <button class="botao-modal cancel">Não</button>
+                <button class="botao-modal save">Sim</button>
             </div>
         </section>
-    </div>
-    <script src="./inativacao_guiche.js" defer></script>
-
+    </main>
+    <script src="./modal.js"></script>
 </body>
 </html>

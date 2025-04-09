@@ -69,7 +69,7 @@
 
                     </div>
                     <div class="button-wrapper">
-                        <button class="btn outline" onclick="window.location.href='atendimentocadastrados.php';">Lista de Guichês</button>
+                        <button class="btn outline" onclick="window.location.href='PontoAtendimentoCad.php';">Lista de Guichês</button>
                     </div>
                 </div>
 
