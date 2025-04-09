@@ -1,0 +1,291 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.perfil-titulo{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-left: 80px;
+}
+
+.sub-area{
+    width: 90%;
+    background-color: rgba(255, 255, 255, 0.52);
+    padding: 70px 100px;
+    position: relative;
+    top: 30px;
+    right: 5vh; 
+    left: 5vh; 
+    bottom: 7vh;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+    margin: 30px;
+    border-radius: 5px;
+}
+
+.perfil-titulo{
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: black;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    margin-left: 80px;
+}
+
+.dados-pessoais, .alterar-senha {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.dados-pessoais h3, .alterar-senha h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.form-group{
+    margin-bottom: 50px;
+}
+
+.form-group input{
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    background-color: #FFF;
+    color: black;
+}
+
+.form-actions{
+    display: flex;
+    justify-content: flex-end;
+    gap: 16px;
+    margin-top: auto;
+    margin-bottom: 40px;
+    margin-right: 80px;
+}
+
+.botao-voltar, .botao-salvar {
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: 500;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.botao-voltar {
+    background-color: #33404D;
+    color: #fff;
+}
+
+.botao-voltar:hover {
+    color: #FFFFFF;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.botao-salvar {
+    background-color: #33404D;
+    color: #fff;
+}
+
+.botao-salvar:hover {
+    color: #3AA867;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Responsividade */
+@media (max-width: 1200px) {
+    .sub-area {
+        margin: 40px;
+        padding: 15px 20px;
+        top: 20px;
+        bottom: 5vh;
+        right: 4vh;
+        left: 4vh;
+        width: 85%;
+    }
+    .form-actions {
+        z-index: 0;
+        margin-right: 90px;
+        margin-bottom: 100px;
+    }
+    .perfil-titulo {
+        margin-left: 75px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .sub-area {
+        margin: 50px;
+        padding: 10px 15px;
+        top: 15px;
+        bottom: 4vh;
+        right: 3vh;
+        left: 3vh;
+        width: 83%;
+    }
+    .perfil-titulo {
+        margin-left: 75px;
+    }
+    .form-actions {
+        margin-right: 75px;
+    }
+}
+
+@media (max-width: 1022px) {
+    .perfil-titulo, .alt-senha-titulo {
+        font-size: 1.3rem;
+    }
+    .form-actions {
+        flex-direction: row;
+        align-items: flex-end;
+        gap: 10px;
+        margin-right: 75px;
+    }
+}
+
+@media (max-width: 770px) {
+    .perfil-titulo {
+        margin-top: 20px;
+        margin-left: 75px;
+    }
+    .sub-area {
+        margin: 60px;
+        padding: 10px;
+        top: 10px;
+        bottom: 3vh;
+        right: 2vh;
+        left: 0vh;
+    }
+    .form-group input {
+        font-size: 0.875rem;
+    }
+    .form-actions{
+        margin-right: 55px;
+    }
+}
+
+@media (max-width: 768px) {
+    .form-actions {
+        margin-right: 75px;
+    }
+    .botao-voltar, .botao-salvar {
+        font-size: 0.875rem;
+    }
+}
+
+/* Responsividade após 700px */
+@media (max-width: 700px){
+    .perfil-titulo {
+        font-size: 1.5rem;
+        margin-left: 20px;
+    }
+
+    .sub-area {
+        margin: 0;
+        padding: 10px;
+        top: 5px;
+        bottom: 2vh;
+        right: 1vh;
+        left: 2vh;
+        flex-direction: column;
+        gap: 10px;
+        width: 95%;
+        max-height: 80vh !important; /* Limita a altura máxima */
+        overflow-y: auto; /* Adiciona rolagem vertical */
+    }
+
+    .dados-pessoais h3 {
+        font-size: 1.5rem !important;
+        font-weight: 600 !important;
+        margin-bottom: 20px !important;
+        margin-top: 320px !important; /* Adiciona espaço acima do título */
+    }
+
+    .dados-pessoais, .alterar-senha {
+        flex: none;
+        width: 100%;
+    }
+
+    .form-group input {
+        font-size: 0.8rem;
+        padding: 10px;
+    }
+
+    .form-actions {
+        margin-right: 20px;
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .perfil-titulo {
+        font-size: 1.5rem;
+        margin-left: 20px;
+    }
+
+    .sub-area {
+        margin: 0;
+        padding: 10px;
+        top: 5px;
+        bottom: 2vh;
+        right: 1vh;
+        left: 1vh;
+        flex-direction: column;
+        gap: 10px;
+        width: 94%;
+    }
+
+    .form-group input {
+        font-size: 0.75rem;
+    }
+
+    .form-actions {
+        margin-right: 10px;
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 400px) and (min-width: 320px) {
+    .perfil-titulo {
+        font-size: 1.5rem;
+        margin-left: 15px;
+    }
+
+    .sub-area {
+        margin: 0;
+        padding: 5px;
+        top: 5px;
+        bottom: 2vh;
+        right: 1vh;
+        left: 1.5vh;
+        flex-direction: column;
+        gap: 5px;
+        width: 90%;
+    }
+
+    .form-group input {
+        font-size: 0.75rem;
+    }
+
+    .form-actions {
+        margin-right: 25px;
+        margin-top: 30px;
+    }
+
+    .botao-voltar, .botao-salvar {
+        font-size: 1rem !important;
+        padding: 8px 12px !important;
+        width: auto !important;
+        height: auto !important;
+    }
+}

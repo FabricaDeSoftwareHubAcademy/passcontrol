@@ -1,0 +1,336 @@
+@import url(./root.css);
+@import url(./base_area_util.css);
+@import url(navegacao-mobile.css);
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-main);
+    font-style: bold;
+    list-style: none;
+}
+
+.control-body-navegacao{
+    background-color: var(--cor-fundo);
+    background-image: url(../../public/img/Background-logo\ 2.svg);
+    background-size: 35vh;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-attachment: fixed;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: start;
+    justify-content: top;
+    overflow: hidden;
+    z-index: 0;
+    /* background-color: #dd0f00; */
+}
+
+/* TOPO */
+
+.cabeca-navegacao-control{
+    background-color: var(--cinza-control);
+    height: 15vh;
+    width: 100vw;
+    position: sticky;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    z-index: 2;
+}
+
+.nav-cabeca{
+    background-color: var(--cor-fundo);
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 1vh;
+    padding-right: 2vh;
+}
+
+.logo-control{
+    height: 100%;
+    width: fit-content;
+    padding: 2px;
+    padding-left: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2vh;
+}
+
+#img-logo{
+    height: 100%;
+    width: 100%;
+}
+
+.titulo-projeto{
+    display: flex;
+    align-items: center;
+    width: 80%;
+    font-size: 3vh;
+    color: var(--cinza-control);
+}
+.usu-nome{
+    color: var(--cinza-control);
+    height: auto;
+    min-width: 10vw;  
+    max-width: 30vw;
+    
+    border-radius: 5px;
+    font-weight: 500;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.80rem;
+    text-align: center;
+    cursor: pointer;
+    padding: 5px;
+}
+.usu-nome:hover{
+    background-color: rgba(0, 0, 0, 0.3);
+}
+.dark-area{
+    height: 5vh;
+    width: 100%;
+}
+
+/* INFO DO USUARIO */
+
+.menu-usuario{
+    z-index: 10;
+
+    min-height: 15vh;
+    min-width: 15vw;
+    max-width: 80vw;
+
+    position:absolute;
+    top: 4vh;
+    right: 3vh;
+
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    
+    gap: 1vw;
+    padding: 5px;
+    background-color: var(--cor-fundo);
+    box-shadow: 2px 5px 5px 2px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+
+    overflow-wrap: break-word;
+
+    color: var(--cinza-control);
+}
+.icone-usuario{
+    border-radius: 100px;
+    width: 50%;
+}
+.usu-detalhes{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;    
+    padding: 1vh;
+}
+.usu-util{
+    height: auto;
+    width: auto;
+    color: rgb(39, 75, 238);
+    font-size: 13.5px;
+    text-decoration: none;
+    cursor: pointer;
+}
+.texto-usu{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 7px;
+}
+.texto-usu .nome-usu{
+    font-size: 26px;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+.texto-usu .email-usu{
+    max-width: 70vw;
+
+    font-size: 1rem;
+    font-weight: 500;
+    
+    text-wrap: wrap;
+    border-radius: 5px;
+    padding: 3px;
+    background-color:  rgba(0, 0, 0, 0.1);
+}
+.usu-sair{
+    color: var(--vermelho);
+}
+.background-block{
+    display: flex;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: red;
+}
+
+/* MENU LATERAL */
+
+.area-lateral-navegacao{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--cinza-control);
+    position: absolute;
+    top: 15vh;
+    left: 0;
+    bottom: 0;
+    width: 25vh;
+    min-width: 155px;
+    justify-content: start;
+    align-content: end;
+    z-index: 2;
+}
+
+.menu-lateral-navegacao{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: start;
+    width: 100%;
+    height: 100%;
+    gap: 3vh;
+}
+
+.botao-lateal-navegacao{
+    background-color: #2d3945;
+    width: 95%;
+    height: 59px;
+    border-radius: 10px 0px 0px 10px;
+    border: none;
+    outline: none;
+    color: var(--cor-fundo);
+    font-weight: 600;
+    font-size: 13px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    padding-left: 20%;
+    text-decoration: none;
+}
+
+.botao-lateal-navegacao .icone-menu-lateral{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+}
+
+.botao-lateal-navegacao .texto-bott{
+    display: flex;
+    padding-left: 7px;
+    font-size: 13px;
+    width: auto;
+}
+
+.botao-lateal-navegacao:hover{
+    background-color: #181f26;
+    color: var(--verde-control);
+    /* text-decoration: underline var(--verde-control);     */
+}
+
+.botao-lateal-navegacao:hover .icone-menu-lateral{
+    filter: invert(51%) sepia(58%) saturate(446%) hue-rotate(92deg) brightness(96%) contrast(89%);
+}
+
+.sair-navegacao{
+    width: 80%;
+    height: 40%;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    align-self: center ;
+    align-items: end;
+    justify-content: center;
+}
+
+.sair-navegacao .botao-lateal-navegacao{
+    width: 100%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    border-radius: 5px;
+}
+.sair-mobile .botao-lateal-navegacao .icone-menu-lateral{
+    margin: 0;
+    padding: 0;
+}
+
+.sair-navegacao .botao-lateal-navegacao:hover{
+    background-color: #181f26;
+    color: var(--vermelho);
+}
+
+.sair-navegacao .botao-lateal-navegacao:hover .icone-menu-lateral{
+    filter: brightness(0) saturate(100%) invert(12%) sepia(81%) saturate(5896%) hue-rotate(2deg) brightness(95%) contrast(102%);
+}
+
+/* CLASSE ACTIVE */
+
+.ativo-estacionario{
+    background-color: var(--cor-fundo);
+    color: var(--verde-control);
+
+    .icone-menu-lateral{
+        filter: invert(51%) sepia(58%) saturate(446%) hue-rotate(92deg) brightness(96%) contrast(89%);        
+    }
+}
+
+/* CONFIG MENUS */
+
+.menu-inativo{
+    display: none;
+}
+.menu-visivel{
+    display: flex;
+}
+
+/* MEDIA */
+
+@media screen and (max-width: 900px) {
+    .area-lateral-navegacao{
+        display: none;
+    }
+    .botao-menu-mobile{
+        display: flex;
+    }
+    .background-m-mobile.menu-visivel{
+        display: flex;
+    }
+}
+
+@media screen and (max-height: 620px) {
+    .area-lateral-navegacao{
+        display: none;
+    }
+    .botao-menu-mobile{
+        display: flex;
+    }
+    .background-m-mobile.menu-visivel{
+        display: flex;
+    }
+}

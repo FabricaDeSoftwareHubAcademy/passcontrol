@@ -1,0 +1,144 @@
+.area-tabela{
+  width: 90%;
+  background-color: rgb(255, 255, 255,0.4);
+  gap: 15px;
+  margin-top: 2rem;
+  padding: 1.875rem;
+  display: flex;
+  height: 70%;
+}
+
+ .sub-area-tabela {
+  height: 100%; 
+  overflow: auto; 
+  width: 100%;
+}
+
+.tabela {
+  border: 0.5px solid black;
+  border-collapse: separate;
+  border-spacing: 0;
+  background-color: rgb(255, 255, 255,0.4);
+  width: 100%;
+  /* height: 30%; */
+
+}
+
+th, td {
+  border: 1px solid black; 
+  padding: 8px;
+  text-align: left;
+  color: var(--cinza-control);
+  /* display: block; */
+  height: 40px;
+}
+
+th {
+  background-color: var(--cinza-control);
+  color: var(--cor-fundo);
+  position: sticky;
+  z-index: 100;
+  top: 0;
+}
+
+.editar{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.editar a img:hover{
+  content: url(../../public/img/icons/Group\ 2925.png);
+  transition: 1s;
+  cursor:pointer;
+}
+
+.ativarswitch{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 3.75rem;
+  height: 1.375rem;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--cor-fundo);
+  transition: 0.4s;
+  border-radius: 34px;
+  border: 1px solid var(--cinza-control);
+}
+
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 1.060625rem;
+  width: 1.04375rem;
+  left: 4px;
+  bottom: 1.8px;
+  background-color: var(--verde-control);
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+
+input:checked + .slider:before {
+  transform: translateX(33px);
+  background-color: red;
+}
+
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #4CAF50;
+}
+
+/* .sub-area-tabela tbody::-webkit-scrollbar { 
+  width: 0.1px; 
+  opacity: 0;  
+  transition: opacity 0.3s ease;  
+} 
+.sub-area-tabela:hover tbody::-webkit-scrollbar { 
+  opacity: 1;  
+  width: 9px; 
+} 
+.sub-area-tabela tbody::-webkit-scrollbar-thumb { 
+  background-color: rgba(0, 0, 0, 0.5); 
+  border-radius: 4px;
+
+} 
+.sub-area-tabela tbody::-webkit-scrollbar-track { 
+  background: transparent; 
+} 
+
+.sub-area-tabela tbody::-webkit-scrollbar-thumb:hover { 
+  background-color: rgba(0, 0, 0, 0.7); 
+  width: 9px; 
+} 
+
+.sub-area-tabela:hover tbody,thead{ 
+  margin-right: -9px;
+  /* display: flex; 
+}*/
+
+
+
+
+
+

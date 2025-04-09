@@ -1,0 +1,258 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo dos botões */
+.botao-modal-confirmacao-dados-registrados {
+    background-color: #33404D;
+    color: #FFFFFF;
+    border: 0;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+/* Estilo do container do modal */
+.fundo-container-confirmacao-dados-registrados {
+    background: rgba(0, 0, 0, 0.5);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 10;
+}
+
+.fundo-container-confirmacao-dados-registrados.show {
+    opacity: 1;
+    display: flex;
+    pointer-events: auto;
+}
+
+/* Estilo do modal */
+.modal-confirmacao-dados-registrados {
+    background-color: #e0e0e0;
+    width: 80%;
+    max-width: 600px;
+    padding: 40px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+    text-align: left;
+    border-radius: 5px;
+}
+
+/* Estilo da linha horizontal */
+.linha-confirmacao-dados-registrados {
+    border: none;
+    border-top: 2px solid #000;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* Estilo do logo */
+.logo-confirmacao-dados-registrados {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    width: 60px;
+    max-width: 200px;
+    height: auto;
+}
+
+/* Estilo do título */
+.titulo-confirmacao-dados-registrados {
+    font-size: 28px;
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+
+/* Estilo do parágrafo */
+.texto-confirmacao-dados-registrados {
+    font-size: 22px;
+    margin: 40px 0;
+    text-align: center;
+}
+
+/* Grupo de botões */
+.button-group-confirmacao-dados-registrados {
+    display: flex;
+    justify-content: right;
+    gap: 0px;
+    margin-top: 20px;
+}
+
+/* Estilo do botão cancelar */
+.cancel_ConfDadosRegist {
+    background-color: #33404D;
+    color: white;
+    margin-right: 30px;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 10px 30px;
+}
+
+.cancel_ConfDadosRegist:hover {
+    color: #FF0000;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Estilo do botão salvar */
+.save_ConfDadosRegist {
+    background-color: #33404D;
+    color: white;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 10px 30px;
+}
+
+.save_ConfDadosRegist:hover {
+    color: #3AA867;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Responsividade */
+@media (max-width: 1200px) {
+    .modal-confirmacao-dados-registrado {
+        width: 70%;
+    }
+    .linha-confirmacao-dados-registrados{
+        border: none;
+        border-top: 2px solid #000;
+        width: 100%; 
+    }
+}
+
+@media (max-width: 1024px) {
+    .modal-confirmacao-dados-registrado {
+        width: 80%;
+    }
+    .linha-confirmacao-dados-registrados{
+        border: none;
+        border-top: 2px solid #000;
+        width: 100%; 
+    }
+}
+
+@media (max-width: 768px) {
+    .modal-confirmacao-dados-registrado {
+        width: 90%;
+    }
+    .titulo-confirmacao-dados-registrados{
+        margin-bottom: 20px;
+    }
+    .linha-confirmacao-dados-registrados{
+        border: none;
+        border-top: 2px solid #000;
+        width: 100%; 
+    }
+}
+
+@media (max-width: 480px) {
+    .button-group-confirmacao-dados-registrados {
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+    .botao-modal-confirmacao-dados-registrados {
+        width: auto;
+    }
+    .linha-confirmacao-dados-registrados{
+        border: none;
+        border-top: 2px solid #000;
+        width: 100%; 
+    }
+}
+
+@media (min-width: 401px) and (max-width: 550px){
+    .modal-confirmacao-dados-registrado {
+        width: 95%;
+        padding: 20px;
+    }
+    .titulo-confirmacao-dados-registrados{
+        margin-top: 7px;
+        font-size: 20px;
+    }
+    .logo-confirmacao-dados-registrados{
+        top: 10px;
+        width: 50px;
+    }
+    .button-group-confirmacao-dados-registrados {
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+    .botao-modal-confirmacao-dados-registrados {
+        width: auto;
+    }
+    .linha-confirmacao-dados-registrados{
+        border: none;
+        border-top: 2px solid #000;
+        width: 100%; 
+    }
+}
+
+@media (max-width: 400px) {
+    .modal-confirmacao-dados-registrado {
+        width: 95%;
+        padding: 15px;
+    }
+    .titulo-confirmacao-dados-registrados{
+        margin-top: 7px;
+        font-size: 20px;
+    }
+    .texto-confirmacao-dados-registrado{
+        font-size: 18px;
+    }
+    .logo-confirmacao-dados-registrados{
+        top: 10px;
+        width: 50px;
+    }
+    .button-group-confirmacao-dados-registrados {
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+    .botao-modal-confirmacao-dados-registrados {
+        width: auto;
+    }
+    .linha-confirmacao-dados-registrados{
+        border: none;
+        border-top: 2px solid #000;
+        width: 100%; 
+    }
+}
+
+@media (min-width: 320px) and (max-width: 340px) {
+    .modal-confirmacao-dados-registrado {
+        width: 90%;
+        padding: 15px;
+    }
+    .titulo-confirmacao-dados-registrados{
+        font-size: 16px;
+    }
+    .texto-confirmacao-dados-registrado{
+        font-size: 16px;
+    }
+    .logo-confirmacao-dados-registrados{
+        top: 15px;
+        width: 40px;
+    }
+    .button-group-confirmacao-dados-registrados {
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+    .botao-modal-confirmacao-dados-registrados {
+        width: auto;
+    }
+    .linha-confirmacao-dados-registrados{
+        border: none;
+        border-top: 2px solid #000;
+        width: 100%; 
+    }
+}

@@ -1,0 +1,124 @@
+@import url(./navegacao.css);
+
+/* MENU MOBILE */
+.botao-menu-mobile{
+    position: absolute;
+    top: 10vh;
+    left: 0;
+    z-index: 2;
+
+    width: 6vh;
+    height: 5vh;
+    background-color: var(--verde-control);
+    border: none;
+    outline: none;
+    cursor: pointer;
+
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+    transition:all 0.3s ease;
+}
+.botao-menu-mobile .icone-menu-lateral-mobile{
+    height: 40%;
+}
+.botao-menu-mobile:hover{
+    background-color: #181f26;
+}
+
+.botao-menu-mobile:hover .icone-menu-lateral{
+    filter: invert(51%) sepia(58%) saturate(446%) hue-rotate(92deg) brightness(96%) contrast(89%);
+}
+
+.background-m-mobile{
+    display: none;
+    flex-direction: row;
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+.menu-navegacao-mobile{
+    z-index: 4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+    width: 80vw;
+    height: 100vh;
+    background-color: var(--cinza-control);
+    background-image: url(../../public/img/Logo-Nota-Controlnt.ico);
+    background-repeat: no-repeat;
+    background-position: 10vw 8vh;
+    background-size: 10vh;
+}
+.area-botao-navegacao-mobile{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 5vh;
+    width: 70vw;
+}
+.botao-lateral-navegacao-mobile{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding-left: 10%;
+    cursor: pointer;
+
+    height: 9vh;
+    width: 100%;
+    border-radius: 5px 0 0 5px;
+    z-index: 5;
+    text-decoration: none;
+    background-color: #2d3945;
+}
+.botao-lateral-navegacao-mobile:hover{
+    background-color: rgba(0, 0, 0, 0.2);
+}
+.recolher-m-menu{
+    align-self: flex-end;
+    justify-content: end;
+    width: auto;
+    height: auto;
+    padding: 2vh;    
+    /* background-color: rgba(255, 0, 0, 0.212); */
+}
+.recolher-m-menu .icone-menu-lateral-mobile{
+    height: 2vh;
+}
+.icone-menu-lateral-mobile{
+    display: flex;
+    height: 3vh;
+}
+.texto-bott-mobile{
+    display: flex;
+    color: var(--cor-fundo);
+    font-size: 1.2rem;
+    margin-left: 8px;
+    width: auto;
+    text-decoration: none;
+}
+.sair-mobile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3vh;
+    width: 100%;
+    /* background-color: red; */
+}
+.sair-mobile .botao-lateral-navegacao-mobile{
+    width: 50%;
+    border-radius: 5px;
+    justify-content: center;
+    padding-left: 0;
+}
+.areatransp{
+    /* background-color: red;    */
+    height: 100vh;
+    width: 20vw;
+}

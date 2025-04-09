@@ -1,0 +1,646 @@
+
+main {  
+    z-index: 1; 
+    position: absolute; 
+    background-color:rgba(205, 205, 205, 0.52);
+    top: 157px; 
+    right: 2vh; 
+    left: 27vh; 
+    bottom: 2vh; 
+    justify-content: center;
+    align-items: start; 
+    overflow: auto;
+    scroll-behavior: smooth; 
+}
+.titulo {
+    font-size: 25px;
+    margin-left: 54px;
+    margin-top:24px;
+    margin-bottom: 3px;
+    color: var(--cinza-control);
+}
+.barra-pesquisa {
+    width: 10%;
+    font-style: italic;
+    font-size: 14px;
+    border: 2px solid var(--cinza-control)3;
+    opacity: 0.5;
+    margin-left: 76%;
+    position: absolute;
+    right: 2.9%;
+    top: 34px;
+    max-width: 500px;
+
+}
+
+.input-pesquisa {
+    width: 77%;
+    height:22px;
+    border: 1px solid #000000;
+    border-radius: 3px;
+}
+
+.linha {
+    background-color: #2d3945;
+    height: 6px;
+    top: -1px;
+    margin-left: 2.9%;
+    margin-right:2.9%  ;
+    width: 94.1%;
+}
+
+.cubo-branco {
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.52); /* Cor branca com opacidade */
+    z-index: 1; 
+    position: absolute; 
+    top: 63px; 
+    right: 5vh; 
+    left: 5vh; 
+    bottom: 7vh; 
+    justify-content: center;
+    align-items: start;
+   
+}
+
+
+.tabela {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    max-height: 615px;
+
+}
+/* Contêiner da tabela */
+.tabela-container {
+    width: 300%;
+    max-height: 594px; /* Limite de altura para a rolagem */
+    overflow-y: auto; /* Permite a rolagem vertical */
+}
+
+/* Tabela */
+.tabela-3x3 {
+    width: 100%;
+    table-layout: fixed; /* As colunas terão o mesmo tamanho */
+    border-collapse: collapse; /* Remove espaços entre as células */
+}
+
+/* Cabeçalhos das colunas */
+.tabela-3x3 th {
+    background-color: #2d3945;
+    color: white;
+    padding: 10px;
+    border: 1px solid #000;
+    text-align: center;
+    position: sticky; /* Fixa o cabeçalho no topo */
+    top: 0;
+    z-index: 10;
+}
+
+/* Células da tabela */
+.tabela-3x3 td {
+    padding: 8px;
+    border: 1px solid #000;
+    text-align: center;
+    background-color: #fff;
+}
+
+/* Linhas alternadas */
+.tabela-3x3 tr:nth-child(even) {
+    background-color: #f7f7f7;
+}
+
+/* Barra de rolagem personalizada */
+.tabela-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.tabela-container::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 4px;
+}
+
+.tabela-container::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+
+.tabela-3x3 td {
+    padding: 8px;
+    border: 1px solid #000000;
+    background-color: #ffffff;
+    box-sizing: border-box;
+    word-wrap: break-word; /* Quebra o texto automaticamente */
+    white-space: normal; /* Permite que o texto se quebre em várias linhas */
+    min-width: 120px; /* Define um tamanho mínimo para as células */
+}
+
+.tabela-3x3 th {
+    background-color: #2d3945;
+    color: #fff;
+    border: 1px solid #000000;
+    position: sticky; /* Fixa o cabeçalho durante o scroll */
+    top: 0;
+    z-index: 10;
+    padding: 10px;
+}
+
+
+.tabela-3x3 tr:nth-child(even) {
+    background-color: #f7f7f7;
+}
+.actions { 
+    width: 13%;
+}
+.actions img {
+    width: 24px;
+    height:24px;
+    transition: transform 0.3s;
+    float: left;  
+}
+.actions img:hover {
+    transform: scale(1.2); 
+}
+.toggle-btn {
+    width: 40px;
+    height: 20px;
+    cursor: pointer !important;
+    background-color: #ffffff;
+    border-radius: 40px;
+    border: 1px solid #000000;
+    position: relative; 
+    left:0px;
+    top:2px;
+}
+.toggle-btn .circle {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    background-color: #ff0000;
+    border-radius: 50%;
+    position: absolute;
+    top: 1px;
+    left: 3px;
+    transition: left 0.3s;
+}
+.toggle-btn.active .circle {
+    background-color: #3AA867;
+    left: 20px;
+    top: 1px;
+}
+.styled-button {
+    background-color: #2d3945;
+    color: white;
+    padding: 9px 10px;
+    text-align: center;
+    font-size: 1rem;
+    position: fixed;
+    bottom: 30px; /* Ajuste para a posição desejada */
+    right: 90px;  /* Ajuste a distância da borda direita */
+    cursor: pointer;
+    transition-duration: 0.4s;
+    box-sizing: border-box;
+    z-index: 1000;
+    width: auto; /* Ajuste a largura para algo mais controlado */
+}
+.styled-button:hover {
+    background-color: #2d3945;
+    color: #3AA867;
+    transform: scale(1.05);
+}
+
+.menu-tabela {
+    width: 30%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (max-width: 1320px) {
+    .menu-tabela {
+        width: 35%;
+        padding: 5px;
+    }
+    .tabela-container {
+    max-height: 590px; /* Defina a altura máxima do contêiner */
+    }
+    .tabela-3x3 th, .tabela-3x3 td {
+        font-size: 18px;
+        padding: 6px;
+    }
+    .barra-pesquisa {
+        width: 20%;
+        margin-right: 2.4%;
+    }
+    .linha {
+        margin-top: -1px;
+        margin-left: 52px;
+        width: 89.4%;
+    }
+}
+
+@media (max-width: 860px) {
+    .titulo {
+        font-size: 22px;
+        margin-left: 45px;
+    }
+
+    .menu-tabela {
+        width: 70%;
+        padding: 5px;
+    }
+
+    .tabela-3x3 {
+        width: 150%;
+    }
+    .tabela-container {
+        width: 150%; /* A largura do contêiner da tabela será 100% */
+        overflow-x: auto; /* Rolagem horizontal quando necessário */
+        max-height: 590px; /* Defina a altura máxima do contêiner */
+    }
+    .tabela-3x3 {
+        width: 100%;
+        table-layout: fixed;
+        border-collapse: collapse;
+    }
+    .tabela-3x3 td {
+        font-size: 13px;
+        padding: 6px;
+    }
+    .tabela-3x3 th{
+        font-size: 14px;
+        padding: 6px;
+    }
+
+    .barra-pesquisa {
+        width: 21.5%;
+        margin-right:4%;
+        margin-top: -0.5px;
+    }
+
+    .input-pesquisa {
+        width: 76%;
+    }
+
+    .linha {
+        margin-top: 3px;
+        margin-left: 53px;
+        width: 85.7%;
+    }
+}
+
+@media (max-width: 711px) {
+    .titulo{
+        font-size: 100%;
+    }
+    .tabela {
+        padding: 1px;
+    }
+    .menu-tabela {
+        width: 65%;
+        max-width: 320px;
+        padding: 1px;
+    }
+    .tabela-container {
+        width: 170%; /* A largura do contêiner da tabela será 100% */
+        overflow-x: auto; /* Rolagem horizontal quando necessário */
+        max-height: 509px !important; /* Defina a altura máxima do contêiner */
+    }
+    .tabela-3x3 {
+        width: 100%;
+        table-layout: fixed;
+        border-collapse: collapse;
+    }
+    .tabela-3x3 th {
+        font-size: 12px;
+     
+    }
+    .tabela-3x3 td {
+        font-size: 10.5px;
+        padding: 3px;
+        align-items: left;
+    }
+    .barra-pesquisa {
+        margin-top: -10px;
+        width: 23.5%;
+        margin-right: 5%;
+    }
+
+    .linha {
+        margin-top: -1px;
+        margin-left: 52px;
+        width: 84%;
+    }
+
+    .input-pesquisa {
+        width: 73%;
+    }
+    .cubo-branco {
+        top: 51px;
+    }
+}
+
+@media (max-width: 596px) {
+    .titulo {
+        font-size: 12px;
+    }
+
+    .cubo-branco {
+        top: 48px;
+    }
+
+    .barra-pesquisa {
+        width: 21.5%;
+        margin-top: -14px;
+        margin-right: 24px;
+    }
+
+    .input-pesquisa {
+        width: 71.5%;
+        height: 11px;
+    }
+
+    .linha {
+        width: 82%;
+        margin-left:53px ;
+        margin-right: 20px;
+    }
+    .tabela {
+        padding: 1px;
+    }
+    .menu-tabela {
+        width: 65%;
+        max-width: 320px;
+        padding: 1px;
+    }
+    .tabela-container {
+        width: 170%; /* A largura do contêiner da tabela será 100% */
+        overflow-x: auto; /* Rolagem horizontal quando necessário */
+        max-height: 650px; /* Defina a altura máxima do contêiner */
+    }
+    .tabela-3x3 {
+        width: 100%;
+        table-layout: fixed;
+        border-collapse: collapse;
+    }
+    .tabela-3x3 th {
+        font-size: 10px;
+     
+    }
+    .tabela-3x3 td {
+        font-size: 10.5px;
+        padding: 3px;
+        align-items: left;
+    }
+
+    .actions img {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media (max-width: 550px) {
+    .titulo {
+        font-size: 13px;
+        margin-left: 10.4%;
+    }
+    .tabela {
+        padding: 1px;
+    }
+    .menu-tabela {
+        width: 65%;
+        max-width: 320px;
+        padding: 1px;
+    }
+    .tabela-container {
+        width: 170%; /* A largura do contêiner da tabela será 100% */
+        overflow-x: auto; /* Rolagem horizontal quando necessário */
+        max-height: 650px; /* Defina a altura máxima do contêiner */
+    }
+    .tabela-3x3 {
+        width: 100%;
+        table-layout: fixed;
+        border-collapse: collapse;
+    }
+    .tabela-3x3 th {
+        font-size: 10px;
+     
+    }
+    .tabela-3x3 td {
+        font-size: 10.5px;
+        padding: 3px;
+        align-items: left;
+    }
+    .barra-pesquisa {
+        width: 21.5%;
+        margin-right: 7.5%;
+    }
+
+    .input-pesquisa {
+        width: 72.5%;
+    }
+
+    .linha {
+        width: 79%;
+    }
+
+    .actions img {
+        width: 20px;
+        height: 20px;
+    }
+}
+@media (max-width: 514px) {
+
+    .cubo-branco {
+        top: 78px; 
+        right:20px; 
+        left: 20px; 
+        bottom: 7vh; 
+    }
+    .titulo {
+        font-size: 13px;
+        margin-top: 40px;
+        margin-right:100px !important;
+        
+    }
+    .linha {
+        width: 91.5% !important;
+    }
+    .barra-pesquisa {
+        width: 25%;
+        margin-top: 1px;
+        margin-right: 6px !important;
+        
+    }
+    .input-pesquisa {
+        padding: 1px;
+        width: 100% !important;   /*para garantir que o width seja aplicado corretamente. */
+        font-size: 10px ;
+        border-radius: 5px;
+        height:5px;
+    }
+    .linha {
+        margin-top:-1px;
+        margin-left: 20px;
+        width: 86%;
+    }
+    .tabela {
+        padding: 1px;
+    }
+    .menu-tabela {
+        width: 65%;
+        max-width: 320px;
+        padding: 1px;
+    }
+    .tabela-container {
+        width: 160%; /* A largura do contêiner da tabela será 100% */
+        overflow-x: auto; /* Rolagem horizontal quando necessário */
+        max-height: 650px; /* Defina a altura máxima do contêiner */
+    }
+    .tabela-3x3 {
+        width: 100%;
+        table-layout: fixed;
+        border-collapse: collapse;
+    }
+    .tabela-3x3 th {
+        font-size: 11px;
+     
+    }
+    .tabela-3x3 td {
+        font-size: 13.5px;
+        padding: 3px;
+        align-items: left;
+    }
+    .toggle-btn {
+        width: 23.5px;
+        height: 13px;
+        background-color: #ffffff;
+        border-radius: 40px;
+        border: 1px solid #000000;
+        position: relative;
+        top:1px;
+    }
+    .toggle-btn .circle {
+        width: 9px;
+        height: 9px;
+       
+        
+    }
+    .toggle-btn.active .circle {
+        left: 10px;
+        top: 1px;
+    }
+    .actions img {
+        width: 15px;
+        height: 15px;
+    }
+    .styled-button {
+        width: 20%;  /* Ajustando a largura do botão para ocupar 80% da tela */
+        position: absolute; /* Posicionando o botão de forma absoluta */
+        left: 80%; /* Colocando o botão centralizado com a largura ajustada */
+        bottom: -50px;  /* Ajustando a posição para a parte inferior */
+        padding: 7px 3px;
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 320px) {
+    main {   
+    top: 157px; 
+    right: 10px; 
+    left: 20%;  
+    }
+    .cubo-branco {
+        top: 78px; 
+        right:20px; 
+        left: 20px; 
+        bottom: 7vh; 
+    }
+    .titulo {
+        font-size: 13px;
+        margin-top: 10px;
+        margin-right:40px !important;
+        text-align: center;
+    }
+    .barra-pesquisa {
+        width: 40%;
+        margin-top: 19px;
+        margin-right: 10px !important;
+        
+    }
+    .input-pesquisa {
+        padding: 1px;
+        width: 100% !important;   /*para garantir que o width seja aplicado corretamente. */
+        font-size: 10px ;
+        border-radius: 5px;
+        height:10px;
+    }
+    .linha {
+        margin-top: 28px;
+        margin-left: 20px;
+        width: 86% !important;
+    }
+    .tabela {
+        padding: 1px;
+    }
+    .menu-tabela {
+        width: 65%;
+        max-width: 320px;
+        padding: 1px;
+    }
+    .tabela-container {
+        width: 170%; /* A largura do contêiner da tabela será 100% */
+        overflow-x: auto; /* Rolagem horizontal quando necessário */
+        max-height: 650px; /* Defina a altura máxima do contêiner */
+    }
+    .tabela-3x3 {
+        width: 100%;
+        table-layout: fixed;
+        border-collapse: collapse;
+    }
+    .tabela-3x3 th {
+        font-size: 10px;
+     
+    }
+    .tabela-3x3 td {
+        font-size: 10.5px;
+        padding: 3px;
+        align-items: left;
+    }
+    
+    .toggle-btn {
+        width: 23.5px;
+        height: 13px;
+        background-color: #ffffff;
+        border-radius: 40px;
+        border: 1px solid #000000;
+        position: relative;
+        top:1px;
+    }
+    .toggle-btn .circle {
+        width: 9px;
+        height: 9px;
+       
+        
+    }
+    .toggle-btn.active .circle {
+        
+        
+        left: 10px;
+        top: 1px;
+    }
+    .actions img {
+        width: 15px;
+        height: 15px;
+    }
+    .styled-button {
+        width: 50% !important;  /* Ajustando a largura do botão para ocupar 80% da tela */
+        position: absolute; /* Posicionando o botão de forma absoluta */
+        left: 50%; /* Colocando o botão centralizado com a largura ajustada */
+        bottom: -50px;  /* Ajustando a posição para a parte inferior */
+        padding: 7px 3px;
+        font-size: 0.0rem;
+    }
+}

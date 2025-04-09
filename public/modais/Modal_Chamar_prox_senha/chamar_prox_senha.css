@@ -1,0 +1,406 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo dos botões */
+.botao-modal-confirmacao-presenca {
+    background-color: #33404D;
+    color: #FFFFFF;
+    border: 0;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+/* Estilo do container do modal */
+.fundo-container-confirmacao-presenca {
+    background: rgba(0, 0, 0, 0.5);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+    z-index: 10;
+}
+
+.fundo-container-confirmacao-presenca.show {
+    opacity: 1;
+    display: flex;
+    pointer-events: auto;
+}
+
+/* Estilo do modal */
+.modal-confirmacao-presenca {
+    background-color: #e0e0e0;
+    width: 90%;
+    max-width: 800px; /* Ajustado para um tamanho melhor */
+    min-width: 400px;
+    height: auto;
+    padding: 40px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+    text-align: left;
+    box-sizing: border-box;
+    border-radius: 0;
+    border-radius: 5px;
+}
+
+/* Linha horizontal */
+.row-confirmacao-presenca {
+    border: none;
+    border-top: 2px solid #000;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* Estilo do logo */
+.logo-confirmacao-presenca {
+    position: absolute;
+    top: 25px;
+    right: 30px;
+    width: 60px;
+    max-width: 200px;
+}
+
+/* Título */
+.title-confirmacao-presenca {
+    font-size: 28px;
+    margin-bottom: 40px;
+    font-weight: bold;
+    text-align: start;
+}
+
+/* Parágrafo */
+.desk-info-confirmacao-presenca, .name-confirmacao-presenca, .info-confirmacao-presenca {
+    font-size: 22px;
+    margin: 20px 0;
+    text-align: center;
+}
+
+/* Grupo de botões */
+.button-group-confirmacao-presenca{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.button-row-confirmacao-presenca {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.button-group-confirmacao-presenca button {
+    text-align: center;
+    width: auto;
+    padding: 12px 40px;
+    margin: 5px;
+}
+
+/* Botões específicos */
+.senha-confirmacao-presenca {
+    margin-right: 30px;
+    color: red;
+    font-weight: bold;
+}
+
+/* Botão cancelar */
+.ausente_ChamarSenha {
+    background-color: #33404D;
+    color: white;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 12px 20px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.ausente_ChamarSenha:hover {
+    color: #FF0000;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Botão salvar */
+.presente_ChamarSenha {
+    background-color: #33404D;
+    color: white;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 12px 20px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.presente_ChamarSenha:hover {
+    color: #3AA867;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Botão Chamar Novamente */
+.chamar_ChamarSenha {
+    background-color: #33404D;
+    color: white;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 12px 20px;
+    text-align: center;
+    display: block;
+    margin: 10px auto;
+    transition: 0.3s;
+}
+
+.chamar_ChamarSenha:hover {
+    color: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Media Queries */
+
+/* Responsividade para telas de 320px */
+@media (min-width: 320px) and (max-width: 350px) {
+    .modal-confirmacao-presenca {
+        width: 95%;
+        min-width: auto;
+        padding: 10px;
+    }
+    
+    .logo-confirmacao-presenca {
+        width: 40px;
+        top: 5px;
+        right: 5px;
+    }
+
+    .title-confirmacao-presenca {
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
+
+    .button-group-confirmacao-presenca {
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .button-group-confirmacao-presenca button {
+        font-size: 10px;
+        padding: 6px 10px;
+        width: 100%;
+    }
+
+    .chamar {
+        width: 60%; /* Garante que tenha o mesmo tamanho dos outros botões */
+        white-space: nowrap; /* Impede a quebra de linha */
+        padding: 10px 20px; /* Mesmo padding dos outros botões */
+        font-size: 10px; /* Mantém a consistência do tamanho da fonte */
+    }
+
+    .row-confirmacao-presenca {
+        width: 100%;
+        /* margin-left: 0;
+        margin-right: 0; */
+    }
+
+    .desk-info-confirmacao-presenca, .name-confirmacao-presenca, .info-confirmacao-presenca {
+        font-size: 18px;
+    }
+
+    .senha-confirmacao-presenca {
+        display: inline-block;
+        text-align: center;
+        margin-left: 20px; /* Ajuste fino para alinhar com o texto */
+    }
+}
+
+/* Celulares pequenos */
+@media (min-width: 351px) and (max-width: 400px) {
+    .modal-confirmacao-presenca {
+        width: 90%;
+        min-width: auto;
+        padding: 15px;
+    }
+    
+    .logo-confirmacao-presenca {
+        width: 15%;
+        top: 15px;
+        right: 10px;
+    }
+
+    .title-confirmacao-presenca {
+        font-size: 16px;
+        position: relative;
+        top: 15px;
+    }
+
+    .button-group-confirmacao-presenca {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .button-group-confirmacao-presenca button {
+        font-size: 12px;
+        padding: 8px 12px;
+    }
+
+    .chamar .ausente .presente {
+        width: 60%; /* Garante que tenha o mesmo tamanho dos outros botões */
+        white-space: nowrap; /* Impede a quebra de linha */
+        padding: 10px 20px; /* Mesmo padding dos outros botões */
+        font-size: 10px; /* Mantém a consistência do tamanho da fonte */
+    }
+
+    /* Ajuste da linha horizontal */
+    .row-confirmacao-presenca {
+        width: 100%;
+        /* margin-left: 0;
+        margin-right: 0; */
+    }
+
+    .desk-info-confirmacao-presenca, .name-confirmacao-presenca, .info-confirmacao-presenca {
+        font-size: 18px;
+    }
+
+    .senha-confirmacao-presenca {
+        display: inline-block;
+        text-align: center;
+        margin-left: 29px; /* Ajuste fino para alinhar com o texto */
+    }
+}
+
+/* Celulares médios */
+@media (min-width: 480px) and (max-width: 767px) {
+    .modal-confirmacao-presenca {
+        width: 95%;
+        padding: 20px;
+    }
+
+    .row-confirmacao-presenca {
+        width: 114%;
+    }
+
+    .logo-confirmacao-presenca{
+        width: 10%;
+        top: 30px;
+    }
+
+    .title-confirmacao-presenca {
+        font-size: 20px;
+    }
+
+    .senha-confirmacao-presenca {
+        display: inline-block;
+        text-align: center;
+        margin-left: 40px; /* Ajuste fino para alinhar com o texto */
+    }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+    .modal-confirmacao-presenca {
+        width: 80%;
+        padding: 25px;
+    }
+
+    .row-confirmacao-presenca {
+        width: 100%;
+    }
+
+    .logo-confirmacao-presenca{
+        width: 50px;
+        top: 20px;
+    }
+
+    .title-confirmacao-presenca {
+        font-size: 20px;
+        position: relative;
+        top: 10px;
+    }
+
+    .senha-confirmacao-presenca {
+        display: inline-block;
+        text-align: center;
+        margin-left: 30px; /* Ajuste fino para alinhar com o texto */
+    }
+}
+
+/* Tablets grandes e telas intermediárias */
+@media (min-width: 769px) and (max-width: 1023px) {
+    .modal-confirmacao-presenca {
+        width: 75%;
+        padding: 30px;
+    }
+
+    .row-confirmacao-presenca {
+        width: 100%;
+    }
+
+    .logo-confirmacao-presenca{
+        width: 10%;
+        top: 25px;
+    }
+
+    .title-confirmacao-presenca {
+        font-size: 26px;
+        position: relative;
+        top: 10px;
+    }
+
+    .senha-confirmacao-presenca {
+        text-align: center;
+        margin-left: 30px;
+    }
+}
+
+
+/* Notebooks e desktops */
+@media (min-width: 1024px) {
+    .modal-confirmacao-presenca {
+        width: 80%;
+        max-width: 600px;
+    }
+
+    .row-confirmacao-presenca {
+        width: 100%;
+    }
+
+    .title-confirmacao-presenca {
+        font-size: 32px;
+    }
+
+    .senha-confirmacao-presenca {
+        display: inline-block;
+        text-align: center;
+        margin-left: 30px; /* Ajuste fino para alinhar com o texto */
+    }
+}
+
+@media (min-width: 1200px) {
+    .modal-confirmacao-presenca {
+        width: 80%;
+        max-width: 600px;
+    }
+
+    .row-confirmacao-presenca {
+        width: 100%;
+    }
+
+    .title-confirmacao-presenca {
+        font-size: 32px;
+    }
+
+    .senha-confirmacao-presenca {
+        display: inline-block;
+        text-align: center;
+        margin-left: 30px; /* Ajuste fino para alinhar com o texto */
+    }
+}

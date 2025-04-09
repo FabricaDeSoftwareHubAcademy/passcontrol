@@ -1,0 +1,222 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo dos botões */
+.botao-modal-ativacao-guiche {
+    background-color: #33404D;
+    color: #FFFFFF;
+    border: 0;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+/* Estilo do container do modal */
+.fundo-container-ativacao-guiche{
+    background: rgba(0, 0, 0, 0.5);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 10;
+}
+
+.fundo-container-ativacao-guiche.show {
+    opacity: 1;
+    display: flex;
+    pointer-events: auto;
+}
+
+/* Estilo do modal */
+.modal-ativacao-guiche {
+    background-color: #e0e0e0;
+    width: 80%;
+    max-width: 600px;
+    padding: 40px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+    text-align: left;
+    border-radius: 5px;
+}
+
+/* Estilo da linha horizontal */
+.linha-ativacao-guiche {
+    border: none;
+    border-top: 2px solid #000;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* Estilo do logo */
+.logo-ativacao-guiche {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    width: 60px;
+    max-width: 200px;
+    height: auto;
+}
+
+/* Estilo do título */
+.titulo-ativacao-guiche {
+    font-size: 28px;
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+
+/* Estilo do parágrafo */
+.texto-ativacao-guiche {
+    font-size: 22px;
+    margin: 40px 0;
+    text-align: center;
+}
+
+/* Grupo de botões */
+.button-group-ativacao-guiche{
+    display: flex;
+    justify-content: right;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+/* Estilo do botão cancelar */
+.cancel_AtivGuiche {
+    background-color: #33404D;
+    color: white;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 10px 30px;
+}
+
+.cancel_AtivGuiche:hover {
+    color: #FF0000;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Estilo do botão salvar */
+.save_AtivGuiche {
+    background-color: #33404D;
+    color: white;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 10px 30px;
+}
+
+.save_AtivGuiche:hover {
+    color: #3AA867;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Responsividade */
+@media (max-width: 1200px) {
+    .modal-ativacao-guiche {
+        width: 70%;
+    }
+}
+
+@media (max-width: 1024px) {
+    .modal-ativacao-guiche {
+        width: 80%;
+    }
+}
+
+@media (max-width: 768px) {
+    .modal-ativacao-guiche {
+        width: 90%;
+    }
+    .titulo-ativacao-guiche{
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .button-group-ativacao-guiche {
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+    .botao-modal-ativacao-guiche {
+        width: auto;
+    }
+}
+
+@media (min-width: 401px) and (max-width: 550px){
+    .modal-ativacao-guiche {
+        width: 95%;
+        padding: 20px;
+    }
+    .titulo-ativacao-guiche{
+        margin-top: 7px;
+        font-size: 20px;
+    }
+    .logo-ativacao-guiche{
+        top: 10px;
+        width: 50px;
+    }
+    .button-group-ativacao-guiche {
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+    .botao-modal-ativacao-guiche {
+        width: auto;
+    }
+}
+
+@media (max-width: 400px) {
+    .modal-ativacao-guiche {
+        width: 95%;
+        padding: 15px;
+    }
+    .titulo-ativacao-guiche{
+        margin-top: 7px;
+        font-size: 20px;
+    }
+    .texto-ativacao-guiche{
+        font-size: 18px;
+    }
+    .logo-ativacao-guiche{
+        top: 10px;
+        width: 50px;
+    }
+    .button-group-ativacao-guiche {
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+    .botao-modal-ativacao-guiche {
+        width: auto;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 340px) {
+    .modal-ativacao-guiche {
+        width: 90%;
+        padding: 15px;
+    }
+    .titulo-ativacao-guiche{
+        font-size: 16px;
+    }
+    .texto-ativacao-guiche{
+        font-size: 16px;
+    }
+    .logo-ativacao-guiche{
+        top: 15px;
+        width: 40px;
+    }
+    .button-group-ativacao-guiche {
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+    .botao-modal-ativacao-guiche {
+        width: auto;
+    }
+}
