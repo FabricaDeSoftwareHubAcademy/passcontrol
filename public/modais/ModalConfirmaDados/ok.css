@@ -27,7 +27,7 @@
 }
 
 /* Estilo do container do modal */
-.modal-container {
+.modal-confirma-container {
     background: rgba(0, 0, 0, 0.5);
     width: 100vw;
     height: 100vh;
@@ -43,7 +43,7 @@
     z-index: 1;
 }
 
-.modal-container.show {
+.modal-confirma-container.show {
     opacity: 1;
     pointer-events: auto;
 }

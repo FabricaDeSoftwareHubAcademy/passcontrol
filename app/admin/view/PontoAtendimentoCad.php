@@ -24,6 +24,7 @@ $guiches = $guiche->buscar();
     <link rel="stylesheet" href="../../../public/modais/ModalEdicaoPontoAtendimento/estilo.css">
     <link rel="stylesheet" href="../../../public/modais/ModalInativacaoGuiche/estilo.css">
     <link rel="stylesheet" href="../../../public/modais/ModalInativacaoGuiche/cadatro.css">
+    <link rel="stylesheet" href="../../../public/modais/ModalConfirmaDados/ok.css">
 
 
     <link rel="shortcut icon" type="imagex/png" href="../../../public/img/Logo-Nota-Controlnt.ico">
@@ -127,6 +128,7 @@ document.addEventListener("DOMContentLoaded", function() {
             const buttonFechar = document.querySelector(".close");
             const buttonCancelar = document.querySelector(".cancel");
             const buttonSalvar = document.querySelector(".save");
+            const apareceMod = document.getElementById("confirma");
 
             event.preventDefault(); // impede o recarregamento da pagina
 
@@ -139,11 +141,11 @@ document.addEventListener("DOMContentLoaded", function() {
             let response = await dados_php.json();
 
             console.log(response);
-            // Preenche os campos do modal com os dados do usuário
+    
             document.getElementById("nome_guiche").value = response.nome_guiche;
             document.getElementById("num_guiche").value = response.num_guiche;
             document.getElementById("id_guiche").value = response.id_guiche; 
-
+            
             modalContainer.classList.add("show");
 
             buttonCancelar.addEventListener("click", () => {
@@ -164,85 +166,98 @@ document.addEventListener("DOMContentLoaded", function() {
                         body:formData
                     })
 
-                    let response2 = await dados2_php.json()
-
-                    console.log(response2);  
-                    location.reload();
-
+                    let response2 = await dados2_php.json();
+                if (response) {
+                    apareceMod.classList.add("show");
                     modalContainer.classList.remove("show");
-                });
+                }
 
+                console.log(response);
+            });
 
-
+            buttonCancelar.addEventListener("click", function() {
+                modalContainer.classList.remove("show");
+            });
         });
+    });
 
-       });
-
-    }); 
- 
- 
+    const buttonOk = document.querySelector(".Okay");
+    buttonOk.addEventListener("click", function() {
+        const apareceMod = document.getElementById("confirma");
+        apareceMod.classList.remove("show");
+        location.reload();
+    });
+});
 </script>
 
 <!-- ModalGuicheInativar -->
 <div class="modal-inativar-container">
-        <section class="modal">
-            <img src="../../../public/img/img-modais/Logo Nota Controlnt.png" alt="Logo Nota Control" class="logo">
-            <h1 class="titulo">Confirmação</h1>
-            <hr class="linha">
-            <p class="texto"><b>Deseja Alterar Esse Guichê?</b></p>
-            <div class="button-group">
-                <button class="botao-modal cancel">Não</button>
-                <button id="salvar" class="botao-modal save">Sim</button>
-            </div>
-        </section>
+    <section class="modal">
+        <img src="../../../public/img/img-modais/Logo Nota Controlnt.png" alt="Logo Nota Control" class="logo">
+        <h1 class="titulo">Confirmação</h1>
+        <hr class="linha">
+        <p class="texto"><b>Deseja Alterar Esse Guichê?</b></p>
+        <div class="button-group">
+            <button class="botao-modal cancel">Não</button>
+            <button id="salvar" class="botao-modal save">Sim</button>
+        </div>
+    </section>
 </div>
 
-
 <script>
-
-
 document.addEventListener("DOMContentLoaded", function() {
     document.querySelectorAll("#switch_status").forEach(button => {
-
-        button.addEventListener("click",  function(event) {
-
+        button.addEventListener("click", function(event) {
             let id_value_switch = button.getAttribute("id_value_switch");
             const modalContainer = document.querySelector(".modal-inativar-container");
-            const buttonFechar = document.querySelector(".close");
             const buttonCancelar = document.querySelector(".cancel");
-   
+            const apareceMod = document.getElementById("confirma");
+
             modalContainer.classList.add("show");
 
             const buttonSalvar = document.querySelector("#salvar");
 
-            
-            buttonSalvar.addEventListener("click", async function(event){
-
-                let dados_php = await fetch("../../classe/inativar_guiche.php?id_guiche="+id_value_switch , {
-                method: 'GET'
-                }); 
+            buttonSalvar.addEventListener("click", async function(event) {
+                let dados_php = await fetch("../../classe/inativar_guiche.php?id_guiche=" + id_value_switch, {
+                    method: 'GET'
+                });
 
                 let response = await dados_php.json();
-                    
+                if (response) {
+                    apareceMod.classList.add("show");
+                    modalContainer.classList.remove("show");
+                }
+
                 console.log(response);
-                location.reload();
+            });
 
-            })
+            buttonCancelar.addEventListener("click", function() {
+                modalContainer.classList.remove("show");
+            });
+        });
+    });
 
-
-        })
-
-    })
-
-
-
-
-})
-
-
+    const buttonOk = document.querySelector(".Okay");
+    buttonOk.addEventListener("click", function() {
+        const apareceMod = document.getElementById("confirma");
+        apareceMod.classList.remove("show");
+        location.reload();
+    });
+});
 </script>
 
-
+<!-- confirmacao -->
+<div id="confirma"  class="modal-confirma-container">
+        <section class="modal">
+            <img src="../../../public/img/img-modais/Logo Nota Controlnt.png" alt="Logo Nota Control" class="logo">
+            <h1 class="modal-title">Confirmação</h1>
+            <hr class="modal-divider">
+            <p class="modal-message"><b>Salvo com sucesso!</b></p>
+            <div class="button-group">
+                <button id="btnOk"class="botao-modal Okay">Ok</button>
+            </div>
+        </section>
+    </div >
 </html>
 
 
