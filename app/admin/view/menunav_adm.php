@@ -29,7 +29,7 @@
             <button class="hamburger" onclick="toggleMenu()">☰</button>
             <a href="./menuadm_usuario.php">Usuários</a>
             <a href="./menuadm_servicos.php">Serviços</a>
-            <a href="./menuadm_autoatendimento.php" class="active">Autoatendimento</a>
+            <a href="../../usuario/view/tela_autoatendimentoPage1.php" class="active">Autoatendimento</a>
             <a href="./menusup_usuario.php">SUP</a>
         </div>
         <div class="menu-mobile" id="mobileMenu">
