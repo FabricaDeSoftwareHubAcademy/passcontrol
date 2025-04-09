@@ -1,4 +1,3 @@
-
 const buttonAbrir = document.querySelector(".open");
 const modalContainer = document.querySelector(".modal-container");
 const buttonFechar = document.querySelector(".close");
