@@ -29,7 +29,7 @@
 
 .topo-area-chamada {
     width: 96%;
-    height: 100%;
+    height: 46%;
     display: flex;
     /* background-color: red; */
     justify-content: space-between;
@@ -369,7 +369,7 @@
     .fundo-guiche-area-chamada{ 
     width: 96%; 
     font-weight: 600; 
-    height: 100%; 
+    height: 38%; 
     border-radius: 5px; 
     background-color: rgb(255, 255, 255,0.5); 
     gap: 15px; 
@@ -384,8 +384,8 @@
     /* border: 1px solid black;  */
     border-collapse: collapse; 
     background-color: rgba(255, 255, 255, 0.5); 
-    width: 95%; 
-    margin: 2vw; 
+    width: 96%; 
+    margin: 1.5vw; 
     max-height: 100px; 
     position: relative; 
     overflow-x: auto;  
@@ -431,10 +431,10 @@ thead, tbody tr {
     table-layout: fixed; 
 } 
 tbody { 
-    display: block; 
-    max-height: 160px;  
+    display: block;  
     overflow-y: scroll;  
-    position: relative; 
+    position: relative;
+    height: 180px; 
 
 } 
 .tabela_atendimento-guiche-area-chamada tbody::-webkit-scrollbar { 
@@ -532,6 +532,9 @@ thead, tbody tr {
     .fundo-guiche-area-chamada{
         overflow-x: auto;
     }
+    .tabela_atendimento-guiche-area-chamada{
+        margin: 0.8rem;
+    }
     .informacoes-area-chamada{
         gap: 0;
     }
@@ -584,7 +587,7 @@ thead, tbody tr {
         overflow-x: auto; 
     }
     tbody { 
-        max-height: 140px; 
+        max-height: 160px; 
     } 
 }
 @media screen and (min-width: 1000px) and (max-width: 1199px) {
@@ -1123,6 +1126,9 @@ thead, tbody tr {
 }
 
 @media screen and (min-width: 200px) and (max-width: 434px) {
+    .topo-area-chamada{
+        gap: 1vh;
+    }
     .esquerda-area-chamada{
         gap: 0.8rem
     }

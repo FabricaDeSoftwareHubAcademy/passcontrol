@@ -328,7 +328,7 @@ thead, tbody tr {
         overflow-x: auto;
     } 
     tbody { 
-        max-height: 140px; 
+        max-height: 160px; 
     } 
 }
 @media screen and (min-width: 1000px) and (max-width: 1310px) {
