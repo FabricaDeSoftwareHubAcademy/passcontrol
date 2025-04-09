@@ -17,9 +17,15 @@
 .tabela {
   border: 0.5px solid black;
   border-collapse: separate;
-  border-spacing: 0;
-  background-color: rgb(255, 255, 255,0.4);
-  width: 100%;
+  border-spacin:root {
+    --verde-control: #3AA867;
+    --cinza-control: #33404D;
+    --cor-fundo: #f9f9f9;
+    --cor-nave-botaa: #2d3945;
+    --cor-hove-menu: rgba(0, 0, 0, 0.2);
+    --cor-active: rgb(219 219 219);
+    --font-main: Inter, sans-serif;
+}
   /* height: 30%; */
 
 }
