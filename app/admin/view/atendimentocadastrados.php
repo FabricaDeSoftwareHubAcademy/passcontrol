@@ -34,362 +34,51 @@
     include "./navegacao.php";
     ?>
 
-    <section class="Area-Util-Projeto">
-        <div>
-            <h2 class="titulo">Pontos de Atendimento Cadastrados</h2>
-            <!-- Barra de pesquisa -->
-            <div class="barra-pesquisa">
-                <input type="text" class="input-pesquisa" placeholder="Buscar Registro">
-            </div>
+<section class="Area-Util-Projeto">
+
+<div class="area-info">
+    <div class="header-area">
+        <div class="titulo-area">
+            <span>Pontos de Atendimento</span>
         </div>
-
-        <!-- Linha divisória -->
-        <div class="linha"></div>
-
-        <div class="cubo-branco">
-            <!-- Tabela de pontos de atendimento -->
-            <div class="tabela">
-                <section class="menu-tabela">
-                    <div class="tabela-container">
-                        <table class="tabela-3x3">
-                            <tr>
-                                <th>Nome do Ponto de Atendimento</th>
-                                <th>Identificador</th>
-                                <th>Ações</th>
-                                <th>Ativar/Desativar</th>
-                            </tr>
-                            <tr>
-                                <td>Guichê</td>
-                                <td>1</td>
-                                <td class="actions">
-                                    <!-- Botão de edição -->
-                                    <a href=""> <!--Tirei para implementar o modal: editar_pont_de_atendimento.php-->
-                                        <img src="../../../public/img/icons/editar.png" alt="Editar">
-                                    </a>
-                                </td>
-                                <td>
-                                    <!-- Botão de ativar/desativar -->
-                                    <div class="toggle-btn active" id="button-action">
-                                        <div class="circle"></div>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Guichê</td>
-                                <td>2</td>
-                                <td class="actions">
-                                    <!-- Botão de edição -->
-                                    <a href=""> <!--Tirei para implementar o modal: editar_pont_de_atendimento.php-->
-                                        <img src="../../../public/img/icons/editar.png" alt="Editar">
-                                    </a>
-                                </td>
-                                <td>
-                                    <!-- Botão de ativar/desativar -->
-                                    <div class="toggle-btn active">
-                                        <div class="circle"></div>
-                                    </div>
-                                </td>
-                            <tr>
-                                <td>Guichê</td>
-                                <td>3</td>
-                                <td class="actions">
-                                    <!-- Botão de edição -->
-                                    <a href=""> <!--Tirei para implementar o modal: editar_pont_de_atendimento.php-->
-                                        <img src="../../../public/img/icons/editar.png" alt="Editar">
-                                    </a>
-                                </td>
-                                <td>
-                                    <!-- Botão de ativar/desativar -->
-                                    <div class="toggle-btn active">
-                                        <div class="circle"></div>
-                                    </div>
-                                </td>
-                            </tr>
-                            </tr>
-                            <tr>
-                                <td>Guichê</td>
-                                <td>4</td>
-                                <td class="actions">
-                                    <!-- Botão de edição -->
-                                    <a href=""> <!--Tirei para implementar o modal: editar_pont_de_atendimento.php-->
-                                        <img src="../../../public/img/icons/editar.png" alt="Editar">
-                                    </a>
-                                </td>
-                                <td>
-                                    <!-- Botão de ativar/desativar -->
-                                    <div class="toggle-btn active">
-                                        <div class="circle"></div>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Guichê</td>
-                                <td>5</td>
-                                <td class="actions">
-                                    <!-- Botão de edição -->
-                                    <a href=""> <!--Tirei para implementar o modal: editar_pont_de_atendimento.php-->
-                                        <img src="../../../public/img/icons/editar.png" alt="Editar">
-                                    </a>
-                                </td>
-                                <td>
-                                    <!-- Botão de ativar/desativar -->
-                                    <div class="toggle-btn active">
-                                        <div class="circle"></div>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Guichê</td>
-                                <td>6</td>
-                                <td class="actions">
-                                    <!-- Botão de edição -->
-                                    <a href=""> <!--Tirei para implementar o modal: editar_pont_de_atendimento.php-->
-                                        <img src="../../../public/img/icons/editar.png" alt="Editar">
-                                    </a>
-                                </td>
-                                <td>
-                                    <!-- Botão de ativar/desativar -->
-                                    <div class="toggle-btn active">
-                                        <div class="circle"></div>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Guichê</td>
-                                <td>7</td>
-                                <td class="actions">
-                                    <!-- Botão de edição -->
-                                    <a href=""> <!--Tirei para implementar o modal: editar_pont_de_atendimento.php-->
-                                        <img src="../../../public/img/icons/editar.png" alt="Editar">
-                                    </a>
-                                </td>
-                                <td>
-                                    <!-- Botão de ativar/desativar -->
-                                    <div class="toggle-btn active">
-                                        <div class="circle"></div>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Guichê</td>
-                                <td>8</td>
-                                <td class="actions">
-                                    <!-- Botão de edição -->
-                                    <a href=""> <!--Tirei para implementar o modal: editar_pont_de_atendimento.php-->
-                                        <img src="../../../public/img/icons/editar.png" alt="Editar">
-                                    </a>
-                                </td>
-                                <td>
-                                    <!-- Botão de ativar/desativar -->
-                                    <div class="toggle-btn active">
-                                        <div class="circle"></div>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Guichê</td>
-                                <td>9</td>
-                                <td class="actions">
-                                    <!-- Botão de edição -->
-                                    <a href=""> <!--Tirei para implementar o modal: editar_pont_de_atendimento.php-->
-                                        <img src="../../../public/img/icons/editar.png" alt="Editar">
-                                    </a>
-                                </td>
-                                <td>
-                                    <!-- Botão de ativar/desativar -->
-                                    <div class="toggle-btn active">
-                                        <div class="circle"></div>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Guichê</td>
-                                <td>10</td>
-                                <td class="actions">
-                                    <!-- Botão de edição -->
-                                    <a href=""> <!--Tirei para implementar o modal: editar_pont_de_atendimento.php-->
-                                        <img src="../../../public/img/icons/editar.png" alt="Editar">
-                                    </a>
-                                </td>
-                                <td>
-                                    <!-- Botão de ativar/desativar -->
-                                    <div class="toggle-btn active">
-                                        <div class="circle"></div>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Guichê</td>
-                                <td>11</td>
-                                <td class="actions">
-                                    <!-- Botão de edição -->
-                                    <a href=""> <!--Tirei para implementar o modal: editar_pont_de_atendimento.php-->
-                                        <img src="../../../public/img/icons/editar.png" alt="Editar">
-                                    </a>
-                                </td>
-                                <td>
-                                    <!-- Botão de ativar/desativar -->
-                                    <div class="toggle-btn active">
-                                        <div class="circle"></div>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Guichê</td>
-                                <td>12</td>
-                                <td class="actions">
-                                    <!-- Botão de edição -->
-                                    <a href=""> <!--Tirei para implementar o modal: editar_pont_de_atendimento.php-->
-                                        <img src="../../../public/img/icons/editar.png" alt="Editar">
-                                    </a>
-                                </td>
-                                <td>
-                                    <!-- Botão de ativar/desativar -->
-                                    <div class="toggle-btn active">
-                                        <div class="circle"></div>
-                                    </div>
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td>Guichê</td>
-                                <td>13</td>
-                                <td class="actions">
-                                    <!-- Botão de edição -->
-                                    <a href=""> <!--Tirei para implementar o modal: editar_pont_de_atendimento.html-->
-                                        <img src="../../../public/img/icons/editar.png" alt="Editar">
-                                    </a>
-                                </td>
-                                <td>
-                                    <!-- Botão de ativar/desativar -->
-                                    <div class="toggle-btn active">
-                                        <div class="circle"></div>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Guichê</td>
-                                <td>14</td>
-                                <td class="actions">
-                                    <!-- Botão de edição -->
-                                    <a href=""> <!--Tirei para implementar o modal: editar_pont_de_atendimento.html-->
-                                        <img src="../../../public/img/icons/editar.png" alt="Editar">
-                                    </a>
-                                </td>
-                                <td>
-                                    <!-- Botão de ativar/desativar -->
-                                    <div class="toggle-btn active">
-                                        <div class="circle"></div>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Guichê</td>
-                                <td>15</td>
-                                <td class="actions">
-                                    <!-- Botão de edição -->
-                                    <a href=""> <!--Tirei para implementar o modal: editar_pont_de_atendimento.html-->
-                                        <img src="../../../public/img/icons/editar.png" alt="Editar">
-                                    </a>
-                                </td>
-                                <td>
-                                    <!-- Botão de ativar/desativar -->
-                                    <div class="toggle-btn active">
-                                        <div class="circle"></div>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Guichê</td>
-                                <td>16</td>
-                                <td class="actions">
-                                    <!-- Botão de edição -->
-                                    <a href=""> <!--Tirei para implementar o modal: editar_pont_de_atendimento.php-->
-                                        <img src="../../../public/img/icons/editar.png" alt="Editar">
-                                    </a>
-                                </td>
-                                <td>
-                                    <!-- Botão de ativar/desativar -->
-                                    <div class="toggle-btn active">
-                                        <div class="circle"></div>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Guichê</td>
-                                <td>1</td>
-                                <td class="actions">
-                                    <!-- Botão de edição -->
-                                    <a href=""> <!--Tirei para implementar o modal: editar_pont_de_atendimento.php-->
-                                        <img src="../../../public/img/icons/editar.png" alt="Editar">
-                                    </a>
-                                </td>
-                                <td>
-                                    <!-- Botão de ativar/desativar -->
-                                    <div class="toggle-btn active">
-                                        <div class="circle"></div>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Guichê</td>
-                                <td>1</td>
-                                <td class="actions">
-                                    <!-- Botão de edição -->
-                                    <a href=""> <!--Tirei para implementar o modal: editar_pont_de_atendimento.php-->
-                                        <img src="../../../public/img/icons/editar.png" alt="Editar">
-                                    </a>
-                                </td>
-                                <td>
-                                    <!-- Botão de ativar/desativar -->
-                                    <div class="toggle-btn active">
-                                        <div class="circle"></div>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Guichê</td>
-                                <td>1</td>
-                                <td class="actions">
-                                    <!-- Botão de edição -->
-                                    <a href=""> <!--Tirei para implementar o modal: editar_pont_de_atendimento.php-->
-                                        <img src="../../../public/img/icons/editar.png" alt="Editar">
-                                    </a>
-                                </td>
-                                <td>
-                                    <!-- Botão de ativar/desativar -->
-                                    <div class="toggle-btn active">
-                                        <div class="circle"></div>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Guichê</td>
-                                <td>1</td>
-                                <td class="actions">
-                                    <!-- Botão de edição -->
-                                    <a href=""> <!--Tirei para implementar o modal: editar_pont_de_atendimento.php-->
-                                        <img src="../../../public/img/icons/editar.png" alt="Editar">
-                                    </a>
-                                </td>
-                                <td>
-                                    <!-- Botão de ativar/desativar -->
-                                    <div class="toggle-btn active">
-                                        <div class="circle"></div>
-                                    </div>
-                                </td>
-                            </tr>
-
-                        </table>
-
-                        <!-- Botão para adicionar novo guichê -->
-                        <a href="#">
-                            <button class="styled-button" id="btn-cadastro">Novo Guichê</button>
-                        </a>
-                </section>
-            </div>
+        <div class="input-search">
+            <input type="search" name="Buscar Atendente" placeholder="Buscar Atendente">
         </div>
-    </section>
+    </div>
+    <div class="linha-in">
+        <span></span>
+    </div>
+    <div class="area-tabela">
+        <div class="sub-area-tabela">
+            <table class="tabela">
+                <tr>
+                    <th>Tipo</th>
+                    <th>Identificador</th>
+                    <th>Editar</th>
+                    <th>Ativar/Desativar</th>
+                </tr>
+                <tr>
+                    <td>Guichê</td>
+                    <td>1</td>
+                    <td>
+                        <div class="editar"><a id="open_editar_dados" href="#"><img src="../../../public/img/icons/Group 2924.png" alt=""></a></div>
+                    </td>
+                    <td>
+                        <div class="ativarswitch"><label class="switch">
+                                <input type="checkbox">
+                                <span class="slider"></span>
+                            </label></div>
+                    </td>
+                </tr>
+                
+            </table>
+        </div>
+    </div>
+    <div class="div-botao-info">
+        <button class="add-func" type="submit" onclick="window.location.href='../../../app/admin/view/telacadastro.php';">Novo Funcionario</button>
+    </div>
+</div>
+</section>
 
     <?php
     include "./monitor-modal.php";
