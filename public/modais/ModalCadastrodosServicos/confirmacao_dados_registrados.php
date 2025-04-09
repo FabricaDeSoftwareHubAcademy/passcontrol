@@ -11,4 +11,4 @@
     </section>
 </main>
 
-<script src="../cadastro_servicos.js"></script>
+<script src="cadastro_servicos.js"></script>

@@ -8,7 +8,7 @@
         <div class="inf-modal">
             <div class="container">
                 <label class="label"><b>Código do Serviço</b></label>
-                <input type="number" class="input-number" placeholder="Digite o código do serviço">
+                <input type="text" class="input-number" placeholder="Digite o código do serviço">
             </div>
             <div class="container">
                 <label class="label"><b>Ícone</b></label>
