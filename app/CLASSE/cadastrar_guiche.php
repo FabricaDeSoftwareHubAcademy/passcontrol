@@ -17,5 +17,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 } else {
     echo json_encode(['status' => 'erro', 'mensagem' => 'Requisição inválida.']);
 }
+header("Location: ../admin/view/PontoAtendimentoCad.php");
+
+exit;
+
 
 ?>
