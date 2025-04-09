@@ -8,8 +8,7 @@ class Usuario {
     private $db;
 
     public function __construct() {
-        $this->db = new Database();
-        $this->db->table = 'usuarios';  // Definindo a tabela ao instanciar
+        $this->db = new Database('usuarios');
     }
 
     public function cadastrar($nome) {
@@ -29,9 +28,6 @@ class Usuario {
             return false; // Caso contrário, retorna false
         }
     }
-    
-    
-
 }
 
 $db = new Database('usuario');

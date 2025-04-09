@@ -1,3 +1,15 @@
+<?php
+require '../../classes/Usuario.php';
+
+$usuarios = new Usuario();
+
+$db_profiles = new Database("perfil");
+$perfis = $db_profiles->execute("SELECT * FROM perfil");
+
+$dados = $usuarios->buscar();
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -18,11 +30,14 @@
     <link rel="stylesheet" href="../../../public/css/monitor-modal.css">
     <link rel="stylesheet" href="../../../public/modais/Modal_Alterar_Dados_Pessoais/alterar_dados_pessoais.css">
     <link rel="stylesheet" href="../../../public/modais/Modal_Alterar_Senha/alterar_senha.css">
+    <link rel="stylesheet" href="../../../public/modais/Modal_Alterar_Status_Usuario/alterar_status_usuario.css">
     
     <!-- JS -->
     <script src="../../../public/js/navegacao-menu-lateral.js" defer></script>
     <script src="../../../public/js/monitor-modal.js" defer></script>
-    <script src="../../../public/js/modal-atendentes-cadastrados.js" defer></script>
+    <script src="../../../public/js/editar_usuario.js" defer></script>
+    <script src="../../../public/js/alterar_status_usuario.js" defer></script>
+    <!-- <script src="../../../public/js/modal-atendentes-cadastrados.js" defer></script> -->
 
     <link rel="shortcut icon" type="imagex/png" href="../../../public/img/Logo-Nota-Controlnt.ico">
 </head>
@@ -50,42 +65,40 @@
                 <div class="sub-area-tabela">
                     <table class="tabela">
                         <tr>
-                            <th>Nome</th>
-                            <th>Matricula</th>
-                            <th>Perfil</th>
+                            <th scope="col">Nome</th>
+                            <th scope="col">Matricula</th>
+                            <th scope="col">Perfil</th>
                             <th>Serviços</th>
-                            <th>Editar</th>
-                            <th>Ativar/Desativar</th>
+                            <th scope="col">Editar</th>
+                            <th scope="col">Status</th>
                         </tr>
                         <tr>
-                            <td>Guilherme F. Machado</td>
-                            <td>guilermeaxe@gmail.com</td>
-                            <td>Administrador</td>
-                            <td>Nota Fiscal</td>
-                            <td>
-                                <div class="editar"><a id="open_editar_dados" href="#"><img src="../../../public/img/icons/Group 2924.png" alt=""></a></div>
-                            </td>
-                            <td>
-                                <div class="ativarswitch"><label class="switch">
-                                        <input type="checkbox">
-                                        <span class="slider"></span>
-                                    </label></div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Joao Pedro Sampaio</td>
-                            <td>joaozinhodelasedeles@gmail.com</td>
-                            <td>Atendente</td>
-                            <td>IPTU</td>
-                            <td>
-                                <div class="editar"><a id="open_editar_dados" href="#"><img src="../../../public/img/icons/Group 2924.png" alt=""></a></div>
-                            </td>
-                            <td>
-                                <div class="ativarswitch"><label class="switch">
-                                        <input type="checkbox">
-                                        <span class="slider"></span>
-                                    </label></div>
-                            </td>
+                            <?php foreach ($dados as $usuario):
+                                $UsuStatus = $usuario->status_usuario == 'ativo' ? 'inactive' : 'active';
+                                
+                                $id_perfil = $usuarios->listar_nome_perfil($usuario->id_perfil);
+                            ?>
+                            <tr>
+                                <td> <?= $usuario->nome ?> </td>
+                                <td> <?= $usuario->email ?> </td>
+                                <td> <?= $id_perfil['nome'] ?> </td>
+                                <td>SERVIÇO</td>
+                                <td>
+                                    <div class="editar">
+                                        <button class="openEditar" data-id="<?= $usuario->id_usuario ?>">
+                                            <img src="../../../public/img/icons/Group 2924.png" alt="">
+                                        </button>
+                                    </div>
+                                </td>
+                                <td>
+                                    <button class="openInativarAtivar" data-id="<?= $usuario->id_usuario ?>">
+                                        <div class="toggle-btn <?= $UsuStatus ?>">
+                                            <div class="circulo"> </div>
+                                        </div>
+                                    </button>
+                                </td>
+                            </tr>
+                            <?php endforeach; ?>
                         </tr>
                     </table>
                 </div>
@@ -97,6 +110,8 @@
     </section>
     
     <?php
+    include "../../../public/modais/Modal_Alterar_Dados_Pessoais/alterar_dados_pessoais.php";
+    include "../../../public/modais/Modal_Alterar_Status_Usuario/alterar_status_usuario.php";
     include "./monitor-modal.php";
     ?>
 </body>

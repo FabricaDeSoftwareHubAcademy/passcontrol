@@ -109,6 +109,32 @@ input:focus + .slider {
   box-shadow: 0 0 1px #4CAF50;
 }
 
+
+.toggle-btn {
+  width: 60px;
+  height: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  position: relative;
+  border: 1px solid var(--cinza-control);
+  cursor: pointer;
+}
+
+.toggle-btn .circulo {
+  width: 20px;
+  height: 15px;
+  background-color: #4CAF50;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  transition: left 0.3s;
+}
+
+.toggle-btn.active .circulo {
+  background-color: #ff0000;
+  left: 36px;
+}
 /* .sub-area-tabela tbody::-webkit-scrollbar { 
   width: 0.1px; 
   opacity: 0;  

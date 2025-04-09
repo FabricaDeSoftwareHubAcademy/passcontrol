@@ -1,3 +1,9 @@
+<?php
+    require '../../classes/Usuario.php';
+
+    include "../../controller/usuario_cadastrar.php";
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -19,12 +25,12 @@
     <link rel="stylesheet" href="../../../public/modais/Modal_Alterar_Dados_Pessoais/alterar_dados_pessoais.css">
     <link rel="stylesheet" href="../../../public/modais/Modal_Alterar_Senha/alterar_senha.css">
 
-    <!-- <link rel="stylesheet" href="../../../public/modais/Modal Confirmação dos Dados Registrados/confirmacao_dados_registrados.css"> -->
+    <!-- <link rel="stylesheet" href="../../../public/modais/Modal_Confirmacao_dos_Dados_Registrados/confirmacao_dados_registrados.css"> -->
 
     <!-- JS -->
     <script src="../../../public/js/navegacao-menu-lateral.js" defer></script>
     <script src="../../../public/js/monitor-modal.js" defer></script>
-    <script src="../../../public/js/modal_salvar_cadastro.js"></script>
+    <!-- <script src="../../../public/js/modal_salvar_cadastro.js" defer></script> -->
     <script src="../../../public/js/todos.js" defer></script>
     
     <link rel="shortcut icon" type="imagex/png" href="https://public/img/Logo-Nota-Controlnt.ico">
@@ -36,7 +42,6 @@
     ?>
 
     <section class="Area-Util-Projeto">
-        <!-- <section class="grupo"> -->
 
         <div class="titulo_cds">
             <h1>Cadastrar Usuário<br></h1>
@@ -59,13 +64,17 @@
             <div class="selecionar">
                 <div class="perfild">
                     <label class="labeledit" for="perfil">Perfil De Acesso</label>
-                    <select class="selecao" name="id_perfil" placeholder="Digite aqui o CPF do usuário" required>
-                        <option class="pi" value="" disabled selected>Selecione Aqui</option>
-                        <option class="pi" value="" >Administrador</option>
-                        <option class="pi" value="" >Supervisor</option>
-                        <option class="pi" value="" >Atendente</option>
+                    <select class="selecao" name="id_perfil" required>
+                        <option class="pi" value="" disabled selected>Selecione</option>
+                        <?php
+                            // // LISTAR PERFIS DE USUARIO
+                            foreach ($perfis as $perfil){
+                            ?> <option class="pi" value="<?=$perfil["id_perfil"]?>"><?=$perfil["nome"]?></option> <?php
+                            };
+                        ?>
                     </select>
                 </div>
+                
             </div>
             <title class="servico">Seviços</title>
             <div class="checkbox-container">
@@ -109,7 +118,7 @@
             </div>
         </form>
         <div class="form-actions2"> 
-            <button class="botao_volto" form="dados_cad" type="reset" onclick="window.location.href='javascript:history.back()';">Voltar</button>
+            <button class="botao_volto" form="dados_cad" type="reset" onclick="window.location.href='javascript:window.history.back(1)';">Voltar</button>
             <button class="botao_salvo open" form="dados_cad" type="submit" name="cadastrar" id="save_sucess">Salvar</button>
         </div>
     </section>
