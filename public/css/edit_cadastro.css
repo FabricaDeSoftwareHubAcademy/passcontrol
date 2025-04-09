@@ -1,3 +1,5 @@
+@import url(style_main.css);
+
 *{
     margin: 0;
     padding: 0;
@@ -20,9 +22,6 @@
     gap: 20px;
     flex-direction: column;
 }
-.container-flex{
-    flex: 1 1 35%;
-}
 .titulo_cds h1{
     position: absolute;
     display: flex;
@@ -33,8 +32,8 @@
 .titulo_cds hr{
     position: absolute;
     border: 0;
-    height: 1px;
-    background: black ;
+    height: 5px;
+    background: var(--cor-nave-botaa);
     margin: 20px 0;
     width: 90%;
     top: 20px;
@@ -51,7 +50,7 @@
 }
 .email{
     position: relative;
-    top: 5px;
+    top: -1px;
     left: 51%;
     width: 30%;
     display: flex;
@@ -100,7 +99,7 @@ input:focus {
     /* padding: 10px; */
     /* border: 1px solid #ff0000; */
     border-radius: 5px;
-    width: 30%;
+    width: 50%;
     
 }
 .perfild{
@@ -259,6 +258,9 @@ input:focus {
 
 /* responsividade hotizontal */
 @media screen and (max-width: 1920px){
+    .labeledit{
+        width: 111%;
+    }
     .form-actions2{
         margin-top: 690px;
     }
@@ -269,6 +271,12 @@ input:focus {
         width: 41%;
         left: -38%;
     }
+    .titulo_cds hr{
+        top: 33px;
+    }
+    .perfild{
+        width: 50%;
+    }
     
 }
 @media screen and (max-width: 1876px){
@@ -278,12 +286,19 @@ input:focus {
     .perfild{
         width: 50%;
     }
+    .titulo_cds hr{
+        top: 30px;
+    }
+    
 }
 @media screen and (max-width: 1814px){
     .form-actions2{
         margin-top: 625px;
         
     }  
+    .titulo_cds hr{
+        top: 30px;
+    }
 }
 @media screen and (max-width: 1814px){
     .form-actions2{
@@ -295,21 +310,45 @@ input:focus {
    .column-2{
         left: -35%;
    }  
+   .titulo_cds h1{
+    margin-left: 55px;
+    }
+    .titulo_cds hr{
+        top: 30px;
+    }
+    .titulo_cds h1{
+        margin-left: 60px;
+    }
+    .titulo_cds hr{
+        top: 30px;
+    }
 }
 @media screen and (max-width: 1350px){
     .column-1{
-        width: 48%;
+        width: 40%;
     }
     .column-2{
         width: 48%;
-        left: -73%;
-        top: 26px;
+        left: -30%;
+        /* top: 26px; */
+    }
+    .titulo_cds h1{
+        margin-left: 55px;
+    }
+    .titulo_cds hr{
+        top: 30px;
     }
 }
 @media screen and (max-width: 1005px){
     .quadrado{
         scroll-behavior: smooth;
         overflow-x: hidden;
+    }
+    .titulo_cds h1{
+        margin-left: 38px;
+    }
+    .titulo_cds hr{
+        top: 30px;
     }
     .nome{
         left: 15%;
@@ -339,16 +378,52 @@ input:focus {
         top: 695px;  
     }
     .column-1{
-        width: 49%;
+        width: 100%;
     }
     .column-2{
-        width: 49%;
+        width: 90%;
         left: 0%;
+    }
+    .selecionar{
+        top: 180px;
     }
 }
 @media screen and (max-width: 974px){
     .labeledit{
-        width: 150%;
+        width: 250%;
+    }
+    .titulo_cds h1{
+        margin-left: 35px;
+    }
+    .titulo_cds hr{
+        top: 30px;
+    }
+    .selecionar{
+        top: 180px;
+    }
+    .perfild{
+        width: 50%;
+    }
+}
+@media screen and (max-width: 900px){
+    .labeledit{
+        width: 250%;
+    }
+    .selecionar{
+        top: 180px;
+    }
+    .titulo_cds h1{
+        margin-left: 45px;
+    }
+    .titulo_cds hr{
+        top: 30px;
+    }
+    .perfild{
+        width: 60%;
+    }
+    .label span{
+        width: 15px;
+        height: 15px;
     }
 }
 @media screen and (max-width: 550px){
@@ -361,6 +436,44 @@ input:focus {
     .botao_volto{
         width: 40%;
     }
+    .titulo_cds h1{
+        margin-left: 28px;
+    }
+    .titulo_cds hr{
+        top: 30px;
+    }
+    .selecionar{
+        top: 180px;
+    }
+    .perfild{
+        width: 75%;
+    }
+    .label span{
+        width: 15px;
+        height: 15px;
+    }
+}
+@media screen and (max-width: 440px) {
+    .column-2{
+        top: 95px;
+        left: -135px;
+    }
+    .titulo .cadastro_title{
+        top: 0px;
+    }
+    .titulo_cds hr{
+        top: 30px;
+    }
+    .selecionar{
+        top: 180px;
+    }
+    .perfild{
+        width: 80%;
+    }
+    .label span{
+        width: 15px;
+        height: 15px;
+    }
 }
 @media screen and (max-width: 410px) {
     .column-2{
@@ -369,11 +482,23 @@ input:focus {
     .titulo .cadastro_title{
         top: 0px;
     }
-   
+    .titulo_cds hr{
+        top: 30px;
+    }
+    .selecionar{
+        top: 180px;
+    }
+    .perfild{
+        width: 80%;
+    }
+    .label span{
+        width: 15px;
+        height: 15px;
+    }
 }
 @media screen and (max-width: 400px) {
     .column-2{
-        top: 10px;
+        top: 100px;
     }
     .customizado::before{
         top: 1px;
@@ -384,24 +509,105 @@ input:focus {
     .titulo_cds h1{
         top: 8px;
     }
+    .titulo_cds hr{
+        top: 30px;
+    }
+    .selecionar{
+        top: 180px;
+    }
+    .perfild{
+        width: 100%;
+    }
+    .label span{
+        width: 15px;
+        height: 15px;
+    }
 }
 
 @media screen and (max-width: 360px){
     .customizado::before{
         top: 1px;
     }
+    .titulo_cds hr{
+        top: 30px;
+    }
+    .titulo_cds h1{
+        margin-left: 55px;
+    }
+    .perfild{
+        width: 110%;
+    }
+    .label span{
+        width: 15px;
+        height: 15px;
+    }
+    .usu-nome{
+        font-size: 0.80rem;
+    }
+    .logo-control{
+        padding-left: 30px;
+    }
+    .titulo-projeto{
+        font-size: 20px;
+    }
 }
 @media screen and (max-width: 349px){
     .titulo .cadastro_title{
         top: 0px;
     }
+    .titulo_cds hr{
+        top: 30px;
+    }
+    .titulo_cds h1{
+        margin-left: 35px;
+    }
+    .perfild{
+        width: 110%;
+    }
+    .label span{
+        width: 15px;
+        height: 15px;
+    }
+    .usu-nome{
+        font-size: 0.60rem;
+    }
+    .logo-control{
+        padding-left: 30px;
+    }
+    .titulo-projeto{
+        font-size: 20px;
+    }
 }
 @media screen and (max-width: 320px){
+    .usu-nome{
+        font-size: 0.60rem;
+    }
     .column-1{
-        width: 100%;
+        width: 120%;
     }
     .column-2{
-        width: 100%;
+        width: 120%;
+        left: -95px;
+        top: 135px;
+    }
+    .titulo_cds hr{
+        top: 30px;
+    }
+    .titulo_cds h1{
+        margin-left: 35px;
+    }
+    .perfild{
+        width: 110%;
+    }
+    .label span{
+        width: 15px;
+        height: 15px;
+    }
+    .logo-control{
+        padding-left: 30px;
+    }
+    .titulo-projeto{
+        font-size: 20px;
     }
 }
 
