@@ -44,6 +44,9 @@ body {
 .menu a.active {
   background-color: var(--cor-active);
   color: var(--font-main);
+  padding: 14px;
+  border-radius: 5px 5px 0px 0px;
+  text-decoration: none;
 }
 /* .menu a.active:hover {
   color: var(--font-main); */
