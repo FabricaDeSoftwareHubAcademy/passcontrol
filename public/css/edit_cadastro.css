@@ -438,7 +438,7 @@ input:focus {
 @media screen and (max-width: 568px){
     .column-2{
         top: 95px;
-        left: -147px;
+        left: -170px;
     }
     .form-actions2{
         margin-right: 13%;
@@ -503,6 +503,9 @@ input:focus {
         top: 95px;
         left: -105px;
     }
+    .column-1{
+        width:110%;
+    }
     .titulo .cadastro_title{
         top: 0px;
     }
@@ -522,7 +525,7 @@ input:focus {
 }
 @media screen and (max-width: 410px) {
     .column-2{
-        top: 22px;
+        top: 92px;
 
     }
     .titulo .cadastro_title{
@@ -543,8 +546,9 @@ input:focus {
     }
 }
 @media screen and (max-width: 400px) {
+
     .column-2{
-        top: 140px;
+        top: 130px;
     }
     .customizado::before{
         top: 1px;
@@ -634,6 +638,7 @@ input:focus {
     .label span{
         width: 15px;
         height: 15px;
+}
 }
 @media screen and (max-width: 320px){
     .usu-nome{
