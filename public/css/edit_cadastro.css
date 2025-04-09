@@ -435,7 +435,43 @@ input:focus {
         height: 15px;
     }
 }
+@media screen and (max-width: 568px){
+    .column-2{
+        top: 95px;
+        left: -147px;
+    }
+    .form-actions2{
+        margin-right: 13%;
+    }
+    .botao_salvo{
+        width: 40%;
+    }
+    .botao_volto{
+        width: 40%;
+    }
+    .titulo_cds h1{
+        margin-left: 28px;
+    }
+    .titulo_cds hr{
+        top: 30px;
+    }
+    .selecionar{
+        top: 180px;
+    }
+    .perfild{
+        width: 75%;
+    }
+    .label span{
+        width: 15px;
+        height: 15px;
+    }
+}
+
 @media screen and (max-width: 550px){
+    .column-2{
+        top: 95px;
+        left: -147px;
+    }
     .form-actions2{
         margin-right: 13%;
     }
@@ -465,7 +501,7 @@ input:focus {
 @media screen and (max-width: 440px) {
     .column-2{
         top: 95px;
-        left: -135px;
+        left: -105px;
     }
     .titulo .cadastro_title{
         top: 0px;
@@ -487,6 +523,7 @@ input:focus {
 @media screen and (max-width: 410px) {
     .column-2{
         top: 22px;
+
     }
     .titulo .cadastro_title{
         top: 0px;
@@ -507,7 +544,7 @@ input:focus {
 }
 @media screen and (max-width: 400px) {
     .column-2{
-        top: 100px;
+        top: 140px;
     }
     .customizado::before{
         top: 1px;
@@ -586,6 +623,17 @@ input:focus {
     .titulo-projeto{
         font-size: 20px;
     }
+    .column-1{
+        width: 120%;
+    }
+    .column-2{
+        width: 120%;
+        left: -95px;
+        top: 135px;
+    }
+    .label span{
+        width: 15px;
+        height: 15px;
 }
 @media screen and (max-width: 320px){
     .usu-nome{
