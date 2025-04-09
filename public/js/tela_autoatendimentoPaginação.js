@@ -10,7 +10,7 @@ const servicos = [
     { img: "../../../public/img/icons/negociaçao_img.png", title: "Negociação" },
     { img: "../../../public/img/icons/limpeza_img.png", title: "Limpeza" },
     { img: "../../../public/img/icons/transporte_img.png", title: "Transporte" },
-    { img: "../../../public/img/icons/água_img.png", title: "Água" },
+    { img: "../../../public/img/icons/agua_img.png", title: "Água" },
     { img: "../../../public/img/icons/energia_img.png", title: "Energia" },
 
 ];
