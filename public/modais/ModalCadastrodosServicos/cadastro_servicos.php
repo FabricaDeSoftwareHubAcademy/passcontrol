@@ -2,16 +2,16 @@
     <section class="modal">
         <img src="../../../public/img/img-modais/Logo Nota Controlnt.png" alt="Logo Nota Control" class="logo">
         <h1 class="title">Cadastrar Serviços</h1>
-        <hr>
+        <hr class="divider">
         
 
         <div class="inf-modal">
             <div class="container1">
-                <label class="label"><b>Código do Serviço</b></label>
+                <label class="label_1"><b>Código do Serviço</b></label>
                 <input type="text" class="input-number" placeholder="Digite o código do serviço">
             </div>
             <div class="container2">
-                <label class="label"><b>Ícone</b></label>
+                <label class="label_2"><b>Ícone</b></label>
                 <div class="file-input">
                     <input type="file" id="fileInput" class="file-input-field" accept="image/*">
                     <img src="" alt="Pré-visualização do ícone" class="file-preview" style="display: none;">
