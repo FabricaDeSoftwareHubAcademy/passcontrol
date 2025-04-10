@@ -224,6 +224,7 @@
 .botao-proxima-senha-atendimento:hover, .botao-encerrar-atendimento:hover,.botao-consultar-fila-atendimento:hover, .botao-intervalo-atendimento:hover{
     background-color:#252f38;
 }
+
 .area-botao-atendimento{
     display: flex;
     gap: 2rem;
@@ -302,7 +303,7 @@
     width: 90%;
     height: 0%;
     /* background-color: chartreuse; */
-    margin-top: 3rem; 
+    margin-top: 2rem; 
     justify-content: space-between;
     text-align: end;
 }
@@ -1285,7 +1286,8 @@ thead, tbody tr {
         overflow: auto;
     }
     .area-botao--guiche-area-chamada{
-        margin-top: 1rem;
+        /* margin-top: 1.5rem; */
+        justify-content: flex-start;
     }
 
 }
