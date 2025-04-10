@@ -132,7 +132,7 @@
     width: auto;
   }
 }
-@media (min-width: 0px) and (max-width: 625px){
+@media (min-width: 0px) and (max-width: 1815px){
   .area-cards{
     padding: 15px;
     overflow-y: scroll;
