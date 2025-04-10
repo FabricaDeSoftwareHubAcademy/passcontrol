@@ -7,11 +7,11 @@
 
         <div class="inf-modal">
             <div class="container1">
-                <label class="label"><b>Código do Serviço</b></label>
+                <label class="label_1"><b>Código do Serviço</b></label>
                 <input type="text" class="input-number" placeholder="Digite o código do serviço">
             </div>
             <div class="container2">
-                <label class="label"><b>Ícone</b></label>
+                <label class="label_2"><b>Ícone</b></label>
                 <div class="file-input">
                     <input type="file" id="fileInput" class="file-input-field" accept="image/*">
                     <img src="" alt="Pré-visualização do ícone" class="file-preview" style="display: none;">
@@ -20,13 +20,13 @@
         </div>
 
         <div class="servico">
-            <label class="label"><b>Serviço</b></label>
+            <label class="label_3"><b>Serviço</b></label>
             <input type="text" class="input-text" placeholder="Digite o nome do novo serviço">
         </div>
 
         <div class="button-group">
-            <button class="botao-modal cancel">Cancelar</button>
-            <button class="botao-modal save">Salvar</button>
+            <button class="botao-modal-cancela cancel">Cancelar</button>
+            <button class="botao-modal-salvo save">Salvar</button>
         </div>
     </section>
 </main>

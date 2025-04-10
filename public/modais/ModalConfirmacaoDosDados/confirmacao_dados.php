@@ -5,7 +5,7 @@
         <hr class="modal-divider">
         <p class="modal-message"><b>Salvo com sucesso!</b></p>
         <div class="button-group">
-            <button id="fecharSucesso" class="botao-modal Okay">Ok</button>
+            <button id="fecharSucesso" class="botao-modal-ok Okay">Ok</button>
         </div>
     </section>
 </main>
