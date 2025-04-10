@@ -152,7 +152,7 @@
                             <th>Categoria</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody class="tbody-atendimento">
                         <tr>
                             <td>#01</td>
                             <td>Guilherme Machado</td>
