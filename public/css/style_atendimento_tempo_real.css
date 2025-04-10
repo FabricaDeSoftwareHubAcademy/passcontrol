@@ -13,14 +13,16 @@
     --color-em-atendimento: #0080C8;
 }
 
+@media (max-width: 1200px) {
+    tbody{
+        max-height: 50vh;
+    }
+}
+
 @media (max-width: 1024px) {
     .atendimento-tempo-real {
         margin-top: 50px;
         left: 8vh;
-    }
-
-    td {
-        font-size: 18px;
     }
 }
 
@@ -28,19 +30,11 @@
     .atendimento-tempo-real {
         left: 8vh;
     }
-
-    td {
-        font-size: 14px;
-    }
 }
 
 @media (max-width: 853px) {
     .atendimento-tempo-real {
         left: 8vh;
-    }
-
-    td {
-        font-size: 13px;
     }
 }
 
@@ -48,10 +42,6 @@
     .atendimento-tempo-real {
         margin-top: 20px;
         left: 8vh;
-    }
-
-    td {
-        font-size: 12px;
     }
 }
 
@@ -62,7 +52,7 @@
     }
 
     td {
-        font-size: 11px;
+        font-size: 12px;
     }
 }
 
@@ -72,24 +62,24 @@
         left: 8vh;
     }
 
-    .container-atendimento-tempo-real {
-        flex-wrap: wrap;
-    }
-
-    .container-atendimento-tempo-real h1 {
-        font-size: 17px;
-    }
-
-    .title-atendimento-tempo-real-bt {
-        margin-bottom: 5px
-    }
-
     td {
         font-size: 10px;
     }
 
-    .status-flex-atendimento-tempo-real {
-        gap: 10px;
+    th{
+        font-size: 11px;
+    }
+
+    .circle-atendimento-tempo-real{
+        font-size: 8px;
+    }
+
+    tbody{
+        max-height: 50vh;
+    }
+
+    .status-flex-atendimento-tempo-real{
+        margin-top: 5px;
     }
 }
 
