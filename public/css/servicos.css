@@ -31,6 +31,7 @@
   color: var(--cinza-control);
   font-family: Arial, sans-serif;
   font-weight: bold;
+  font-size: 1.5rem;
 }
 .campo-busca {
   /* height: 0%; */
@@ -58,7 +59,7 @@
 }
 .linha-divisoria-servico {
   background-color: var(--cinza-control);
-  height: 1px;
+  height: 5px;
   width: 96%;
   max-height:339px;
   padding: 1px;
