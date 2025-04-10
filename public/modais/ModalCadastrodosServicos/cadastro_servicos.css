@@ -2,27 +2,71 @@
 .modal-container,
 .container-modal-confirmacao,
 .container-modal-sucesso {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100vw;
+    height: 100vh;
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.5);
     display: none;
     align-items: center;
     justify-content: center;
+    transition: opacity 0.2s ease;
     z-index: 1000;
 }
 
 /* estilização dos inputs dos modais referentes */
+.logo{
+    position: absolute;
+    top: 10px;
+    right: 30px;
+    width: 60px;
+}
+.divider{
+    border: none;
+    border-top: 2px solid #000;
+    width: 100%;
+    margin-top: 200px;
+    margin-bottom: 20px;
+}
+.inf-modal{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+.label{
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px; 
+}
+.input-number,.file-input-field,.input-text{
+     width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: white;
+}
+.servico{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+.button-group{
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+}
 
 
-/* estilização da sction dos modais referentes*/
+
 .modal,
 .estrutura-modal-confirmacao,
 .estrutura-modal-sucesso {
     background-color: #e0e0e0;
     padding: 25px;
+    height: 50vh;
     width: 90%;
     max-width: 500px;
     border-radius: 8px;
@@ -30,7 +74,6 @@
     position: relative;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
-
 .logo,
 .logo-confirmacao,
 .logo-sucesso {
@@ -73,9 +116,14 @@
     justify-content: center;
     gap: 20px;
     flex-wrap: wrap;
+    position: absolute;
+    margin-left: 45%;
+    top: 85%;
+
 }
 
-.botao-modal,
+.botao-modal-cancela,
+.botao-modal-salvo,
 .botao-confirmacao,
 .botao-sucesso {
     background-color: #33404D;
@@ -89,20 +137,20 @@
     min-width: 90px;
 }
 
-.cancel,
-.cancelar-confirmacao:hover {
+
+.botao-modal-cancela:hover {
     color: #FF0000;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 }
 
-.save,
-.salvar-confirmacao:hover {
+
+.botao-modal-salvo:hover {
     color: #3AA867;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 }
 
-.Okay,
-.okay-sucesso:hover {
+
+.botao-modal-ok:hover {
     color: #3AA867;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 }
