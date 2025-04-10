@@ -80,7 +80,7 @@
                 <div class="wrapper">
                     <a href="./monitor-modal.php">
                         <div class="banner-img">
-                            <img src="../../../public/img/img-menu/visualizaçaomonitordeautoatendimento.png" alt="">
+                            <img src="../../../public/img/img-menu/monitor.png" alt="">
                             <!-- <img src="../../../public/img/Menus/MONITOR.png" alt=""> -->
 
                         </div>

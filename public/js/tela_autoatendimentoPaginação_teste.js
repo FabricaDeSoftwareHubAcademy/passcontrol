@@ -36,7 +36,7 @@ function renderizarPagina(pagina) {
     // Adiciona os itens ao HTML
     itensPagina.forEach(servico => {
         const box = document.createElement("a");
-        box.href = "../../usuario/view/tela_autoatendimentoPage2.php"; //destino do link
+        box.href = "#"; //destino do link
         box.classList.add("box"); //css do .box
 
         box.innerHTML = `
