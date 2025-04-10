@@ -75,12 +75,12 @@
                 </div>
                 
             </div>
+            <title class="servico">Seviços</title>
             <?php
             foreach($serivos as $servico){
 
             }
             ?>
-            <title class="servico">Seviços</title>
             <div class="checkbox-container">
                 <div class="column-1">
                     <label class="customizado">
