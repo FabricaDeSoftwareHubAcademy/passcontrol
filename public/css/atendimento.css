@@ -1268,6 +1268,12 @@ thead, tbody tr {
     } 
 }
 
+@media screen and (min-height: 820px) and (max-height: 980px) {
+    .botao-proxima-senha-atendimento, .botao-encerrar-atendimento,.botao-consultar-fila-atendimento, .botao-intervalo-atendimento {
+        height: 10rem;
+    }
+}
+
 @media screen and (min-height: 200px) and (max-height: 620px) {
     .senha-area-chamada{
         display: none;
