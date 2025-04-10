@@ -159,7 +159,7 @@
     border-radius: 2%;
     gap: 1.4rem;
     margin-right: 28px;
-    border-radius: 5px 5px 0px 5px;
+    border-radius: 5px 5px 0px 0px;
 }
 .senhas-guiche-area-chamada p{
     font-size: 20px;
