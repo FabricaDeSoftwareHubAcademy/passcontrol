@@ -77,7 +77,7 @@
                     <div class="wrapper">
                         <a href="" id="img_cadastrar_adm">
                         <div class="banner-img">
-                            <img src="../../../public/img/img-menu/pontodeatendimento.png" alt="">
+                            <img src="../../../public/img/img-menu/listar-giche.png" alt="">
                         </div>
                         </a>
                         <!-- <h3 class="titulo-card">Atendimento</h3> -->
@@ -93,7 +93,7 @@
                     <div class="wrapper">
                         <a href="servicos.php">
                         <div class="banner-img">
-                            <img src="../../../public/img/img-menu/serviços.png" alt="">
+                            <img src="../../../public/img/img-menu/listar-sevico.png" alt="">
                         </div>
                         </a>
                         <!-- <h3 class="titulo-produto">Serviços</h3> -->
