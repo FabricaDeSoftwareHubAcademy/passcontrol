@@ -30,10 +30,10 @@ elseif (($_SERVER['REQUEST_METHOD'] === 'POST')){
         
         $res = $objUser->update($id_usuario);
         if($res){
-            $resposta = array( "msg" => "Cadastrado com sucesso", "status" => "OK");
+            $resposta = array( "msg" => "Editado com sucesso", "status" => "OK");
             echo json_encode($resposta);
         }else{
-            $resposta = array( "msg" => "Erro ao cadastrar", "status" => "ERRO");
+            $resposta = array( "msg" => "Erro ao editar", "status" => "ERRO");
             echo json_encode($resposta);
         }                    
     }

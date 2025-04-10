@@ -21,13 +21,17 @@
 
             $res = $objUser->cadastrar();
             if($res){
-                ?> <script>alert("Usuario cadastrado com sucesso!")</script> <?php
+                $resposta = array( "msg" => "Cadastrado com sucesso", "status" => "OK");
+                echo json_encode($resposta);
             }else{
-                ?> <script>alert("Erro! Usuario não cadastrado!")</script> <?php
+                $resposta = array( "msg" => "Erro ao editar", "status" => "ERRO");
+                echo json_encode($resposta);
             }                    
         }
         else{
-            ?> <script>alert("Preencha todos os campos!")</script> <?php
+            $resposta = array( "msg" => "Preencha todos os campos", "status" => "ERRO");
+            echo json_encode($resposta);
+            exit;
         }
     }
 ?>

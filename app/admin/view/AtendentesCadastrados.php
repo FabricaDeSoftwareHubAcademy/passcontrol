@@ -91,11 +91,11 @@ $dados = $usuarios->buscar();
                                     </div>
                                 </td>
                                 <td>
-                                    <button class="openInativarAtivar" data-id="<?= $usuario->id_usuario ?>">
-                                        <div class="toggle-btn <?= $UsuStatus ?>">
+                                    <div class="openInativarAtivar" data-id="<?= $usuario->id_usuario ?>">
+                                        <button class="toggle-btn <?= $UsuStatus ?>">
                                             <div class="circulo"> </div>
-                                        </div>
-                                    </button>
+                                        </button>
+                                    </div>
                                 </td>
                             </tr>
                             <?php endforeach; ?>
