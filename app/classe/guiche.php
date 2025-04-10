@@ -30,7 +30,7 @@ Class Guiche{
     }
 
     
-    public function criar(){
+    public function cadastrar(){
         $db = new Database('guiche');
         $res = $db->insert(
             [
