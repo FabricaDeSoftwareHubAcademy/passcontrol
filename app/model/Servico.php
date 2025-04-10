@@ -1,5 +1,5 @@
 <?php
-require_once 'Database123.php';
+require_once 'Database.php';
 
 class Servico {
     private $conn;
