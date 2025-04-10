@@ -29,8 +29,9 @@
 
 .topo-area-chamada {
     width: 96%;
-    height: 46%;
+    height: 48%;
     display: flex;
+    margin-top: 0.5rem;
     /* background-color: red; */
     justify-content: space-between;
     align-content: center;
@@ -213,7 +214,7 @@
     display: flex;
     /* flex-direction: row; */
     width: 50%;
-    height: 9rem;
+    height: 7.5rem;
     /* justify-content: start; */
     /* align-items: start; */
     border-radius: 5px;
@@ -578,7 +579,7 @@ thead, tbody tr {
         font-weight: 800;
     }
     .meio-guiche-area-chamada{
-        margin-top: 2.4rem; 
+        margin-top: 1rem; 
     }
     .meio-guiche-area-chamada h3{
         font-size: 26px;
@@ -590,9 +591,10 @@ thead, tbody tr {
         max-height: 160px; 
     } 
 }
-@media screen and (min-width: 1000px) and (max-width: 1199px) {
+@media screen and (min-width: 1095px) and (max-width: 1199px) {
     .fundo-guiche-area-chamada{
         overflow-x: auto;
+        height: 36%;
     }
     .informacoes-area-chamada{
         gap: 0;
@@ -641,7 +643,7 @@ thead, tbody tr {
         font-weight: 800;
     }
     .meio-guiche-area-chamada{
-        margin-top: 2.4rem; 
+        margin-top: 1.4rem; 
     }
     .meio-guiche-area-chamada h3{
         font-size: 25px;
@@ -653,7 +655,10 @@ thead, tbody tr {
         max-height: 160px; 
     } 
 }
-@media screen and (min-width: 710px) and (max-width: 999px) {
+@media screen and (min-width: 710px) and (max-width: 1095px) {
+    .direita-guiche-area-chamada{
+        margin-top: 0;
+    }
     .fundo-guiche-area-chamada{
         overflow-x: auto;
     }
@@ -667,7 +672,7 @@ thead, tbody tr {
     }
     .area-botao-atendimento{
         display: flex;
-        gap: 1rem;
+        gap: 0.5rem;
     }
     .info-area-chamada{
         display: flex;
@@ -731,7 +736,7 @@ thead, tbody tr {
     }
     .botao-proxima-senha-atendimento, .botao-encerrar-atendimento,.botao-consultar-fila-atendimento, .botao-intervalo-atendimento {
         width: 100%;
-        height: 4.5rem;
+        height: 3.5rem;
     }
     .botao-proxima-senha-atendimento h4, .botao-encerrar-atendimento h4,.botao-consultar-fila-atendimento h4, .botao-intervalo-atendimento h4 {
         width: 60%;
@@ -743,7 +748,7 @@ thead, tbody tr {
         margin: 2vw;
     }
     .meio-guiche-area-chamada{
-        margin-top: 1.6rem; 
+        margin-top: 1rem; 
     }
     .meio-guiche-area-chamada h3{
         font-size: 24px;
@@ -756,11 +761,15 @@ thead, tbody tr {
     } 
 }
 @media screen and (min-width: 635px) and (max-width: 709px) {
+    .atendimento-atual-atendimento{
+        height: 21vh;
+    }
     .direita-guiche-area-chamada{
-        margin-top: 0.8rem;
+        margin-top: 0;
     }
     .fundo-guiche-area-chamada{
         overflow-x: auto;
+        height: 40%;
     }
     .texto-botao-atendimento{
         font-size: 15px;
@@ -846,7 +855,7 @@ thead, tbody tr {
     }
     .botao-proxima-senha-atendimento, .botao-encerrar-atendimento,.botao-consultar-fila-atendimento, .botao-intervalo-atendimento {
         width: 100%;
-        height: 4.2rem;
+        height: 3.5rem;
     }
     .info-atendimento-inicio {
         height: 40%;
@@ -855,7 +864,7 @@ thead, tbody tr {
         margin: 2.5vw;
     }
     .meio-guiche-area-chamada{
-        margin-top: 1.2rem; 
+        margin-top: 0.5rem; 
     }
     .meio-guiche-area-chamada h3{
         font-size: 24px;
@@ -877,6 +886,7 @@ thead, tbody tr {
     }
     .fundo-guiche-area-chamada{
         overflow-x: auto;
+        height: 40%;
     }
     .area-chamada-atendimento{
         margin-top: 8vh;
@@ -957,7 +967,7 @@ thead, tbody tr {
     .area-botao--guiche-area-chamada{
         gap: 0.5rem;
         margin-top: 0rem;
-        height: 40vh;
+        height: 36vh;
     }
     .senhas-na-fila-atendimento, .senhas-na-fila-atendimento-vermelho{
         height: 85%;
@@ -1002,6 +1012,7 @@ thead, tbody tr {
     }
     .fundo-guiche-area-chamada{
         overflow-x: auto;
+        height: 42%;
     }
     .area-chamada-atendimento{
         margin-top: 4vh;
@@ -1134,6 +1145,7 @@ thead, tbody tr {
     }
     .fundo-guiche-area-chamada{
         overflow-x: auto;
+        height: 42%;
     }
     .area-chamada-atendimento{
         margin-top: 8vh;
