@@ -73,7 +73,7 @@
                     <!-- <p>Gestão do Autoatendimento.</p> -->
                 </div>
                 <div class="button-wrapper">
-                    <button class="btn outline" onclick="window.location.href='';">Visualizar Autoatendimento</button>
+                    <button class="btn outline" onclick="window.location.href='../../usuario/view/tela_autoatendimentoPage1.php';">Visualizar Autoatendimento</button>
                 </div>
             </div>
             <div class="container_menu">

@@ -334,3 +334,14 @@
         display: flex;
     }
 }
+@media screen and (max-width: 320px){
+    .usu-nome{
+        font-size: 0.60rem;
+    }
+    .logo-control{
+        padding-left: 30px;
+    }
+    .titulo-projeto{
+        font-size: 20px;
+    }
+}
