@@ -27,7 +27,7 @@
     <script src="../../../public/js/modal_salvar_cadastro.js"></script>
     <script src="../../../public/js/todos.js" defer></script>
     
-    <link rel="shortcut icon" type="imagex/png" href="https://public/img/Logo-Nota-Controlnt.ico">
+    <link rel="shortcut icon" type="imagex/png" href="../../../public/img/Logo-Nota-Controlnt.ico">
 </head>
 
 <body class="control-body-navegacao">
