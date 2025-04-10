@@ -9,15 +9,12 @@ buttonAbrir_ChamarSenha.addEventListener("click", () => {
 });
 
 buttonAusente_ChamarSenha.addEventListener("click", () => {
-    alert("Cliente ausente registrado!");
     modalContainer_ChamarSenha.classList.remove("show");
 });
 
 buttonPresente_ChamarSenha.addEventListener("click", () => {
-    alert("Cliente presente registrado!");
     modalContainer_ChamarSenha.classList.remove("show");
 });
 
 button_ChamarSenha.addEventListener("click", () => {
-    alert("Chamando novamente...");
 });
