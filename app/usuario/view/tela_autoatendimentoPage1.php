@@ -25,7 +25,9 @@
     <header class="head">
         <nav class="nav-head">
             <div class="logo-control">
+                <a href="../../../app/admin/view/menuadm_autoatendimento.php">
                 <img src="../../../public/img/icons/logo control.svg" alt="LOGOCONTROL" id="img-logo">
+                </a>
             </div>
             <h3>PassControl</h3>
         </nav>
