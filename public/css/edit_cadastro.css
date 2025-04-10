@@ -500,7 +500,7 @@ input:focus {
 }
 @media screen and (max-width: 440px) {
     .column-2{
-        top: 95px;
+        top: 100px;
         left: -105px;
     }
     .column-1{
@@ -548,7 +548,10 @@ input:focus {
 @media screen and (max-width: 400px) {
 
     .column-2{
-        top: 130px;
+        top: 140px;
+    }
+    .column-1{
+        width:100%;
     }
     .customizado::before{
         top: 1px;
