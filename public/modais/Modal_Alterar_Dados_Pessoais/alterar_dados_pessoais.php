@@ -21,7 +21,7 @@
 
             <div class="cpf-container-alterar-dados">
                 <label class="label-cpf-alterar-dados"><b>CPF</b></label>
-                <input type="number" class="input-cpf" size="11" id="cpf" name="cpf" value="" placeholder="Digite o seu CPF" required>
+                <input type="text" class="input-cpf" id="cpf" name="cpf" value="" placeholder="Digite o seu CPF" required>
             </div>
 
             <div class="file-container">
