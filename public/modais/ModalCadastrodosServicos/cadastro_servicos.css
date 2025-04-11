@@ -1,77 +1,30 @@
-/* estilização do modal de cadastro*/
-.modal-container{
-    background: rgba(0, 0, 0, 0.5);
-    width: 100vw;
-    height: 100vh;
+.modal-container,
+.container-modal-confirmacao,
+.container-modal-sucesso {
     position: fixed;
     top: 0;
     left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
     display: none;
     align-items: center;
     justify-content: center;
-    pointer-events: none;
-    transition: opacity 0.2s ease;
-    z-index: 10;
-}
-.modal{
-    background-color: #cfcfcf;
-    width: 60%;
-    max-width: 600px;
-    min-height: 400px;
-    padding: 30px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    position: relative;
-    text-align: left;
-    border-radius: 5px;
-}
-.logo{
-    position: absolute;
-    top: 10px;
-    right: 30px;
-    width: 60px;
+    z-index: 1000;
 }
 
-
-
-
-
-
-
-
-
+.modal,
 .estrutura-modal-confirmacao,
 .estrutura-modal-sucesso {
     background-color: #e0e0e0;
     padding: 25px;
-    height: 44vh;
     width: 90%;
-    max-width: 660px;
+    max-width: 500px;
     border-radius: 8px;
     text-align: center;
     position: relative;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
-
-
-
-
-
-.container-modal-confirmacao,
-.container-modal-sucesso {
-    background-color: rgba(0, 0, 0, 0.5);
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 0;
-    display: none;
-    align-items: center;
-    justify-content: center;
-    transition: opacity 0.2s ease;
-    z-index: 1000;
-}
-
-/* estilização dos inputs dos modais referentes */
 
 .logo,
 .logo-confirmacao,
@@ -115,14 +68,9 @@
     justify-content: center;
     gap: 20px;
     flex-wrap: wrap;
-    position: absolute;
-    margin-left: 60%;
-    top: 85%;
-
 }
 
-.botao-modal-cancela,
-.botao-modal-salvo,
+.botao-modal,
 .botao-confirmacao,
 .botao-sucesso {
     background-color: #33404D;
@@ -136,20 +84,20 @@
     min-width: 90px;
 }
 
-
-.botao-modal-cancela:hover {
+.cancel,
+.cancelar-confirmacao:hover {
     color: #FF0000;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 }
 
-
-.botao-modal-salvo:hover {
+.save,
+.salvar-confirmacao:hover {
     color: #3AA867;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 }
 
-
-.botao-modal-ok:hover {
+.Okay,
+.okay-sucesso:hover {
     color: #3AA867;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 }
