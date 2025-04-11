@@ -1,5 +1,61 @@
-/* estilização do corpo total dos modais referentes */
-.modal-container,
+/* estilização do modal de cadastro*/
+.modal-container{
+    background: rgba(0, 0, 0, 0.5);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+    z-index: 10;
+}
+.modal{
+    background-color: #cfcfcf;
+    width: 60%;
+    max-width: 600px;
+    min-height: 400px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+    text-align: left;
+    border-radius: 5px;
+}
+.logo{
+    position: absolute;
+    top: 10px;
+    right: 30px;
+    width: 60px;
+}
+
+
+
+
+
+
+
+
+
+.estrutura-modal-confirmacao,
+.estrutura-modal-sucesso {
+    background-color: #e0e0e0;
+    padding: 25px;
+    height: 44vh;
+    width: 90%;
+    max-width: 660px;
+    border-radius: 8px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+
+
+
+
 .container-modal-confirmacao,
 .container-modal-sucesso {
     background-color: rgba(0, 0, 0, 0.5);
@@ -16,101 +72,7 @@
 }
 
 /* estilização dos inputs dos modais referentes */
-.logo{
-    position: absolute;
-    top: 10px;
-    right: 30px;
-    width: 60px;
-}
-.divider{
-    border: none;
-    border-top: 2px solid #000;
-    width: 102%;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    position: relative;
-    left: -10px;
-}
-.title{
-    position: relative;
-    width: 40%;
-    left: -25px;
-}
-.inf-modal{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-    flex-wrap: wrap;
-}
-.input-number,.file-input-field,.input-text{  
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    background-color: white;
-}
-.input-number{
-    width: 86%;
-}
-.file-input-field{
-    width: 100%;
-}
-.input-tex{
-    width: 100%;
-}
-.container1{
-    position: relative;
-    left: -35px;
-    top: 1vh;
-    
-}
-.container2{
-    position: relative;
-    left: 305px;
-    top: -7vh;
-}
-.label_1{
-    position: relative;
-    left: -83px;
-    top: -1vh;
-}
-.label_2{
-    position: relative;
-    left: -132px;
-    top: -1vh;
-}
-.label_3{
-    position: relative;
-    left: -285px;
-    top: -1vh;
-}
-.servico{
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 20px;
-    position: relative;
-    top: -35px;
-    width: 103%;
-    left: -11px;
-}
-.button-group{
-    display: flex;
-    justify-content: flex-end;
-    gap: 15px;
-}
-.modal,
-.estrutura-modal-confirmacao,
-.estrutura-modal-sucesso {
-    background-color: #e0e0e0;
-    padding: 25px;
-    height: 44vh;
-    width: 90%;
-    max-width: 660px;
-    border-radius: 8px;
-    text-align: center;
-    position: relative;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-}
+
 .logo,
 .logo-confirmacao,
 .logo-sucesso {
