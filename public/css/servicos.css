@@ -35,28 +35,28 @@
   font-size: 1.5rem;
 }
 .campo-busca {
-  /* height: 0%; */
-  width: 100%;
-  outline: none;
-  border: 1px rgb(6, 11, 95);
-  margin-bottom: -1rem;
+    align-items: flex-end;
+    width: 100%;
+    outline: none;
+    border: 1px rgb(6, 11, 95);
+    margin-bottom: -1.5rem;
+
 }
 #buscar-servico {
-  width: 20%;
-  height: 130%;
+  float: left;
+  padding: 5px;
+  padding-left: 5px;
   font-style: italic;
   font-size: 14px;
-  border: 2px solid var(--cinza-control)3;
-  border-radius: 10px 10px 0 0;
-  opacity: 0.5;
-  z-index: -1;
-  outline: none;
-  background-image: url(../../public/img/icons/lupa.png);
-  background-size: contain;
-  background-position: right 10px center;
+  outline: 5px;
+  border-radius: 5px;
+  background-image: url(../img/icons/lupa.png);
+  background-position: 142px;
   background-repeat: no-repeat;
-  box-sizing: border-box;
-  margin-left: 76.7%;
+  background-position: right 10px center;
+  opacity: 0.5;
+  border: 2px solid #333;
+  margin-left: 78%;
 }
 .linha-divisoria-servico {
   background-color: var(--cinza-control);
