@@ -71,7 +71,7 @@
                         <!-- <p>Usuários Cadastrados.</p> -->
                     </div>
                     <div class="button-wrapper">
-                        <button class="btn outline" onclick="window.location.href='../../../app/admin/view/AtendentesCadastrados.php';">Lista de Usuários</button>
+                        <button class="btn outline" onclick="window.location.href='../../../app/admin/view/AtendentesCadastrados.php';">Listar Usuários</button>
                     </div>
                 </div>
                 <div class="container_menu">

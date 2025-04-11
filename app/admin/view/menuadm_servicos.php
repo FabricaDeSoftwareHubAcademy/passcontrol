@@ -73,7 +73,7 @@
 
                     </div>
                     <div class="button-wrapper">
-                        <button class="btn outline" onclick="window.location.href='PontoAtendimentoCad.php';">Lista de Guichês</button>
+                        <button class="btn outline" onclick="window.location.href='PontoAtendimentoCad.php';">Listar Ponto de Atendimento</button>
                     </div>
                 </div>
 
@@ -89,7 +89,7 @@
 
                     </div>
                     <div class="button-wrapper">
-                        <button id="btn_cadastrar_adm" class="btn outline">Cadastro de Guichês</button>
+                        <button id="btn_cadastrar_adm" class="btn outline">Cadastrar Ponto de Atendimento</button>
                     </div>
                 </div>
                 
@@ -104,7 +104,7 @@
                         <!-- <p>Gestão dos serviços</p> -->
                     </div>
                     <div class="button-wrapper">
-                        <button class="btn outline" onclick="window.location.href='servicos.php';">Lista de Serviços</button>
+                        <button class="btn outline" onclick="window.location.href='servicos.php';">Listar de Serviços</button>
                     </div>
                 </div>    
 
