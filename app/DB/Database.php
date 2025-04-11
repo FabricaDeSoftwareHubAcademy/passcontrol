@@ -5,13 +5,10 @@
 
 class Database {
     private $conn;
-    private string $local = 'localhost';
-    // 192.168.22.9
+    private string $local = '192.168.22.9';
     private string $db = 'passcontrol' ;
-    private string $user = 'root';
-    // fabrica32
-    private string $password = '';
-    // fabrica2025
+    private string $user = 'fabrica32';
+    private string $password = 'fabrica2025';
     private $table;
 
     // O construtor garante que a conexão seja realizada assim que o objeto Database for instanciado
