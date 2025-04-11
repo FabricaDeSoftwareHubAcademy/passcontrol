@@ -168,8 +168,11 @@ input:focus {
     position: absolute;
     display: flex;
     flex-direction: column;
-    width: 30%;
+    /* width: 30%; */
+    flex-wrap: wrap;
+    max-height: 300px;
     top: -100px;
+    /* background-color: red; */
 }
 .column-1 { left: -73%; }
 .column-2 { left: -35%; }

@@ -1,5 +1,7 @@
 <?php
-    require '../../classes/Usuario.php';
+    require '../../classe/Usuario.php';
+
+    // require '../../model/Servico.php';
 ?>
 
 <!DOCTYPE html>
@@ -76,31 +78,24 @@
                 
             </div>
             <title class="servico">Seviços</title>
-            <?php
-            foreach($serivos as $servico){
-
-            }
-            ?>
             <div class="checkbox-container">
                 <div class="column-1">
+                    <?php
+                    foreach($servicos as $servico){
+                        ?> 
+                        <label class="customizado">
+                            <input type="checkbox" class="item" id="checkbox1" value="<?=$servico["id_servico"]?>">
+                            <span class="teste"></span><?=$servico['nome_servico']?>
+                        </label>
+                        <?php
+                    }
+                    ?>
                     <label class="customizado">
-                        <input type="checkbox" class="item" id="checkbox1">
-                        <span class="teste"></span>Conselho Muncipal
-                    </label>
-                    <label class="customizado">
-                        <input type="checkbox" class="item" id="checkbox2">
-                        <span class="teste"></span>Fiscalização
-                    </label>
-                    <label class="customizado">
-                        <input type="checkbox" class="item" id="checkbox3">
-                        <span class="teste"></span>Iluminação Pública
-                    </label>
-                    <label class="customizado">
-                        <input type="checkbox" class="item" id="checkbox4">
-                        <span class="teste"></span>IPTU
+                        <input type="checkbox" id="select-all">
+                        <span class="teste"></span>Selecionar Todos
                     </label>
                 </div>
-                <div class="column-2">
+                <!-- <div class="column-2">
                     <div class="caixa"></div>
                     <label class="customizado">
                         <input type="checkbox" class="item" id="checkbox5">
@@ -118,7 +113,7 @@
                         <input type="checkbox" id="select-all">
                         <span class="teste"></span>Selecionar Todos
                     </label>
-                </div>
+                </div> -->
             </div>
         </form>
         <div class="form-actions2"> 

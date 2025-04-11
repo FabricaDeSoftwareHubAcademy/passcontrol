@@ -1,5 +1,5 @@
 <?php
-require "../classes/Usuario.php";
+require "../classe/Usuario.php";
 
 if(isset($_GET['id'])){
     $id_usuario = $_GET['id'];
