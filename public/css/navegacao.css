@@ -345,5 +345,32 @@
     }
     .titulo-projeto{
         font-size: 20px;
+        margin-right: 20px;
+    }
+}
+
+@media screen and (max-width: 350px){
+    .usu-nome{
+        font-size: 0.60rem;
+    }
+    .logo-control{
+        padding-left: 30px;
+    }
+    .titulo-projeto{
+        font-size: 20px;
+        margin-right: 20px;
+    }
+}
+
+@media screen and (min-width: 351px) and (max-width: 400px) {
+    /* .usu-nome{
+        font-size: 0.60rem;
+    } */
+    .logo-control{
+        padding-left: 30px;
+    }
+    .titulo-projeto{
+        font-size: 25px;
+        margin-right: 20px;
     }
 }
