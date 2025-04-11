@@ -72,7 +72,7 @@
   margin: 25px auto;
 }
 .tabela-responsiva-Ponto-atendimento {
-  max-height: 340px;
+  max-height: 480px;
   overflow-y: auto;
   border: 1px solid #dddddd;
 }
@@ -80,6 +80,7 @@
   width: 100%;
   border-collapse: separate;
   border-spacing:0 ;
+  background-color: #ffffff75;
 }
 .cabecaTabelaPonto-atendimento{
   width: fit-content;
@@ -159,7 +160,7 @@
 }
 
 .toggle-btn .circulo {
-  width: 20px;
+  width: 18px;
   height: 15px;
   background-color: #ff0000;
   border-radius: 50%;
@@ -171,7 +172,7 @@
 
 .toggle-btn.active .circulo {
   background-color: #00cc00;
-  left: 36px;
+  left: 37px;
 }
 .botao-voltar, .botao-cadastro {
   padding: 10px 20px;
