@@ -1,7 +1,7 @@
 <!-- modal jao: modal-container-cadas-servicos -->
 <main class="modal-container" style="display: none;">
     <!-- modal jao: modal-cadas-servicos -->
-    <section class="modal">
+    <section class="modal-1">
         <img src="../../../public/img/img-modais/Logo Nota Controlnt.png" alt="Logo Nota Control" class="logo">
         <!-- modal jao: title-cadas-servicos -->
         <h1 class="title">Cadastrar Serviços</h1>
