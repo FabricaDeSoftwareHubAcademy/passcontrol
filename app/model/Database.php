@@ -4,17 +4,17 @@ ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
 class Database {
-    // private $conn;
-    // private string $local = '192.168.22.9';
-    // private string $db = 'passcontrol';
-    // private string $user = 'fabrica32';
-    // private string $password = 'fabrica2025';
-
     private $conn;
-    private string $local = 'localhost';
+    private string $local = '192.168.22.9';
     private string $db = 'passcontrol';
-    private string $user = 'root';
-    private string $password = '';
+    private string $user = 'fabrica32';
+    private string $password = 'fabrica2025';
+
+    // private $conn;
+    // private string $local = 'localhost';
+    // private string $db = 'passcontrol';
+    // private string $user = 'root';
+    // private string $password = '';
 
     public function __construct() {
         $this->conecta();
