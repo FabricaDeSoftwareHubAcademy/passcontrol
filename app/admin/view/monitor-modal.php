@@ -12,7 +12,7 @@
                                 <h4>CM 001</h4>
                             </div>
                             <div class="guiche">
-                                <h5>GUICHE</h5>
+                                <h5>GUICHÊ</h5>
                                 <h6>1</h6>
                             </div>
                         </div>
@@ -25,7 +25,7 @@
                                 <h4>CM 001</h4>
                             </div>
                             <div class="guiche">
-                                <h5>GUICHE</h5>
+                                <h5>GUICHÊ</h5>
                                 <h6>1</h6>
                             </div>
                         </div>
@@ -38,7 +38,7 @@
                                 <h4>CM 001</h4>
                             </div>
                             <div class="guiche">
-                                <h5>GUICHE</h5>
+                                <h5>GUICHÊ</h5>
                                 <h6>1</h6>
                             </div>
                         </div>
@@ -51,7 +51,7 @@
                                 <h4>CM 001</h4>
                             </div>
                             <div class="guiche">
-                                <h5>GUICHE</h5>
+                                <h5>GUICHÊ</h5>
                                 <h6>1</h6>
                             </div>
                         </div>

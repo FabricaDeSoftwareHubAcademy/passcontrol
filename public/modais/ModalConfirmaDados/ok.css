@@ -95,6 +95,7 @@
     display: flex;
     justify-content: flex-end   ;
     margin-top: 15px;
+    gap: 15px;
 }
 
 .botao-modal.Okay {

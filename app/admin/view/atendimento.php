@@ -88,7 +88,7 @@
                     <div class="info-atendimento-inicio">
                         <div class="senhas-na-fila-atendimento-vermelho">
                             <p class="numero--atendimento senhas-vermelhas">0</p>
-                            <p class="texto-info-atendimento senhas-vermelhas">Senhas Na Fila</p>
+                            <p class="texto-info-atendimento senhas-vermelhas">Senhas na Fila</p>
                         </div>
                         <div class="senhas-na-fila-atendimento">
                             <p class="numero--atendimento">0</p>

@@ -200,7 +200,7 @@ document.addEventListener("DOMContentLoaded", function() {
         <hr class="linha">
         <p class="texto"><b>Deseja Alterar Esse Guichê?</b></p>
         <div class="button-group">
-            <button class="botao-modal cancel">Não</button>
+            <button class="botao-modal nao">Não</button>
             <button id="salvar" class="botao-modal save">Sim</button>
         </div>
     </section>
@@ -212,7 +212,7 @@ document.addEventListener("DOMContentLoaded", function() {
         button.addEventListener("click", function(event) {
             let id_value_switch = button.getAttribute("id_value_switch");
             const modalContainer = document.querySelector(".modal-inativar-container");
-            const buttonCancelar = document.querySelector(".cancel");
+            const buttonCancelarAcao = document.querySelector(".nao");
             const apareceMod = document.getElementById("confirma");
 
             modalContainer.classList.add("show");
@@ -233,7 +233,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 console.log(response);
             });
 
-            buttonCancelar.addEventListener("click", function() {
+            buttonCancelarAcao.addEventListener("click", function() {
                 modalContainer.classList.remove("show");
             });
         });
