@@ -47,11 +47,8 @@
 .modal-servico-linha {
     border: none;
     border-top: 3px solid #000;
-    width: 32.4vw;
-    margin-left: calc(-16.2vw + 50%);
-    margin-right: calc(-20vw + 50%);
-    margin-top: 20px;
-    margin-bottom: 20px;
+    width: 100%;
+
 }
 
 .modal-servico-texto {

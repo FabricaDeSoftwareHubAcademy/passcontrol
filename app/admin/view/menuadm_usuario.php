@@ -86,7 +86,7 @@
                         <!-- <p>Cadastro de Usuário</p> -->
                     </div>
                     <div class="button-wrapper">
-                        <button class="btn outline" onclick="window.location.href='../../../app/admin/view/telacadastro.php';">Cadastro Usuário</button>
+                        <button class="btn outline" onclick="window.location.href='../../../app/admin/view/telacadastro.php';">Cadastrar Usuário</button>
                     </div>
                 </div>      
             </main>
