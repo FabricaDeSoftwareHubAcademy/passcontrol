@@ -41,16 +41,22 @@ th {
   top: 0;
 }
 
-.editar a{
+.editar{
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.editar a img:hover{
-  /* content: url(/public/img/icons/Group\ 2925.png); */
+.openEditar{
+  cursor: pointer;
+  display: inline;
+  background: none;
+  border: none;
+}
+
+.editar button:hover img{
+  content: url(../../public/img/icons/Group\ 2925.png);
   transition: 0.2s;
-  background-color: rgba(0, 0, 0, 0.096);
   border-radius: 5px;
 }
 
@@ -119,20 +125,20 @@ input:focus + .slider {
   cursor: pointer;
 }
 
-.toggle-btn .circulo {
-  width: 20px;
-  height: 15px;
-  background-color: #4CAF50;
-  border-radius: 50%;
-  position: absolute;
-  top: 2px;
+.toggle-btn.active .circulo {
   left: 2px;
-  transition: left 0.3s;
+  background-color: #ff0000;
 }
 
-.toggle-btn.active .circulo {
-  background-color: #ff0000;
+.toggle-btn .circulo {
+  position: absolute;
+  top: 2px;
   left: 36px;
+  width: 20px;
+  height: 15px;
+  border-radius: 50%;
+  transition: left 0.3s;
+  background-color: #4CAF50;
 }
 /* .sub-area-tabela tbody::-webkit-scrollbar { 
   width: 0.1px; 

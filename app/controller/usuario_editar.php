@@ -1,5 +1,5 @@
 <?php
-require "../classes/Usuario.php";
+require "../classe/Usuario.php";
 // header('Content-Type: application/json');
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
