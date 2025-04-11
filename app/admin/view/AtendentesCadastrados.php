@@ -65,14 +65,17 @@ $dados = $usuarios->buscar();
             <div class="area-tabela">
                 <div class="sub-area-tabela">
                     <table class="tabela">
+                        <thead>
                         <tr>
                             <th scope="col">Nome</th>
                             <th scope="col">Matricula</th>
                             <th scope="col">Perfil</th>
                             <th>Serviços</th>
-                            <th scope="col">Editar</th>
-                            <th scope="col">Status</th>
+                            <th class="editar-inativar-menor" scope="col">Editar</th>
+                            <th class="editar-inativar-menor" scope="col">Status</th>
                         </tr>
+                        </thead>
+                        <tbody>
                         <tr>
                             <?php foreach ($dados as $usuario):
                                 $UsuStatus = $usuario->status_usuario == 'ativo' ? 'inactive' : 'active';
@@ -84,14 +87,14 @@ $dados = $usuarios->buscar();
                                 <td> <?= $usuario->email ?> </td>
                                 <td> <?= $id_perfil['nome'] ?> </td>
                                 <td>SERVIÇO</td>
-                                <td>
+                                <td class="editar-inativar-menor">
                                     <div class="editar">
                                         <button class="openEditar" data-id="<?= $usuario->id_usuario ?>">
                                             <img src="../../../public/img/icons/Group 2924.png" alt="">
                                         </button>
                                     </div>
                                 </td>
-                                <td>
+                                <td class="editar-inativar-menor">
                                     <div class="openInativarAtivar" data-id="<?= $usuario->id_usuario ?>">
                                         <button class="toggle-btn <?= $UsuStatus ?>">
                                             <div class="circulo"> </div>
@@ -101,6 +104,7 @@ $dados = $usuarios->buscar();
                             </tr>
                             <?php endforeach; ?>
                         </tr>
+                        </tbody>
                     </table>
                 </div>
             </div>
