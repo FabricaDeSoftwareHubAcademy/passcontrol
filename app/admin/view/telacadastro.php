@@ -60,7 +60,7 @@
             </div>
             <div class="cpf">
                 <label class="labeledit" for="cpf">CPF*</label>
-                <input class="borda" type="text" name="cpf" id="cpf" placeholder="Digite aqui o CPF do usuário" required>
+                <input class="borda" type="text" name="cpf" id="cpf" max="11" placeholder="Digite aqui o CPF do usuário" required>
             </div>
             <div class="selecionar">
                 <div class="perfild">
@@ -95,29 +95,10 @@
                         <span class="teste"></span>Selecionar Todos
                     </label>
                 </div>
-                <!-- <div class="column-2">
-                    <div class="caixa"></div>
-                    <label class="customizado">
-                        <input type="checkbox" class="item" id="checkbox5">
-                        <span class="teste"></span>Licenças
-                    </label>
-                    <label class="customizado">
-                        <input type="checkbox" class="item" id="checkbox6">
-                        <span class="teste"></span>Ouvidoria
-                    </label>
-                    <label class="customizado">
-                        <input type="checkbox" class="item" id="checkbo7">
-                        <span class="teste"></span>Poda De Àrvores
-                    </label>
-                    <label class="customizado">
-                        <input type="checkbox" id="select-all">
-                        <span class="teste"></span>Selecionar Todos
-                    </label>
-                </div> -->
             </div>
         </form>
         <div class="form-actions2"> 
-            <button class="botao_volto" form="dados_cad" type="reset" onclick="window.location.href='javascript:window.history.back(1)';">Voltar</button>
+            <button class="botao_volto" form="dados_cad" type="reset" onclick="window.location.href='./menuadm_usuario.php';">Voltar</button>
             <button class="botao_salvo open" form="dados_cad" type="submit" name="cadastrar" id="save_sucess">Salvar</button>
         </div>
     </section>
