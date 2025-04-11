@@ -2,7 +2,7 @@ const modalConfAltStatus = document.querySelector(".fundo_AltStatusUsu");
 const btnCancelAltStatus = document.querySelector(".cancel-atv-inatv");
 const btnConfirmarAltStatus = document.querySelector(".save-atv-inatv");
 
-// GUARDADO PARA MODAL DE ALTERACAO FETA
+// MODAL DE ALTERACAO FEITA
 const modalContainer_ConfDados = document.querySelector(".fundo-container-confirmacao-dados");
 const buttonFechar_ConfDados = document.querySelector(".Okay_ConfDados");
 

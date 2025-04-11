@@ -31,6 +31,7 @@ $dados = $usuarios->buscar();
     <link rel="stylesheet" href="../../../public/modais/Modal_Alterar_Dados_Pessoais/alterar_dados_pessoais.css">
     <link rel="stylesheet" href="../../../public/modais/Modal_Alterar_Senha/alterar_senha.css">
     <link rel="stylesheet" href="../../../public/modais/Modal_Alterar_Status_Usuario/alterar_status_usuario.css">
+    <link rel="stylesheet" href="../../../public/modais/Modal_Confirmacao_dos_Dados_Registrados/confirmacao_dados_registrados.css">
     <link rel="stylesheet" href="../../../public/modais/Modal_Confirmacao_dos_Dados/confirmacao_dados.css">
     
     <!-- JS -->
@@ -113,6 +114,7 @@ $dados = $usuarios->buscar();
     <?php
     include "../../../public/modais/Modal_Alterar_Dados_Pessoais/alterar_dados_pessoais.php";
     include "../../../public/modais/Modal_Alterar_Status_Usuario/alterar_status_usuario.php";
+    include "../../../public/modais/Modal_Confirmacao_dos_Dados_Registrados/confirmacao_dados_registrados.php";
     include "../../../public/modais/Modal_Confirmacao_dos_Dados/confirmacao_dados.php";
     include "./monitor-modal.php";
     ?>

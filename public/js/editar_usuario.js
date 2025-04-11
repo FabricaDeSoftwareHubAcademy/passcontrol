@@ -3,6 +3,11 @@ const buttonCancelarEdicao = modalContainerEdicao.querySelector(".cancel_AltDado
 const buttonSalvarEdicao = modalContainerEdicao.querySelector(".save_AltDadosPessoais");
 let formEditarUsuario = modalContainerEdicao.querySelector(".editarCadastro");
 
+// MODAL CONFIRMAR
+const modalConfirmarAltDadosUsu = document.querySelector(".fundo-container-confirmacao-dados-registrados");
+const confirmarEdicao = document.querySelector(".save_ConfDadosRegist");
+const cancelarEdicao = document.querySelector(".cancel_ConfDadosRegist");
+
 //JAVASCRIP PARA CLICAR NO BOTAO EDITAR E CARREGAR O MODAL COM OS DADOS
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -43,7 +48,19 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     // ENVIAR DADOS EDITADOS
-    buttonSalvarEdicao.addEventListener("click", async function(event){
+    buttonSalvarEdicao.addEventListener("click", () => {
+        modalContainerEdicao.classList.remove("show");
+        modalConfirmarAltDadosUsu.classList.add("show");
+        // userId = null;
+        // console.log(userId);
+        // return null;
+    });
+
+    cancelarEdicao.addEventListener("click", () =>{
+        modalConfirmarAltDadosUsu.classList.remove("show");
+    });
+
+    confirmarEdicao.addEventListener("click", async function(event){
         event.preventDefault();
 
         const formEditarUsu = new FormData(document.getElementById("formEditarCadastro"));
