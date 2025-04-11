@@ -28,7 +28,8 @@
 }
 #servicos-cadastrados {
   /* text-align: left; */
-  font-size: 20px;
+  font-size: 24px;
+  margin-left: 10px;
   font-family: Arial, sans-serif;
   color: var(--cinza-control);
   font-weight: bold;
@@ -61,9 +62,10 @@
 .linha-divisoria-servico {
   background-color: var(--cinza-control);
   height: 5px;
-  width: 96%;
+  width: 96.2%;
   max-height:339px;
-  padding: 2.5px;
+  padding: 1px;
+  margin-left: 0.6%;
 }
 #tela-branca-servico {
   background-color: #ffffff75;

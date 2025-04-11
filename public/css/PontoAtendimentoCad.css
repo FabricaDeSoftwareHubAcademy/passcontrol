@@ -31,7 +31,7 @@
   color: var(--cinza-control);
   font-family: Arial, sans-serif;
   font-weight: bold;
-  font-size: 1.5rem;
+  font-size: 24px;
 }
 .campo-busca {
   /* height: 0%; */
