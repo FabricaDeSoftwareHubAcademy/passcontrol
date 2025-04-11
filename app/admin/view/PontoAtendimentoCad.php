@@ -52,9 +52,9 @@ $guiches = $guiche->buscar();
                     <thead class="cabecaTabelaPonto-atendimento">
                         <tr class="topo-tabela-servicos">
                             <th scope="col" class="cabecalho-tabela1">Tipo</th>
-                            <th scope="col" class="cabecalho-tabela2">Identificador</th>
-                            <th scope="col" class="cabecalho-tabela3">Editar</th>
-                            <th scope="col" class="cabecalho-tabela1">Desativar/Ativar</th>
+                            <th class="indentificador-menor" scope="col" class="cabecalho-tabela2">Identificador</th>
+                            <th class="editar-menor" scope="col" class="cabecalho-tabela3">Editar</th>
+                            <th class="inativar-menor" scope="col" class="cabecalho-tabela1">Desativar/Ativar</th>
                         </tr>
                     </thead>
                     <tbody class="resto-tabela-Ponto-atendimento">
@@ -64,13 +64,13 @@ $guiches = $guiche->buscar();
                                     echo '
                                     <tr>
                                         <td>'.$guiche->nome_guiche.'</td>
-                                        <td>'.$guiche->num_guiche.'</td>
-                                        <td>
+                                        <td class="indentificador-menor">'.$guiche->num_guiche.'</td>
+                                        <td class="editar-menor">
                                             <button class="bot-editar" id="chamamodal" id_value ='.$guiche->id_guiche.'>
                                                 <img id="icone-editar" src="../../../public/img/icons/Group 2924.png" alt="Editar">
                                             </button>
                                         </td>
-                                        <td>
+                                        <td class="inativar-menor">
                                             <button id="switch_status" id_value_switch="'.$guiche->id_guiche.'"  class="toggle-btn '.$estadoAtivo.'">
                                                 <div class="circulo"></div>
                                             </button>
