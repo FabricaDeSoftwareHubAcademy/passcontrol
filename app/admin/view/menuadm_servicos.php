@@ -18,12 +18,13 @@
     <link rel="stylesheet" href="../../../public/modais/Modal_Alterar_Dados_Pessoais/alterar_dados_pessoais.css">
     <link rel="stylesheet" href="../../../public/modais/Modal_Alterar_Senha/alterar_senha.css">
     <link rel="stylesheet" href="../../../public/modais/ModalCadastrodosServicos/cadastro_servicos.css">
+    <link rel="stylesheet" href="../../../public/modais/Modal_Cadastro_Ponto_Atendimento/cadastro_ponto_atendimento.css">
+    <link rel="stylesheet" href="../../../public/modais/ModalConfirmaDados/ok.css">
     
     <!-- JS -->
     <script src="../../../public/js/navegacao-menu-lateral.js" defer></script>
     <script src="../../../public/js/monitor-modal.js" defer></script>
-    <script src="../../../public/js/modal_cadastro_guiche_adm.js" defer></script>
-    <script src="../../../public/modais/ModalCadastrodosServicos/cadastro_servicos.js" defer></script>
+    <!-- <script src="../../../public/js/modal_cadastro_guiche_adm.js" defer></script> -->
 
     <link rel="shortcut icon" type="imagex/png" href="../../../public/img/Logo-Nota-Controlnt.ico">
 </head>
@@ -126,11 +127,108 @@
     <?php
     include "./monitor-modal.php";
     ?>
+
+
+    <!-- INCLUINDO O MODAL DE CADASTRO DE PONTO DE ATENDIMENTO - GUICHES!!!!!!  -->
+    <div class="fundo-container-cad-ponto-atendimento">
+        <section class="modal-ponto-atendimento">
+            <img src="../../../public/img/img-modais/Logo Nota Controlnt.png" alt="Logo Nota Control" class="logo-ponto-atendimento">
+            <h1 class="titulo-ponto-atendimento">Cadastrar Ponto de Atendimento</h1>
+
+            <hr class="linha-horizontal-ponto-atendimento">
+
+            <form id="formulario" method="POST">
+            
+                <div class="inf-modal-ponto-atendimento">
+                    <div class="container-ponto-atendimento">
+                        <label class="label-ponto-atendimento"><b>Nome do Ponto de Atendimento</b></label>
+                        <input type="text" id="nome_guiche" name="nome_guiche" class="input-text-ponto-atendimento" placeholder="Ex: Guichê, Baia, IPTU...">
+                    </div>
+                </div>
+                <div class="servico-ponto-atendimento">
+                    <label class="label-ponto-atendimento"><b>Número / Letra</b></label>
+                    <input type="text" id="num_guiche" name="num_guiche" class="input-text-ponto-atendimento" placeholder="Ex: 01, 02...">
+                </div>
+                <div class="button-group-ponto-atendimento">
+                    <button class="botao-modal-ponto-atendimento cancel_CadPontoAtend">Voltar</button>
+                    <button type="submit" class="botao-modal-ponto-atendimento save_CadPontoAtend">Salvar</button>
+                </div>
+
+            </form>
+        </section>
+    </div>
+
+
+    <!-- confirmacao -->
+    <div id="confirma"  class="modal-confirma-container">
+        <section class="modal">
+            <img src="../../../public/img/img-modais/Logo Nota Controlnt.png" alt="Logo Nota Control" class="logo">
+            <h1 class="modal-title">Confirmação</h1>
+            <hr class="modal-divider">
+            <p class="modal-message"><b>Deseja confirmar o cadastro?</b></p>
+            <div class="button-group">
+                <button id="btnOk"class="botao-modal Okay">Ok</button>
+            </div>
+        </section>
+    </div >
+
+
     
     <script>
+
+        let btn_cadastrar_guiche = document.getElementById("btn_cadastrar_adm");
+        const apareceMod = document.getElementById("confirma");
+
+        const modalContainer_CadPontoAtend = document.querySelector(".fundo-container-cad-ponto-atendimento");
+        const buttonFechar_CadPontoAtend = document.querySelector(".close_CadPontoAtend");
+        const buttonCancelar_CadPontoAtend = document.querySelector(".cancel_CadPontoAtend");
+        const buttonSalvar_CadPontoAtend = document.querySelector(".save_CadPontoAtend");
+
+
+        btn_cadastrar_guiche.addEventListener("click", () => {
+    
+            modalContainer_CadPontoAtend.classList.add("show");
+        });
+
+        buttonCancelar_CadPontoAtend.addEventListener("click", () => {
+            modalContainer_CadPontoAtend.classList.remove("show");
+        });
+
+        buttonSalvar_CadPontoAtend.addEventListener("click", function () {
+            event.preventDefault()
+            myform = document.getElementById("formulario");
+            const formData = new FormData(myform);
+                   
+            modalContainer_CadPontoAtend.classList.remove("show");
+            apareceMod.classList.add("show");
+
+            btn_confirmar = document.getElementById("btnOk");
+
+            btn_confirmar.addEventListener("click", async function () {
+              
+                let dados2_php = await fetch("../../CLASSE/cadastrar_guiche.php",{
+                method:'POST',
+                body:formData
+                 })
+
+                let response = await dados2_php.json();
+
+            //console.log(response);
+            if(response.status == 'ok'){
+                window.location.href = "./PontoAtendimentoCad.php";
+            }
+            });
+
+
+        
+        });
+
+ 
         function toggleMenu() {
             document.getElementById("mobileMenu").classList.toggle("active");
         }
+
+
     </script>
 </body>
 </html>
