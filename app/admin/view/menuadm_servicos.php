@@ -142,7 +142,7 @@
                 <div class="inf-modal-ponto-atendimento">
                     <div class="container-ponto-atendimento">
                         <label class="label-ponto-atendimento"><b>Nome do Ponto de Atendimento</b></label>
-                        <input type="text" id="nome_guiche" name="nome_guiche" class="input-text-ponto-atendimento" placeholder="Ex: Guichê, Baia, IPTU...">
+                        <input type="text" id="nome_guiche" name="nome_guiche" class="input-text-ponto-atendimento" placeholder="Ex: Guichê, Caixa, IPTU...">
                     </div>
                 </div>
                 <div class="servico-ponto-atendimento">
@@ -165,7 +165,7 @@
             <img src="../../../public/img/img-modais/Logo Nota Controlnt.png" alt="Logo Nota Control" class="logo">
             <h1 class="modal-title">Confirmação</h1>
             <hr class="modal-divider">
-            <p class="modal-message"><b>Deseja confirmar o cadastro?</b></p>
+            <p class="modal-message"><b>Ponto de Atendimento cadastrado com sucesso!</b></p>
             <div class="button-group">
                 <button id="btnOk"class="botao-modal Okay">Ok</button>
             </div>
@@ -213,11 +213,11 @@
 
                 let response = await dados2_php.json();
 
-            //console.log(response);
-            if(response.status == 'ok'){
-                window.location.href = "./PontoAtendimentoCad.php";
-            }
-            });
+                //console.log(response);
+                if(response.status == 'ok'){   
+                    window.location.href = "./PontoAtendimentoCad.php";
+                }   
+                });
 
 
         
