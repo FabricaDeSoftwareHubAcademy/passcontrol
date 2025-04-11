@@ -1,8 +1,8 @@
 <main id="modalConfirmacao" class="modal-container" style="display: none;">
-    <section class="modal">
+    <section class="modal-2">
         <img src="../../../public/img/img-modais/Logo Nota Controlnt.png" class="logo" />
         <h1 class="titulo">Confirmação</h1>
-        <hr class="linha" />
+        <hr class="linha">
         <p class="texto"><b>Deseja Salvar as Edições Feitas?</b></p>
         <div class="button-group">
             <button id="cancelarConfirmacao" class="botao-modal cancel">Não</button>
