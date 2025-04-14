@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="../../../public/modais/Modal_Alterar_Senha/alterar_senha.css">
     <link rel="stylesheet" href="../../../public/modais/ModalCadastrodosServicos/cadastro_servicos.css">
     <link rel="stylesheet" href="../../../public/modais/Modal_Cadastro_Ponto_Atendimento/cadastro_ponto_atendimento.css">
-    <link rel="stylesheet" href="../../../public/modais/ModalConfirmaDados/ok.css">
+    <link rel="stylesheet" href="../../../public/modais/ModalConfirmaDados/estilo.css">
     
     <!-- JS -->
     <script src="../../../public/js/navegacao-menu-lateral.js" defer></script>
@@ -63,7 +63,7 @@
             <main class="area-cards">
                 <div class="container_menu">
                     <div class="wrapper">
-                        <a href="atendimentocadastrados.php">
+                        <a href="PontoAtendimentoCad.php">
                         <div class="banner-img">
                             <img src="../../../public/img/img-menu/pontodeatendimento.png" alt="">
                         </div>
