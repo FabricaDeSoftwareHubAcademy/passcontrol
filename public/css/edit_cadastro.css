@@ -128,10 +128,6 @@ input:focus {
     padding: 10px;
     font-size: 14px;
 }
-.selecao:hover{
-    border-color: #3AA867;
-    box-shadow: 0 0 5px #3AA867;
-}
 .pi{
     color: #555;
 }
