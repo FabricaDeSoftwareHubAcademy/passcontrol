@@ -198,6 +198,7 @@
     border: 0;
     font-size: 8px;
     font-weight: 700;
+    cursor: pointer;
 }
 .botao-proxima-senha-atendimento:hover, .botao-encerrar-atendimento:hover,.botao-consultar-fila-atendimento:hover, .botao-intervalo-atendimento:hover{
     background-color:#252f38;

@@ -171,7 +171,7 @@
   border-radius: 10px;
   position: relative;
   border: 1px solid var(--cinza-control);
-  
+  cursor: pointer;
 }
 
 .toggle-btn .circulo {
@@ -200,6 +200,13 @@
   width: 50px;
   color: #ffffff;
 }
+
+.editar button:hover img{
+  content: url(../../public/img/icons/Group\ 2925.png);
+  transition: 0.2s;
+  border-radius: 5px;
+}
+
 .indentificador-menor{
   width: 800px;
   color: #ffffff;

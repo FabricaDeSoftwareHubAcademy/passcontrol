@@ -6,7 +6,7 @@
         <hr class="linha">
 
         <p class="texto"><b>Iniciar o Período de Intervalo:</b></p>
-        <p id="horario"><b>12:00</b></p>
+        <p id="horario"><b>Erro</b></p>
         <p class="texto"><b>Iniciar?</b></p>
 
         <div class="button-group">

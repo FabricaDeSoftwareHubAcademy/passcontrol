@@ -66,9 +66,11 @@ $guiches = $guiche->buscar();
                                         <td>'.$guiche->nome_guiche.'</td>
                                         <td class="indentificador-menor">'.$guiche->num_guiche.'</td>
                                         <td class="editar-menor">
-                                            <button class="bot-editar" id="chamamodal" id_value ='.$guiche->id_guiche.'>
-                                                <img id="icone-editar" src="../../../public/img/icons/Group 2924.png" alt="Editar">
-                                            </button>
+                                            <div class="editar">
+                                                <button class="bot-editar" id="chamamodal" id_value ='.$guiche->id_guiche.'>
+                                                    <img id="icone-editar" src="../../../public/img/icons/Group 2924.png" alt="Editar">
+                                                </button>
+                                            </div>
                                         </td>
                                         <td class="inativar-menor">
                                             <button id="switch_status" id_value_switch="'.$guiche->id_guiche.'"  class="toggle-btn '.$estadoAtivo.'">
