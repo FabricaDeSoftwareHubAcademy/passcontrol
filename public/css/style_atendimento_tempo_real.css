@@ -56,6 +56,46 @@
     }
 }
 
+@media (max-width: 768px) {
+    .atendimento-tempo-real {
+        margin-top: 0px;
+        left: 8vh;
+    }
+
+    td {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 580px) {
+    .atendimento-tempo-real {
+        margin-top: -50px;
+        left: 8vh;
+    }
+
+    td {
+        font-size: 10px;
+        padding: 8px 7px;
+    }
+
+    th{
+        font-size: 11px;
+    }
+
+    .circle-atendimento-tempo-real{
+        width: 20px;
+        height: 20px;
+    }
+
+    tbody{
+        max-height: 50vh;
+    }
+
+    .status-flex-atendimento-tempo-real{
+        margin-top: 5px;
+    }
+}
+
 @media (max-width: 540px) {
     .atendimento-tempo-real {
         margin-top: -50px;
@@ -64,6 +104,7 @@
 
     td {
         font-size: 10px;
+        padding: 8px 5px;
     }
 
     th{
@@ -71,7 +112,8 @@
     }
 
     .circle-atendimento-tempo-real{
-        font-size: 8px;
+        width: 20px;
+        height: 20px;
     }
 
     tbody{
@@ -85,189 +127,296 @@
 
 @media (max-width: 430px) {
     .atendimento-tempo-real {
-        margin-top: 0px;
+        margin-top: -50px;
         left: 8vh;
-    }
-
-    .container-atendimento-tempo-real {
-        flex-wrap: wrap;
-    }
-
-    .container-atendimento-tempo-real h1 {
-        font-size: 12px;
-    }
-
-    .title-atendimento-tempo-real-bt {
-        margin-bottom: 5px
     }
 
     td {
         font-size: 10px;
+        padding: 8px 0;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
     }
 
-    .status-flex-atendimento-tempo-real {
-        gap: 10px;
+    th{
+        font-size: 10px;
+    }
+
+    .circle-atendimento-tempo-real{
+        width: 15px;
+        height: 15px;
+        margin-left: 1px;
+    }
+
+    tbody{
+        max-height: 50vh;
+    }
+
+    .status-flex-atendimento-tempo-real{
+        margin-top: 5px;
+    }
+
+    .em-atendimento-atendimento-tempo-real{
+        word-wrap: break-word;
+        overflow-wrap: break-word;
     }
 }
 
 @media (max-width: 414px) {
     .atendimento-tempo-real {
-        margin-top: 0px;
+        margin-top: -50px;
         left: 8vh;
-    }
-
-    .container-atendimento-tempo-real {
-        flex-wrap: wrap;
-    }
-
-    .container-atendimento-tempo-real h1 {
-        font-size: 12px;
-    }
-
-    .title-atendimento-tempo-real-bt {
-        margin-bottom: 5px
     }
 
     td {
         font-size: 10px;
+        padding: 5px 0;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
     }
 
-    .status-flex-atendimento-tempo-real {
-        gap: 10px;
+    th{
+        font-size: 10px;
+    }
+
+    .circle-atendimento-tempo-real{
+        width: 15px;
+        height: 15px;
+        margin-left: 1px;
+    }
+
+    tbody{
+        max-height: 50vh;
+    }
+
+    .status-flex-atendimento-tempo-real{
+        margin-top: 5px;
+    }
+
+    .em-atendimento-atendimento-tempo-real{
+        word-wrap: break-word;
+        overflow-wrap: break-word;
     }
 }
 
 @media (max-width: 412px) {
     .atendimento-tempo-real {
-        margin-top: 0px;
+        margin-top: -50px;
         left: 8vh;
-    }
-
-    .container-atendimento-tempo-real {
-        flex-wrap: wrap;
-    }
-
-    .container-atendimento-tempo-real h1 {
-        font-size: 12px;
-    }
-
-    .title-atendimento-tempo-real-bt {
-        margin-bottom: 5px
     }
 
     td {
         font-size: 10px;
+        padding: 5px 0;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
     }
 
-    .status-flex-atendimento-tempo-real {
-        gap: 10px;
+    th{
+        font-size: 10px;
+    }
+
+    .circle-atendimento-tempo-real{
+        width: 15px;
+        height: 15px;
+        margin-left: 1px;
+    }
+
+    tbody{
+        max-height: 50vh;
+    }
+
+    .status-flex-atendimento-tempo-real{
+        margin-top: 5px;
+    }
+
+    .em-atendimento-atendimento-tempo-real{
+        word-wrap: break-word;
+        overflow-wrap: break-word;
     }
 }
 
 @media (max-width: 390px) {
     .atendimento-tempo-real {
-        margin-top: 0px;
+        margin-top: -50px;
         left: 8vh;
-    }
-
-    .container-atendimento-tempo-real {
-        flex-wrap: wrap;
-    }
-
-    .container-atendimento-tempo-real h1 {
-        font-size: 12px;
-    }
-
-    .title-atendimento-tempo-real-bt {
-        margin-bottom: 5px
     }
 
     td {
         font-size: 10px;
+        padding: 8px 0;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
     }
 
-    .status-flex-atendimento-tempo-real {
-        gap: 10px;
+    th{
+        font-size: 10px;
+    }
+
+    .circle-atendimento-tempo-real{
+        width: 15px;
+        height: 15px;
+        margin-left: 1px;
+    }
+
+    tbody{
+        max-height: 47vh;
+    }
+
+    .status-flex-atendimento-tempo-real{
+        margin-top: 5px;
+    }
+
+    .em-atendimento-atendimento-tempo-real{
+        word-wrap: break-word;
+        overflow-wrap: break-word;
     }
 }
 
 @media (max-width: 375px) {
     .atendimento-tempo-real {
-        margin-top: 0px;
+        margin-top: -50px;
         left: 8vh;
-    }
-
-    .container-atendimento-tempo-real {
-        flex-wrap: wrap;
-    }
-
-    .container-atendimento-tempo-real h1 {
-        font-size: 12px;
-    }
-
-    .title-atendimento-tempo-real-bt {
-        margin-bottom: 5px
     }
 
     td {
         font-size: 10px;
+        padding: 8px 0;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
     }
 
-    .status-flex-atendimento-tempo-real {
-        gap: 10px;
+    th{
+        font-size: 10px;
+    }
+
+    .circle-atendimento-tempo-real{
+        width: 15px;
+        height: 15px;
+        margin-left: 1px;
+    }
+
+    tbody{
+        max-height: 47vh;
+    }
+
+    .status-flex-atendimento-tempo-real{
+        margin-top: 5px;
+    }
+
+    .em-atendimento-atendimento-tempo-real{
+        word-wrap: break-word;
+        overflow-wrap: break-word;
     }
 }
 
 @media (max-width: 360px) {
     .atendimento-tempo-real {
-        margin-top: 0px;
+        margin-top: -50px;
         left: 8vh;
-    }
-
-    .container-atendimento-tempo-real {
-        flex-wrap: wrap;
-    }
-
-    .container-atendimento-tempo-real h1 {
-        font-size: 12px;
-    }
-
-    .title-atendimento-tempo-real-bt {
-        margin-bottom: 5px
     }
 
     td {
         font-size: 10px;
+        padding: 8px 0;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
     }
 
-    .status-flex-atendimento-tempo-real {
-        gap: 10px;
+    th{
+        font-size: 10px;
+    }
+
+    .circle-atendimento-tempo-real{
+        width: 15px;
+        height: 15px;
+        margin-left: 1px;
+    }
+
+    tbody{
+        max-height: 47vh;
+    }
+
+    .status-flex-atendimento-tempo-real{
+        margin-top: 5px;
+    }
+
+    .em-atendimento-atendimento-tempo-real{
+        word-wrap: break-word;
+        overflow-wrap: break-word;
     }
 }
 
 @media (max-width: 344px) {
     .atendimento-tempo-real {
-        margin-top: -30px;
+        margin-top: -50px;
         left: 8vh;
     }
 
-    .container-atendimento-tempo-real {
-        flex-wrap: wrap;
+    td {
+        font-size: 10px;
+        padding: 8px 0;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
     }
 
-    .container-atendimento-tempo-real h1 {
-        font-size: 12px;
+    th{
+        font-size: 10px;
     }
 
-    .title-atendimento-tempo-real-bt {
-        margin-bottom: 5px
+    .circle-atendimento-tempo-real{
+        width: 15px;
+        height: 15px;
+        margin-left: 1px;
+    }
+
+    tbody{
+        max-height: 47vh;
+    }
+
+    .status-flex-atendimento-tempo-real{
+        margin-top: 5px;
+    }
+
+    .em-atendimento-atendimento-tempo-real{
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+}
+
+@media (max-width: 320px) {
+    .atendimento-tempo-real {
+        margin-top: -50px;
+        left: 8vh;
     }
 
     td {
-        font-size:8px;
+        font-size: 10px;
+        padding: 8px 0;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
     }
 
-    .status-flex-atendimento-tempo-real {
-        gap: 10px;
+    th{
+        font-size: 10px;
+    }
+
+    .circle-atendimento-tempo-real{
+        width: 15px;
+        height: 15px;
+        margin-left: 1px;
+    }
+
+    tbody{
+        max-height: 47vh;
+    }
+
+    .status-flex-atendimento-tempo-real{
+        margin-top: 5px;
+    }
+
+    .em-atendimento-atendimento-tempo-real{
+        word-wrap: break-word;
+        overflow-wrap: break-word;
     }
 }
