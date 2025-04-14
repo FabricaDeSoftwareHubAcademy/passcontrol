@@ -23,8 +23,8 @@ $guiches = $guiche->buscar();
     <link rel="stylesheet" href="../../../public/css/PontoAtendimentoCad.css">
     <link rel="stylesheet" href="../../../public/modais/ModalEdicaoPontoAtendimento/estilo.css">
     <link rel="stylesheet" href="../../../public/modais/ModalInativacaoGuiche/estilo.css">
-    <link rel="stylesheet" href="../../../public/modais/ModalInativacaoGuiche/cadatro.css">
-    <link rel="stylesheet" href="../../../public/modais/ModalConfirmaDados/ok.css">
+    <link rel="stylesheet" href="../../../public/modais/ModalInativacaoGuiche/casdatro.css">
+    <link rel="stylesheet" href="../../../public/modais/ModalConfirmaDados/estilo.css">
     <link rel="stylesheet" href="../../../public/modais/Modal_Alterar_Dados_Pessoais/alterar_dados_pessoais.css">
     <link rel="stylesheet" href="../../../public/modais/Modal_Alterar_Senha/alterar_senha.css">
 
@@ -51,10 +51,10 @@ $guiches = $guiche->buscar();
                 <table id="table table-striped" class="tabela-Ponto-atendimento">
                     <thead class="cabecaTabelaPonto-atendimento">
                         <tr class="topo-tabela-servicos">
-                            <th scope="col" class="cabecalho-tabela1">Tipo</th>
-                            <th class="indentificador-menor" scope="col" class="cabecalho-tabela2">Identificador</th>
-                            <th class="editar-menor" scope="col" class="cabecalho-tabela3">Editar</th>
-                            <th class="inativar-menor" scope="col" class="cabecalho-tabela1">Desativar/Ativar</th>
+                            <th  class="cabecalho-tabela1">Tipo</th>
+                            <th class="indentificador-menor"  class="cabecalho-tabela2">Identificador</th>
+                            <th class="editar-menor"  class="cabecalho-tabela3">Editar</th>
+                            <th class="inativar-menor"  class="cabecalho-tabela1">Desativar/Ativar</th>
                         </tr>
                     </thead>
                     <tbody class="resto-tabela-Ponto-atendimento">

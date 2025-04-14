@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="../../../public/modais/Modal_Alterar_Senha/alterar_senha.css">
     <link rel="stylesheet" href="../../../public/modais/ModalCadastrodosServicos/cadastro_servicos_final.css">
     <link rel="stylesheet" href="../../../public/modais/Modal_Cadastro_Ponto_Atendimento/cadastro_ponto_atendimento.css">
-    <link rel="stylesheet" href="../../../public/modais/ModalConfirmaDados/ok.css">
+    <link rel="stylesheet" href="../../../public/modais/ModalConfirmaDados/estilo.css">
     
     <!-- JS -->
     <script src="../../../public/js/navegacao-menu-lateral.js" defer></script>
