@@ -33,12 +33,14 @@ $dados = $usuarios->buscar();
     <link rel="stylesheet" href="../../../public/modais/Modal_Alterar_Status_Usuario/alterar_status_usuario.css">
     <link rel="stylesheet" href="../../../public/modais/Modal_Confirmacao_dos_Dados_Registrados/confirmacao_dados_registrados.css">
     <link rel="stylesheet" href="../../../public/modais/Modal_Confirmacao_dos_Dados/confirmacao_dados.css">
+    <link rel="stylesheet" href="../../../public/modais/Modal_Alerta_Alteracoes_Realizadas/alerta_alteracoes.css">
     
     <!-- JS -->
     <script src="../../../public/js/navegacao-menu-lateral.js" defer></script>
     <script src="../../../public/js/monitor-modal.js" defer></script>
     <script src="../../../public/js/editar_usuario.js" defer></script>
     <script src="../../../public/js/alterar_status_usuario.js" defer></script>
+    <script src="../../../public/modais/Modal_Alerta_Alteracoes_Realizadas/alerta_alteracoes.js" defer></script>
     <!-- <script src="../../../public/js/modal-atendentes-cadastrados.js" defer></script> -->
 
     <link rel="shortcut icon" type="imagex/png" href="../../../public/img/Logo-Nota-Controlnt.ico">
@@ -77,13 +79,7 @@ $dados = $usuarios->buscar();
                         </tr>
                         </thead>
                         <tbody>
-                        <tr>
-                            <?php foreach ($dados as $usuario):
-                                $UsuStatus = $usuario->status_usuario == 'ativo' ? 'inactive' : 'active';
-                                
-                                $id_perfil = $usuarios->listar_nome_perfil($usuario->id_perfil);
-                            ?>
-                            <tr>
+                        
                                 <td> <?= $usuario->nome ?> </td>
                                 <td> <?= $usuario->email ?> </td>
                                 <td> <?= $id_perfil['nome'] ?> </td>
@@ -103,7 +99,7 @@ $dados = $usuarios->buscar();
                                     </div>
                                 </td>
                             </tr>
-                            <?php endforeach; ?>
+                            
                         </tr>
                         </tbody>
                     </table>
@@ -120,7 +116,10 @@ $dados = $usuarios->buscar();
     include "../../../public/modais/Modal_Alterar_Status_Usuario/alterar_status_usuario.php";
     include "../../../public/modais/Modal_Confirmacao_dos_Dados_Registrados/confirmacao_dados_registrados.php";
     include "../../../public/modais/Modal_Confirmacao_dos_Dados/confirmacao_dados.php";
+    include "../../../public/modais/Modal_Alerta_Alteracoes_Realizadas/alerta_alteracoes.php";
     include "./monitor-modal.php";
     ?>
+
+
 </body>
 </html>
