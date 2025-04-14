@@ -195,7 +195,7 @@
     padding: 10px;
     justify-content: flex-end;
     align-items: flex-end;
-    margin-left: 26px;
+    margin-left: 17px;
 }
  
 #txtBusca{
@@ -347,6 +347,7 @@ thead, tbody tr {
     .senhas-guiche-area-chamada{
         height: 3.4rem;
         gap: 1rem;
+        margin-bottom: 11px;
     }
     .fundo-fila-tabela{
         overflow-x: auto;
@@ -362,6 +363,7 @@ thead, tbody tr {
     .senhas-guiche-area-chamada{
         height: 3.4rem;
         gap: 1rem;
+        margin-bottom: 11px;
     }
     .fundo-fila-tabela{
         overflow-x: auto;
@@ -377,6 +379,7 @@ thead, tbody tr {
     .senhas-guiche-area-chamada{
         height: 4rem;
         gap: 1rem;
+        margin-bottom: 11px;
     }
     .fundo-fila-tabela{
         overflow-x: auto;
@@ -400,6 +403,7 @@ thead, tbody tr {
         height: 4rem;
         gap: 1rem;
         margin: 0;
+        margin-bottom: 11px;
     }
     .senhas-guiche-area-chamada p{
         font-size: 18px;
@@ -426,6 +430,7 @@ thead, tbody tr {
     .senhas-guiche-area-chamada{
         height: 4rem;
         gap: 1rem;
+        margin-bottom: 11px;
         margin: 0;
         width: 680px;
     }
@@ -445,12 +450,15 @@ thead, tbody tr {
 
 /* Area interna */
 
-@media (max-width: 400px) and (min-width: 320px) {
+@media (max-width: 433px) and (min-width: 320px) {
     .topo-esquerda-consultar-fila{
         margin-left: 8px;
     }
     .logo-consultar-fila{
         margin-right: 8px;
+    }
+    .senhas-guiche-area-chamada{
+        margin-bottom: 11px;
     }
     .modal-consultar-fila {
         width: 90% !important;
