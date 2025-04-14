@@ -69,29 +69,34 @@ $dados = $usuarios->buscar();
                 <div class="sub-area-tabela">
                     <table class="tabela">
                         <thead>
-                        <tr>
-                            <th scope="col">Nome</th>
-                            <th scope="col">Matricula</th>
-                            <th scope="col">Perfil</th>
-                            <th>Serviços</th>
-                            <th class="editar-inativar-menor" scope="col">Editar</th>
-                            <th class="editar-inativar-menor" scope="col">Status</th>
-                        </tr>
+                            <tr>
+                                <th scope="col">Nome</th>
+                                <th scope="col">Matricula</th>
+                                <th scope="col">Perfil</th>
+                                <th>Serviços</th>
+                                <th class="editar-inativar-menor" scope="col">Editar</th>
+                                <th class="editar-inativar-menor" scope="col">Status</th>
+                            </tr>
                         </thead>
                         <tbody>
-                        
-                                <td> <?= $usuario->nome ?> </td>
-                                <td> <?= $usuario->email ?> </td>
-                                <td> <?= $id_perfil['nome'] ?> </td>
+                            <?php foreach ($dados as $usuario):
+                                $UsuStatus = $usuario->status_usuario == 'ativo' ? 'inactive' : 'active';
+                                
+                                $id_perfil = $usuarios->listar_nome_perfil($usuario->id_perfil);
+                            ?>
+                            <tr>
+                                <td scope="col"> <?= $usuario->nome ?> </td>
+                                <td scope="col"> <?= $usuario->email ?> </td>
+                                <td scope="col"> <?= $id_perfil['nome'] ?> </td>
                                 <td>SERVIÇO</td>
-                                <td class="editar-inativar-menor">
+                                <td class="editar-inativar-menor" scope="col">
                                     <div class="editar">
                                         <button class="openEditar" data-id="<?= $usuario->id_usuario ?>">
                                             <img src="../../../public/img/icons/Group 2924.png" alt="">
                                         </button>
                                     </div>
                                 </td>
-                                <td class="editar-inativar-menor">
+                                <td class="editar-inativar-menor" scope="col">
                                     <div class="openInativarAtivar" data-id="<?= $usuario->id_usuario ?>">
                                         <button class="toggle-btn <?= $UsuStatus ?>">
                                             <div class="circulo"> </div>
@@ -99,8 +104,7 @@ $dados = $usuarios->buscar();
                                     </div>
                                 </td>
                             </tr>
-                            
-                        </tr>
+                        <?php endforeach; ?>
                         </tbody>
                     </table>
                 </div>
