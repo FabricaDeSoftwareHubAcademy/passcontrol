@@ -151,19 +151,19 @@
     top: 25px;
 }
 
-
+.cancel,
 .cancelar-confirmacao:hover {
     color: #FF0000;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 }
 
-
+.save,
 .salvar-confirmacao:hover {
     color: #3AA867;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 }
 
-
+.Okay,
 .okay-sucesso:hover {
     color: #3AA867;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);

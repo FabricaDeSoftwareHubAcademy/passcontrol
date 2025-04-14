@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="../../../public/css/style_eli.css">
     <link rel="stylesheet" href="../../../public/modais/Modal_Alterar_Dados_Pessoais/alterar_dados_pessoais.css">
     <link rel="stylesheet" href="../../../public/modais/Modal_Alterar_Senha/alterar_senha.css">
-    <link rel="stylesheet" href="../../../public/modais/ModalCadastrodosServicos/cadastro_servicos.css">
+    <link rel="stylesheet" href="../../../public/modais/ModalCadastrodosServicos/cadastro_servicos_final.css">
     <link rel="stylesheet" href="../../../public/modais/Modal_Cadastro_Ponto_Atendimento/cadastro_ponto_atendimento.css">
     <link rel="stylesheet" href="../../../public/modais/ModalConfirmaDados/ok.css">
     
@@ -108,7 +108,7 @@
                     </div>
                 </div>    
 
-                <div class="container_menu" id="abrirModalCadastro">
+                <div class="container_menu" >
                     <div class="wrapper">
                         <div class="banner-img">
                             <img src="../../../public/img/img-menu/serviços.png" alt="">
@@ -117,7 +117,7 @@
                         <!-- <p>Gestão dos serviços</p> -->
                     </div>
                     <div class="button-wrapper">
-                        <button class="btn outline">Cadastrar Serviços</button>
+                        <button class="btn outline" onclick="window.location.href='servicos.php';">Cadastrar Serviços</button>
                     </div>
                 </div> 
             </main>
