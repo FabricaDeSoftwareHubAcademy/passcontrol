@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="../../../public/css/navegacao.css">
     <link rel="stylesheet" href="../../../public/css/monitor-modal.css">
     <link rel="stylesheet" href="../../../public/css/servicos.css">
+    <link rel="stylesheet" href="../../../public/css/tabela.css">
     <link rel="stylesheet" href="../../../public/modais/ModalCadastrodosServicos/cadastro_servicos.css">
     <link rel="stylesheet" href="../../../public/modais/ModalInativacaoServico/inativacao_servico.css">
     <link rel="stylesheet" href="../../../public/modais/Modal_Alterar_Dados_Pessoais/alterar_dados_pessoais.css">
@@ -55,9 +56,10 @@
                 <div class="linha-divisoria-servico"></div>
             </div>
             
-            <div id="tela-branca-servico">
-                <div class="tabela-responsiva-servico">
-                    <?php
+
+            <div class="area-tabela">
+                <div class="sub-area-tabela">
+                <?php
                     require_once '../../model/Servico.php';
 
                     $servico = new Servico();
@@ -65,40 +67,38 @@
 
 
                     ?>
-
-                    <table class="tabela-servicos">
-                        <thead class="cabecaTabelaServicos">
-                            <tr class="topo-tabela-servicos">
-                                <th class="cabecalho-tabela1">Código do Serviço</th>
-                                <th class="cabecalho-tabela2">Serviços</th>
-                                <th class="cabecalho-tabela3">Editar</th>
-                                <th class="cabecalho-tabela1">Ativar/ Desativar</th>
+                    <table class="tabela">
+                        <thead>
+                            <tr>
+                                <th scope="col">Código do Serviço</th>
+                                <th scope="col">Serviços</th>
+                                <th class="editar-inativar-menor" scope="col">Editar</th>
+                                <th class="editar-inativar-menor" scope="col">Status</th>
                             </tr>
                         </thead>
-                        <tbody class="resto-tabela-servicos">
+                        <tbody>
                         <?php foreach ($servicos as $serv) :?>
                         <?php $estadoAtivo = ($serv->ativo == 'ATIVO') ? 'active' : ''; ?>
-                        <tr class="linha-tabela">
-                            <td><?= $serv->codigo_servico ?></td>
-                            <td><?= $serv->nome_servico ?></td>
-                            <td class="colm-idit">
-                            <img 
-                                class="icone-editar" 
-                                src="../../../public/img/icons/Group 2924.png" 
-                                alt="Editar"
-                                data-id="<?= $serv->id_servico ?>"
-                                data-codigo="<?= $serv->codigo_servico ?>"
-                                data-nome="<?= $serv->nome_servico ?>"
-                                onclick="abrirModalEdicao(this)">
-                            </td>
-                            <td>
-                                <a href="#" class="openInativarAtivar" data-id="<?= $serv->id_servico ?>">
-                                    <div class="toggle-btn <?= $estadoAtivo; ?>">
-                                        <div class="circulo"></div>
+                            <tr>
+                                <td><?= $serv->codigo_servico ?></td>
+                                <td><?= $serv->nome_servico ?></td>
+                                <td class="editar-inativar-menor" scope="col">
+                                    <div class="editar">
+                                            <img src="../../../public/img/icons/Group 2924.png" alt="" 
+                                            data-id="<?= $serv->id_servico ?>"
+                                            data-codigo="<?= $serv->codigo_servico ?>"
+                                            data-nome="<?= $serv->nome_servico ?>"
+                                            onclick="abrirModalEdicao(this)">
                                     </div>
-                                </a>
-                            </td>
-                        </tr>
+                                </td>
+                                <td class="editar-inativar-menor" scope="col">
+                                    <div class="openInativarAtivar" data-id="<?= $serv->id_servico ?>">
+                                        <button class="toggle-btn <?= $estadoAtivo; ?>">
+                                            <div class="circulo"> </div>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
                         <?php endforeach; ?>
                         </tbody>
                     </table>

@@ -74,7 +74,7 @@
   padding: 20px;
   margin: 25px auto;
 }
-.tabela-responsiva-servico {
+/* .tabela-responsiva-servico {
   max-height: 420px;
   overflow-y: auto;
   border: 1px solid #dddddd;
@@ -116,7 +116,7 @@
 }
 .colm-idit{
   display: flex;
-  justify-content: space-between;
+  align-items: center;
 }
 .tabela-servicos th {
   background-color: var(--cinza-control);
@@ -170,7 +170,7 @@
 .toggle-btn.active .circulo {
   background-color: #00cc00;
   left: 36px;
-}
+} */
 .botao-voltar, .botao-cadastro {
   padding: 10px 20px;
   font-size: 16px;
