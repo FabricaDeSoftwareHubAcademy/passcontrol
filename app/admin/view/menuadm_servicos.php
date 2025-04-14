@@ -108,7 +108,7 @@
                     </div>
                 </div>    
 
-                <div class="container_menu" id="abrirModalCadastro">
+                <div class="container_menu">
                     <div class="wrapper">
                         <div class="banner-img">
                             <img src="../../../public/img/img-menu/serviços.png" alt="">
@@ -117,7 +117,7 @@
                         <!-- <p>Gestão dos serviços</p> -->
                     </div>
                     <div class="button-wrapper">
-                        <button class="btn outline">Cadastrar Serviços</button>
+                        <button class="btn outline" id="abrirModalCadastro">Cadastrar Serviços</button>
                     </div>
                 </div> 
             </main>
