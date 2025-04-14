@@ -92,7 +92,7 @@
                         </div>
                         <div class="senhas-na-fila-atendimento">
                             <p class="numero--atendimento">0</p>
-                            <p class="texto-info-atendimento">Senhas Ausente</p>
+                            <p class="texto-info-atendimento">Senhas Ausentes</p>
                         </div>
                         <div class="senhas-na-fila-atendimento">
                             <p class="numero--atendimento">0</p>
