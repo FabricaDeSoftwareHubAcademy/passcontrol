@@ -23,10 +23,11 @@ $guiches = $guiche->buscar();
     <link rel="stylesheet" href="../../../public/css/PontoAtendimentoCad.css">
     <link rel="stylesheet" href="../../../public/modais/ModalEdicaoPontoAtendimento/estilo.css">
     <link rel="stylesheet" href="../../../public/modais/ModalInativacaoGuiche/estilo.css">
-    <link rel="stylesheet" href="../../../public/modais/ModalInativacaoGuiche/cadatro.css">
+    <link rel="stylesheet" href="../../../public/modais/ModalInativacaoGuiche/cadastro.css">
     <link rel="stylesheet" href="../../../public/modais/ModalConfirmaDados/ok.css">
     <link rel="stylesheet" href="../../../public/modais/Modal_Alterar_Dados_Pessoais/alterar_dados_pessoais.css">
     <link rel="stylesheet" href="../../../public/modais/Modal_Alterar_Senha/alterar_senha.css">
+    <link rel="stylesheet" href="../../../public/modais/Modal_Cadastro_Ponto_Atendimento/cadastro_ponto_atendimento.css">
 
 
     <link rel="shortcut icon" type="imagex/png" href="../../../public/img/Logo-Nota-Controlnt.ico">
@@ -85,28 +86,32 @@ $guiches = $guiche->buscar();
         </div>
         <div class="botoesVoltar-Cadastrar">
             <button type="button" class="botao-voltar" onclick="window.location.href='menuadm_servicos.php';">Voltar</button>
-            <button type="button" id="abrirModal" class="botao-cadastro">Cadastrar</button>
+            <!-- <button type="button" id="abrirModal" class="botao-cadastro">Cadastrar</button> -->
+            <button type="button" id="btn_cadastrar_adm" class="botao-cadastro">Cadastrar</button>
+
         </div>
 
     </div>
 </section>
+
+
 <!-- ModalGuiche Editar -->
 <div class="modal-container">
         <section class="modal">
             <img src="../../../public/img/img-modais/Logo Nota Controlnt.png" alt="Logo Nota Control" class="logo">
-            <h1 class="titulo">Edição Ponto de Atendimento</h1>
+            <h1 class="titulo">Editar Ponto de Atendimento</h1>
             <hr class="linha-horizontal">
-            <form id="formulario" method="POST">
+            <form id="formulario_editar" method="POST">
                 <div class="inf-modal">
                     <div class="container">
                         <label class="label"><b>Nome do Ponto de Atendimento</b></label>
-                        <input type="text" id="nome_guiche" name="nome_guiche" class="input-text" placeholder="Guichê">
+                        <input type="text" id="nome_guiche" name="nome_guiche" class="input-text" placeholder="">
                         <input type="hidden" id="id_guiche" name="id_guiche">
                     </div>
                 </div>
                 <div class="servico">
                     <label class="label"><b>Número / Letra</b></label>
-                    <input type="text" id="num_guiche" name="num_guiche" class="input-text" placeholder="1">
+                    <input type="text" id="num_guiche" name="num_guiche" class="input-text" placeholder="">
                 </div>
                 <div class="button-group">
                     <button class="botao-modal cancel">Voltar</button>
@@ -116,6 +121,50 @@ $guiches = $guiche->buscar();
             </form>
         </section>
 </div>
+
+<!-- ModalGuiche Cadastrar -->
+<div class="fundo-container-cad-ponto-atendimento">
+        <section class="modal-ponto-atendimento">
+            <img src="../../../public/img/img-modais/Logo Nota Controlnt.png" alt="Logo Nota Control" class="logo-ponto-atendimento">
+            <h1 class="titulo-ponto-atendimento">Cadastrar Novo Ponto de Atendimento</h1>
+
+            <hr class="linha-horizontal-ponto-atendimento">
+
+            <form id="formulario_cadastrar" method="POST">
+            
+                <div class="inf-modal-ponto-atendimento">
+                    <div class="container-ponto-atendimento">
+                        <label class="label-ponto-atendimento"><b>Nome do Ponto de Atendimento</b></label>
+                        <input type="text" id="nome_guiche" name="nome_guiche" class="input-text-ponto-atendimento" placeholder="Ex: Guichê, Caixa, IPTU...">
+                    </div>
+                </div>
+                <div class="servico-ponto-atendimento">
+                    <label class="label-ponto-atendimento"><b>Número / Letra</b></label>
+                    <input type="text" id="num_guiche" name="num_guiche" class="input-text-ponto-atendimento" placeholder="Ex: 01, 02...">
+                </div>
+                <div class="button-group-ponto-atendimento">
+                    <button class="botao-modal-ponto-atendimento cancel_CadPontoAtend">Voltar</button>
+                    <button type="submit" class="botao-modal-ponto-atendimento save_CadPontoAtend">Salvar</button>
+                </div>
+
+            </form>
+        </section>
+    </div>
+
+
+    <!-- modal confirmacao -->
+    <div id="confirma"  class="modal-confirma-container">
+        <section class="modal">
+            <img src="../../../public/img/img-modais/Logo Nota Controlnt.png" alt="Logo Nota Control" class="logo">
+            <h1 class="modal-title">Confirmação</h1>
+            <hr class="modal-divider">
+            <p class="modal-message"><b>Ponto de Atendimento cadastrado com sucesso!</b></p>
+            <div class="button-group">
+                <button id="btnOk"class="botao-modal Okay">Ok</button>
+            </div>
+        </section>
+    </div >
+
 <script>
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -159,7 +208,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
                     event.preventDefault(); // impede o recarregamento da pagina
 
-                    myform = document.getElementById("formulario");
+                    myform = document.getElementById("formulario_editar");
 
                     const formData = new FormData(myform);
 
@@ -261,3 +310,81 @@ document.addEventListener("DOMContentLoaded", function() {
         </section>
     </div >
 </html>
+
+<!-- js cadastrar guiche -->
+<script>
+
+        let btn_cadastrar_guiche = document.getElementById("btn_cadastrar_adm");
+        const apareceMod = document.getElementById("confirma");
+
+        const modalContainer_CadPontoAtend = document.querySelector(".fundo-container-cad-ponto-atendimento");
+        // const buttonFechar_CadPontoAtend = document.querySelector(".close_CadPontoAtend");
+        const buttonCancelar_CadPontoAtend = document.querySelector(".cancel_CadPontoAtend");
+        const buttonSalvar_CadPontoAtend = document.querySelector(".save_CadPontoAtend");
+
+        //Abrir Modal
+        btn_cadastrar_guiche.addEventListener("click", () => {
+    
+            modalContainer_CadPontoAtend.classList.add("show");
+        });
+
+
+        //Fechar Modal
+        buttonCancelar_CadPontoAtend.addEventListener("click", (event) => {
+            event.preventDefault();
+            modalContainer_CadPontoAtend.classList.remove("show");
+        });
+
+    
+        //Salvar Formulário
+        buttonSalvar_CadPontoAtend.addEventListener("click", function (event) {
+        event.preventDefault();
+
+        const myform = document.getElementById("formulario_cadastrar");
+        const inputs = myform.querySelectorAll("input");
+        let formularioValido = true;
+
+        // Verifica se todos os campos estão preenchidos
+        inputs.forEach(inputAtual => {
+        
+            if (inputAtual.value.trim() === "") { //trim para não aceitar espaço
+                formularioValido = false;
+            }
+        });
+
+        if (!formularioValido) {
+            alert("Preencha todos os campos para continuar!");
+            return;
+        }
+
+        modalContainer_CadPontoAtend.classList.remove("show");
+        apareceMod.classList.add("show");
+
+        //Envia para o PHP
+        const formData = new FormData(myform);
+
+        
+
+        let btn_confirmar = document.getElementById("btnOk");
+
+        btn_confirmar.addEventListener("click", async function () {
+            let dados2_php = await fetch("../../CLASSE/cadastrar_guiche.php", {
+                method: 'POST',
+                body: formData
+            });
+
+            let response = await dados2_php.json();
+
+            if (response.status == 'ok') {
+                window.location.href = "./PontoAtendimentoCad.php";
+            }
+        });
+    });
+
+ 
+        function toggleMenu() {
+            document.getElementById("mobileMenu").classList.toggle("active");
+        }
+    </script>
+
+    </body>

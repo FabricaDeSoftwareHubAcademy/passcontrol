@@ -180,48 +180,68 @@
         const apareceMod = document.getElementById("confirma");
 
         const modalContainer_CadPontoAtend = document.querySelector(".fundo-container-cad-ponto-atendimento");
-        const buttonFechar_CadPontoAtend = document.querySelector(".close_CadPontoAtend");
+        // const buttonFechar_CadPontoAtend = document.querySelector(".close_CadPontoAtend");
         const buttonCancelar_CadPontoAtend = document.querySelector(".cancel_CadPontoAtend");
         const buttonSalvar_CadPontoAtend = document.querySelector(".save_CadPontoAtend");
 
-
+        //Abrir Modal
         btn_cadastrar_guiche.addEventListener("click", () => {
     
             modalContainer_CadPontoAtend.classList.add("show");
         });
 
-        buttonCancelar_CadPontoAtend.addEventListener("click", () => {
+
+        //Fechar Modal
+        buttonCancelar_CadPontoAtend.addEventListener("click", (event) => {
+            event.preventDefault();
             modalContainer_CadPontoAtend.classList.remove("show");
         });
 
-        buttonSalvar_CadPontoAtend.addEventListener("click", function () {
-            event.preventDefault()
-            myform = document.getElementById("formulario");
-            const formData = new FormData(myform);
-                   
-            modalContainer_CadPontoAtend.classList.remove("show");
-            apareceMod.classList.add("show");
+    
+        //Salvar Formulário
+        buttonSalvar_CadPontoAtend.addEventListener("click", function (event) {
+        event.preventDefault();
 
-            btn_confirmar = document.getElementById("btnOk");
+        const myform = document.getElementById("formulario");
+        const inputs = myform.querySelectorAll("input");
+        let formularioValido = true;
 
-            btn_confirmar.addEventListener("click", async function () {
-              
-                let dados2_php = await fetch("../../CLASSE/cadastrar_guiche.php",{
-                method:'POST',
-                body:formData
-                 })
+        // Verifica se todos os campos estão preenchidos
+        inputs.forEach(inputAtual => {
+        
+            if (inputAtual.value.trim() === "") { //trim para não aceitar espaço
+                formularioValido = false;
+            }
+        });
 
-                let response = await dados2_php.json();
+        if (!formularioValido) {
+            alert("Preencha todos os campos para continuar!");
+            return;
+        }
 
-                //console.log(response);
-                if(response.status == 'ok'){   
-                    window.location.href = "./PontoAtendimentoCad.php";
-                }   
-                });
+        modalContainer_CadPontoAtend.classList.remove("show");
+        apareceMod.classList.add("show");
 
+        //Envia para o PHP
+        const formData = new FormData(myform);
 
         
+
+        let btn_confirmar = document.getElementById("btnOk");
+
+        btn_confirmar.addEventListener("click", async function () {
+            let dados2_php = await fetch("../../CLASSE/cadastrar_guiche.php", {
+                method: 'POST',
+                body: formData
+            });
+
+            let response = await dados2_php.json();
+
+            if (response.status == 'ok') {
+                window.location.href = "./PontoAtendimentoCad.php";
+            }
         });
+    });
 
  
         function toggleMenu() {
