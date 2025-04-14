@@ -1,4 +1,4 @@
-.area-tabela{
+/* .area-tabela{
   width: 90%;
   background-color: rgb(255, 255, 255,0.4);
   gap: 15px;
@@ -6,7 +6,7 @@
   padding: 1.875rem;
   display: flex;
   height: 70%;
-}
+} */
 
  .sub-area-tabela {
   height: 100%; 
@@ -163,7 +163,14 @@ input:focus + .slider {
   position: relative; 
   overflow-x: auto;
   transition: overflow 0.3s ease;  
+  border-spacing: 0;
 } 
+.tabela {
+  /* border: 0.5px solid black; */
+  border-collapse: separate;
+  background-color: rgb(255, 255, 255,0.4);
+
+}
 .tabela:hover { 
   overflow-y: auto;  
 } 

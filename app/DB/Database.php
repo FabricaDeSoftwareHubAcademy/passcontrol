@@ -34,7 +34,7 @@ class Database {
             return $stmt;
         }
         catch(PDOException $erro){
-            print_r($query);
+            // print_r($query);
             die("\nFalha na conecção! (fn_exec) <br>". $erro->getMessage());
         }
     }
@@ -70,7 +70,8 @@ class Database {
             return $out;
         }
         else{
-            echo "<script> alert ('Falha na execução, usuário não cadastrado!') </script>";
+            // echo "<script> alert ('Falha na execução, usuário não cadastrado!') </script>";
+            return false;
         }
     }
 

@@ -25,15 +25,15 @@
             $res = $objUser->cadastrar();
             if($res){
                 $resposta = array( "msg" => "Cadastrado com sucesso", "status" => "OK");
-                echo json_encode($resposta);
+                // echo json_encode($resposta);
             }else{
                 $resposta = array( "msg" => "Erro ao editar", "status" => "ERRO");
-                echo json_encode($resposta);
+                // echo json_encode($resposta);
             }                    
         }
         else{
             $resposta = array( "msg" => "Preencha todos os campos", "status" => "ERRO");
-            echo json_encode($resposta);
+            // echo json_encode($resposta);
             exit;
         }
     }
