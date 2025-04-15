@@ -251,6 +251,10 @@
   width: 5px;
 }
 
+.resto-tabela-Ponto-atendimento{
+  background-color: #fff;
+}
+
 @media screen and (max-width: 1024px) {
   #tabela-Ponto-atendimento {
     left: 8vh;
