@@ -53,7 +53,12 @@ th {
   background: none;
   border: none;
 }
-
+.openEditarServ{
+  cursor: pointer;
+  display: inline;
+  background: none;
+  border: none;
+}
 .editar button:hover img{
   content: url(../../public/img/icons/Group\ 2925.png);
   transition: 0.2s;

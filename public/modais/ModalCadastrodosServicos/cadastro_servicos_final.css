@@ -12,7 +12,10 @@
     align-items: center;
     justify-content: center;
     z-index: 1000;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
+
+
 
 /* corpo que fica os inputs dentro */
 .modal-1 {
@@ -159,19 +162,24 @@
 
 .botao-modal-cancela:hover {
     color: #FF0000;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 #cancelarConfirmacao:hover {
     color: #FF0000;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 #confirmarSalvar:hover {
     color: #3AA867;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 .botao-modal-salvo:hover {
     color: #3AA867;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 #fecharSucesso:hover {
     color: #3AA867;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 .modal-message,

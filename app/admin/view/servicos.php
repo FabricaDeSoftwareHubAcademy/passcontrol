@@ -85,13 +85,12 @@
                         $ativo = strtoupper(trim($serv->ativo)); 
                         $estadoAtivo = ($serv->ativo == 'ATIVO') ? '' : 'active';
                         ?>
-
                             <tr>
                                 <td><?= $serv->codigo_servico ?></td>
                                 <td><?= $serv->nome_servico ?></td>
                                 <td class="editar-inativar-menor" scope="col">
                                     <div class="editar">
-                                        <button class="openEditar" 
+                                        <button class="openEditarServ" 
                                             data-id="<?= $serv->id_servico ?>" 
                                             data-codigo="<?= $serv->codigo_servico ?>" 
                                             data-nome="<?= $serv->nome_servico ?>">
@@ -113,8 +112,8 @@
                 </div>
             </div>
             <div class="botoesVoltar-Cadastrar">
-                <button type="button" class="botao-voltar " onclick="window.location.href='menuadm_servicos.php';">Voltar</button>
                 <button type="submit" class="botao-cadastro" id="abrirModalCadastro">Cadastrar</button>
+                <button type="button" class="botao-voltar " onclick="window.location.href='menuadm_servicos.php';">Voltar</button>
             </div>
         </div>
     </section>
