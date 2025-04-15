@@ -1,4 +1,4 @@
-/* corpo do modal inteiro */
+corpo do modal inteiro
 .modal-container,
 .container-modal-confirmacao,
 .container-modal-sucesso {
@@ -14,8 +14,9 @@
     z-index: 1000;
 }
 
+
 /* corpo que fica os inputs dentro */
-.modal-1 {
+.modal-1{
     background-color: #cfcfcf;
     width: 60%;
     max-width: 600px;
@@ -26,9 +27,7 @@
     text-align: left;
     /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); */
 }
-
-.modal-2,
-.modal-3 {
+.modal-2,.modal-3{
     background-color: #e0e0e0;
     padding: 25px;
     width: 90%;
@@ -50,24 +49,24 @@
     width: 60px;
 }
 
+
 /* titulo dos três modais */
 .title {
+    /* position: relative; */
     font-size: 22px;
     margin-bottom: 15px;
     right: 125px;
 }
-.titulo,
-.modal-title {
+.titulo,.modal-title{
     position: relative;
     font-size: 22px;
     margin-bottom: 15px;
     right: 160px;
 }
 
+
 /* linha abaixo do titulo do modal */
-.divider,
-.linha,
-.modal-divider {
+.divider,.linha,.modal-divider {
     border: none;
     border-top: 2px solid #000;
     width: 100%;
@@ -75,8 +74,9 @@
     margin-bottom: 20px;
 }
 
+
 /* configuração dos inputs do modal cadastro dos serviços */
-.inf-modal {
+.inf-modal{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -87,36 +87,32 @@
     flex: 1;
     margin-right: 10px;
 }
+
 .container:last-child {
     margin-right: 0;
 }
-
-.file-input-field {
+.file-input-field{
     display: flex;
     align-items: center; 
 }
-
-.label {
+.label{
     font-size: 16px;
     font-weight: bold;
-    margin-bottom: 5px;
+    margin-bottom: 5px; 
 }
-
-.servico {
+.servico{
     display: flex;
     flex-direction: column;
     margin-bottom: 20px;
 }
-
-.label_serv {
+.label_serv{
     font-size: 16px;
     font-weight: bold;
     margin-bottom: 5px;
 }
-
 .input-number,
 .file-input-field,
-.input-text {
+.input-text{
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
@@ -125,15 +121,15 @@
     cursor: pointer;
 }
 
+
 /* botão dos três modais */
-.button-group {
+.button-group{
     display: flex;
     justify-content: flex-end;
     gap: 15px;
 }
 
-.botao-modal-salvo,
-.botao-modal-cancela {
+.botao-modal-salvo, .botao-modal-cancela{
     background-color: #33404D;
     color: white;
     border-radius: 5px;
@@ -144,8 +140,7 @@
     position: relative;
     top: 5px;
 }
-
-.botao-modal {
+.botao-modal{
     background-color: #33404D;
     color: white;
     border-radius: 5px;
@@ -156,6 +151,7 @@
     position: relative;
     top: 25px;
 }
+
 
 .botao-modal-cancela:hover {
     color: #FF0000;
@@ -174,8 +170,7 @@
     color: #3AA867;
 }
 
-.modal-message,
-.texto {
+.modal-message, .texto{
     font-size: 16px;
     margin-bottom: 25px;
     position: relative;
@@ -183,29 +178,12 @@
     left: -10px;
 }
 
-/* Modal de Edição */
-#modalEditar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    min-height: 100vh;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: none;
-    align-items: center;
-    justify-content: center;
-    z-index: 1000;
-}
 
-/* Estilo da imagem de pré-visualização */
-.file-preview {
-    max-width: 100%;
-    height: auto;
-    margin-top: 10px;
-    display: none; /* Será visível apenas quando a imagem for carregada */
-}
 
-/* Responsividade */
+
+
+
+
 @media screen and (max-width: 480px) {
     .modal,
     .estrutura-modal-confirmacao,

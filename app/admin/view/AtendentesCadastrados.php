@@ -28,6 +28,7 @@ $dados = $usuarios->buscar();
     <link rel="stylesheet" href="../../../public/css/AtendentesCadastrados.css">
     <link rel="stylesheet" href="../../../public/css/navegacao.css">
     <link rel="stylesheet" href="../../../public/css/monitor-modal.css">
+    <link rel="stylesheet" href="../../../public/css/conteudo.css">
     <link rel="stylesheet" href="../../../public/modais/Modal_Alterar_Dados_Pessoais/alterar_dados_pessoais.css">
     <link rel="stylesheet" href="../../../public/modais/Modal_Alterar_Senha/alterar_senha.css">
     <link rel="stylesheet" href="../../../public/modais/Modal_Alterar_Status_Usuario/alterar_status_usuario.css">

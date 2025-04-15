@@ -3,7 +3,6 @@ require '../model/Servico.php';
 
 $servico = new Servico();
 
-// Para ativar ou inativar serviço (sem AJAX, recarrega a página)
 if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['id_servico'])) {
     $id_servico = intval($_GET['id_servico']);
     $servicoEncontrado = $servico->buscar_por_id($id_servico);
@@ -18,7 +17,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['id_servico'])) {
     }
 }
 
-// Para cadastro e edição de serviço (com AJAX)
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $acao = $_POST['acao'] ?? '';
     $codigo = $_POST['codigo'] ?? '';
@@ -60,29 +58,5 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
     }
 
-    if ($resultado) {
-        echo json_encode(['status' => 'success', 'message' => 'Serviço salvo com sucesso!']);
-    } else {
-        echo json_encode(['status' => 'error', 'message' => 'Erro ao salvar o serviço.']);
-    }
+    echo $resultado ? 'success' : 'error';
 }
-
-// Para ativar ou inativar serviço com AJAX
-if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['id_servico']) && isset($_GET['acao'])) {
-    $id_servico = intval($_GET['id_servico']);
-    $acao = $_GET['acao'];
-
-    $servicoEncontrado = $servico->buscar_por_id($id_servico);
-
-    if ($servicoEncontrado) {
-        if ($acao === 'inativar') {
-            $servico->alternar_ativo($id_servico, 'INATIVO'); 
-        } elseif ($acao === 'ativar') {
-            $servico->alternar_ativo($id_servico, 'ATIVO');
-        }
-        echo json_encode(['status' => 'success', 'message' => 'Status alterado com sucesso!']);
-    } else {
-        echo json_encode(['status' => 'error', 'message' => 'Serviço não encontrado.']);
-    }
-}
-?>

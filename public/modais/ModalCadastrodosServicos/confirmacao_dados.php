@@ -10,5 +10,3 @@
     </section>
 </main>
 
-
-<script src="cadastro_servicos.js"></script>
