@@ -12,7 +12,7 @@ elseif (($_SERVER['REQUEST_METHOD'] === 'POST')){
     $id_usuario = $_POST["id_usuario"];
     $nome = $_POST["nome"];
     $email = $_POST["email"];
-    $cpf = $_POST["cpf"];
+    // $cpf = $_POST["cpf"]; //CPF REMOVIDO
     // $foto = $_POST["foto"];
     $id_perfil = $_POST["id_perfil"];
 
@@ -23,7 +23,7 @@ elseif (($_SERVER['REQUEST_METHOD'] === 'POST')){
         // INSERE OS DADOS NO OBJETO $objUser
         $objUser = new Usuario();
         $objUser->nome = $nome;
-        $objUser->cpf = $cpf;
+        // $objUser->cpf = $cpf; //CPF REMOVIDO
         $objUser->email = $email;
         // $objUser->foto = $foto;
         $objUser->id_perfil = $id_perfil;

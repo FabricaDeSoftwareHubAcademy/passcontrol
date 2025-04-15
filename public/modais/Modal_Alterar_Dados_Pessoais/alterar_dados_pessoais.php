@@ -19,10 +19,10 @@
                 <input type="email" class="input-email" id="email" name="email" value="" placeholder="Digite o seu email" required>
             </div>
 
-            <div class="cpf-container-alterar-dados">
+            <!-- <div class="cpf-container-alterar-dados">
                 <label class="label-cpf-alterar-dados"><b>CPF</b></label>
                 <input type="text" class="input-cpf" id="cpf" name="cpf" value="" placeholder="Digite o seu CPF" required>
-            </div>
+            </div> -->
 
             <div class="file-container">
                 <label class="label-file-alterar-dados"><b>Foto de Perfil</b></label>
