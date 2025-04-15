@@ -77,19 +77,19 @@
                     </div>
                 </div>
 
-                <div class="container_menu">
-                    <div class="wrapper">
-                        <a href="" id="img_cadastrar_adm">
+                <div id="btn_cadastrar_adm" class="container_menu">
+                    <div  class="wrapper">
+                        <!-- <a href="" id="img_cadastrar_adm"> -->
                         <div class="banner-img">
                             <img src="../../../public/img/img-menu/listar-giche.png" alt="">
                         </div>
-                        </a>
+                        <!-- </a> -->
                         <!-- <h3 class="titulo-card">Atendimento</h3> -->
                         <!-- <p>Pontos de Atendimento.</p> -->
 
                     </div>
                     <div class="button-wrapper">
-                        <button id="btn_cadastrar_adm" class="btn outline">Cadastrar Ponto de Atendimento</button>
+                        <button  class="btn outline">Cadastrar Ponto de Atendimento</button>
                     </div>
                 </div>
                 
