@@ -6,7 +6,7 @@ $usuarios = new Usuario();
 $db_profiles = new Database("perfil");
 $perfis = $db_profiles->execute("SELECT * FROM perfil");
 
-$dados = $usuarios->buscar();
+$dados = $usuarios->buscar(null,' status_usuario ASC');
 
 ?>
 
@@ -33,7 +33,7 @@ $dados = $usuarios->buscar();
     <link rel="stylesheet" href="../../../public/modais/Modal_Alterar_Senha/alterar_senha.css">
     <link rel="stylesheet" href="../../../public/modais/Modal_Alterar_Status_Usuario/alterar_status_usuario.css">
     <link rel="stylesheet" href="../../../public/modais/Modal_Confirmacao_dos_Dados_Registrados/confirmacao_dados_registrados.css">
-    <link rel="stylesheet" href="../../../public/modais/Modal_Confirmacao_dos_Dados/confirmacao_dados.css">
+    <link rel="stylesheet" href="../../../public/modais/Modal_Confirmacao_dos_Dados/confirmacao_dados.css">    
     <link rel="stylesheet" href="../../../public/modais/Modal_Alerta_Alteracoes_Realizadas/alerta_alteracoes.css">
     
     <!-- JS -->

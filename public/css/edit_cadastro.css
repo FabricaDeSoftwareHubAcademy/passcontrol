@@ -161,14 +161,16 @@ input:focus {
     top: 465px;
 }
 .column-1, .column-2{
-    position: absolute;
+    position: relative;
     display: flex;
     flex-direction: column;
     /* width: 30%; */
     flex-wrap: wrap;
     max-height: 300px;
+    max-width: 400px;
+    /* max-width: ; */
     top: -100px;
-    /* background-color: red; */
+    gap: 10px;
 }
 .column-1 { left: -73%; }
 .column-2 { left: -35%; }
@@ -181,7 +183,7 @@ input:focus {
     align-items: center;
     gap: 10px;
     cursor: pointer;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
 }
 .checkbox-container label span{
     width: 15px;
@@ -221,6 +223,7 @@ input:focus {
 }
 
 .botao_volto, .botao_salvo {
+    z-index: 1;
     padding: 10px 20px;
     font-size: 1rem;
     font-weight: 500;
@@ -228,21 +231,13 @@ input:focus {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.2s;
-}
-
-.botao_volto {
-    background-color: #33404D;
     color: #fff;
+    background-color: #33404D;
 }
 
 .botao_volto:hover {
     color: #FFFFFF;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-}
-
-.botao_salvo{
-    background-color: #33404D;
-    color: #fff;
 }
 
 .botao_salvo:hover {

@@ -6,7 +6,7 @@ class Usuario{
     
     public int $id_usuario;
     public string $nome;
-    public string $cpf;
+    // public string $cpf;
     public string $email;
     public string $senha;
     public string $id_perfil;
@@ -24,7 +24,6 @@ class Usuario{
             [
                 "nome"=> $this->nome,
                 "email"=> $this->email,
-                "cpf"=> $this->cpf,
                 "senha"=> $this->senha,
                 "id_perfil"=> $this->id_perfil
             ]
@@ -64,7 +63,7 @@ class Usuario{
         return(new Database("usuario"))->update("id_usuario =".$id_usuario,
             [
                 "nome"=> $this->nome,
-                "cpf"=> $this->cpf,
+                // "cpf"=> $this->cpf,
                 // "foto"=> $this->foto,
                 "email"=> $this->email,
                 "id_perfil" => $this->id_perfil

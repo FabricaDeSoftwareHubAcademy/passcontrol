@@ -24,6 +24,9 @@
     <link rel="stylesheet" href="../../../public/css/edit_cadastro.css">
     <link rel="stylesheet" href="../../../public/modais/Modal_Alterar_Dados_Pessoais/alterar_dados_pessoais.css">
     <link rel="stylesheet" href="../../../public/modais/Modal_Alterar_Senha/alterar_senha.css">
+
+    <link rel="stylesheet" href="../../../public/modais/Modal_Confirmacao_dos_Dados_Registrados/confirmacao_dados_registrados.css">
+    <link rel="stylesheet" href="../../../public/modais/Modal_Confirmacao_dos_Dados/confirmacao_dados.css">    
     
     <!-- <link rel="stylesheet" href="../../../public/modais/Modal_Confirmacao_dos_Dados_Registrados/confirmacao_dados_registrados.css"> -->
     
@@ -32,6 +35,8 @@
     <script src="../../../public/js/monitor-modal.js" defer></script>
     <!-- <script src="../../../public/js/modal_salvar_cadastro.js" defer></script> -->
     <script src="../../../public/js/todos.js" defer></script>
+
+    <script src="../../../public/js/cadastrar_usuario.js" defer></script>
     
     <link rel="shortcut icon" type="imagex/png" href="../../../public/img/Logo-Nota-Controlnt.ico">
 </head>
@@ -39,7 +44,7 @@
 <body class="control-body-navegacao">
     <?php
     include "./navegacao.php";
-    include "../../controller/usuario_cadastrar.php";
+    include "../../controller/listar_perfis_e_servicos.php";
     ?>
 
     <section class="Area-Util-Projeto">
@@ -58,10 +63,10 @@
                 <label class="labeledit" for="email">Email*</label>
                 <input class="borda" type="text" name="email" id="email" placeholder="Digite aqui o Email do usuário" required>
             </div>
-            <div class="cpf">
+            <!-- <div class="cpf">
                 <label class="labeledit" for="cpf">CPF*</label>
                 <input class="borda" type="text" name="cpf" id="cpf" max="11" placeholder="Digite aqui o CPF do usuário" required>
-            </div>
+            </div> -->
             <div class="selecionar">
                 <div class="perfild">
                     <label class="labeledit" for="perfil">Perfil De Acesso</label>
@@ -99,12 +104,14 @@
         </form>
         <div class="form-actions2"> 
             <button class="botao_volto" form="dados_cad" type="reset" onclick="window.location.href='./menuadm_usuario.php';">Voltar</button>
-            <button class="botao_salvo open" form="dados_cad" type="submit" name="cadastrar" id="save_sucess">Salvar</button>
+            <button class="botao_salvo cadastrar_usuario" name="cadastrar" id="save_sucess">Salvar</button>
         </div>
     </section>
 
     <?php
     include "./monitor-modal.php";
+    include "../../../public/modais/Modal_Confirmacao_dos_Dados_Registrados/confirmacao_dados_registrados.php";
+    include "../../../public/modais/Modal_Confirmacao_dos_Dados/confirmacao_dados.php";
     ?>
 
 </body>

@@ -3,10 +3,16 @@ const buttonCancelarEdicao = modalContainerEdicao.querySelector(".cancel_AltDado
 const buttonSalvarEdicao = modalContainerEdicao.querySelector(".save_AltDadosPessoais");
 let formEditarUsuario = modalContainerEdicao.querySelector(".editarCadastro");
 
-// MODAL CONFIRMAR
+// MODAL DE CONFIRMAÇÃO
 const modalConfirmarAltDadosUsu = document.querySelector(".fundo-container-confirmacao-dados-registrados");
 const confirmarEdicao = document.querySelector(".save_ConfDadosRegist");
 const cancelarEdicao = document.querySelector(".cancel_ConfDadosRegist");
+
+// MODAL RESPOSTA SUCESSO
+
+const modalAlteracaoFeita = document.querySelector(".fundo-container-confirmacao-dados");
+const buttonOk = document.querySelector(".Okay_ConfDados");
+
 
 //JAVASCRIP PARA CLICAR NO BOTAO EDITAR E CARREGAR O MODAL COM OS DADOS
 
@@ -24,21 +30,12 @@ document.addEventListener("DOMContentLoaded", function() {
             
             let response = await dados_php.json();
             
-            // document.getElementById('cpf').addEventListener('input', function(e) {
-            //     var value = e.target.value;
-            //     var cpfPattern = value.replace(/\D/g, '') // Remove qualquer coisa que não seja número
-            //                           .replace(/(\d{3})(\d)/, '$1.$2') // Adiciona ponto após o terceiro dígito
-            //                           .replace(/(\d{3})(\d)/, '$1.$2') // Adiciona ponto após o sexto dígito
-            //                           .replace(/(\d{3})(\d)/, '$1-$2') // Adiciona traço após o nono dígito
-            //                           .replace(/(-\d{2})\d+?$/, '$1'); // Impede entrada de mais de 11 dígitos
-            //     e.target.value = cpfPattern;
-            // });
-            
+
             // Preenche os campos do modal com os dados do usuário
             document.getElementById("id_usuario").value = response.id_usuario,
             document.getElementById("nome").value = response.nome,
             document.getElementById("email").value = response.email,
-            document.getElementById("cpf").value = response.cpf,
+            // document.getElementById("cpf").value = response.cpf,
             // document.getElementById("foto").value = response.foto   //ESSE GOSTA DE DAR PROBLEMA
             document.getElementById("id_perfil").value = response.id_perfil
 
@@ -47,15 +44,13 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 
-    // ENVIAR DADOS EDITADOS
+    // ENVIAR DADOS EDITADOS CASO CLIQUE NO CONFIRMAR
     buttonSalvarEdicao.addEventListener("click", () => {
         modalContainerEdicao.classList.remove("show");
         modalConfirmarAltDadosUsu.classList.add("show");
-        // userId = null;
-        // console.log(userId);
-        // return null;
     });
 
+    // CLIQUE NO NAO CONFIRMAR
     cancelarEdicao.addEventListener("click", () =>{
         modalConfirmarAltDadosUsu.classList.remove("show");
     });
@@ -64,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function() {
         event.preventDefault();
 
         const formEditarUsu = new FormData(document.getElementById("formEditarCadastro"));
-        console.log(formEditarUsu);
+        // console.log(formEditarUsu);
         
         // Envia os dados via POST
         let atualizar_dados = await fetch ('../../controller/usuario_editar.php', {
@@ -79,14 +74,20 @@ document.addEventListener("DOMContentLoaded", function() {
         try {
             let response_post = JSON.parse(textResponse);
             console.log(response_post + " resposta do php");
-            location.reload();
+
+            // ABRE O MODAL DE ALTERACOES SALVAS
+            modalConfirmarAltDadosUsu.classList.remove("show");
+            modalAlteracaoFeita.classList.add("show");
+
+            buttonOk.addEventListener("click", ()=>{
+                location.reload();
+            })
+
         } catch (error) {
             console.error("Erro ao analisar JSON: ", error);
             console.log("Conteúdo não pode ser analisado como JSON:", textResponse);
         }
-        
-        // esconde o modal
-        modalContainerEdicao.classList.remove('show');        
+     
     });
 
 });
