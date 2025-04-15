@@ -132,6 +132,7 @@
     flex-direction: row;
     justify-content: space-between;
     width: 96%;
+    align-items: end;
 }
 
 .topo-direita-consultar-fila {
@@ -192,12 +193,13 @@
 }
 #divBusca{
     display: flex;
-    padding: 10px;
     justify-content: flex-end;
     align-items: flex-end;
     margin-left: 17px;
 }
- 
+.buscar-consultar{
+    padding: 10px;
+}
 #txtBusca{
     float: left;
     padding: 5px;

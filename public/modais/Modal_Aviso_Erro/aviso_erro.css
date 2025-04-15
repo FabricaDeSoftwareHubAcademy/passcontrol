@@ -1,0 +1,138 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Botões gerais */
+.botao-modal-aviso-erro{
+    background-color: #33404D;
+    color: #FFFFFF;
+    border: 0;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+/* Estilo do container do modal */
+.modal-container-aviso-erro {
+    background: rgba(0, 0, 0, 0.5);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+    z-index: 10;
+}
+
+.show {
+    opacity: 1;
+    display: flex;
+    pointer-events: auto;
+}
+
+/* Estilo do modal */
+.modal-aviso-erro{
+    background-color: #ddd;
+    width: 60%;
+    max-width: 550px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.modal-divider-aviso-erro{
+    border: none;
+    border-top: 2px solid #000;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.logo-aviso-erro {
+    width: 60px;
+    position: absolute;
+    top: 15px;
+    right: 30px;
+}
+
+/* Tipografia */
+.modal-title-aviso-erro{
+    font-size: 24px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.modal-message-aviso-erro{
+    margin-top: 40px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Grupo de botões */
+.button-group-aviso-erro{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 45px;
+}
+
+.voltar_AvisoErro {
+    background-color: #33404D;
+    color: white;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 10px 15px;
+    /* margin-bottom: 30px; */
+}
+
+.voltar_AvisoErro:hover {
+    color: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .modal-aviso-erro {
+        width: 100%;
+    }
+    .modal-title-aviso-erro{
+        font-size: 20px;
+    }
+    .modal-message-aviso-erro{
+        font-size: 16px;
+    }
+    .logo-aviso-erro{
+        width: 50px;
+        top: 15px;
+        right: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .modal-aviso-erro {
+        width: 90%;
+    }
+    .modal-title-aviso-erro{
+        font-size: 18px;
+    }
+    .modal-message-aviso-erro{
+        font-size: 14px;
+    }
+    .botao-modal-aviso-erro{
+        font-size: 16px;
+        padding: 8px 15px;
+    }
+    .logo-aviso-erro{
+        margin-top: 5px;
+        width: 40px;
+    }
+}
