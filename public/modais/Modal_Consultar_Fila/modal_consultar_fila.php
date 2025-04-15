@@ -11,7 +11,7 @@
             </div>
 
             <div class="area-em-cima-tabela-fila">
-                <div id="divBusca">
+                <div class="buscar-consultar" id="divBusca">
                     <input type="text" id="txtBusca" placeholder="Buscar..." />
                 </div>
                 <div class="topo-direita-consultar-fila">
