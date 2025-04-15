@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function() {
             modalDadosSalvos.classList.add("show");
             
             buttonOk.addEventListener("click", ()=>{
-                location.reload();
+                location.href='./AtendentesCadastrados.php';
             })
             
         } catch (error) {

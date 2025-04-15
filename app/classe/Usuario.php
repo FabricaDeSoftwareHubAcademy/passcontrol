@@ -24,7 +24,6 @@ class Usuario{
             [
                 "nome"=> $this->nome,
                 "email"=> $this->email,
-                // "cpf"=> $this->cpf,
                 "senha"=> $this->senha,
                 "id_perfil"=> $this->id_perfil
             ]

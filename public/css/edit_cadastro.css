@@ -227,6 +227,7 @@ input:focus {
 }
 
 .botao_volto, .botao_salvo {
+    z-index: 1;
     padding: 10px 20px;
     font-size: 1rem;
     font-weight: 500;
@@ -234,21 +235,13 @@ input:focus {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.2s;
-}
-
-.botao_volto {
-    background-color: #33404D;
     color: #fff;
+    background-color: #33404D;
 }
 
 .botao_volto:hover {
     color: #FFFFFF;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-}
-
-.botao_salvo{
-    background-color: #33404D;
-    color: #fff;
 }
 
 .botao_salvo:hover {

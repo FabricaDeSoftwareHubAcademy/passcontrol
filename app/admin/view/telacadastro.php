@@ -44,7 +44,7 @@
 <body class="control-body-navegacao">
     <?php
     include "./navegacao.php";
-    include "../../controller/usuario_cadastrar.php";
+    include "../../controller/listar_perfis_e_servicos.php";
     ?>
 
     <section class="Area-Util-Projeto">
