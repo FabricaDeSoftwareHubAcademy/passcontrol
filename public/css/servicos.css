@@ -140,6 +140,9 @@
   font-weight: bold;
   color: var(--cinza-control);
 }
+.resto-tabela-servicos{
+  background-color: #fff;
+}
 
 
 #icone-editar {
