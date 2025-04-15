@@ -142,12 +142,12 @@
                 <div class="inf-modal-ponto-atendimento">
                     <div class="container-ponto-atendimento">
                         <label class="label-ponto-atendimento"><b>Nome do Ponto de Atendimento</b></label>
-                        <input type="text" id="nome_guiche" name="nome_guiche" class="input-text-ponto-atendimento" placeholder="Ex: Guichê, Caixa, IPTU...">
+                        <input type="text" id="nome_guiche" name="nome_guiche_cadastrar" class="input-text-ponto-atendimento" placeholder="Ex: Guichê, Caixa, IPTU...">
                     </div>
                 </div>
                 <div class="servico-ponto-atendimento">
                     <label class="label-ponto-atendimento"><b>Número / Letra</b></label>
-                    <input type="text" id="num_guiche" name="num_guiche" class="input-text-ponto-atendimento" placeholder="Ex: 01, 02...">
+                    <input type="text" id="num_guiche" name="num_guiche_cadastrar" class="input-text-ponto-atendimento" placeholder="Ex: 01, 02...">
                 </div>
                 <div class="button-group-ponto-atendimento">
                     <button class="botao-modal-ponto-atendimento cancel_CadPontoAtend">Voltar</button>
@@ -167,7 +167,7 @@
             <hr class="modal-divider">
             <p class="modal-message"><b>Ponto de Atendimento cadastrado com sucesso!</b></p>
             <div class="button-group">
-                <button id="btnOk"class="botao-modal Okay">Ok</button>
+                <button id="btnOkCadastrar"class="botao-modal Okay">Ok</button>
             </div>
         </section>
     </div >
@@ -227,9 +227,13 @@
 
         
 
-        let btn_confirmar = document.getElementById("btnOk");
+        let btnOkCadastrar = document.getElementById("btnOkCadastrar");
 
-        btn_confirmar.addEventListener("click", async function () {
+        btnOkCadastrar.addEventListener("click", async function () {
+            const myform = document.getElementById("formulario");
+            const formData = new FormData(myform);
+
+
             let dados2_php = await fetch("../../CLASSE/cadastrar_guiche.php", {
                 method: 'POST',
                 body: formData

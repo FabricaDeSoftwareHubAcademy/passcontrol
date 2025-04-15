@@ -28,6 +28,7 @@ $guiches = $guiche->buscar();
     <link rel="stylesheet" href="../../../public/modais/Modal_Alterar_Dados_Pessoais/alterar_dados_pessoais.css">
     <link rel="stylesheet" href="../../../public/modais/Modal_Alterar_Senha/alterar_senha.css">
     <link rel="stylesheet" href="../../../public/modais/Modal_Cadastro_Ponto_Atendimento/cadastro_ponto_atendimento.css">
+    
 
 
     <link rel="shortcut icon" type="imagex/png" href="../../../public/img/Logo-Nota-Controlnt.ico">
@@ -95,7 +96,7 @@ $guiches = $guiche->buscar();
 </section>
 
 
-<!-- ModalGuiche Editar -->
+<!-- Modal Guiche Editar -->
 <div class="modal-container">
         <section class="modal">
             <img src="../../../public/img/img-modais/Logo Nota Controlnt.png" alt="Logo Nota Control" class="logo">
@@ -122,49 +123,21 @@ $guiches = $guiche->buscar();
         </section>
 </div>
 
-<!-- ModalGuiche Cadastrar -->
-<div class="fundo-container-cad-ponto-atendimento">
-        <section class="modal-ponto-atendimento">
-            <img src="../../../public/img/img-modais/Logo Nota Controlnt.png" alt="Logo Nota Control" class="logo-ponto-atendimento">
-            <h1 class="titulo-ponto-atendimento">Cadastrar Novo Ponto de Atendimento</h1>
 
-            <hr class="linha-horizontal-ponto-atendimento">
-
-            <form id="formulario_cadastrar" method="POST">
-            
-                <div class="inf-modal-ponto-atendimento">
-                    <div class="container-ponto-atendimento">
-                        <label class="label-ponto-atendimento"><b>Nome do Ponto de Atendimento</b></label>
-                        <input type="text" id="nome_guiche" name="nome_guiche" class="input-text-ponto-atendimento" placeholder="Ex: Guichê, Caixa, IPTU...">
-                    </div>
-                </div>
-                <div class="servico-ponto-atendimento">
-                    <label class="label-ponto-atendimento"><b>Número / Letra</b></label>
-                    <input type="text" id="num_guiche" name="num_guiche" class="input-text-ponto-atendimento" placeholder="Ex: 01, 02...">
-                </div>
-                <div class="button-group-ponto-atendimento">
-                    <button class="botao-modal-ponto-atendimento cancel_CadPontoAtend">Voltar</button>
-                    <button type="submit" class="botao-modal-ponto-atendimento save_CadPontoAtend">Salvar</button>
-                </div>
-
-            </form>
-        </section>
-    </div>
-
-
-    <!-- modal confirmacao -->
-    <div id="confirma"  class="modal-confirma-container">
+    <!-- modal confirmacao Editar -->
+    <div id="confirma_editar"  class="modal-confirma-container">
         <section class="modal">
             <img src="../../../public/img/img-modais/Logo Nota Controlnt.png" alt="Logo Nota Control" class="logo">
             <h1 class="modal-title">Confirmação</h1>
             <hr class="modal-divider">
-            <p class="modal-message"><b>Ponto de Atendimento cadastrado com sucesso!</b></p>
+            <p class="modal-message"><b>Ponto de Atendimento Atualizado com Sucesso!</b></p>
             <div class="button-group">
-                <button id="btnOk"class="botao-modal Okay">Ok</button>
+                <button id="btnOkEditar"class="botao-modal Okay">Ok</button>
             </div>
         </section>
     </div >
 
+<!-- JS Modal Editar -->
 <script>
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -173,18 +146,17 @@ document.addEventListener("DOMContentLoaded", function() {
         button.addEventListener("click", async function(event) {
             
             let id_value = button.getAttribute("id_value");
-            //console.log(id_value);
 
             const modalContainer = document.querySelector(".modal-container");
             const buttonFechar = document.querySelector(".close");
             const buttonCancelar = document.querySelector(".cancel");
             const buttonSalvar = document.querySelector(".save");
-            const apareceMod = document.getElementById("confirma");
+            const apareceMod = document.getElementById("confirma_editar");
 
             event.preventDefault(); // impede o recarregamento da pagina
 
 
-            // Fazer requisição AJAX para buscar os dados do usuário
+            // Fazer requisição para buscar os dados do guichê
             let dados_php = await fetch("../../classe/edit_guiche_modal.php?id_guiche="+id_value , {
                 method: 'GET'
             });
@@ -232,14 +204,138 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 
-    const buttonOk = document.querySelector(".Okay");
-    buttonOk.addEventListener("click", function() {
-        const apareceMod = document.getElementById("confirma");
+    const buttonOkEditar = document.querySelector(".Okay");
+    buttonOkEditar.addEventListener("click", function() {
+        const apareceMod = document.getElementById("confirma_editar");
         apareceMod.classList.remove("show");
         location.reload();
     });
 });
 </script>
+
+
+    <!-- MODAL DE CADASTRO DE PONTO DE ATENDIMENTO -->
+    <div class="fundo-container-cad-ponto-atendimento">
+        <section class="modal-ponto-atendimento">
+            <img src="../../../public/img/img-modais/Logo Nota Controlnt.png" alt="Logo Nota Control" class="logo-ponto-atendimento">
+            <h1 class="titulo-ponto-atendimento">Cadastrar Ponto de Atendimento</h1>
+
+            <hr class="linha-horizontal-ponto-atendimento">
+
+            <form id="formulario_cadastrar" method="POST">
+            
+                <div class="inf-modal-ponto-atendimento">
+                    <div class="container-ponto-atendimento">
+                        <label class="label-ponto-atendimento"><b>Nome do Ponto de Atendimento</b></label>
+                        <input type="text" id="nome_guiche_cadastrar" name="nome_guiche_cadastrar" class="input-text-ponto-atendimento" placeholder="Ex: Guichê, Caixa, IPTU...">
+                    </div>
+                </div>
+                <div class="servico-ponto-atendimento">
+                    <label class="label-ponto-atendimento"><b>Número / Letra</b></label>
+                    <input type="text" id="num_guiche_cadastrar" name="num_guiche_cadastrar" class="input-text-ponto-atendimento" placeholder="Ex: 01, 02...">
+                </div>
+                <div class="button-group-ponto-atendimento">
+                    <button class="botao-modal-ponto-atendimento cancel_CadPontoAtend">Voltar</button>
+                    <button type="submit" class="botao-modal-ponto-atendimento save_CadPontoAtend">Salvar</button>
+                </div>
+
+            </form>
+        </section>
+    </div>
+
+
+    <!-- Modal Confirma Cadastrar -->
+    <div id="confirma_cadastrar"  class="modal-confirma-container">
+        <section class="modal">
+            <img src="../../../public/img/img-modais/Logo Nota Controlnt.png" alt="Logo Nota Control" class="logo">
+            <h1 class="modal-title">Confirmação</h1>
+            <hr class="modal-divider">
+            <p class="modal-message"><b>Ponto de Atendimento Cadastrado com Sucesso!</b></p>
+            <div class="button-group">
+                <button id="btnOkCadastrar"class="botao-modal Okay">Ok</button>
+            </div>
+        </section>
+    </div >
+
+    <!-- JS MODAIS CADASTRAR GUICHE -->
+<script>
+
+let btn_cadastrar_guiche = document.getElementById("btn_cadastrar_adm");
+const apareceMod = document.getElementById("confirma_cadastrar");
+
+const modalContainer_CadPontoAtend = document.querySelector(".fundo-container-cad-ponto-atendimento");
+const buttonCancelar_CadPontoAtend = document.querySelector(".cancel_CadPontoAtend");
+const buttonSalvar_CadPontoAtend = document.querySelector(".save_CadPontoAtend");
+
+//Abrir Modal
+btn_cadastrar_guiche.addEventListener("click", () => {
+
+    modalContainer_CadPontoAtend.classList.add("show");
+});
+
+
+//Fechar Modal
+buttonCancelar_CadPontoAtend.addEventListener("click", (event) => {
+    event.preventDefault();
+    modalContainer_CadPontoAtend.classList.remove("show");
+});
+
+
+//Salvar Formulário
+buttonSalvar_CadPontoAtend.addEventListener("click", function (event) {
+event.preventDefault();
+
+const myform = document.getElementById("formulario_cadastrar");
+const inputs = myform.querySelectorAll("input");
+let formularioValido = true;
+
+// Verifica se todos os campos estão preenchidos
+inputs.forEach(inputAtual => {
+
+    if (inputAtual.value.trim() === "") { //trim para não aceitar espaço
+        formularioValido = false;
+    }
+});
+
+if (!formularioValido) {
+    alert("Preencha todos os campos para continuar!");
+    return;
+}
+
+modalContainer_CadPontoAtend.classList.remove("show");
+apareceMod.classList.add("show");
+
+//Envia para o PHP
+const formData = new FormData(myform);
+
+
+
+let btnOkCadastrar = document.getElementById("btnOkCadastrar");
+
+btnOkCadastrar.addEventListener("click", async function () {
+    let dados2_php = await fetch("../../CLASSE/cadastrar_guiche.php", {
+        method: 'POST',
+        body: formData
+    });
+
+    let response = await dados2_php.json();
+
+    if (response.status == 'ok') {
+        window.location.href = "./PontoAtendimentoCad.php";
+    }
+});
+});
+
+
+function toggleMenu() {
+    document.getElementById("mobileMenu").classList.toggle("active");
+}
+</script>
+
+
+
+
+
 
 <!-- ModalGuicheInativar -->
 <div class="modal-inativar-container">
@@ -247,21 +343,37 @@ document.addEventListener("DOMContentLoaded", function() {
         <img src="../../../public/img/img-modais/Logo Nota Controlnt.png" alt="Logo Nota Control" class="logo">
         <h1 class="titulo">Confirmação</h1>
         <hr class="linha">
-        <p class="texto"><b>Deseja Alterar Esse Guichê?</b></p>
+        <p class="texto"><b>Deseja Alterar o Status do Guichê?</b></p>
         <div class="button-group">
-            <button class="botao-modal cancel">Não</button>
+            <button id="btn-cancelar" class="botao-modal cancel">Não</button>
             <button id="salvar" class="botao-modal save">Sim</button>
         </div>
     </section>
 </div>
 
+<!-- confirmacao -->
+<div id="confirma"  class="modal-confirma-container">
+        <section class="modal">
+            <img src="../../../public/img/img-modais/Logo Nota Controlnt.png" alt="Logo Nota Control" class="logo">
+            <h1 class="modal-title">Confirmação</h1>
+            <hr class="modal-divider">
+            <p class="modal-message"><b>Salvo com sucesso!</b></p>
+            <div class="button-group">
+                <button id="btnOkStatus"class="botao-modal Okay">Ok</button>
+            </div>
+        </section>
+    </div >
+</html>
+
+<!-- JS Modal de Inativação / Ativação do Guichê -->
 <script>
 document.addEventListener("DOMContentLoaded", function() {
     document.querySelectorAll("#switch_status").forEach(button => {
         button.addEventListener("click", function(event) {
             let id_value_switch = button.getAttribute("id_value_switch");
             const modalContainer = document.querySelector(".modal-inativar-container");
-            const buttonCancelar = document.querySelector(".cancel");
+            // const buttonCancelar = document.querySelector(".cancel");
+            const buttonCancelar = document.querySelector("#btn-cancelar");
             const apareceMod = document.getElementById("confirma");
 
             modalContainer.classList.add("show");
@@ -279,17 +391,22 @@ document.addEventListener("DOMContentLoaded", function() {
                     modalContainer.classList.remove("show");
                 }
 
-                console.log(response);
             });
 
+            // buttonCancelar.addEventListener("click", function() {
+            //     console.log("Modal fechado");
+            //     modalContainer.classList.remove("show");
+            // });
+
             buttonCancelar.addEventListener("click", function() {
+                console.log("Modal fechado");
                 modalContainer.classList.remove("show");
             });
         });
     });
 
-    const buttonOk = document.querySelector(".Okay");
-    buttonOk.addEventListener("click", function() {
+    const buttonOkStatus = document.getElementById("btnOkStatus");
+    buttonOkStatus.addEventListener("click", function() {
         const apareceMod = document.getElementById("confirma");
         apareceMod.classList.remove("show");
         location.reload();
@@ -297,94 +414,4 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 </script>
 
-<!-- confirmacao -->
-<div id="confirma"  class="modal-confirma-container">
-        <section class="modal">
-            <img src="../../../public/img/img-modais/Logo Nota Controlnt.png" alt="Logo Nota Control" class="logo">
-            <h1 class="modal-title">Confirmação</h1>
-            <hr class="modal-divider">
-            <p class="modal-message"><b>Salvo com sucesso!</b></p>
-            <div class="button-group">
-                <button id="btnOk"class="botao-modal Okay">Ok</button>
-            </div>
-        </section>
-    </div >
-</html>
-
-<!-- js cadastrar guiche -->
-<script>
-
-        let btn_cadastrar_guiche = document.getElementById("btn_cadastrar_adm");
-        const apareceMod = document.getElementById("confirma");
-
-        const modalContainer_CadPontoAtend = document.querySelector(".fundo-container-cad-ponto-atendimento");
-        // const buttonFechar_CadPontoAtend = document.querySelector(".close_CadPontoAtend");
-        const buttonCancelar_CadPontoAtend = document.querySelector(".cancel_CadPontoAtend");
-        const buttonSalvar_CadPontoAtend = document.querySelector(".save_CadPontoAtend");
-
-        //Abrir Modal
-        btn_cadastrar_guiche.addEventListener("click", () => {
-    
-            modalContainer_CadPontoAtend.classList.add("show");
-        });
-
-
-        //Fechar Modal
-        buttonCancelar_CadPontoAtend.addEventListener("click", (event) => {
-            event.preventDefault();
-            modalContainer_CadPontoAtend.classList.remove("show");
-        });
-
-    
-        //Salvar Formulário
-        buttonSalvar_CadPontoAtend.addEventListener("click", function (event) {
-        event.preventDefault();
-
-        const myform = document.getElementById("formulario_cadastrar");
-        const inputs = myform.querySelectorAll("input");
-        let formularioValido = true;
-
-        // Verifica se todos os campos estão preenchidos
-        inputs.forEach(inputAtual => {
-        
-            if (inputAtual.value.trim() === "") { //trim para não aceitar espaço
-                formularioValido = false;
-            }
-        });
-
-        if (!formularioValido) {
-            alert("Preencha todos os campos para continuar!");
-            return;
-        }
-
-        modalContainer_CadPontoAtend.classList.remove("show");
-        apareceMod.classList.add("show");
-
-        //Envia para o PHP
-        const formData = new FormData(myform);
-
-        
-
-        let btn_confirmar = document.getElementById("btnOk");
-
-        btn_confirmar.addEventListener("click", async function () {
-            let dados2_php = await fetch("../../CLASSE/cadastrar_guiche.php", {
-                method: 'POST',
-                body: formData
-            });
-
-            let response = await dados2_php.json();
-
-            if (response.status == 'ok') {
-                window.location.href = "./PontoAtendimentoCad.php";
-            }
-        });
-    });
-
- 
-        function toggleMenu() {
-            document.getElementById("mobileMenu").classList.toggle("active");
-        }
-    </script>
-
-    </body>
+</body>
