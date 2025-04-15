@@ -144,7 +144,7 @@ input:focus + .slider {
   width: 70px;
 }
 .area-tabela{ 
-  width: 96%; 
+  width: 90%; 
   font-weight: 600; 
   border-radius: 5px; 
   background-color: rgb(255, 255, 255,0.5); 
@@ -249,7 +249,38 @@ thead, tbody tr {
   table-layout: fixed; 
 }
 
-
+.botao-voltar, .botao-cadastro {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  width: 7rem;
+  margin-top: 15px;
+}
+.botoesVoltar-Cadastrar{
+  width: 90%;
+  height: 8%;
+  display: flex;
+  flex-direction: row-reverse;
+  position: relative;
+  bottom: -0.625;
+  gap: 1rem;
+}
+.botao-voltar {
+  background-color: var(--cinza-control);
+  color: #fff;
+}
+.botao-cadastro {
+  background-color: var(--cinza-control);
+  color: #fff;
+}
+.botao-cadastro:hover {
+  color: #3AA867;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
 
 
 

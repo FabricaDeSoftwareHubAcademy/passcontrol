@@ -11,9 +11,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     
     <!-- CSS -->
+    <link rel="stylesheet" href="../../../public/css/AtendentesCadastrados.css">
     <link rel="stylesheet" href="../../../public/css/navegacao.css">
     <link rel="stylesheet" href="../../../public/css/monitor-modal.css">
-    <link rel="stylesheet" href="../../../public/css/servicos.css">
+    <!-- <link rel="stylesheet" href="../../../public/css/servicos.css"> -->
+    <link rel="stylesheet" href="../../../public/css/conteudo.css">
     <link rel="stylesheet" href="../../../public/modais/ModalCadastrodosServicos/cadastro_servicos_final.css">
     <link rel="stylesheet" href="../../../public/modais/ModalInativacaoServico/inativacao_servico.css">
     <link rel="stylesheet" href="../../../public/modais/Modal_Alterar_Dados_Pessoais/alterar_dados_pessoais.css">
@@ -46,16 +48,18 @@
     
     ?>
     <section class="Area-Util-Projeto">
-        <div id="servico">
-            <div class="topo-tela-servico">
-                <div class="campo-busca">
-                    <input id="buscar-servico" type="text" placeholder="Buscar Registro">
+        <div class="area-info">
+            <div class="header-area">
+                <div class="titulo-area">
+                    <span>Serviços Cadastrados</span>
                 </div>
-                <div class="sev"><p id="servicos-cadastrados">Serviços Cadastrados</p></div>
-                <div class="linha-divisoria-servico"></div>
+                <div class="input-search">
+                    <input type="search" name="Buscar Atendente" placeholder="Buscar Atendente">
+                </div>
             </div>
-            
-
+            <div class="linha-in">
+                <span></span>
+            </div>
             <div class="area-tabela">
                 <div class="sub-area-tabela">
                 <?php
@@ -77,17 +81,22 @@
                         </thead>
                         <tbody>
                         <?php foreach ($servicos as $serv) :?>
-                        <?php $estadoAtivo = ($serv->ativo == 'ATIVO') ? 'active' : ''; ?>
+                        <?php
+                        $ativo = strtoupper(trim($serv->ativo)); 
+                        $estadoAtivo = ($serv->ativo == 'ATIVO') ? '' : 'active';
+                        ?>
+
                             <tr>
                                 <td><?= $serv->codigo_servico ?></td>
                                 <td><?= $serv->nome_servico ?></td>
                                 <td class="editar-inativar-menor" scope="col">
                                     <div class="editar">
-                                            <img src="../../../public/img/icons/Group 2924.png" alt="" 
-                                            data-id="<?= $serv->id_servico ?>"
-                                            data-codigo="<?= $serv->codigo_servico ?>"
-                                            data-nome="<?= $serv->nome_servico ?>"
-                                            onclick="abrirModalEdicao(this)">
+                                        <button class="openEditar" 
+                                            data-id="<?= $serv->id_servico ?>" 
+                                            data-codigo="<?= $serv->codigo_servico ?>" 
+                                            data-nome="<?= $serv->nome_servico ?>">
+                                            <img src="../../../public/img/icons/Group 2924.png" alt="">
+                                        </button>
                                     </div>
                                 </td>
                                 <td class="editar-inativar-menor" scope="col">

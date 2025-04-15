@@ -14,4 +14,3 @@
 </div>
 
 
-<script src="../js/TesteInativar.js"></script>

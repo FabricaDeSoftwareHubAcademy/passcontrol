@@ -11,6 +11,13 @@ class Database {
     private string $password = 'fabrica2025';
     private $table;
 
+    // private $conn;
+    // private string $local = 'localhost';
+    // private string $db = 'passcontrol';
+    // private string $user = 'root';
+    // private string $password = '';
+    // private $table;
+
     // O construtor garante que a conexão seja realizada assim que o objeto Database for instanciado
     public function __construct($table = null) {
         $this->table = $table;
