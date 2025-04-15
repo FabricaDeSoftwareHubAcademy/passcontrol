@@ -5,20 +5,20 @@
                 <h1>Últimas Chamadas</h1>
                 <div class="area-das-senhas">
                     <div class="caixa-das-senhas">
-                        <h2>NOME DA PESSOA</h2>
+                        <h2>GUILHERME</h2>
                         <div class="conjunto-senhas">
                             <div class="senha">
                                 <h3>SENHA</h3>
-                                <h4>CM 001</h4>
+                                <h4>CM 002</h4>
                             </div>
                             <div class="guiche">
                                 <h5>GUICHÊ</h5>
-                                <h6>1</h6>
+                                <h6>2</h6>
                             </div>
                         </div>
                     </div>
                     <div class="caixa-das-senhas">
-                        <h2>NOME DA PESSOA</h2>
+                        <h2>JULIANA BARBOSA</h2>
                         <div class="conjunto-senhas">
                             <div class="senha">
                                 <h3>SENHA</h3>
@@ -26,33 +26,33 @@
                             </div>
                             <div class="guiche">
                                 <h5>GUICHÊ</h5>
-                                <h6>1</h6>
+                                <h6>3</h6>
                             </div>
                         </div>
                     </div>
                     <div class="caixa-das-senhas">
-                        <h2>NOME DA PESSOA</h2>
+                        <h2>GABRIEL ALVIN</h2>
                         <div class="conjunto-senhas">
                             <div class="senha">
                                 <h3>SENHA</h3>
-                                <h4>CM 001</h4>
+                                <h4>CM 008</h4>
                             </div>
                             <div class="guiche">
                                 <h5>GUICHÊ</h5>
-                                <h6>1</h6>
+                                <h6>4</h6>
                             </div>
                         </div>
                     </div>
                     <div class="caixa-das-senhas">
-                        <h2>NOME DA PESSOA</h2>
+                        <h2>SUELEN CABRAL</h2>
                         <div class="conjunto-senhas">
                             <div class="senha">
                                 <h3>SENHA</h3>
-                                <h4>CM 001</h4>
+                                <h4>CM 014</h4>
                             </div>
                             <div class="guiche">
                                 <h5>GUICHÊ</h5>
-                                <h6>1</h6>
+                                <h6>5</h6>
                             </div>
                         </div>
                     </div>
@@ -68,12 +68,19 @@
                     <div class="caixa-senha-principal">
                         <div class="conjunto-senha-principal">
                             <div class="nome-pessoa">
-                                <h1>NOME DA PESSOA</h1>
+                                <h1>LUCAS SESPER</h1>
                             </div>
                             <div class="infos-senha-principal">
-                                <h2>SERVIÇO:<span>IPTU</span></h2>
-                                <h2>SENHA:<span>CM 001</span></h2>
-                                <h2>GUICHÊ:<span>1</span></h2>
+                                <div class="infos-detalhes-esquerda">
+                                    <h2>SERVIÇO:</h2>
+                                    <h2>SENHA:</h2>
+                                    <h2>GUICHÊ:</h2>
+                                </div>
+                                <div class="infos-detalhes-direita">
+                                    <h2>IPTU</h2>
+                                    <h2>PR 001</h2>
+                                    <h2>10</h2>
+                                </div>
                             </div>
                         </div>
                     </div>
