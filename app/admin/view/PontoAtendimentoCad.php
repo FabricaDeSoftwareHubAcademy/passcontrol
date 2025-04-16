@@ -19,10 +19,8 @@ $guiches = $guiche->buscar();
 
     <!-- IMPORT DO CSS -->
     <link rel="stylesheet" href="../../../public/css/navegacao.css">
-    <!-- <link rel="stylesheet" href="../../../public/css/monitor-modal.css"> -->
     <link rel="stylesheet" href="../../../public/css/PontoAtendimentoCad.css">
     <link rel="stylesheet" href="../../../public/modais/ModalEdicaoPontoAtendimento/estilo.css">
-    <link rel="stylesheet" href="../../../public/modais/ModalInativacaoGuiche/estilo.css">
     <link rel="stylesheet" href="../../../public/modais/ModalInativacaoGuiche/cadastro.css">
     <link rel="stylesheet" href="../../../public/modais/ModalConfirmaDados/estilo.css">
     <link rel="stylesheet" href="../../../public/modais/Modal_Alterar_Dados_Pessoais/alterar_dados_pessoais.css">
@@ -336,19 +334,19 @@ function toggleMenu() {
 }
 </script>
 
-<!-- ************************************   ATIVAR/INATIVAR PONTO DE ATENDIMENTO   ************************************ -->
+<!-- ************************************   STATUS PONTO DE ATENDIMENTO   ************************************ -->
 
 
 
 
-<!-- Modal ATIVAR/INATIVAR Ponto de Atendimento -->
+<!-- Modal STATUS Ponto de Atendimento -->
 
 <div class="modal-inativar-container">
     <section class="modal">
         <img src="../../../public/img/img-modais/Logo Nota Controlnt.png" alt="Logo Nota Control" class="logo">
         <h1 class="titulo">Confirmação</h1>
         <hr class="linha">
-        <p class="texto"><b>Deseja Alterar o Status do Guichê?</b></p>
+        <p class="texto"><b>Deseja Alterar o Status do Ponto de Atendimento?</b></p>
         <div class="button-group">
             <button id="btn-cancelar" class="botao-modal cancel">Não</button>
             <button id="salvar" class="botao-modal save">Sim</button>
@@ -356,8 +354,8 @@ function toggleMenu() {
     </section>
 </div>
 
-<!-- Confirmar ATIVAR/INATIVAR Ponto de Atendimento -->
-<div id="confirma"  class="modal-confirma-container">
+<!-- Confirmar STATUS Ponto de Atendimento -->
+<div id="confirma_status"  class="modal-confirma-container">
         <section class="modal">
             <img src="../../../public/img/img-modais/Logo Nota Controlnt.png" alt="Logo Nota Control" class="logo">
             <h1 class="modal-title">Confirmação</h1>
@@ -371,7 +369,7 @@ function toggleMenu() {
 </html>
 
 
-<!-- JS Modal ATIVAR/INATIVAR e Confirma ATIVAR/INATIVAR Ponto de Atendimento -->
+<!-- JS Modal STATUS e Confirma STATUS Ponto de Atendimento -->
 
 <script>
 document.addEventListener("DOMContentLoaded", function() {
@@ -381,7 +379,7 @@ document.addEventListener("DOMContentLoaded", function() {
             const modalContainer = document.querySelector(".modal-inativar-container");
             // const buttonCancelar = document.querySelector(".cancel");
             const buttonCancelar = document.querySelector("#btn-cancelar");
-            const apareceMod = document.getElementById("confirma");
+            const apareceMod = document.getElementById("confirma_status");
 
             modalContainer.classList.add("show");
 
@@ -409,7 +407,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     const buttonOkStatus = document.getElementById("btnOkStatus");
     buttonOkStatus.addEventListener("click", function() {
-        const apareceMod = document.getElementById("confirma");
+        const apareceMod = document.getElementById("confirma_status");
         apareceMod.classList.remove("show");
         location.reload();
     });
