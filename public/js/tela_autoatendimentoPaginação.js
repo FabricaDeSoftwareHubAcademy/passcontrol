@@ -16,7 +16,7 @@ const servicos = [
 ];
 
 // Configuração da paginação
-const itensPorPagina = 8;
+const itensPorPagina = 10;
 let paginaAtual = 1;
 
 const boxContainer = document.getElementById("box-container");

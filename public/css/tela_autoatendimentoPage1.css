@@ -63,7 +63,7 @@
     background-color: var(--cinza-control);
     height: 30px;
     width: 100%;
-    margin: 10px 0;
+    margin: 0 10px 0 0;
 }
 
 .workspace {
@@ -77,6 +77,7 @@
     background-size: 400px;
     background-repeat: no-repeat;
     background-position: right bottom;
+    padding-top: 110px;
 }
 
 
@@ -128,8 +129,8 @@
     border-radius: 5px;
     /* width: calc(33.33% - 20px); */
     gap: 18px;
-    width: 250px;
-    height: 250px;
+    width: 200px;
+    height: 200px;
     padding: 20px;
     background-color: transparent;
     display: flex;
