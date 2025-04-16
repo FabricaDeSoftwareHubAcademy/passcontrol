@@ -41,8 +41,8 @@
 }
 .nome{
     position: relative;
-    top: 77px;
-    left: 15%;
+    top: 47px;
+    left: 7%;
     width: 30%;
     display: flex;
     flex-direction: column;
@@ -50,8 +50,8 @@
 }
 .email{
     position: relative;
-    top: -1px;
-    left: 51%;
+    top: -32px;
+    left: 50%;
     width: 30%;
     display: flex;
     flex-direction: column;
@@ -59,8 +59,8 @@
 }
 .cpf{
     position: relative;
-    top: 58px;
-    left: 15%;
+    top: 23px;
+    left: 7%;
     width: 30%;
     display: flex;
     flex-direction: column;
@@ -93,8 +93,8 @@ input:focus {
 
 .selecionar{
     position: relative;
-    top: 30px;
-    left: 15%;
+    top: -58px;
+    left: 50%;
     margin: 20px 0;
     /* padding: 10px; */
     /* border: 1px solid #ff0000; */
@@ -138,10 +138,10 @@ input:focus {
 .checkbox-container{ 
     display: flex;
     position: absolute;
-    left: 88%; 
+    left: 42%; 
     width: 50%;
     font-size: 120%;
-    top: 335px;
+    top: 412px;
     font-size: var(--font-main);
     font-weight: bold;
     display: flex;
@@ -149,8 +149,8 @@ input:focus {
 .servico{
     display: flex;
     position: absolute;
-    top: 200px;
-    left: 51%;
+    top: 275px;
+    left: 7%;
     font-size: var(--font-main);
     font-weight: bold;
 }
@@ -181,9 +181,10 @@ input:focus {
 .checkbox-container label{
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 2px;
     cursor: pointer;
-    margin-bottom: 15px;
+    margin-bottom: 56px;
+    margin-left: 16px;
 }
 .checkbox-container label span{
     width: 15px;
