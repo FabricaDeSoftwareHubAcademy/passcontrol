@@ -83,6 +83,9 @@
                 
             </div>
             <title class="servico">Seviços</title>
+            <button class="icone_add_servico" id="abrirModalCadastro">
+                <img src="../../../public/img/icons/add_icon.svg" alt="">
+            </button>
             <div class="checkbox-container">
                 <div class="column-1">
                     <?php
