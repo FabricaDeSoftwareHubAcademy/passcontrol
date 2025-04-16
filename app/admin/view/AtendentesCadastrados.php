@@ -71,10 +71,10 @@ $dados = $usuarios->buscar(null,' status_usuario ASC');
                     <table class="tabela">
                         <thead>
                             <tr>
-                                <th scope="col">Nome</th>
-                                <th scope="col">Matricula</th>
-                                <th scope="col">Perfil</th>
-                                <th>Serviços</th>
+                                <th class="matricula-ajuste" scope="col">Nome</th>
+                                <th class="matricula-ajuste" scope="col">Matricula</th>
+                                <th class="perfil-ajuste" scope="col">Perfil</th>
+                                <th class="perfil-ajuste" >Serviços</th>
                                 <th class="editar-inativar-menor" scope="col">Editar</th>
                                 <th class="editar-inativar-menor" scope="col">Status</th>
                             </tr>
@@ -86,10 +86,10 @@ $dados = $usuarios->buscar(null,' status_usuario ASC');
                                 $id_perfil = $usuarios->listar_nome_perfil($usuario->id_perfil);
                             ?>
                             <tr>
-                                <td scope="col"> <?= $usuario->nome ?> </td>
-                                <td scope="col"> <?= $usuario->email ?> </td>
-                                <td scope="col"> <?= $id_perfil['nome'] ?> </td>
-                                <td>SERVIÇO</td>
+                                <td class="matricula-ajuste" scope="col"> <?= $usuario->nome ?> </td>
+                                <td class="matricula-ajuste" scope="col"> <?= $usuario->email ?> </td>
+                                <td class="perfil-ajuste" scope="col"> <?= $id_perfil['nome'] ?> </td>
+                                <td class="perfil-ajuste">SERVIÇO</td>
                                 <td class="editar-inativar-menor" scope="col">
                                     <div class="editar">
                                         <button class="openEditar" data-id="<?= $usuario->id_usuario ?>">
