@@ -77,9 +77,10 @@
 
 /* Tipografia */
 .modal-title {
+    text-align: center;
     font-size: 24px;
     font-weight: bold;
-    text-align: left;
+    /* text-align: left; */
     margin-bottom: 30px;
 }
 

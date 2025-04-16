@@ -145,12 +145,12 @@
                 <div class="inf-modal-ponto-atendimento">
                     <div class="container-ponto-atendimento">
                         <label class="label-ponto-atendimento"><b>Nome do Ponto de Atendimento</b></label>
-                        <input type="text" id="nome_guiche" name="nome_guiche" class="input-text-ponto-atendimento" placeholder="Ex: Guichê, Baia, IPTU...">
+                        <input type="text" id="nome_guiche" name="nome_guiche_cadastrar" class="input-text-ponto-atendimento" placeholder="Ex: Guichê, Caixa, IPTU...">
                     </div>
                 </div>
                 <div class="servico-ponto-atendimento">
                     <label class="label-ponto-atendimento"><b>Número / Letra</b></label>
-                    <input type="text" id="num_guiche" name="num_guiche" class="input-text-ponto-atendimento" placeholder="Ex: 01, 02...">
+                    <input type="text" id="num_guiche" name="num_guiche_cadastrar" class="input-text-ponto-atendimento" placeholder="Ex: 01, 02...">
                 </div>
                 <div class="button-group-ponto-atendimento">
                     <button class="botao-modal-ponto-atendimento cancel_CadPontoAtend">Voltar</button>
@@ -168,9 +168,9 @@
             <img src="../../../public/img/img-modais/Logo Nota Controlnt.png" alt="Logo Nota Control" class="logo">
             <h1 class="modal-title">Confirmação</h1>
             <hr class="modal-divider">
-            <p class="modal-message"><b>Deseja confirmar o cadastro?</b></p>
+            <p class="modal-message"><b>Ponto de Atendimento cadastrado com sucesso!</b></p>
             <div class="button-group">
-                <button id="btnOk"class="botao-modal Okay">Ok</button>
+                <button id="btnOkCadastrar"class="botao-modal Okay">Ok</button>
             </div>
         </section>
     </div >
@@ -183,48 +183,72 @@
         const apareceMod = document.getElementById("confirma");
 
         const modalContainer_CadPontoAtend = document.querySelector(".fundo-container-cad-ponto-atendimento");
-        const buttonFechar_CadPontoAtend = document.querySelector(".close_CadPontoAtend");
+        // const buttonFechar_CadPontoAtend = document.querySelector(".close_CadPontoAtend");
         const buttonCancelar_CadPontoAtend = document.querySelector(".cancel_CadPontoAtend");
         const buttonSalvar_CadPontoAtend = document.querySelector(".save_CadPontoAtend");
 
-
+        //Abrir Modal
         btn_cadastrar_guiche.addEventListener("click", () => {
     
             modalContainer_CadPontoAtend.classList.add("show");
         });
 
-        buttonCancelar_CadPontoAtend.addEventListener("click", () => {
+
+        //Fechar Modal
+        buttonCancelar_CadPontoAtend.addEventListener("click", (event) => {
+            event.preventDefault();
             modalContainer_CadPontoAtend.classList.remove("show");
         });
 
-        buttonSalvar_CadPontoAtend.addEventListener("click", function () {
-            event.preventDefault()
-            myform = document.getElementById("formulario");
-            const formData = new FormData(myform);
-                   
-            modalContainer_CadPontoAtend.classList.remove("show");
-            apareceMod.classList.add("show");
+    
+        //Salvar Formulário
+        buttonSalvar_CadPontoAtend.addEventListener("click", function (event) {
+        event.preventDefault();
 
-            btn_confirmar = document.getElementById("btnOk");
+        const myform = document.getElementById("formulario");
+        const inputs = myform.querySelectorAll("input");
+        let formularioValido = true;
 
-            btn_confirmar.addEventListener("click", async function () {
-              
-                let dados2_php = await fetch("../../CLASSE/cadastrar_guiche.php",{
-                method:'POST',
-                body:formData
-                 })
-
-                let response = await dados2_php.json();
-
-            //console.log(response);
-            if(response.status == 'ok'){
-                window.location.href = "./PontoAtendimentoCad.php";
+        // Verifica se todos os campos estão preenchidos
+        inputs.forEach(inputAtual => {
+        
+            if (inputAtual.value.trim() === "") { //trim para não aceitar espaço
+                formularioValido = false;
             }
-            });
+        });
 
+        if (!formularioValido) {
+            alert("Preencha todos os campos para continuar!");
+            return;
+        }
+
+        modalContainer_CadPontoAtend.classList.remove("show");
+        apareceMod.classList.add("show");
+
+        //Envia para o PHP
+        const formData = new FormData(myform);
 
         
+
+        let btnOkCadastrar = document.getElementById("btnOkCadastrar");
+
+        btnOkCadastrar.addEventListener("click", async function () {
+            const myform = document.getElementById("formulario");
+            const formData = new FormData(myform);
+
+
+            let dados2_php = await fetch("../../CLASSE/cadastrar_guiche.php", {
+                method: 'POST',
+                body: formData
+            });
+
+            let response = await dados2_php.json();
+
+            if (response.status == 'ok') {
+                window.location.href = "./PontoAtendimentoCad.php";
+            }
         });
+    });
 
  
         function toggleMenu() {

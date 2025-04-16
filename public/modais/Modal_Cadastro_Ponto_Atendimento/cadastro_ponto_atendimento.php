@@ -8,7 +8,7 @@
         <div class="inf-modal-ponto-atendimento">
             <div class="container-ponto-atendimento">
                 <label class="label-ponto-atendimento"><b>Nome do Ponto de Atendimento</b></label>
-                <input type="text" class="input-text-ponto-atendimento" placeholder="Ex: Guichê, Baia, IPTU...">
+                <input type="text" class="input-text-ponto-atendimento" placeholder="Ex: Guichê, Caixa, IPTU...">
             </div>
         </div>
         <div class="servico-ponto-atendimento">
