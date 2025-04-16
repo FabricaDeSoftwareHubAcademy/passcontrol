@@ -34,7 +34,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     opacity: 0;
@@ -46,6 +46,7 @@
 .modal-confirma-container.show {
     opacity: 1;
     pointer-events: auto;
+    display: flex;
 }
 
 /* Estilo do modal */
@@ -57,6 +58,7 @@
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     position: relative;
     text-align: center;
+    border-radius: 5px;
 }
 
 .modal-divider {

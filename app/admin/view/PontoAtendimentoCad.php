@@ -19,12 +19,10 @@ $guiches = $guiche->buscar();
 
     <!-- IMPORT DO CSS -->
     <link rel="stylesheet" href="../../../public/css/navegacao.css">
-    <link rel="stylesheet" href="../../../public/css/monitor-modal.css">
     <link rel="stylesheet" href="../../../public/css/PontoAtendimentoCad.css">
     <link rel="stylesheet" href="../../../public/modais/ModalEdicaoPontoAtendimento/estilo.css">
-    <link rel="stylesheet" href="../../../public/modais/ModalInativacaoGuiche/estilo.css">
     <link rel="stylesheet" href="../../../public/modais/ModalInativacaoGuiche/cadastro.css">
-    <link rel="stylesheet" href="../../../public/modais/ModalConfirmaDados/ok.css">
+    <link rel="stylesheet" href="../../../public/modais/ModalConfirmaDados/estilo.css">
     <link rel="stylesheet" href="../../../public/modais/Modal_Alterar_Dados_Pessoais/alterar_dados_pessoais.css">
     <link rel="stylesheet" href="../../../public/modais/Modal_Alterar_Senha/alterar_senha.css">
     <link rel="stylesheet" href="../../../public/modais/Modal_Cadastro_Ponto_Atendimento/cadastro_ponto_atendimento.css">
@@ -56,7 +54,7 @@ $guiches = $guiche->buscar();
                             <th  class="cabecalho-tabela1">Tipo</th>
                             <th class="indentificador-menor"  class="cabecalho-tabela2">Identificador</th>
                             <th class="editar-menor"  class="cabecalho-tabela3">Editar</th>
-                            <th class="inativar-menor"  class="cabecalho-tabela1">Desativar/Ativar</th>
+                            <th class="inativar-menor"  class="cabecalho-tabela1">Status</th>
                         </tr>
                     </thead>
                     <tbody class="resto-tabela-Ponto-atendimento">
@@ -97,8 +95,9 @@ $guiches = $guiche->buscar();
     </div>
 </section>
 
+<!-- ************************************   EDITAR PONTO DE ATENDIMENTO  ************************************ -->
 
-<!-- Modal Guiche Editar -->
+<!-- Modal  EDITAR Ponto de Atendimento-->
 <div class="modal-container">
         <section class="modal">
             <img src="../../../public/img/img-modais/Logo Nota Controlnt.png" alt="Logo Nota Control" class="logo">
@@ -126,7 +125,7 @@ $guiches = $guiche->buscar();
 </div>
 
 
-    <!-- modal confirmacao Editar -->
+<!-- Modal Confirma EDITAR -->
     <div id="confirma_editar"  class="modal-confirma-container">
         <section class="modal">
             <img src="../../../public/img/img-modais/Logo Nota Controlnt.png" alt="Logo Nota Control" class="logo">
@@ -139,7 +138,7 @@ $guiches = $guiche->buscar();
         </section>
     </div >
 
-<!-- JS Modal Editar -->
+<!-- JS Modal Editar e Confirma EDITAR-->
 <script>
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -158,7 +157,7 @@ document.addEventListener("DOMContentLoaded", function() {
             event.preventDefault(); // impede o recarregamento da pagina
 
 
-            // Fazer requisição para buscar os dados do guichê
+            // Fazer requisição para buscar os dados do ponto de atendimento
             let dados_php = await fetch("../../classe/edit_guiche_modal.php?id_guiche="+id_value , {
                 method: 'GET'
             });
@@ -215,6 +214,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 </script>
 
+<!-- ************************************   CADASTRAR PONTO DE ATENDIMENTO   ************************************ -->
 
     <!-- MODAL DE CADASTRO DE PONTO DE ATENDIMENTO -->
     <div class="fundo-container-cad-ponto-atendimento">
@@ -246,7 +246,7 @@ document.addEventListener("DOMContentLoaded", function() {
     </div>
 
 
-    <!-- Modal Confirma Cadastrar -->
+    <!-- Modal Confirma CADASTRAR -->
     <div id="confirma_cadastrar"  class="modal-confirma-container">
         <section class="modal">
             <img src="../../../public/img/img-modais/Logo Nota Controlnt.png" alt="Logo Nota Control" class="logo">
@@ -259,7 +259,7 @@ document.addEventListener("DOMContentLoaded", function() {
         </section>
     </div >
 
-    <!-- JS MODAIS CADASTRAR GUICHE -->
+<!-- JS Modal CADASTRAR e Confirma CADASTRAR-->
 <script>
 
 let btn_cadastrar_guiche = document.getElementById("btn_cadastrar_adm");
@@ -334,18 +334,19 @@ function toggleMenu() {
 }
 </script>
 
+<!-- ************************************   STATUS PONTO DE ATENDIMENTO   ************************************ -->
 
 
 
 
+<!-- Modal STATUS Ponto de Atendimento -->
 
-<!-- ModalGuicheInativar -->
 <div class="modal-inativar-container">
     <section class="modal">
         <img src="../../../public/img/img-modais/Logo Nota Controlnt.png" alt="Logo Nota Control" class="logo">
         <h1 class="titulo">Confirmação</h1>
         <hr class="linha">
-        <p class="texto"><b>Deseja Alterar o Status do Guichê?</b></p>
+        <p class="texto"><b>Deseja Alterar o Status do Ponto de Atendimento?</b></p>
         <div class="button-group">
             <button id="btn-cancelar" class="botao-modal cancel">Não</button>
             <button id="salvar" class="botao-modal save">Sim</button>
@@ -353,8 +354,8 @@ function toggleMenu() {
     </section>
 </div>
 
-<!-- confirmacao -->
-<div id="confirma"  class="modal-confirma-container">
+<!-- Confirmar STATUS Ponto de Atendimento -->
+<div id="confirma_status"  class="modal-confirma-container">
         <section class="modal">
             <img src="../../../public/img/img-modais/Logo Nota Controlnt.png" alt="Logo Nota Control" class="logo">
             <h1 class="modal-title">Confirmação</h1>
@@ -367,7 +368,9 @@ function toggleMenu() {
     </div >
 </html>
 
-<!-- JS Modal de Inativação / Ativação do Guichê -->
+
+<!-- JS Modal STATUS e Confirma STATUS Ponto de Atendimento -->
+
 <script>
 document.addEventListener("DOMContentLoaded", function() {
     document.querySelectorAll("#switch_status").forEach(button => {
@@ -376,7 +379,7 @@ document.addEventListener("DOMContentLoaded", function() {
             const modalContainer = document.querySelector(".modal-inativar-container");
             // const buttonCancelar = document.querySelector(".cancel");
             const buttonCancelar = document.querySelector("#btn-cancelar");
-            const apareceMod = document.getElementById("confirma");
+            const apareceMod = document.getElementById("confirma_status");
 
             modalContainer.classList.add("show");
 
@@ -395,11 +398,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
             });
 
-            // buttonCancelar.addEventListener("click", function() {
-            //     console.log("Modal fechado");
-            //     modalContainer.classList.remove("show");
-            // });
-
             buttonCancelar.addEventListener("click", function() {
                 console.log("Modal fechado");
                 modalContainer.classList.remove("show");
@@ -409,7 +407,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     const buttonOkStatus = document.getElementById("btnOkStatus");
     buttonOkStatus.addEventListener("click", function() {
-        const apareceMod = document.getElementById("confirma");
+        const apareceMod = document.getElementById("confirma_status");
         apareceMod.classList.remove("show");
         location.reload();
     });

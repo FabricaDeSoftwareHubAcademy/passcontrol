@@ -13,6 +13,12 @@
     --color-em-atendimento: #0080C8;
 }
 
+@media (min-width: 665px) and (max-width: 1253px) {
+    tbody{
+        max-height: 43vh;
+    }
+}
+
 @media (max-width: 1200px) {
     tbody{
         max-height: 50vh;
