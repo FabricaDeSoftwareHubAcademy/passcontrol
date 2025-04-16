@@ -56,7 +56,7 @@ $guiches = $guiche->buscar();
                             <th  class="cabecalho-tabela1">Tipo</th>
                             <th class="indentificador-menor"  class="cabecalho-tabela2">Identificador</th>
                             <th class="editar-menor"  class="cabecalho-tabela3">Editar</th>
-                            <th class="inativar-menor"  class="cabecalho-tabela1">Desativar/Ativar</th>
+                            <th class="inativar-menor"  class="cabecalho-tabela1">Status</th>
                         </tr>
                     </thead>
                     <tbody class="resto-tabela-Ponto-atendimento">

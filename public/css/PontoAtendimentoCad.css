@@ -197,7 +197,7 @@
 .editar-menor{
   display: flex;
   flex-direction: column;
-  width: 120px;
+  min-width: 120px;
   color: #ffffff;
   align-items: center;
 }
