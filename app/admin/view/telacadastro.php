@@ -53,61 +53,73 @@
             <h1>Cadastrar Usuário<br></h1>
             <hr>
         </div>
+        <div class="quadrado">
+            <div class="containerform">
+                <form class="forme" method="POST" id="dados_cad">
+                    <div class="nome">
+                        <label class="labeledit" for="nome">Nome*</label>
+                        <input class="borda" type="text" name="nome" id="nome" placeholder="Digite aqui o nome do usuário" required>
+                    </div>
+                    <div class="email">
+                        <label class="labeledit" for="email">Email*</label>
+                        <input class="borda" type="text" name="email" id="email" placeholder="Digite aqui o Email do usuário" required>
+                    </div>
+                    <!-- <div class="cpf">
+                        <label class="labeledit" for="cpf">CPF*</label>
+                        <input class="borda" type="text" name="cpf" id="cpf" max="11" placeholder="Digite aqui o CPF do usuário" required>
+                    </div> -->
+                    <div class="selecionar">
+                        <div class="perfild">
+                            <label class="labeledit" for="perfil">Perfil De Acesso
+                            <button class="icone_add_servico" id="abrirModalCadastro">
+                                <img src="../../../public/img/icons/add_icon.svg" alt="">
+                            </button>
+                            </label>
+                            <select class="selecao" name="id_perfil" required>
+                                <option class="pi" value="" disabled selected>Selecione</option>
+                                <?php
+                                    // // LISTAR PERFIS DE USUARIO
+                                    foreach ($perfis as $perfil){
+                                    ?> <option class="pi" value="<?=$perfil["id_perfil"]?>"><?=$perfil["nome"]?></option> <?php
+                                    };
+                                ?>
+                            </select>
+                        </div>
+                        
+                    </div>
+                    <div class="servicos">
+                        <div class="checkbox-container">
+                            <title class="servico">Seviços</title>
+                                <div class="column-1">
+                                <?php
+                                    foreach($servicos as $servico){
+                                        ?> 
+                                        <label class="customizado">
+                                            <input type="checkbox" class="item" id="checkbox1" value="<?=$servico["id_servico"]?>">
+                                            <span class="teste"></span><?=$servico['nome_servico']?>
+                                        </label>
+                                        <?php
+                                    }
+                                ?>
+                        </div>
+                <label class="customizado">
+                    <input type="checkbox" id="select-all">
+                    <span class="teste"></span>Selecionar Todos
+                </label>
+            </div>
 
-        <form class="quadrado" method="POST" id="dados_cad">
-            <div class="nome">
-                <label class="labeledit" for="nome">Nome*</label>
-                <input class="borda" type="text" name="nome" id="nome" placeholder="Digite aqui o nome do usuário" required>
-            </div>
-            <div class="email">
-                <label class="labeledit" for="email">Email*</label>
-                <input class="borda" type="text" name="email" id="email" placeholder="Digite aqui o Email do usuário" required>
-            </div>
-            <div class="selecionar">
-                <div class="perfild">
-                    <label class="labeledit" for="perfil">Perfil De Acesso
-                    <button class="icone_add_servico" id="abrirModalCadastro">
-                        <img src="../../../public/img/icons/add_icon.svg" alt="">
-                    </button>
-                    </label>
-                    <select class="selecao" name="id_perfil" required>
-                        <option class="pi" value="" disabled selected>Selecione</option>
-                        <?php
-                            // // LISTAR PERFIS DE USUARIO
-                            foreach ($perfis as $perfil){
-                            ?> <option class="pi" value="<?=$perfil["id_perfil"]?>"><?=$perfil["nome"]?></option> <?php
-                            };
-                        ?>
-                    </select>
-                </div>
-                
-            </div>
-            <title class="servico">Seviços</title>
 
-            <div class="checkbox-container">
-                <div class="column-1">
-                    <?php
-                    foreach($servicos as $servico){
-                        ?> 
-                        <label class="customizado">
-                            <input type="checkbox" class="item" id="checkbox1" value="<?=$servico["id_servico"]?>">
-                            <span class="teste"></span><?=$servico['nome_servico']?>
-                        </label>
-                        <?php
-                    }
-                    ?>
-                    <label class="customizado">
-                        <input type="checkbox" id="select-all">
-                        <span class="teste"></span>Selecionar Todos
-                    </label>
-                </div>
+                </form>
+               
             </div>
-        </form>
+          
+        </div>
         <div class="form-actions2"> 
-            <button class="botao_volto" form="dados_cad" type="reset" onclick="window.location.href='./menuadm_usuario.php';">Voltar</button>
-            <button class="botao_salvo cadastrar_usuario" name="cadastrar" id="save_sucess">Salvar</button>
+                <button class="botao_volto" form="dados_cad" type="reset" onclick="window.location.href='./menuadm_usuario.php';">Voltar</button>
+                <button class="botao_salvo cadastrar_usuario" name="cadastrar" id="save_sucess">Salvar</button>
         </div>
     </section>
+
 
     <?php
     include "./monitor-modal.php";

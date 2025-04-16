@@ -5,11 +5,27 @@
     padding: 0;
     box-sizing: border-box;
 }
+.containerform{
+    width: 100%;
+    height: auto;
+    flex-wrap: wrap;
+    display:flex;
+    background-color: red;
+
+}
 .forme{
     width: 100%;
     height: auto;
     flex-wrap: wrap;
     flex-direction: column;
+    background-color: green;
+}
+.servicos{
+    width: 100%;
+    height: auto;
+    flex-wrap: wrap;
+    flex-direction: column;
+    background-color: yellow;
 }
 .quadrado{
     width: 90%;
@@ -142,22 +158,23 @@ input:focus {
 .checkbox-container{ 
     display: flex;
     position: absolute;
-    left: 78.5%;
+    /* left: 78.5%; */
     width: 50%;
     font-size: 120%;
-    top: 452px;
+    /* top: 452px; */
     font-size: var(--font-main);
     font-weight: bold;
     display: flex;
     width: 100%;
-    height: 100px;
+    height: 50%;
     gap: 20px;
+    background-color: greenyellow;
 
 }
 .servico{
     display: flex;
     position: absolute;
-    top: 300px;
+    top: 10%;
     left: 7%;
     font-size: var(--font-main);
     font-weight: bold;
@@ -229,7 +246,8 @@ input:focus {
     display: flex;
     justify-content: flex-end;
     gap: 16px;
-    margin-top: 620px;
+    margin-top: 650px;
+    margin-left:80%;
     margin-bottom: 40px;
     margin-right: 79px;
 }
@@ -684,7 +702,8 @@ input:focus {
 /* responsividade vertical */
 @media screen and (max-height: 1368px){
     .form-actions2{
-        margin-top: auto;
+        margin-top: 25%;
+        margin-left:80%;
     }
     .quadrado{
         height: 75%;
