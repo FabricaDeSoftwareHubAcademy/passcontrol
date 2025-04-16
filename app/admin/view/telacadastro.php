@@ -63,10 +63,6 @@
                 <label class="labeledit" for="email">Email*</label>
                 <input class="borda" type="text" name="email" id="email" placeholder="Digite aqui o Email do usuário" required>
             </div>
-            <!-- <div class="cpf">
-                <label class="labeledit" for="cpf">CPF*</label>
-                <input class="borda" type="text" name="cpf" id="cpf" max="11" placeholder="Digite aqui o CPF do usuário" required>
-            </div> -->
             <div class="selecionar">
                 <div class="perfild">
                     <label class="labeledit" for="perfil">Perfil De Acesso</label>
