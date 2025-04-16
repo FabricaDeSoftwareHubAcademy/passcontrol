@@ -7,20 +7,20 @@
         <div class="inf-modal">
             <div class="container">
                 <label class="label"><b>Código do Serviço</b></label>
-                <input type="text" id="edit-codigo" class="input-number" placeholder="Digite o código do serviço">
+                <input type="text" id="edit-codigo" class="input-number" placeholder="Digite o código do serviço" required>
             </div>
             <div class="container">
                 <label class="label"><b>Ícone</b></label>            
                 <div class="file-input">
                     <input type="file" id="fileInput" class="file-input-field" accept="image/*">
-                    <img src="" alt="Pré-visualização do ícone" class="file-preview" style="display: none;">
+                    <img src="" alt="Pré-visualização do ícone" class="file-preview" style="display: none;" required>
                 </div>
             </div>
         </div>
 
         <div class="servico">
             <label class="label_serv"><b>Serviço</b></label>
-            <input type="text" id="edit-nome" class="input-text" placeholder="Digite o nome do novo serviço">
+            <input type="text" id="edit-nome" class="input-text" placeholder="Digite o nome do novo serviço" required>
         </div>
 
         <!-- Campo oculto para ID do serviço -->
