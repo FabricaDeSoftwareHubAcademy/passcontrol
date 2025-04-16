@@ -191,7 +191,7 @@
 }
 
 .toggle-btn.active .circulo {
-  background-color: #00cc00;
+  background-color: #4CAF50;
   left: 37px;
 }
 .editar-menor{
@@ -251,9 +251,7 @@
   width: 5px;
 }
 
-.resto-tabela-Ponto-atendimento{
-  background-color: #fff;
-}
+
 
 @media screen and (max-width: 1024px) {
   #tabela-Ponto-atendimento {
