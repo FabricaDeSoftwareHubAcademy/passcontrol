@@ -145,8 +145,14 @@ input:focus + .slider {
   transition: left 0.3s;
   background-color: #4CAF50;
 }
-.editar-inativar-menor{
+.perfil-ajuste{
   width: 70px;
+}
+.matricula-ajuste{
+  width: 60px;
+}
+.editar-inativar-menor{
+  width: 30px;
 }
 .area-tabela{ 
   width: 90%; 
@@ -207,7 +213,7 @@ td, th {
   white-space: nowrap;
   overflow: hidden; 
   text-overflow: ellipsis;  
-  width: 200px;              
+  /* width: 200px;               */
 }
 thead, tbody tr { 
   display: table; 
