@@ -15,7 +15,7 @@
 }
 
 .tabela {
-  border: 0.5px solid black;
+  /* border: 0.5px solid black; */
   border-collapse: separate;
   border-spacing: 0;
   background-color: rgb(255, 255, 255,0.4);
