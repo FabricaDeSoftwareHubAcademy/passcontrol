@@ -113,6 +113,10 @@ input:focus {
     margin-bottom: 5px;
     color: #333;
 }
+.icone_add_servico{
+    display:flex;
+
+}
 .selecao{
     top: 50px;
     left: 20px;
@@ -138,18 +142,22 @@ input:focus {
 .checkbox-container{ 
     display: flex;
     position: absolute;
-    left: 42%; 
+    left: 78.5%;
     width: 50%;
     font-size: 120%;
-    top: 412px;
+    top: 452px;
     font-size: var(--font-main);
     font-weight: bold;
     display: flex;
+    width: 100%;
+    height: 100px;
+    gap: 20px;
+
 }
 .servico{
     display: flex;
     position: absolute;
-    top: 275px;
+    top: 300px;
     left: 7%;
     font-size: var(--font-main);
     font-weight: bold;
@@ -160,7 +168,7 @@ input:focus {
     left: 71%;
     top: 465px;
 }
-.column-1, .column-2{
+.column-1{
     position: relative;
     display: flex;
     flex-direction: column;
@@ -171,6 +179,9 @@ input:focus {
     /* max-width: ; */
     top: -100px;
     gap: 10px;
+    width: 100%;
+    height: 100px;
+    gap: 20px;
 }
 .column-1 { left: -73%; }
 .column-2 { left: -35%; }
@@ -183,7 +194,7 @@ input:focus {
     align-items: center;
     gap: 2px;
     cursor: pointer;
-    margin-bottom: 56px;
+    /* margin-bottom: 56px; */
     margin-left: 16px;
 }
 .checkbox-container label span{
@@ -255,12 +266,17 @@ input:focus {
 @media screen and (max-width: 1920px){
     .labeledit{
         width: 111%;
+        display: flex;
+        gap: 5px;
+        align-items: center;
     }
     .form-actions2{
         margin-top: 690px;
     }
     .column-1{
-        width: 41%;
+        width: 100%;
+        height: 160px;
+        gap: 20px;
     }
     .column-2{
         width: 41%;

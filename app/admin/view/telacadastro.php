@@ -65,7 +65,11 @@
             </div>
             <div class="selecionar">
                 <div class="perfild">
-                    <label class="labeledit" for="perfil">Perfil De Acesso</label>
+                    <label class="labeledit" for="perfil">Perfil De Acesso
+                    <button class="icone_add_servico" id="abrirModalCadastro">
+                        <img src="../../../public/img/icons/add_icon.svg" alt="">
+                    </button>
+                    </label>
                     <select class="selecao" name="id_perfil" required>
                         <option class="pi" value="" disabled selected>Selecione</option>
                         <?php
@@ -79,9 +83,7 @@
                 
             </div>
             <title class="servico">Seviços</title>
-            <button class="icone_add_servico" id="abrirModalCadastro">
-                <img src="../../../public/img/icons/add_icon.svg" alt="">
-            </button>
+
             <div class="checkbox-container">
                 <div class="column-1">
                     <?php
