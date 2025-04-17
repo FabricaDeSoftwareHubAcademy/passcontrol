@@ -82,7 +82,7 @@
                         <!-- <p>Gestão dos serviços</p> -->
                     </div>
                     <div class="button-wrapper">
-                        <button class="btn outline" onclick="window.location.href='servicos.php';">Listar Serviços</button>
+                        <button class="btn outline" onclick="window.location.href='servicos.php';">Cadastrar Serviços</button>
                     </div>
                 </div>    
             </main>
