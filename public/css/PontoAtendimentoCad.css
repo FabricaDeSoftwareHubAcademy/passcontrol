@@ -70,7 +70,7 @@
   /* background-position: right 10px center; */
   /* background-repeat: no-repeat; */
   /* box-sizing: border-box; */
-  margin-left: 76%;
+  margin-left: 81.9%;
 }
 .linha-divisoria-Ponto-atendimento {
   background-color: var(--cinza-control);
@@ -253,6 +253,12 @@
 
 
 
+@media screen and (max-width: 1200px){
+  #buscar-Ponto-atendimento{
+    margin-left: 72.4%;
+  }
+}
+
 @media screen and (max-width: 1024px) {
   #tabela-Ponto-atendimento {
     left: 8vh;
@@ -261,6 +267,9 @@
   #buscar-tabela-Ponto-atendimento{
     margin-left: 71%;
     width: 45%;
+  }
+  #buscar-Ponto-atendimento{
+    margin-left: 67%;
   }
 
   .tabela-tabela-Ponto-atendimento td, .cabecalho-tabela1 th{
@@ -280,6 +289,7 @@
   #buscar-Ponto-atendimento{
     width: 30%;
     margin-right: 5%;
+    margin-left: 65.9%;
   }
 }
  @media screen and (max-width: 768px) and (max-height: 600px) {
@@ -334,8 +344,8 @@
     margin-bottom: -4%;
   }
   #buscar-Ponto-atendimento{
-    margin-left: 46%;
-    width: 50%;
+    margin-left: 56%;
+    width: 40%;
   }
   .topo-tela-Ponto-atendimento{
     width: 99%;

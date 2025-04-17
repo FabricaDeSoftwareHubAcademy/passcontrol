@@ -62,17 +62,6 @@
     }
 }
 
-@media (max-width: 768px) {
-    .atendimento-tempo-real {
-        margin-top: 0px;
-        left: 8vh;
-    }
-
-    td {
-        font-size: 12px;
-    }
-}
-
 @media (max-width: 580px) {
     .atendimento-tempo-real {
         margin-top: -50px;
