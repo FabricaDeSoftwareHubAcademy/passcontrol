@@ -117,6 +117,10 @@
                </div>
            </div>
        </form>
+<div class="form-actions2">
+               <button class="botao_volto" form="dados_cad" type="reset" onclick="window.location.href='./menuadm_usuario.php';">Voltar</button>
+               <button class="botao_salvo cadastrar_usuario" name="cadastrar" id="save_sucess">Salvar</button>
+       </div>
 
 
 
