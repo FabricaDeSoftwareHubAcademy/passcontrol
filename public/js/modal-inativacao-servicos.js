@@ -11,8 +11,8 @@ document.addEventListener("DOMContentLoaded", function () {
         
         // Define o texto do modal com base no estado do atendimento
         const modalText = atendimentoAtivo
-            ? "Deseja Inativar Esse Serviço?"
-            : "Deseja Ativar Esse Serviço?";
+            ? "Deseja Alterar Esse Serviço?"
+            : "Deseja Alterar Esse Serviço?";
 
         modalContainer.querySelector("p b").innerText = modalText;
         
@@ -43,7 +43,7 @@ class Modal_Inativacao_Servico extends HTMLElement {
             <img src="../../../public/img/img-modais/Logo Nota Controlnt.png" alt="Logo Nota Control" class="logo">
             <h1 class="titulo">Confirmação</h1>
             <hr class="linha">
-            <p class="texto"><b>Deseja Inativar Esse Serviço?</b></p>
+            <p class="texto"><b>Deseja Alterar Esse Serviço?</b></p>
             <div class="button-group">
                 <button class="botao-modal cancel">Não</button>
                 <button class="botao-modal save">Sim</button>

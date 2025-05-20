@@ -58,6 +58,28 @@ class Usuario{
             return false;
         }
     }
+
+    /*
+    
+    ######################### FUNCAO DE LOGIN QUE ESTAVA NO DATABASE3000 
+    ####################### testar E REFATORAR
+
+      public function login_refatorar($email, $senha) {
+        $verificar = $this->conn->prepare("SELECT id_usuario, senha FROM usuario WHERE email = :e");
+        $verificar->bindValue(":e", $email);
+        $verificar->execute();
+        
+        if ($verificar->rowCount() > 0) {
+            $dados = $verificar->fetch();
+            if (password_verify($senha, $dados['senha'])) {
+                session_start();
+                $_SESSION['id_usuario'] = $dados['id_usuario'];
+                return true;
+            }
+        }
+        return false;
+    }
+    */
     
     public function update($id_usuario){
         return(new Database("usuario"))->update("id_usuario =".$id_usuario,
