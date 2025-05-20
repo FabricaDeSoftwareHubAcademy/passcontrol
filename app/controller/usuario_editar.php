@@ -22,9 +22,9 @@ elseif (($_SERVER['REQUEST_METHOD'] === 'POST')){
         
         // INSERE OS DADOS NO OBJETO $objUser
         $objUser = new Usuario();
-        $objUser->nome = $nome;
-        // $objUser->cpf = $cpf; //CPF REMOVIDO
-        $objUser->email = $email;
+        $objUser->nome = filter_var($nome, FILTER_SANITIZE_SPECIAL_CHARS);
+        // $objUser->cpf = filter_var(filter_var($cpf, FILTER_SANITIZE_SPECIAL_CHARS), FILTER_SANITIZE_NUMBER_INT); //CPF REMOVIDO
+        $objUser->email = filter_var($email, FILTER_SANITIZE_EMAIL);
         // $objUser->foto = $foto;
         $objUser->id_perfil = $id_perfil;
         

@@ -13,8 +13,8 @@
             
             // INSERE OS DADOS NO OBJETO $objUser
             $objUser = new Usuario();
-            $objUser->nome = $nome;
-            $objUser->email = $email;
+            $objUser->nome = filter_var($nome, FILTER_SANITIZE_SPECIAL_CHARS);
+            $objUser->email = filter_var($email, FILTER_SANITIZE_EMAIL);
             $objUser->id_perfil = $id_perfil;
 
             // GERA UMA SENHA ALEATORIA E A ENVIA PRO BANCO
