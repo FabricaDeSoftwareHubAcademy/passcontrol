@@ -1,5 +1,5 @@
 <?php
-require './app/controller/Usuario.php';
+require './app/classes/Usuario.php';
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
