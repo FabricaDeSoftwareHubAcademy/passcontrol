@@ -1,5 +1,5 @@
 <?php
-require "../classe/Usuario.php";
+require "../classes/Usuario.php";
 // header('Content-Type: application/json');
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
@@ -12,7 +12,7 @@ elseif (($_SERVER['REQUEST_METHOD'] === 'POST')){
     $id_usuario = $_POST["id_usuario"];
     $nome = $_POST["nome"];
     $email = $_POST["email"];
-    // $cpf = $_POST["cpf"]; //CPF REMOVIDO
+    $cpf = $_POST["cpf"];
     // $foto = $_POST["foto"];
     $id_perfil = $_POST["id_perfil"];
 
@@ -42,6 +42,5 @@ elseif (($_SERVER['REQUEST_METHOD'] === 'POST')){
         echo json_encode($resposta);
         exit;
     }
-        
 }
 ?>

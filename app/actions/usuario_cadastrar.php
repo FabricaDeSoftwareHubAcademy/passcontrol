@@ -1,11 +1,13 @@
 <?php
-    require "../classe/Usuario.php";
+    require "../classes/Usuario.php";
 
     if (($_SERVER['REQUEST_METHOD'] === 'POST')){
   
         // PEGA OS DADOS VIA POST
         $nome = $_POST["nome"];
         $email = $_POST["email"];
+        $cpf = $_POST["cpf"];
+        $senha = $_POST["senha"];
         $id_perfil = $_POST["id_perfil"];
         
         // VERIFICA SE OS DADOS FORAM PREENCHIDOS
@@ -15,11 +17,13 @@
             $objUser = new Usuario();
             $objUser->nome = filter_var($nome, FILTER_SANITIZE_SPECIAL_CHARS);
             $objUser->email = filter_var($email, FILTER_SANITIZE_EMAIL);
-            $objUser->id_perfil = $id_perfil;
+            $objUser->cpf = $cpf;                                                          //------------------COLOCAR UM FILTRO
+            $objUser->senha = $senha;                                                     //------------------COLOCAR UM FILTRO
+            $objUser->id_perfil = filter_var($id_perfil, FILTER_SANITIZE_NUMBER_INT);
 
             // GERA UMA SENHA ALEATORIA E A ENVIA PRO BANCO
             // $objUser->senha = password_hash($objUser->gerarSenha(), PASSWORD_DEFAULT);
-            $objUser->senha = password_hash("123", PASSWORD_DEFAULT);
+            // $objUser->senha = password_hash("123", PASSWORD_DEFAULT);
             
             $res = $objUser->cadastrar();
             if($res){
