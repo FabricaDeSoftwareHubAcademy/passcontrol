@@ -3,12 +3,17 @@
 // ini_set('display_errors', 1);
 // error_reporting(E_ALL);
 
+require_once 'Env.php';
+
+$rootPath = dirname(__DIR__, 2);
+loadEnv($rootPath . '/.env');
+
 class Database {
     private $conn;
-    private string $local = '192.168.22.9';
-    private string $db = 'passcontrol' ;
-    private string $user = 'fabrica32';
-    private string $password = 'fabrica2025';
+    private string $local;
+    private string $db;
+    private string $user;
+    private string $password;
     private $table;
 
     // private $conn;
@@ -20,8 +25,13 @@ class Database {
 
     // O construtor garante que a conexão seja realizada assim que o objeto Database for instanciado
     public function __construct($table = null) {
+        $this->local = getenv('DB_HOST');
+        $this->db = getenv('DB_NAME');
+        $this->user = getenv('DB_USER');
+        $this->password = getenv('DB_PASS');
         $this->table = $table;
-        $this->conecta();  // Conectar ao banco de dados logo ao criar a instância
+
+        $this->conecta();
     }
 
     public function conecta(){

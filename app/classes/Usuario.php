@@ -1,122 +1,122 @@
 <?php
+/* require './app/database/Database.php';
 
-require __DIR__."../../DB/Database.php";
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
 
-class Usuario{
-    
-    public int $id_usuario;
-    public string $nome;
-    // public string $cpf;
-    public string $email;
-    public string $senha;
-    public string $id_perfil;
-    // public string $foto;
-    public string $status_usuario;
-    // public string $ultimo_login;
+class Usuario {
+    private $db;
 
-    // private function __construct(){
-    // }
-    
-    public function cadastrar(): bool{
-        $db = new Database("usuario");
-
-        $db->insert(
-            [
-                "nome"=> $this->nome,
-                "email"=> $this->email,
-                "senha"=> $this->senha,
-                "id_perfil"=> $this->id_perfil
-            ]
-        );
-        return true;
+    public function __construct() {
+        $this->db = new Database('usuarios');
     }
 
-    public function buscar($where=null,$order=null,$limit=null){
-        return (new Database("usuario"))->select_pdostmt($where,$order,$limit)->fetchAll(PDO::FETCH_CLASS,self::class);
+    public function cadastrar($nome) {
+        $values = ['nome' => $nome];
+        return $this->db->insert($values);
     }
 
+    public function logar($email, $senha){
+        $db = new Database('usuario'); // ou 'usuarios' dependendo do nome da sua tabela
+        $res = $db->login($email, $senha);
+    
+        if ($res) {
+            // Se o login foi bem-sucedido, redireciona para a página de atendimento
+            header("Location: ./app/admin/view/atendimento.php");
+            exit(); // Sempre use exit() após header() para garantir que o código não continue a ser executado
+        } else {
+            return false; // Caso contrário, retorna false
+        }
+    }
+}
+
+$db = new Database('usuario'); ##### CÓDIGO ANTIGO #####*/
+
+require dirname(__DIR__, 2) . '/app/database/Database.php';
+
+class Usuario {
+    private $db;
+
+    // Construtor que instância o Database uma única vez
+    public function __construct() {
+        $this->db = new Database('usuario'); // Nome da tabela pode ser alterado conforme necessidade
+    }
+
+    // Função para cadastrar um novo usuário
+    public function cadastrar($nome, $email, $senha, $id_perfil) {
+        $senha_hash = password_hash($senha, PASSWORD_DEFAULT);  // Criptografando a senha
+        $values = [
+            'nome' => $nome,
+            'email' => $email,
+            'senha' => $senha_hash,
+            'id_perfil' => $id_perfil
+        ];
+        return $this->db->insert($values);
+    }
+
+    public function buscar($where = null, $order = null, $limit = null) {
+        return $this->db->select_pdostmt($where, $order, $limit)->fetchAll(PDO::FETCH_ASSOC);
+    }
+    
     public function buscar_id_usu($id_usuario){
-         $res = new Database("usuario");
-         $data = $res->select("id_usuario =".$id_usuario);
-         
-         return $data;
-    }
-
-    public function logar($email,$senha){
-        $checalogin = (new Database("usuario"))->execute("SELECT id_usuario FROM usuario WHERE email = '$email' AND senha = '$senha';");
-        // $checalogin->bindValue(":e", $email);
-        // $checalogin->bindValue(":s", $senha);
-        // $checalogin->execute();
+        $res = new Database("usuario");
+        $data = $res->select("id_usuario =".$id_usuario);
         
-        if($checalogin->rowCount()>0){
-            $dados = $checalogin->fetch();
-            session_start();
-            $_SESSION["id_usuario"] = $dados["id_usuario"];
-            return true;
-        }
-        else{
-            return false;
+        return $data;
+   }
+
+    // Função para realizar o login
+    public function logar($email, $senha) {
+        $res = $this->db->login($email, $senha);
+
+        if ($res) {
+            // Se o login foi bem-sucedido, redireciona para a página de atendimento
+            header("Location: ./app/admin/view/atendimento.php");
+            exit(); // Sempre use exit() após header() para garantir que o código não continue a ser executado
+        } else {
+            return false; // Caso contrário, retorna false
         }
     }
 
-    /*
-    
-    ######################### FUNCAO DE LOGIN QUE ESTAVA NO DATABASE3000 
-    ####################### testar E REFATORAR
-
-      public function login_refatorar($email, $senha) {
-        $verificar = $this->conn->prepare("SELECT id_usuario, senha FROM usuario WHERE email = :e");
-        $verificar->bindValue(":e", $email);
-        $verificar->execute();
-        
-        if ($verificar->rowCount() > 0) {
-            $dados = $verificar->fetch();
-            if (password_verify($senha, $dados['senha'])) {
-                session_start();
-                $_SESSION['id_usuario'] = $dados['id_usuario'];
-                return true;
-            }
-        }
-        return false;
-    }
-    */
-    
-    public function update($id_usuario){
-        return(new Database("usuario"))->update("id_usuario =".$id_usuario,
-            [
-                "nome"=> $this->nome,
-                // "cpf"=> $this->cpf,
-                // "foto"=> $this->foto,
-                "email"=> $this->email,
-                "id_perfil" => $this->id_perfil
-            ]
-        );
+    // Função para buscar usuário por ID
+    public function buscarPorId($id_usuario) {
+        return $this->db->select("id_usuario = $id_usuario");
     }
 
-    public function gerarSenha($length = 10){
+    // Função para atualizar dados do usuário
+    public function atualizar($id_usuario, $nome, $email, $id_perfil) {
+        $values = [
+            'nome' => $nome,
+            'email' => $email,
+            'id_perfil' => $id_perfil
+        ];
+        return $this->db->update("id_usuario = $id_usuario", $values);
+    }
+
+    // Função para alternar o status do usuário
+    public function alternarStatus($id_usuario, $status_usuario) {
+        $status_alternar = ($status_usuario == 'ativo') ? 'inativo' : 'ativo';
+        return $this->db->update('id_usuario =' . $id_usuario, ['status_usuario' => $status_alternar]);
+    }
+
+    // Função para gerar uma senha aleatória
+    public function gerarSenha($length = 10) {
         $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ*+-&@!#$.';
         $charactersLength = strlen($characters);
         $randomPw = '';
 
-        for ($i = 0; $i < $length; $i++){
+        for ($i = 0; $i < $length; $i++) {
             $randomPw .= $characters[random_int(0, $charactersLength - 1)];
         }
 
         return $randomPw;
     }
 
-    public function listar_nome_perfil($id_perfil){
-        $db = new Database('perfil');
-        $data = $db->select("id_perfil =".$id_perfil);
-        
-        return $data;
+    // Função para listar perfil de usuário com base no ID do perfil
+    public function listarNomePerfil($id_perfil) {
+        $db = new Database('perfil_usuario');
+        return $db->select("id_perfil = $id_perfil");
     }
+}
 
-    public function alternar_status($id_usuario, $status_usuario){
-        $db = new Database('usuario');
-        $status_alternar = ($status_usuario == 'ativo') ? 'inativo' : 'ativo';
-        $res = $db->update('id_usuario =' .$id_usuario, ['status_usuario' => $status_alternar]);
-        return $res; 
-    }
-}   
 ?>

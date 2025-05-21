@@ -1,7 +1,5 @@
 <?php
-   require '../../classe/Usuario.php';
-
-
+   /* require '../../classe/Usuario.php'; */
    // require '../../model/Servico.php';
 ?>
 
