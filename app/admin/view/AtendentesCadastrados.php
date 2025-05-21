@@ -1,10 +1,10 @@
 <?php
-require '../../classe/Usuario.php';
+require '../../classes/Usuario.php';
 
 $usuarios = new Usuario();
 
-$db_profiles = new Database("perfil");
-$perfis = $db_profiles->execute("SELECT * FROM perfil");
+$db_profiles = new Database("perfil_usuario");
+$perfis = $db_profiles->execute("SELECT * FROM perfil_usuario");
 
 $dados = $usuarios->buscar(null,' status_usuario ASC');
 
