@@ -1,5 +1,5 @@
 <?php
-require './app/DB/Database.php';
+require './app/database/Database.php';
 
 ini_set('display_errors', 1);
 error_reporting(E_ALL);

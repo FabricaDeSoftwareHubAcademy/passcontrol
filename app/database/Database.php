@@ -48,7 +48,7 @@ class Database {
 
 
     public function login($email, $senha) {
-        $verificar = $this->conn->prepare("SELECT id_usuario, senha FROM usuario WHERE email = :e");
+        $verificar = $this->conn->prepare("SELECT id_usuario, senha_usuario FROM usuario WHERE email_usuario = :e");
         $verificar->bindValue(":e", $email);
         $verificar->execute();
         
@@ -56,7 +56,7 @@ class Database {
             $dados = $verificar->fetch();
             
             // Verifica a senha criptografada
-            if (password_verify($senha, $dados['senha'])) {
+            if (password_verify($senha, $dados['senha_usuario'])) {
                 session_start();
                 $_SESSION['id_usuario'] = $dados['id_usuario'];
                 return true;
