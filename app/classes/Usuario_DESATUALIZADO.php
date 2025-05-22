@@ -2,7 +2,7 @@
 
 require __DIR__."../../DB/Database.php";
 
-class Usuario{
+class Usuario_OLD{
     
     public int $id_usuario;
     public string $nome;

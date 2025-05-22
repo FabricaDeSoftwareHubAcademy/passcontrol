@@ -18,15 +18,15 @@ document.addEventListener("DOMContentLoaded", function() {
         event.preventDefault();
 
         const formCadastrarUsuario = new FormData(document.getElementById("dados_cad"));
-        console.log(formCadastrarUsuario);
+        // console.log(formCadastrarUsuario);
         
         // Envia os dados via POST
-        let atualizar_dados = await fetch ('../../controller/usuario_cadastrar.php', {
+        let atualizar_dados = await fetch ('../actions/usuario_cadastrar.php', {
             method: "POST",
             body: formCadastrarUsuario
         })
         
-        // Recebe a resposta bruta do server, basicamente um debug com esteroides
+        // Recebe a resposta bruta do server, basicamente um debug
         let textResponse = await atualizar_dados.text();
         // console.log("Resposta bruta do servidor:", textResponse);  // Mostra o que o PHP está retornando
         
@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function() {
             modalDadosSalvos.classList.add("show");
             
             buttonOk.addEventListener("click", ()=>{
-                location.href='./AtendentesCadastrados.php';
+                location.href='./listar_usuarios.php';
             })
             
         } catch (error) {

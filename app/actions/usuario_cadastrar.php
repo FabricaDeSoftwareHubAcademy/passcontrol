@@ -1,5 +1,5 @@
 <?php
-    require "../classes/Usuario.php";
+    require '../classes/Usuario.php';
 
     if (($_SERVER['REQUEST_METHOD'] === 'POST')){
   
@@ -7,18 +7,16 @@
         $nome = $_POST["nome"];
         $email = $_POST["email"];
         $cpf = $_POST["cpf"];
-        $senha = $_POST["senha"];
         $id_perfil = $_POST["id_perfil"];
         
         // VERIFICA SE OS DADOS FORAM PREENCHIDOS
-        if($nome != null || $email != null || $id_perfil != null){   
+        if($nome != null || $email != null || $cpf != null || $id_perfil != null){   
             
             // INSERE OS DADOS NO OBJETO $objUser
             $objUser = new Usuario();
             $objUser->nome = filter_var($nome, FILTER_SANITIZE_SPECIAL_CHARS);
             $objUser->email = filter_var($email, FILTER_SANITIZE_EMAIL);
             $objUser->cpf = $cpf;                                                          //------------------COLOCAR UM FILTRO
-            $objUser->senha = $senha;                                                     //------------------COLOCAR UM FILTRO
             $objUser->id_perfil = filter_var($id_perfil, FILTER_SANITIZE_NUMBER_INT);
 
             // GERA UMA SENHA ALEATORIA E A ENVIA PRO BANCO

@@ -111,7 +111,7 @@ $dados = $usuarios->buscar(null,' status_usuario ASC');
                 </div>
             </div>
             <div class="div-botao-info">
-                <button class="add-func" type="submit" onclick="window.location.href='../../../app/admin/view/telacadastro.php';">Novo Funcionario</button>
+                <button class="add-func" type="submit" onclick="window.location.href='../../../app/admin/view/cadastro_usuario.php';">Novo Funcionario</button>
             </div>
         </div>
     </section>
