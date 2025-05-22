@@ -25,7 +25,20 @@ body {
   z-index: 5;
   width: 100%;
 }
+.Area-Util-Projeto .scrollmenu{
+  background-color: var(--cinza-control);
+  padding: 0 15px;
+  position: absolute;
+  z-index: 5;
+  width: 100%;
+}
 .menu {
+  padding-top: 15px;
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+}
+.scrollmenu{
   padding-top: 15px;
   display: flex;
   /* justify-content: space-between; */
@@ -42,6 +55,23 @@ body {
   color: var(--verde-control);
 }
 .menu a.active {
+  background-color: var(--cor-active);
+  color: var(--font-main);
+  padding: 14px;
+  border-radius: 5px 5px 0px 0px;
+  text-decoration: none;
+}
+.scrollmenu a{
+  color: var(--cor-fundo);
+  text-decoration: none;
+  padding: 14px;
+  border-radius: 5px 5px 0px 0px;
+}
+.scrollmenu a:hover{
+  background-color: var(--cor-hove-menu);
+  color: var(--verde-control);
+}
+.scrollmenu a .active{
   background-color: var(--cor-active);
   color: var(--font-main);
   padding: 14px;
@@ -112,4 +142,4 @@ body {
   .banner-img img{
     width: 100%;
   }
-}
+}	
