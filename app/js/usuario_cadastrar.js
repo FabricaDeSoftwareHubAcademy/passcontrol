@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function() {
         
         // Recebe a resposta bruta do server, basicamente um debug
         let textResponse = await atualizar_dados.text();
-        // console.log("Resposta bruta do servidor:", textResponse);  // Mostra o que o PHP está retornando
+        console.log("Resposta bruta do servidor:", textResponse);  // Mostra o que o PHP está retornando
         
         try {
             let response_post = JSON.parse(textResponse);

@@ -1,7 +1,7 @@
 <?php
-require '../../classes/Usuario.php';
-require '../../classes/Perfil.php';
-// require '../../classes/Servico_Refatorar.php';
+require '../classes/Usuario.php';
+require '../classes/Perfil.php';
+// require '../classes/Servico_Refatorar.php';
 ?>
 
 <!DOCTYPE html>
@@ -19,32 +19,32 @@ require '../../classes/Perfil.php';
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="../../../public/css/navegacao.css">
-    <link rel="stylesheet" href="../../../public/css/monitor-modal.css">
-    <link rel="stylesheet" href="../../../public/css/edit_cadastro.css">
-    <link rel="stylesheet" href="../../../public/modais/Modal_Alterar_Dados_Pessoais/alterar_dados_pessoais.css">
-    <link rel="stylesheet" href="../../../public/modais/Modal_Alterar_Senha/alterar_senha.css">
+    <link rel="stylesheet" href="../../public/css/navegacao.css">
+    <link rel="stylesheet" href="../../public/css/monitor-modal.css">
+    <link rel="stylesheet" href="../../public/css/edit_cadastro.css">
+    <link rel="stylesheet" href="../../public/modais/Modal_Alterar_Dados_Pessoais/alterar_dados_pessoais.css">
+    <link rel="stylesheet" href="../../public/modais/Modal_Alterar_Senha/alterar_senha.css">
 
 
-    <link rel="stylesheet" href="../../../public/modais/Modal_Confirmacao_dos_Dados_Registrados/confirmacao_dados_registrados.css">
-    <link rel="stylesheet" href="../../../public/modais/Modal_Confirmacao_dos_Dados/confirmacao_dados.css">
+    <link rel="stylesheet" href="../../public/modais/Modal_Confirmacao_dos_Dados_Registrados/confirmacao_dados_registrados.css">
+    <link rel="stylesheet" href="../../public/modais/Modal_Confirmacao_dos_Dados/confirmacao_dados.css">
 
     <!-- <link rel="stylesheet" href="../../../public/modais/Modal_Confirmacao_dos_Dados_Registrados/confirmacao_dados_registrados.css"> -->
 
     <!-- JS -->
-    <script src="../../../public/js/navegacao-menu-lateral.js" defer></script>
-    <script src="../../../public/js/monitor-modal.js" defer></script>
-    <!-- <script src="../../../public/js/modal_salvar_cadastro.js" defer></script> -->
-    <script src="../../../public/js/checkbox_seleciona_todos.js" defer></script>
-    <script src="../../js/usuario_cadastrar.js" defer></script>
+    <script src="../../public/js/navegacao-menu-lateral.js" defer></script>
+    <script src="../../public/js/monitor-modal.js" defer></script>
+    <!-- <script src="../../public/js/modal_salvar_cadastro.js" defer></script> -->
+    <script src="../../public/js/checkbox_seleciona_todos.js" defer></script>
+    <script src="../js/usuario_cadastrar.js" defer></script>
 
-    <link rel="shortcut icon" type="imagex/png" href="../../../public/img/Logo-Nota-Controlnt.ico">
+    <link rel="shortcut icon" type="imagex/png" href="../../public/img/Logo-Nota-Controlnt.ico">
 </head>
 
 <body class="control-body-navegacao">
     <?php
     include "./navegacao.php";
-    include "../../actions/listar_perfis_e_servicos.php";
+    include "../actions/listar_perfis_e_servicos.php";
     ?>
 
     <section class="Area-Util-Projeto">
@@ -57,15 +57,15 @@ require '../../classes/Perfil.php';
         <form class="quadrado" method="POST" id="dados_cad">
             <div class="nome">
                 <label class="labeledit" for="nome">Nome*</label>
-                <input class="borda" type="text" name="nome" id="nome" placeholder="Digite aqui o nome do usuário" required>
+                <input class="borda" type="text" name="nome_usuario" id="nome_usuario" placeholder="Digite aqui o nome do usuário" required>
             </div>
             <div class="email">
                 <label class="labeledit" for="email">Email*</label>
-                <input class="borda" type="text" name="email" id="email" placeholder="Digite aqui o Email do usuário" required>
+                <input class="borda" type="text" name="email_usuario" id="email_usuario" placeholder="Digite aqui o Email do usuário" required>
             </div>
             <div class="cpf">
                 <label class="labeledit" for="cpf">CPF*</label>
-                <input class="borda" type="text" name="cpf" id="cpf" max="11" placeholder="Digite aqui o CPF do usuário" required>
+                <input class="borda" type="text" name="cpf_usuario" id="cpf_usuario" max="11" placeholder="Digite aqui o CPF do usuário" required>
             </div>
             <div class="selecionar">
                 <div class="perfild">
@@ -74,7 +74,7 @@ require '../../classes/Perfil.php';
                             <img src="../../../public/img/icons/add_icon.svg" alt="">
                         </button>
                     </label>
-                    <select class="selecao" name="id_perfil" required>
+                    <select class="selecao" name="id_perfil_usuario" required>
                         <option class="pi" value="" disabled selected>Selecione</option>
                         <?php
                         // // LISTA PERFIS DE USUARIO
@@ -117,8 +117,8 @@ require '../../classes/Perfil.php';
 
         <?php
         include "./monitor-modal.php";
-        include "../../../public/modais/Modal_Confirmacao_dos_Dados_Registrados/confirmacao_dados_registrados.php";
-        include "../../../public/modais/Modal_Confirmacao_dos_Dados/confirmacao_dados.php";
+        include "../../public/modais/Modal_Confirmacao_dos_Dados_Registrados/confirmacao_dados_registrados.php";
+        include "../../public/modais/Modal_Confirmacao_dos_Dados/confirmacao_dados.php";
         ?>
     </section>
 </body>

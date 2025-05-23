@@ -4,10 +4,10 @@
     if (($_SERVER['REQUEST_METHOD'] === 'POST')){
   
         // PEGA OS DADOS VIA POST
-        $nome = $_POST["nome"];
-        $email = $_POST["email"];
-        $cpf = $_POST["cpf"];
-        $id_perfil = $_POST["id_perfil"];
+        $nome = $_POST["nome_usuario"];
+        $email = $_POST["email_usuario"];
+        $cpf = $_POST["cpf_usuario"];
+        $id_perfil = $_POST["id_perfil_usuario"];
         
         // VERIFICA SE OS DADOS FORAM PREENCHIDOS
         if($nome != null || $email != null || $cpf != null || $id_perfil != null){   
@@ -21,7 +21,7 @@
 
             // GERA UMA SENHA ALEATORIA E A ENVIA PRO BANCO
             // $objUser->senha = password_hash($objUser->gerarSenha(), PASSWORD_DEFAULT);
-            // $objUser->senha = password_hash("123", PASSWORD_DEFAULT);
+            $objUser->senha = password_hash("123", PASSWORD_DEFAULT);
             
             $res = $objUser->cadastrar();
             if($res){
