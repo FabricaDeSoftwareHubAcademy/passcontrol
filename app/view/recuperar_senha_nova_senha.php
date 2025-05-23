@@ -6,9 +6,9 @@
     
     <title>PassControl</title> 
 
-    <link rel="stylesheet" href="../../../public/css/recuperar-senha-novaSenha.css">
+    <link rel="stylesheet" href="../../public/css/recuperar_senha_nova_Senha.css">
 
-    <script src="../../../public/js/recuperar-senha-novaSenha.js" defer></script>
+    <script src="../../public/js/recuperar_senha_nova_Senha.js" defer></script>
 
     <link rel="shortcut icon" type="imagex/png" href="../../../public/img/Logo-Nota-Controlnt.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -22,9 +22,9 @@
                 <span></span>
             </div>
             <div class="arrow">
-                <div class="setas"><img src="../../../public/img/logo-png/setas.png" alt=""></div>
-                <div class="setas"><img src="../../../public/img/logo-png/setas.png" alt=""></div>
-                <div class="setas"><img src="../../../public/img/logo-png/setas.png" alt=""></div>
+                <div class="setas"><img src="../../public/img/logo-png/setas.png" alt=""></div>
+                <div class="setas"><img src="../../public/img/logo-png/setas.png" alt=""></div>
+                <div class="setas"><img src="../../public/img/logo-png/setas.png" alt=""></div>
             </div>
         </div>
     
@@ -33,9 +33,9 @@
         <main>
             <div class="containerAnime">
                     <div class="containerImagens">
-                        <img src="../../../public/img/logo-png/top.png" alt="" class="imagem imagemTop">
-                        <img src="../../../public/img/logo-png/mid.png" alt="" class="imagem imagemMid">
-                        <img src="../../../public/img/logo-png/bot.png" alt="" class="imagem imagemBot">
+                        <img src="../../public/img/logo-png/top.png" alt="" class="imagem imagemTop">
+                        <img src="../../public/img/logo-png/mid.png" alt="" class="imagem imagemMid">
+                        <img src="../../public/img/logo-png/bot.png" alt="" class="imagem imagemBot">
                     </div>
                     <div class="titlePass">
                         <h1>PASS CONTROL</h1>
@@ -78,9 +78,9 @@
 
         <div class="GroupLine groupRight">
             <div class="arrow ">
-                <div class="setas setaRight"><img src="../../../public/img/logo-png/setas.png" alt=""></div>
-                <div class="setas setaRight"><img src="../../../public/img/logo-png/setas.png" alt=""></div>
-                <div class="setas setaRight"><img src="../../../public/img/logo-png/setas.png" alt=""></div>
+                <div class="setas setaRight"><img src="../../public/img/logo-png/setas.png" alt=""></div>
+                <div class="setas setaRight"><img src="../../public/img/logo-png/setas.png" alt=""></div>
+                <div class="setas setaRight"><img src="../../public/img/logo-png/setas.png" alt=""></div>
             </div>
             <div class="line">
                 <span></span>

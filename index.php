@@ -3,15 +3,15 @@ require './app/classes/Usuario.php';
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
-if(isset($_POST['email'])){
-    $email = addslashes($_POST['email']);
+if(isset($_POST['cpf'])){
+    $cpf = addslashes($_POST['cpf']);
     $senha = addslashes($_POST['senha']);
 
     $usuario = new Usuario();
-    if($usuario->logar($email, $senha)){
-        header("location: ./app/admin/view/atendimento.php");
+    if($usuario->logar($cpf, $senha)){
+        header("location: ./app/view/atendimento.php");
     }else{
-        echo "<script>alert('Email ou Senha incorreto!') </script>";
+        echo "<script>alert('cpf ou Senha incorreto!') </script>";
     }
 }
 ?> 
@@ -83,8 +83,8 @@ if(isset($_POST['email'])){
 
             <form action="#" method="post" class="formBoxLogin">
                 <div class="group user">
-                    <label for="name">Usuário</label>
-                    <input type="email" name="email" placeholder="usuario@gmail.com">
+                    <label for="name">CPF</label>
+                    <input type="text" name="cpf" placeholder="000.000.000-00">
                 </div>
                 <div class="group senha-telaLogin">
                     <label for="password">Senha</label>
@@ -93,7 +93,7 @@ if(isset($_POST['email'])){
                 </div>
 
                 <nav class="navEsqueciSenha">
-                    <li><a href="app/admin/view/recuperar-senha-email.php"><span class="spnEsqueciSenha">Esqueci Minha Senha</span></a></li>
+                    <li><a href="app/view/recuperar_senha_email.php"><span class="spnEsqueciSenha">Esqueci Minha Senha</span></a></li>
                 </nav>
 
                 <div class="btnEntrar">
