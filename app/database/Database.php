@@ -16,13 +16,6 @@ class Database {
     private string $password;
     private $table;
 
-    // private $conn;
-    // private string $local = 'localhost';
-    // private string $db = 'passcontrol';
-    // private string $user = 'root';
-    // private string $password = '';
-    // private $table;
-
     // O construtor garante que a conexão seja realizada assim que o objeto Database for instanciado
     public function __construct($table = null) {
         $this->local = getenv('DB_HOST');
@@ -80,11 +73,11 @@ class Database {
         $binds = array_pad([],count($fields),"?");
         $query = "INSERT INTO ". $this->table . "(".implode(",", $fields).") VALUES (".implode(",",$binds).")";
 
-        $out = $this->execute($query,array_values($values));
+        $res = $this->execute($query,array_values($values));
 
-        if($out){
+        if($res){
             // echo "<script> alert ('Cadastrado com sucesso!') </script>";
-            return $out;
+            return $res;
         }
         else{
             // echo "<script> alert ('Falha na execução, usuário não cadastrado!') </script>";
@@ -93,18 +86,6 @@ class Database {
     }
 
     public function select($where = null, $order = null, $limit = null, $fields = "*"){
-        $where = strlen($where) ? "WHERE ".$where : "";
-        $order = strlen($order) ? "ORDER BY".$order : "";
-        $limit = strlen($limit) ? "LIMIT ".$limit : "";
-
-        $query = "SELECT $fields FROM $this->table $where $order $limit";
-
-        // return $this->execute($query)->fetch(PDO::FETCH_ASSOC);
-
-        return $this->execute($query)->fetch(PDO::FETCH_ASSOC);
-    }
-
-    public function select_pdostmt($where = null, $order = null, $limit = null, $fields = "*"){
         $where = strlen($where) ? "WHERE ".$where : "";
         $order = strlen($order) ? "ORDER BY".$order : "";
         $limit = strlen($limit) ? "LIMIT ".$limit : "";

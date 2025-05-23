@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__ . '/../DB/DatabaseGuiche.php';
+require_once __DIR__ . '/../database/Database.php';
 
 
 Class Guiche{
@@ -63,11 +63,9 @@ Class Guiche{
         return $res; 
     }
 
-
-    public function excluir(){
-        $db = new Database('guiche');
-        $res = $db->delete('id_guiche ='.$this->id_guiche);
-        return $res;
-    }
-
+    // public function excluir(){
+    //     $db = new Database('guiche');
+    //     $res = $db->delete('id_guiche ='.$this->id_guiche);
+    //     return $res;
+    // }
 }
