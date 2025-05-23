@@ -1,13 +1,6 @@
 <?php
-require '../classes/Usuario.php';
-
-$usuarios = new Usuario();
-
-$db_profiles = new Database("perfil_usuario");
-$perfis = $db_profiles->execute("SELECT * FROM perfil_usuario");
-
-$dados = $usuarios->buscar(null,' status_usuario ASC');
-
+// $db_profiles = new Database("perfil_usuario");
+// $perfis = $db_profiles->execute("SELECT * FROM perfil_usuario");
 ?>
 
 <!DOCTYPE html>
@@ -49,6 +42,7 @@ $dados = $usuarios->buscar(null,' status_usuario ASC');
 
 <body class="control-body-navegacao">
     <?php
+    include "../actions/usuario_listar.php";
     include "./navegacao.php";
     ?>
 
@@ -81,25 +75,25 @@ $dados = $usuarios->buscar(null,' status_usuario ASC');
                         </thead>
                         <tbody>
                             <?php foreach ($dados as $usuario):
-                                $UsuStatus = $usuario->status_usuario == 'ativo' ? 'inactive' : 'active';
+                                // $UsuStatus = $usuario->status_usuario == 'ativo' ? 'inactive' : 'active';
                                 
-                                $id_perfil = $usuarios->listarNomePerfil($usuario->id_perfil);
+                                // $id_perfil = $usuarios->listarNomePerfil($usuario->id_perfil);
                             ?>
                             <tr>
-                                <td class="matricula-ajuste" scope="col"> <?= $usuario->nome ?> </td>
-                                <td class="matricula-ajuste" scope="col"> <?= $usuario->email ?> </td>
-                                <td class="perfil-ajuste" scope="col"> <?= $id_perfil['nome'] ?> </td>
+                                <td class="matricula-ajuste" scope="col"> <?= '--TESTE--' //$usuario->nome ?> </td>
+                                <td class="matricula-ajuste" scope="col"> <?= '--TESTE--' //$usuario->email ?> </td>
+                                <td class="perfil-ajuste" scope="col"> <?= '--TESTE--' //$id_perfil['nome'] ?> </td>
                                 <td class="perfil-ajuste">SERVIÇO</td>
                                 <td class="editar-inativar-menor" scope="col">
                                     <div class="editar">
-                                        <button class="openEditar" data-id="<?= $usuario->id_usuario ?>">
+                                        <button class="openEditar" data-id="<?= '--TESTE--' //$usuario->id_usuario ?>">
                                             <img src="../../public/img/icons/Group 2924.png" alt="">
                                         </button>
                                     </div>
                                 </td>
                                 <td class="editar-inativar-menor" scope="col">
-                                    <div class="openInativarAtivar" data-id="<?= $usuario->id_usuario ?>">
-                                        <button class="toggle-btn <?= $UsuStatus ?>">
+                                    <div class="openInativarAtivar" data-id="<?= '--TESTE--' //$usuario->id_usuario ?>">
+                                        <button class="toggle-btn <?= '--TESTE--' //$UsuStatus ?>">
                                             <div class="circulo"> </div>
                                         </button>
                                     </div>
@@ -111,7 +105,7 @@ $dados = $usuarios->buscar(null,' status_usuario ASC');
                 </div>
             </div>
             <div class="div-botao-info">
-                <button class="add-func" type="submit" onclick="window.location.href='../../app/admin/view/cadastro_usuario.php';">Novo Funcionario</button>
+                <button class="add-func" type="submit" onclick="window.location.href='./cadastro_usuario.php';">Novo Funcionario</button>
             </div>
         </div>
     </section>

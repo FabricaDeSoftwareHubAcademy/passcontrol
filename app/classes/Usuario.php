@@ -30,10 +30,12 @@ class Usuario {
         return $this->db->insert($values);
     }
 
+    // Função padrao para buscar na tabela usuario
     public function buscar($where = null, $order = null, $limit = null) {
         return $this->db->select($where, $order, $limit)->fetchAll(PDO::FETCH_ASSOC);
     }
     
+    // Função para buscar usuário por ID do usuario
     public function buscar_id_usu($id_usuario){
         $res = new Database("usuario");
         $data = $res->select("id_usuario =".$id_usuario);
@@ -52,11 +54,6 @@ class Usuario {
         } else {
             return false; // Caso contrário, retorna false
         }
-    }
-
-    // Função para buscar usuário por ID
-    public function buscarPorId($id_usuario) {
-        return $this->db->select("id_usuario = $id_usuario");
     }
 
     // Função para atualizar dados do usuário
