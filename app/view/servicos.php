@@ -11,15 +11,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     
     <!-- CSS -->
-    <link rel="stylesheet" href="../../../public/css/AtendentesCadastrados.css">
-    <link rel="stylesheet" href="../../../public/css/navegacao.css">
-    <link rel="stylesheet" href="../../../public/css/monitor-modal.css">
-    <!-- <link rel="stylesheet" href="../../../public/css/servicos.css"> -->
-    <link rel="stylesheet" href="../../../public/css/conteudo.css">
-    <link rel="stylesheet" href="../../../public/modais/ModalCadastrodosServicos/cadastro_servicos_final.css">
-    <link rel="stylesheet" href="../../../public/modais/ModalInativacaoServico/inativacao_servico.css">
-    <link rel="stylesheet" href="../../../public/modais/Modal_Alterar_Dados_Pessoais/alterar_dados_pessoais.css">
-    <link rel="stylesheet" href="../../../public/modais/Modal_Alterar_Senha/alterar_senha.css">
+    <link rel="stylesheet" href="../../public/css/atendentes_cadastrados.css">
+    <link rel="stylesheet" href="../../public/navegacao.css">
+    <link rel="stylesheet" href="../../public/css/monitor_modal.css">
+    <link rel="stylesheet" href="../../public/css/servicos.css">
+    <link rel="stylesheet" href="../../public/css/conteudo.css">
+    <link rel="stylesheet" href="../../public/modais/ModalCadastrodosServicos/cadastro_servicos_final.css">
+    <link rel="stylesheet" href="../../public/modais/ModalInativacaoServico/inativacao_servico.css">
+    <link rel="stylesheet" href="../../public/modais/Modal_Alterar_Dados_Pessoais/alterar_dados_pessoais.css">
+    <link rel="stylesheet" href="../../public/modais/Modal_Alterar_Senha/alterar_senha.css">
 
     <!-- JS -->
     <script src="../../../public/js/navegacao-menu-lateral.js" defer></script>
@@ -63,7 +63,7 @@
             <div class="area-tabela">
                 <div class="sub-area-tabela">
                 <?php
-                    require_once '../../model/Servico.php';
+                    require_once '../classes/Servico.php';
 
                     $servico = new Servico();
                     $servicos = $servico->buscar();
@@ -121,8 +121,9 @@
 
     <!--MONITOR MODAL-->
     <?php
-    include "./monitor-modal.php";
+    include "../../public/modais/";
     ?>
 
 </body>
 </html>
+monitor-modal.php
