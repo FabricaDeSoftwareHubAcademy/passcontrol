@@ -36,6 +36,8 @@
     <script src="../../../public/modais/Modal_Chamar_prox_senha/chamar_prox_senha.js" defer></script>
     <script src="../../../public/modais/Modal_Iniciar_Intervalo/iniciar_intervalo.js" defer></script>
     <script src="../../../public/modais/Modal_Encerrar_Atendimento/encerrar-atendimento.js" defer></script>
+    <script src="../../../public/modais/Modal_Chamar_prox_senha/ler_prox_senha.js" defer></script>
+
 
     <link rel="shortcut icon" type="imagex/png" href="../../../public/img/Logo-Nota-Controlnt.ico">
 </head>
