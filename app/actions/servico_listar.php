@@ -1,5 +1,6 @@
 <?php
-require_once "";
+require_once "../classes/Servico.php";
+
 $serv = new Servico();
-$servicos = $serv->buscar("status_servico = 'ativo'"); //LISTA SERVICOS
+$servicos = $serv->buscar(); //LISTA SERVICOS
 ?>
