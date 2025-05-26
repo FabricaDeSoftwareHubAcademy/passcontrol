@@ -1,16 +1,16 @@
 <?php
-require "../classe/Usuario.php";
+require_once "../classes/Usuario.php";
 
 if(isset($_GET['id'])){
     $id_usuario = $_GET['id'];
 
     $usuarioObj = new Usuario();
 
-    $user_alternar = $usuarioObj->buscar_id_usu($id_usuario);
+    $user_alternar = $usuarioObj->buscar_id_usu($id_usuario)->fetchAll(PDO::FETCH_ASSOC);
 
     if($user_alternar){
         // retorna os dados como um objeto JSON
-        $res = $usuarioObj->alternar_status($user_alternar['id_usuario'], $user_alternar['status_usuario']);
+        $res = $usuarioObj->alternarStatus($user_alternar['id_usuario'], $user_alternar['status_usuario']);
 
         if($res){     
             $resposta = array("status_usuario" => "OK");

@@ -13,7 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="../../public/css/AtendentesCadastrados.css">
+    <link rel="stylesheet" href="../../public/css/listar_usuarios.css">
     <link rel="stylesheet" href="../../public/css/navegacao.css">
     <link rel="stylesheet" href="../../public/css/monitor_modal.css">
     <link rel="stylesheet" href="../../public/css/conteudo.css">
@@ -29,7 +29,7 @@
     <script src="../../public/js/navegacao-menu-lateral.js" defer></script>
     <script src="../../public/js/monitor_modal.js" defer></script>
     <script src="../../public/js/editar_usuario.js" defer></script>
-    <script src="../../public/js/alterar_status_usuario.js" defer></script>
+    <script src="../js/alterar_status_usuario.js" defer></script>
     <script src="../../public/modais/Modal_Alerta_Alteracoes_Realizadas/alerta_alteracoes.js" defer></script>
     <!-- <script src="../../public/js/modal-atendentes-cadastrados.js" defer></script> -->
 
@@ -73,7 +73,7 @@
                         </thead>
                         <tbody>
                             <?php foreach ($dados as $usuario):
-                                $UsuStatus = $usuario["status_usuario"] == '1' ? '0' : '1'; //// REVISAR - NAO FUNCINANDO
+                                $UsuStatus = $usuario["status_usuario"] == 1 ? 0 : 'active';
                                 
                                 $id_perfil = $usuarios->listarNomePerfil($usuario["id_perfil_usuario_fk"]);
                             ?>

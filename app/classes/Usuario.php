@@ -69,7 +69,7 @@ class Usuario {
 
     // Função para alternar o status do usuário
     public function alternarStatus($id_usuario, $status_usuario) {
-        $status_alternar = ($status_usuario == 'ativo') ? 'inativo' : 'ativo';
+        $status_alternar = ($status_usuario == 1) ? 0 : 1;
         return $this->db->update('id_usuario =' . $id_usuario, ['status_usuario' => $status_alternar]);
     }
 

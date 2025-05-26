@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             btnConfirmarAltStatus.addEventListener("click", async function(event){
                 try {
-                    let atualizar_dados = await fetch ('../../controller/usuario_alterar_status.php?id=' + userId, {
+                    let atualizar_dados = await fetch ('../actions/usuario_alterar_status.php?id=' + userId, {
                         method: "GET"
                     });
             
