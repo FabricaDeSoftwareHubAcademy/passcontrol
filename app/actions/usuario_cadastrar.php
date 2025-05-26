@@ -1,5 +1,5 @@
 <?php
-    require '../classes/Usuario.php';
+    require_once '../classes/Usuario.php';
 
     if (($_SERVER['REQUEST_METHOD'] === 'POST')){
   

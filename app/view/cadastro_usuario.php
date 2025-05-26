@@ -1,9 +1,3 @@
-<?php
-require_once '../classes/Usuario.php';
-require_once '../classes/Perfil.php';
-// require_once '../classes/Servico.php';
-?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -20,8 +14,8 @@ require_once '../classes/Perfil.php';
 
     <!-- CSS -->
     <link rel="stylesheet" href="../../public/css/navegacao.css">
-    <link rel="stylesheet" href="../../public/css/monitor-modal.css">
-    <link rel="stylesheet" href="../../public/css/edit_cadastro.css">
+    <link rel="stylesheet" href="../../public/css/monitor_modal.css">
+    <link rel="stylesheet" href="../../public/css/cadastro_usuario.css">
     <link rel="stylesheet" href="../../public/modais/Modal_Alterar_Dados_Pessoais/alterar_dados_pessoais.css">
     <link rel="stylesheet" href="../../public/modais/Modal_Alterar_Senha/alterar_senha.css">
 
@@ -44,7 +38,8 @@ require_once '../classes/Perfil.php';
 <body class="control-body-navegacao">
     <?php
     include "./navegacao.php";
-    include "../actions/listar_perfis_e_servicos.php";
+    include "../actions/perfil_listar.php";
+    include "../actions/servico_listar.php";
     ?>
 
     <section class="Area-Util-Projeto">
@@ -71,7 +66,7 @@ require_once '../classes/Perfil.php';
                 <div class="perfild">
                     <label class="labeledit" for="perfil">Perfil De Acesso
                         <button class="icone_add_servico" id="abrirModalCadastro">
-                            <img src="../../../public/img/icons/add_icon.svg" alt="">
+                            <img src="../../../public/img/icons/add_icon.svg" alt="(+)">
                         </button>
                     </label>
                     <select class="selecao" name="id_perfil_usuario" required>
@@ -97,8 +92,8 @@ require_once '../classes/Perfil.php';
                     foreach ($servicos as $servico) {
                     ?>
                         <label class="customizado">
-                            <input type="checkbox" class="item" id="checkbox1" value="<?= $servico["id_servico"] ?>">
-                            <span class="teste"></span> <?= $servico['nome_servico'] ?>
+                            <input type="checkbox" class="item" id="checkbox1" value="<?= $servico->id_servico ?>">
+                            <span class="teste"></span> <?= $servico->nome_servico ?>
                         </label>
                     <?php
                     }
@@ -116,7 +111,7 @@ require_once '../classes/Perfil.php';
         </div>
 
         <?php
-        include "./monitor-modal.php";
+        include "./monitor_modal.php";
         include "../../public/modais/Modal_Confirmacao_dos_Dados_Registrados/confirmacao_dados_registrados.php";
         include "../../public/modais/Modal_Confirmacao_dos_Dados/confirmacao_dados.php";
         ?>
