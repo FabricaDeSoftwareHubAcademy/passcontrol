@@ -11,21 +11,21 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     
     <!-- CSS -->
-    <link rel="stylesheet" href="../../../public/css/AtendentesCadastrados.css">
-    <link rel="stylesheet" href="../../../public/css/navegacao.css">
-    <link rel="stylesheet" href="../../../public/css/monitor-modal.css">
+    <link rel="stylesheet" href="../../public/css/Atendentes_Cadastrados.css">
+    <link rel="stylesheet" href="../../public/css/navegacao.css">
+    <link rel="stylesheet" href="../../public/css/monitor-modal.css">
     <!-- <link rel="stylesheet" href="../../../public/css/servicos.css"> -->
-    <link rel="stylesheet" href="../../../public/css/conteudo.css">
-    <link rel="stylesheet" href="../../../public/modais/ModalCadastrodosServicos/cadastro_servicos_final.css">
-    <link rel="stylesheet" href="../../../public/modais/ModalInativacaoServico/inativacao_servico.css">
-    <link rel="stylesheet" href="../../../public/modais/Modal_Alterar_Dados_Pessoais/alterar_dados_pessoais.css">
-    <link rel="stylesheet" href="../../../public/modais/Modal_Alterar_Senha/alterar_senha.css">
+    <link rel="stylesheet" href="../../public/css/conteudo.css">
+    <link rel="stylesheet" href="../../public/modais/Modal_Cadastros_dos_Servicos/cadastro_servicos_final.css">
+    <link rel="stylesheet" href="../../public/modais/ModalInativacaoServico/inativacao_servico.css">
+    <link rel="stylesheet" href="../../public/modais/Modal_Alterar_Dados_Pessoais/alterar_dados_pessoais.css">
+    <link rel="stylesheet" href="../../public/modais/Modal_Alterar_Senha/alterar_senha.css">
 
     <!-- JS -->
-    <script src="../../../public/js/navegacao-menu-lateral.js" defer></script>
-    <script src="../../../public/js/monitor-modal.js" defer></script>
-    <script src="../../../public/modais/ModalCadastrodosServicos/cadastro_servicos.js" defer></script>
-    <script src="../../../public/js/TesteInativar.js" defer></script>
+    <script src="../../public/js/navegacao-menu-lateral.js" defer></script>
+    <script src="../../public/js/monitor-modal.js" defer></script>
+    <script src="../../public/modais/ModalCadastrodosServicos/cadastro_servicos.js" defer></script>
+    <script src="../../public/js/TesteInativar.js" defer></script>
 
 
     <link rel="shortcut icon" type="imagex/png" href="../../../public/img/Logo-Nota-Controlnt.ico">
@@ -36,15 +36,15 @@
     <?php
     include "./navegacao.php";
 
-    include "../../../public/modais/ModalCadastrodosServicos/cadastro_servicos.php";
+    include "../../public/modais/Modal_Cadastros_dos_Servicos/cadastro_servicos.php";
 
-    include "../../../public/modais/ModalInativacaoServico/inativacao_servico.php";
+    include "../../public/modais/ModalInativacaoServico/inativacao_servico.php";
 
-    include "../../../public/modais/ModalAtivacaoServico/ativacao_servico.php";
+    include "../../public/modais/ModalAtivacaoServico/ativacao_servico.php";
 
-    include '../../../public/modais/ModalCadastrodosServicos/confirmacao_dados_registrados.php'; 
+    include '../../public/modais/ModalCadastrodosServicos/confirmacao_dados_registrados.php'; 
 
-    include '../../../public/modais/ModalCadastrodosServicos/confirmacao_dados.php'; 
+    include '../../public/modais/ModalCadastrodosServicos/confirmacao_dados.php'; 
     
     ?>
     <section class="Area-Util-Projeto">
@@ -63,7 +63,7 @@
             <div class="area-tabela">
                 <div class="sub-area-tabela">
                 <?php
-                    require_once '../../model/Servico.php';
+                    require_once '../classes/Servico.php';
 
                     $servico = new Servico();
                     $servicos = $servico->buscar();
