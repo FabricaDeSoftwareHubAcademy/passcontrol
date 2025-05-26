@@ -15,16 +15,16 @@
 
 
     <!-- CSS -->
-    <link rel="stylesheet" href="../../../public/css/tela_autoatendimentoPage4.css">
+    <link rel="stylesheet" href="../../public/css/tela_autoatendimento_page4.css"> <!-- ( Atualização de caminho e renomeando o nome da pasta para letras minúsculas ) -->
 
-    <link rel="shortcut icon" type="imagex/png" href="../../../public/img/Logo-Nota-Controlnt.ico">
+    <link rel="shortcut icon" type="imagex/png" href="../../public/img/Logo-Nota-Controlnt.ico"> <!-- ( Atualização de caminho ) -->
 </head>
 
 <body>
     <header class="head">
         <nav class="nav-head">
             <div class="logo-control">
-                <img src="../../../public/img/icons/logo control.svg" alt="LOGOCONTROL" id="img-logo">
+                <img src="../../public/img/icons/logo control.svg" alt="LOGOCONTROL" id="img-logo"> <!-- ( Atualização de caminho ) -->
             </div>
             <H3>PassControl</H3>
     </header>
@@ -50,7 +50,7 @@
 
             <div class="footer">
                 <button class="button">
-                    <a href="../../usuario/view/tela_autoatendimentoPage1.php" class="btn-finalizar">FINALIZAR</a>
+                    <a href="../../app/view/tela_autoatendimento_page1.php" class="btn-finalizar">FINALIZAR</a> <!-- ( Atualização de caminho e renomeando o nome da pasta para letras minúsculas ) -->
                 </button>
             </div>
 
@@ -58,7 +58,7 @@
 
     </main>
 
-    <script src="../../../public/js/tela_autoatendimentoPage4.js"></script>
-    <script src="../../../public/js/enviarDadosFilaSenha.js"></script>
+    <script src="../../public/js/tela_autoatendimento_page4.js"></script> <!-- ( Atualização de caminho e renomeando o nome da pasta para letras minúsculas ) -->
+    <script src="../../public/js/enviarDadosFilaSenha.js"></script> <!-- ( Atualização de caminho ) -->
 </body>
 </html>

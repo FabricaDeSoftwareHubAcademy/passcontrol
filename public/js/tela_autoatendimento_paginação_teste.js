@@ -1,22 +1,22 @@
 // Lista de serviços disponíveis
 const servicos = [
-    { img: "../../../public/img/icons/iptu_img.svg", title: "IPTU" },
-    { img: "../../../public/img/icons/iluminaçao_img.png", title: "Iluminação Pública" },
-    { img: "../../../public/img/icons/conselho_img.png", title: "Conselho Municipal" },
-    { img: "../../../public/img/icons/fiscalizaçao_img.png", title: "Fiscalização" },
-    { img: "../../../public/img/icons/ouvidoria_img.png", title: "Ouvidoria" },
-    { img: "../../../public/img/icons/poda-arvores_img.png", title: "Poda de Árvores" },
-    { img: "../../../public/img/icons/licença_img.png", title: "Licenças" },
-    { img: "../../../public/img/icons/negociaçao_img.png", title: "Negociação" },
-    { img: "../../../public/img/icons/limpeza_img.png", title: "Limpeza" },
-    { img: "../../../public/img/icons/transporte_img.png", title: "Transporte" },
-    { img: "../../../public/img/icons/agua_img.png", title: "Água" },
-    { img: "../../../public/img/icons/energia_img.png", title: "Energia" },
+    { img: "../../public/img/icons/iptu_img.svg", title: "IPTU" }, // ( Atualização de caminho )
+    { img: "../../public/img/icons/iluminaçao_img.png", title: "Iluminação Pública" }, // ( Atualização de caminho )
+    { img: "../../public/img/icons/conselho_img.png", title: "Conselho Municipal" }, // ( Atualização de caminho )
+    { img: "../../public/img/icons/fiscalizaçao_img.png", title: "Fiscalização" }, // ( Atualização de caminho )
+    { img: "../../public/img/icons/ouvidoria_img.png", title: "Ouvidoria" }, // ( Atualização de caminho )
+    { img: "../../public/img/icons/poda-arvores_img.png", title: "Poda de Árvores" }, // ( Atualização de caminho )
+    { img: "../../public/img/icons/licença_img.png", title: "Licenças" }, // ( Atualização de caminho )
+    { img: "../../public/img/icons/negociaçao_img.png", title: "Negociação" }, // ( Atualização de caminho )
+    { img: "../../public/img/icons/limpeza_img.png", title: "Limpeza" }, // ( Atualização de caminho )
+    { img: "../../public/img/icons/transporte_img.png", title: "Transporte" }, // ( Atualização de caminho )
+    { img: "../../public/img/icons/agua_img.png", title: "Água" }, // ( Atualização de caminho )
+    { img: "../../public/img/icons/energia_img.png", title: "Energia" }, // ( Atualização de caminho )
 
 ];
 
 // Configuração da paginação
-const itensPorPagina = 10;
+const itensPorPagina = 8;
 let paginaAtual = 1;
 
 const boxContainer = document.getElementById("box-container");
@@ -36,7 +36,7 @@ function renderizarPagina(pagina) {
     // Adiciona os itens ao HTML
     itensPagina.forEach(servico => {
         const box = document.createElement("a");
-        box.href = "../../usuario/view/tela_autoatendimentoPage2.php"; //destino do link
+        box.href = "#"; //destino do link
         box.classList.add("box"); //css do .box
 
         box.innerHTML = `
