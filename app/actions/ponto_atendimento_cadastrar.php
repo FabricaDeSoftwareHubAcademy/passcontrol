@@ -1,5 +1,5 @@
 <?php
-require_once '../classes/PontoAtendimento.php';
+require_once '../../classes/PontoAtendimento.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
