@@ -1,0 +1,232 @@
+corpo do modal inteiro
+.modal-container,
+.container-modal-confirmacao,
+.container-modal-sucesso {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    min-height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+
+/* corpo que fica os inputs dentro */
+.modal-1{
+    background-color: #cfcfcf;
+    width: 60%;
+    max-width: 600px;
+    padding: 30px;
+    border-radius: 5px;
+    text-align: center;
+    position: relative;
+    text-align: left;
+    /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); */
+}
+.modal-2,.modal-3{
+    background-color: #e0e0e0;
+    padding: 25px;
+    width: 90%;
+    max-width: 500px;
+    min-height: 220px;
+    border-radius: 8px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* logo dos três modais */
+.logo,
+.logo-confirmacao,
+.logo-sucesso {
+    position: absolute;
+    top: 10px;
+    right: 30px;
+    width: 60px;
+}
+
+
+/* titulo dos três modais */
+.title {
+    /* position: relative; */
+    font-size: 22px;
+    margin-bottom: 15px;
+    right: 125px;
+}
+.titulo,.modal-title{
+    position: relative;
+    font-size: 22px;
+    margin-bottom: 15px;
+    right: 160px;
+}
+
+
+/* linha abaixo do titulo do modal */
+.divider,.linha,.modal-divider {
+    border: none;
+    border-top: 2px solid #000;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+/* configuração dos inputs do modal cadastro dos serviços */
+.inf-modal{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+.container {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.container:last-child {
+    margin-right: 0;
+}
+.file-input-field{
+    display: flex;
+    align-items: center; 
+}
+.label{
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px; 
+}
+.servico{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+.label_serv{
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.input-number,
+.file-input-field,
+.input-text{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: white; 
+    cursor: pointer;
+}
+
+
+/* botão dos três modais */
+.button-group{
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+}
+
+.botao-modal-salvo, .botao-modal-cancela{
+    background-color: #33404D;
+    color: white;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 10px 20px;
+    width: 120px;
+    text-align: center;
+    position: relative;
+    top: 5px;
+}
+.botao-modal{
+    background-color: #33404D;
+    color: white;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 10px 20px;
+    width: 120px;
+    text-align: center;
+    position: relative;
+    top: 25px;
+}
+
+
+.botao-modal-cancela:hover {
+    color: #FF0000;
+}
+#cancelarConfirmacao:hover {
+    color: #FF0000;
+}
+#confirmarSalvar:hover {
+    color: #3AA867;
+}
+.botao-modal-salvo:hover {
+    color: #3AA867;
+}
+
+#fecharSucesso:hover {
+    color: #3AA867;
+}
+
+.modal-message, .texto{
+    font-size: 16px;
+    margin-bottom: 25px;
+    position: relative;
+    top: 10px;
+    left: -10px;
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 480px) {
+    .modal,
+    .estrutura-modal-confirmacao,
+    .estrutura-modal-sucesso {
+        width: 90%;
+        padding: 20px 15px;
+    }
+
+    .logo,
+    .logo-confirmacao,
+    .logo-sucesso {
+        width: 50px;
+        top: 10px;
+        right: 15px;
+    }
+
+    .titulo,
+    .modal-title,
+    .titulo-modal-confirmacao,
+    .titulo-modal-sucesso {
+        font-size: 18px;
+    }
+
+    .texto,
+    .modal-message,
+    .texto-modal-confirmacao,
+    .mensagem-modal-sucesso {
+        font-size: 14px;
+    }
+
+    .botao-modal,
+    .botao-confirmacao,
+    .botao-sucesso {
+        font-size: 13px;
+        padding: 8px 18px;
+        min-width: unset;
+        flex: 1;
+    }
+
+    .button-group,
+    .grupo-botoes-confirmacao,
+    .grupo-botoes-sucesso {
+        flex-direction: column;
+        gap: 12px;
+    }
+}
