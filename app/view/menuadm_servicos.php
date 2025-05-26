@@ -12,30 +12,29 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="../../../public/css/navegacao.css">
-    <link rel="stylesheet" href="../../../public/css/monitor-modal.css">
-    <link rel="stylesheet" href="../../../public/css/style_eli.css">
-    <link rel="stylesheet" href="../../../public/modais/Modal_Alterar_Dados_Pessoais/alterar_dados_pessoais.css">
-    <link rel="stylesheet" href="../../../public/modais/Modal_Alterar_Senha/alterar_senha.css">
-    <link rel="stylesheet" href="../../../public/modais/ModalCadastrodosServicos/cadastro_servicos_final.css">
-    <link rel="stylesheet" href="../../../public/modais/Modal_Cadastro_Ponto_Atendimento/cadastro_ponto_atendimento.css">
-    <link rel="stylesheet" href="../../../public/modais/ModalConfirmaDados/estilo.css">
+    <link rel="stylesheet" href="../../public/css/navegacao.css">
+    <link rel="stylesheet" href="../../public/css/monitor-modal.css">
+    <link rel="stylesheet" href="../../public/css/style_eli.css">
+    <link rel="stylesheet" href="../../public/modais/Modal_Alterar_Dados_Pessoais/alterar_dados_pessoais.css">
+    <link rel="stylesheet" href="../../public/modais/Modal_Alterar_Senha/alterar_senha.css">
+    <link rel="stylesheet" href="../../public/modais/ModalCadastrodosServicos/cadastro_servicos_final.css">
+    <link rel="stylesheet" href="../../public/modais/Modal_Cadastro_Ponto_Atendimento/cadastro_ponto_atendimento.css">
+    <link rel="stylesheet" href="../../public/modais/ModalConfirmaDados/estilo.css">
     
     <!-- JS -->
-    <script src="../../../public/js/navegacao-menu-lateral.js" defer></script>
-    <script src="../../../public/js/monitor-modal.js" defer></script>
+    <script src="../../public/js/navegacao-menu-lateral.js" defer></script>
+    <script src="../../public/js/monitor-modal.js" defer></script>
     <!-- <script src="../../../public/js/modal_cadastro_guiche_adm.js" defer></script> -->
-    <script src="../../../public/modais/ModalCadastrodosServicos/cadastro_servicos.js" defer></script>
+    <script src="../../public/modais/ModalCadastrodosServicos/cadastro_servicos.js" defer></script>
 
 
-
-    <link rel="shortcut icon" type="imagex/png" href="../../../public/img/Logo-Nota-Controlnt.ico">
+    <link rel="shortcut icon" type="imagex/png" href="../../public/img/Logo-Nota-Controlnt.ico">
 </head>
 
 <body class="control-body-navegacao">
     <?php
     include "./navegacao.php";
-    include "../../../public/modais/ModalCadastrodosServicos/cadastro_servicos.php";
+    include "../../public/modais/ModalCadastrodosServicos/cadastro_servicos.php";
     ?>
     <section class="Area-Util-Projeto">
         <!-- navmenu -->
@@ -68,7 +67,7 @@
                     <div class="wrapper">
                         <a href="PontoAtendimentoCad.php">
                         <div class="banner-img">
-                            <img src="../../../public/img/img-menu/pontodeatendimento.png" alt="">
+                            <img src="../../public/img/img-menu/pontodeatendimento.png" alt="">
                         </div>
                         </a>
                         <!-- <h3 class="titulo-card">Atendimento</h3> -->
@@ -76,7 +75,7 @@
 
                     </div>
                     <div class="button-wrapper">
-                        <button class="btn outline" onclick="window.location.href='PontoAtendimentoCad.php';">Listar Ponto de Atendimento</button>
+                        <button class="btn outline" onclick="window.location.href='ponto_atendimento.php';">Listar Ponto de Atendimento</button>
                     </div>
                 </div>
 
@@ -84,7 +83,7 @@
                     <div  class="wrapper">
                         <!-- <a href="" id="img_cadastrar_adm"> -->
                         <div class="banner-img">
-                            <img src="../../../public/img/img-menu/listar-giche.png" alt="">
+                            <img src="../../public/img/img-menu/listar-giche.png" alt="">
                         </div>
                         <!-- </a> -->
                         <!-- <h3 class="titulo-card">Atendimento</h3> -->
@@ -100,7 +99,7 @@
                     <div class="wrapper">
                         <a href="servicos.php">
                         <div class="banner-img">
-                            <img src="../../../public/img/img-menu/listar-sevico.png" alt="">
+                            <img src="../../public/img/img-menu/listar-sevico.png" alt="">
                         </div>
                         </a>
                         <!-- <h3 class="titulo-produto">Serviços</h3> -->
@@ -114,7 +113,7 @@
                 <div class="container_menu" id="abrirModalCadastro">
                     <div class="wrapper" >
                         <div class="banner-img">
-                            <img src="../../../public/img/img-menu/serviços.png" alt="">
+                            <img src="../../public/img/img-menu/serviços.png" alt="">
                         </div>
                         <!-- <h3 class="titulo-produto">Serviços</h3> -->
                         <!-- <p>Gestão dos serviços</p> -->
@@ -135,7 +134,7 @@
     <!-- INCLUINDO O MODAL DE CADASTRO DE PONTO DE ATENDIMENTO - GUICHES!!!!!!  -->
     <div class="fundo-container-cad-ponto-atendimento">
         <section class="modal-ponto-atendimento">
-            <img src="../../../public/img/img-modais/Logo Nota Controlnt.png" alt="Logo Nota Control" class="logo-ponto-atendimento">
+            <img src="../../public/img/img-modais/Logo Nota Controlnt.png" alt="Logo Nota Control" class="logo-ponto-atendimento">
             <h1 class="titulo-ponto-atendimento">Cadastrar Ponto de Atendimento</h1>
 
             <hr class="linha-horizontal-ponto-atendimento">
@@ -165,7 +164,7 @@
     <!-- confirmacao -->
     <div id="confirma"  class="modal-confirma-container">
         <section class="modal">
-            <img src="../../../public/img/img-modais/Logo Nota Controlnt.png" alt="Logo Nota Control" class="logo">
+            <img src="../../public/img/img-modais/Logo Nota Controlnt.png" alt="Logo Nota Control" class="logo">
             <h1 class="modal-title">Confirmação</h1>
             <hr class="modal-divider">
             <p class="modal-message"><b>Ponto de Atendimento cadastrado com sucesso!</b></p>
@@ -237,7 +236,7 @@
             const formData = new FormData(myform);
 
 
-            let dados2_php = await fetch("../../CLASSE/cadastrar_guiche.php", {
+            let dados2_php = await fetch("../actions/ponto_atendimento_cadastrar.php", {
                 method: 'POST',
                 body: formData
             });
@@ -245,7 +244,7 @@
             let response = await dados2_php.json();
 
             if (response.status == 'ok') {
-                window.location.href = "./PontoAtendimentoCad.php";
+                window.location.href = "./ponto_atendimento.php";
             }
         });
     });
