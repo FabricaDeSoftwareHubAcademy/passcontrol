@@ -12,23 +12,23 @@
     
     <!-- CSS -->
     <link rel="stylesheet" href="../../public/css/atendentes_cadastrados.css">
-    <link rel="stylesheet" href="../../public/navegacao.css">
+    <link rel="stylesheet" href="../../public/css/navegacao.css">
     <link rel="stylesheet" href="../../public/css/monitor_modal.css">
     <link rel="stylesheet" href="../../public/css/servicos.css">
     <link rel="stylesheet" href="../../public/css/conteudo.css">
-    <link rel="stylesheet" href="../../public/modais/ModalCadastrodosServicos/cadastro_servicos_final.css">
-    <link rel="stylesheet" href="../../public/modais/ModalInativacaoServico/inativacao_servico.css">
+    <link rel="stylesheet" href="../../public/modais/Modal_Cadastrodos_Servicos/cadastro_servicos_final.css">
+    <link rel="stylesheet" href="../../public/modais/Modal_Inativacao_Servico/inativacao_servico.css">
     <link rel="stylesheet" href="../../public/modais/Modal_Alterar_Dados_Pessoais/alterar_dados_pessoais.css">
     <link rel="stylesheet" href="../../public/modais/Modal_Alterar_Senha/alterar_senha.css">
 
     <!-- JS -->
-    <script src="../../../public/js/navegacao-menu-lateral.js" defer></script>
-    <script src="../../../public/js/monitor-modal.js" defer></script>
-    <script src="../../../public/modais/ModalCadastrodosServicos/cadastro_servicos.js" defer></script>
-    <script src="../../../public/js/TesteInativar.js" defer></script>
+    <script src="../../public/js/navegacao-menu-lateral.js" defer></script>
+    <script src="../../public/js/monitor-modal.js" defer></script>
+    <script src="../../public/modais/Modal_Cadastrodos_Servicos/cadastro_servicos.js" defer></script>
+    <script src="../../public/js/TesteInativar.js" defer></script>
 
 
-    <link rel="shortcut icon" type="imagex/png" href="../../../public/img/Logo-Nota-Controlnt.ico">
+    <link rel="shortcut icon" type="imagex/png" href="../../public/img/Logo-Nota-Controlnt.ico">
 
 </head>
 
@@ -36,15 +36,15 @@
     <?php
     include "./navegacao.php";
 
-    include "../../../public/modais/ModalCadastrodosServicos/cadastro_servicos.php";
+    include "../../public/modais/Modal_Cadastrodos_Servicos/cadastro_servicos.php";
 
-    include "../../../public/modais/ModalInativacaoServico/inativacao_servico.php";
+    include "../../public/modais/Modal_Inativacao_Servico/inativacao_servico.php";
 
-    include "../../../public/modais/ModalAtivacaoServico/ativacao_servico.php";
+    include "../../public/modais/Modal_Ativacao_Servico/ativacao_servico.php";
 
-    include '../../../public/modais/ModalCadastrodosServicos/confirmacao_dados_registrados.php'; 
+    include '../../public/modais/Modal_Cadastrodos_Servicos/confirmacao_dados_registrados.php'; 
 
-    include '../../../public/modais/ModalCadastrodosServicos/confirmacao_dados.php'; 
+    include '../../public/modais/Modal_Cadastrodos_Servicos/confirmacao_dados.php'; 
     
     ?>
     <section class="Area-Util-Projeto">
@@ -94,7 +94,7 @@
                                             data-id="<?= $serv->id_servico ?>" 
                                             data-codigo="<?= $serv->codigo_servico ?>" 
                                             data-nome="<?= $serv->nome_servico ?>">
-                                            <img src="../../../public/img/icons/Group 2924.png" alt="">
+                                            <img src="../../public/img/icons/Group_2924.png" alt="">
                                         </button>
                                     </div>
                                 </td>
