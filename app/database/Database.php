@@ -50,9 +50,9 @@ class Database {
     }
 
 
-    public function login($email, $senha) {
-        $verificar = $this->conn->prepare("SELECT id_usuario, senha_usuario FROM usuario WHERE email_usuario = :e");
-        $verificar->bindValue(":e", $email);
+    public function login($cpf, $senha) {
+        $verificar = $this->conn->prepare("SELECT id_usuario, senha_usuario FROM usuario WHERE cpf_usuario = :e");
+        $verificar->bindValue(":e", $cpf);
         $verificar->execute();
         
         if ($verificar->rowCount() > 0) {

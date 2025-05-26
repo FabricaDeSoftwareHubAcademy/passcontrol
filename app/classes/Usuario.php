@@ -42,12 +42,12 @@ class Usuario {
    }
 
     // Função para realizar o login
-    public function logar($email, $senha) {
-        $res = $this->db->login($email, $senha);
+    public function logar($cpf, $senha) {
+        $res = $this->db->login($cpf, $senha);
 
         if ($res) {
             // Se o login foi bem-sucedido, redireciona para a página de atendimento
-            header("Location: ./app/admin/view/atendimento.php");
+            header("Location: ./app/view/atendimento.php");
             exit(); // Sempre use exit() após header() para garantir que o código não continue a ser executado
         } else {
             return false; // Caso contrário, retorna false
