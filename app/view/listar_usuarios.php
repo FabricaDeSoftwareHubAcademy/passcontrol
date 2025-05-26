@@ -32,7 +32,7 @@
     
     <!-- JS -->
     <script src="../../public/js/navegacao-menu-lateral.js" defer></script>
-    <script src="../../public/js/monitor-modal.js" defer></script>
+    <script src="../../public/js/monitor_modal.js" defer></script>
     <script src="../../public/js/editar_usuario.js" defer></script>
     <script src="../../public/js/alterar_status_usuario.js" defer></script>
     <script src="../../public/modais/Modal_Alerta_Alteracoes_Realizadas/alerta_alteracoes.js" defer></script>
@@ -78,15 +78,14 @@
                         </thead>
                         <tbody>
                             <?php foreach ($dados as $usuario):
-                                $UsuStatus = $usuario["status_usuario"] == '1' ? '0' : '1';
+                                $UsuStatus = $usuario["status_usuario"] == '1' ? '0' : '1'; //// REVISAR - NAO FUNCINANDO
                                 
-                                // $id_perfil = $usuarios->listarNomePerfil($usuario->id_perfil);
-                                // print_r($usuario["nome_usuario"]);
+                                $id_perfil = $usuarios->listarNomePerfil($usuario["id_perfil_usuario_fk"]);
                             ?>
                             <tr>
                                 <td class="matricula-ajuste" scope="col"> <?= $usuario['nome_usuario'] ?> </td>
                                 <td class="matricula-ajuste" scope="col"> <?= $usuario['email_usuario'] ?> </td>
-                                <td class="perfil-ajuste" scope="col"> <?= '--TESTE--' //$id_perfil['nome_perfil_usuario'] ?> </td>
+                                <td class="perfil-ajuste" scope="col"> <?= $id_perfil['nome_perfil_usuario'] ?> </td>
                                 <td class="perfil-ajuste">SERVIÇO</td>
                                 <td class="editar-inativar-menor" scope="col">
                                     <div class="editar">

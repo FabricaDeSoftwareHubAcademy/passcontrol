@@ -89,7 +89,7 @@ class Usuario {
     // Função para listar perfil de usuário com base no ID do perfil
     public function listarNomePerfil($id_perfil) {
         $db = new Database('perfil_usuario');
-        return $db->select("id_perfil = $id_perfil");
+        return $db->select("id_perfil_usuario = $id_perfil")->fetch(PDO::FETCH_ASSOC);
     }
 }
 
