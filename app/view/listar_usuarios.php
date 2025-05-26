@@ -20,7 +20,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="../../public/css/AtendentesCadastrados.css">
     <link rel="stylesheet" href="../../public/css/navegacao.css">
-    <link rel="stylesheet" href="../../public/css/monitor-modal.css">
+    <link rel="stylesheet" href="../../public/css/monitor_modal.css">
     <link rel="stylesheet" href="../../public/css/conteudo.css">
     <link rel="stylesheet" href="../../public/modais/Modal_Alterar_Dados_Pessoais/alterar_dados_pessoais.css">
     <link rel="stylesheet" href="../../public/modais/Modal_Alterar_Senha/alterar_senha.css">
@@ -28,6 +28,7 @@
     <link rel="stylesheet" href="../../public/modais/Modal_Confirmacao_dos_Dados_Registrados/confirmacao_dados_registrados.css">
     <link rel="stylesheet" href="../../public/modais/Modal_Confirmacao_dos_Dados/confirmacao_dados.css">    
     <link rel="stylesheet" href="../../public/modais/Modal_Alerta_Alteracoes_Realizadas/alerta_alteracoes.css">
+    <link rel="stylesheet" href="../../public/css/tabela.css">
     
     <!-- JS -->
     <script src="../../public/js/navegacao-menu-lateral.js" defer></script>
@@ -43,6 +44,8 @@
 <body class="control-body-navegacao">
     <?php
     include "../actions/usuario_listar.php";
+    include "../actions/perfil_listar.php";
+    // include "../actions/servico_listar.php";
     include "./navegacao.php";
     ?>
 
@@ -75,25 +78,26 @@
                         </thead>
                         <tbody>
                             <?php foreach ($dados as $usuario):
-                                // $UsuStatus = $usuario->status_usuario == 'ativo' ? 'inactive' : 'active';
+                                $UsuStatus = $usuario["status_usuario"] == '1' ? '0' : '1';
                                 
                                 // $id_perfil = $usuarios->listarNomePerfil($usuario->id_perfil);
+                                // print_r($usuario["nome_usuario"]);
                             ?>
                             <tr>
-                                <td class="matricula-ajuste" scope="col"> <?= '--TESTE--' //$usuario->nome ?> </td>
-                                <td class="matricula-ajuste" scope="col"> <?= '--TESTE--' //$usuario->email ?> </td>
-                                <td class="perfil-ajuste" scope="col"> <?= '--TESTE--' //$id_perfil['nome'] ?> </td>
+                                <td class="matricula-ajuste" scope="col"> <?= $usuario['nome_usuario'] ?> </td>
+                                <td class="matricula-ajuste" scope="col"> <?= $usuario['email_usuario'] ?> </td>
+                                <td class="perfil-ajuste" scope="col"> <?= '--TESTE--' //$id_perfil['nome_perfil_usuario'] ?> </td>
                                 <td class="perfil-ajuste">SERVIÇO</td>
                                 <td class="editar-inativar-menor" scope="col">
                                     <div class="editar">
-                                        <button class="openEditar" data-id="<?= '--TESTE--' //$usuario->id_usuario ?>">
+                                        <button class="openEditar" data-id="<?= $usuario["id_usuario"] ?>">
                                             <img src="../../public/img/icons/Group 2924.png" alt="">
                                         </button>
                                     </div>
                                 </td>
                                 <td class="editar-inativar-menor" scope="col">
-                                    <div class="openInativarAtivar" data-id="<?= '--TESTE--' //$usuario->id_usuario ?>">
-                                        <button class="toggle-btn <?= '--TESTE--' //$UsuStatus ?>">
+                                    <div class="openInativarAtivar" data-id="<?= $usuario["id_usuario"] ?>">
+                                        <button class="toggle-btn <?= $UsuStatus ?>">
                                             <div class="circulo"> </div>
                                         </button>
                                     </div>
@@ -116,7 +120,7 @@
     include "../../public/modais/Modal_Confirmacao_dos_Dados_Registrados/confirmacao_dados_registrados.php";
     include "../../public/modais/Modal_Confirmacao_dos_Dados/confirmacao_dados.php";
     include "../../public/modais/Modal_Alerta_Alteracoes_Realizadas/alerta_alteracoes.php";
-    include "./monitor-modal.php";
+    include "./monitor_modal.php";
     ?>
 
 

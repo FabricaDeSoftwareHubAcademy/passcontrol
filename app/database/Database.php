@@ -33,7 +33,7 @@ class Database {
             $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             // echo "Conectado com sucesso";
         }catch(PDOException $err){
-            die("Connection Failed". $err->getMessage());
+            die("Connection Failed: ". $err->getMessage());
         }
     }
 

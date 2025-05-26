@@ -38,7 +38,7 @@ class Usuario {
     // Função para buscar usuário por ID do usuario
     public function buscar_id_usu($id_usuario){
         $res = new Database("usuario");
-        $data = $res->select("id_usuario =".$id_usuario);
+        $data = $res->select("id_perfil_usuario_fk =".$id_usuario);
         
         return $data;
    }
