@@ -15,7 +15,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="../../public/css/navegacao.css">
     <link rel="stylesheet" href="../../public/css/monitor_modal.css">
-    <link rel="stylesheet" href="../../public/css/edit_cadastro.css">
+    <link rel="stylesheet" href="../../public/css/cadastro_usuario.css">
     <link rel="stylesheet" href="../../public/modais/Modal_Alterar_Dados_Pessoais/alterar_dados_pessoais.css">
     <link rel="stylesheet" href="../../public/modais/Modal_Alterar_Senha/alterar_senha.css">
 
@@ -66,7 +66,7 @@
                 <div class="perfild">
                     <label class="labeledit" for="perfil">Perfil De Acesso
                         <button class="icone_add_servico" id="abrirModalCadastro">
-                            <img src="../../../public/img/icons/add_icon.svg" alt="">
+                            <img src="../../../public/img/icons/add_icon.svg" alt="(+)">
                         </button>
                     </label>
                     <select class="selecao" name="id_perfil_usuario" required>
