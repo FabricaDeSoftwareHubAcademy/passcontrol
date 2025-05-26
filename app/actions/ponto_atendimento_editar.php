@@ -5,7 +5,6 @@ if (isset($_GET['id_ponto_atendimento'])) {
     $id_ponto_atendimento = $_GET['id_ponto_atendimento'];
     $guiche = new Ponto_Atendimento();
     $dadosGuiche = $guiche->buscar_por_id($id_ponto_atendimento);
-
     echo json_encode($dadosGuiche);
 } 
 
