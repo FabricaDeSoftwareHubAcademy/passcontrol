@@ -1,8 +1,3 @@
-<?php
-// $db_profiles = new Database("perfil_usuario");
-// $perfis = $db_profiles->execute("SELECT * FROM perfil_usuario");
-?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 

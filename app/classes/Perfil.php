@@ -13,11 +13,6 @@ class Perfil{
         return $obj;
     }
     
-    // public function buscar_por_id($id_perfil){
-    //     $obj = $this->db->select('$id_perfil =' . $id_perfil)->fetchObject(self::class);
-    //     return $obj;
-    // }
-    
     // public function buscar_por_ativo($ativo){
     //     $db= new Database('perfil');
     //     $ob = $db->select('ativo='.$ativo)->fetchObject(self::class);
