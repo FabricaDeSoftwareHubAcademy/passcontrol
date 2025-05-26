@@ -1,0 +1,41 @@
+@import url(root2.css);
+
+.card-left-login {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-animacao {
+    position: relative;
+    width: 30%;
+    height: 23%;
+}
+
+.imagem-animacao {
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+
+.imagem-animacao-top {
+    z-index: 3;
+    top: 0px;
+    animation: imagem-animacao-top 6s infinite linear;
+}
+
+.imagem-animacao-mid {
+    z-index: 2;
+    top: 25px;
+    animation: imagem-animacao-mid 6s infinite linear;
+}
+
+.imagem-animacao-bot {
+    z-index: 1;
+    top: 50px;
+    animation: imagem-animacao-bot 6s infinite linear;
+}
