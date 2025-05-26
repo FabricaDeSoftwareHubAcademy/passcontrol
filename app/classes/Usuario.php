@@ -30,13 +30,15 @@ class Usuario {
         return $this->db->insert($values);
     }
 
+    // Função padrao para buscar na tabela usuario
     public function buscar($where = null, $order = null, $limit = null) {
         return $this->db->select($where, $order, $limit)->fetchAll(PDO::FETCH_ASSOC);
     }
     
+    // Função para buscar usuário por ID do usuario
     public function buscar_id_usu($id_usuario){
         $res = new Database("usuario");
-        $data = $res->select("id_usuario =".$id_usuario);
+        $data = $res->select("id_perfil_usuario_fk =".$id_usuario);
         
         return $data;
    }
@@ -52,11 +54,6 @@ class Usuario {
         } else {
             return false; // Caso contrário, retorna false
         }
-    }
-
-    // Função para buscar usuário por ID
-    public function buscarPorId($id_usuario) {
-        return $this->db->select("id_usuario = $id_usuario");
     }
 
     // Função para atualizar dados do usuário
@@ -92,43 +89,7 @@ class Usuario {
     // Função para listar perfil de usuário com base no ID do perfil
     public function listarNomePerfil($id_perfil) {
         $db = new Database('perfil_usuario');
-        return $db->select("id_perfil = $id_perfil");
+        return $db->select("id_perfil_usuario = $id_perfil")->fetch(PDO::FETCH_ASSOC);
     }
 }
-
-/* 
-require dirname(__DIR__, 2) . './../database/Database.php';
-
-ini_set('display_errors', 1);
-error_reporting(E_ALL);
-
-class Usuario {
-    private $db;
-    
-    public function __construct() {
-        $this->db = new Database('usuarios');
-        }
-        
-        public function cadastrar($nome) {
-            $values = ['nome' => $nome];
-            return $this->db->insert($values);
-            }
-            
-            public function logar($email, $senha){
-                $db = new Database('usuario'); // ou 'usuarios' dependendo do nome da sua tabela
-                $res = $db->login($email, $senha);
-                
-                if ($res) {
-                    // Se o login foi bem-sucedido, redireciona para a página de atendimento
-            header("Location: ./app/admin/view/atendimento.php");
-            exit(); // Sempre use exit() após header() para garantir que o código não continue a ser executado
-            } else {
-                return false; // Caso contrário, retorna false
-        }
-    }
-}
-    
-$db = new Database('usuario'); ##### CÓDIGO ANTIGO #####*/
-    
-
 ?>
