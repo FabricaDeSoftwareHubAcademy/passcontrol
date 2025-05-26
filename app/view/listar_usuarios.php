@@ -1,15 +1,3 @@
-<?php
-require '../classes/Usuario.php';
-
-$usuarios = new Usuario();
-
-$db_profiles = new Database("perfil_usuario");
-$perfis = $db_profiles->execute("SELECT * FROM perfil_usuario");
-
-$dados = $usuarios->buscar(null,' status_usuario ASC');
-
-?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -27,7 +15,7 @@ $dados = $usuarios->buscar(null,' status_usuario ASC');
     <!-- CSS -->
     <link rel="stylesheet" href="../../public/css/AtendentesCadastrados.css">
     <link rel="stylesheet" href="../../public/css/navegacao.css">
-    <link rel="stylesheet" href="../../public/css/monitor-modal.css">
+    <link rel="stylesheet" href="../../public/css/monitor_modal.css">
     <link rel="stylesheet" href="../../public/css/conteudo.css">
     <link rel="stylesheet" href="../../public/modais/Modal_Alterar_Dados_Pessoais/alterar_dados_pessoais.css">
     <link rel="stylesheet" href="../../public/modais/Modal_Alterar_Senha/alterar_senha.css">
@@ -35,10 +23,11 @@ $dados = $usuarios->buscar(null,' status_usuario ASC');
     <link rel="stylesheet" href="../../public/modais/Modal_Confirmacao_dos_Dados_Registrados/confirmacao_dados_registrados.css">
     <link rel="stylesheet" href="../../public/modais/Modal_Confirmacao_dos_Dados/confirmacao_dados.css">    
     <link rel="stylesheet" href="../../public/modais/Modal_Alerta_Alteracoes_Realizadas/alerta_alteracoes.css">
+    <link rel="stylesheet" href="../../public/css/tabela.css">
     
     <!-- JS -->
     <script src="../../public/js/navegacao-menu-lateral.js" defer></script>
-    <script src="../../public/js/monitor-modal.js" defer></script>
+    <script src="../../public/js/monitor_modal.js" defer></script>
     <script src="../../public/js/editar_usuario.js" defer></script>
     <script src="../../public/js/alterar_status_usuario.js" defer></script>
     <script src="../../public/modais/Modal_Alerta_Alteracoes_Realizadas/alerta_alteracoes.js" defer></script>
@@ -49,6 +38,9 @@ $dados = $usuarios->buscar(null,' status_usuario ASC');
 
 <body class="control-body-navegacao">
     <?php
+    include "../actions/usuario_listar.php";
+    include "../actions/perfil_listar.php";
+    // include "../actions/servico_listar.php";
     include "./navegacao.php";
     ?>
 
@@ -81,24 +73,24 @@ $dados = $usuarios->buscar(null,' status_usuario ASC');
                         </thead>
                         <tbody>
                             <?php foreach ($dados as $usuario):
-                                $UsuStatus = $usuario->status_usuario == 'ativo' ? 'inactive' : 'active';
+                                $UsuStatus = $usuario["status_usuario"] == '1' ? '0' : '1'; //// REVISAR - NAO FUNCINANDO
                                 
-                                $id_perfil = $usuarios->listarNomePerfil($usuario->id_perfil);
+                                $id_perfil = $usuarios->listarNomePerfil($usuario["id_perfil_usuario_fk"]);
                             ?>
                             <tr>
-                                <td class="matricula-ajuste" scope="col"> <?= $usuario->nome ?> </td>
-                                <td class="matricula-ajuste" scope="col"> <?= $usuario->email ?> </td>
-                                <td class="perfil-ajuste" scope="col"> <?= $id_perfil['nome'] ?> </td>
+                                <td class="matricula-ajuste" scope="col"> <?= $usuario['nome_usuario'] ?> </td>
+                                <td class="matricula-ajuste" scope="col"> <?= $usuario['email_usuario'] ?> </td>
+                                <td class="perfil-ajuste" scope="col"> <?= $id_perfil['nome_perfil_usuario'] ?> </td>
                                 <td class="perfil-ajuste">SERVIÇO</td>
                                 <td class="editar-inativar-menor" scope="col">
                                     <div class="editar">
-                                        <button class="openEditar" data-id="<?= $usuario->id_usuario ?>">
+                                        <button class="openEditar" data-id="<?= $usuario["id_usuario"] ?>">
                                             <img src="../../public/img/icons/Group 2924.png" alt="">
                                         </button>
                                     </div>
                                 </td>
                                 <td class="editar-inativar-menor" scope="col">
-                                    <div class="openInativarAtivar" data-id="<?= $usuario->id_usuario ?>">
+                                    <div class="openInativarAtivar" data-id="<?= $usuario["id_usuario"] ?>">
                                         <button class="toggle-btn <?= $UsuStatus ?>">
                                             <div class="circulo"> </div>
                                         </button>
@@ -111,7 +103,7 @@ $dados = $usuarios->buscar(null,' status_usuario ASC');
                 </div>
             </div>
             <div class="div-botao-info">
-                <button class="add-func" type="submit" onclick="window.location.href='../../app/admin/view/cadastro_usuario.php';">Novo Funcionario</button>
+                <button class="add-func" type="submit" onclick="window.location.href='./cadastro_usuario.php';">Novo Funcionario</button>
             </div>
         </div>
     </section>
@@ -122,7 +114,7 @@ $dados = $usuarios->buscar(null,' status_usuario ASC');
     include "../../public/modais/Modal_Confirmacao_dos_Dados_Registrados/confirmacao_dados_registrados.php";
     include "../../public/modais/Modal_Confirmacao_dos_Dados/confirmacao_dados.php";
     include "../../public/modais/Modal_Alerta_Alteracoes_Realizadas/alerta_alteracoes.php";
-    include "./monitor-modal.php";
+    include "./monitor_modal.php";
     ?>
 
 

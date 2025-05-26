@@ -1,7 +1,7 @@
 <?php
-require '../classes/Usuario.php';
-require '../classes/Perfil.php';
-// require '../classes/Servico_Refatorar.php';
+require_once '../classes/Usuario.php';
+require_once '../classes/Perfil.php';
+// require_once '../classes/Servico.php';
 ?>
 
 <!DOCTYPE html>

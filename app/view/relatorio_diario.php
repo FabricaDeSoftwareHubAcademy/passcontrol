@@ -22,6 +22,16 @@
     <!-- JS -->
     <script src="../../public/js/navegacao-menu-lateral.js" defer></script>
     <script src="../../public/js/monitor-modal.js" defer></script>
+    <script src="../js/exportacao_relatorio.js"></script>
+    <script src="../js/dashboard_teste.js"></script>
+
+    <!-- SheetJS para Excel -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <!-- jsPDF e AutoTable para PDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.23/jspdf.plugin.autotable.min.js"></script>
+    <!-- ChartJS -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     <link rel="shortcut icon" type="imagex/png" href="../../public/img/Logo-Nota-Controlnt.ico">
 </head>
@@ -48,13 +58,13 @@
                 <div class="containerOptionsLateral">
                     <div class="containerFiltro">
                         <div class="containerTitleFiltro">
-                            <h3>Filtro</h3>
+                            <h3>Filtro/Período</h3>
                         </div>
 
                         <div class="containerPeriodo">
-                            <div class="periodoTitle">
+                            <!-- <div class="periodoTitle">
                                 <h3>Período</h3>
-                            </div>
+                            </div> -->
                             <div class="containerPeriodoFiltro">
                                 <div class="containerInputDate">
                                     <input type="date" class="inputDate1">
@@ -74,7 +84,8 @@
 
                 </div>
                 <div class="containerMainRd">
-
+                    <button onclick="exportarExcel()">Exportar Excel</button>
+                    <button onclick="exportarPDF()">Exportar PDF</button>
                 </div>
             </div>
         </div>
