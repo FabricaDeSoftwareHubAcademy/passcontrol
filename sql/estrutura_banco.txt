@@ -34,7 +34,7 @@ CREATE TABLE `perfil_usuario` (
   `perfil_usuario_created_by_id` int(11) DEFAULT NULL,
   `perfil_usuario_updated_by_id` int(11) DEFAULT NULL,
   PRIMARY KEY (`id_perfil_usuario`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -43,6 +43,7 @@ CREATE TABLE `perfil_usuario` (
 
 LOCK TABLES `perfil_usuario` WRITE;
 /*!40000 ALTER TABLE `perfil_usuario` DISABLE KEYS */;
+INSERT INTO `perfil_usuario` VALUES (1,'admin',1,'2025-05-21 09:16:06','2025-05-21 09:16:06',NULL,NULL),(2,'supervisor',1,'2025-05-21 09:16:06','2025-05-21 09:16:06',NULL,NULL),(3,'atendente',1,'2025-05-21 09:16:06','2025-05-21 09:16:06',NULL,NULL);
 /*!40000 ALTER TABLE `perfil_usuario` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -93,7 +94,7 @@ CREATE TABLE `servico` (
   `servico_created_by_id` int(11) DEFAULT NULL,
   `servico_updated_by_id` int(11) DEFAULT NULL,
   PRIMARY KEY (`id_servico`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -102,6 +103,7 @@ CREATE TABLE `servico` (
 
 LOCK TABLES `servico` WRITE;
 /*!40000 ALTER TABLE `servico` DISABLE KEYS */;
+INSERT INTO `servico` VALUES (1,'Serv_teste','T1','./public/img/Logo-Nota-Controlnt.ico',1,'2025-05-26 11:15:45','2025-05-26 11:15:45',NULL,NULL);
 /*!40000 ALTER TABLE `servico` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -118,8 +120,9 @@ CREATE TABLE `usuario` (
   `email_usuario` varchar(100) NOT NULL,
   `cpf_usuario` char(11) NOT NULL,
   `senha_usuario` varchar(255) NOT NULL,
-  `url_foto_usuario` varchar(255) NOT NULL,
+  `url_foto_usuario` varchar(255) DEFAULT NULL,
   `status_usuario` tinyint(1) DEFAULT 1,
+  `primeiro_login` tinyint(1) DEFAULT 1,
   `usuario_created_in` datetime DEFAULT current_timestamp(),
   `usuario_updated_in` datetime DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `usuario_created_by_id` int(11) DEFAULT NULL,
@@ -130,7 +133,7 @@ CREATE TABLE `usuario` (
   UNIQUE KEY `cpf_usuario` (`cpf_usuario`),
   KEY `id_perfil_usuario_fk` (`id_perfil_usuario_fk`),
   CONSTRAINT `usuario_ibfk_1` FOREIGN KEY (`id_perfil_usuario_fk`) REFERENCES `perfil_usuario` (`id_perfil_usuario`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -139,6 +142,7 @@ CREATE TABLE `usuario` (
 
 LOCK TABLES `usuario` WRITE;
 /*!40000 ALTER TABLE `usuario` DISABLE KEYS */;
+INSERT INTO `usuario` VALUES (1,'Admin','admin@adm.com','00000000000','$2y$10$7AuG73t8Q.HggAHhSBfjg.T9pPD0mp1XxoyIjkHos7iQvpRSMJrRK',NULL,1,1,'2025-05-23 11:31:58','2025-05-26 10:19:53',NULL,NULL,1),(2,'Teste','usuario@email.com','00000000001','$2y$10$mX9VI5588pIAy9rVJSHcOeXfuv7TK51FhEctTiiU0eI/dfVWx78Qy',NULL,0,1,'2025-05-26 11:14:33','2025-05-26 12:25:22',NULL,NULL,1);
 /*!40000 ALTER TABLE `usuario` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -151,4 +155,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-05-20 11:10:19
+-- Dump completed on 2025-05-27  8:42:11
