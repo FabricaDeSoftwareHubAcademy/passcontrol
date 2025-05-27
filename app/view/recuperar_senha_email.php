@@ -47,7 +47,7 @@
                     <span>Você receberá um código de segurança em seu e-mail cadastrado para validar sua nova senha </span>
 
                     <div class="btnEntrar">
-                        <a href="./recuperar_senha_codigo.php" type="submit" class="btn">Eviar</a>
+                        <a href="./recuperar_senha_codigo.php" type="submit" class="btn">Enviar</a>
                     </div>
                 </form>
             </div>
