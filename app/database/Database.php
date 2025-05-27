@@ -3,25 +3,28 @@
 // ini_set('display_errors', 1);
 // error_reporting(E_ALL);
 
+require_once 'Env.php';
+
+$rootPath = dirname(__DIR__, 2);
+loadEnv($rootPath . '/.env');
+
 class Database {
     private $conn;
-    private string $local = '192.168.22.9';
-    private string $db = 'passcontrol' ;
-    private string $user = 'fabrica32';
-    private string $password = 'fabrica2025';
+    private string $local;
+    private string $db;
+    private string $user;
+    private string $password;
     private $table;
-
-    // private $conn;
-    // private string $local = 'localhost';
-    // private string $db = 'passcontrol';
-    // private string $user = 'root';
-    // private string $password = '';
-    // private $table;
 
     // O construtor garante que a conexão seja realizada assim que o objeto Database for instanciado
     public function __construct($table = null) {
+        $this->local = getenv('DB_HOST');
+        $this->db = getenv('DB_NAME');
+        $this->user = getenv('DB_USER');
+        $this->password = getenv('DB_PASS');
         $this->table = $table;
-        $this->conecta();  // Conectar ao banco de dados logo ao criar a instância
+
+        $this->conecta();
     }
 
     public function conecta(){
@@ -30,7 +33,7 @@ class Database {
             $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             // echo "Conectado com sucesso";
         }catch(PDOException $err){
-            die("Connection Failed". $err->getMessage());
+            die("Connection Failed: ". $err->getMessage());
         }
     }
 
@@ -48,7 +51,7 @@ class Database {
 
 
     public function login($email, $senha) {
-        $verificar = $this->conn->prepare("SELECT id_usuario, senha FROM usuario WHERE email = :e");
+        $verificar = $this->conn->prepare("SELECT id_usuario, senha_usuario FROM usuario WHERE email_usuario = :e");
         $verificar->bindValue(":e", $email);
         $verificar->execute();
         
@@ -56,7 +59,7 @@ class Database {
             $dados = $verificar->fetch();
             
             // Verifica a senha criptografada
-            if (password_verify($senha, $dados['senha'])) {
+            if (password_verify($senha, $dados['senha_usuario'])) {
                 session_start();
                 $_SESSION['id_usuario'] = $dados['id_usuario'];
                 return true;
@@ -70,11 +73,11 @@ class Database {
         $binds = array_pad([],count($fields),"?");
         $query = "INSERT INTO ". $this->table . "(".implode(",", $fields).") VALUES (".implode(",",$binds).")";
 
-        $out = $this->execute($query,array_values($values));
+        $res = $this->execute($query,array_values($values));
 
-        if($out){
+        if($res){
             // echo "<script> alert ('Cadastrado com sucesso!') </script>";
-            return $out;
+            return $res;
         }
         else{
             // echo "<script> alert ('Falha na execução, usuário não cadastrado!') </script>";
@@ -83,18 +86,6 @@ class Database {
     }
 
     public function select($where = null, $order = null, $limit = null, $fields = "*"){
-        $where = strlen($where) ? "WHERE ".$where : "";
-        $order = strlen($order) ? "ORDER BY".$order : "";
-        $limit = strlen($limit) ? "LIMIT ".$limit : "";
-
-        $query = "SELECT $fields FROM $this->table $where $order $limit";
-
-        // return $this->execute($query)->fetch(PDO::FETCH_ASSOC);
-
-        return $this->execute($query)->fetch(PDO::FETCH_ASSOC);
-    }
-
-    public function select_pdostmt($where = null, $order = null, $limit = null, $fields = "*"){
         $where = strlen($where) ? "WHERE ".$where : "";
         $order = strlen($order) ? "ORDER BY".$order : "";
         $limit = strlen($limit) ? "LIMIT ".$limit : "";
@@ -112,5 +103,9 @@ class Database {
 
         $res = $this->execute($query, $values);
         return $res->rowCount();
+    }
+
+    public function getConnection() {
+        return $this->conn;
     }
 }

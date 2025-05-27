@@ -3,15 +3,15 @@ require './app/classes/Usuario.php';
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
-if(isset($_POST['email'])){
-    $email = addslashes($_POST['email']);
+if(isset($_POST['cpf'])){
+    $cpf = addslashes($_POST['cpf']);
     $senha = addslashes($_POST['senha']);
 
     $usuario = new Usuario();
-    if($usuario->logar($email, $senha)){
-        header("location: ./app/admin/view/atendimento.php");
+    if($usuario->logar($cpf, $senha)){
+        header("location: ./app/view/atendimento.php");
     }else{
-        echo "<script>alert('Email ou Senha incorreto!') </script>";
+        echo "<script>alert('cpf ou Senha incorreto!') </script>";
     }
 }
 ?> 
@@ -28,7 +28,7 @@ if(isset($_POST['email'])){
 
     <link rel="stylesheet" href="public/css/login.css">
     <script src="public/js/login.js" defer></script>
-    <link rel="shortcut icon" type="imagex/png" href="public/img/Logo-Nota-Controlnt.ico">
+    <link rel="shortcut icon" type="imagex/png" href="public/img/favicon.ico">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
@@ -39,7 +39,7 @@ if(isset($_POST['email'])){
     
     
     
-        <div class="GroupLineResponsive">
+        <!-- <div class="GroupLineResponsive">
             <div class="lineResponsive">
                 <span></span>
             </div>
@@ -48,7 +48,7 @@ if(isset($_POST['email'])){
                 <div class="setasResponsive"><img src="public/img/logo-png/setas.png" alt=""></div>
                 <div class="setasResponsive"><img src="public/img/logo-png/setas.png" alt=""></div>
             </div>
-        </div>
+        </div> -->
 
         
     <div class="containerLogin">
@@ -83,8 +83,8 @@ if(isset($_POST['email'])){
 
             <form action="#" method="post" class="formBoxLogin">
                 <div class="group user">
-                    <label for="name">Usuário</label>
-                    <input type="email" name="email" placeholder="usuario@gmail.com">
+                    <label for="name">CPF</label>
+                    <input type="text" name="cpf" placeholder="000.000.000-00">
                 </div>
                 <div class="group senha-telaLogin">
                     <label for="password">Senha</label>
@@ -93,7 +93,7 @@ if(isset($_POST['email'])){
                 </div>
 
                 <nav class="navEsqueciSenha">
-                    <li><a href="app/admin/view/recuperar-senha-email.php"><span class="spnEsqueciSenha">Esqueci Minha Senha</span></a></li>
+                    <li><a href="app/view/recuperar_senha_email.php"><span class="spnEsqueciSenha">Esqueci Minha Senha</span></a></li>
                 </nav>
 
                 <div class="btnEntrar">
@@ -106,7 +106,7 @@ if(isset($_POST['email'])){
 
 
 
-    <div class="GroupLineResponsive groupRight">
+    <!-- <div class="GroupLineResponsive groupRight">
         <div class="arrowResponsive ">
             <div class="setasResponsive setaRight"><img src="public/img/logo-png/setas.png" alt=""></div>
             <div class="setasResponsive setaRight"><img src="public/img/logo-png/setas.png" alt=""></div>
@@ -115,7 +115,7 @@ if(isset($_POST['email'])){
         <div class="lineResponsive">
             <span></span>
         </div>
-    </div>
+    </div> -->
 </body>
 
 </html>
