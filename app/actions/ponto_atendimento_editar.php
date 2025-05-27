@@ -13,7 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $guiche = new Ponto_Atendimento();
     $guiche->id_ponto_atendimento = $_POST['id_ponto_atendimento'];
     $guiche->nome_ponto_atendimento = $_POST['nome_ponto_atendimento'];
-    $guiche->num_ponto_atendimento = $_POST['num_ponto_atendimento'];
+    $guiche->identificador_ponto_atendimento = $_POST['identificador_ponto_atendimento'];
     $resultado = $guiche->editar();
 
     
