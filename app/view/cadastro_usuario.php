@@ -30,7 +30,7 @@
     <script src="../../public/js/monitor-modal.js" defer></script>
     <!-- <script src="../../public/js/modal_salvar_cadastro.js" defer></script> -->
     <script src="../../public/js/checkbox_seleciona_todos.js" defer></script>
-    <script src="../js/usuario_cadastrar.js" defer></script>
+    <script src="../js/usuario-cadastrar.js" defer></script>
 
     <link rel="shortcut icon" type="imagex/png" href="../../public/img/Logo-Nota-Controlnt.ico">
 </head>
