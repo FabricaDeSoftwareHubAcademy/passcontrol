@@ -4,7 +4,7 @@ require_once __DIR__ . '../../database/Database.php';
 
 Class Ponto_Atendimento{
     public int $id_ponto_atendimento;
-    public string $num_ponto_atendimento;
+    public string $identificador_ponto_atendimento;
     public string $nome_ponto_atendimento;
     public string $ativo;
 
@@ -34,7 +34,7 @@ Class Ponto_Atendimento{
         $db = new Database('ponto_atendimento');
         $res = $db->insert(
             [
-                'num_ponto_atendimento' => $this->num_ponto_atendimento,
+                'identificador_ponto_atendimento' => $this->identificador_ponto_atendimento,
                 'nome_ponto_atendimento' => $this->nome_ponto_atendimento,
                 'ativo' => 'ATIVO'
             ]
@@ -47,7 +47,7 @@ Class Ponto_Atendimento{
         $db = new Database('ponto_atendimento');
         $dados=[
             'nome_ponto_atendimento'=>$this->nome_ponto_atendimento,
-            'num_ponto_atendimento'=>$this->num_ponto_atendimento
+            'identificador_ponto_atendimento'=>$this->identificador_ponto_atendimento
         ];
         $where = 'id_ponto_atendimento = ' . $this->id_ponto_atendimento;
 

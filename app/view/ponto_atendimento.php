@@ -63,17 +63,17 @@ $guiches = $guiche->buscar();
                                     $estadoAtivo = ($guiche->ativo == 'ATIVO') ? 'active' : '';
                                     echo '
                                     <tr>
-                                        <td>'.$guiche->nome_guiche.'</td>
-                                        <td class="indentificador-menor">'.$guiche->num_guiche.'</td>
+                                        <td>'.$guiche->nome_ponto_atendimento.'</td>
+                                        <td class="indentificador-menor">'.$guiche->identificador_ponto_atendimento.'</td>
                                         <td class="editar-menor">
                                             <div class="editar">
-                                                <button class="bot-editar" id="chamamodal" id_value ='.$guiche->id_guiche.'>
+                                                <button class="bot-editar" id="chamamodal" id_value ='.$guiche->id_ponto_atendimento.'>
                                                     <img id="icone-editar" src="../../public/img/icons/editar.png" alt="Editar">
                                                 </button>
                                             </div>
                                         </td>
                                         <td class="inativar-menor">
-                                            <button id="switch_status" id_value_switch="'.$guiche->id_guiche.'"  class="toggle-btn '.$estadoAtivo.'">
+                                            <button id="switch_status" id_value_switch="'.$guiche->id_ponto_atendimento.'"  class="toggle-btn '.$estadoAtivo.'">
                                                 <div class="circulo"></div>
                                             </button>
                                         </td>
@@ -107,13 +107,13 @@ $guiches = $guiche->buscar();
                 <div class="inf-modal">
                     <div class="container">
                         <label class="label"><b>Nome do Ponto de Atendimento</b></label>
-                        <input type="text" id="nome_guiche" name="nome_guiche" class="input-text" placeholder="">
-                        <input type="hidden" id="id_guiche" name="id_guiche">
+                        <input type="text" id="nome_ponto_atendimento" name="nome_ponto_atendimento" class="input-text" placeholder="">
+                        <input type="hidden" id="id_ponto_atendimento" name="id_ponto_atendimento">
                     </div>
                 </div>
                 <div class="servico">
                     <label class="label"><b>Número / Letra</b></label>
-                    <input type="text" id="num_guiche" name="num_guiche" class="input-text" placeholder="">
+                    <input type="text" id="identificador_ponto_atendimento" name="identificador_ponto_atendimento" class="input-text" placeholder="">
                 </div>
                 <div class="button-group">
                     <button class="botao-modal cancel">Voltar</button>
@@ -158,7 +158,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
             // Fazer requisição para buscar os dados do ponto de atendimento
-            let dados_php = await fetch("../actions/ponto_atendimento_editar.php?id_guiche="+id_value , {
+            let dados_php = await fetch("../actions/ponto_atendimento_editar.php?id_ponto_atendimento="+id_value , {
                 method: 'GET'
             });
 
@@ -166,9 +166,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
             console.log(response);
     
-            document.getElementById("nome_guiche").value = response.nome_guiche;
-            document.getElementById("num_guiche").value = response.num_guiche;
-            document.getElementById("id_guiche").value = response.id_guiche; 
+            document.getElementById("nome_ponto_atendimento").value = response.nome_ponto_atendimento;
+            document.getElementById("identificador_ponto_atendimento").value = response.identificador_ponto_atendimento;
+            document.getElementById("id_ponto_atendimento").value = response.id_ponto_atendimento; 
             
             modalContainer.classList.add("show");
 
@@ -229,12 +229,12 @@ document.addEventListener("DOMContentLoaded", function() {
                 <div class="inf-modal-ponto-atendimento">
                     <div class="container-ponto-atendimento">
                         <label class="label-ponto-atendimento"><b>Nome do Ponto de Atendimento</b></label>
-                        <input type="text" id="nome_guiche_cadastrar" name="nome_guiche_cadastrar" class="input-text-ponto-atendimento" placeholder="Ex: Guichê, Caixa, IPTU...">
+                        <input type="text" id="nome_ponto_atendimento_cadastrar" name="nome_ponto_atendimento_cadastrar" class="input-text-ponto-atendimento" placeholder="Ex: Guichê, Caixa, IPTU...">
                     </div>
                 </div>
                 <div class="servico-ponto-atendimento">
                     <label class="label-ponto-atendimento"><b>Número / Letra</b></label>
-                    <input type="text" id="num_guiche_cadastrar" name="num_guiche_cadastrar" class="input-text-ponto-atendimento" placeholder="Ex: 01, 02...">
+                    <input type="text" id="identificador_ponto_atendimento_cadastrar" name="identificador_ponto_atendimento_cadastrar" class="input-text-ponto-atendimento" placeholder="Ex: 01, 02...">
                 </div>
                 <div class="button-group-ponto-atendimento">
                     <button class="botao-modal-ponto-atendimento cancel_CadPontoAtend">Voltar</button>
@@ -261,77 +261,85 @@ document.addEventListener("DOMContentLoaded", function() {
 
 <!-- JS Modal CADASTRAR e Confirma CADASTRAR-->
 <script>
+    let btn_cadastrar_guiche = document.getElementById("btn_cadastrar_adm");
+    const apareceMod = document.getElementById("confirma_cadastrar");
 
-let btn_cadastrar_guiche = document.getElementById("btn_cadastrar_adm");
-const apareceMod = document.getElementById("confirma_cadastrar");
+    const modalContainer_CadPontoAtend = document.querySelector(".fundo-container-cad-ponto-atendimento");
+    const buttonCancelar_CadPontoAtend = document.querySelector(".cancel_CadPontoAtend");
+    const buttonSalvar_CadPontoAtend = document.querySelector(".save_CadPontoAtend");
 
-const modalContainer_CadPontoAtend = document.querySelector(".fundo-container-cad-ponto-atendimento");
-const buttonCancelar_CadPontoAtend = document.querySelector(".cancel_CadPontoAtend");
-const buttonSalvar_CadPontoAtend = document.querySelector(".save_CadPontoAtend");
-
-//Abrir Modal
-btn_cadastrar_guiche.addEventListener("click", () => {
-
-    modalContainer_CadPontoAtend.classList.add("show");
-});
-
-
-//Fechar Modal
-buttonCancelar_CadPontoAtend.addEventListener("click", (event) => {
-    event.preventDefault();
-    modalContainer_CadPontoAtend.classList.remove("show");
-});
-
-
-//Salvar Formulário
-buttonSalvar_CadPontoAtend.addEventListener("click", function (event) {
-event.preventDefault();
-
-const myform = document.getElementById("formulario_cadastrar");
-const inputs = myform.querySelectorAll("input");
-let formularioValido = true;
-
-// Verifica se todos os campos estão preenchidos
-inputs.forEach(inputAtual => {
-
-    if (inputAtual.value.trim() === "") { //trim para não aceitar espaço
-        formularioValido = false;
-    }
-});
-
-if (!formularioValido) {
-    alert("Preencha todos os campos para continuar!");
-    return;
-}
-
-modalContainer_CadPontoAtend.classList.remove("show");
-apareceMod.classList.add("show");
-
-//Envia para o PHP
-const formData = new FormData(myform);
-
-
-
-let btnOkCadastrar = document.getElementById("btnOkCadastrar");
-
-btnOkCadastrar.addEventListener("click", async function () {
-    let dados2_php = await fetch("../actions/ponto_atendimento_cadastrar.php", {
-        method: 'POST',
-        body: formData
+    // Abrir Modal
+    btn_cadastrar_guiche.addEventListener("click", () => {
+        modalContainer_CadPontoAtend.classList.add("show");
     });
 
-    let response = await dados2_php.json();
+    // Fechar Modal
+    buttonCancelar_CadPontoAtend.addEventListener("click", (event) => {
+        event.preventDefault();
+        modalContainer_CadPontoAtend.classList.remove("show");
+    });
 
-    if (response.status == 'ok') {
-        window.location.href = "./ponto_atendimento.php";
+    // Salvar Formulário
+    buttonSalvar_CadPontoAtend.addEventListener("click", function (event) {
+        event.preventDefault();
+
+        const myform = document.getElementById("formulario_cadastrar");
+        const inputs = myform.querySelectorAll("input");
+        let formularioValido = true;
+
+        // Verifica se todos os campos estão preenchidos
+        inputs.forEach(inputAtual => {
+            if (inputAtual.value.trim() === "") {
+                formularioValido = false;
+            }
+        });
+
+        if (!formularioValido) {
+            alert("Preencha todos os campos para continuar!");
+            return;
+        }
+
+        modalContainer_CadPontoAtend.classList.remove("show");
+        apareceMod.classList.add("show");
+
+        // Adiciona o evento no botão "OK" após exibir o modal de confirmação
+        const btnOkCadastrar = document.getElementById("btnOkCadastrar");
+
+        if (btnOkCadastrar) {
+            btnOkCadastrar.addEventListener("click", async function handleClick() {
+                console.log("ENTROU AQUI");
+
+                const formData = new FormData(myform);
+
+                try {
+                    const dados2_php = await fetch("../actions/ponto_atendimento_cadastrar.php", {
+                        method: 'POST',
+                        body: formData
+                    });
+
+                    const response = await dados2_php.json();
+
+                    if (response.status === 'ok') {
+                        window.location.href = "../";
+                    } else {
+                        alert("Erro ao cadastrar: " + (response.message || "Erro desconhecido"));
+                    }
+                } catch (error) {
+                    console.error("Erro na requisição:", error);
+                    alert("Erro de conexão com o servidor.");
+                }
+
+                // Remove o listener após execução para evitar múltiplos envios
+                btnOkCadastrar.removeEventListener("click", handleClick);
+            }, { once: true });
+        } else {
+            console.warn("Botão btnOkCadastrar não encontrado.");
+        }
+    });
+
+    function toggleMenu() {
+        document.getElementById("mobileMenu").classList.toggle("active");
     }
-});
-});
-
-
-function toggleMenu() {
-    document.getElementById("mobileMenu").classList.toggle("active");
-}
 </script>
 
 <!-- ************************************   STATUS PONTO DE ATENDIMENTO   ************************************ -->
@@ -386,7 +394,7 @@ document.addEventListener("DOMContentLoaded", function() {
             const buttonSalvar = document.querySelector("#salvar");
 
             buttonSalvar.addEventListener("click", async function(event) {
-                let dados_php = await fetch("../actions/ponto_atendimento_inativar.php?id_guiche=" + id_value_switch, {
+                let dados_php = await fetch("../actions/ponto_atendimento_inativar.php?id_ponto_atendimento=" + id_value_switch, {
                     method: 'GET'
                 });
 
