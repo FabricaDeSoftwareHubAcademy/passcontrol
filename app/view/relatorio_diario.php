@@ -77,6 +77,8 @@
                                 </div>
                                 <div class="containerFiltrar">
                                     <input type="submit" value="FIltrar" class="inputFIltrar">
+                                    <button onclick="exportarExcel()" class="inputFIltrar">Exportar Excel</button>
+                                    <button onclick="exportarPDF()" class="inputFIltrar">Exportar PDF</button>
                                 </div>
                             </div>
                         </div>
@@ -84,8 +86,7 @@
 
                 </div>
                 <div class="containerMainRd">
-                    <button onclick="exportarExcel()">Exportar Excel</button>
-                    <button onclick="exportarPDF()">Exportar PDF</button>
+                    
                 </div>
             </div>
         </div>
