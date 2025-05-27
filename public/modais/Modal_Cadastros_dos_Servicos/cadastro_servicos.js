@@ -14,64 +14,79 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const tituloModal = modalCadastro.querySelector('.title');
 
-    const abrirModal = (modal) => modal.style.display = 'flex';
-    const fecharModal = (modal) => modal.style.display = 'none';
+    const abrirModal = modal => (modal.style.display = 'flex');
+    const fecharModal = modal => (modal.style.display = 'none');
 
-    btnAbrirCadastro.addEventListener('click', () => {
-        limparFormulario();
-        tituloModal.textContent = 'Cadastrar Serviços';
-        btnSalvar.textContent = 'Salvar';
-        abrirModal(modalCadastro);
-    });
+    if (btnAbrirCadastro && modalCadastro) {
+        btnAbrirCadastro.addEventListener('click', () => {
+            limparFormulario();
+            tituloModal.textContent = 'Cadastrar Serviços';
+            btnSalvar.textContent = 'Salvar';
+            abrirModal(modalCadastro);
+        });
+    }
+ 
+    if (btnCancelarCadastro) {
+        btnCancelarCadastro.addEventListener('click', () => fecharModal(modalCadastro));
+    }
+   
+    if (btnSalvar && modalConfirmacao){
+        btnSalvar.addEventListener('click', () => {
+            btnSalvar.disabled = true;
+            abrirModal(modalConfirmacao);
+        });
+    
+    }
 
-    btnCancelarCadastro.addEventListener('click', () => fecharModal(modalCadastro));
-
-    btnSalvar.addEventListener('click', () => {
-        btnSalvar.disabled = true;
-        abrirModal(modalConfirmacao);
-    });
-
-    btnNaoConfirmar.addEventListener('click', () => {
-        fecharModal(modalConfirmacao);
-        btnSalvar.disabled = false;
-    });
-
-    btnSimConfirmar.addEventListener('click', () => {
-        const formData = new FormData();
-        const codigo = modalCadastro.querySelector('.input-number').value;
-        const nome = modalCadastro.querySelector('.input-text').value;
-        const file = modalCadastro.querySelector('#fileInput').files[0];
-        const inputHidden = modalCadastro.querySelector('#id_servico');
-
-        formData.append('codigo', codigo);
-        formData.append('nome', nome);
-        if (file) formData.append('icone', file);
-
-        if (inputHidden) {
-            formData.append('id', inputHidden.value);
-            formData.append('acao', 'editar');
-        } else {
-            formData.append('acao', 'cadastrar');
-        }
-
-        fetch('../../../app/controller/ServicoController.php', {
-            method: 'POST',
-            body: formData
-        })
-        .then(res => res.text())
-        .then(response => {
-            fecharModal(modalCadastro);
+    if (btnNaoConfirmar && btnSalvar) {
+        btnNaoConfirmar.addEventListener('click', () => {
             fecharModal(modalConfirmacao);
-            abrirModal(modalSucesso);
-            // setTimeout(() => location.reload(), 1000);
-        })
-        .catch(error => {
-            console.error('Erro ao salvar o serviço:', error);
             btnSalvar.disabled = false;
         });
-    });
-
-    btnFecharSucesso.addEventListener('click', () => fecharModal(modalSucesso));
+    }
+   
+    if (btnSimConfirmar) {
+        btnSimConfirmar.addEventListener('click', () => {
+            const formData = new FormData();
+            const codigo = modalCadastro.querySelector('.input-number').value;
+            const nome = modalCadastro.querySelector('.input-text').value;
+            const file = modalCadastro.querySelector('#fileInput').files[0];
+            const inputHidden = modalCadastro.querySelector('#id_servico');
+    
+            formData.append('codigo', codigo);
+            formData.append('nome', nome);
+            if (file) formData.append('icone', file);
+    
+            if (inputHidden) {
+                formData.append('id', inputHidden.value);
+                formData.append('acao', 'editar');
+            } else {
+                formData.append('acao', 'cadastrar');
+            }
+    
+            fetch('../../../app/actions/ServicoController.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(res => res.text())
+            .then(response => {
+                fecharModal(modalCadastro);
+                fecharModal(modalConfirmacao);
+                abrirModal(modalSucesso);
+                // setTimeout(() => location.reload(), 1000);
+            })
+            .catch(error => {
+                console.error('Erro ao salvar o serviço:', error);
+                btnSalvar.disabled = false;
+            });
+        });
+    
+    }
+    
+    if (btnFecharSucesso) {
+        btnFecharSucesso.addEventListener('click', () => fecharModal(modalSucesso));
+    }
+   
 
     function limparFormulario() {
         modalCadastro.querySelector('.input-number').value = '';
@@ -118,7 +133,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         inputHidden.value = id;
 
-        modalEditar.style.display = 'flex';
+        abrirModal(modalEditar);
     }
 
     modalEditar.querySelector('.save').addEventListener('click', () => {

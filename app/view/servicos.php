@@ -63,52 +63,50 @@
             <div class="area-tabela">
                 <div class="sub-area-tabela">
                 <?php
-                    require_once '../classes/Servico.php';
+require_once '../classes/Servico.php';
 
-                    $servico = new Servico();
-                    $servicos = $servico->buscar();
+$servico = new Servico();
+$servicos = $servico->buscar();
+?>
 
-
-                    ?>
-                    <table class="tabela">
-                        <thead>
-                            <tr>
-                                <th scope="col">Código do Serviço</th>
-                                <th scope="col">Serviços</th>
-                                <th class="editar-inativar-menor" scope="col">Editar</th>
-                                <th class="editar-inativar-menor" scope="col">Status</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                        <?php foreach ($servicos as $serv) :?>
-                        <?php
-                        $ativo = strtoupper(trim($serv->ativo)); 
-                        $estadoAtivo = ($serv->ativo == 'ATIVO') ? '' : 'active';
-                        ?>
-                            <tr>
-                                <td><?= $serv->codigo_servico ?></td>
-                                <td><?= $serv->nome_servico ?></td>
-                                <td class="editar-inativar-menor" scope="col">
-                                    <div class="editar">
-                                        <button class="openEditarServ" 
-                                            data-id="<?= $serv->id_servico ?>" 
-                                            data-codigo="<?= $serv->codigo_servico ?>" 
-                                            data-nome="<?= $serv->nome_servico ?>">
-                                            <img src="../../../public/img/icons/Group 2924.png" alt="">
-                                        </button>
-                                    </div>
-                                </td>
-                                <td class="editar-inativar-menor" scope="col">
-                                    <div class="openInativarAtivar" data-id="<?= $serv->id_servico ?>">
-                                        <button class="toggle-btn <?= $estadoAtivo; ?>">
-                                            <div class="circulo"> </div>
-                                        </button>
-                                    </div>
-                                </td>
-                            </tr>
-                        <?php endforeach; ?>
-                        </tbody>
-                    </table>
+<table class="tabela">
+    <thead>
+        <tr>
+            <th scope="col">Código do Serviço</th>
+            <th scope="col">Serviços</th>
+            <th class="editar-inativar-menor" scope="col">Editar</th>
+            <th class="editar-inativar-menor" scope="col">Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php foreach ($servicos as $serv) : ?>
+            <?php
+            $estadoAtivo = ($serv->ativo == 'ATIVO') ? '' : 'active';
+            ?>
+            <tr>
+                <td><?= htmlspecialchars($serv->codigo_servico) ?></td>
+                <td><?= htmlspecialchars($serv->nome_servico) ?></td>
+                <td class="editar-inativar-menor">
+                    <div class="editar">
+                        <button class="openEditarServ" 
+                            data-id="<?= $serv->id_servico ?>" 
+                            data-codigo="<?= htmlspecialchars($serv->codigo_servico) ?>" 
+                            data-nome="<?= htmlspecialchars($serv->nome_servico) ?>">
+                            <img src="../../../public/img/icons/Group 2924.png" alt="Editar">
+                        </button>
+                    </div>
+                </td>
+                <td class="editar-inativar-menor">
+                    <div class="openInativarAtivar" data-id="<?= $serv->id_servico ?>">
+                        <button class="toggle-btn <?= $estadoAtivo ?>">
+                            <div class="circulo"></div>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+        <?php endforeach; ?>
+    </tbody>
+</table>
                 </div>
             </div>
             <div class="botoesVoltar-Cadastrar">
