@@ -1,6 +1,6 @@
 <div class="modal-servico-container" id="modalInativar">
     <section class="modal-servico-box">
-        <img src="../../../public/img/img-modais/Logo Nota Controlnt.png" alt="Logo Nota Control" class="modal-servico-logo">
+        <img src="../../public/img/img-modais/Logo Nota Controlnt.png" alt="Logo Nota Control" class="modal-servico-logo">
         <h1 class="modal-servico-titulo">Confirmação</h1>
         <hr class="modal-servico-linha">
         <p class="modal-servico-texto"><b>Deseja Alterar esse Serviço?</b></p>

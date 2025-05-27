@@ -137,7 +137,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const btnSalvarEditar = modalEditar.querySelector('.save');
         btnSalvarEditar.disabled = true;
 
-        fetch('../../../app/controller/ServicoController.php', {
+        fetch('../../../app/actions/ServicoController.php', {
             method: 'POST',
             body: formData
         })

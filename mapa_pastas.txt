@@ -1,0 +1,30 @@
+/passcontrol
+│
+├── .env # Variáveis de ambiente (NUNCA subir para o GitHub)
+├── .mapa_pastas # Modelo para orientar a equipe
+├── .gitignore # Ignorar arquivos sensíveis e pastas desnecessárias
+│
+├── /app # Arquivos públicos acessados pelo navegador
+│ ├── admin # Página inicial
+│ ├── classes # Página de login
+│ └── database # Arquivos de estilo
+│ └──
+│
+├── /public # Arquivos públicos acessados pelo navegador
+│ ├── css # Página inicial
+│ ├── img # Página de login
+│ ├── include # Painel principal
+│ ├── js/ # Scripts da interface
+│ └── modais # Arquivos de estilo
+│
+│
+├── /refatoramento # Funções duplicadas ou em reorganização
+│ ├──
+│ └──
+│
+├── /sql # Scripts e arquivos de banco de dados
+│ └── init.sql # Script de criação das tabelas
+│
+├── /tests # Testes automatizados ou manuais
+│
+└── README.md # Documentação do projeto
