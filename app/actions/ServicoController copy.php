@@ -22,7 +22,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $codigo = $_POST['codigo'] ?? '';
     $nome = $_POST['nome'] ?? '';
     $id = $_POST['id'] ?? null;
-
     $icone = null;
     $pasta = '../../public/img/icone-servicos/';
 

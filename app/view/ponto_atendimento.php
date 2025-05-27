@@ -1,7 +1,7 @@
 <?php
-require '../../../app/classe/guiche.php';
+require '../classes/PontoAtendimento.php';
 
-$guiche = new Guiche();
+$guiche = new Ponto_Atendimento();
 $guiches = $guiche->buscar();
 ?>
 
@@ -18,14 +18,14 @@ $guiches = $guiche->buscar();
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 
     <!-- IMPORT DO CSS -->
-    <link rel="stylesheet" href="../../../public/css/navegacao.css">
-    <link rel="stylesheet" href="../../../public/css/PontoAtendimentoCad.css">
-    <link rel="stylesheet" href="../../../public/modais/ModalEdicaoPontoAtendimento/estilo.css">
-    <link rel="stylesheet" href="../../../public/modais/ModalInativacaoGuiche/cadastro.css">
-    <link rel="stylesheet" href="../../../public/modais/ModalConfirmaDados/estilo.css">
-    <link rel="stylesheet" href="../../../public/modais/Modal_Alterar_Dados_Pessoais/alterar_dados_pessoais.css">
-    <link rel="stylesheet" href="../../../public/modais/Modal_Alterar_Senha/alterar_senha.css">
-    <link rel="stylesheet" href="../../../public/modais/Modal_Cadastro_Ponto_Atendimento/cadastro_ponto_atendimento.css">
+    <link rel="stylesheet" href="../../public/css/navegacao.css">
+    <link rel="stylesheet" href="../../public/css/ponto_atendimento.css">
+    <link rel="stylesheet" href="../../public/modais/ModalEdicaoPontoAtendimento/estilo.css">
+    <link rel="stylesheet" href="../../public/modais/ModalInativacaoGuiche/cadastro.css">
+    <link rel="stylesheet" href="../../public/modais/ModalConfirmaDados/estilo.css">
+    <link rel="stylesheet" href="../../public/modais/Modal_Alterar_Dados_Pessoais/alterar_dados_pessoais.css">
+    <link rel="stylesheet" href="../../public/modais/Modal_Alterar_Senha/alterar_senha.css">
+    <link rel="stylesheet" href="../../public/modais/Modal_Cadastro_Ponto_Atendimento/cadastro_ponto_atendimento.css">
     
 
 
@@ -33,7 +33,7 @@ $guiches = $guiche->buscar();
 </head>
 <body class="control-body-navegacao">
     <?php
-    include "./navegacao.php";
+    include "../view/navegacao.php";
     ?>
 
 <section class="Area-Util-Projeto">
@@ -68,7 +68,7 @@ $guiches = $guiche->buscar();
                                         <td class="editar-menor">
                                             <div class="editar">
                                                 <button class="bot-editar" id="chamamodal" id_value ='.$guiche->id_guiche.'>
-                                                    <img id="icone-editar" src="../../../public/img/icons/Group 2924.png" alt="Editar">
+                                                    <img id="icone-editar" src="../../public/img/icons/editar.png" alt="Editar">
                                                 </button>
                                             </div>
                                         </td>
@@ -128,7 +128,7 @@ $guiches = $guiche->buscar();
 <!-- Modal Confirma EDITAR -->
     <div id="confirma_editar"  class="modal-confirma-container">
         <section class="modal">
-            <img src="../../../public/img/img-modais/Logo Nota Controlnt.png" alt="Logo Nota Control" class="logo">
+            <img src="../../public/img/img-modais/Logo Nota Controlnt.png" alt="Logo Nota Control" class="logo">
             <h1 class="modal-title">Confirmação</h1>
             <hr class="modal-divider">
             <p class="modal-message"><b>Ponto de Atendimento Atualizado com Sucesso!</b></p>
@@ -158,7 +158,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
             // Fazer requisição para buscar os dados do ponto de atendimento
-            let dados_php = await fetch("../../classe/edit_guiche_modal.php?id_guiche="+id_value , {
+            let dados_php = await fetch("../actions/ponto_atendimento_editar.php?id_guiche="+id_value , {
                 method: 'GET'
             });
 
@@ -185,7 +185,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
                     const formData = new FormData(myform);
 
-                    let dados2_php = await fetch("../../classe/edit_guiche_modal.php",{
+                    let dados2_php = await fetch("../actions/ponto_atendimento_cadastrar.php",{
                         method:'POST',
                         body:formData
                     })
@@ -205,7 +205,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 
-    const buttonOkEditar = document.querySelector(".Okay");
+    const buttonOkEditar = document.getElementById("btnOkEditar");
     buttonOkEditar.addEventListener("click", function() {
         const apareceMod = document.getElementById("confirma_editar");
         apareceMod.classList.remove("show");
@@ -315,7 +315,7 @@ const formData = new FormData(myform);
 let btnOkCadastrar = document.getElementById("btnOkCadastrar");
 
 btnOkCadastrar.addEventListener("click", async function () {
-    let dados2_php = await fetch("../../CLASSE/cadastrar_guiche.php", {
+    let dados2_php = await fetch("../actions/ponto_atendimento_cadastrar.php", {
         method: 'POST',
         body: formData
     });
@@ -323,7 +323,7 @@ btnOkCadastrar.addEventListener("click", async function () {
     let response = await dados2_php.json();
 
     if (response.status == 'ok') {
-        window.location.href = "./PontoAtendimentoCad.php";
+        window.location.href = "./ponto_atendimento.php";
     }
 });
 });
@@ -386,7 +386,7 @@ document.addEventListener("DOMContentLoaded", function() {
             const buttonSalvar = document.querySelector("#salvar");
 
             buttonSalvar.addEventListener("click", async function(event) {
-                let dados_php = await fetch("../../classe/inativar_guiche.php?id_guiche=" + id_value_switch, {
+                let dados_php = await fetch("../actions/ponto_atendimento_inativar.php?id_guiche=" + id_value_switch, {
                     method: 'GET'
                 });
 
