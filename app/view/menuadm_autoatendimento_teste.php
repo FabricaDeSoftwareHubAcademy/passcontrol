@@ -57,7 +57,7 @@
         </main>
     </section>
 
-    <?php /* include "./monitor-modal.php"; */ ?>
+    <?php include "./monitor_modal.php"; ?>
 
     <script>
         function toggleMenu() {
