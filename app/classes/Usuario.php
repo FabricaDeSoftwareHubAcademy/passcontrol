@@ -37,10 +37,7 @@ class Usuario {
     
     // Função para buscar usuário por ID do usuario
     public function buscar_id_usu($id_usuario){
-        $res = new Database("usuario");
-        $data = $res->select("id_perfil_usuario_fk =".$id_usuario);
-        
-        return $data;
+        return $this->db->select("id_usuario =".$id_usuario);
    }
 
     // Função para realizar o login
@@ -57,12 +54,12 @@ class Usuario {
     }
 
     // Função para atualizar dados do usuário
-    public function atualizar($id_usuario, $nome, $email, $cpf, $id_perfil) {
+    public function atualizar($id_usuario) {
         $values = [
-            'nome_usuario' => $nome,
-            'email_usuario' => $email,
-            'cpf_usuario' => $cpf,
-            'id_perfil_usuario_fk' => $id_perfil
+            'nome_usuario' => $this->nome,
+            'email_usuario' => $this->email,
+            'cpf_usuario' => $this->cpf,
+            'id_perfil_usuario_fk' => $this->id_perfil
         ];
         return $this->db->update("id_usuario = $id_usuario", $values);
     }

@@ -1,5 +1,5 @@
 <?php
-require "../classes/Usuario.php";
+require_once "../classes/Usuario.php";
 // header('Content-Type: application/json');
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
@@ -28,7 +28,7 @@ elseif (($_SERVER['REQUEST_METHOD'] === 'POST')){
         // $objUser->foto = $foto;
         $objUser->id_perfil = $id_perfil;
         
-        $res = $objUser->update($id_usuario);
+        $res = $objUser->atualizar($id_usuario);
         if($res){
             $resposta = array( "msg" => "Editado com sucesso", "status" => "OK");
             echo json_encode($resposta);

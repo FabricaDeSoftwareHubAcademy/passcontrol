@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function() {
             let userId = this.getAttribute("data-id");
             
             // Fazer requisição AJAX para buscar os dados do usuário
-            let dados_php = await fetch("../../controller/usuario_buscar.php?id=" + userId, {
+            let dados_php = await fetch("../actions/usuario_buscar.php?id=" + userId, {
                 method: 'GET'
             })
             

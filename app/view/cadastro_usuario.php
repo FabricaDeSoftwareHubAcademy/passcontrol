@@ -19,7 +19,6 @@
     <link rel="stylesheet" href="../../public/modais/Modal_Alterar_Dados_Pessoais/alterar_dados_pessoais.css">
     <link rel="stylesheet" href="../../public/modais/Modal_Alterar_Senha/alterar_senha.css">
 
-
     <link rel="stylesheet" href="../../public/modais/Modal_Confirmacao_dos_Dados_Registrados/confirmacao_dados_registrados.css">
     <link rel="stylesheet" href="../../public/modais/Modal_Confirmacao_dos_Dados/confirmacao_dados.css">
 
@@ -28,7 +27,6 @@
     <!-- JS -->
     <script src="../../public/js/navegacao-menu-lateral.js" defer></script>
     <script src="../../public/js/monitor-modal.js" defer></script>
-    <!-- <script src="../../public/js/modal_salvar_cadastro.js" defer></script> -->
     <script src="../../public/js/checkbox_seleciona_todos.js" defer></script>
     <script src="../js/usuario_cadastrar.js" defer></script>
     <script src="../js/validar_cpf.js" defer></script>
@@ -50,7 +48,7 @@
             <hr>
         </div>
 
-        <form class="quadrado" method="POST" id="dados_cad">
+        <form class="quadrado" method="POST" id="dados_cad" onkeydown="return event.key != 'Enter';">
             <div class="nome">
                 <label class="labeledit" for="nome">Nome*</label>
                 <input class="borda" type="text" name="nome_usuario" id="nome_usuario" placeholder="Digite aqui o nome do usuário" required>
