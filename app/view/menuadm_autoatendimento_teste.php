@@ -12,20 +12,20 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="../../../public/css/tela_autoatendimentoPage1.css">
-    <link rel="stylesheet" href="../../../public/css/navegacao.css">
-    <link rel="stylesheet" href="../../../public/css/monitor-modal.css">
-    <link rel="stylesheet" href="../../../public/css/style_eli.css">
-    <link rel="stylesheet" href="../../../public/modais/Modal_Alterar_Dados_Pessoais/alterar_dados_pessoais.css">
-    <link rel="stylesheet" href="../../../public/modais/Modal_Alterar_Senha/alterar_senha.css">
+    <link rel="stylesheet" href="../../public/css/tela_autoatendimentoPage1.css">
+    <link rel="stylesheet" href="../../public/css/navegacao.css">
+    <link rel="stylesheet" href="../../public/css/monitor-modal.css">
+    <link rel="stylesheet" href="../../public/css/style_eli.css">
+    <link rel="stylesheet" href="../../public/modais/Modal_Alterar_Dados_Pessoais/alterar_dados_pessoais.css">
+    <link rel="stylesheet" href="../../public/modais/Modal_Alterar_Senha/alterar_senha.css">
     
     <!-- JS -->
-    <script src="../../../public/js/navegacao-menu-lateral.js" defer></script>
-    <script src="../../../public/js/monitor-modal.js" defer></script>
-    <script src="../../../public/js/modal_cadastro_guiche_adm.js" defer></script>
-    <script src="../../../public/js/tela_autoatendimentoPaginação_teste.js" defer></script> <!-- NOVO JS -->
+    <script src="../../public/js/navegacao-menu-lateral.js" defer></script>
+    <script src="../../public/js/monitor-modal.js" defer></script>
+    <script src="../../public/js/modal_cadastro_guiche_adm.js" defer></script>
+    <script src="../../public/js/tela_autoatendimentoPaginação_teste.js" defer></script> <!-- NOVO JS -->
 
-    <link rel="shortcut icon" type="imagex/png" href="../../../public/img/Logo-Nota-Controlnt.ico">
+    <link rel="shortcut icon" type="imagex/png" href="../../public/img/Logo-Nota-Controlnt.ico">
 </head>
 
 <body class="control-body-navegacao">
@@ -53,11 +53,11 @@
         <!-- área dos cards -->
         <main class="area-cards" id="areaCards">
             <!-- Conteúdo inicial dos cards vem aqui -->
-            <?php include "../../usuario/view/tela_autoatendimento_conteudo.php"; ?>
+            <?php include "./tela_autoatendimento_conteudo.php"; ?>
         </main>
     </section>
 
-    <?php include "./monitor-modal.php"; ?>
+    <?php /* include "./monitor-modal.php"; */ ?>
 
     <script>
         function toggleMenu() {

@@ -34,7 +34,7 @@
 <body class="control-body-navegacao">
     <?php
     include "./navegacao.php";
-    include "../../public/modais/ModalCadastrodosServicos/cadastro_servicos.php";
+    /* include "../../public/modais/ModalCadastrodosServicos/cadastro_servicos.php"; */
     ?>
     <section class="Area-Util-Projeto">
         <!-- navmenu -->
@@ -127,7 +127,7 @@
     </section>
     
     <?php
-    include "./monitor-modal.php";
+    /* include "./monitor-modal.php"; */
     ?>
 
 

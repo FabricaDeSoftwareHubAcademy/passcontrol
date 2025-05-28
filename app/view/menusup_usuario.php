@@ -12,17 +12,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="../../../public/css/navegacao.css">
-    <link rel="stylesheet" href="../../../public/css/monitor-modal.css">
-    <link rel="stylesheet" href="../../../public/css/style_eli.css">
-    <link rel="stylesheet" href="../../../public/modais/Modal_Alterar_Dados_Pessoais/alterar_dados_pessoais.css">
-    <link rel="stylesheet" href="../../../public/modais/Modal_Alterar_Senha/alterar_senha.css">
+    <link rel="stylesheet" href="../../public/css/navegacao.css">
+    <link rel="stylesheet" href="../../public/css/monitor-modal.css">
+    <link rel="stylesheet" href="../../public/css/style_eli.css">
+    <link rel="stylesheet" href="../../public/modais/Modal_Alterar_Dados_Pessoais/alterar_dados_pessoais.css">
+    <link rel="stylesheet" href="../../public/modais/Modal_Alterar_Senha/alterar_senha.css">
 
     <!-- JS -->
-    <script src="../../../public/js/navegacao-menu-lateral.js" defer></script>
-    <script src="../../../public/js/monitor-modal.js" defer></script>
+    <script src="../../public/js/navegacao-menu-lateral.js" defer></script>
+    <script src="../../public/js/monitor-modal.js" defer></script>
 
-    <link rel="shortcut icon" type="imagex/png" href="../../../public/img/Logo-Nota-Controlnt.ico">
+    <link rel="shortcut icon" type="imagex/png" href="../../public/img/Logo-Nota-Controlnt.ico">
 </head>
 
 <body class="control-body-navegacao">
@@ -62,30 +62,30 @@
             <main class="area-cards">
                 <div class="container_menu">
                     <div class="wrapper">
-                        <a href="../../../app/admin/view/AtendentesCadastrados.php">
+                        <a href="./atendentes_cadastrados.php">
                         <div class="banner-img">
-                            <img src="../../../public/img/Menus/3.png" alt="">
+                            <img src="../../public/img/Menus/3.png" alt="">
                         </div>
                         </a>
                         <!-- <h3 class="titulo-card">Usuários</h3> -->
                         <!-- <p>Usuários Cadastrados.</p> -->
                     </div>
                     <div class="button-wrapper">
-                        <button class="btn outline" onclick="window.location.href='../../../app/admin/view/AtendentesCadastrados.php';">Listar Usuários</button>
+                        <button class="btn outline" onclick="window.location.href='./atendentes_cadastrados.php';">Listar Usuários</button>
                     </div>
                 </div>
                 <div class="container_menu">
                     <div class="wrapper">
-                        <a href="../../../app/admin/view/telacadastro.php">
+                        <a href="./cadastro_usuario.php">
                         <div class="banner-img">
-                            <img src="../../../public/img/Menus/2.png" alt="">
+                            <img src="../../public/img/Menus/2.png" alt="">
                         </div>
                         </a>
                         <!-- <h3 class="titulo-produto">Cadastro</h3> -->
                         <!-- <p>Cadastro de Usuário</p> -->
                     </div>
                     <div class="button-wrapper">
-                        <button class="btn outline" onclick="window.location.href='../../../app/admin/view/telacadastro.php';">Cadastrar Usuários</button>
+                        <button class="btn outline" onclick="window.location.href='./cadastro_usuario.php';">Cadastrar Usuários</button>
                     </div>
                 </div>    
             </main>
@@ -93,7 +93,7 @@
     </section>
          
     <?php
-    include "./monitor-modal.php";
+    /* include "./monitor-modal.php"; */
     ?>
     
 </body>

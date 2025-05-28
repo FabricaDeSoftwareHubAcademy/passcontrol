@@ -1,13 +1,13 @@
 <?php
-require_once '../../classes/PontoAtendimento.php';
+require_once '../classes/PontoAtendimento.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
-    $num_guiche = $_POST['num_guiche_cadastrar'];
-    $nome_guiche = $_POST['nome_guiche_cadastrar'];
+    $identificador_ponto_atendimento = $_POST['identificador_ponto_atendimento_cadastrar'];
+    $nome_ponto_atendimento = $_POST['nome_ponto_atendimento_cadastrar'];
     $guiche = new Ponto_Atendimento();
-    $guiche->num_ponto_atendimento = $num_guiche;
-    $guiche->nome_ponto_atendimento = $nome_guiche;
+    $guiche->identificador_ponto_atendimento = $identificador_ponto_atendimento;
+    $guiche->nome_ponto_atendimento = $nome_ponto_atendimento;
 
     if ($guiche->cadastrar()) {
         echo json_encode(['status' => 'ok']);

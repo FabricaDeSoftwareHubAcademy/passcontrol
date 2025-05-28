@@ -13,20 +13,20 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="../../../public/css/navegacao.css">
-    <link rel="stylesheet" href="../../../public/css/atendimentocadastrados.css">
-    <link rel="stylesheet" href="../../../public/css/monitor-modal.css">
-    <link rel="stylesheet" href="../../../public/modais/Modal_Alterar_Dados_Pessoais/alterar_dados_pessoais.css">
-    <link rel="stylesheet" href="../../../public/modais/Modal_Alterar_Senha/alterar_senha.css">
+    <link rel="stylesheet" href="../../public/css/navegacao.css">
+    <link rel="stylesheet" href="../../public/css/atendimentocadastrados.css">
+    <link rel="stylesheet" href="../../public/css/monitor-modal.css">
+    <link rel="stylesheet" href="../../public/modais/Modal_Alterar_Dados_Pessoais/alterar_dados_pessoais.css">
+    <link rel="stylesheet" href="../../public/modais/Modal_Alterar_Senha/alterar_senha.css">
 
     <!-- JS -->
-    <script src="../../../public/js/navegacao-menu-lateral.js" defer></script>
-    <script src="../../../public/js/modal-atendimentocadastrados.js"></script>
-    <script src="../../../public/js/modal-inativacao-atendimentocadastrado.js"></script>
-    <script src="../../../public/js/modal-cadastro-atendimento.js"></script>
-    <script src="../../../public/js/monitor-modal.js" defer></script>
+    <script src="../../public/js/navegacao-menu-lateral.js" defer></script>
+    <script src="../../public/js/modal-atendimentocadastrados.js"></script>
+    <script src="../../public/js/modal-inativacao-atendimentocadastrado.js"></script>
+    <script src="../../public/js/modal-cadastro-atendimento.js"></script>
+    <script src="../../public/js/monitor-modal.js" defer></script>
 
-    <link rel="shortcut icon" type="imagex/png" href="../../../public/img/Logo-Nota-Controlnt.ico">
+    <link rel="shortcut icon" type="imagex/png" href="../../public/img/Logo-Nota-Controlnt.ico">
 </head>
 
 <body class="control-body-navegacao">
@@ -61,7 +61,7 @@
                     <td>Guichê</td>
                     <td>1</td>
                     <td>
-                        <div class="editar"><a id="open_editar_dados" href="#"><img src="../../../public/img/icons/Group 2924.png" alt=""></a></div>
+                        <div class="editar"><a id="open_editar_dados" href="#"><img src="../../public/img/icons/Group 2924.png" alt=""></a></div>
                     </td>
                     <td>
                         <div class="ativarswitch"><label class="switch">
@@ -75,13 +75,13 @@
         </div>
     </div>
     <div class="div-botao-info">
-        <button class="add-func" type="submit" onclick="window.location.href='../../../app/admin/view/telacadastro.php';">Novo Funcionario</button>
+        <button class="add-func" type="submit" onclick="window.location.href='#';">Novo Funcionario</button>
     </div>
 </div>
 </section>
 
     <?php
-    include "./monitor-modal.php";
+    /* include "./monitor-modal.php"; */
     ?>
 
     <script>

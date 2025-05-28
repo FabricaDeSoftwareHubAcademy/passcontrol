@@ -22,8 +22,8 @@
     <!-- JS -->
     <script src="../../public/js/navegacao-menu-lateral.js" defer></script>
     <script src="../../public/js/monitor-modal.js" defer></script>
-    <script src="../js/exportacao_relatorio.js"></script>
-    <script src="../js/dashboard_teste.js"></script>
+    <script src="../js/exportacao-relatorio.js"></script>
+    <script src="../js/dashboard-teste.js"></script>
 
     <!-- SheetJS para Excel -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
@@ -77,6 +77,8 @@
                                 </div>
                                 <div class="containerFiltrar">
                                     <input type="submit" value="FIltrar" class="inputFIltrar">
+                                    <button onclick="exportarExcel()" class="inputFIltrar">Exportar Excel</button>
+                                    <button onclick="exportarPDF()" class="inputFIltrar">Exportar PDF</button>
                                 </div>
                             </div>
                         </div>
@@ -84,15 +86,14 @@
 
                 </div>
                 <div class="containerMainRd">
-                    <button onclick="exportarExcel()">Exportar Excel</button>
-                    <button onclick="exportarPDF()">Exportar PDF</button>
+                    
                 </div>
             </div>
         </div>
     </section>
 
     <?php
-    include "./monitor-modal.php"
+    /* include "./monitor-modal.php" */
     ?>
 
     <script>
