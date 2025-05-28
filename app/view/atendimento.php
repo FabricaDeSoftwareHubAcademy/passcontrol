@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="../../public/css/navegacao.css">
     <link rel="stylesheet" href="../../public/css/menu_eli.css">
     <link rel="stylesheet" href="../../public/css/atendimento.css">
-    <link rel="stylesheet" href="../../public/css/monitor-modal.css">
+    <link rel="stylesheet" href="../../public/css/monitor_modal.css">
     <link rel="stylesheet" href="../../public/modais/Modal_Alterar_Dados_Pessoais/alterar_dados_pessoais.css">
     <link rel="stylesheet" href="../../public/modais/Modal_Alterar_Senha/alterar_senha.css">
 
@@ -252,8 +252,8 @@
     </section>
 
     <?php
-    /* include "./monitor-modal.php"; 
-    include "../../public/modais/Modal_Consultar_Fila/modal_consultar_fila.php";
+     include "./monitor_modal.php"; 
+    /*include "../../public/modais/Modal_Consultar_Fila/modal_consultar_fila.php";
     include "../../public/modais/Modal_Chamar_prox_senha/chamar_prox_senha.php"; 
     include "../../public/modais/Modal_Iniciar_Intervalo/iniciar_intervalo.php";
     include "../../public/modais/Modal_Encerrar_Atendimento/encerrar-atendimento.php"; */
