@@ -33,7 +33,7 @@ $guiches = $guiche->buscar();
 </head>
 <body class="control-body-navegacao">
     <?php
-    include "../view/navegacao.php";
+    include "./navegacao.php";
     ?>
 
 <section class="Area-Util-Projeto">
@@ -421,5 +421,9 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 </script>
+
+<?php
+include "./monitor_modal.php";
+?>
 
 </body>
