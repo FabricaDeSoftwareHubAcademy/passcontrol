@@ -86,3 +86,47 @@
     flex-direction: column;
     justify-content: space-evenly;
 }
+
+.form-login {
+    width: 65%;
+}
+
+.input-group-login {
+    margin-top: 5%
+}
+
+.container-link, .container-button {
+    text-align: right;
+}
+
+.container-link {
+    margin-top: 2%;
+}
+
+.container-button {
+    margin-top: 20%;
+}
+
+.link {
+    position: relative;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 0.875rem;
+    font-weight: bold;
+    color: var(--black-color);
+}
+
+.link::after {
+    position: absolute;
+    content: " ";
+    width: 0;
+    height: 2px;
+    background-color: var(--main-green-color);
+    bottom: 0;
+    left: 0;
+    transition: 0.6s ease-in-out;
+}
+
+.link:hover::after {
+    width: 100%;
+}

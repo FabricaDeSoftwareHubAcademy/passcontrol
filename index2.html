@@ -7,8 +7,10 @@
 
     <link rel="stylesheet" href="./public/css/login2.css">
     <link rel="shortcut icon" href="./public/img/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<body class="body-login">
+<body class="body-login background-image">
     <main class="container-login">
         <div class="card-left-login">
             <div class="container-animation">
@@ -34,21 +36,27 @@
         <div class="card-right-login">
             <h1 class="title">Olá, Seja Bem-Vindo!</h1>
 
-            <form action="" method="post" class="form">
-                <div class="input-group">
-                    <label for="cpf">CPF</label>
-                    <input type="text" name="cpf" id="input-cpf">
+            <form action="" method="post" class="form form-login">
+                <div class="input-group input-group-login">
+                    <label for="cpf" class="label">CPF</label>
+                    <input type="text" name="cpf" placeholder="000.000.000-00" class="input">
                 </div>
 
-                <div class="input-group">
-                    <label for="password">Senha</label>
-                    <input type="password" name="password" id="input-password" placeholder="••••••••">
-                    <i class="fas fa-eye" id="toggle-password"></i>
+                <div class="input-group input-group-login">
+                    <label for="password" class="label">Senha</label>
+                    <div class="password-group">
+                        <input type="password" name="password" id="input-password" placeholder="••••••••" class="input input-password">
+                        <i class="fas fa-eye toggle-password" id="toggle-password"></i>
+                    </div>
                 </div>
 
-                <a href="google.com" class="link">Esqueci Minha Senha</a>
+                <div class="container-link">
+                    <a href="google.com" class="link">Esqueci Minha Senha</a>
+                </div>
 
-                <button type="submit" class="button">Entrar</button>
+                <div class="container-button">
+                    <button type="submit" class="button">Entrar</button>
+                </div>
             </form>
         </div>
     </main>
