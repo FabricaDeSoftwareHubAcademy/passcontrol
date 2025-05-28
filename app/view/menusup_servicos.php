@@ -12,17 +12,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="../../../public/css/navegacao.css">
-    <link rel="stylesheet" href="../../../public/css/monitor-modal.css">
-    <link rel="stylesheet" href="../../../public/css/style_eli.css">
-    <link rel="stylesheet" href="../../../public/modais/Modal_Alterar_Dados_Pessoais/alterar_dados_pessoais.css">
-    <link rel="stylesheet" href="../../../public/modais/Modal_Alterar_Senha/alterar_senha.css">
+    <link rel="stylesheet" href="../../public/css/navegacao.css">
+    <link rel="stylesheet" href="../../public/css/monitor-modal.css">
+    <link rel="stylesheet" href="../../public/css/style_eli.css">
+    <link rel="stylesheet" href="../../public/modais/Modal_Alterar_Dados_Pessoais/alterar_dados_pessoais.css">
+    <link rel="stylesheet" href="../../public/modais/Modal_Alterar_Senha/alterar_senha.css">
 
     <!-- JS -->
-    <script src="../../../public/js/navegacao-menu-lateral.js" defer></script>
-    <script src="../../../public/js/monitor-modal.js" defer></script>
+    <script src="../../public/js/navegacao-menu-lateral.js" defer></script>
+    <script src="../../public/js/monitor-modal.js" defer></script>
 
-    <link rel="shortcut icon" type="imagex/png" href="../../../public/img/Logo-Nota-Controlnt.ico">
+    <link rel="shortcut icon" type="imagex/png" href="../../public/img/Logo-Nota-Controlnt.ico">
 </head>
 
 <body class="control-body-navegacao">
@@ -58,9 +58,9 @@
             <main class="area-cards">
                 <div class="container_menu">
                     <div class="wrapper">
-                        <a href="PontoAtendimentoCad.php">
+                        <a href="./ponto_atendimento.php">
                         <div class="banner-img">
-                            <img src="../../../public/img/img-menu/pontodeatendimento.png" alt="">
+                            <img src="../../public/img/img-menu/pontodeatendimento.png" alt="">
                         </div>
                         </a>
                         <!-- <h3 class="titulo-card">Atendimento</h3> -->
@@ -68,21 +68,21 @@
 
                     </div>
                     <div class="button-wrapper">
-                        <button class="btn outline" onclick="window.location.href='PontoAtendimentoCad.php';">Listar Ponto de Atendimento</button>
+                        <button class="btn outline" onclick="window.location.href='./ponto_atendimento.php';">Listar Ponto de Atendimento</button>
                     </div>
                 </div>
                 <div class="container_menu">
                     <div class="wrapper">
-                        <a href="servicos.php">
+                        <a href="./servicos.php">
                         <div class="banner-img">
-                            <img src="../../../public/img/img-menu/serviços.png" alt="">
+                            <img src="../../public/img/img-menu/serviços.png" alt="">
                         </div>
                         </a>
                         <!-- <h3 class="titulo-produto">Serviços</h3> -->
                         <!-- <p>Gestão dos serviços</p> -->
                     </div>
                     <div class="button-wrapper">
-                        <button class="btn outline" onclick="window.location.href='servicos.php';">Cadastrar Serviços</button>
+                        <button class="btn outline" onclick="window.location.href='./servicos.php';">Cadastrar Serviços</button>
                     </div>
                 </div>    
             </main>
@@ -90,7 +90,7 @@
     </section>
 
     <?php
-    include "./monitor-modal.php";
+    /* include "./monitor-modal.php"; */
     ?>
     
     <script>

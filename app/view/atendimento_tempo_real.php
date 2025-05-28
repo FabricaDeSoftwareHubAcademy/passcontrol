@@ -429,7 +429,7 @@
     </section>
 
     <?php
-    include "./monitor-modal.php";
+    /* include "./monitor-modal.php"; */
     ?>
     
     <script>

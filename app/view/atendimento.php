@@ -252,11 +252,11 @@
     </section>
 
     <?php
-    include "./monitor-modal.php"; 
+    /* include "./monitor-modal.php"; 
     include "../../public/modais/Modal_Consultar_Fila/modal_consultar_fila.php";
     include "../../public/modais/Modal_Chamar_prox_senha/chamar_prox_senha.php"; 
     include "../../public/modais/Modal_Iniciar_Intervalo/iniciar_intervalo.php";
-    include "../../public/modais/Modal_Encerrar_Atendimento/encerrar-atendimento.php";
+    include "../../public/modais/Modal_Encerrar_Atendimento/encerrar-atendimento.php"; */
     ?>
 
     <script>
