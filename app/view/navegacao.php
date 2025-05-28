@@ -30,7 +30,7 @@
 <div class="area-lateral-navegacao">
     <nav class="menu-lateral-navegacao">
 
-        <a class="botao-lateal-navegacao" href="../../app/admin/view/atendimento.php">
+        <a class="botao-lateal-navegacao" href="./atendimento.php">
             <img class="icone-menu-lateral" src="../../public/img/icons/atend.svg" alt="ICONE-ATENDIMENTO">
             <p class="texto-bott">Atendimento</p>
         </a>
@@ -40,12 +40,12 @@
             <p class="texto-bott">Monitor</p>
         </a>
 
-        <a class="botao-lateal-navegacao" href="../../app/admin/view/menuadm_usuario.php">
+        <a class="botao-lateal-navegacao" href="./menuadm_usuario.php">
             <img class="icone-menu-lateral" src="../../public/img/icons/gestao.svg" alt="ICONE-GESTAO">
             <p class="texto-bott">Gestão</p>
         </a>
 
-        <a class="botao-lateal-navegacao" href="">
+        <a class="botao-lateal-navegacao" href="./relatorio_diario.php">
             <img class="icone-menu-lateral" src="../../public/img/icons/nota.svg" alt="ICONE-RELATORIOS">
             <p class="texto-bott">Relatórios</p>
         </a>
@@ -71,7 +71,7 @@
                 <img class="icone-menu-lateral-mobile" src="../../public/img/icons/Cross.svg" alt="ICONE-ATEND">
             </a>
 
-            <a class="botao-lateral-navegacao-mobile" href="../../app/admin/view/atendimento.php">
+            <a class="botao-lateral-navegacao-mobile" href="./atendimento.php">
                 <img class="icone-menu-lateral-mobile" src="../../public/img/icons/atend.svg" alt="ICONE-ATEND">
                 <p class="texto-bott-mobile">Atendimento</p>
             </a>
@@ -81,12 +81,12 @@
                 <p class="texto-bott-mobile">Monitor</p>
             </a>
 
-            <a class="botao-lateral-navegacao-mobile" href="../../app/admin/view/menuadm_usuario.php">
+            <a class="botao-lateral-navegacao-mobile" href="./menuadm_usuario.php">
                 <img class="icone-menu-lateral-mobile" src="../../public/img/icons/gestao.svg" alt="ICONE-GESTAO">
                 <p class="texto-bott-mobile">Gestão</p>
             </a>
 
-            <a class="botao-lateral-navegacao-mobile" href="">
+            <a class="botao-lateral-navegacao-mobile" href="./relatorio_diario.php">
                 <img class="icone-menu-lateral-mobile" src="../../public/img/icons/nota.svg" alt="ICONE-RELATORIOS">
                 <p class="texto-bott-mobile">Relatórios</p>
             </a>
