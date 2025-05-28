@@ -40,6 +40,5 @@
             echo json_encode($resposta);
             exit;
         }
-            
     }
 ?>
