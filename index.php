@@ -1,19 +1,19 @@
 <?php
-require './app/classes/Usuario.php';
-ini_set('display_errors', 1);
-error_reporting(E_ALL);
+// require './app/classes/Usuario.php';
+// ini_set('display_errors', 1);
+// error_reporting(E_ALL);
 
-if(isset($_POST['cpf'])){
-    $cpf = addslashes($_POST['cpf']);
-    $senha = addslashes($_POST['senha']);
+// if(isset($_POST['cpf'])){
+//     $cpf = addslashes($_POST['cpf']);
+//     $senha = addslashes($_POST['senha']);
 
-    $usuario = new Usuario();
-    if($usuario->logar($cpf, $senha)){
-        header("location: ./app/view/atendimento.php");
-    }else{
-        echo "<script>alert('cpf ou Senha incorreto!') </script>";
-    }
-}
+//     $usuario = new Usuario();
+//     if($usuario->logar($cpf, $senha)){
+//         header("location: ./app/view/atendimento.php");
+//     }else{
+//         echo "<script>alert('cpf ou Senha incorreto!') </script>";
+//     }
+// }
 ?> 
 
 <!DOCTYPE html>
@@ -84,11 +84,11 @@ if(isset($_POST['cpf'])){
             <form action="#" method="post" class="formBoxLogin">
                 <div class="group user">
                     <label for="name">CPF</label>
-                    <input type="text" name="cpf" placeholder="000.000.000-00">
+                    <input type="text" name="cpf" placeholder="000.000.000-00" required>
                 </div>
                 <div class="group senha-telaLogin">
                     <label for="password">Senha</label>
-                    <input type="password" name="senha" placeholder="••••••••" id="inpSenha">
+                    <input type="password" name="senha" placeholder="••••••••" id="inpSenha" required>
                     <i class="fas fa-eye" id="togglePassword"></i>
                 </div>
 

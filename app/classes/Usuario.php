@@ -44,16 +44,21 @@ class Usuario {
    }
 
     // Função para realizar o login
-    public function logar($email, $senha) {
-        $res = $this->db->login($email, $senha);
+    public function logar($cpf, $senha) {
+        $select_user = $this->db->select("cpf_usuario = ". $cpf, '', '', 'id_usuario, senha_usuario');
+        
+        if ($select_user->rowCount() > 0) {
+            return $dados = $select_user->fetch();
+           
+           // Verifica a senha criptografada
+           if (password_verify($senha, $dados['senha_usuario'])) {
+               session_start();
+               $_SESSION['id_usuario'] = $dados['id_usuario'];
 
-        if ($res) {
-            // Se o login foi bem-sucedido, redireciona para a página de atendimento
-            header("Location: ./app/admin/view/atendimento.php");
-            exit(); // Sempre use exit() após header() para garantir que o código não continue a ser executado
-        } else {
-            return false; // Caso contrário, retorna false
-        }
+               return true;
+           }
+       }
+       return false;
     }
 
     // Função para atualizar dados do usuário
@@ -75,7 +80,7 @@ class Usuario {
 
     // Função para gerar uma senha aleatória
     public function gerarSenha($length = 10) {
-        $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ*+-&@!#$.';
+        $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ*+-@!#$.';
         $charactersLength = strlen($characters);
         $randomPw = '';
 

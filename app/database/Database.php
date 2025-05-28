@@ -47,26 +47,7 @@ class Database {
             // print_r($query);
             die("\nFalha na conecção! (fn_exec) <br>". $erro->getMessage());
         }
-    }
-
-
-    public function login($email, $senha) {
-        $verificar = $this->conn->prepare("SELECT id_usuario, senha_usuario FROM usuario WHERE email_usuario = :e");
-        $verificar->bindValue(":e", $email);
-        $verificar->execute();
-        
-        if ($verificar->rowCount() > 0) {
-            $dados = $verificar->fetch();
-            
-            // Verifica a senha criptografada
-            if (password_verify($senha, $dados['senha_usuario'])) {
-                session_start();
-                $_SESSION['id_usuario'] = $dados['id_usuario'];
-                return true;
-            }
-        }
-        return false;
-    }
+    }    
 
     public function insert($values){
         $fields = array_keys($values);
