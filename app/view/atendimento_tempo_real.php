@@ -15,19 +15,19 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
     <!-- CSS -->
-    <link rel="stylesheet" href="../../../public/css/navegacao.css">
-    <link rel="stylesheet" href="../../../public/css/menu_eli.css">
-    <link rel="stylesheet" href="../../../public/css/atendimento_tempo_real.css">
-    <link rel="stylesheet" href="../../../public/css/style_atendimento_tempo_real.css">
-    <link rel="stylesheet" href="../../../public/css/monitor-modal.css">
-    <link rel="stylesheet" href="../../../public/modais/Modal_Alterar_Dados_Pessoais/alterar_dados_pessoais.css">
-    <link rel="stylesheet" href="../../../public/modais/Modal_Alterar_Senha/alterar_senha.css">
+    <link rel="stylesheet" href="../../public/css/navegacao.css">
+    <link rel="stylesheet" href="../../public/css/menu_eli.css">
+    <link rel="stylesheet" href="../../public/css/atendimento_tempo_real.css">
+    <link rel="stylesheet" href="../../public/css/style_atendimento_tempo_real.css">
+    <link rel="stylesheet" href="../../public/css/monitor-modal.css">
+    <link rel="stylesheet" href="../../public/modais/Modal_Alterar_Dados_Pessoais/alterar_dados_pessoais.css">
+    <link rel="stylesheet" href="../../public/modais/Modal_Alterar_Senha/alterar_senha.css">
     
     <!-- JS -->
-    <script src="../../../public/js/navegacao-menu-lateral.js" defer></script>
-    <script src="../../../public/js/monitor-modal.js" defer></script>
+    <script src="../../public/js/navegacao-menu-lateral.js" defer></script>
+    <script src="../../public/js/monitor-modal.js" defer></script>
 
-    <link rel="shortcut icon" type="imagex/png" href="../../../public/img/Logo-Nota-Controlnt.ico">
+    <link rel="shortcut icon" type="imagex/png" href="../../public/img/Logo-Nota-Controlnt.ico">
 </head>
 
 <body class="control-body-navegacao">
@@ -40,12 +40,12 @@
         <div class="menu-container">
             <div class="menu">
                 <button class="hamburger" onclick="toggleMenu()">☰</button>
-                <a href="../../../app/admin/view/atendimento_tempo_real.php" class="active">Guichês</a>
-                <a href="../../../app/admin/view/atendimento.php">Atendimento</a>
+                <a href="../view/atendimento_tempo_real.php" class="active">Guichês</a>
+                <a href="../view/atendimento.php">Atendimento</a>
             </div>
             <div class="menu-mobile" id="mobileMenu">
-                <a href="../../../app/admin/view/atendimento_tempo_real.php" class="active">Guichês</a>
-                <a href="../../../app/admin/view/atendimento.php">Atendimento</a>
+                <a href="../view/atendimento_tempo_real.php" class="active">Guichês</a>
+                <a href="../view/atendimento.php">Atendimento</a>
             </div>
         </div>
 

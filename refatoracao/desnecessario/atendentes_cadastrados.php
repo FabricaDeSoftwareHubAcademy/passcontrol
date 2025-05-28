@@ -1,5 +1,5 @@
 <?php
-require '../../classes/Usuario.php';
+require '../classes/Usuario.php';
 
 $usuarios = new Usuario();
 
@@ -25,26 +25,26 @@ $dados = $usuarios->buscar(null,' status_usuario ASC');
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="../../../public/css/AtendentesCadastrados.css">
-    <link rel="stylesheet" href="../../../public/css/navegacao.css">
-    <link rel="stylesheet" href="../../../public/css/monitor-modal.css">
-    <link rel="stylesheet" href="../../../public/css/conteudo.css">
-    <link rel="stylesheet" href="../../../public/modais/Modal_Alterar_Dados_Pessoais/alterar_dados_pessoais.css">
-    <link rel="stylesheet" href="../../../public/modais/Modal_Alterar_Senha/alterar_senha.css">
-    <link rel="stylesheet" href="../../../public/modais/Modal_Alterar_Status_Usuario/alterar_status_usuario.css">
-    <link rel="stylesheet" href="../../../public/modais/Modal_Confirmacao_dos_Dados_Registrados/confirmacao_dados_registrados.css">
-    <link rel="stylesheet" href="../../../public/modais/Modal_Confirmacao_dos_Dados/confirmacao_dados.css">    
-    <link rel="stylesheet" href="../../../public/modais/Modal_Alerta_Alteracoes_Realizadas/alerta_alteracoes.css">
+    <link rel="stylesheet" href="../../public/css/AtendentesCadastrados.css">
+    <link rel="stylesheet" href="../../public/css/navegacao.css">
+    <link rel="stylesheet" href="../../public/css/monitor-modal.css">
+    <link rel="stylesheet" href="../../public/css/conteudo.css">
+    <link rel="stylesheet" href="../../public/modais/Modal_Alterar_Dados_Pessoais/alterar_dados_pessoais.css">
+    <link rel="stylesheet" href="../../public/modais/Modal_Alterar_Senha/alterar_senha.css">
+    <link rel="stylesheet" href="../../public/modais/Modal_Alterar_Status_Usuario/alterar_status_usuario.css">
+    <link rel="stylesheet" href="../../public/modais/Modal_Confirmacao_dos_Dados_Registrados/confirmacao_dados_registrados.css">
+    <link rel="stylesheet" href="../../public/modais/Modal_Confirmacao_dos_Dados/confirmacao_dados.css">    
+    <link rel="stylesheet" href="../../public/modais/Modal_Alerta_Alteracoes_Realizadas/alerta_alteracoes.css">
     
     <!-- JS -->
-    <script src="../../../public/js/navegacao-menu-lateral.js" defer></script>
-    <script src="../../../public/js/monitor-modal.js" defer></script>
-    <script src="../../../public/js/editar_usuario.js" defer></script>
-    <script src="../../../public/js/alterar_status_usuario.js" defer></script>
-    <script src="../../../public/modais/Modal_Alerta_Alteracoes_Realizadas/alerta_alteracoes.js" defer></script>
+    <script src="../../public/js/navegacao-menu-lateral.js" defer></script>
+    <script src="../../public/js/monitor-modal.js" defer></script>
+    <script src="../../public/js/editar_usuario.js" defer></script>
+    <script src="../../public/js/alterar_status_usuario.js" defer></script>
+    <script src="../../public/modais/Modal_Alerta_Alteracoes_Realizadas/alerta_alteracoes.js" defer></script>
     <!-- <script src="../../../public/js/modal-atendentes-cadastrados.js" defer></script> -->
 
-    <link rel="shortcut icon" type="imagex/png" href="../../../public/img/Logo-Nota-Controlnt.ico">
+    <link rel="shortcut icon" type="imagex/png" href="../../public/img/Logo-Nota-Controlnt.ico">
 </head>
 
 <body class="control-body-navegacao">
@@ -117,11 +117,11 @@ $dados = $usuarios->buscar(null,' status_usuario ASC');
     </section>
     
     <?php
-    include "../../../public/modais/Modal_Alterar_Dados_Pessoais/alterar_dados_pessoais.php";
-    include "../../../public/modais/Modal_Alterar_Status_Usuario/alterar_status_usuario.php";
-    include "../../../public/modais/Modal_Confirmacao_dos_Dados_Registrados/confirmacao_dados_registrados.php";
-    include "../../../public/modais/Modal_Confirmacao_dos_Dados/confirmacao_dados.php";
-    include "../../../public/modais/Modal_Alerta_Alteracoes_Realizadas/alerta_alteracoes.php";
+    include "../../public/modais/Modal_Alterar_Dados_Pessoais/alterar_dados_pessoais.php";
+    include "../../public/modais/Modal_Alterar_Status_Usuario/alterar_status_usuario.php";
+    include "../../public/modais/Modal_Confirmacao_dos_Dados_Registrados/confirmacao_dados_registrados.php";
+    include "../../public/modais/Modal_Confirmacao_dos_Dados/confirmacao_dados.php";
+    include "../../public/modais/Modal_Alerta_Alteracoes_Realizadas/alerta_alteracoes.php";
     include "./monitor-modal.php";
     ?>
 

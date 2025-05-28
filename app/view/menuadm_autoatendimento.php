@@ -13,17 +13,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="../../../public/css/navegacao.css">
-    <link rel="stylesheet" href="../../../public/css/monitor-modal.css">
-    <link rel="stylesheet" href="../../../public/css/style_eli.css">
-    <link rel="stylesheet" href="../../../public/modais/Modal_Alterar_Dados_Pessoais/alterar_dados_pessoais.css">
-    <link rel="stylesheet" href="../../../public/modais/Modal_Alterar_Senha/alterar_senha.css">
+    <link rel="stylesheet" href="../../public/css/navegacao.css">
+    <link rel="stylesheet" href="../../public/css/monitor-modal.css">
+    <link rel="stylesheet" href="../../public/css/style_eli.css">
+    <link rel="stylesheet" href="../../public/modais/Modal_Alterar_Dados_Pessoais/alterar_dados_pessoais.css">
+    <link rel="stylesheet" href="../../public/modais/Modal_Alterar_Senha/alterar_senha.css">
 
     <!-- JS -->
-    <script src="../../../public/js/navegacao-menu-lateral.js" defer></script>
-    <script src="../../../public/js/monitor-modal.js" defer></script>
+    <script src="../../public/js/navegacao-menu-lateral.js" defer></script>
+    <script src="../../public/js/monitor-modal.js" defer></script>
 
-    <link rel="shortcut icon" type="imagex/png" href="../../../public/img/Logo-Nota-Controlnt.ico">
+    <link rel="shortcut icon" type="imagex/png" href="../../public/img/Logo-Nota-Controlnt.ico">
 </head>
 
 <body class="control-body-navegacao">
@@ -60,19 +60,19 @@
                 <div class="wrapper">
                     <a href="">
                         <div class="banner-img">
-                            <img src="../../../public/img/Menus/TotemPassControl.png" alt="">
+                            <img src="../../public/img/Menus/TotemPassControl.png" alt="">
                         </div>
                     </a>
                 </div>
                 <div class="button-wrapper">
-                    <button class="btn outline" onclick="window.location.href='../../usuario/view/tela_autoatendimentoPage1.php';">Visualizar Autoatendimento</button>
+                    <button class="btn outline" onclick="window.location.href='../view/tela_autoatendimento_page1.php';">Visualizar Autoatendimento</button>
                 </div>
             </div>
             <div class="container_menu">
                 <div class="wrapper">
                     <a href="./monitor-modal.php">
                         <div class="banner-img">
-                            <img src="../../../public/img/img-menu/monitor.png" alt="">
+                            <img src="../../public/img/img-menu/monitor.png" alt="">
                             <!-- <img src="../../../public/img/Menus/MONITOR.png" alt=""> -->
 
                         </div>

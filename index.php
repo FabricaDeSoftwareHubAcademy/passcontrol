@@ -28,7 +28,7 @@ if(isset($_POST['cpf'])){
 
     <link rel="stylesheet" href="public/css/login.css">
     <script src="public/js/login.js" defer></script>
-    <link rel="shortcut icon" type="imagex/png" href="public/img/Logo-Nota-Controlnt.ico">
+    <link rel="shortcut icon" type="imagex/png" href="public/img/favicon.ico">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
@@ -39,7 +39,7 @@ if(isset($_POST['cpf'])){
     
     
     
-        <div class="GroupLineResponsive">
+        <!-- <div class="GroupLineResponsive">
             <div class="lineResponsive">
                 <span></span>
             </div>
@@ -48,7 +48,7 @@ if(isset($_POST['cpf'])){
                 <div class="setasResponsive"><img src="public/img/logo-png/setas.png" alt=""></div>
                 <div class="setasResponsive"><img src="public/img/logo-png/setas.png" alt=""></div>
             </div>
-        </div>
+        </div> -->
 
         
     <div class="containerLogin">
@@ -106,7 +106,7 @@ if(isset($_POST['cpf'])){
 
 
 
-    <div class="GroupLineResponsive groupRight">
+    <!-- <div class="GroupLineResponsive groupRight">
         <div class="arrowResponsive ">
             <div class="setasResponsive setaRight"><img src="public/img/logo-png/setas.png" alt=""></div>
             <div class="setasResponsive setaRight"><img src="public/img/logo-png/setas.png" alt=""></div>
@@ -115,7 +115,7 @@ if(isset($_POST['cpf'])){
         <div class="lineResponsive">
             <span></span>
         </div>
-    </div>
+    </div> -->
 </body>
 
 </html>
