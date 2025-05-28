@@ -74,7 +74,7 @@ class Usuario {
     }
 
     // Função para gerar uma senha aleatória
-    public function gerarSenha($length = 10) {
+    public function gerar_senha($length = 10) {
         $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ*+-&@!#$.';
         $charactersLength = strlen($characters);
         $randomPw = '';
@@ -87,7 +87,7 @@ class Usuario {
     }
 
     // Função para listar perfil de usuário com base no ID do perfil
-    public function listarNomePerfil($id_perfil) {
+    public function listar_perfil_usuario($id_perfil) {
         $db = new Database('perfil_usuario');
         return $db->select("id_perfil_usuario = $id_perfil")->fetch(PDO::FETCH_ASSOC);
     }
