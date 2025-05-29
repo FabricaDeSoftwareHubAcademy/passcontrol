@@ -45,7 +45,7 @@ class Database {
         }
         catch(PDOException $erro){
             // print_r($query);
-            die("\nFalha na conecção! (fn_exec) <br>". $erro->getMessage());
+            die("\nFalha na execucao! <br>". $erro->getMessage());
         }
     }    
 

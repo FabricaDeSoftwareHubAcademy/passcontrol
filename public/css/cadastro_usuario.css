@@ -142,7 +142,13 @@ input:focus {
     color: #555;
 }
 
-
+/* informação de erro */
+.erro {
+    color: red;
+    font-size: 0.85rem;
+    margin-top: 4px;
+    display: block;
+}
 
  /* checkbox dos serivocs */
 .checkbox-container{ 

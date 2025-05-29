@@ -19,7 +19,6 @@
     <link rel="stylesheet" href="../../public/modais/Modal_Alterar_Dados_Pessoais/alterar_dados_pessoais.css">
     <link rel="stylesheet" href="../../public/modais/Modal_Alterar_Senha/alterar_senha.css">
 
-
     <link rel="stylesheet" href="../../public/modais/Modal_Confirmacao_dos_Dados_Registrados/confirmacao_dados_registrados.css">
     <link rel="stylesheet" href="../../public/modais/Modal_Confirmacao_dos_Dados/confirmacao_dados.css">
 
@@ -28,9 +27,9 @@
     <!-- JS -->
     <script src="../../public/js/navegacao-menu-lateral.js" defer></script>
     <script src="../../public/js/monitor-modal.js" defer></script>
-    <!-- <script src="../../public/js/modal_salvar_cadastro.js" defer></script> -->
     <script src="../../public/js/checkbox_seleciona_todos.js" defer></script>
-    <script src="../js/usuario-cadastrar.js" defer></script>
+    <script src="../js/usuario_cadastrar.js" defer></script>
+    <script src="../js/validar_cpf.js" defer></script>
 
     <link rel="shortcut icon" type="imagex/png" href="../../public/img/Logo-Nota-Controlnt.ico">
 </head>
@@ -49,18 +48,21 @@
             <hr>
         </div>
 
-        <form class="quadrado" method="POST" id="dados_cad">
+        <form class="quadrado" method="POST" id="dados_cad" onkeydown="return event.key != 'Enter';">
             <div class="nome">
                 <label class="labeledit" for="nome">Nome*</label>
                 <input class="borda" type="text" name="nome_usuario" id="nome_usuario" placeholder="Digite aqui o nome do usuário" required>
+                <span class="erro" id="erro_nome"></span>
             </div>
             <div class="email">
                 <label class="labeledit" for="email">Email*</label>
                 <input class="borda" type="text" name="email_usuario" id="email_usuario" placeholder="Digite aqui o Email do usuário" required>
+                <span class="erro" id="erro_email"></span>
             </div>
             <div class="cpf">
                 <label class="labeledit" for="cpf">CPF*</label>
-                <input class="borda" type="text" name="cpf_usuario" id="cpf_usuario" max="11" placeholder="Digite aqui o CPF do usuário" required>
+                <input class="borda" type="text" name="cpf_usuario" id="cpf_usuario" maxlength="14" placeholder="000.000.000-00" required>
+                <span class="erro" id="erro_cpf"></span>
             </div>
             <div class="selecionar">
                 <div class="perfild">
@@ -80,11 +82,11 @@
                         };
                         ?>
                     </select>
+                    <span class="erro" id="erro_perfil"></span>
                 </div>
-
             </div>
+            
             <title class="servico">Seviços</title>
-
             <div class="checkbox-container">
                 <div class="column-1">
                     <?php
