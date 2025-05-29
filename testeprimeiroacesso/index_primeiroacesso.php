@@ -1,5 +1,5 @@
 <?php
-require './app/classes/Usuario.php';
+require './app/testeprimeiroacesso/usuario_primeiroacesso.php';
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
@@ -8,16 +8,31 @@ if(isset($_POST['cpf'])){
     $senha = addslashes($_POST['senha']);
 
     $usuario = new Usuario();
-    if($usuario->logar($cpf, $senha)){
-        header("location: ./app/view/atendimento.php");
-    }else{
-        echo "<script>alert('cpf ou Senha incorreto!') </script>";
+    if ($usuario->logar($cpf, $senha)) {
+        session_start();
+        $id_usuario = $_SESSION['id_usuario'];
+    
+        // Verifica se é primeiro acesso
+        $dados_usuario = $usuario->buscar("id_usuario = $id_usuario")[0];
+        
+        if ($dados_usuario['primeiro_acesso']) {
+            include './app/public/modais/alterar_senha.php.php';
+            exit;
+        }
+        } else {
+            header("Location: ./app/view/atendimento.php");
+            exit;
+        }
+       
+    } else {
+        echo "<script>alert('CPF ou senha incorretos!');</script>";
     }
-}
+
+
 ?> 
 
 <!DOCTYPE html>
-<html lang="p-br">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -37,19 +52,6 @@ if(isset($_POST['cpf'])){
     <header>
     </header>
     
-    
-    
-        <!-- <div class="GroupLineResponsive">
-            <div class="lineResponsive">
-                <span></span>
-            </div>
-            <div class="arrowResponsive">
-                <div class="setasResponsive"><img src="public/img/logo-png/setas.png" alt=""></div>
-                <div class="setasResponsive"><img src="public/img/logo-png/setas.png" alt=""></div>
-                <div class="setasResponsive"><img src="public/img/logo-png/setas.png" alt=""></div>
-            </div>
-        </div> -->
-
         
     <div class="containerLogin">
         <div class="animBox">
@@ -84,7 +86,7 @@ if(isset($_POST['cpf'])){
             <form action="#" method="post" class="formBoxLogin">
                 <div class="group user">
                     <label for="name">CPF</label>
-                    <input type="text" name="cpf" placeholder="000.000.000-00">
+                    <input type="text" name="cpf" placeholder="000.000.000-00" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" required title="Digite um CPF no formato 000.000.000-00">
                 </div>
                 <div class="group senha-telaLogin">
                     <label for="password">Senha</label>
@@ -104,18 +106,6 @@ if(isset($_POST['cpf'])){
         </div>
     </div>
 
-
-
-    <!-- <div class="GroupLineResponsive groupRight">
-        <div class="arrowResponsive ">
-            <div class="setasResponsive setaRight"><img src="public/img/logo-png/setas.png" alt=""></div>
-            <div class="setasResponsive setaRight"><img src="public/img/logo-png/setas.png" alt=""></div>
-            <div class="setasResponsive setaRight"><img src="public/img/logo-png/setas.png" alt=""></div>
-        </div>
-        <div class="lineResponsive">
-            <span></span>
-        </div>
-    </div> -->
 </body>
 
 </html>
