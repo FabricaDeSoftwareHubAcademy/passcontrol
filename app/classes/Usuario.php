@@ -42,17 +42,49 @@ class Usuario {
 
     // Função para realizar o login
     public function logar($cpf, $senha) {
-        $select_user = $this->db->select("cpf_usuario = ". $cpf, '', '', 'id_usuario, senha_usuario');
+        $select_user = $this->db->select("cpf_usuario = ". $cpf, '', '', 'id_usuario, cpf_usuario, senha_usuario');
         
         if ($select_user->rowCount() > 0) {
-            return $dados = $select_user->fetch();
+            $dados = $select_user->fetch();
+
+            // // ------------------------------- DEBUG
+            // print_r(addslashes($cpf));
+            // echo ('<br>');
+            // print_r(addslashes($senha));
+            // var_dump($senha);
+            // echo ('<br>');
+            // print_r(addslashes($dados['id_usuario']));
+            // echo ('<br>');
+            // print_r(addslashes($dados['cpf_usuario']));
+            // echo ('<br>');
+            // print_r(addslashes($dados['senha_usuario']));
+            // echo ('<br>');
+            // var_dump($dados['senha_usuario']);
+
+            $senha = '123';
+            var_dump($senha);
+            $dados['senha_usuario'] = password_hash('123', PASSWORD_DEFAULT);
+            echo ('<br>');
+            echo $dados['senha_usuario'];
+            var_dump($dados['senha_usuario']);
+
+            // print_r(password_get_info($dados['senha_usuario']));
+            // // ------------------------------- DEBUG
+
+            // if(password_verify(addslashes($senha), addslashes($dados['senha_usuario']))) echo 'issae' ;
+            // else echo 'foi não';
            
            // Verifica a senha criptografada
            if (password_verify($senha, $dados['senha_usuario'])) {
                session_start();
                $_SESSION['id_usuario'] = $dados['id_usuario'];
 
-               return true;
+               echo ("saiu");
+
+            //    return true;
+           }
+           else{
+            return false;
            }
        }
        return false;
