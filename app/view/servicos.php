@@ -25,7 +25,7 @@
     <script src="../../public/js/navegacao-menu-lateral.js" defer></script>
     <script src="../../public/js/monitor-modal.js" defer></script>
     <script src="../../public/modais/Modal_Cadastrodos_Servicos/cadastro_servicos.js" defer></script>
-    <script src="../../public/js/TesteInativar.js" defer></script>
+    <script src="../../public/js/teste-inativar.js" defer></script>
 
 
     <link rel="shortcut icon" type="imagex/png" href="../../public/img/Logo-Nota-Controlnt.ico">

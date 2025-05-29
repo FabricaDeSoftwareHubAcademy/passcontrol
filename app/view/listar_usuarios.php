@@ -27,9 +27,9 @@
     
     <!-- JS -->
     <script src="../../public/js/navegacao-menu-lateral.js" defer></script>
-    <script src="../../public/js/monitor_modal.js" defer></script>
-    <script src="../js/usuario_editar.js" defer></script>
-    <script src="../js/usuario_alterar_status.js" defer></script>
+    <script src="../../public/js/monitor-modal.js" defer></script>
+    <script src="../js/usuario-editar.js" defer></script>
+    <script src="../js/usuario-alterar-status.js" defer></script>
     <script src="../../public/modais/Modal_Alerta_Alteracoes_Realizadas/alerta_alteracoes.js" defer></script>
     <!-- <script src="../../public/js/modal-atendentes-cadastrados.js" defer></script> -->
 

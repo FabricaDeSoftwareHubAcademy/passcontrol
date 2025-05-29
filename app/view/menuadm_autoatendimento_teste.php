@@ -22,8 +22,8 @@
     <!-- JS -->
     <script src="../../public/js/navegacao-menu-lateral.js" defer></script>
     <script src="../../public/js/monitor-modal.js" defer></script>
-    <script src="../../public/js/modal_cadastro_guiche_adm.js" defer></script>
-    <script src="../../public/js/tela_autoatendimentoPaginação_teste.js" defer></script> <!-- NOVO JS -->
+    <script src="../../public/js/modal-cadastro-guiche-adm.js" defer></script>
+    <script src="../../public/js/tela-autoatendimento-paginação-teste.js" defer></script> <!-- NOVO JS -->
 
     <link rel="shortcut icon" type="imagex/png" href="../../public/img/Logo-Nota-Controlnt.ico">
 </head>
