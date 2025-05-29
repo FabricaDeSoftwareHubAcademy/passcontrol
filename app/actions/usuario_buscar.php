@@ -1,5 +1,5 @@
 <?php
-require "../classe/Usuario.php";
+require_once "../classe/Usuario.php";
 
 // logica para buscar usuario
 if (isset($_GET['id'])) {

@@ -16,12 +16,14 @@
             $objUser = new Usuario();
             $objUser->nome = filter_var($nome, FILTER_SANITIZE_SPECIAL_CHARS);
             $objUser->email = filter_var($email, FILTER_SANITIZE_EMAIL);
-            $objUser->cpf = $cpf;                                                          //------------------COLOCAR UM FILTRO
+            $objUser->cpf = preg_replace('/\D/', '', $cpf);
             $objUser->id_perfil = filter_var($id_perfil, FILTER_SANITIZE_NUMBER_INT);
 
             // GERA UMA SENHA ALEATORIA E A ENVIA PRO BANCO
-            // $objUser->senha = password_hash($objUser->gerarSenha(), PASSWORD_DEFAULT);
+            // $objUser->senha = password_hash($objUser->gerar_senha(), PASSWORD_DEFAULT);
             $objUser->senha = password_hash("123", PASSWORD_DEFAULT);
+
+            // echo ($objUser->senha);
             
             $res = $objUser->cadastrar();
             if($res){
@@ -38,6 +40,5 @@
             echo json_encode($resposta);
             exit;
         }
-            
     }
 ?>

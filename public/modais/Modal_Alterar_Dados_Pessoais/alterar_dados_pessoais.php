@@ -10,13 +10,18 @@
             <div class="nome-container-alterar-dados">
                 <div class="container-dados">
                     <label class="label-nome-alterar-dados"><b>Nome</b></label>
-                    <input type="text" class="input-nome" id="nome" name="nome" value="" placeholder="Digite o seu nome" required>
+                    <input type="text" class="input-nome" id="nome" name="nome" value="" placeholder="Nome do usuario" required>
                 </div>
             </div>
 
             <div class="email-container-alterar-dados">
                 <label class="label-email-alterar-dados"><b>E-mail</b></label>
-                <input type="email" class="input-email" id="email" name="email" value="" placeholder="Digite o seu email" required>
+                <input type="email" class="input-email" id="email" name="email" value="" placeholder="exemplo@email.com" required>
+            </div>
+
+            <div class="cpf-container-alterar-dados">
+                <label class="label-cpf-alterar-dados"><b>Cpf</b></label>
+                <input type="text" class="input-cpf" id="cpf" name="cpf" value="" maxlength="14" placeholder="000.000.000-00" required>
             </div>
 
             <div class="file-container">
@@ -31,7 +36,7 @@
                     <?php
                     // // LISTAR PERFIS DE USUARIO
                     foreach ($perfis as $perfil):
-                    ?> <option class="pi" value="<?= $perfil["id_perfil"] ?>"><?= $perfil["nome"] ?></option> <?php
+                    ?> <option class="pi" value="<?= $perfil["id_perfil_usuario"] ?>"><?= $perfil["nome_perfil_usuario"] ?></option> <?php
                     endforeach;
                     ?>
                 </select>

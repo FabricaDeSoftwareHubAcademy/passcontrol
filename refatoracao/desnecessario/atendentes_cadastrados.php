@@ -81,11 +81,11 @@ $dados = $usuarios->buscar(null,' status_usuario ASC');
                         </thead>
                         <tbody>
                             <?php foreach ($dados as $usuario):
-                                $UsuStatus = $usuario->status_usuario == 'ativo' ? 'inactive' : 'active';
+                                /* $UsuStatus = $usuario->status_usuario == 'ativo' ? 'inactive' : 'active';
                                 
-                                $id_perfil = $usuarios->listar_nome_perfil($usuario->id_perfil);
+                                $id_perfil = $usuarios->listar_nome_perfil($usuario->id_perfil); */
                             ?>
-                            <tr>
+                            <!-- <tr>
                                 <td class="matricula-ajuste" scope="col"> <?= $usuario->nome ?> </td>
                                 <td class="matricula-ajuste" scope="col"> <?= $usuario->email ?> </td>
                                 <td class="perfil-ajuste" scope="col"> <?= $id_perfil['nome'] ?> </td>
@@ -104,7 +104,7 @@ $dados = $usuarios->buscar(null,' status_usuario ASC');
                                         </button>
                                     </div>
                                 </td>
-                            </tr>
+                            </tr> -->
                         <?php endforeach; ?>
                         </tbody>
                     </table>
@@ -122,7 +122,7 @@ $dados = $usuarios->buscar(null,' status_usuario ASC');
     include "../../public/modais/Modal_Confirmacao_dos_Dados_Registrados/confirmacao_dados_registrados.php";
     include "../../public/modais/Modal_Confirmacao_dos_Dados/confirmacao_dados.php";
     include "../../public/modais/Modal_Alerta_Alteracoes_Realizadas/alerta_alteracoes.php";
-    include "./monitor-modal.php";
+    include "./monitor_modal.php";
     ?>
 
 

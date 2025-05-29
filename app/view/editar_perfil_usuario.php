@@ -74,7 +74,7 @@
     </section>
 
     <?php
-    /* include "./monitor-modal.php"; */
+    include "./monitor_modal.php";
     ?>
 </body>
 </html>

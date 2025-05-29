@@ -82,8 +82,8 @@
                         <tbody>
                         <?php foreach ($servicos as $serv) :?>
                         <?php
-                        $ativo = strtoupper(trim($serv->ativo)); 
-                        $estadoAtivo = ($serv->ativo == 'ATIVO') ? '' : 'active';
+                        /* $ativo = strtoupper(trim($serv->ativo)); 
+                        $estadoAtivo = ($serv->ativo == 'ATIVO') ? '' : 'active'; */
                         ?>
                             <tr>
                                 <td><?= $serv->codigo_servico ?></td>
@@ -121,7 +121,7 @@
 
     <!--MONITOR MODAL-->
     <?php
-    include "../../public/js/monitor-modal.js";
+    include "./monitor_modal.php";
     ?>
 
 </body>

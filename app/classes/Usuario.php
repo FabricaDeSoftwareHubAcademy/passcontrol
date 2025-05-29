@@ -37,44 +37,46 @@ class Usuario {
     
     // Função para buscar usuário por ID do usuario
     public function buscar_id_usu($id_usuario){
-        $res = new Database("usuario");
-        $data = $res->select("id_perfil_usuario_fk =".$id_usuario);
-        
-        return $data;
+        return $this->db->select("id_usuario =".$id_usuario);
    }
 
     // Função para realizar o login
-    public function logar($email, $senha) {
-        $res = $this->db->login($email, $senha);
+    public function logar($cpf, $senha) {
+        $select_user = $this->db->select("cpf_usuario = ". $cpf, '', '', 'id_usuario, senha_usuario');
+        
+        if ($select_user->rowCount() > 0) {
+            return $dados = $select_user->fetch();
+           
+           // Verifica a senha criptografada
+           if (password_verify($senha, $dados['senha_usuario'])) {
+               session_start();
+               $_SESSION['id_usuario'] = $dados['id_usuario'];
 
-        if ($res) {
-            // Se o login foi bem-sucedido, redireciona para a página de atendimento
-            header("Location: ./app/admin/view/atendimento.php");
-            exit(); // Sempre use exit() após header() para garantir que o código não continue a ser executado
-        } else {
-            return false; // Caso contrário, retorna false
-        }
+               return true;
+           }
+       }
+       return false;
     }
 
     // Função para atualizar dados do usuário
-    public function atualizar($id_usuario, $nome, $email, $cpf, $id_perfil) {
+    public function atualizar($id_usuario) {
         $values = [
-            'nome_usuario' => $nome,
-            'email_usuario' => $email,
-            'cpf_usuario' => $cpf,
-            'id_perfil_usuario_fk' => $id_perfil
+            'nome_usuario' => $this->nome,
+            'email_usuario' => $this->email,
+            'cpf_usuario' => $this->cpf,
+            'id_perfil_usuario_fk' => $this->id_perfil
         ];
         return $this->db->update("id_usuario = $id_usuario", $values);
     }
 
     // Função para alternar o status do usuário
     public function alternarStatus($id_usuario, $status_usuario) {
-        $status_alternar = ($status_usuario == 'ativo') ? 'inativo' : 'ativo';
+        $status_alternar = ($status_usuario == 1) ? 0 : 1;
         return $this->db->update('id_usuario =' . $id_usuario, ['status_usuario' => $status_alternar]);
     }
 
     // Função para gerar uma senha aleatória
-    public function gerarSenha($length = 10) {
+    public function gerar_senha($length = 10) {
         $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ*+-&@!#$.';
         $charactersLength = strlen($characters);
         $randomPw = '';
@@ -87,7 +89,7 @@ class Usuario {
     }
 
     // Função para listar perfil de usuário com base no ID do perfil
-    public function listarNomePerfil($id_perfil) {
+    public function listar_perfil_usuario($id_perfil) {
         $db = new Database('perfil_usuario');
         return $db->select("id_perfil_usuario = $id_perfil")->fetch(PDO::FETCH_ASSOC);
     }
