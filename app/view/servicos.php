@@ -1,128 +1,437 @@
+<?php
+require '../classes/Servico.php';
+
+$novo_servico = new Servico();
+$servicos_cadastrados = $novo_servico->buscar();
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PassControl</title> 
-    
-    <!-- FONTE -->
+    <title>PassControl</title>
+
+    <!-- IMPORT DA FONTE -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-    
-    <!-- CSS -->
-    <link rel="stylesheet" href="../../public/css/Atendentes_Cadastrados.css">
+
+    <!-- IMPORT DO CSS -->
     <link rel="stylesheet" href="../../public/css/navegacao.css">
-    <link rel="stylesheet" href="../../public/css/monitor-modal.css">
-    <link rel="stylesheet" href="../../../public/css/servicos.css">
-    <link rel="stylesheet" href="../../public/css/conteudo.css">
-    <link rel="stylesheet" href="../../public/modais/Modal_Cadastros_dos_Servicos/cadastro_servicos_final.css">
-    <link rel="stylesheet" href="../../public/modais/Modal_Inativacao_Servico/inativacao_servico.css">
+    <link rel="stylesheet" href="../../public/css/ponto_atendimento.css">
+    <link rel="stylesheet" href="../../public/modais/ModalEdicaoPontoAtendimento/estilo.css">
+    <link rel="stylesheet" href="../../public/modais/ModalInativacaoGuiche/cadastro.css">
+    <link rel="stylesheet" href="../../public/modais/ModalConfirmaDados/estilo.css">
     <link rel="stylesheet" href="../../public/modais/Modal_Alterar_Dados_Pessoais/alterar_dados_pessoais.css">
     <link rel="stylesheet" href="../../public/modais/Modal_Alterar_Senha/alterar_senha.css">
-
-    <!-- JS -->
-    <script src="../../public/js/navegacao-menu-lateral.js" defer></script>
-    <script src="../../public/js/monitor-modal.js" defer></script>
-    <script src="../../public/modais/Modal_Cadastrodos_Servicos/cadastro_servicos.js" defer></script>
-    <script src="../../public/js/teste-inativar.js" defer></script>
+    <link rel="stylesheet" href="../../public/modais/Modal_Cadastro_Ponto_Atendimento/cadastro_ponto_atendimento.css">
+    
 
 
-    <link rel="shortcut icon" type="imagex/png" href="../../public/img/Logo-Nota-Controlnt.ico">
-
+    <link rel="shortcut icon" type="imagex/png" href="../../../public/img/Logo-Nota-Controlnt.ico">
 </head>
-
 <body class="control-body-navegacao">
     <?php
     include "./navegacao.php";
-
-    include "../../public/modais/Modal_Cadastros_dos_Servicos/cadastro_servicos.php";
-
-    include "../../public/modais/Modal_Inativacao_Servico/inativacao_servico.php";
-  
-    include "../../public/modais/Modal_Inativacao_Servico/inativacao_servico.php";
-  
-    include "../../public/modais/Modal_Cadastros_dos_Servicos/confirmacao_dados_registrados.php"; 
-
-    include "../../public/modais/Modal_Cadastros_dos_Servicos/confirmacao_dados.php"; 
-    
     ?>
-    <section class="Area-Util-Projeto">
-        <div class="area-info">
-            <div class="header-area">
-                <div class="titulo-area">
-                    <span>Serviços Cadastrados</span>
-                </div>
-                <div class="input-search">
-                    <input type="search" name="Buscar Atendente" placeholder="Buscar Atendente">
-                </div>
+
+<section class="Area-Util-Projeto">
+    <!-- INICIO DA ÁREA ÚTIL DA PÁGINA -->
+    <div id="PontoAtendimentoCad">
+        <div class="topo-tela-PontoAtendimentoCad">
+            <div class="campo-busca">
+                <input id="buscar-Ponto-atendimento" type="text" placeholder="Buscar Registro">
             </div>
-            <div class="linha-in">
-                <span></span>
-            </div>
-            <div class="area-tabela">
-                <div class="sub-area-tabela">
-                <?php
-                    require_once '../classes/Servico.php';
-
-                    $servico = new Servico();
-                    $servicos = $servico->buscar();
-
-
-                    ?>
-                    <table class="tabela">
-                        <thead>
-                            <tr>
-                                <th scope="col">Código do Serviço</th>
-                                <th scope="col">Serviços</th>
-                                <th class="editar-inativar-menor" scope="col">Editar</th>
-                                <th class="editar-inativar-menor" scope="col">Status</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                        <?php foreach ($servicos as $serv) :?>
-                        <?php
-                        /* $ativo = strtoupper(trim($serv->ativo)); 
-                        $estadoAtivo = ($serv->ativo == 'ATIVO') ? '' : 'active'; */
-                        ?>
-                            <tr>
-                                <td><?= $serv->codigo_servico ?></td>
-                                <td><?= $serv->nome_servico ?></td>
-                                <td class="editar-inativar-menor" scope="col">
-                                    <div class="editar">
-                                        <button class="openEditarServ" 
-                                            data-id="<?= $serv->id_servico ?>" 
-                                            data-codigo="<?= $serv->codigo_servico ?>" 
-                                            data-nome="<?= $serv->nome_servico ?>">
-                                            <img src="../../../public/img/icons/Group 2924.png" alt="">
-                                        </button>
-                                    </div>
-                                </td>
-                                <td class="editar-inativar-menor" scope="col">
-                                    <div class="openInativarAtivar" data-id="<?= $serv->id_servico ?>">
-                                        <button class="toggle-btn <?= $estadoAtivo; ?>">
-                                            <div class="circulo"> </div>
-                                        </button>
-                                    </div>
-                                </td>
-                            </tr>
-                        <?php endforeach; ?>
+            <div class="sev"><p id="Ponto-atendimento">Serviços</p></div>
+            <div class="linha-divisoria-Ponto-atendimento"></div>
+        </div>
+        <div id="tela-branca-Ponto-atendimento"> 
+            <div class="tabela-responsiva-Ponto-atendimento">
+                <table id="table table-striped" class="tabela-Ponto-atendimento">
+                    <thead class="cabecaTabelaPonto-atendimento">
+                        <tr class="topo-tabela-servicos">
+                            <th  class="cabecalho-tabela1">Código</th>
+                            <th class="indentificador-menor"  class="cabecalho-tabela2">Serviço</th>
+                            <th class="editar-menor"  class="cabecalho-tabela3">Editar</th>
+                            <th class="inativar-menor"  class="cabecalho-tabela1">Status</th>
+                        </tr>
+                    </thead>
+                    <tbody class="resto-tabela-Ponto-atendimento">
+                            <?php
+                                foreach($servicos_cadastrados as $servico) {
+                                    $estadoAtivo = ($servico->status_servico == 'ATIVO') ? 'active' : '';
+                                    echo '
+                                    <tr>
+                                        <td>'.$servico->nome_servico.'</td>
+                                        <td class="indentificador-menor">'.$servico->codigo_servico.'</td>
+                                        <td class="editar-menor">
+                                            <div class="editar">
+                                                <button class="bot-editar" id="chamamodal" id_value ='.$servico->id_servico.'>
+                                                    <img id="icone-editar" src="../../public/img/icons/editar.png" alt="Editar">
+                                                </button>
+                                            </div>
+                                        </td>
+                                        <td class="inativar-menor">
+                                            <button id="switch_status" id_value_switch="'.$servico->id_servico.'"  class="toggle-btn '.$estadoAtivo.'">
+                                                <div class="circulo"></div>
+                                            </button>
+                                        </td>
+    
+                                    </tr>';
+                                }
+                            ?>
                         </tbody>
-                    </table>
-                </div>
-            </div>
-            <div class="botoesVoltar-Cadastrar">
-                <button type="submit" class="botao-cadastro" id="abrirModalCadastro">Cadastrar</button>
-                <button type="button" class="botao-voltar " onclick="window.location.href='menuadm_servicos.php';">Voltar</button>
+                </table>
             </div>
         </div>
+        <div class="botoesVoltar-Cadastrar">
+            <button type="button" class="botao-voltar" onclick="window.location.href='menuadm_servicos.php';">Voltar</button>
+            <!-- <button type="button" id="abrirModal" class="botao-cadastro">Cadastrar</button> -->
+            <button type="button" id="btn_cadastrar_servico" class="botao-cadastro">Cadastrar</button>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- ************************************   EDITAR SERVIÇO  ************************************ -->
+
+<!-- Modal  EDITAR Ponto de Atendimento-->
+<div class="modal-container">
+        <section class="modal">
+            <img src="../../../public/img/img-modais/Logo Nota Controlnt.png" alt="Logo Nota Control" class="logo">
+            <h1 class="titulo">Editar Serviço</h1>
+            <hr class="linha-horizontal">
+            <form id="formulario_editar" method="POST">
+                <div class="inf-modal">
+                    <div class="container">
+                        <label class="label"><b>Nome do Serviço</b></label>
+                        <input type="text" id="nome_ponto_atendimento" name="nome_servico" class="input-text">
+                        <input type="hidden" id="id_ponto_atendimento" name="id_servico">
+                    </div>
+                </div>
+                <div class="servico">
+                    <label class="label"><b>Código do Serviço</b></label>
+                    <input type="text" id="identificador_ponto_atendimento" name="codigo_servico" class="input-text" placeholder="">
+                </div>
+                <div class="servico">
+                    <label class="label"><b>Imagem</b></label>
+                    <input type="text" id="identificador_ponto_atendimento" name="url_imagem_servico" class="input-text" placeholder="">
+                </div>
+                <div class="button-group">
+                    <button class="botao-modal cancel">Voltar</button>
+                    <button class="botao-modal save">Salvar</button>
+                </div>
+
+            </form>
+        </section>
+</div>
+
+
+<!-- Modal Confirma EDITAR -->
+    <div id="confirma_editar"  class="modal-confirma-container">
+        <section class="modal">
+            <img src="../../public/img/img-modais/Logo Nota Controlnt.png" alt="Logo Nota Control" class="logo">
+            <h1 class="modal-title">Confirmação</h1>
+            <hr class="modal-divider">
+            <p class="modal-message"><b>Serviço Atualizado com Sucesso!</b></p>
+            <div class="button-group">
+                <button id="btnOkEditar"class="botao-modal Okay">Ok</button>
+            </div>
+        </section>
+    </div >
+
+<!-- JS Modal Editar e Confirma EDITAR-->
+<script>
+
+document.addEventListener("DOMContentLoaded", function() {
+    document.querySelectorAll("#chamamodal").forEach(button => {
+
+        button.addEventListener("click", async function(event) {
+            
+            let id_value = button.getAttribute("id_value");
+
+            const modalContainer = document.querySelector(".modal-container");
+            const buttonFechar = document.querySelector(".close");
+            const buttonCancelar = document.querySelector(".cancel");
+            const buttonSalvar = document.querySelector(".save");
+            const apareceMod = document.getElementById("confirma_editar");
+
+            event.preventDefault(); // impede o recarregamento da pagina
+
+
+            // Fazer requisição para buscar os dados do ponto de atendimento
+            let dados_php = await fetch("../actions/servico_editar.php?id_servico="+id_value , {
+                method: 'GET'
+            });
+
+            let response = await dados_php.json();
+
+            console.log(response);
+    
+            document.getElementById("nome_ponto_atendimento").value = response.nome_servico;
+            document.getElementById("identificador_ponto_atendimento").value = response.codigo_servico;
+            document.getElementById("id_ponto_atendimento").value = response.id_servico; 
+            
+            modalContainer.classList.add("show");
+
+            buttonCancelar.addEventListener("click", () => {
+                modalContainer.classList.remove("show");
+            });
+
+
+            buttonSalvar.addEventListener("click", async(event) => {
+
+                    event.preventDefault(); // impede o recarregamento da pagina
+
+                    myform = document.getElementById("formulario_editar");
+
+                    const formData = new FormData(myform);
+
+                    let dados2_php = await fetch("../actions/servico_editar.php",{
+                        method:'POST',
+                        body:formData
+                    })
+
+                    let response2 = await dados2_php.json();
+                if (response) {
+                    apareceMod.classList.add("show");
+                    modalContainer.classList.remove("show");
+                }
+
+                console.log(response);
+            });
+
+            buttonCancelar.addEventListener("click", function() {
+                modalContainer.classList.remove("show");
+            });
+        });
+    });
+
+    const buttonOkEditar = document.getElementById("btnOkEditar");
+    buttonOkEditar.addEventListener("click", function() {
+        const apareceMod = document.getElementById("confirma_editar");
+        apareceMod.classList.remove("show");
+        location.reload();
+    });
+});
+</script>
+
+<!-- ************************************   CADASTRAR PONTO DE ATENDIMENTO   ************************************ -->
+
+    <!-- MODAL DE CADASTRO DE PONTO DE ATENDIMENTO -->
+    <div class="fundo-container-cad-ponto-atendimento">
+        <section class="modal-ponto-atendimento">
+            <img src="../../../public/img/img-modais/Logo Nota Controlnt.png" alt="Logo Nota Control" class="logo-ponto-atendimento">
+            <h1 class="titulo-ponto-atendimento">Cadastrar Serviços</h1>
+
+            <hr class="linha-horizontal-ponto-atendimento">
+
+            <form id="formulario_cadastrar" method="POST">
+            
+                <div class="inf-modal-ponto-atendimento">
+                    <div class="container-ponto-atendimento">
+                        <label class="label-ponto-atendimento"><b>Nome do Serviço</b></label>
+                        <input type="text" id="nome_ponto_atendimento_cadastrar" name="nome_servico" class="input-text-ponto-atendimento">
+                    </div>
+                </div>
+                <div class="servico-ponto-atendimento">
+                    <label class="label-ponto-atendimento"><b>Código</b></label>
+                    <input type="text" id="identificador_ponto_atendimento_cadastrar" name="codigo_servico" class="input-text-ponto-atendimento">
+                </div>
+                <div class="servico-ponto-atendimento">
+                    <label class="label-ponto-atendimento"><b>Foto</b></label>
+                    <input type="file" id="identificador_ponto_atendimento_cadastrar" name="url_imagem_servico" class="input-text-ponto-atendimento">
+                </div>
+                <div class="button-group-ponto-atendimento">
+                    <button class="botao-modal-ponto-atendimento cancel_CadPontoAtend">Voltar</button>
+                    <button type="submit" class="botao-modal-ponto-atendimento save_CadPontoAtend">Salvar</button>
+                </div>
+
+            </form>
+        </section>
+    </div>
+
+
+    <!-- Modal Confirma CADASTRAR -->
+    <div id="confirma_cadastrar"  class="modal-confirma-container">
+        <section class="modal">
+            <img src="../../../public/img/img-modais/Logo Nota Controlnt.png" alt="Logo Nota Control" class="logo">
+            <h1 class="modal-title">Confirmação</h1>
+            <hr class="modal-divider">
+            <p class="modal-message"><b>Serviço Cadastrado com Sucesso!</b></p>
+            <div class="button-group">
+                <button id="btnOkCadastrar"class="botao-modal Okay">Ok</button>
+            </div>
+        </section>
+    </div >
+
+<!-- JS Modal CADASTRAR e Confirma CADASTRAR-->
+<script>
+    let btn_cadastrar_guiche = document.getElementById("btn_cadastrar_servico");
+    const apareceMod = document.getElementById("confirma_cadastrar");
+
+    const modalContainer_CadPontoAtend = document.querySelector(".fundo-container-cad-ponto-atendimento");
+    const buttonCancelar_CadPontoAtend = document.querySelector(".cancel_CadPontoAtend");
+    const buttonSalvar_CadPontoAtend = document.querySelector(".save_CadPontoAtend");
+
+    // Abrir Modal
+    btn_cadastrar_guiche.addEventListener("click", () => {
+        modalContainer_CadPontoAtend.classList.add("show");
+    });
+
+    // Fechar Modal
+    buttonCancelar_CadPontoAtend.addEventListener("click", (event) => {
+        event.preventDefault();
+        modalContainer_CadPontoAtend.classList.remove("show");
+    });
+
+    // Salvar Formulário
+    buttonSalvar_CadPontoAtend.addEventListener("click", function (event) {
+        event.preventDefault();
+
+        const myform = document.getElementById("formulario_cadastrar");
+        const inputs = myform.querySelectorAll("input");
+        let formularioValido = true;
+
+        // Verifica se todos os campos estão preenchidos
+        inputs.forEach(inputAtual => {
+            if (inputAtual.value.trim() === "") {
+                formularioValido = false;
+            }
+        });
+
+        if (!formularioValido) {
+            alert("Preencha todos os campos para continuar!");
+            return;
+        }
+
+        modalContainer_CadPontoAtend.classList.remove("show");
+        apareceMod.classList.add("show");
+
+        // Adiciona o evento no botão "OK" após exibir o modal de confirmação
+        const btnOkCadastrar = document.getElementById("btnOkCadastrar");
+
+        if (btnOkCadastrar) {
+            btnOkCadastrar.addEventListener("click", async function handleClick() {
+                console.log("ENTROU AQUI");
+
+                const formData = new FormData(myform);
+
+                try {
+                    const dados2_php = await fetch("../actions/servico_cadastrar.php", {
+                        method: 'POST',
+                        body: formData
+                    });
+
+                    const response = await dados2_php.json();
+
+                    if (response.status === 'ok') {
+                         console.log(response);
+                    } else {
+                        alert("Erro ao cadastrar: " + (response.message || "Erro desconhecido"));
+                    }
+                } catch (error) {
+                    console.error("Erro na requisição:", error);
+                    alert("Erro de conexão com o servidor.");
+                }
+
+                // Remove o listener após execução para evitar múltiplos envios
+                btnOkCadastrar.removeEventListener("click", handleClick);
+            }, { once: true });
+        } else {
+            console.warn("Botão btnOkCadastrar não encontrado.");
+        }
+    });
+
+    function toggleMenu() {
+        document.getElementById("mobileMenu").classList.toggle("active");
+    }
+</script>
+
+<!-- ************************************   STATUS PONTO DE ATENDIMENTO   ************************************ -->
+
+
+
+
+<!-- Modal STATUS Ponto de Atendimento -->
+
+<div class="modal-inativar-container">
+    <section class="modal">
+        <img src="../../../public/img/img-modais/Logo Nota Controlnt.png" alt="Logo Nota Control" class="logo">
+        <h1 class="titulo">Confirmação</h1>
+        <hr class="linha">
+        <p class="texto"><b>Deseja Alterar o Status do Ponto de Atendimento?</b></p>
+        <div class="button-group">
+            <button id="btn-cancelar" class="botao-modal cancel">Não</button>
+            <button id="salvar" class="botao-modal save">Sim</button>
+        </div>
     </section>
+</div>
+
+<!-- Confirmar STATUS Ponto de Atendimento -->
+<div id="confirma_status"  class="modal-confirma-container">
+        <section class="modal">
+            <img src="../../../public/img/img-modais/Logo Nota Controlnt.png" alt="Logo Nota Control" class="logo">
+            <h1 class="modal-title">Confirmação</h1>
+            <hr class="modal-divider">
+            <p class="modal-message"><b>Salvo com sucesso!</b></p>
+            <div class="button-group">
+                <button id="btnOkStatus"class="botao-modal Okay">Ok</button>
+            </div>
+        </section>
+    </div >
+</html>
 
 
-    <!--MONITOR MODAL-->
-    <?php
-    include "./monitor_modal.php";
-    ?>
+<!-- JS Modal STATUS e Confirma STATUS Ponto de Atendimento -->
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    document.querySelectorAll("#switch_status").forEach(button => {
+        button.addEventListener("click", function(event) {
+            let id_value_switch = button.getAttribute("id_value_switch");
+            const modalContainer = document.querySelector(".modal-inativar-container");
+            // const buttonCancelar = document.querySelector(".cancel");
+            const buttonCancelar = document.querySelector("#btn-cancelar");
+            const apareceMod = document.getElementById("confirma_status");
+
+            modalContainer.classList.add("show");
+
+            const buttonSalvar = document.querySelector("#salvar");
+
+            buttonSalvar.addEventListener("click", async function(event) {
+                let dados_php = await fetch("../actions/ponto_atendimento_inativar.php?id_ponto_atendimento=" + id_value_switch, {
+                    method: 'GET'
+                });
+
+                let response = await dados_php.json();
+                if (response) {
+                    apareceMod.classList.add("show");
+                    modalContainer.classList.remove("show");
+                }
+
+            });
+
+            buttonCancelar.addEventListener("click", function() {
+                console.log("Modal fechado");
+                modalContainer.classList.remove("show");
+            });
+        });
+    });
+
+    const buttonOkStatus = document.getElementById("btnOkStatus");
+    buttonOkStatus.addEventListener("click", function() {
+        const apareceMod = document.getElementById("confirma_status");
+        apareceMod.classList.remove("show");
+        location.reload();
+    });
+});
+</script>
+
+<?php
+include "./monitor_modal.php";
+?>
 
 </body>
-</html>
