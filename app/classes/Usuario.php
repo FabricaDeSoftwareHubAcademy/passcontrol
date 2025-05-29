@@ -19,6 +19,9 @@ class Usuario {
 
     // Função para cadastrar um novo usuário
     public function cadastrar() {
+        if (!$this->validaCpf($this->cpf)) {
+            throw new Exception("CPF inválido.");
+        }
         $senha_hash = password_hash($this->senha, PASSWORD_DEFAULT);  // Criptografando a senha
         $values = [
             'nome_usuario' => $this->nome,
@@ -39,6 +42,22 @@ class Usuario {
     public function buscar_id_usu($id_usuario){
         return $this->db->select("id_usuario =".$id_usuario);
    }
+    private function validaCpf($cpf) {
+        $cpf = preg_replace('/[^0-9]/', '', $cpf);
+        if (strlen($cpf) != 11 || preg_match('/(\d)\1{10}/', $cpf)) {
+            return false;
+        }
+        for ($t = 9; $t < 11; $t++) {
+            for ($d = 0, $c = 0; $c < $t; $c++) {
+                $d += $cpf[$c] * (($t + 1) - $c);
+            }
+            $d = ((10 * $d) % 11) % 10;
+            if ($cpf[$c] != $d) {
+                return false;
+            }
+        }
+        return true;
+    }
 
     // Função para realizar o login
     public function logar($cpf, $senha) {
@@ -60,6 +79,9 @@ class Usuario {
 
     // Função para atualizar dados do usuário
     public function atualizar($id_usuario) {
+        if (!$this->validaCpf($this->cpf)) {
+            throw new Exception("CPF inválido.");
+        }
         $values = [
             'nome_usuario' => $this->nome,
             'email_usuario' => $this->email,
@@ -93,5 +115,7 @@ class Usuario {
         $db = new Database('perfil_usuario');
         return $db->select("id_perfil_usuario = $id_perfil")->fetch(PDO::FETCH_ASSOC);
     }
+
 }
+
 ?>
