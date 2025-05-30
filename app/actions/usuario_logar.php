@@ -6,8 +6,6 @@
 
     
     if(isset($_POST['cpf'])){
-        // $cpf = addslashes($_POST['cpf']);
-        // $senha = addslashes($_POST['senha']);
         
         $cpf_retificado = preg_replace('/\D/', '', $_POST['cpf']);
         $senha_retificada = filter_var($_POST['senha'], FILTER_SANITIZE_SPECIAL_CHARS);
@@ -22,7 +20,6 @@
             header("location: ./app/view/atendimento.php");
             exit();
         }else{
-            // echo "<script>alert('cpf ou Senha incorreto!') </script>";
             return; // Caso contrário, retorna false
         }
     }

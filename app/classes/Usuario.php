@@ -19,12 +19,11 @@ class Usuario {
 
     // Função para cadastrar um novo usuário
     public function cadastrar() {
-        $senha_hash = password_hash($this->senha, PASSWORD_DEFAULT);  // Criptografando a senha
         $values = [
             'nome_usuario' => $this->nome,
             'email_usuario' => $this->email,
             'cpf_usuario' => $this->cpf,
-            'senha_usuario' => $senha_hash,
+            'senha_usuario' => $this->senha,
             'id_perfil_usuario_fk' => $this->id_perfil
         ];
         return $this->db->insert($values);
@@ -47,41 +46,12 @@ class Usuario {
         if ($select_user->rowCount() > 0) {
             $dados = $select_user->fetch();
 
-            // // ------------------------------- DEBUG
-            // print_r(addslashes($cpf));
-            // echo ('<br>');
-            // print_r(addslashes($senha));
-            // var_dump($senha);
-            // echo ('<br>');
-            // print_r(addslashes($dados['id_usuario']));
-            // echo ('<br>');
-            // print_r(addslashes($dados['cpf_usuario']));
-            // echo ('<br>');
-            // print_r(addslashes($dados['senha_usuario']));
-            // echo ('<br>');
-            // var_dump($dados['senha_usuario']);
-
-            $senha = '123';
-            var_dump($senha);
-            $dados['senha_usuario'] = password_hash('123', PASSWORD_DEFAULT);
-            echo ('<br>');
-            echo $dados['senha_usuario'];
-            var_dump($dados['senha_usuario']);
-
-            // print_r(password_get_info($dados['senha_usuario']));
-            // // ------------------------------- DEBUG
-
-            // if(password_verify(addslashes($senha), addslashes($dados['senha_usuario']))) echo 'issae' ;
-            // else echo 'foi não';
-           
            // Verifica a senha criptografada
            if (password_verify($senha, $dados['senha_usuario'])) {
                session_start();
                $_SESSION['id_usuario'] = $dados['id_usuario'];
 
-               echo ("saiu");
-
-            //    return true;
+               return true;
            }
            else{
             return false;
