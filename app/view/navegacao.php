@@ -103,6 +103,6 @@
 </div>
 
 <?php
-    /* include "../../public/modais/Modal_Alterar_Dados_Pessoais/alterar_dados_pessoais.php"; */
-    /* include "../../public/modais/Modal_Alterar_Senha/alterar_senha.php"; */
+    include "../../public/modais/modal_alterar_dados_pessoais.php";
+    include "../../public/modais/modal_alterar_senha.php";
 ?>

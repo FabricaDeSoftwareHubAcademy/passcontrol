@@ -17,12 +17,12 @@
     <link rel="stylesheet" href="../../public/css/navegacao.css">
     <link rel="stylesheet" href="../../public/css/monitor_modal.css">
     <link rel="stylesheet" href="../../public/css/conteudo.css">
-    <link rel="stylesheet" href="../../public/modais/Modal_Alterar_Dados_Pessoais/alterar_dados_pessoais.css">
-    <link rel="stylesheet" href="../../public/modais/Modal_Alterar_Senha/alterar_senha.css">
-    <link rel="stylesheet" href="../../public/modais/Modal_Alterar_Status_Usuario/alterar_status_usuario.css">
-    <link rel="stylesheet" href="../../public/modais/Modal_Confirmacao_dos_Dados_Registrados/confirmacao_dados_registrados.css">
-    <link rel="stylesheet" href="../../public/modais/Modal_Confirmacao_dos_Dados/confirmacao_dados.css">    
-    <link rel="stylesheet" href="../../public/modais/Modal_Alerta_Alteracoes_Realizadas/alerta_alteracoes.css">
+    <link rel="stylesheet" href="../../public/css/modal_alterar_dados_pessoais.css">
+    <link rel="stylesheet" href="../../public/css/modal_alterar_senha.css">
+    <link rel="stylesheet" href="../../public/css/modal_alterar_status_usuario.css">
+    <link rel="stylesheet" href="../../public/css/modal_confirmacao_dados_registrados.css">
+    <link rel="stylesheet" href="../../public/css/modal_confirmacao_dados.css">    
+    <link rel="stylesheet" href="../../public/css/modal_alerta_alteracoes.css">
     <link rel="stylesheet" href="../../public/css/tabela.css">
     
     <!-- JS -->
@@ -110,11 +110,11 @@
     </section>
     
     <?php
-    include "../../public/modais/Modal_Alterar_Dados_Pessoais/alterar_dados_pessoais.php";
-    include "../../public/modais/Modal_Alterar_Status_Usuario/alterar_status_usuario.php";
-    include "../../public/modais/Modal_Confirmacao_dos_Dados_Registrados/confirmacao_dados_registrados.php";
-    include "../../public/modais/Modal_Confirmacao_dos_Dados/confirmacao_dados.php";
-    include "../../public/modais/Modal_Alerta_Alteracoes_Realizadas/alerta_alteracoes.php";
+    include "../../public/modais/modal_alterar_dados_pessoais.php";
+    include "../../public/modais/modal_alterar_status_usuario.php";
+    include "../../public/modais/modal_confirmacao_dados_registrados.php";
+    include "../../public/modais/modal_confirmacao_dados.php";
+    // include "../../public/modais/modal_alerta_alteracoes.php";
     include "./monitor_modal.php";
     ?>
 
