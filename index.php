@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="p-br">
 
@@ -10,15 +9,16 @@
     <title>PassControl</title> 
 
     <link rel="stylesheet" href="public/css/login.css">
-    <script src="public/js/login.js" defer></script>
+    <!-- <script src="public/js/login.js" defer></script> -->
     <link rel="shortcut icon" type="imagex/png" href="public/img/favicon.ico">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body class="login">
-    <header>
-    </header>
+    <?php
+        include './app/actions/usuario_logar.php';
+    ?>
     
     
     
@@ -64,7 +64,7 @@
                 <span class="titleBemVindo">Olá, Seja Bem-Vindo !!</span>
             </div>
 
-            <form action="#" method="post" class="formBoxLogin">
+            <form action="#" method="post" class="formBoxLogin" id="login">
                 <div class="group user">
                     <label for="name">CPF</label>
                     <input type="text" name="cpf" id="cpf" placeholder="000.000.000-00" maxlength="14" required>
@@ -81,7 +81,7 @@
                 </nav>
 
                 <div class="btnEntrar">
-                        <button type="submit" name="enviar" class="btn">Entrar</button>
+                        <button type="submit" name="enviar" class="btn" form="login">Entrar</button>
                 </div>
             </form>
             

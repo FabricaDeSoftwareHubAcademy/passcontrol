@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PassControl</title>
+    <link rel="stylesheet" href="../../css/modal_status_atendimento.css">
+</head>
+<body class="estruct-pass">
+    <button class="botao-modal open-status-atendimento">Abrir Modal</button>
+
+    <div class="fundo-status-atendimento">
+        <section class="modal-status-atendimento">
+            <div class="modal-header">
+                <span class="modal-title">Status de Atendimento</span>
+                <img src="../../../public/img/img-modais/Logo Nota Controlnt.png" alt="Logo Nota Control" alt="Ícone" class="modal-icon">
+            </div>
+
+            <hr class="row">
+            
+            <table class="status-table">
+                <thead>
+                    <tr>
+                        <th class="table-header">Nome</th>
+                        <th class="table-header">Descrição</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="status-name em-atendimento">Em Atendimento</td>
+                        <td class="status-desc">Atualmente em Atendimento</td>
+                    </tr>
+                    <tr>
+                        <td class="status-name disponivel">Disponível</td>
+                        <td class="status-desc">Disponível para Atendimento</td>
+                    </tr>
+                    <tr>
+                        <td class="status-name intervalo">Intervalo</td>
+                        <td class="status-desc">Atendente Em Intervalo</td>
+                    </tr>
+                </tbody>
+            </table>
+            <button class="botao-modal close_StatusAtendimento">Fechar</button>
+        </section>        
+    </div>
+    
+    <script src="../../js/modal_status_atendimento.js" defer></script>
+</body>
+</html>

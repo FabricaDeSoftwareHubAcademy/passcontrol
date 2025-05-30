@@ -85,8 +85,4 @@ class Database {
         $res = $this->execute($query, $values);
         return $res->rowCount();
     }
-
-    public function getConnection() {
-        return $this->conn;
-    }
 }
