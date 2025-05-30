@@ -1,5 +1,5 @@
 <?php
-require './app/testeprimeiroacesso/usuario_primeiroacesso.php';
+require_once('./usuario_primeiroacesso.php');
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
@@ -16,19 +16,14 @@ if(isset($_POST['cpf'])){
         $dados_usuario = $usuario->buscar("id_usuario = $id_usuario")[0];
         
         if ($dados_usuario['primeiro_acesso']) {
-            include './app/public/modais/alterar_senha.php.php';
+            include './testeprimeiroacesso/modal_primeiroacesso_alterarsenha.php';
             exit;
         }
         } else {
             header("Location: ./app/view/atendimento.php");
             exit;
         }
-       
-    } else {
-        echo "<script>alert('CPF ou senha incorretos!');</script>";
     }
-
-
 ?> 
 
 <!DOCTYPE html>
@@ -41,8 +36,8 @@ if(isset($_POST['cpf'])){
     <!-- TROCA TÍTULO QUANDO FOR UTILIZAR -->
     <title>PassControl</title> 
 
-    <link rel="stylesheet" href="public/css/login.css">
-    <script src="public/js/login.js" defer></script>
+    <link rel="stylesheet" href="../public/css/login.css">
+    <script src="../public/js/login.js" defer></script>
     <link rel="shortcut icon" type="imagex/png" href="public/img/favicon.ico">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />

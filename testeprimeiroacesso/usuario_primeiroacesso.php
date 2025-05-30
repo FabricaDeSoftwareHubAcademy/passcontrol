@@ -1,5 +1,5 @@
-<?php   
-require_once(__DIR__ . '/../database/Database.php');
+<?php  
+require_once('../app/database/Database.php');
 
 class Usuario {
     public int $id_usuario;
