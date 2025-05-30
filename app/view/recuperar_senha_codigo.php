@@ -59,7 +59,7 @@
                     <span>Insira o código recebido no E-mail.</span>
 
                     <div class="btnEnviar">
-                        <a href="./recuperar_senha_nova_Senha.php" type="submit" class="btn">Entrar</a>
+                        <a href="./recuperar_senha_nova_senha.php" type="submit" class="btn">Entrar</a>
                     </div>
                 </form>
             </div>
