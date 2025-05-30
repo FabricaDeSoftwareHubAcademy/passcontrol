@@ -1,19 +1,19 @@
 <?php
-require './app/classes/Usuario.php';
-ini_set('display_errors', 1);
-error_reporting(E_ALL);
+// require './app/classes/Usuario.php';
+// ini_set('display_errors', 1);
+// error_reporting(E_ALL);
 
-if(isset($_POST['cpf'])){
-    $cpf = preg_replace('/[^0-9]/', '', $_POST['cpf']);
-    $senha = addslashes($_POST['senha']);
+// if(isset($_POST['cpf'])){
+//     $cpf = preg_replace('/[^0-9]/', '', $_POST['cpf']);
+//     $senha = addslashes($_POST['senha']);
 
-    $usuario = new Usuario();
-    if($usuario->logar($cpf, $senha)){
-        header("location: ./app/view/atendimento.php");
-    }else{
-        echo "<script>alert('CPF ou senha incorreto!')</script>";
-    }
-}
+//     $usuario = new Usuario();
+//     if($usuario->logar($cpf, $senha)){
+//         header("location: ./app/view/atendimento.php");
+//     }else{
+//         echo "<script>alert('CPF ou senha incorreto!')</script>";
+//     }
+// }
 ?>
 
 
@@ -28,15 +28,16 @@ if(isset($_POST['cpf'])){
     <title>PassControl</title> 
 
     <link rel="stylesheet" href="public/css/login.css">
-    <script src="public/js/login.js" defer></script>
+    <!-- <script src="public/js/login.js" defer></script> -->
     <link rel="shortcut icon" type="imagex/png" href="public/img/favicon.ico">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body class="login">
-    <header>
-    </header>
+    <?php
+        include './app/actions/usuario_logar.php';
+    ?>
     
     
     
@@ -82,7 +83,7 @@ if(isset($_POST['cpf'])){
                 <span class="titleBemVindo">Olá, Seja Bem-Vindo !!</span>
             </div>
 
-            <form action="#" method="post" class="formBoxLogin">
+            <form action="#" method="post" class="formBoxLogin" id="login">
                 <div class="group user">
                     <label for="name">CPF</label>
                     <input type="text" name="cpf" id="cpf" placeholder="000.000.000-00" maxlength="14" required>
@@ -99,7 +100,7 @@ if(isset($_POST['cpf'])){
                 </nav>
 
                 <div class="btnEntrar">
-                        <button type="submit" name="enviar" class="btn">Entrar</button>
+                        <button type="submit" name="enviar" class="btn" form="login">Entrar</button>
                 </div>
             </form>
             
