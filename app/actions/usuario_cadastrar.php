@@ -21,7 +21,7 @@
 
             // GERA UMA SENHA ALEATORIA E A ENVIA PRO BANCO
             // $objUser->senha = password_hash($objUser->gerar_senha(), PASSWORD_DEFAULT);
-            $objUser->senha = password_hash("123", PASSWORD_DEFAULT);
+            $objUser->senha = password_hash('123', PASSWORD_DEFAULT);
 
             // echo ($objUser->senha);
             
