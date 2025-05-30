@@ -6,7 +6,7 @@
     
     <title>PassControl</title> 
 
-    <link rel="stylesheet" href="../../public/css/recuperar_senha_nova_Senha.css">
+    <link rel="stylesheet" href="../../public/css/recuperar_senha_nova_senha.css">
 
     <script src="../../public/js/recuperar_senha_nova_Senha.js" defer></script>
 
