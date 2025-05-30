@@ -10,7 +10,7 @@ if(isset($_GET['id'])){
 
     if($user_alternar){
         // retorna os dados como um objeto JSON
-        $res = $usuarioObj->alternarStatus($user_alternar['id_usuario'], $user_alternar['status_usuario']);
+        $res = $usuarioObj->alternar_status($user_alternar['id_usuario'], $user_alternar['status_usuario']);
 
         if($res){     
             $resposta = array("status_usuario" => "OK");
