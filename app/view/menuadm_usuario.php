@@ -61,7 +61,7 @@
             <main class="area-cards">
                 <div class="container_menu">
                     <div class="wrapper">
-                        <a href="./atendentes_cadastrados.php">
+                        <a href="./listar_usuarios.php">
                         <div class="banner-img">
                             <!-- <img src="../../../public/img/img-menu/usuariocadastrado.png" alt=""> -->
                             <img src="../../public/img/Menus/3.png" alt="">
@@ -71,7 +71,7 @@
                         <!-- <p>Usuários Cadastrados.</p> -->
                     </div>
                     <div class="button-wrapper">
-                        <button class="btn outline" onclick="window.location.href='./atendentes_cadastrados.php';">Listar Usuários</button>
+                        <button class="btn outline" onclick="window.location.href='./listar_usuarios.php';">Listar Usuários</button>
                     </div>
                 </div>
                 <div class="container_menu">

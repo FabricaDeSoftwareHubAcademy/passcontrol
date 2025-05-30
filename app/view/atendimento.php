@@ -29,7 +29,7 @@
     <script src="../../public/js/navegacao-menu-lateral.js" defer></script>
     <script src="../../public/js/modal-teladelogin.js" defer></script>
     <script src="../../public/js/modal-proxima-senha.js" defer></script>
-    <script src="../../public/js/modal_conf_saida.js" defer></script>
+    <script src="../../public/js/modal-conf-saida.js" defer></script>
     <script src="../../public/js/monitor-modal.js" defer></script>
 
     <script src="../../public/modais/Modal_Consultar_Fila/modal_consultar_fila.js" defer></script>

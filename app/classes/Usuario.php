@@ -19,12 +19,14 @@ class Usuario {
 
     // Função para cadastrar um novo usuário
     public function cadastrar() {
-        $senha_hash = password_hash($this->senha, PASSWORD_DEFAULT);  // Criptografando a senha
+        if (!$this->validaCpf($this->cpf)) {
+            throw new Exception("CPF inválido.");
+        }
         $values = [
             'nome_usuario' => $this->nome,
             'email_usuario' => $this->email,
             'cpf_usuario' => $this->cpf,
-            'senha_usuario' => $senha_hash,
+            'senha_usuario' => $this->senha,
             'id_perfil_usuario_fk' => $this->id_perfil
         ];
         return $this->db->insert($values);
@@ -40,26 +42,11 @@ class Usuario {
         return $this->db->select("id_usuario =".$id_usuario);
    }
 
-    // Função para realizar o login
-    public function logar($cpf, $senha) {
-        $select_user = $this->db->select("cpf_usuario = ". $cpf, '', '', 'id_usuario, senha_usuario');
-        
-        if ($select_user->rowCount() > 0) {
-            return $dados = $select_user->fetch();
-           
-           // Verifica a senha criptografada
-           if (password_verify($senha, $dados['senha_usuario'])) {
-               session_start();
-               $_SESSION['id_usuario'] = $dados['id_usuario'];
-
-               return true;
-           }
-       }
-       return false;
-    }
-
     // Função para atualizar dados do usuário
     public function atualizar($id_usuario) {
+        if (!$this->validaCpf($this->cpf)) {
+            throw new Exception("CPF inválido.");
+        }
         $values = [
             'nome_usuario' => $this->nome,
             'email_usuario' => $this->email,
@@ -93,5 +80,44 @@ class Usuario {
         $db = new Database('perfil_usuario');
         return $db->select("id_perfil_usuario = $id_perfil")->fetch(PDO::FETCH_ASSOC);
     }
+
+    // Função para realizar o login
+    public function logar($cpf, $senha) {
+        $select_user = $this->db->select("cpf_usuario = ". $cpf, '', '', 'id_usuario, cpf_usuario, senha_usuario');
+        
+        if ($select_user->rowCount() > 0) {
+            $dados = $select_user->fetch();
+
+           // Verifica a senha criptografada
+           if (password_verify($senha, $dados['senha_usuario'])) {
+               session_start();
+               $_SESSION['id_usuario'] = $dados['id_usuario'];
+
+               return true;
+           }
+           else{
+            return false;
+           }
+       }
+       return false;
+    }    
+
+    private function validaCpf($cpf) {
+        $cpf = preg_replace('/[^0-9]/', '', $cpf);
+        if (strlen($cpf) != 11 || preg_match('/(\d)\1{10}/', $cpf)) {
+            return false;
+        }
+        for ($t = 9; $t < 11; $t++) {
+            for ($d = 0, $c = 0; $c < $t; $c++) {
+                $d += $cpf[$c] * (($t + 1) - $c);
+            }
+            $d = ((10 * $d) % 11) % 10;
+            if ($cpf[$c] != $d) {
+                return false;
+            }
+        }
+        return true;
+    }
 }
+
 ?>
