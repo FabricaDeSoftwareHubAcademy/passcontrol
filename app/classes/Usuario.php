@@ -19,7 +19,7 @@ class Usuario {
 
     // Função para cadastrar um novo usuário
     public function cadastrar() {
-        if (!$this->validaCpf($this->cpf)) {
+        if (!$this->valida_cpf($this->cpf)) {
             throw new Exception("CPF inválido.");
         }
         $values = [
@@ -44,7 +44,7 @@ class Usuario {
 
     // Função para atualizar dados do usuário
     public function atualizar($id_usuario) {
-        if (!$this->validaCpf($this->cpf)) {
+        if (!$this->valida_cpf($this->cpf)) {
             throw new Exception("CPF inválido.");
         }
         $values = [
@@ -57,7 +57,7 @@ class Usuario {
     }
 
     // Função para alternar o status do usuário
-    public function alternarStatus($id_usuario, $status_usuario) {
+    public function alternar_status($id_usuario, $status_usuario) {
         $status_alternar = ($status_usuario == 1) ? 0 : 1;
         return $this->db->update('id_usuario =' . $id_usuario, ['status_usuario' => $status_alternar]);
     }
@@ -102,7 +102,7 @@ class Usuario {
        return false;
     }    
 
-    private function validaCpf($cpf) {
+    private function valida_cpf($cpf) {
         $cpf = preg_replace('/[^0-9]/', '', $cpf);
         if (strlen($cpf) != 11 || preg_match('/(\d)\1{10}/', $cpf)) {
             return false;

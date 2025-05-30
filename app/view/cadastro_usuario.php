@@ -16,11 +16,11 @@
     <link rel="stylesheet" href="../../public/css/navegacao.css">
     <link rel="stylesheet" href="../../public/css/monitor_modal.css">
     <link rel="stylesheet" href="../../public/css/cadastro_usuario.css">
-    <link rel="stylesheet" href="../../public/modais/Modal_Alterar_Dados_Pessoais/alterar_dados_pessoais.css">
-    <link rel="stylesheet" href="../../public/modais/Modal_Alterar_Senha/alterar_senha.css">
+    <link rel="stylesheet" href="../../public/css/modal_alterar_dados_pessoais.css">
+    <link rel="stylesheet" href="../../public/css/modal_alterar_senha.css">
 
-    <link rel="stylesheet" href="../../public/modais/Modal_Confirmacao_dos_Dados_Registrados/confirmacao_dados_registrados.css">
-    <link rel="stylesheet" href="../../public/modais/Modal_Confirmacao_dos_Dados/confirmacao_dados.css">
+    <link rel="stylesheet" href="../../public/css/modal_confirmacao_dados_registrados.css">
+    <link rel="stylesheet" href="../../public/css/modal_confirmacao_dados.css">
 
     <!-- <link rel="stylesheet" href="../../../public/modais/Modal_Confirmacao_dos_Dados_Registrados/confirmacao_dados_registrados.css"> -->
 
@@ -38,7 +38,7 @@
     <?php
     include "./navegacao.php";
     include "../actions/perfil_listar.php";
-    // include "../actions/servico_listar.php";
+    include "../actions/servico_listar.php";
     ?>
 
     <section class="Area-Util-Projeto">
@@ -114,8 +114,8 @@
 
         <?php
         include "./monitor_modal.php";
-        include "../../public/modais/Modal_Confirmacao_dos_Dados_Registrados/confirmacao_dados_registrados.php";
-        include "../../public/modais/Modal_Confirmacao_dos_Dados/confirmacao_dados.php";
+        include "../../public/modais/modal_confirmacao_dados_registrados.php";
+        include "../../public/modais/modal_confirmacao_dados.php";
         ?>
     </section>
 </body>
