@@ -1,6 +1,13 @@
+<<<<<<< Updated upstream
 <?php  
 require_once('../app/database/Database.php');
 
+=======
+<?php   
+// require_once(__DIR__ . '/../database/Database.php');
+var_dump(__DIR__);
+require_once('../app/database/Database.php');
+>>>>>>> Stashed changes
 class Usuario {
     public int $id_usuario;
     public string $nome;
