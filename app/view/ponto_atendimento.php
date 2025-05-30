@@ -100,7 +100,7 @@ $guiches = $guiche->buscar();
 <!-- Modal  EDITAR Ponto de Atendimento-->
 <div class="modal-container">
         <section class="modal">
-            <img src="../../../public/img/img-modais/Logo Nota Controlnt.png" alt="Logo Nota Control" class="logo">
+            <img src="../../public/img/img-modais/Logo Nota Controlnt.png" alt="Logo Nota Control" class="logo">
             <h1 class="titulo">Editar Ponto de Atendimento</h1>
             <hr class="linha-horizontal">
             <form id="formulario_editar" method="POST">
@@ -219,7 +219,7 @@ document.addEventListener("DOMContentLoaded", function() {
     <!-- MODAL DE CADASTRO DE PONTO DE ATENDIMENTO -->
     <div class="fundo-container-cad-ponto-atendimento">
         <section class="modal-ponto-atendimento">
-            <img src="../../../public/img/img-modais/Logo Nota Controlnt.png" alt="Logo Nota Control" class="logo-ponto-atendimento">
+            <img src="../../public/img/img-modais/Logo Nota Controlnt.png" alt="Logo Nota Control" class="logo-ponto-atendimento">
             <h1 class="titulo-ponto-atendimento">Cadastrar Ponto de Atendimento</h1>
 
             <hr class="linha-horizontal-ponto-atendimento">
@@ -249,7 +249,7 @@ document.addEventListener("DOMContentLoaded", function() {
     <!-- Modal Confirma CADASTRAR -->
     <div id="confirma_cadastrar"  class="modal-confirma-container">
         <section class="modal">
-            <img src="../../../public/img/img-modais/Logo Nota Controlnt.png" alt="Logo Nota Control" class="logo">
+            <img src="../../public/img/img-modais/Logo Nota Controlnt.png" alt="Logo Nota Control" class="logo">
             <h1 class="modal-title">Confirmação</h1>
             <hr class="modal-divider">
             <p class="modal-message"><b>Ponto de Atendimento Cadastrado com Sucesso!</b></p>
@@ -351,7 +351,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 <div class="modal-inativar-container">
     <section class="modal">
-        <img src="../../../public/img/img-modais/Logo Nota Controlnt.png" alt="Logo Nota Control" class="logo">
+        <img src="../../public/img/img-modais/Logo Nota Controlnt.png" alt="Logo Nota Control" class="logo">
         <h1 class="titulo">Confirmação</h1>
         <hr class="linha">
         <p class="texto"><b>Deseja Alterar o Status do Ponto de Atendimento?</b></p>
@@ -365,7 +365,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <!-- Confirmar STATUS Ponto de Atendimento -->
 <div id="confirma_status"  class="modal-confirma-container">
         <section class="modal">
-            <img src="../../../public/img/img-modais/Logo Nota Controlnt.png" alt="Logo Nota Control" class="logo">
+            <img src="../../public/img/img-modais/Logo Nota Controlnt.png" alt="Logo Nota Control" class="logo">
             <h1 class="modal-title">Confirmação</h1>
             <hr class="modal-divider">
             <p class="modal-message"><b>Salvo com sucesso!</b></p>

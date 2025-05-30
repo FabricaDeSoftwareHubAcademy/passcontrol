@@ -1,20 +1,21 @@
 <?php
-// require './app/classes/Usuario.php';
-// ini_set('display_errors', 1);
-// error_reporting(E_ALL);
+require './app/classes/Usuario.php';
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
 
-// if(isset($_POST['cpf'])){
-//     $cpf = addslashes($_POST['cpf']);
-//     $senha = addslashes($_POST['senha']);
+if(isset($_POST['cpf'])){
+    $cpf = preg_replace('/[^0-9]/', '', $_POST['cpf']);
+    $senha = addslashes($_POST['senha']);
 
-//     $usuario = new Usuario();
-//     if($usuario->logar($cpf, $senha)){
-//         header("location: ./app/view/atendimento.php");
-//     }else{
-//         echo "<script>alert('cpf ou Senha incorreto!') </script>";
-//     }
-// }
-?> 
+    $usuario = new Usuario();
+    if($usuario->logar($cpf, $senha)){
+        header("location: ./app/view/atendimento.php");
+    }else{
+        echo "<script>alert('CPF ou senha incorreto!')</script>";
+    }
+}
+?>
+
 
 <!DOCTYPE html>
 <html lang="p-br">
@@ -85,7 +86,8 @@
             <form action="#" method="post" class="formBoxLogin" id="login">
                 <div class="group user">
                     <label for="name">CPF</label>
-                    <input type="text" name="cpf" placeholder="000.000.000-00" maxlength="11" required>
+                    <input type="text" name="cpf" id="cpf" placeholder="000.000.000-00" maxlength="14" required>
+
                 </div>
                 <div class="group senha-telaLogin">
                     <label for="password">Senha</label>
@@ -117,6 +119,28 @@
             <span></span>
         </div>
     </div> -->
+    <script>
+document.addEventListener('DOMContentLoaded', () => {
+    const cpfInput = document.getElementById('cpf');
+
+    cpfInput.addEventListener('input', () => {
+        let value = cpfInput.value.replace(/\D/g, '');
+
+        if (value.length > 11) value = value.slice(0, 11);
+
+        if (value.length > 9) {
+            value = value.replace(/(\d{3})(\d{3})(\d{3})(\d{1,2})/, '$1.$2.$3-$4');
+        } else if (value.length > 6) {
+            value = value.replace(/(\d{3})(\d{3})(\d{1,3})/, '$1.$2.$3');
+        } else if (value.length > 3) {
+            value = value.replace(/(\d{3})(\d{1,3})/, '$1.$2');
+        }
+
+        cpfInput.value = value;
+    });
+});
+</script>
+
 </body>
 
 </html>
