@@ -180,7 +180,7 @@
     .container_animation {
         width: 200px;
         height: 15%;
-        margin-bottom: 40%;
+        margin-bottom: 30%;
     }
 
     .image_animation_top {
@@ -247,10 +247,14 @@
 
 @media (min-width: 96rem) {
     .container_animation {
-        margin-bottom: 25%;
+        margin-bottom: 200px;
+    }
+
+    .line_top, .line_bot {
+        max-width: 2.5px;
     }
 
     .form_login {
-        width: 60%;
+        max-width: 32.5rem;
     }
 }
