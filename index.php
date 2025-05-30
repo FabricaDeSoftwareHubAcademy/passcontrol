@@ -1,22 +1,3 @@
-<?php
-// require './app/classes/Usuario.php';
-// ini_set('display_errors', 1);
-// error_reporting(E_ALL);
-
-// if(isset($_POST['cpf'])){
-//     $cpf = preg_replace('/[^0-9]/', '', $_POST['cpf']);
-//     $senha = addslashes($_POST['senha']);
-
-//     $usuario = new Usuario();
-//     if($usuario->logar($cpf, $senha)){
-//         header("location: ./app/view/atendimento.php");
-//     }else{
-//         echo "<script>alert('CPF ou senha incorreto!')</script>";
-//     }
-// }
-?>
-
-
 <!DOCTYPE html>
 <html lang="p-br">
 
@@ -123,7 +104,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const cpfInput = document.getElementById('cpf');
 
-    cpfInput.addEventListener('input', () => {
+    cpfInput.addEventListener('change', () => {
         let value = cpfInput.value.replace(/\D/g, '');
 
         if (value.length > 11) value = value.slice(0, 11);
