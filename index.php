@@ -55,7 +55,7 @@
                 </div>
 
                 <div class="container_link">
-                    <a href="google.com" class="link">Esqueci Minha Senha</a>
+                    <a href="./app/view/recuperar_senha_email.php" class="link">Esqueci Minha Senha</a>
                 </div>
 
                 <div class="container_button">
