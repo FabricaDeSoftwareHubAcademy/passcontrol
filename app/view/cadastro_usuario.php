@@ -28,8 +28,8 @@
     <script src="../../public/js/navegacao-menu-lateral.js" defer></script>
     <script src="../../public/js/monitor-modal.js" defer></script>
     <script src="../../public/js/checkbox-seleciona-todos.js" defer></script>
-    <script src="../js/usuario-cadastrar.js" defer></script>
-    <script src="../js/validar-cpf.js" defer></script>
+    <script src="../js/usuario_cadastrar.js" defer></script>
+    <script src="../js/validar_cpf.js" defer></script>
 
     <link rel="shortcut icon" type="imagex/png" href="../../public/img/Logo-Nota-Controlnt.ico">
 </head>
@@ -38,7 +38,7 @@
     <?php
     include "./navegacao.php";
     include "../actions/perfil_listar.php";
-    include "../actions/servico_listar.php";
+    // include "../actions/servico_listar.php";
     ?>
 
     <section class="Area-Util-Projeto">
