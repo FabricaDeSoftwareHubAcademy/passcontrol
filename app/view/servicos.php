@@ -19,23 +19,14 @@ $servicos_cadastrados = $novo_servico->buscar();
 
     <!-- IMPORT DO CSS -->
     <link rel="stylesheet" href="../../public/css/navegacao.css">
-    <link rel="stylesheet" href="../../public/css/ponto_atendimento.css">
-    <link rel="stylesheet" href="../../public/modais/ModalEdicaoPontoAtendimento/estilo.css">
-    <link rel="stylesheet" href="../../public/modais/ModalInativacaoGuiche/cadastro.css">
-    <link rel="stylesheet" href="../../public/modais/ModalConfirmaDados/estilo.css">
-    <link rel="stylesheet" href="../../public/modais/Modal_Alterar_Dados_Pessoais/alterar_dados_pessoais.css">
-    <link rel="stylesheet" href="../../public/modais/Modal_Alterar_Senha/alterar_senha.css">
-    <link rel="stylesheet" href="../../public/modais/Modal_Cadastro_Ponto_Atendimento/cadastro_ponto_atendimento.css">
-    
-
+    <link rel="stylesheet" href="../../public/css/servicos.css">
 
     <link rel="shortcut icon" type="imagex/png" href="../../../public/img/Logo-Nota-Controlnt.ico">
 </head>
 <body class="control-body-navegacao">
     <?php
-    include "./navegacao.php";
+        include "./navegacao.php";
     ?>
-
 <section class="Area-Util-Projeto">
     <!-- INICIO DA ÁREA ÚTIL DA PÁGINA -->
     <div id="PontoAtendimentoCad">
@@ -117,7 +108,7 @@ $servicos_cadastrados = $novo_servico->buscar();
                 </div>
                 <div class="servico">
                     <label class="label"><b>Imagem</b></label>
-                    <input type="text" id="identificador_ponto_atendimento" name="url_imagem_servico" class="input-text" placeholder="">
+                    <input type="file" id="identificador_ponto_atendimento" name="url_imagem_servico" class="input-text" placeholder="">
                 </div>
                 <div class="button-group">
                     <button class="botao-modal cancel">Voltar</button>
@@ -142,6 +133,7 @@ $servicos_cadastrados = $novo_servico->buscar();
         </section>
     </div >
 
+    
 <!-- JS Modal Editar e Confirma EDITAR-->
 <script>
 
@@ -221,38 +213,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <!-- ************************************   CADASTRAR PONTO DE ATENDIMENTO   ************************************ -->
 
     <!-- MODAL DE CADASTRO DE PONTO DE ATENDIMENTO -->
-    <div class="fundo-container-cad-ponto-atendimento">
-        <section class="modal-ponto-atendimento">
-            <img src="../../../public/img/img-modais/Logo Nota Controlnt.png" alt="Logo Nota Control" class="logo-ponto-atendimento">
-            <h1 class="titulo-ponto-atendimento">Cadastrar Serviços</h1>
-
-            <hr class="linha-horizontal-ponto-atendimento">
-
-            <form id="formulario_cadastrar" method="POST">
-            
-                <div class="inf-modal-ponto-atendimento">
-                    <div class="container-ponto-atendimento">
-                        <label class="label-ponto-atendimento"><b>Nome do Serviço</b></label>
-                        <input type="text" id="nome_ponto_atendimento_cadastrar" name="nome_servico" class="input-text-ponto-atendimento">
-                    </div>
-                </div>
-                <div class="servico-ponto-atendimento">
-                    <label class="label-ponto-atendimento"><b>Código</b></label>
-                    <input type="text" id="identificador_ponto_atendimento_cadastrar" name="codigo_servico" class="input-text-ponto-atendimento">
-                </div>
-                <div class="servico-ponto-atendimento">
-                    <label class="label-ponto-atendimento"><b>Foto</b></label>
-                    <input type="file" id="identificador_ponto_atendimento_cadastrar" name="url_imagem_servico" class="input-text-ponto-atendimento">
-                </div>
-                <div class="button-group-ponto-atendimento">
-                    <button class="botao-modal-ponto-atendimento cancel_CadPontoAtend">Voltar</button>
-                    <button type="submit" class="botao-modal-ponto-atendimento save_CadPontoAtend">Salvar</button>
-                </div>
-
-            </form>
-        </section>
-    </div>
-
+ 
 
     <!-- Modal Confirma CADASTRAR -->
     <div id="confirma_cadastrar"  class="modal-confirma-container">
@@ -428,10 +389,9 @@ document.addEventListener("DOMContentLoaded", function() {
         location.reload();
     });
 });
-</script>
 
-<?php
-include "./monitor_modal.php";
-?>
+   
+
+</script>
 
 </body>
