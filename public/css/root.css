@@ -1,16 +1,168 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
-:root{
-    --verde-control: #3AA867;
-    --cinza-control: #33404D;
-    --vermelho: #dd0f00;
-    --cor-fundo: #f9f9f9;
-    --font-main: Inter, 'Inter', Impact, sans-serif;
+:root {
+    --main_background_color: rgba(198, 196, 196, 0.2);
+    --main_icon_color: #666;
+
+    --main_title_color: #33404D;
+    --main_green_color: #3AA867;
+
+    --main_background_button_hover_color: #181F26;
+
+    --main_black_color: #000;
+    --main_white_color: #FFF;
 }
 
-*{
-    box-sizing: border-box;
-    font-family: var(--font-main);
+* {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+.body_login {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.background_image {
+    background-image: url(../img/background_logo.svg);
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    background-size: 300px;
+}
+
+.container_login {
+    width: 95%;
+    height: 95%;
+    border-radius: 1%;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--main_background_color);
+    backdrop-filter: blur(5px);
+}
+
+.title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--main_title_color);
+}
+
+.form, .input_group {
+    display: flex;
+    flex-direction: column;
+}
+
+.label {
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--main_title_color);
+}
+
+.input {
+    height: 2rem;
+    padding: 1rem;
+    border-radius: 10px;
+    border: 1px solid var(--main_title_color);
+    font-size: 1rem;
+    font-weight: 600;
+    outline: none;
+}
+
+.input:hover, .input:focus {
+    border: 1px solid var(--main_green_color);
+}
+
+.password_group {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input_password {
+    width: 100%;
+}
+
+.toggle_password {
+    position: absolute;
+    cursor: pointer;
+    right: 0.5rem;
+    color: var(--main_icon_color);
+}
+
+.button {
+    width: 5rem;
+    height: 2.25rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    color: var(--main_white_color);
+    background-color: var(--main_title_color);
+}
+
+.button:hover {
+    color: var(--main_green_color);
+    background-color: var(--main_background_button_hover_color);
+    transition: linear 0.3s;
+}
+
+@media (min-width: 40rem) {
+    .title {
+        font-size: 2rem
+    }
+}
+
+@media (min-width: 48rem) {
+    .title {
+        font-size: 2.5rem;
+    }
+
+    .label {
+        font-size: 1.3rem
+    }
+
+    .input {
+        height: 2.5rem;
+        font-size: 1.2rem;
+    }
+
+    .button {
+        width: 5.5rem;
+        height: 2.5rem;
+        font-size: 1.1rem
+    }
+}
+
+@media (min-width: 64rem) {
+    .container_login {
+        flex-direction: row;
+    }
+
+    .title {
+        font-size: 2.8rem;
+    }
+
+    .label {
+        font-size: 1.5rem;
+    }
+
+    .input {
+        height: 3rem;
+        font-size: 1.3rem;
+    }
+
+    .input:hover, .input:focus {
+        border: 3px solid var(--main_green_color);
+    }
+
+    .button {
+        width: 6rem;
+        height: 2.8rem;
+        font-size: 1.2rem;
+    }
 }
