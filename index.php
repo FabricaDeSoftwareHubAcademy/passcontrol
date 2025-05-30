@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="p-br">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -13,6 +13,7 @@
     <link rel="shortcut icon" type="imagex/png" href="public/img/favicon.ico">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="./app/js/mascara_cpf.js" defer></script>
 </head>
 
 <body class="login">
@@ -100,28 +101,6 @@
             <span></span>
         </div>
     </div> -->
-    <script>
-document.addEventListener('DOMContentLoaded', () => {
-    const cpfInput = document.getElementById('cpf');
-
-    cpfInput.addEventListener('change', () => {
-        let value = cpfInput.value.replace(/\D/g, '');
-
-        if (value.length > 11) value = value.slice(0, 11);
-
-        if (value.length > 9) {
-            value = value.replace(/(\d{3})(\d{3})(\d{3})(\d{1,2})/, '$1.$2.$3-$4');
-        } else if (value.length > 6) {
-            value = value.replace(/(\d{3})(\d{3})(\d{1,3})/, '$1.$2.$3');
-        } else if (value.length > 3) {
-            value = value.replace(/(\d{3})(\d{1,3})/, '$1.$2');
-        }
-
-        cpfInput.value = value;
-    });
-});
-</script>
-
 </body>
 
 </html>
