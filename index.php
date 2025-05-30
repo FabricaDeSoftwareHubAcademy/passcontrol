@@ -1,19 +1,19 @@
 <?php
-require './app/classes/Usuario.php';
-ini_set('display_errors', 1);
-error_reporting(E_ALL);
+// require './app/classes/Usuario.php';
+// ini_set('display_errors', 1);
+// error_reporting(E_ALL);
 
-if(isset($_POST['cpf'])){
-    $cpf = preg_replace('/[^0-9]/', '', $_POST['cpf']);
-    $senha = addslashes($_POST['senha']);
+// if(isset($_POST['cpf'])){
+//     $cpf = preg_replace('/[^0-9]/', '', $_POST['cpf']);
+//     $senha = addslashes($_POST['senha']);
 
-    $usuario = new Usuario();
-    if($usuario->logar($cpf, $senha)){
-        header("location: ./app/view/atendimento.php");
-    }else{
-        echo "<script>alert('CPF ou senha incorreto!')</script>";
-    }
-}
+//     $usuario = new Usuario();
+//     if($usuario->logar($cpf, $senha)){
+//         header("location: ./app/view/atendimento.php");
+//     }else{
+//         echo "<script>alert('CPF ou senha incorreto!')</script>";
+//     }
+// }
 ?>
 
 
