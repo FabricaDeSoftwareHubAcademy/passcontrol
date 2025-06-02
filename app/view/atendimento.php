@@ -28,14 +28,14 @@
     <!-- JS -->
     <script src="../../public/js/navegacao_menu_lateral.js" defer></script>
     <script src="../../public/js/modal_teladelogin.js" defer></script>
-    <script src="../../public/js/modal-proxima-senha.js" defer></script>
+    <script src="../../public/js/modal_proxima_senha.js" defer></script>
     <script src="../../public/js/modal_conf_saida.js" defer></script>
     <script src="../../public/js/monitor_modal.js" defer></script>
 
     <script src="../../public/modais/Modal_Consultar_Fila/modal_consultar_fila.js" defer></script>
     <script src="../../public/modais/Modal_Chamar_prox_senha/chamar_prox_senha.js" defer></script>
     <script src="../../public/modais/Modal_Iniciar_Intervalo/iniciar_intervalo.js" defer></script>
-    <script src="../../public/modais/Modal_Encerrar_Atendimento/encerrar-atendimento.js" defer></script>
+    <script src="../../public/modais/Modal_Encerrar_Atendimento/encerrar_atendimento.js" defer></script>
     <script src="../../public/modais/Modal_Chamar_prox_senha/ler_prox_senha.js" defer></script>
 
 
