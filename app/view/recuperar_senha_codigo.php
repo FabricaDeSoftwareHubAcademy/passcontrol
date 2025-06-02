@@ -9,7 +9,7 @@
 
     <link rel="stylesheet" href="../../public/css/recuperar_senha_codigo.css">
 
-    <script src="../../public/js/recuperar-senha-codigo.js" defer></script>
+    <script src="../../public/js/recuperar_senha_codigo.js" defer></script>
 
     <link rel="shortcut icon" type="imagex/png" href="../../public/img/Logo-Nota-Controlnt.ico">
 </head>
