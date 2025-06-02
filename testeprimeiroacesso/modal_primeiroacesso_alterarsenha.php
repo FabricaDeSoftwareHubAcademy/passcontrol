@@ -1,25 +1,29 @@
-<div class="fundo-container-alterar-senha">
-    <section class="modal-alterar-senha">
-        <img src="../../../public/img/img-modais/Logo Nota Controlnt.png" alt="Logo Nota Control" class="logo-alterar-senha">
-        <h1 class="titulo-alterar-senha">PRIMEIRO ACESSO? Altere sua senha!</h1>
-        <hr class="linha-alterar-senha">
-        <div class="senha-atual-container">
-            <div class="container-alterar-senha">
-                <label class="label-senha-atual"><b>Senha Atual</b></label>
-                <input type="text" class="input-senha-atual" placeholder="Digite a sua senha atual">
-            </div>
-        </div>
-        <div class="nova-senha-container">
-            <label class="label-nova-senha"><b>Nova Senha</b></label>
-            <input type="text" class="input-nova-senha" placeholder="Digite a sua nova senha">
-        </div>
-        <div class="conf-nova-senha-container">
-            <label class="label-conf-nova-senha"><b>Confirmar Nova Senha</b></label>
-            <input type="text" class="input-conf-nova-senha" placeholder="Repita a nova senha">
-        </div>
-        <div class="button-group-alterar-senha">
-            <button class="botao-modal-alterar-senha cancel_AltSenha">Voltar</button>
-            <button class="botao-modal-alterar-senha save_AltSenha">Salvar</button>
-        </div>
-    </section>
+
+<div class="modal active" id="modal-primeiroacesso">
+  <div class="modal-content">
+    <form method="POST" action="trocar_senha.php">
+      <span class="modal-close" onclick="document.getElementById('modal-primeiroacesso').classList.remove('active')">&times;</span>
+      <h2>Primeiro Acesso?</h2>
+      <p>Você precisa alterar a senha antes de acessar o sistema.</p>
+
+      <div class="form-group">
+        <label for="senha_atual">Senha Atual: Digite a senha recebida por email.</label>
+        <input type="password" id="senha_atual" name="senha_atual" required>
+      </div>
+
+      <div class="form-group">
+        <label for="nova_senha">Nova Senha:</label>
+        <input type="password" id="nova_senha" name="nova_senha" required>
+      </div>
+
+      <div class="form-group">
+        <label for="conf_nova_senha">Confirmar Nova Senha:</label>
+        <input type="password" id="conf_nova_senha" name="conf_nova_senha" required>
+      </div>
+
+      <div class="form-actions">
+        <button type="submit" class="btn">Salvar</button>
+      </div>
+    </form>
+  </div>
 </div>

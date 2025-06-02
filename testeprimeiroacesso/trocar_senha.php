@@ -1,54 +1,33 @@
+
 <?php
 session_start();
-require_once(__DIR__ . '/../classes/usuario_primeiroacesso.php');
+require_once('./app/usuario_primeiroacesso.php');
 
-if (!isset($_SESSION['id_usuario']) || !isset($_SESSION['primeiro_acesso'])) {
-    header("Location: ../../index_primeiroacesso.php");
+if (!isset($_SESSION['id_usuario'])) {
+    header("Location: index.php");
     exit;
 }
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $nova_senha = $_POST['nova_senha'];
-    $confirma_senha = $_POST['confirma_senha'];
+$id_usuario = $_SESSION['id_usuario'];
+$senha_atual = $_POST['senha_atual'] ?? '';
+$nova_senha = $_POST['nova_senha'] ?? '';
+$conf_senha = $_POST['conf_nova_senha'] ?? '';
 
-    if ($nova_senha !== $confirma_senha) {
-        echo "<script>alert('As senhas não coincidem!');</script>";
-    } else {
-        $usuario = new Usuario();
-        $id = $_SESSION['id_usuario'];
+$usuario = new Usuario();
+$dados = $usuario->buscar("id_usuario = $id_usuario")[0];
 
-        // Criptografa a senha
-        $senha_hash = password_hash($nova_senha, PASSWORD_DEFAULT);
-
-        if ($usuario->definirNovaSenha($id, $nova_senha)) {
-            echo "<script>alert('Senha alterada com sucesso!');</script>";
-        } else {
-            echo "<script>alert('Erro ao alterar a senha. Tente novamente.');</script>";
-        }
-
-        unset($_SESSION['primeiro_acesso']); // Não é mais o primeiro acesso
-        header("Location: ./atendimento.php");
-        exit;
-    }
+if (!password_verify($senha_atual, $dados['senha_usuario'])) {
+    die("Erro: senha atual incorreta.");
 }
-?>
 
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <title>Trocar Senha</title>
-</head>
-<body>
-    <h2>Primeiro Acesso - Alterar Senha</h2>
-    <form method="post">
-        <label>Nova Senha:</label>
-        <input type="password" name="nova_senha" required><br><br>
+if ($nova_senha !== $conf_senha) {
+    die("Erro: a nova senha e a confirmação não coincidem.");
+}
 
-        <label>Confirmar Nova Senha:</label>
-        <input type="password" name="confirma_senha" required><br><br>
+// Atualiza a senha e marca como não sendo mais primeiro acesso
+$usuario->definirNovaSenha($id_usuario, $nova_senha);
+$_SESSION['primeiro_acesso'] = false;
 
-        <button type="submit">Alterar Senha</button>
-    </form>
-</body>
-</html>
+// Redireciona para a tela principal
+header("Location: ./app/view/atendimento.php");
+exit;

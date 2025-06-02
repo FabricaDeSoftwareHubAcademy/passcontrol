@@ -15,7 +15,7 @@ if(isset($_POST['cpf'])){
         // Verifica se é primeiro acesso
         $dados_usuario = $usuario->buscar("id_usuario = $id_usuario")[0];
         
-        if ($dados_usuario['primeiro_acesso']) {
+        if ($dados_usuario['primeiro_login']) {
             include './testeprimeiroacesso/modal_primeiroacesso_alterarsenha.php';
             exit;
         }
@@ -100,6 +100,13 @@ if(isset($_POST['cpf'])){
             
         </div>
     </div>
+
+    <?php if (isset($_SESSION['primeiro_login']) && $_SESSION['primeiro_login']) {
+    include('testeprimeiroacesso/modal_primeiroacesso_alterarsenha.php');
+    // Opcional: zera a flag para o modal não aparecer de novo após reload
+    unset($_SESSION['primeiro_login']);
+} ?>
+
 
 </body>
 

@@ -1,13 +1,7 @@
-<<<<<<< Updated upstream
+
 <?php  
 require_once('../app/database/Database.php');
 
-=======
-<?php   
-// require_once(__DIR__ . '/../database/Database.php');
-var_dump(__DIR__);
-require_once('../app/database/Database.php');
->>>>>>> Stashed changes
 class Usuario {
     public int $id_usuario;
     public string $nome;
@@ -52,30 +46,24 @@ class Usuario {
 
     // Função para realizar o login
     public function logar($cpf, $senha) {
-        $cpf = addslashes($cpf); // segurança extra
-        $select_user = $this->db->select("cpf_usuario = '$cpf'", '', '', 'id_usuario, senha_usuario, primeiro_acesso');
+        $cpf = addslashes($cpf);
+        $select_user = $this->db->select("cpf_usuario = '$cpf'", '', '', 'id_usuario, senha_usuario, primeiro_login');
     
         if ($select_user->rowCount() > 0) {
             $dados = $select_user->fetch();
     
-            // Verifica a senha criptografada
             if (password_verify($senha, $dados['senha_usuario'])) {
                 session_start();
                 $_SESSION['id_usuario'] = $dados['id_usuario'];
+                $_SESSION['primeiro_login'] = $dados['primeiro_login'] ? true : false;
     
-                // Verifica se é o primeiro acesso
-                if ($dados['primeiro_acesso']) {
-                    $_SESSION['primeiro_acesso'] = true;
-                    include './app/public/modais/alterar_senha.php.php';
-                    exit;
-                }
-    
-                return true; // faz o login normal
+                return true;
             }
         }
     
         return false;
     }
+    
 
     // Função para definir nova senha e marcar como não sendo mais primeiro acesso
     public function definirNovaSenha($id_usuario, $nova_senha) {
@@ -84,7 +72,7 @@ class Usuario {
 
         $values = [
             'senha_usuario' => $senha_hash,
-            'primeiro_acesso' => false
+            'primeiro_login' => false
         ];
 
         return $this->db->update("id_usuario = $id_usuario", $values);
