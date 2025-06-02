@@ -20,7 +20,7 @@
             </div>
 
             <div class="cpf-container-alterar-dados">
-                <label class="label-cpf-alterar-dados"><b>Cpf</b></label>
+                <label class="label-cpf-alterar-dados"><b>CPF</b></label>
                 <input type="text" class="input-cpf" id="cpf" name="cpf" value="" maxlength="14" placeholder="000.000.000-00" required>
             </div>
 
@@ -36,15 +36,15 @@
                     <?php
                     // // LISTAR PERFIS DE USUARIO
                     foreach ($perfis as $perfil):
-                    ?> <option class="pi" value="<?= $perfil["id_perfil_usuario"] ?>"><?= $perfil["nome_perfil_usuario"] ?></option> <?php
+                    ?> <option class="pi" value="<?=$perfil["id_perfil_usuario"]?>"><?=$perfil["nome_perfil_usuario"]?></option> <?php
                     endforeach;
                     ?>
                 </select>
             </div>
 
             <div class="button-group-alterar-dados">
-                <button class="botao-modal-alterar-dados cancel_AltDadosPessoais" type="reset" form="formEditarCadastro" href="./AtendentesCadastrados.php">Voltar</button>
-                <button class="botao-modal-alterar-dados save_AltDadosPessoais" type="submit" form="formEditarCadastro" name="editarCadastro" href="./AtendentesCadastrados.php">Salvar</button>
+                <button class="botao-modal-alterar-dados cancel_AltDadosPessoais" type="reset" form="formEditarCadastro">Voltar</button>
+                <button class="botao-modal-alterar-dados save_AltDadosPessoais" type="submit" form="formEditarCadastro" name="editarCadastro">Salvar</button>
             </div>    
         </form>        
     </section>

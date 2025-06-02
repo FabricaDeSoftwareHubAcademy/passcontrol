@@ -29,23 +29,22 @@ document.addEventListener("DOMContentLoaded", function() {
             })
             
             let response = await dados_php.json();
-            
 
             // Preenche os campos do modal com os dados do usuário
-            document.getElementById("id_usuario").value = response.id_usuario,
-            document.getElementById("nome").value = response.nome,
-            document.getElementById("email").value = response.email,
-            // document.getElementById("cpf").value = response.cpf,
+            document.getElementById("id_usuario").value = response.id_usuario;
+            document.getElementById("nome").value = response.nome_usuario;
+            document.getElementById("email").value = response.email_usuario;
+            document.getElementById("cpf").value = response.cpf_usuario;
             // document.getElementById("foto").value = response.foto   //ESSE GOSTA DE DAR PROBLEMA
-            document.getElementById("id_perfil").value = response.id_perfil
-
+            document.getElementById("id_perfil").value = response.id_perfil_usuario_fk;
             
             modalContainerEdicao.classList.add("show"); //ABRE O MODAL
         });
     });
 
     // ENVIAR DADOS EDITADOS CASO CLIQUE NO CONFIRMAR
-    buttonSalvarEdicao.addEventListener("click", () => {
+    buttonSalvarEdicao.addEventListener("click", (event) => {
+        event.preventDefault();
         modalContainerEdicao.classList.remove("show");
         modalConfirmarAltDadosUsu.classList.add("show");
     });
@@ -59,17 +58,17 @@ document.addEventListener("DOMContentLoaded", function() {
         event.preventDefault();
 
         const formEditarUsu = new FormData(document.getElementById("formEditarCadastro"));
-        // console.log(formEditarUsu);
+        console.log(formEditarUsu);
         
         // Envia os dados via POST
-        let atualizar_dados = await fetch ('../../controller/usuario_editar.php', {
+        let atualizar_dados = await fetch ('../actions/usuario_editar.php', {
             method: "POST",
             body: formEditarUsu
         })
         
         // Recebe a resposta bruta do server, basicamente um debug com esteroides
         let textResponse = await atualizar_dados.text();
-        // console.log("Resposta bruta do servidor:", textResponse);  // Mostra o que o PHP está retornando
+        console.log("Resposta bruta do servidor:", textResponse);  // Mostra o que o PHP está retornando
 
         try {
             let response_post = JSON.parse(textResponse);

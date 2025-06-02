@@ -1,5 +1,5 @@
 <?php
-require_once "../classe/Usuario.php";
+require_once "../classes/Usuario.php";
 
 // logica para buscar usuario
 if (isset($_GET['id'])) {
@@ -7,11 +7,11 @@ if (isset($_GET['id'])) {
     
     // busca o usuario pelo ID
     $usuarioObj = new Usuario();
-    $usuario = $usuarioObj->buscar_id_usu($id_usuario);
+    $usuario = $usuarioObj->buscar('id_usuario = '.$id_usuario);
     
     if ($usuario) {
         // retorna os dados como um objeto JSON
-        echo json_encode($usuario);
+        echo json_encode($usuario[0]);
     } else {
         echo json_encode(["error" => "Usuário não encontrado"]);
     }

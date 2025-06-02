@@ -22,14 +22,15 @@
     <link rel="stylesheet" href="../../public/css/modal_alterar_status_usuario.css">
     <link rel="stylesheet" href="../../public/css/modal_confirmacao_dados_registrados.css">
     <link rel="stylesheet" href="../../public/css/modal_confirmacao_dados.css">    
-    <link rel="stylesheet" href="../../public/css/modal_alerta_alteracoes.css">
+    <!-- <link rel="stylesheet" href="../../public/css/modal_alerta_alteracoes.css"> -->
     <link rel="stylesheet" href="../../public/css/tabela.css">
     
     <!-- JS -->
     <script src="../../public/js/navegacao-menu-lateral.js" defer></script>
     <script src="../../public/js/monitor-modal.js" defer></script>
-    <script src="../../public/modais/Modal_Alerta_Alteracoes_Realizadas/alerta_alteracoes.js" defer></script>
-    <!-- <script src="../../public/js/modal-atendentes-cadastrados.js" defer></script> -->
+    <!-- <script src="../../public/js/modal_alerta_alteracoes.js" defer></script> -->
+    <!-- <script src="../../public/js/modal-atendentes-cadastrados.js" defer></script> ????????-->
+
     <script src="../js/usuario_alterar_status.js" defer></script>
     <script src="../js/usuario_editar.js" defer></script>
     <script src="../js/validar_cpf.js" defer></script>
@@ -110,7 +111,7 @@
     </section>
     
     <?php
-    include "../../public/modais/modal_alterar_dados_pessoais.php";
+    include "../../public/modais/modal_editar_usuario.php";
     include "../../public/modais/modal_alterar_status_usuario.php";
     include "../../public/modais/modal_confirmacao_dados_registrados.php";
     include "../../public/modais/modal_confirmacao_dados.php";
