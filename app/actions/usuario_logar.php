@@ -8,7 +8,7 @@
     if(isset($_POST['cpf'])){
         
         $cpf_retificado = preg_replace('/\D/', '', $_POST['cpf']);
-        $senha_retificada = filter_var($_POST['senha'], FILTER_SANITIZE_SPECIAL_CHARS);
+        $senha_retificada = filter_var($_POST['password'], FILTER_SANITIZE_SPECIAL_CHARS);
 
         $cpf_retificado = addslashes($cpf_retificado);
         $senha_retificada = addslashes($senha_retificada);
