@@ -22,8 +22,8 @@
     <link rel="stylesheet" href="../../public/modais/ModalConfirmaDados/estilo.css">
     
     <!-- JS -->
-    <script src="../../public/js/navegacao-menu-lateral.js" defer></script>
-    <script src="../../public/js/monitor-modal.js" defer></script>
+    <script src="../../public/js/navegacao_menu_lateral.js" defer></script>
+    <script src="../../public/js/monitor_modal.js" defer></script>
     <!-- <script src="../../../public/js/modal_cadastro_guiche_adm.js" defer></script> -->
     <script src="../../public/modais/ModalCadastrodosServicos/cadastro_servicos.js" defer></script>
 

@@ -26,11 +26,11 @@
     <link rel="stylesheet" href="../../public/modais/Modal_Encerrar_Atendimento/encerrar-atendimento.css">
 
     <!-- JS -->
-    <script src="../../public/js/navegacao-menu-lateral.js" defer></script>
-    <script src="../../public/js/modal-teladelogin.js" defer></script>
+    <script src="../../public/js/navegacao_menu_lateral.js" defer></script>
+    <script src="../../public/js/modal_teladelogin.js" defer></script>
     <script src="../../public/js/modal-proxima-senha.js" defer></script>
-    <script src="../../public/js/modal-conf-saida.js" defer></script>
-    <script src="../../public/js/monitor-modal.js" defer></script>
+    <script src="../../public/js/modal_conf_saida.js" defer></script>
+    <script src="../../public/js/monitor_modal.js" defer></script>
 
     <script src="../../public/modais/Modal_Consultar_Fila/modal_consultar_fila.js" defer></script>
     <script src="../../public/modais/Modal_Chamar_prox_senha/chamar_prox_senha.js" defer></script>

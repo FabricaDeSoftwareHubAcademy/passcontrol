@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../../public/css/monitor_modal.css">
-    <script src="../../public/js/monitor-modal.js" defer></script>
+    <script src="../../public/js/monitor_modal.js" defer></script>
 </head>
 <body>
     <div class="area-monitor-modal">

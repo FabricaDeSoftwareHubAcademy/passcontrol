@@ -55,6 +55,6 @@
         </div>
     </main>
 
-    <script src="../../public/js/tela-autoatendimento-paginação.js"></script> <!-- Atualização de caminho e renomeando o nome da pasta para letras minúsculas -->
+    <script src="../../public/js/tela_autoatendimento_paginação.js"></script> <!-- Atualização de caminho e renomeando o nome da pasta para letras minúsculas -->
 </body>
 </html>
