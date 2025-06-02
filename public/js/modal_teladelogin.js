@@ -1,3 +1,4 @@
+// Teste
 document.addEventListener("DOMContentLoaded", function() {
     const buttonAbrir = document.querySelector("#chm-intervalo");
     
