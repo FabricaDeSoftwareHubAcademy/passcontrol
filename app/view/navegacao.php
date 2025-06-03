@@ -44,12 +44,6 @@
         </nav>
     </div>
 
-<<<<<<< HEAD
-<?php
-    // include "../../public/modais/modal_editar_usuario.php";
-    include "../../public/modais/modal_alterar_senha.php";
-?>
-=======
     <!-- MENU LATERAL -->
     <div class="area-lateral-navegacao">
         <nav class="menu-lateral-navegacao">
@@ -127,9 +121,8 @@
     </div>
 
     <?php
-        include "../../public/modais/modal_alterar_dados_pessoais.php";
+        // include "../../public/modais/modal_editar_usuario.php";
         include "../../public/modais/modal_alterar_senha.php";
     ?>
 </body>
 </html>
->>>>>>> origin/testes-main
