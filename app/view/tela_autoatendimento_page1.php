@@ -5,8 +5,6 @@
     <meta charset="UTF-8">
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-
-
     <title>PassControl</title>
     
     <!-- FONTE -->
@@ -18,6 +16,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="../../public/css/tela_autoatendimento_page1.css"> <!-- Atualização de caminho e renomeando o nome da pasta para letras minúsculas -->
 
+    <!-- LOGO -->
     <link rel="shortcut icon" type="imagex/png" href="../../public/img/Logo-Nota-Controlnt.ico"> <!-- Atualização de caminho -->
 </head>
 
@@ -55,6 +54,6 @@
         </div>
     </main>
 
-    <script src="../../public/js/tela-autoatendimento-paginação.js"></script> <!-- Atualização de caminho e renomeando o nome da pasta para letras minúsculas -->
+    <script src="../../public/js/tela_autoatendimento_paginação.js"></script> <!-- Atualização de caminho e renomeando o nome da pasta para letras minúsculas -->
 </body>
 </html>

@@ -18,15 +18,15 @@
     <link rel="stylesheet" href="../../public/css/edit_usuario.css">
     <link rel="stylesheet" href="../../public/modais/Modal_Alterar_Dados_Pessoais/alterar_dados_pessoais.css">
     <link rel="stylesheet" href="../../public/modais/Modal_Alterar_Senha/alterar_senha.css">
-
     <!-- <link rel="stylesheet" href="../../../public/modais/Modal Confirmação dos Dados Registrados/confirmacao_dados_registrados.css"> -->
     <!-- <link rel="stylesheet" href="../../../public/modais/modais/Modal Confirmação dos Dados/confirmacao_dados.css"> -->
 
     <!-- JS -->
-    <script src="../../public/js/navegacao-menu-lateral.js" defer></script>
-    <script src="../../public/js/monitor-modal.js" defer></script>
-    <script src="../../public/js/modal-edicao-usuario.js" defer></script>
+    <script src="../../public/js/navegacao_menu_lateral.js" defer></script>
+    <script src="../../public/js/monitor_modal.js" defer></script>
+    <script src="../../public/js/modal_edicao_usuario.js" defer></script>
 
+    <!-- LOGO -->
     <link rel="shortcut icon" type="imagex/png" href="../../public/img/Logo-Nota-Controlnt.ico">
 </head>
 

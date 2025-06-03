@@ -27,15 +27,16 @@
     <link rel="stylesheet" href="../../public/css/tabela.css">
     
     <!-- JS -->
-    <script src="../../public/js/navegacao-menu-lateral.js" defer></script>
-    <script src="../../public/js/monitor-modal.js" defer></script>
+    <script src="../../public/js/navegacao_menu_lateral.js" defer></script>
+    <script src="../../public/js/monitor_modal.js" defer></script>
     <!-- <script src="../../public/js/modal_alerta_alteracoes.js" defer></script> -->
-    <!-- <script src="../../public/js/modal-atendentes-cadastrados.js" defer></script> ????????-->
+    <!-- <script src="../../public/js/modal_atendentes_cadastrados.js" defer></script> ????????-->
 
     <script src="../js/usuario_alterar_status.js" defer></script>
     <script src="../js/usuario_editar.js" defer></script>
     <script src="../js/validar_cpf.js" defer></script>
 
+    <!-- LOGO -->
     <link rel="shortcut icon" type="imagex/png" href="../../public/img/Logo-Nota-Controlnt.ico">
 </head>
 

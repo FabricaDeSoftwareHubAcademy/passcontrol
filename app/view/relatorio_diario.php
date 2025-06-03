@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>PassControl</title>
 
     <!-- FONTE -->
@@ -20,10 +19,10 @@
     <link rel="stylesheet" href="../../public/modais/Modal_Alterar_Senha/alterar_senha.css">
 
     <!-- JS -->
-    <script src="../../public/js/navegacao-menu-lateral.js" defer></script>
-    <script src="../../public/js/monitor-modal.js" defer></script>
-    <script src="../js/exportacao-relatorio.js"></script>
-    <script src="../js/dashboard-teste.js"></script>
+    <script src="../../public/js/navegacao_menu_lateral.js" defer></script>
+    <script src="../../public/js/monitor_modal.js" defer></script>
+    <script src="../js/exportacao_relatorio.js"></script>
+    <script src="../js/dashboard_teste.js"></script>
 
     <!-- SheetJS para Excel -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
@@ -33,6 +32,7 @@
     <!-- ChartJS -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
+    <!-- LOGO -->
     <link rel="shortcut icon" type="imagex/png" href="../../public/img/Logo-Nota-Controlnt.ico">
 </head>
 
