@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="../../public/css/modal_alterar_status_usuario.css">
     <link rel="stylesheet" href="../../public/css/modal_confirmacao_dados_registrados.css">
     <link rel="stylesheet" href="../../public/css/modal_confirmacao_dados.css">    
+    <link rel="stylesheet" href="../../public/css/modal_aviso_erro.css">    
     <!-- <link rel="stylesheet" href="../../public/css/modal_alerta_alteracoes.css"> -->
     <link rel="stylesheet" href="../../public/css/tabela.css">
     
@@ -115,6 +116,7 @@
     include "../../public/modais/modal_alterar_status_usuario.php";
     include "../../public/modais/modal_confirmacao_dados_registrados.php";
     include "../../public/modais/modal_confirmacao_dados.php";
+    include "../../public/modais/modal_aviso_erro.php";
     // include "../../public/modais/modal_alerta_alteracoes.php";
     include "./monitor_modal.php";
     ?>

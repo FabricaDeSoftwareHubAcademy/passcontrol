@@ -13,6 +13,12 @@ const cancelarEdicao = document.querySelector(".cancel_ConfDadosRegist");
 const modalAlteracaoFeita = document.querySelector(".fundo-container-confirmacao-dados");
 const buttonOk = document.querySelector(".Okay_ConfDados");
 
+// MODAL ERRO
+
+const modalErro = document.querySelector(".modal-container-aviso-erro");
+const msgErro = document.querySelector(".aviso-erro");
+const buttonOkErro = document.querySelector(".voltar_AvisoErro");
+
 
 //JAVASCRIP PARA CLICAR NO BOTAO EDITAR E CARREGAR O MODAL COM OS DADOS
 
@@ -37,21 +43,64 @@ document.addEventListener("DOMContentLoaded", function() {
             document.getElementById("cpf").value = response.cpf_usuario;
             // document.getElementById("foto").value = response.foto   //ESSE GOSTA DE DAR PROBLEMA
             document.getElementById("id_perfil").value = response.id_perfil_usuario_fk;
-            
+
             modalContainerEdicao.classList.add("show"); //ABRE O MODAL
         });
     });
 
-    // ENVIAR DADOS EDITADOS CASO CLIQUE NO CONFIRMAR
-    buttonSalvarEdicao.addEventListener("click", (event) => {
-        event.preventDefault();
-        modalContainerEdicao.classList.remove("show");
-        modalConfirmarAltDadosUsu.classList.add("show");
+    // MASCARA DO CPF
+    const cpfInput = document.getElementById('cpf');
+    cpfInput.addEventListener('input', function () {
+        let valor = cpfInput.value.replace(/\D/g, '');
+        if (valor.length > 11) valor = valor.slice(0, 11);
+        cpfInput.value = valor
+        .replace(/^(\d{3})(\d)/, '$1.$2')
+        .replace(/^(\d{3})\.(\d{3})(\d)/, '$1.$2.$3')
+        .replace(/\.(\d{3})(\d)/, '.$1-$2');
     });
+
+    // ENVIAR DADOS EDITADOS CASO CLIQUE NO CONFIRMAR
+    buttonSalvarEdicao.addEventListener("click", async (event) => {
+        event.preventDefault();
+
+        const nome = document.getElementById('nome').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const cpf = document.getElementById('cpf').value.trim();
+
+        let erro = false;
+        msgErro.textContent = '';
+
+        if (!nome) {
+            msgErro.innerHTML += "Preencha o nome!<br>";
+            erro = true;
+        } 
+        if (!email) {
+            msgErro.innerHTML += "Preencha o email!<br>";
+            erro = true;
+        } 
+        if (!cpf || !validarCPF(cpf)) {
+            msgErro.innerHTML += "CPF inválido!<br>";
+            erro = true;
+        }
+
+        if (!erro) {
+            modalContainerEdicao.classList.remove("show");
+            modalConfirmarAltDadosUsu.classList.add("show");
+        }else{
+            modalContainerEdicao.classList.remove("show");
+            modalErro.classList.add("show");
+        }
+    });
+
+    buttonOkErro.addEventListener("click", ()=>{
+        modalErro.classList.remove("show");
+        modalContainerEdicao.classList.add("show");
+    })
 
     // CLIQUE NO NAO CONFIRMAR
     cancelarEdicao.addEventListener("click", () =>{
         modalConfirmarAltDadosUsu.classList.remove("show");
+        modalContainerEdicao.classList.add("show");
     });
 
     confirmarEdicao.addEventListener("click", async function(event){
