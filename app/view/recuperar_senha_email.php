@@ -7,6 +7,8 @@
     <title>PassControl</title> 
 
     <link rel="stylesheet" href="../../public/css/recuperar_senha_email.css">
+    <link rel="stylesheet" href="../../public/css/modal_confirmacao_senha.css">
+
 
     <link rel="shortcut icon" type="imagex/png" href="../../public/img/Logo-Nota-Controlnt.ico">
 </head>
@@ -46,9 +48,11 @@
                     <input type="email" class="inpRecuperar" placeholder="Email">
                     <span>Você receberá um código de segurança em seu e-mail cadastrado para validar sua nova senha </span>
 
+                    <!-- Substitua o <a> por <button> -->
                     <div class="btnEntrar">
-                        <a href="./recuperar_senha_codigo.php" type="submit" class="btn">Entrar</a>
+                        <button type="button" class="btn open-confirmacao-senha">Entrar</button>
                     </div>
+
                 </form>
             </div>
         </main>
@@ -65,7 +69,12 @@
                 <span></span>
             </div>
         </div>
+
     </div>
+    <?php include '../../public/modais/modal_confirmacao_senha.php'; ?>
+
+    <!-- Scripts -->
+    <script src="../../public/js/modal_confirmacao_senha.js"></script>
 
 </body>
 </html>
