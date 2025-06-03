@@ -67,15 +67,17 @@ togglePasswordNv.addEventListener("click", function(){
 
 
 
-function validarConfSenha(){
-    const senha = document.getElementById("novaSenha");
-    const confSenha = document.getElementById("confirmSenha");
+function validarConfSenha() {
+    const senha = document.getElementById("novaSenha").value.trim();
+    const confSenha = document.getElementById("confirmSenha").value.trim();
 
-    if(senha.value == "" || confSenha.value == ""){
+    if (senha === "" || confSenha === "") {
         alert("Preencha todos os campos");
-    }else if(senha.value != confSenha.value){
-        alert("Senha e Confirmar Senha não confere!");
-    }else{
-        window.location.replace('../../index.php');
+        return false;
+    } else if (senha !== confSenha) {
+        alert("Senha e Confirmar Senha não conferem!");
+        return false;
     }
+    window.location.replace('../../index.php');
+    return false;  
 }
