@@ -3,43 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>PassControl</title> 
 
     <!-- CSS -->
     <link rel="stylesheet" href="../../public/css/recuperar_senha_email.css">
-    <link rel="stylesheet" href="../../public/css/modal_confirmacao_senha.css">
 
-
-    <!-- LOGO -->
     <link rel="shortcut icon" type="imagex/png" href="../../public/img/Logo-Nota-Controlnt.ico">
 </head>
-
-<body class="recuperarSenha">
-    <div class="box">
-
-        <div class="GroupLine groupLeft">
-            <div class="line">
-                <span></span>
-            </div>
-            <div class="arrow">
-                <div class="setas"><img src="../../public/img/logo-png/setas.png" alt=""></div>
-                <div class="setas"><img src="../../public/img/logo-png/setas.png" alt=""></div>
-                <div class="setas"><img src="../../public/img/logo-png/setas.png" alt=""></div>
-            </div>
+<body class="body_login background_image">
+    <main class="container_login">
+        <div class="container_animation">
+            <img src="../../public/img/logo_png/animation_logo_top.png" alt="imagem da animação topo" class="image_animation image_animation_top">
+            <img src="../../public/img/logo_png/animation_logo_mid.png" alt="imagem da animação meio" class="image_animation image_animation_mid">
+            <img src="../../public/img/logo_png/animation_logo_bot.png" alt="imagem da animação baixo" class="image_animation image_animation_bot">
         </div>
-    
+        <h1 class="title">PASS CONTROL</h1>
 
-
-        <main>
-            <div class="containerAnime">
-                    <div class="containerImagens">
-                        <img src="../../public/img/logo-png/top.png" alt="" class="imagem imagemTop">
-                        <img src="../../public/img/logo-png/mid.png" alt="" class="imagem imagemMid">
-                        <img src="../../public/img/logo-png/bot.png" alt="" class="imagem imagemBot">
-                    </div>
-                    <div class="titlePass">
-                        <h1>PASS CONTROL</h1>
-                    </div>
+        <form action="" class="form form_login">
+            <div class="input_group">
+                <label class="label_recuperar_senha" for="">Recuperar Senha</label>
+                <input class="input" type="email" name="" id="" placeholder="E-mail">
             </div>
 
 
@@ -49,11 +33,9 @@
                     <input type="email" class="inpRecuperar" placeholder="Email">
                     <span>Você receberá um código de segurança em seu e-mail cadastrado para validar sua nova senha </span>
 
-                    <!-- Substitua o <a> por <button> -->
                     <div class="btnEntrar">
-                        <button type="button" class="btn open-confirmacao-senha">Entrar</button>
+                        <a href="./recuperar_senha_codigo.php" type="submit" class="btn">Entrar</a>
                     </div>
-
                 </form>
             </div>
         </main>
@@ -70,12 +52,7 @@
                 <span></span>
             </div>
         </div>
-
     </div>
-    <?php include '../../public/modais/modal_confirmacao_envio_email.php'; ?>
-
-
-    <script src="../../public/js/modal_confirmacao_envio_email.js"></script>
 
 </body>
 </html>
