@@ -27,6 +27,8 @@ $servicos_cadastrados = $novo_servico->buscar();
     <link rel="stylesheet" href="../../public/css/servico.css">
     <link rel="stylesheet" href="../../public/css/modal_cadastro_servico.css">
     <link rel="stylesheet" href="../../public/css/modal_confirmacao_servico.css">
+    <link rel="stylesheet" href="../../public/css/edicao_servicos.css">
+    <link rel="stylesheet" href="../../public/css/modal_status_servicos.css">
 
     <!-- JS -->
     <script src="../../public/js/navegacao_menu_lateral.js" defer></script>
