@@ -25,7 +25,7 @@
             <p class="text_recuperar_senha">Você receberá um código de segurança no e-mail informado para validar sua nova senha.</p>
             <div class="container_button">
                 <a class="button" href="./recuperar_senha_codigo.php">Enviar</a>
-            </div>dada
+            </div>
         </form>
     </main>
 </body>
