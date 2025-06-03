@@ -71,10 +71,10 @@
         </div>
 
     </div>
-    <?php include '../../public/modais/modal_confirmacao_senha.php'; ?>
+    <?php include '../../public/modais/modal_confirmacao_envio_email.php'; ?>
 
-    <!-- Scripts -->
-    <script src="../../public/js/modal_confirmacao_senha.js"></script>
+
+    <script src="../../public/js/modal_confirmacao_envio_email.js"></script>
 
 </body>
 </html>
