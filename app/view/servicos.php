@@ -19,14 +19,23 @@ $servicos_cadastrados = $novo_servico->buscar();
 
     <!-- IMPORT DO CSS -->
     <link rel="stylesheet" href="../../public/css/navegacao.css">
-    <link rel="stylesheet" href="../../public/css/ponto_atendimento.css">
-    <link rel="stylesheet" href="../../public/modais/ModalEdicaoPontoAtendimento/estilo.css">
-    <link rel="stylesheet" href="../../public/modais/ModalInativacaoGuiche/cadastro.css">
-    <link rel="stylesheet" href="../../public/modais/ModalConfirmaDados/estilo.css">
-    <link rel="stylesheet" href="../../public/modais/Modal_Alterar_Dados_Pessoais/alterar_dados_pessoais.css">
-    <link rel="stylesheet" href="../../public/modais/Modal_Alterar_Senha/alterar_senha.css">
-    <link rel="stylesheet" href="../../public/modais/Modal_Cadastro_Ponto_Atendimento/cadastro_ponto_atendimento.css">
-    
+    <link rel="stylesheet" href="../../public/css/monitor_modal.css">
+    <link rel="stylesheet" href="../../public/css/cadastro_usuario.css">
+    <link rel="stylesheet" href="../../public/css/modal_alterar_dados_pessoais.css">
+    <link rel="stylesheet" href="../../public/css/modal_alterar_senha.css">
+
+    <link rel="stylesheet" href="../../public/css/servico.css">
+    <link rel="stylesheet" href="../../public/css/modal_cadastro_servico.css">
+    <link rel="stylesheet" href="../../public/css/modal_confirmacao_servico.css">
+
+    <!-- JS -->
+    <script src="../../public/js/navegacao_menu_lateral.js" defer></script>
+    <script src="../../public/js/monitor_modal.js" defer></script>
+
+    <script src="../../js/modal_cadastro_confirmacao_servico.js" defer></script>
+    <script src="../../js/modal_edicao_confirmar_servico.js" defer></script>
+    <script src="../../js/modal_inativacao_servicos.js" defer></script>
+   
 
 
     <link rel="shortcut icon" type="imagex/png" href="../../../public/img/Logo-Nota-Controlnt.ico">
@@ -34,6 +43,8 @@ $servicos_cadastrados = $novo_servico->buscar();
 <body class="control-body-navegacao">
     <?php
     include "./navegacao.php";
+    include "../actions/servico_listar.php";
+    include "../actions/servico_editar.php";
     ?>
 
 <section class="Area-Util-Projeto">
@@ -90,13 +101,13 @@ $servicos_cadastrados = $novo_servico->buscar();
             <!-- <button type="button" id="abrirModal" class="botao-cadastro">Cadastrar</button> -->
             <button type="button" id="btn_cadastrar_servico" class="botao-cadastro">Cadastrar</button>
 
-        </div>
-
-    </div>
+        <?php
+        include "./monitor_modal.php";
+        include "../../public/modais/modal_cadastro_servico.php";
+        include "../../public/modais/modal_confirmacao_cadastro_servico.php";
+        include "../../public/modais/modal_confirmacao_edicao_servico.php";
+        include "../../public/modais/modal_satus_servico.php";
+        ?>
 </section>
-
-<?php
-include "./monitor_modal.php";
-?>
 
 </body>
