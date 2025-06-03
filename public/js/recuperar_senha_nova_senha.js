@@ -78,6 +78,9 @@ function validarConfSenha() {
         alert("Senha e Confirmar Senha não conferem!");
         return false;
     }
-    window.location.replace('../../index.php');
-    return false;  
+
+    document.querySelector(".fundo-container-confirmacao-dados").classList.add("show");
+
+    return false;
 }
+
