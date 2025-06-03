@@ -5,12 +5,14 @@
     --main_icon_color: #666;
 
     --main_title_color: #33404D;
+    --main_text_recuperar_senha: rgba(0, 0, 0, 0.671);
     --main_green_color: #3AA867;
 
     --main_background_button_hover_color: #181F26;
 
     --main_black_color: #000;
     --main_white_color: #FFF;
+    --green-color: #008000;
 }
 
 * {
@@ -22,7 +24,7 @@
 
 .body_login {
     width: 100%;
-    height: 100vh;
+    height: 100dvh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -45,6 +47,61 @@
     backdrop-filter: blur(5px);
 }
 
+.container_animation {
+    position: relative;
+    width: 90px;
+    height: 60%;
+}
+
+.image_animation {
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+
+.image_animation_top {
+    z-index: 3;
+    top: 10px;
+    animation: image_animation_top 6s infinite linear;
+}
+
+.image_animation_mid {
+    z-index: 2;
+    top: 15px;
+    animation: image_animation_mid 6s infinite linear;
+}
+
+.image_animation_bot {
+    z-index: 1;
+    top: 25px;
+    animation: image_animation_bot 6s infinite linear;
+}
+
+@keyframes image_animation_top {
+    0% { top: 0px; left: 0px; }
+    25% { top: -10px; left: 0px; }
+    50% { top: -10px; left: -15px; }
+    75% { top: -10px; left: 15px; }
+    100% { top: 0px; left: 0px; }
+}
+
+@keyframes image_animation_mid {
+    0%, 25% { left: 0px; }
+    50% { left: 15px; }
+    75% { left: -15px; }
+    100% { left: 0px; }
+}
+
+@keyframes image_animation_bot {
+    0% { top: 25px; left: 0px; }
+    25%, 50%, 75% { top: 35px; }
+    25% { left: 0px; }
+    50% { left: -15px; }
+    75% { left: 15px; }
+    100% { top: 25px; left: 0px; }
+}
+
 .title {
     font-size: 1.5rem;
     font-weight: 600;
@@ -54,6 +111,10 @@
 .form, .input_group {
     display: flex;
     flex-direction: column;
+}
+
+.form_login {
+    width: 80%;
 }
 
 .label {
@@ -82,6 +143,10 @@
     align-items: center;
 }
 
+.container_link, .container_button {
+    text-align: right;
+}
+
 .input_password {
     width: 100%;
 }
@@ -96,9 +161,13 @@
 .button {
     width: 5rem;
     height: 2.25rem;
+    line-height: 2.25rem;
     font-size: 1rem;
     font-weight: bold;
     border-radius: 10px;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
     border: none;
     cursor: pointer;
     color: var(--main_white_color);
@@ -112,14 +181,26 @@
 }
 
 @media (min-width: 40rem) {
+    .container_animation {
+        width: 120px;
+    }
+
     .title {
         font-size: 2rem
+    }
+
+    .form_login {
+        width: 60%;
     }
 }
 
 @media (min-width: 48rem) {
     .title {
         font-size: 2.5rem;
+    }
+
+    .form_login {
+        width: 60%;
     }
 
     .label {
@@ -134,7 +215,11 @@
     .button {
         width: 5.5rem;
         height: 2.5rem;
-        font-size: 1.1rem
+        font-size: 1.1rem;
+        line-height: 2.5rem;
+        display: inline-block;
+        text-align: center;
+        text-decoration: none;
     }
 }
 
@@ -143,8 +228,54 @@
         flex-direction: row;
     }
 
+    .container_animation {
+        width: 200px;
+        height: 15%;
+        margin-bottom: 30%;
+    }
+
+    .image_animation_top {
+        top: 0px;
+    }
+
+    .image_animation_mid {
+        top: 25px;
+    }
+
+    .image_animation_bot {
+        top: 50px;
+    }
+
+    @keyframes image_animation_top {
+        0% { top: 0px; left: 0px; }
+        25% { top: -50px; left: 0px; }
+        50% { top: -50px; left: -50px; }
+        75% { top: -50px; left: 50px; }
+        100% { top: 0px; left: 0px; }
+    }
+    
+    @keyframes image_animation_mid {
+        0%, 25% { left: 0px; }
+        50% { left: 50px; }
+        75% { left: -50px; }
+        100% { left: 0px; }
+    }
+    
+    @keyframes image_animation_bot {
+        0% { top: 50px; left: 0px; }
+        25%, 50%, 75% { top: 100px; }
+        25% { left: 0px; }
+        50% { left: -50px; }
+        75% { left: 50px; }
+        100% { top: 50px; left: 0px; }
+    }
+
     .title {
         font-size: 2.8rem;
+    }
+
+    .form_login {
+        width: 85%;
     }
 
     .label {
@@ -164,5 +295,68 @@
         width: 6rem;
         height: 2.8rem;
         font-size: 1.2rem;
+        line-height: 2.8rem;
+        display: inline-block;
+        text-align: center;
+        text-decoration: none;
+    }
+}
+
+@media (min-width: 80rem) {
+    .form_login {
+        width: 75%;
+    }
+}
+
+@media (min-width: 96rem) {
+    .container_animation {
+        margin-bottom: 200px;
+    }
+
+    .form_login {
+        max-width: 32.5rem;
+    }
+}
+
+.label_recuperar_senha {
+    width: 100%;
+    height: 2.3rem;
+    background-color: var(--main_green_color);
+    border: 1px solid var(--green-color);
+    color: var(--main_white_color);
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.text_recuperar_senha {
+    font-size: 0.8rem;
+    color: var(--main_text_recuperar_senha);
+    margin-top: 0.3rem;
+    margin-bottom: 80px;
+}
+
+@media (min-width: 48rem) {
+    .label_recuperar_senha {
+        height: 2.8rem;
+        font-size: 1.5rem;
+    }
+}
+
+@media (min-width: 64rem) {
+    .label_recuperar_senha {
+        height: 3rem;
+        font-size: 1.5rem;
+    }
+}
+
+@media (min-width: 80rem) {
+    .label_recuperar_senha {
+        height: 3.2rem;
+        font-size: 1.5rem;
     }
 }
