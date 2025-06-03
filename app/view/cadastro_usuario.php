@@ -18,10 +18,8 @@
     <link rel="stylesheet" href="../../public/css/cadastro_usuario.css">
     <link rel="stylesheet" href="../../public/css/modal_alterar_dados_pessoais.css">
     <link rel="stylesheet" href="../../public/css/modal_alterar_senha.css">
-
     <link rel="stylesheet" href="../../public/css/modal_confirmacao_dados_registrados.css">
     <link rel="stylesheet" href="../../public/css/modal_confirmacao_dados.css">
-
     <!-- <link rel="stylesheet" href="../../../public/modais/Modal_Confirmacao_dos_Dados_Registrados/confirmacao_dados_registrados.css"> -->
 
     <!-- JS -->
@@ -31,6 +29,7 @@
     <script src="../js/usuario_cadastrar.js" defer></script>
     <script src="../js/validar_cpf.js" defer></script>
 
+    <!-- LOGO -->
     <link rel="shortcut icon" type="imagex/png" href="../../public/img/Logo-Nota-Controlnt.ico">
 </head>
 

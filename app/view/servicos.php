@@ -27,8 +27,7 @@ $servicos_cadastrados = $novo_servico->buscar();
     <link rel="stylesheet" href="../../public/modais/Modal_Alterar_Senha/alterar_senha.css">
     <link rel="stylesheet" href="../../public/modais/Modal_Cadastro_Ponto_Atendimento/cadastro_ponto_atendimento.css">
     
-
-
+    <!-- LOGO -->
     <link rel="shortcut icon" type="imagex/png" href="../../../public/img/Logo-Nota-Controlnt.ico">
 </head>
 <body class="control-body-navegacao">

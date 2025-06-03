@@ -19,7 +19,6 @@
     <link rel="stylesheet" href="../../public/css/monitor_modal.css">
     <link rel="stylesheet" href="../../public/modais/Modal_Alterar_Dados_Pessoais/alterar_dados_pessoais.css">
     <link rel="stylesheet" href="../../public/modais/Modal_Alterar_Senha/alterar_senha.css">
-
     <link rel="stylesheet" href="../../public/modais/Modal_Consultar_Fila/modal_consultar_fila.css">
     <link rel="stylesheet" href="../../public/modais/Modal_Chamar_prox_senha/chamar_prox_senha.css">
     <link rel="stylesheet" href="../../public/modais/Modal_Iniciar_Intervalo/iniciar_intervalo.css">
@@ -31,14 +30,13 @@
     <script src="../../public/js/modal_proxima_senha.js" defer></script>
     <script src="../../public/js/modal_conf_saida.js" defer></script>
     <script src="../../public/js/monitor_modal.js" defer></script>
-
     <script src="../../public/modais/Modal_Consultar_Fila/modal_consultar_fila.js" defer></script>
     <script src="../../public/modais/Modal_Chamar_prox_senha/chamar_prox_senha.js" defer></script>
     <script src="../../public/modais/Modal_Iniciar_Intervalo/iniciar_intervalo.js" defer></script>
     <script src="../../public/modais/Modal_Encerrar_Atendimento/encerrar_atendimento.js" defer></script>
     <script src="../../public/modais/Modal_Chamar_prox_senha/ler_prox_senha.js" defer></script>
 
-
+    <!-- LOGO -->
     <link rel="shortcut icon" type="imagex/png" href="../../public/img/Logo-Nota-Controlnt.ico">
 </head>
 

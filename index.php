@@ -6,10 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PassControl</title>
 
+    <!-- CSS -->
     <link rel="stylesheet" href="./public/css/login.css">
-    <link rel="shortcut icon" href="./public/img/favicon.ico" type="image/x-icon">
 
+    <!-- LOGOS -->
+    <link rel="shortcut icon" href="./public/img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- JS -->
     <script src="./app/js/mascara_cpf.js" defer></script>
     <script src="./public/js/login.js" defer></script>
 </head>

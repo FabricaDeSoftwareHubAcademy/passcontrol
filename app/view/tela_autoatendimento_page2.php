@@ -4,7 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>PassControl</title>
 
     <!-- FONTE -->
@@ -16,6 +15,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="../../public/css/tela_autoatendimento_page2.css"> <!-- ( Atualização de caminho e renomeando o nome da pasta para letras minúsculas ) -->
 
+    <!-- LOGO -->
     <link rel="shortcut icon" type="imagex/png" href="../../public/img/Logo-Nota-Controlnt.ico"> <!-- ( Atualização de caminho ) -->
 </head>
 
