@@ -27,7 +27,7 @@
     <!-- <script src="../../../public/js/modal_cadastro_guiche_adm.js" defer></script> -->
     <script src="../../public/modais/ModalCadastrodosServicos/cadastro_servicos.js" defer></script>
 
-
+    <!-- LOGO -->
     <link rel="shortcut icon" type="imagex/png" href="../../public/img/Logo-Nota-Controlnt.ico">
 </head>
 

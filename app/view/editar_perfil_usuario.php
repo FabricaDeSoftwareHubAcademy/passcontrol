@@ -17,7 +17,6 @@
     <link rel="stylesheet" href="../../public/css/adm-logado.css">
     <link rel="stylesheet" href="../../public/modais/Modal_Alterar_Dados_Pessoais/alterar_dados_pessoais.css">
     <link rel="stylesheet" href="../../public/modais/Modal_Alterar_Senha/alterar_senha.css">
-
     <!-- <link rel="stylesheet" href="../../../public/modais/Modal Confirmação dos Dados Registrados/confirmacao_dados_registrados.css"> -->
     
     <!-- JS -->
@@ -25,6 +24,7 @@
     <script src="../../public/js/monitor_modal.js" defer></script>
     <script src="../../public/js/modal_editar_perfil_usuario.js" defer></script>
 
+    <!-- LOGO -->
     <link rel="shortcut icon" type="imagex/png" href="../../public/img/Logo-Nota-Controlnt.ico">
 </head>
 

@@ -4,13 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>PassControl</title>
 
+    <!-- CSS -->
     <link rel="stylesheet" href="../../public/css/recuperar_senha_codigo.css">
 
+    <!-- JS -->
     <script src="../../public/js/recuperar_senha_codigo.js" defer></script>
 
+    <!-- LOGO -->
     <link rel="shortcut icon" type="imagex/png" href="../../public/img/Logo-Nota-Controlnt.ico">
 </head>
 
