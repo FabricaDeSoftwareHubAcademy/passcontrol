@@ -6,6 +6,7 @@
     <title>Passcontrol</title>
  
     <link rel="stylesheet" href="../../public/css/recuperar_senha_email.css">
+    <link rel="stylesheet" href="../../public/css/modal_confirmacao_senha.css">
     <link rel="shortcut icon" href="../../public/img/favicon.ico" type="image/x-icon">
 </head>
 <body class="body_login background_image">
@@ -24,7 +25,8 @@
             </div>
             <p class="text_recuperar_senha">Você receberá um código de segurança no e-mail informado para validar sua nova senha.</p>
             <div class="container_button">
-                <a class="button" href="./recuperar_senha_codigo.php">Enviar</a>
+            <button type="button" class="btn open-confirmacao-senha">Entrar</button>
+
             </div>
         </form>
     </main>
