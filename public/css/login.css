@@ -8,6 +8,10 @@
     justify-content: center;
 }
 
+.card_left_login {
+    gap: 15px;
+}
+
 .container_lines {
     width: 100%;
     height: 1.5%;
