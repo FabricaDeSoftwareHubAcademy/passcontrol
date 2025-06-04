@@ -6,7 +6,7 @@ if(isset($_GET['id'])){
 
     $usuarioObj = new Usuario();
 
-    $user_alternar = $usuarioObj->buscar_id_usu($id_usuario)->fetchAll(PDO::FETCH_ASSOC);
+    $user_alternar = $usuarioObj->buscar("id_usuario =".$id_usuario);
 
     if($user_alternar){
         // retorna os dados como um objeto JSON

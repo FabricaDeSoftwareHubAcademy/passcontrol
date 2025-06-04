@@ -16,7 +16,7 @@
             $objUser = new Usuario();
             $objUser->nome = filter_var($nome, FILTER_SANITIZE_SPECIAL_CHARS);
             $objUser->email = filter_var($email, FILTER_SANITIZE_EMAIL);
-            $objUser->cpf = preg_replace('/\D/', '', $cpf);
+            $objUser->cpf = preg_replace('/\D/', '',(filter_var($cpf, FILTER_SANITIZE_SPECIAL_CHARS)));
             $objUser->id_perfil = filter_var($id_perfil, FILTER_SANITIZE_NUMBER_INT);
 
             // GERA UMA SENHA ALEATORIA E A ENVIA PRO BANCO
