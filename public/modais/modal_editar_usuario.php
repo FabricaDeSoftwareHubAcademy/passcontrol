@@ -7,26 +7,21 @@
 
             <input type="hidden" name="id_usuario" id="id_usuario" value=""> <!-- Campo oculto para o ID do usuário -->
 
-            <!-- <div class="nome-container-alterar-dados">
+            <div class="nome-container-alterar-dados">
                 <div class="container-dados">
                     <label class="label-nome-alterar-dados"><b>Nome</b></label>
                     <input type="text" class="input-nome" id="nome" name="nome" value="" placeholder="Nome do usuario" required>
                 </div>
-            </div> -->
+            </div>
 
-            <!-- <div class="email-container-alterar-dados">
+            <div class="email-container-alterar-dados">
                 <label class="label-email-alterar-dados"><b>E-mail</b></label>
                 <input type="email" class="input-email" id="email" name="email" value="" placeholder="exemplo@email.com" required>
-            </div> -->
+            </div>
 
             <div class="cpf-container-alterar-dados">
                 <label class="label-cpf-alterar-dados"><b>CPF</b></label>
                 <input type="text" class="input-cpf" id="cpf" name="cpf" value="" maxlength="14" placeholder="000.000.000-00" required>
-            </div>
-
-            <div class="cpf-container-alterar-dados">
-                <label class="label-cpf-alterar-dados"><b>Senha</b></label>
-                <input type="text" class="input-cpf" id="cpf" name="cpf" value="" maxlength="14" placeholder="Digite sua senha" required>
             </div>
 
             <div class="file-container">
