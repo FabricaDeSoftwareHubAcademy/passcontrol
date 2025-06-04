@@ -6,20 +6,25 @@ if(isset($_GET['id'])){
 
     $usuarioObj = new Usuario();
 
-    $user_alternar = $usuarioObj->buscar("id_usuario =".$id_usuario);
+    $usuario_busca = $usuarioObj->buscar("id_usuario = " . $id_usuario);
 
-    if($user_alternar){
+    $status = $usuario_busca[0]["status_usuario"];
+
+    if($usuario_busca){
         // retorna os dados como um objeto JSON
-        $res = $usuarioObj->alternar_status($user_alternar['id_usuario'], $user_alternar['status_usuario']);
+        $res = $usuarioObj->alternar_status($id_usuario, $status);
 
         if($res){     
-            $resposta = array("status_usuario" => "OK");
+            $resposta = array("msg" => "Status alterado com sucesso" ,"status" => "OK");
             echo json_encode($resposta);
         }
         else{
-            $resposta = array("status_usuario" => "ERRO");
+            $resposta = array("msg" => "Erro ao alterar o status", "status" => "ERRO");
             echo json_encode($resposta);
         }
+    }else{
+        $resposta = array("msg" => "Usuario não encontrado", "status" => "ERRO");
+        echo json_encode($resposta);
     }
     exit; 
 }

@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="../../public/css/conteudo.css">
     <link rel="stylesheet" href="../../public/css/modal_alterar_dados_pessoais.css">
     <link rel="stylesheet" href="../../public/css/modal_alterar_senha.css">
-    <link rel="stylesheet" href="../../public/css/modal_alterar_status_usuario.css">
+    <link rel="stylesheet" href="../../public/css/modal_alterar_status.css">
     <link rel="stylesheet" href="../../public/css/modal_confirmacao_dados_registrados.css">
     <link rel="stylesheet" href="../../public/css/modal_confirmacao_dados.css">    
     <link rel="stylesheet" href="../../public/css/modal_aviso_erro.css">    
@@ -113,7 +113,8 @@
     </section>
     
     <?php
-    include "../../public/modais/modal_editar_usuario.php";
+    include "../../public/modais/modal_editar.php";
+    include "../../public/modais/modal_alterar_status.php";
     include "../../public/modais/modal_confirmacao_dados_registrados.php";
     include "../../public/modais/modal_confirmacao_dados.php";
     include "../../public/modais/modal_aviso_erro.php";
