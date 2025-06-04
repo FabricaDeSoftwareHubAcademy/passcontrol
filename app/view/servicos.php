@@ -5,6 +5,7 @@ $novo_servico = new Servico();
 $servicos_cadastrados = $novo_servico->buscar();
 ?>
 
+2222
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
