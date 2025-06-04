@@ -1,3 +1,7 @@
+<?php
+// index.php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -9,26 +13,30 @@
     <!-- CSS -->
     <link rel="stylesheet" href="./public/css/login.css">
 
-    <!-- LOGOS -->
+    <!-- LOGO / ÍCONES -->
     <link rel="shortcut icon" href="./public/img/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+          integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <!-- JS -->
     <script src="./app/js/mascara_cpf.js" defer></script>
     <script src="./public/js/login.js" defer></script>
 </head>
+
 <body class="body_login background_image">
 
-    <?php include "./app/actions/usuario_logar.php"; ?>
-    
     <main class="container_login">
         <div class="card_left_login">
             <div class="container_animation">
-                <img src="./public/img/logo_png/animation_logo_top.png" alt="imagem da animação topo" class="image_animation image_animation_top">
-                <img src="./public/img/logo_png/animation_logo_mid.png" alt="imagem da animação meio" class="image_animation image_animation_mid">
-                <img src="./public/img/logo_png/animation_logo_bot.png" alt="imagem da animação baixo" class="image_animation image_animation_bot">
+                <img src="./public/img/logo_png/animation_logo_top.png" alt="imagem da animação topo"
+                     class="image_animation image_animation_top">
+                <img src="./public/img/logo_png/animation_logo_mid.png" alt="imagem da animação meio"
+                     class="image_animation image_animation_mid">
+                <img src="./public/img/logo_png/animation_logo_bot.png" alt="imagem da animação baixo"
+                     class="image_animation image_animation_bot">
             </div>
-
             <h1 class="title">PASS CONTROL</h1>
         </div>
 
@@ -47,16 +55,37 @@
         <div class="card_right_login">
             <h1 class="title">Olá, Seja Bem-Vindo!</h1>
 
-            <form action="" method="post" class="form form_login">
+            <!--
+                O formulário agora envia para app/actions/usuario_logar.php.
+                Observe que o campo de senha deve ter name="senha",
+                para coincidir com o que o login.php espera.
+            -->
+            <form action="./app/actions/usuario_logar.php" method="post" class="form form_login">
                 <div class="input_group input_group_login">
                     <label for="cpf" class="label">CPF</label>
-                    <input type="text" name="cpf" id="" class="input" placeholder="000.000.000-00">
+                    <input
+                        type="text"
+                        name="cpf"
+                        id="cpf"
+                        class="input"
+                        placeholder="000.000.000-00"
+                        required
+                        pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"
+                        title="Digite um CPF no formato 000.000.000-00"
+                    >
                 </div>
 
                 <div class="input_group input_group_login">
-                    <label for="password" class="label">Senha</label>
+                    <label for="senha" class="label">Senha</label>
                     <div class="password_group">
-                        <input type="password" name="password" id="input_password" class="input input_password" placeholder="••••••••">
+                        <input
+                            type="password"
+                            name="senha"
+                            id="input_password"
+                            class="input input_password"
+                            placeholder="••••••••"
+                            required
+                        >
                         <i id="toggle_password" class="fas fa-eye toggle_password"></i>
                     </div>
                 </div>
@@ -70,9 +99,16 @@
                 </div>
             </form>
         </div>
-    </div>
     </main>
 
-    
+    <?php
+    // Verifica se precisa exibir o modal de primeiro acesso
+    if (isset($_SESSION['primeiro_login']) && $_SESSION['primeiro_login']) {
+        // Inclui o modal de alteração de senha (apenas uma vez)
+        include './app/view/modais/modal_primeiroacesso_alterarsenha.php';
+        unset($_SESSION['primeiro_login']);
+    }
+    ?>
+
 </body>
 </html>

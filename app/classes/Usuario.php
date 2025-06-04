@@ -14,7 +14,7 @@ class Usuario {
 
     // Construtor que instância o Database uma única vez
     public function __construct() {
-        $this->db = new Database('usuario'); // Nome da tabela pode ser alterado conforme necessidade
+        $this->db = new Database('usuario');
     }
 
     // Função para cadastrar um novo usuário
@@ -78,24 +78,53 @@ class Usuario {
 
     // Função para realizar o login
     public function logar($cpf, $senha) {
-        $select_user = $this->db->select("cpf_usuario = ". $cpf, '', '', 'id_usuario, cpf_usuario, senha_usuario');
-        
+        $cpf = addslashes($cpf);
+        $select_user = $this->db->select("cpf_usuario = '$cpf'", '', '', 'id_usuario, cpf_usuario, senha_usuario, primeiro_login');
+    
         if ($select_user->rowCount() > 0) {
             $dados = $select_user->fetch();
+    
+            if (password_verify($senha, $dados['senha_usuario'])) {
+                if (session_status() !== PHP_SESSION_ACTIVE) {
+                    session_start();
+                }
+    
+                $_SESSION['id_usuario'] = $dados['id_usuario'];
+                $_SESSION['primeiro_login'] = ($dados['primeiro_login'] == 1);
+    
+                return true;
+            }
+        }
+    
+        return false;
+    }
+       // Função para definir uma nova senha e atualizar o status de primeiro acesso
+       public function definirNovaSenha($id_usuario, $nova_senha) {
+        if (session_status() !== PHP_SESSION_ACTIVE) {
+            session_start();
+        }
+    
+        if (strlen($nova_senha) < 8) {
+            throw new Exception("A nova senha deve ter pelo menos 8 caracteres.");
+        }
+        // Verifica se a senha contém pelo menos um número, uma letra maiúscula e um caractere especial
+        $hashed_senha = password_hash($nova_senha, PASSWORD_DEFAULT);
+    
 
-           // Verifica a senha criptografada
-           if (password_verify($senha, $dados['senha_usuario'])) {
-               session_start();
-               $_SESSION['id_usuario'] = $dados['id_usuario'];
-
-               return true;
-           }
-           else{
-            return false;
-           }
-       }
-       return false;
-    }    
+        $id_usuario = (int)$id_usuario;
+    
+        // Atualiza a senha e marca como não sendo mais primeiro acesso
+        $this->db->update("id_usuario = $id_usuario", [
+            'senha_usuario' => $hashed_senha,
+            'primeiro_login' => 0
+        ]);
+    
+        // Atualiza a sessão
+        $_SESSION['primeiro_login'] = false;
+        
+        return true;
+    }
+    
 
     private function valida_cpf($cpf) {
         $cpf = preg_replace('/[^0-9]/', '', $cpf);

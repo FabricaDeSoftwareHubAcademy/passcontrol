@@ -1,5 +1,5 @@
 <?php
-require_once('./usuario_primeiroacesso.php');
+require_once('./Usuario.php');
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
@@ -9,13 +9,11 @@ if(isset($_POST['cpf'])){
 
     $usuario = new Usuario();
     if ($usuario->logar($cpf, $senha)) {
-        session_start();
-        $id_usuario = $_SESSION['id_usuario'];
     
         // Verifica se é primeiro acesso
         $dados_usuario = $usuario->buscar("id_usuario = $id_usuario")[0];
         
-        if ($dados_usuario['primeiro_login']) {
+        if ($_SESSION['primeiro_login'] || $dados_usuario['primeiro_login'] == 1) {
             include './testeprimeiroacesso/modal_primeiroacesso_alterarsenha.php';
             exit;
         }
@@ -39,7 +37,7 @@ if(isset($_POST['cpf'])){
     <link rel="stylesheet" href="../public/css/login.css">
     <script src="../public/js/login.js" defer></script>
     <link rel="shortcut icon" type="imagex/png" href="public/img/favicon.ico">
-
+    <link rel="stylesheet" href="../public/css/login.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
@@ -101,11 +99,6 @@ if(isset($_POST['cpf'])){
         </div>
     </div>
 
-    <?php if (isset($_SESSION['primeiro_login']) && $_SESSION['primeiro_login']) {
-    include('testeprimeiroacesso/modal_primeiroacesso_alterarsenha.php');
-    // Opcional: zera a flag para o modal não aparecer de novo após reload
-    unset($_SESSION['primeiro_login']);
-} ?>
 
 
 </body>

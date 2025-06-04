@@ -1,7 +1,7 @@
 
 <?php
 session_start();
-require_once('./app/usuario_primeiroacesso.php');
+require_once('./app/Usuario.php');
 
 if (!isset($_SESSION['id_usuario'])) {
     header("Location: index.php");
