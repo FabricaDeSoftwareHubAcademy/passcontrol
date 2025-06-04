@@ -5,6 +5,7 @@ $novo_servico = new Servico();
 $servicos_cadastrados = $novo_servico->buscar();
 ?>
 
+2222
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -19,15 +20,14 @@ $servicos_cadastrados = $novo_servico->buscar();
 
     <!-- IMPORT DO CSS -->
     <link rel="stylesheet" href="../../public/css/navegacao.css">
-    <link rel="stylesheet" href="../../public/css/ponto_atendimento.css">
-    <link rel="stylesheet" href="../../public/modais/ModalEdicaoPontoAtendimento/estilo.css">
-    <link rel="stylesheet" href="../../public/modais/ModalInativacaoGuiche/cadastro.css">
-    <link rel="stylesheet" href="../../public/modais/ModalConfirmaDados/estilo.css">
-    <link rel="stylesheet" href="../../public/modais/Modal_Alterar_Dados_Pessoais/alterar_dados_pessoais.css">
-    <link rel="stylesheet" href="../../public/modais/Modal_Alterar_Senha/alterar_senha.css">
-    <link rel="stylesheet" href="../../public/modais/Modal_Cadastro_Ponto_Atendimento/cadastro_ponto_atendimento.css">
+    <link rel="stylesheet" href="../../public/Modal_Alterar_Dados_Pessoais/alterar_dados_pessoais.css">
+    <link rel="stylesheet" href="../../public/Modal_Alterar_Senha/alterar_senha.css">
     
-
+    <link rel="stylesheet" href="../../public/css/servico.css">
+    <link rel="stylesheet" href="../../public/css/edicao_servico.css">
+    <link rel="stylesheet" href="../../public/css/modal_cadastro_servico.css">
+    <link rel="stylesheet" href="../../public/css/modal_status_servico.css">
+    <link rel="stylesheet" href="../../public/css/modal_confirmacao_servico.css">
 
     <link rel="shortcut icon" type="imagex/png" href="../../../public/img/Logo-Nota-Controlnt.ico">
 </head>
