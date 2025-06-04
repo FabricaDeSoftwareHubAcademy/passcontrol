@@ -5,7 +5,6 @@ $novo_servico = new Servico();
 $servicos_cadastrados = $novo_servico->buscar();
 ?>
 
-2222
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -28,6 +27,14 @@ $servicos_cadastrados = $novo_servico->buscar();
     <link rel="stylesheet" href="../../public/css/modal_cadastro_servico.css">
     <link rel="stylesheet" href="../../public/css/modal_status_servico.css">
     <link rel="stylesheet" href="../../public/css/modal_confirmacao_servico.css">
+
+    <!-- JS -->
+    <script src="../../public/js/navegacao_menu_lateral.js" defer></script>
+    <script src="../../public/js/monitor_modal.js" defer></script>
+    <script src="../../public/js/modal_cadastro_confirmacao_servico.js" defer></script>
+    <script src="../../public/js/modal_edicao_confirmar_servico.js" defer></script>
+    <script src="../../public/js/modal_status_confirmacao_servico.js" defer></script>
+
 
     <link rel="shortcut icon" type="imagex/png" href="../../../public/img/Logo-Nota-Controlnt.ico">
 </head>
