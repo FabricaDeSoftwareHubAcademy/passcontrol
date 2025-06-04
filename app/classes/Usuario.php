@@ -54,7 +54,10 @@ class Usuario {
     // Função para alternar o status do usuário
     public function alternar_status($id_usuario, $status_usuario) {
         $status_alternar = ($status_usuario == 1) ? 0 : 1;
-        return $this->db->update('id_usuario =' . $id_usuario, ['status_usuario' => $status_alternar]);
+        $values = [
+            "status_usuario" => $status_alternar
+        ];
+        return $this->db->update("id_usuario = $id_usuario", $values);
     }
 
     // Função para gerar uma senha aleatória

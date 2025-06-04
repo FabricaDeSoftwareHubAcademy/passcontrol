@@ -28,17 +28,18 @@ document.addEventListener("DOMContentLoaded", function () {
                     let atualizar_dados = await fetch ('../actions/usuario_alterar_status.php?id=' + userId, {
                         method: "GET"
                     });
-            
+                    
                     let textResponse = await atualizar_dados.text();
+
+                    // console.log(textResponse);
+
                     let response_post = JSON.parse(textResponse);
             
-                    console.log(response_post + " resposta do php");
-            
-                    // esconde o modal de confirmação
-                    modalConfAltStatus.classList.remove('show');
-            
-                    // mostra o modal de alterações realizadas
-                    modalContainer_ConfDados.classList.add("show");
+                    // console.log(response_post + " resposta do php");
+
+                    modalConfAltStatus.classList.remove('show'); // esconde o modal de confirmação
+
+                    modalContainer_ConfDados.classList.add("show"); // mostra o modal de alterações realizadas
             
                     buttonFechar_ConfDados.addEventListener("click", () => {
                         modalContainer_ConfDados.classList.remove("show");
@@ -46,9 +47,9 @@ document.addEventListener("DOMContentLoaded", function () {
                     });
             
                 } catch (error) {
-                    console.error("Erro ao analisar JSON ou falha na requisição:", error);
-                    // Se quiser debuggar o texto bruto:
                     // console.log("Conteúdo não pode ser analisado como JSON.");
+                    // Se quiser debuggar o texto bruto:
+                    console.error("Erro ao analisar JSON ou falha na requisição:", error);
                 }
             });
         });
