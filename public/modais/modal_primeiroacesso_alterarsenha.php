@@ -1,8 +1,11 @@
 <link rel="stylesheet" href="./modal_primeiroacesso_alterarsenha.css">
 
+
+
+
 <div class="modal active" id="modal-primeiroacesso_alterarsenha">
   <div class="modal-content">
-    <form method="POST" action="trocar_senha.php">
+    <form method="POST" action="alterar_senha.php">
       <span class="modal-close" onclick="document.getElementById('modal-primeiroacesso_alterarsenha').classList.remove('active')">&times;</span>
       <h2>Primeiro Acesso?</h2>
       <p>Você precisa alterar a senha para acessar o sistema.</p>
