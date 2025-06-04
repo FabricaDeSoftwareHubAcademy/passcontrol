@@ -63,16 +63,8 @@ session_start();
             <form action="./app/actions/usuario_logar.php" method="post" class="form form_login">
                 <div class="input_group input_group_login">
                     <label for="cpf" class="label">CPF</label>
-                    <input
-                        type="text"
-                        name="cpf"
-                        id="cpf"
-                        class="input"
-                        placeholder="000.000.000-00"
-                        required
-                        pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"
-                        title="Digite um CPF no formato 000.000.000-00"
-                    >
+                    <input type="text" name="cpf" id="cpf" class="input" placeholder="000.000.000-00">
+
                 </div>
 
                 <div class="input_group input_group_login">
