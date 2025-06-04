@@ -4,7 +4,7 @@ function mudaFoco(campo, max, destino) {
     } 
 
     else if (campo.value.length == 0) {
-        const campos = document.querySelectorAll('.inpRecuperar');
+        const campos = document.querySelectorAll('.input');
         const index = Array.from(campos).indexOf(campo);
         if (index > 0) {
             campos[index - 1].focus();

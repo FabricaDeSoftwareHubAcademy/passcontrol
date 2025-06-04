@@ -1,85 +1,40 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PassControl</title>
 
-    <!-- CSS -->
     <link rel="stylesheet" href="../../public/css/recuperar_senha_codigo.css">
-
-    <!-- JS -->
-    <script src="../../public/js/recuperar_senha_codigo.js" defer></script>
-
-    <!-- LOGO -->
-    <link rel="shortcut icon" type="imagex/png" href="../../public/img/Logo-Nota-Controlnt.ico">
+    <link rel="shortcut icon" href="../../public/img/favicon.ico" type="image/x-icon">
 </head>
-
-<body class="recuperarSenha">
-    <div class="box">
-
-        <div class="GroupLine groupLeft">
-            <div class="line">
-                <span></span>
-            </div>
-            <div class="arrow">
-                <div class="setas"><img src="../../public/img/logo-png/setas.png" alt=""></div>
-                <div class="setas"><img src="../../public/img/logo-png/setas.png" alt=""></div>
-                <div class="setas"><img src="../../public/img/logo-png/setas.png" alt=""></div>
-            </div>
+<body class="body_login background_image">
+    <main class="container_login">
+        <div class="container_animation">
+            <img src="../../public/img/logo_png/animation_logo_top.png" alt="imagem da animação topo" class="image_animation image_animation_top">
+            <img src="../../public/img/logo_png/animation_logo_mid.png" alt="imagem da animação meio" class="image_animation image_animation_mid">
+            <img src="../../public/img/logo_png/animation_logo_bot.png" alt="imagem da animação baixo" class="image_animation image_animation_bot">
         </div>
+        <h1 class="title">PASS CONTROL</h1>
 
-
-
-        <main>
-            <div class="containerAnime">
-                <div class="containerImagens">
-                    <img src="../../public/img/logo-png/top.png" alt="" class="imagem imagemTop">
-                    <img src="../../public/img/logo-png/mid.png" alt="" class="imagem imagemMid">
-                    <img src="../../public/img/logo-png/bot.png" alt="" class="imagem imagemBot">
-                </div>
-                <div class="titlePass">
-                    <h1>PASS CONTROL</h1>
+        <form action="" class="form form_login">
+            <div class="input_group">
+                <label class="label_recuperar_senha" for="">Recuperar Senha</label>
+                <div class="container_input">
+                    <input type="text" class="input" name="" id="input_1" maxlength="1" required onkeyup="mudaFoco(this, 1, input_2)">
+                    <input type="text" class="input" name="" id="input_2" maxlength="1" required onkeyup="mudaFoco(this, 1, input_3)">
+                    <input type="text" class="input" name="" id="input_3" maxlength="1" required onkeyup="mudaFoco(this, 1, input_4)">
+                    <input type="text" class="input" name="" id="input_4" maxlength="1" required onkeyup="mudaFoco(this, 1, input_5)">
+                    <input type="text" class="input" name="" id="input_5" maxlength="1" required onkeyup="mudaFoco(this, 1, null)">
                 </div>
             </div>
-
-
-            <div class="containerRecuperar">
-                <form action="" class="formRecuperar">
-                    <label for="" class="lblRecuperar">Recuperar Senha</label>
-
-                    <div class="containerInput">
-                        <input type="text" class="inpRecuperar" id="input1" placeholder="" maxlength="1" required onKeyUp="mudaFoco(this, 1, input2)">
-                        <input type="text" class="inpRecuperar" id="input2" placeholder="" maxlength="1" required onKeyUp="mudaFoco(this, 1, input3)">
-                        <input type="text" class="inpRecuperar" id="input3" placeholder="" maxlength="1" required onKeyUp="mudaFoco(this, 1, input4)">
-                        <input type="text" class="inpRecuperar" id="input4" placeholder="" maxlength="1" required onKeyUp="mudaFoco(this, 1, input5)">
-                        <input type="text" class="inpRecuperar" id="input5" placeholder="" maxlength="1" required onKeyUp="mudaFoco(this, 1, null)">
-
-                    </div>
-
-                    <span>Insira o código recebido no E-mail.</span>
-
-                    <div class="btnEnviar">
-                        <a href="./recuperar_senha_nova_senha.php" type="submit" class="btn">Entrar</a>
-                    </div>
-                </form>
+            <p class="text_recuperar_senha">Insira o código recebido no e-mail.</p>
+            <div class="container_button">
+                <a class="button" href="./recuperar_senha_nova_senha.php">Enviar</a>
             </div>
-        </main>
+        </form>
+    </main>
 
-
-
-        <div class="GroupLine groupRight">
-            <div class="arrow ">
-                <div class="setas setaRight"><img src="../../public/img/logo-png/setas.png" alt=""></div>
-                <div class="setas setaRight"><img src="../../public/img/logo-png/setas.png" alt=""></div>
-                <div class="setas setaRight"><img src="../../public/img/logo-png/setas.png" alt=""></div>
-            </div>
-            <div class="line">
-                <span></span>
-            </div>
-        </div>
-    </div>
-
+    <script src="../../public/js/recuperar_senha_codigo.js" defer></script>
 </body>
 </html>
