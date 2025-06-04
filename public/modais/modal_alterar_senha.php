@@ -1,6 +1,6 @@
 <div class="fundo-container-alterar-senha">
     <section class="modal-alterar-senha">
-        <img src="../../../public/img/img-modais/Logo Nota Controlnt.png" alt="Logo Nota Control" class="logo-alterar-senha">
+        <img src="../../public/img/img-modais/Logo Nota Controlnt.png" alt="Logo Nota Control" class="logo-alterar-senha">
         <h1 class="titulo-alterar-senha">Alterar Senha</h1>
         <hr class="linha-alterar-senha">
         <div class="senha-atual-container">

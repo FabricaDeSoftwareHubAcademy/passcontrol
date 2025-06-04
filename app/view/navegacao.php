@@ -8,12 +8,12 @@
     <!-- CSS -->
     <link rel="stylesheet" href="../../public/css/navegacao.css">
     <link rel="stylesheet" href="../../public/css/menu_eli.css">
-    <link rel="stylesheet" href="../../public/css/modal_alterar_dados_pessoais.css">
     <link rel="stylesheet" href="../../public/css/modal_alterar_senha.css">
+    <link rel="stylesheet" href="../../public/css/modal_alterar_dados_pessoais.css">
 
     <!-- JS -->
-    <script src="../../refatoracao/desnecessario/alterar_dados_pessoais.js"></script>
-    <script src="../../public/js/modal_alterar_senha.js"></script>
+    <script src="../../public/js/modal_alterar_senha.js" defer></script>
+    <script src="../../public/js/modal_alterar_dados_pessoais.js" defer></script>
 </head>
 <body>
     <header class="cabeca-navegacao-control">
@@ -121,7 +121,7 @@
     </div>
 
     <?php
-        // include "../../public/modais/modal_editar_usuario.php";
+        include "../../public/modais/modal_alterar_dados_pessoais.php";
         include "../../public/modais/modal_alterar_senha.php";
     ?>
 </body>
