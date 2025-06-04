@@ -76,6 +76,13 @@
     font-size: 18px;
     font-weight: bold;
     text-align: center;
+    margin-bottom: 10px;
+}
+
+.aviso-erro{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
 }
 
 /* Grupo de botões */

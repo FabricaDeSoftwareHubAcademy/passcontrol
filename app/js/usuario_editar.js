@@ -13,6 +13,12 @@ const cancelarEdicao = document.querySelector(".cancel_ConfDadosRegist");
 const modalAlteracaoFeita = document.querySelector(".fundo-container-confirmacao-dados");
 const buttonOk = document.querySelector(".Okay_ConfDados");
 
+// MODAL ERRO
+
+const modalErro = document.querySelector(".modal-container-aviso-erro");
+const msgErro = document.querySelector(".aviso-erro");
+const buttonOkErro = document.querySelector(".voltar_AvisoErro");
+
 
 //JAVASCRIP PARA CLICAR NO BOTAO EDITAR E CARREGAR O MODAL COM OS DADOS
 
@@ -29,47 +35,89 @@ document.addEventListener("DOMContentLoaded", function() {
             })
             
             let response = await dados_php.json();
-            
 
             // Preenche os campos do modal com os dados do usuário
-            document.getElementById("id_usuario").value = response.id_usuario,
-            document.getElementById("nome").value = response.nome,
-            document.getElementById("email").value = response.email,
-            // document.getElementById("cpf").value = response.cpf,
+            document.getElementById("id_usuario").value = response.id_usuario;
+            document.getElementById("nome").value = response.nome_usuario;
+            document.getElementById("email").value = response.email_usuario;
+            document.getElementById("cpf").value = response.cpf_usuario;
             // document.getElementById("foto").value = response.foto   //ESSE GOSTA DE DAR PROBLEMA
-            document.getElementById("id_perfil").value = response.id_perfil
+            document.getElementById("id_perfil").value = response.id_perfil_usuario_fk;
 
-            
             modalContainerEdicao.classList.add("show"); //ABRE O MODAL
         });
     });
 
-    // ENVIAR DADOS EDITADOS CASO CLIQUE NO CONFIRMAR
-    buttonSalvarEdicao.addEventListener("click", () => {
-        modalContainerEdicao.classList.remove("show");
-        modalConfirmarAltDadosUsu.classList.add("show");
+    // MASCARA DO CPF
+    const cpfInput = document.getElementById('cpf');
+    cpfInput.addEventListener('input', function () {
+        let valor = cpfInput.value.replace(/\D/g, '');
+        if (valor.length > 11) valor = valor.slice(0, 11);
+        cpfInput.value = valor
+        .replace(/^(\d{3})(\d)/, '$1.$2')
+        .replace(/^(\d{3})\.(\d{3})(\d)/, '$1.$2.$3')
+        .replace(/\.(\d{3})(\d)/, '.$1-$2');
     });
+
+    // ENVIAR DADOS EDITADOS CASO CLIQUE NO CONFIRMAR
+    buttonSalvarEdicao.addEventListener("click", async (event) => {
+        event.preventDefault();
+
+        const nome = document.getElementById('nome').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const cpf = document.getElementById('cpf').value.trim();
+
+        let erro = false;
+        msgErro.textContent = '';
+
+        if (!nome) {
+            msgErro.innerHTML += "Preencha o nome!<br>";
+            erro = true;
+        } 
+        if (!email) {
+            msgErro.innerHTML += "Preencha o email!<br>";
+            erro = true;
+        } 
+        if (!cpf || !validarCPF(cpf)) {
+            msgErro.innerHTML += "CPF inválido!<br>";
+            erro = true;
+        }
+
+        if (!erro) {
+            modalContainerEdicao.classList.remove("show");
+            modalConfirmarAltDadosUsu.classList.add("show");
+        }else{
+            modalContainerEdicao.classList.remove("show");
+            modalErro.classList.add("show");
+        }
+    });
+
+    buttonOkErro.addEventListener("click", ()=>{
+        modalErro.classList.remove("show");
+        modalContainerEdicao.classList.add("show");
+    })
 
     // CLIQUE NO NAO CONFIRMAR
     cancelarEdicao.addEventListener("click", () =>{
         modalConfirmarAltDadosUsu.classList.remove("show");
+        modalContainerEdicao.classList.add("show");
     });
 
     confirmarEdicao.addEventListener("click", async function(event){
         event.preventDefault();
 
         const formEditarUsu = new FormData(document.getElementById("formEditarCadastro"));
-        // console.log(formEditarUsu);
+        console.log(formEditarUsu);
         
         // Envia os dados via POST
-        let atualizar_dados = await fetch ('../../controller/usuario_editar.php', {
+        let atualizar_dados = await fetch ('../actions/usuario_editar.php', {
             method: "POST",
             body: formEditarUsu
         })
         
         // Recebe a resposta bruta do server, basicamente um debug com esteroides
         let textResponse = await atualizar_dados.text();
-        // console.log("Resposta bruta do servidor:", textResponse);  // Mostra o que o PHP está retornando
+        console.log("Resposta bruta do servidor:", textResponse);  // Mostra o que o PHP está retornando
 
         try {
             let response_post = JSON.parse(textResponse);

@@ -27,12 +27,15 @@ $servicos_cadastrados = $novo_servico->buscar();
     <link rel="stylesheet" href="../../public/modais/Modal_Alterar_Senha/alterar_senha.css">
     <link rel="stylesheet" href="../../public/modais/Modal_Cadastro_Ponto_Atendimento/cadastro_ponto_atendimento.css">
     
-    <!-- LOGO -->
+
+
     <link rel="shortcut icon" type="imagex/png" href="../../../public/img/Logo-Nota-Controlnt.ico">
 </head>
 <body class="control-body-navegacao">
     <?php
     include "./navegacao.php";
+    include "../actions/servico_listar.php";
+    include "../actions/servico_editar.php";
     ?>
 
 <section class="Area-Util-Projeto">
@@ -89,13 +92,13 @@ $servicos_cadastrados = $novo_servico->buscar();
             <!-- <button type="button" id="abrirModal" class="botao-cadastro">Cadastrar</button> -->
             <button type="button" id="btn_cadastrar_servico" class="botao-cadastro">Cadastrar</button>
 
-        </div>
-
-    </div>
+        <?php
+        include "./monitor_modal.php";
+        include "../../public/modais/modal_cadastro_servico.php";
+        include "../../public/modais/modal_confirmacao_cadastro_servico.php";
+        include "../../public/modais/modal_confirmacao_edicao_servico.php";
+        include "../../public/modais/modal_satus_servico.php";
+        ?>
 </section>
-
-<?php
-include "./monitor_modal.php";
-?>
 
 </body>

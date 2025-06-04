@@ -49,7 +49,7 @@ buttonSalvar_CadPontoAtend.addEventListener("click", function (event) {
             const formData = new FormData(myform);
 
             try {
-                const dados2_php = await fetch("../actions/servico_cadastrar.php", {
+                const dados2_php = await fetch("../../app/actions/servico_cadastrar.php", {
                     method: 'POST',
                     body: formData
                 });

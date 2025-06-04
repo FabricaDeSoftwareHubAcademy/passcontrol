@@ -7,7 +7,7 @@ class Usuario {
     public string $email;
     public string $cpf;
     public string $senha;
-    public string $id_perfil;
+    public int $id_perfil;
     // public string $foto;
     public string $status_usuario;
     private $db;
@@ -36,11 +36,6 @@ class Usuario {
     public function buscar($where = null, $order = null, $limit = null) {
         return $this->db->select($where, $order, $limit)->fetchAll(PDO::FETCH_ASSOC);
     }
-    
-    // Função para buscar usuário por ID do usuario
-    public function buscar_id_usu($id_usuario){
-        return $this->db->select("id_usuario =".$id_usuario);
-   }
 
     // Função para atualizar dados do usuário
     public function atualizar($id_usuario) {

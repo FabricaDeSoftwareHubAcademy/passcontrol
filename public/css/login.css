@@ -8,61 +8,6 @@
     justify-content: center;
 }
 
-.container_animation {
-    position: relative;
-    width: 90px;
-    height: 60%;
-}
-
-.image_animation {
-    width: 100%;
-    top: 0;
-    left: 0;
-    position: absolute;
-}
-
-.image_animation_top {
-    z-index: 3;
-    top: 10px;
-    animation: image_animation_top 6s infinite linear;
-}
-
-.image_animation_mid {
-    z-index: 2;
-    top: 15px;
-    animation: image_animation_mid 6s infinite linear;
-}
-
-.image_animation_bot {
-    z-index: 1;
-    top: 25px;
-    animation: image_animation_bot 6s infinite linear;
-}
-
-@keyframes image_animation_top {
-    0% { top: 0px; left: 0px; }
-    25% { top: -10px; left: 0px; }
-    50% { top: -10px; left: -15px; }
-    75% { top: -10px; left: 15px; }
-    100% { top: 0px; left: 0px; }
-}
-
-@keyframes image_animation_mid {
-    0%, 25% { left: 0px; }
-    50% { left: 15px; }
-    75% { left: -15px; }
-    100% { left: 0px; }
-}
-
-@keyframes image_animation_bot {
-    0% { top: 25px; left: 0px; }
-    25%, 50%, 75% { top: 35px; }
-    25% { left: 0px; }
-    50% { left: -15px; }
-    75% { left: 15px; }
-    100% { top: 25px; left: 0px; }
-}
-
 .container_lines {
     width: 100%;
     height: 1.5%;
@@ -90,16 +35,8 @@
     flex-direction: column;
 }
 
-.form_login {
-    width: 80%;
-}
-
 .input_group_login {
     margin-top: 10%;
-}
-
-.container_link, .container_button {
-    text-align: right;
 }
 
 .container_link {
@@ -131,7 +68,7 @@
 }
 
 .container_button {
-    margin-top: 20%;
+    margin-top: 80px;
 }
 
 @media (min-width: 28rem) {
@@ -146,24 +83,12 @@
         margin-bottom: 2%;
     }
 
-    .container_animation {
-        width: 120px;
-    }
-
     .line_top, .line_bot {
         width: 40%;
-    }
-
-    .form_login {
-        width: 60%;
     }
 }
 
 @media (min-width: 48rem) {
-    .form_login {
-        width: 60%;
-    }
-
     .link {
         font-size: 1rem;
     }
@@ -175,48 +100,6 @@
         height: 100%;
         flex-direction: column;
         justify-content: center;
-    }
-
-    .container_animation {
-        width: 200px;
-        height: 15%;
-        margin-bottom: 30%;
-    }
-
-    .image_animation_top {
-        top: 0px;
-    }
-
-    .image_animation_mid {
-        top: 25px;
-    }
-
-    .image_animation_bot {
-        top: 50px;
-    }
-
-    @keyframes image_animation_top {
-        0% { top: 0px; left: 0px; }
-        25% { top: -50px; left: 0px; }
-        50% { top: -50px; left: -50px; }
-        75% { top: -50px; left: 50px; }
-        100% { top: 0px; left: 0px; }
-    }
-    
-    @keyframes image_animation_mid {
-        0%, 25% { left: 0px; }
-        50% { left: 50px; }
-        75% { left: -50px; }
-        100% { left: 0px; }
-    }
-    
-    @keyframes image_animation_bot {
-        0% { top: 50px; left: 0px; }
-        25%, 50%, 75% { top: 100px; }
-        25% { left: 0px; }
-        50% { left: -50px; }
-        75% { left: 50px; }
-        100% { top: 50px; left: 0px; }
     }
 
     .container_lines {
@@ -233,28 +116,10 @@
     .container_arrow {
         display: flex;
     }
-
-    .form_login {
-        width: 85%;
-    }
-}
-
-@media (min-width: 80rem) {
-    .form_login {
-        width: 75%;
-    }
 }
 
 @media (min-width: 96rem) {
-    .container_animation {
-        margin-bottom: 200px;
-    }
-
     .line_top, .line_bot {
         max-width: 2.5px;
-    }
-
-    .form_login {
-        max-width: 32.5rem;
     }
 }
