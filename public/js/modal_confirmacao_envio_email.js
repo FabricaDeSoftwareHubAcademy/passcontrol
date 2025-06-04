@@ -10,6 +10,6 @@
     buttonFechar_ConfSenha.addEventListener("click", () => {
         modalContainer_ConfSenha.classList.remove("show");
 
-        window.location.href = "../../app/view/recuperar_senha_codigo.php"; // substitua pelo caminho real
+        window.location.href = "../../app/view/recuperar_senha_codigo.php";
     });
 

@@ -50,7 +50,8 @@
             <form action="" method="post" class="form form_login">
                 <div class="input_group input_group_login">
                     <label for="cpf" class="label">CPF</label>
-                    <input type="text" name="cpf" id="" class="input" placeholder="000.000.000-00">
+                    <input type="text" name="cpf" id="cpf" class="input" placeholder="000.000.000-00">
+
                 </div>
 
                 <div class="input_group input_group_login">
