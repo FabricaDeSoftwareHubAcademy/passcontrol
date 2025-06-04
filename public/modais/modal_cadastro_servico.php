@@ -22,7 +22,7 @@
             </div>
             <div class="servico-ponto-atendimento">
                 <label class="label-ponto-atendimento"><b>Foto</b></label>
-                <input type="file" id="identificador_ponto_atendimento_cadastrar" name="url_imagem_servico" class="input-text-ponto-atendimento">
+                <input type="text" id="identificador_ponto_atendimento_cadastrar" name="url_imagem_servico" class="input-text-ponto-atendimento">
             </div>
             <div class="button-group-ponto-atendimento">
                 <button class="botao-modal-ponto-atendimento cancel_CadPontoAtend">Voltar</button>
