@@ -9,3 +9,40 @@ togglePassword.addEventListener("click", function(){
     this.classList.toggle("fa-eye");
     this.classList.toggle("fa-eye-slash");
 });
+
+
+let btn_login = document.querySelector("#btn_login");
+
+btn_login.addEventListener("click", async function(e) {
+
+    e.preventDefault();
+
+    let form_login = document.querySelector("#form_login");
+
+    let formData = new FormData(form_login);
+
+    let dados_php = await fetch("./app/actions/usuario_logar.php", {
+        method: "POST",
+        body: formData
+    })
+
+    let response = await dados_php.json();
+
+    if(response.code == 200) {
+            //redireciona para a página de atendimento
+            window.location.href = "./app/view/atendimento.php";
+    }
+
+    else if (response.code == 201) {
+        // console.log("CHAMANDO O MODAL DE PRIMEIRO ACESSO");
+        // console.log(response.id_usuario);
+        window.location.href = "./app/view/recuperar_senha_nova_senha.php?id=" + response.id_usuario;
+    }   
+     else if (response.code == 400) {
+            //redireciona para a página de atendimento
+            console.log(response.msg);
+    }
+
+    console.log(response);
+
+})
