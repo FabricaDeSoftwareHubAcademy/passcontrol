@@ -113,7 +113,7 @@
     </section>
     
     <?php
-    include "../../public/modais/modal_editar.php";
+    include "../../public/modais/modal_editar_usuario.php";
     include "../../public/modais/modal_alterar_status.php";
     include "../../public/modais/modal_confirmacao_dados_registrados.php";
     include "../../public/modais/modal_confirmacao_dados.php";
