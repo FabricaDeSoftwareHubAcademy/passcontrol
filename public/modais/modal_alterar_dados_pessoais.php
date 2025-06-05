@@ -29,19 +29,6 @@
                 <input type="file" class="input-file" id="foto" name="foto" value="">
             </div>
 
-            <div class="perfil-container">
-                <label class="labeledit" for="perfil">Perfil De Acesso</label>
-                <select class="selecao" form="formEditarCadastro" type="select" name="id_perfil" id="id_perfil" placeholder="Nome do perfil" required>
-                    <!-- <option class="pi" value="" disabled selected>Selecione</option> -->
-                    <?php
-                    // // LISTAR PERFIS DE USUARIO
-                    foreach ($perfis as $perfil):
-                    ?> <option class="pi" value="<?=$perfil["id_perfil_usuario"]?>"><?=$perfil["nome_perfil_usuario"]?></option> <?php
-                    endforeach;
-                    ?>
-                </select>
-            </div>
-
             <div class="button-group-alterar-dados">
                 <button class="botao-modal-alterar-dados cancel_AltDadosPessoais" type="reset" form="formEditarCadastro">Voltar</button>
                 <button class="botao-modal-alterar-dados save_AltDadosPessoais" type="submit" form="formEditarCadastro" name="editarCadastro">Salvar</button>

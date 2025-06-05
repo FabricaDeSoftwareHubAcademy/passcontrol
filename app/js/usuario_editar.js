@@ -1,7 +1,7 @@
-const modalContainerEdicao = document.querySelector(".fundo-editar-dados");
-const buttonCancelarEdicao = modalContainerEdicao.querySelector(".cancel_AltDadosPessoais");
-const buttonSalvarEdicao = modalContainerEdicao.querySelector(".save_AltDadosPessoais");
-let formEditarUsuario = modalContainerEdicao.querySelector(".editarCadastro");
+const modalContainerEdicao = document.querySelector(".fundo_editar_dados_usuario");
+const buttonCancelarEdicao = modalContainerEdicao.querySelector(".cancel_edit_dados_usu");
+const buttonSalvarEdicao = modalContainerEdicao.querySelector(".save_edit_dados_usu");
+let formEditarUsuario = modalContainerEdicao.querySelector(".form_editar_dados_usuario");
 
 // MODAL DE CONFIRMAÇÃO
 const modalConfirmarAltDadosUsu = document.querySelector(".fundo-container-confirmacao-dados-registrados");
@@ -106,7 +106,7 @@ document.addEventListener("DOMContentLoaded", function() {
     confirmarEdicao.addEventListener("click", async function(event){
         event.preventDefault();
 
-        const formEditarUsu = new FormData(document.getElementById("formEditarCadastro"));
+        const formEditarUsu = new FormData(document.getElementById("form_editar_dados_usuario"));
         console.log(formEditarUsu);
         
         // Envia os dados via POST
