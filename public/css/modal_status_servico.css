@@ -14,7 +14,15 @@
     font-family: Arial, Helvetica, sans-serif;
     background-color: #f5f5f5;
   }
-  
+  .modal-inativar-container,
+  .fundo-container-cad-ponto-atendimento,
+  #confirma_cadastrar {
+    display: none;
+  }
+
+  .show {
+    display: flex; /* ou block dependendo do modal */ 
+  } 
   /* Estilo dos botões */
   .botao-modal {
     padding: 10px 20px;
