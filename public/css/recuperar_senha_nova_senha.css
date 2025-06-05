@@ -1,354 +1,77 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url(root.css);
 
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: inter;
-    font-style: bold;
-}
-body{
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    align-items: center;
+.container_login {
     justify-content: center;
-    flex-direction: column;
-}
-.recuperarSenha{
-    min-height: 100vh;
-    background-color: #fff;
-    background-image: url(../img/Background-logo\ 2.svg);
-    background-repeat: no-repeat;
-    background-position: bottom right;
-    background-size: 20%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    background-color: white;
-}
-
-.box{
-    width: 75%;
-    height: 100%;
-    border-radius: 10px;
-    background-color: rgba(198, 196, 196, 0.2);
-    backdrop-filter: blur(5px);
-    display: flex;
-    align-items: center;
-    justify-content: center;    
-
-}
-
-.GroupLine{
-    width: 20px;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: start;
-    /* margin-right: 30px; */
-    /* background-color: red; */
-}
-.groupRight{
-    justify-content: end;
-    margin-left: 20px;
-}
-.groupLeft{
-    margin-right: 20px;
-
-}
-.setaRight{
-    transform: rotate(180deg);
-}
-
-.line{
-    width: 2px;
-    height: 40%;
-    background-color: #3aa867;
-    border-radius: 5px 5px 0 0;
-}
-
-.arrow{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-}
-
-.setas{
-    font-size: 20px;
-    font-weight: 800;
-}
-
-main{
-    width: 700px;
-    height: 95%;
-    background-color: rgba(255, 255, 255, 1);
-    border-radius: 10px;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.containerNovaSenha{
-    width: 100%;
-
-
-    position: relative;
-}
-#togglePassword, #togglePasswordNv{
-    position: absolute;
-    right: 10px;
-    top: calc(50% + 10px);
-    cursor: pointer;
-    color: #666;
-}
-
-.containerConfNovaSenha{
-    width: 100%;
-    margin-top: 20px;
-    position: relative;
-}
-
-.containerAnime{
-    width: 100%;
-    height: 150px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-/* animation Logo */
-
-.containerImagens {
-    position: relative;
-    width: 15%; 
-    height: 50px; 
-    /* margin-top: 2;0%; */
-}
-.titlePass{
-    margin-top: 50px;
-    font-weight: 800;
-}
-.titlePass h1{
-    color: #33404D;
-}
-.imagem {
-    position: absolute;
-    top: 30px;
-    left: 0;
-    width: 100%; 
-    height: auto;
-    pointer-events: none; 
-}
-
-.imagemTop {
-    z-index: 3;
-    top: 10px; 
-    animation: animationTop 6s infinite linear;
-}
-
-.imagemMid {
-    z-index: 2;
-    top: 12px; 
-    animation: animationMid 6s infinite linear;
-}
-
-.imagemBot {
-    z-index: 1;
-    top: 24px; 
-    animation: animationBot 6s infinite linear;
-}
-
-@keyframes animationTop {
-    0%{
-        top: 0px;
-        left: 0px;
-    }
-    25%{
-        top: -5px;
-        left: 0px;
-    }
-    50%{
-        top: -5px;
-        left: -20px;
-    }
-    75%{
-        top: -5px;
-        left: 20px;
-    }
-    100%{
-        top: 0px;
-        left: 0px;
-    }
-}
-
-@keyframes animationMid {
-    0%{
-        /* top: 100px; */
-        left: 0px;
-    }
-    25%{
-        /* top: 60px; */
-        left: 0px;
-    }
-    50%{
-        /* top: 60px; */
-        left: 20px;
-    }
-    75%{
-        /* top: 60px; */
-        left: -20px;
-    }
-    100%{
-        /* top: 100px; */
-        left: 0px;
-    }
-}
-
-@keyframes animationBot {
-    0%{
-        top: 24px;
-        left: 0px;
-    }
-    25%{
-        top: 30px;
-        left: 0px;
-    }
-    50%{
-        top: 30px;
-        left: -20px;
-    }
-    75%{
-        top: 30px;
-        left: 20px;
-    }
-    100%{
-        top: 24px;
-        left: 0px;
-    }
-}
-
-.containerRecuperar{
-    width: 95%;
-    height: 70%;
-    margin-top: 50px;
-
-}
-
-.formRecuperar{
-    width: 100%;
-    height: 75%;
-
-    display: flex;
-    flex-direction: column;
     align-items: center;
 }
-.formRecuperar .lblRecuperar{
-    width: 100%;
-    
-    color: rgba(0, 0, 0, 0.671);
+
+.container_animation {
+    height: 13%;
+}
+
+.title {
+    margin-top: 5%;
+}
+
+.text_requisitos {
     font-weight: bold;
-    font-size: 20px;
-    margin-top: 15px;
+    font-size: 0.85rem;
+    margin-top: 3%;
 }
-.formRecuperar .inpRecuperar{
-    width: 100%;
-    height: 40px;
-    background-color: none;
-    border: 1px solid black;
-    padding: 10px;
-    border-radius: 5px;
-    font-size: 20px;
-    margin-top: 15px;
-    outline: none;
-}
-.formRecuperar .inpRecuperar:hover{
-    border: 3px solid #3aa867;
-}
-.formRecuperar .inpRecuperar:focus{
-    border: 3px solid #3aa867;
-}
-.containerRequisitoSenhas{
-    width: 100%;
-    margin-top: 10px;
-}
-.containerRequisitoSenhas h1{
-    font-size: 14px;
-}
-.containerRequisitoSenhas ul li{
+
+.list_requisitos {
     list-style: none;
-    margin-bottom: 3px;
-    font-size: 13px;
+    font-size: 0.8rem
 }
 
-.formRecuperar nav{
-    width: 100%;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: end;
-    margin-top: 20%;
-}
-.formRecuperar nav a {
-    width: 100%;
-    height: 100%;
-    color: #fff;
-    font-size: 16px;
-    font-style: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-}
-.formRecuperar nav button{
-    width: 100px;
-    height: 40px;
-    background-color: #33404D;
-    color: white;
-    border-radius: 12px;
-    /* margin-right: 20px; */
-    font-size: 16px;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    border: none;
-}
-.formRecuperar nav button:hover{
-    background-color: #181f26;
-    color: #3aa867;
-    transition: linear 0.04s;
+.requisitos_invalidos {
+    color: var(--red_color);
 }
 
-.requisitosInvalidos {
-    color: red;
+.requisitos_validos {
+    color: var(--green_color);
 }
 
-.requisitosValidos {
-    color: green;
+.label {
+    margin-top: 10%;
 }
 
-@media (min-width: 0) and (max-width: 535px){
-    .recuperarSenha{
-        padding: 0;
-        }
-        .box{
-            width: 100%;
-        }
-    .titlePass{
-        font-size: 15px;
-    }
-    .GroupLine{
-        margin-right: 0;
-    }
-    .groupRight{
-        margin-left: 0;
+.list_requisitos {
+    margin-bottom: 80px;
+}
+
+@media (min-width: 64rem) {
+    .container_login {
+        flex-direction: column;
     }
 
+    .container_animation {
+        margin-bottom: 10%;
+    }
+
+    .form_login {
+        width: 60%;
+    }
+
+    .label {
+        margin-top: 5%;
+    }
+
+    .text_requisitos {
+        font-weight: bold;
+        font-size: 0.85rem;
+        margin-top: 1%;
+    }
+}
+
+@media (min-width: 80rem) {
+    .label {
+        margin-top: 2%;
+    }
+}
+
+@media (min-width: 96rem) {
+    .title {
+        margin-top: 1%;
+    }
 }
