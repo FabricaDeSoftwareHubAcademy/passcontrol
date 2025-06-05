@@ -58,12 +58,12 @@ session_start();
             <!--
                 O formulário agora envia para app/actions/usuario_logar.php.
                 Observe que o campo de senha deve ter name="senha",
-                para coincidir com o que o login.php espera.
+                para coincidir com o que o login.php espera e não password.
             -->
-            <form action="./app/actions/usuario_logar.php" method="post" class="form form_login">
+            <form id="form_login" method="POST" class="form form_login">
                 <div class="input_group input_group_login">
                     <label for="cpf" class="label">CPF</label>
-                    <input type="text" name="cpf" id="cpf" class="input" placeholder="000.000.000-00">
+                    <input type="text" name="cpf" id="cpf" class="input" placeholder="Digite seu CPF">
 
                 </div>
 
@@ -87,7 +87,7 @@ session_start();
                 </div>
 
                 <div class="container_button">
-                    <button type="submit" class="button">Entrar</button>
+                    <button id="btn_login" type="submit" class="button">Entrar</button>
                 </div>
             </form>
         </div>

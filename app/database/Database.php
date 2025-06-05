@@ -66,15 +66,16 @@ class Database {
         }
     }
 
-    public function select($where = null, $order = null, $limit = null, $fields = "*"){
-        $where = strlen($where) ? " WHERE ".$where : "";
-        $order = strlen($order) ? " ORDER BY ".$order : "";
-        $limit = strlen($limit) ? " LIMIT ".$limit : "";
+    public function select($where = null, $order = null, $limit = null, $fields = '*'){
+        $where = !empty($where) ? ' WHERE '.$where : '';
+        $order = !empty($order) ? ' ORDER BY '.$order : '';
+        $limit = !empty($limit) ? ' LIMIT '.$limit : '';
 
-        $query = "SELECT $fields FROM $this->table $where $order $limit";
+        $query = 'SELECT '.$fields.' FROM '.$this->table. ' '.$where. ' '.$order . ' '.$limit ;
 
         return $this->execute($query);
     }
+
 
     public function update($where, $array){
         $fields = array_keys($array);

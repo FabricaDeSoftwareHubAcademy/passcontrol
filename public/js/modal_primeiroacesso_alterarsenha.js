@@ -1,10 +1,10 @@
 
-buttonSalvar_AltSenha.addEventListener("click", () => {
+buttonSalvar.addEventListener("click", () => {
     const senhaAtual = document.querySelector(".input-senha-atual").value;
     const novaSenha = document.querySelector(".input-nova-senha").value;
     const confirmaSenha = document.querySelector(".input-conf-nova-senha").value;
 
-    fetch("trocar_senha.php", {
+    fetch("alterar_senha.php", {
         method: "POST",
         headers: {
             "Content-Type": "application/x-www-form-urlencoded",

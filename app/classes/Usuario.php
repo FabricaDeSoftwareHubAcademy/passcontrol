@@ -80,26 +80,18 @@ class Usuario {
     }
 
     // Função para realizar o login
-    public function logar($cpf, $senha) {
-        $cpf = addslashes($cpf);
-        $select_user = $this->db->select("cpf_usuario = '$cpf'", '', '', 'id_usuario, cpf_usuario, senha_usuario, primeiro_login');
-    
+    public function logar($cpf) {
+        $db = new Database('usuario');
+
+        $select_user = $db->select("cpf_usuario = $cpf");
+
         if ($select_user->rowCount() > 0) {
             $dados = $select_user->fetch();
-    
-            if (password_verify($senha, $dados['senha_usuario'])) {
-                if (session_status() !== PHP_SESSION_ACTIVE) {
-                    session_start();
-                }
-    
-                $_SESSION['id_usuario'] = $dados['id_usuario'];
-                $_SESSION['primeiro_login'] = ($dados['primeiro_login'] == 1);
-    
-                return true;
-            }
+            return $dados;
+
+        }else{
+            return false;
         }
-    
-        return false;
     }
        // Função para definir uma nova senha e atualizar o status de primeiro acesso
        public function definirNovaSenha($id_usuario, $nova_senha) {
