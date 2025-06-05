@@ -25,6 +25,7 @@ $servicos_cadastrados = $novo_servico->buscar();
     <link rel="stylesheet" href="../../public/css/servico.css">
     <link rel="stylesheet" href="../../public/css/edicao_servico.css">
     <link rel="stylesheet" href="../../public/css/modal_cadastro_servico.css">
+    <link rel="stylesheet" href="../../public/css/modal_confirmacao_dados_servico.css">
     <link rel="stylesheet" href="../../public/css/modal_status_servico.css">
     <link rel="stylesheet" href="../../public/css/modal_confirmacao_servico.css">
 
@@ -103,6 +104,7 @@ $servicos_cadastrados = $novo_servico->buscar();
         include "./monitor_modal.php";
         include "../../public/modais/modal_cadastro_servico.php";
         include "../../public/modais/modal_confirmacao_cadastro_servico.php";
+        include "../../public/modais/modal_confirmacao_dados_servicos.php";
         include "../../public/modais/modal_confirmacao_edicao_servico.php";
         include "../../public/modais/modal_satus_servico.php";
         ?>
