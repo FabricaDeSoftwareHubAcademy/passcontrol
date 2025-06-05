@@ -1,3 +1,8 @@
+<?php
+ if (!isset($_GET['id'])) {
+     $id = $_GET['id'];
+ }
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -11,6 +16,7 @@
     <!-- JS -->
     <script src="../../public/js/recuperar_senha_nova_senha.js" defer></script>
     <script src="../../public/js/confirmacao_recuperar_senha.js" defer></script>
+    <script src="../../public/js/alterar_senha_primeiro_acesso.js" defer></script>
 
     <link rel="shortcut icon" type="imagex/png" href="../../public/img/Logo-Nota-Controlnt.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -46,10 +52,11 @@
 
 
             <div class="containerRecuperar">
-                <form action="" class="formRecuperar">
+                <form id="formRecuperar" action="" class="formRecuperar">
 
                     <div class="containerNovaSenha">
                         <label for="" class="lblRecuperar">Insira a nova senha</label>
+                        <input id="id_user" type="hidden" class="id_user">
                         <input id="novaSenha" type="password" class="inpRecuperar" placeholder="Nova Senha">
                         <i class="fas fa-eye" id="togglePasswordNv"></i>
                     </div>
@@ -70,7 +77,7 @@
                         </ul>
                     </div>
                     <nav>
-                        <button type="submit" onclick="return validarConfSenha()">Enviar</button>
+                        <button id="btn_alterar_senha" type="submit" onclick="return validarConfSenha()">Enviar</button>
                     </nav>
                 </form>
             </div>

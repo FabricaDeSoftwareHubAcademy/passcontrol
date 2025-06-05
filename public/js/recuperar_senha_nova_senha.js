@@ -37,8 +37,6 @@ document.getElementById('novaSenha').addEventListener('input', function() {
     validarSenha(this.value);
 });
 
-
-
 const togglePassword = document.querySelector("#togglePassword");
 const password = document.querySelector("#confirmSenha");
 

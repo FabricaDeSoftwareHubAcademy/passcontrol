@@ -15,34 +15,42 @@ if (isset($_POST['cpf'], $_POST['senha'])) {
 
     $res = $usuario->logar($cpf_limpo);
 
-    if($res['primeiro_login'] == 1){
+    if(password_verify($senha, $res['senha_usuario'])  && ($res['primeiro_login'] == 1) ) {
+
         echo json_encode([
             'status' => 'primeiro_login',
             'code' => 201,
+            'id_usuario' => $res['id_usuario'],
             'msg' => 'Por favor, defina sua senha para continuar.'
         ]);
-    }else{
-        if(session_status() !== PHP_SESSION_ACTIVE) {
-            $_SESSION['id_usuario'] = $dados['id_usuario'];
-            $_SESSION['nome_usuario'] = $dados['nome_usuario'];
-            $_SESSION['email_usuario'] = $dados['email_usuario'];
-            $_SESSION['cpf_usuario'] = $dados['cpf_usuario'];
-            $_SESSION['id_perfil_usuario_fk'] = $dados['id_perfil_usuario_fk'];
-            session_start();
-
-            echo json_encode([
-                'status' => 'ok',
-                'code' => 200,
-                'msg' => 'Redirecionar para a tela inicial de atendimento.'
-            ]);
-        }
     }
+    else if(password_verify($senha, $res['senha_usuario'])  && ($res['primeiro_login'] == 0) ){
 
-} else {
-    // Se não foi enviado CPF ou senha, redireciona para a página principal
-    echo json_encode([
-        'status' => 'error',
-        'code' => 400,
-        'msg' => 'Retornar para o index.'
-    ]);
-}
+        $_SESSION['id_usuario'] = $res['id_usuario'];
+        $_SESSION['nome_usuario'] = $res['nome_usuario'];
+        $_SESSION['email_usuario'] = $res['email_usuario'];
+        $_SESSION['cpf_usuario'] = $res['cpf_usuario'];
+        $_SESSION['id_perfil_usuario_fk'] = $res['id_perfil_usuario_fk'];
+
+        echo json_encode([
+            'status' => 'ok',
+            'code' => 200,
+            'id_usuario' => $res['id_usuario'],
+            'msg' => 'Redirecionar para a tela inicial de atendimento.'
+        ]);
+
+    }
+    else{
+                echo json_encode([
+                    'status' => 'senha incorreta',
+                    'code' => 400,
+                    'msg' => 'senha incorreta',
+                ]);
+            }
+    
+        
+    }
+    
+    
+    
+   

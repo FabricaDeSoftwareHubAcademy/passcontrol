@@ -28,16 +28,21 @@ btn_login.addEventListener("click", async function(e) {
 
     let response = await dados_php.json();
 
-    if (response.code == 201) {
-        console.log("CHAMANDO O MODAL DE PRIMEIRO ACESSO");
+    if(response.code == 200) {
+            //redireciona para a página de atendimento
+            window.location.href = "./app/view/atendimento.php";
     }
-    else if (response.code == 200) {
-        //redireciona para a página de atendimento
-        window.location.href = "./app/view/atendimento.php";
-    }else{
-        //redireciona para o index
-        window.location.href = "./app/view/atendimento.php";
 
+    else if (response.code == 201) {
+        // console.log("CHAMANDO O MODAL DE PRIMEIRO ACESSO");
+        // console.log(response.id_usuario);
+        window.location.href = "./app/view/recuperar_senha_nova_senha.php?id=" + response.id_usuario;
+    }   
+     else if (response.code == 400) {
+            //redireciona para a página de atendimento
+            console.log(response.msg);
     }
+
+    console.log(response);
 
 })
