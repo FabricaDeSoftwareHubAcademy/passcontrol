@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="../../public/css/monitor_modal.css">
     <link rel="stylesheet" href="../../public/css/conteudo.css">
     <link rel="stylesheet" href="../../public/css/modal_alterar_dados_pessoais.css">
+    <link rel="stylesheet" href="../../public/css/modal_editar_dados_usuario.css">
     <link rel="stylesheet" href="../../public/css/modal_alterar_senha.css">
     <link rel="stylesheet" href="../../public/css/modal_alterar_status.css">
     <link rel="stylesheet" href="../../public/css/modal_confirmacao_dados_registrados.css">
