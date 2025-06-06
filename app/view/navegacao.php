@@ -121,7 +121,7 @@
     </div>
 
     <?php
-        include "../../public/modais/modal_alterar_dados_pessoais.php";
+        // include "../../public/modais/modal_alterar_dados_pessoais.php";
         include "../../public/modais/modal_alterar_senha.php";
     ?>
 </body>

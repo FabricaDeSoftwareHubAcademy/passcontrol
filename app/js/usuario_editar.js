@@ -41,7 +41,12 @@ document.addEventListener("DOMContentLoaded", function() {
             document.getElementById("nome").value = response.nome_usuario;
             document.getElementById("email").value = response.email_usuario;
             document.getElementById("cpf").value = response.cpf_usuario;
-            // document.getElementById("foto").value = response.foto   //ESSE GOSTA DE DAR PROBLEMA
+            if(!response.foto){
+                document.getElementById("foto_usuario").innerHTML = 'Imagem não encontrada.';
+                document.getElementById("foto").src = '';
+            }else{
+                document.getElementById("foto").src = response.foto;
+            }
             document.getElementById("id_perfil").value = response.id_perfil_usuario_fk;
 
             modalContainerEdicao.classList.add("show"); //ABRE O MODAL

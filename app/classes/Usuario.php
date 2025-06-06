@@ -8,7 +8,7 @@ class Usuario {
     public string $cpf;
     public string $senha;
     public int $id_perfil;
-    // public string $foto;
+    public string $foto;
     public string $status_usuario;
     private $db;
 
@@ -46,6 +46,7 @@ class Usuario {
             'nome_usuario' => $this->nome,
             'email_usuario' => $this->email,
             'cpf_usuario' => $this->cpf,
+            'ur_foto_usuario' => $this->foto,
             'id_perfil_usuario_fk' => $this->id_perfil
         ];
         return $this->db->update("id_usuario = $id_usuario", $values);

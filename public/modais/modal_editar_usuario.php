@@ -3,7 +3,7 @@
         <img src="../../../public/img/img-modais/Logo Nota Controlnt.png" alt="Logo Nota Control" class="logo-alterar-dados">
         <h1 class="titulo">Editar dados do Usuario</h1>
         <hr class="linha-alterar-dados">
-        <form class="form_editar_dados_usuario" id="form_editar_dados_usuario" method=POST enctype=multipart/form-data>
+        <form class="form_editar_dados_usuario" id="form_editar_dados_usuario" method=POST enctype="multipart/form-data">
 
             <input type="hidden" name="id_usuario" id="id_usuario" value=""> <!-- Campo oculto para o ID do usuário -->
 
@@ -25,6 +25,7 @@
             </div>
 
             <div class="file-container">
+                <img class="foto_usuario" id="foto_usuario" src="">
                 <label class="label-file-alterar-dados"><b>Foto de Perfil</b></label>
                 <input type="file" class="input-file" id="foto" name="foto" value="">
             </div>
