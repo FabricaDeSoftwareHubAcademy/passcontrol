@@ -163,6 +163,7 @@
   }
   #icone-editar {
     cursor: pointer;
+    height: 22px;
   }
   .bot-editar:hover img{
     content: url(../../public/img/icons/Group\ 2925.png);
