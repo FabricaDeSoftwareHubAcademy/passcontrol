@@ -95,28 +95,14 @@ class Usuario {
     }
        // Função para definir uma nova senha e atualizar o status de primeiro acesso
        public function definirNovaSenha($id_usuario, $nova_senha) {
-        if (session_status() !== PHP_SESSION_ACTIVE) {
-            session_start();
-        }
-    
-        if (strlen($nova_senha) < 8) {
-            throw new Exception("A nova senha deve ter pelo menos 8 caracteres.");
-        }
-        // Verifica se a senha contém pelo menos um número, uma letra maiúscula e um caractere especial
-        $hashed_senha = password_hash($nova_senha, PASSWORD_DEFAULT);
-    
 
+        // Verifica se a senha contém pelo menos um número, uma letra maiúscula e um caractere especial
         $id_usuario = (int)$id_usuario;
-    
         // Atualiza a senha e marca como não sendo mais primeiro acesso
         $this->db->update("id_usuario = $id_usuario", [
-            'senha_usuario' => $hashed_senha,
+            'senha_usuario' => $nova_senha,
             'primeiro_login' => 0
         ]);
-    
-        // Atualiza a sessão
-        $_SESSION['primeiro_login'] = false;
-        
         return true;
     }
     

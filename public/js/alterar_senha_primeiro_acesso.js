@@ -1,20 +1,39 @@
+let btn_nova_senha = document.getElementById("btn_nova_senha");
 
-let btn_alterar_senha = document.getElementById("btn_alterar_senha");
-
-btn_alterar_senha.addEventListener("click", async function(e) {
+btn_nova_senha.addEventListener("click",  async function(e) {
 
     e.preventDefault();
 
-    let form_senha = document.querySelector("#formRecuperar");
+    const url_id = new URLSearchParams(window.location.search);
+    const id_user = url_id.get('id');
+ 
 
-    let formData = new FormData(form_senha);
+    let form_recuperar_senha = document.getElementById("form_recuperar_senha");
 
-    let dados_php = await fetch("../app/actions/alterar_senha.php", {
-        method: "POST",
-        body: formData
+    console.log(form_recuperar_senha);
+
+    let form_data = new FormData(form_recuperar_senha);
+
+    console.log(form_data);
+
+    let dados_php = await fetch('../actions/alterar_senha.php?id_user='+id_user,{
+        method:"POST",
+        body:form_data
     })
 
     let response = await dados_php.json();
+
+    if(response.status == 200){
+        ///CHAMA O MODAL COM A MENSAGEM DE SUCESSO
+        //redireciona para a página de atendimento
+        window.location.href = "./index.php";
+
+
+    }else{
+
+        // MODAL DE ERROOO
+    }
     
-    console.log(response);
+    //console.log(response);
 })
+
