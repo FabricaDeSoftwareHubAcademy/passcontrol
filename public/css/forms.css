@@ -1,0 +1,268 @@
+@import url(root.css);
+
+.card_left_login, .card_right_login {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.card_left_login {
+    height: 30%;
+    gap: 1rem;
+}
+
+.card_right_login {
+    height: 70%;
+}
+
+.input_group_login {
+    margin-top: 1.5rem;
+}
+
+.container_link {
+    text-align: right;
+    margin-top: 0.8rem;
+}
+
+.link {
+    position: relative;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: var(--main_black_color);
+}
+
+.link::after {
+    position: absolute;
+    content: " ";
+    width: 0;
+    height: 2px;
+    background-color: var(--main_green_color);
+    bottom: 0;
+    left: 0;
+    transition: 0.6s ease-in-out;
+}
+
+.link:hover::after {
+    width: 100%;
+}
+
+.container_lines {
+    width: 100%;
+    height: 2%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.line_top, .line_bot {
+    width: 45%;
+    height: 20%;
+    background-color: var(--main_green_color);
+    border-radius: 5px;
+}
+
+.container_arrow {
+    height: 100%;
+    display: none;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 10%;
+}
+
+.container_arrow img {
+    height: 80%;
+}
+
+.label_recuperar_senha {
+    width: 100%;
+    height: 2.8rem;
+    background-color: var(--main_green_color);
+    border: 1px solid var(--green_color);
+    color: var(--main_white_color);
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    justify-content: center;
+}
+
+.text_recuperar_senha {
+    font-size: 0.85rem;
+    color: var(--main_text_color);
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.container_input_codigo {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5rem;
+}
+
+.container_input_codigo .input {
+    width: 40px;
+    text-align: center;
+    padding: 0.5rem;
+}
+
+.container_requisitos {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.text_requisitos {
+    font-weight: bold;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.list_requisitos {
+    list-style: none;
+    font-size: 0.85rem;
+}
+
+.requisitos_invalidos {
+    color: var(--red_color);
+}
+
+.requisitos_validos {
+    color: var(--green_color);
+}
+
+@media (min-width: 40rem) {
+    .card_left_login {
+        height: 25%;
+    }
+
+    .card_right_login {
+        height: 75%;
+    }
+
+    .container_input_codigo .input {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@media (min-width: 48rem) {
+    .link {
+        font-size: 1rem;
+    }
+
+    .label_recuperar_senha {
+        height: 3rem;
+        font-size: 1.2rem;
+    }
+
+    .text_recuperar_senha {
+        font-size: 0.95rem;
+    }
+
+    .container_input_codigo .input {
+        width: 50px;
+    }
+
+    .text_requisitos {
+        font-size: 1rem;
+    }
+
+    .list_requisitos {
+        font-size: 0.9rem;
+    }
+}
+
+@media (min-width: 64rem) {
+    .card_left_login, .card_right_login {
+        width: 50%;
+        height: 100%;
+        padding: 2rem;
+        justify-content: center;
+    }
+
+    .card_left_login {
+        gap: 2rem;
+    }
+
+    .container_lines {
+        width: 2%;
+        height: 100%;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    .line_top, .line_bot {
+        width: 10%;
+        height: 100%;
+    }
+
+    .container_arrow {
+        display: flex;
+        flex-direction: column;
+        width: auto;
+    }
+
+    .container_arrow img {
+        height: 10px;
+        width: auto;
+    }
+
+    .label_recuperar_senha {
+        height: 3.5rem;
+        font-size: 1.3rem;
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .text_recuperar_senha {
+        font-size: 1rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .container_input_codigo .input {
+        width: 50px;
+        height: 3.2rem;
+        font-size: 1.3rem;
+    }
+
+    .text_requisitos {
+        font-size: 1.1rem;
+    }
+
+    .list_requisitos {
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 80rem) {
+    .label_recuperar_senha {
+        height: 3.8rem;
+        font-size: 1.4rem;
+    }
+
+    .container_input_codigo .input {
+        width: 60px;
+        height: 3.5rem;
+        font-size: 1.4rem;
+    }
+}
+
+@media (min-width: 96rem) {
+    .line_top, .line_bot {
+        max-width: 3px;
+    }
+
+    .container_animation {
+        margin-bottom: 0;
+    }
+}
