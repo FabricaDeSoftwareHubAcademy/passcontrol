@@ -41,7 +41,9 @@
 
         <div class="card_right_login">
             <h1 class="title">Olá, Seja Bem-Vindo!</h1>
-            <form action="./app/actions/usuario_logar.php" method="post" class="form form_login">
+            <!-- <form action="./app/actions/usuario_logar.php" method="post" class="form form_login"> -->
+            <form id="form_login" class="form form_login">
+
                 <div class="input_group input_group_login">
                     <label for="cpf" class="label">CPF</label>
                     <input type="text" name="cpf" id="cpf" class="input" placeholder="000.000.000-00">
@@ -59,9 +61,12 @@
                     <a href="./app/view/recuperar_senha_email.php" class="link">Esqueci Minha Senha</a>
                 </div>
 
+
                 <div class="container_button">
-                    <button type="submit" class="button">Entrar</button>
+                    <!-- <button type="submit" class="button">Entrar</button> -->
+                    <button type="button" id="btn_login" class="button">Entrar</button>
                 </div>
+                <p id="login_msg" style="color: red; display: none; text-align: center; margin-bottom: 10px;"></p>
             </form>
         </div>
     </main>
