@@ -12,8 +12,8 @@
     <link rel="stylesheet" href="../../public/css/modal_alterar_dados_pessoais.css">
 
     <!-- JS -->
-    <script src="../../public/js/modal_alterar_senha.js" defer></script>
-    <script src="../../public/js/modal_alterar_dados_pessoais.js" defer></script>
+    <!-- <script src="../../public/js/modal_alterar_senha.js" defer></script>
+    <script src="../../public/js/modal_alterar_dados_pessoais.js" defer></script> -->
 </head>
 <body>
     <header class="cabeca-navegacao-control">
@@ -121,8 +121,8 @@
     </div>
 
     <?php
-        include "../../public/modais/modal_alterar_dados_pessoais.php";
-        include "../../public/modais/modal_alterar_senha.php";
+        /* include "../../public/modais/modal_alterar_dados_pessoais.php";
+        include "../../public/modais/modal_alterar_senha.php"; */
     ?>
 </body>
 </html>
