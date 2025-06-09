@@ -1,3 +1,4 @@
+
 function validarSenha(nova_senha) {
     const liDigito = document.getElementById('digito');
     const liMaiuscula = document.getElementById('maiuscula');
@@ -37,15 +38,8 @@ document.getElementById('nova_senha').addEventListener('input', function() {
     validarSenha(this.value);
 });
 
-<<<<<<< HEAD
-
-
 const togglePassword = document.querySelector("#toggle_password");
 const password = document.querySelector("#confirmar_senha");
-=======
-const togglePassword = document.querySelector("#togglePassword");
-const password = document.querySelector("#confirmSenha");
->>>>>>> origin/task171
 
 togglePassword.addEventListener("click", function(){
     const type = password.type === "password" ? "text" : "password";

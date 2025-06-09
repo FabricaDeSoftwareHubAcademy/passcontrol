@@ -3,6 +3,7 @@
 session_start();
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
+header('Content-Type: application/json');
 
 require_once '../classes/Usuario.php';
 
@@ -41,12 +42,12 @@ if (isset($_POST['cpf'], $_POST['senha'])) {
 
     }
     else{
-                echo json_encode([
-                    'status' => 'senha incorreta',
-                    'code' => 400,
-                    'msg' => 'senha incorreta',
-                ]);
-            }
+            echo json_encode([
+                'status' => 'senha incorreta',
+                'code' => 400,
+                'msg' => 'senha incorreta',
+            ]);
+        }
     
         
     }

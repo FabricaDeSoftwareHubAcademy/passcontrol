@@ -9,7 +9,11 @@
     <link rel="stylesheet" href="../../public/css/forms.css">
     <link rel="shortcut icon" href="../../public/img/favicon.ico" type="image/x-icon">
 
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" type="imagex/png" href="../../public/img/Logo-Nota-Controlnt.ico">
+    <script src="../../public/js/recuperar_senha_nova_senha.js" defer></script>
+    <script src="../../public/js/alterar_senha_primeiro_acesso.js" defer></script>
 </head>
 <body class="body_login background_image">
     <main class="container_login">
@@ -22,10 +26,11 @@
             <h1 class="title">PASS CONTROL</h1>
         </div>
 
-        <form action="" class="form"> <div class="input_group">
-                <label for="nova_senha" class="label">Insira a nova senha</label>
+        <form id="form_recuperar_senha" class="form form_login" method="POST">
+            <div class="input_group input_group_login">
+                <label for="" class="label">Insira a nova senha</label>
                 <div class="password_group">
-                    <input type="password" id="nova_senha" class="input input_password" placeholder="Digite a nova senha">
+                    <input type="password" id="nova_senha" name="nova_senha" class="input input_password" placeholder="Digite a nova senha">
                     <i class="fas fa-eye toggle_password" id="toggle_password_novo"></i>
                 </div>
             </div>
@@ -33,7 +38,7 @@
             <div class="input_group">
                 <label for="confirmar_senha" class="label">Confirme a nova senha</label>
                 <div class="password_group">
-                    <input type="password" id="confirmar_senha" class="input input_password" placeholder="Confirme a nova senha">
+                    <input type="password" id="confirmar_senha" name="confirmar_senha" class="input input_password" placeholder="Confirme a nova senha">
                     <i class="fas fa-eye toggle_password" id="toggle_password"></i>
                 </div>
             </div>
@@ -49,15 +54,8 @@
             </div>
 
             <div class="container_button">
-                <button class="button" type="submit" onclick="return validarConfirmacaoSenha()">Salvar</button>
+                <button id="btn_nova_senha" class="button">Salvar</button>
             </div>
         </form>
     </main>
-
-    <script src="../../public/js/recuperar_senha_nova_senha.js" defer></script>
-    <script src="../../public/js/confirmacao_recuperar_senha.js" defer></script>
-    <script src="../../public/js/login.js" defer></script>
-
-    <?php include '../../public/modais/confirmacao_recuperar_senha.php'; ?>
-</body>
 </html>
