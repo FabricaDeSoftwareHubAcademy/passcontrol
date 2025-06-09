@@ -13,8 +13,28 @@ elseif (($_SERVER['REQUEST_METHOD'] === 'POST')){
     $nome = $_POST["nome"];
     $email = $_POST["email"];
     $cpf = $_POST["cpf"];
-    // $foto = $_POST["foto"];
+    $foto = $_FILES["foto"];
     $id_perfil = $_POST["id_perfil"];
+
+    if ($foto['erro']){
+        $resposta = array("msg" => "Falha ao enviar a foto");
+        echo json_encode($resposta);
+        exit;
+    }
+
+    $pasta = './public/img/uploads/uploads_usuario/';
+    $nome_foto = $foto['name'];
+    $novo_nome = uniqid();
+    $extensao = strtolower(pathinfo($nome_foto, PATHINFO_EXTENSION));
+
+    if($extensao != 'png' && $extensao != 'jpg'){
+        $resposta = array("msg" => "Arquivo não autorizado");
+        echo json_encode($resposta);
+        exit;
+    }
+     
+    $path = $pasta . $novo_nome . '.' . $extensao;
+    $foto = move_uploaded_file($arquivo['tmp_name'], $path);
 
     
     // VERIFICA SE OS DADOS FORAM PREENCHIDOS
@@ -25,7 +45,8 @@ elseif (($_SERVER['REQUEST_METHOD'] === 'POST')){
         $objUser->nome = filter_var($nome, FILTER_SANITIZE_SPECIAL_CHARS);
         $objUser->email = filter_var($email, FILTER_SANITIZE_EMAIL);
         $objUser->cpf = preg_replace('/\D/', '',(filter_var($cpf, FILTER_SANITIZE_SPECIAL_CHARS)));
-        // $objUser->foto = $foto; //// EM BREVE
+        
+        $objUser->foto = $path;
         $objUser->id_perfil = filter_var($id_perfil, FILTER_SANITIZE_NUMBER_INT);
         
         $res = $objUser->atualizar($id_usuario);

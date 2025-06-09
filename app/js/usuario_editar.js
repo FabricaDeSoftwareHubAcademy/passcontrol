@@ -33,15 +33,25 @@ document.addEventListener("DOMContentLoaded", function() {
             let dados_php = await fetch("../actions/usuario_buscar.php?id=" + userId, {
                 method: 'GET'
             })
-            
+
             let response = await dados_php.json();
+            
+            console.log(response);
 
             // Preenche os campos do modal com os dados do usuário
             document.getElementById("id_usuario").value = response.id_usuario;
             document.getElementById("nome").value = response.nome_usuario;
             document.getElementById("email").value = response.email_usuario;
             document.getElementById("cpf").value = response.cpf_usuario;
-            // document.getElementById("foto").value = response.foto   //ESSE GOSTA DE DAR PROBLEMA
+            if(!response.url_foto_usuario){
+                document.getElementById("foto_usuario").src = 'Imagem não encontrada.';
+                document.getElementById("foto").src = '';
+                document.getElementById("foto").value = '';
+            }else{
+                document.getElementById("foto_usuario").src = response.url_foto_usuario;
+                document.getElementById("foto").src = response.url_foto_usuario;
+                document.getElementById("foto").value = response.url_foto_usuario;
+            }
             document.getElementById("id_perfil").value = response.id_perfil_usuario_fk;
 
             modalContainerEdicao.classList.add("show"); //ABRE O MODAL
@@ -66,6 +76,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const nome = document.getElementById('nome').value.trim();
         const email = document.getElementById('email').value.trim();
         const cpf = document.getElementById('cpf').value.trim();
+        const foto = document.getElementById('foto').value.trim();
 
         let erro = false;
         msgErro.textContent = '';
@@ -82,6 +93,8 @@ document.addEventListener("DOMContentLoaded", function() {
             msgErro.innerHTML += "CPF inválido!<br>";
             erro = true;
         }
+
+        // ----------------------COLOCAR VERIFICACAO DE TIPO DE ARQUIVO !!!!!!!!!
 
         if (!erro) {
             modalContainerEdicao.classList.remove("show");
