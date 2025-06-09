@@ -12,8 +12,24 @@
     <!-- <link rel="stylesheet" href="../../public/css/modal_alterar_senha.css">
     <link rel="stylesheet" href="../../public/css/modal_alterar_dados_pessoais.css"> -->
 
+    <link rel="stylesheet" href="../../public/css/servico.css">
+    <link rel="stylesheet" href="../../public/css/edicao_servico.css">
+    <link rel="stylesheet" href="../../public/css/modal_cadastro_servico.css">
+    <link rel="stylesheet" href="../../public/css/modal_confirmacao_dados_servico.css">
+    <link rel="stylesheet" href="../../public/css/modal_status_servico.css">
+    <link rel="stylesheet" href="../../public/css/modal_confirmacao_servico.css">
+
+
     <!-- JS -->
-    <script src="../../public/js/modal_alterar_dados_login.js"></script>
+    <script src="../../public/js/modal_alterar_senha.js" defer></script>
+    <script src="../../public/js/modal_alterar_dados_pessoais.js" defer></script>
+
+    <script src="../../public/js/navegacao_menu_lateral.js" defer></script>
+    <script src="../../public/js/monitor_modal.js" defer></script>
+    <script src="../../public/js/modal_cadastro_confirmacao_servico.js" defer></script>
+    <script src="../../public/js/modal_edicao_confirmar_servico.js" defer></script>
+    <script src="../../public/js/modal_status_confirmacao_servico.js" defer></script>
+
 </head>
 <body>
     <header class="cabeca-navegacao-control">

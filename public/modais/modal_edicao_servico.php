@@ -2,7 +2,7 @@
 <!-- ************************************   EDITAR SERVIÇO  ************************************ -->
 
 <!-- Modal  EDITAR Ponto de Atendimento-->
-<div class="modal-container">
+<div class="modal-container" data-nome-modal="editar-servico">
     <section class="modal">
         <img src="../../../public/img/img-modais/Logo Nota Controlnt.png" alt="Logo Nota Control" class="logo">
         <h1 class="titulo">Editar Serviço</h1>

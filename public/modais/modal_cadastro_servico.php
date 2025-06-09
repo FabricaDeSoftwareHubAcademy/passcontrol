@@ -1,7 +1,7 @@
 <!-- ************************************   CADASTRAR SERVIÇOS   ************************************ -->
 
 <!-- MODAL DE CADASTRO SERVIÇOS -->
-<div class="fundo-container-cad-ponto-atendimento">
+<div class="fundo-container-cad-ponto-atendimento" data-nome-modal="cadastrar">
     <section class="modal-ponto-atendimento">
         <img src="../../../public/img/img-modais/Logo Nota Controlnt.png" alt="Logo Nota Control" class="logo-ponto-atendimento">
         <h1 class="titulo-ponto-atendimento">Cadastrar Serviços</h1>

@@ -1,7 +1,7 @@
 <!-- ************************************   STATUS SERVIÇOS   ************************************ -->
 
 <!-- Modal STATUS serviços -->
-<div class="modal-inativar-container">
+<div class="modal-inativar-container" data-nome-modal="status-servico">
     <section class="modal">
         <img src="../../../public/img/img-modais/Logo Nota Controlnt.png" alt="Logo Nota Control" class="logo">
         <h1 class="titulo">Confirmação</h1>
