@@ -7,5 +7,7 @@
         <div class="button-group-confirmacao-dados">
             <button class="botao-modal-confirmacao-dados Okay_ConfDados">Ok</button>
         </div>
+
+        <script src="confirmacao_recuperar_senha.js"></script>
     </section>
 </div>
