@@ -1,6 +1,5 @@
 const buttonAbrir_AltDadosPessoais = document.querySelector(".open-editar-dados");
-const modalContainerEditar_AltDadosPessoais = document.querySelector(".edit-dados-login");
-const buttonFechar_AltDadosPessoais = document.querySelector(".close_AltDadosPessoais");
+const modalContainerEditar_AltDadosPessoais = document.querySelector(".edit_dados");
 const buttonCancelar_AltDadosPessoais = document.querySelector(".cancel_AltDadosPessoais");
 const buttonSalvar_AltDadosPessoais = document.querySelector(".save_AltDadosPessoais");
 

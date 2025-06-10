@@ -9,9 +9,9 @@
     <link rel="stylesheet" href="../../public/css/navegacao.css">
     <link rel="stylesheet" href="../../public/css/menu_eli.css">
     <link rel="stylesheet" href="../../public/css/modal_alterar_dados_login.css">
+    <link rel="stylesheet" href="../../public/css/modal_alterar_senha.css">
     <!-- <link rel="stylesheet" href="../../public/css/modal_alterar_senha.css">
     <link rel="stylesheet" href="../../public/css/modal_alterar_dados_pessoais.css"> -->
-
     <link rel="stylesheet" href="../../public/css/servico.css">
     <link rel="stylesheet" href="../../public/css/edicao_servico.css">
     <link rel="stylesheet" href="../../public/css/modal_cadastro_servico.css">
@@ -22,8 +22,7 @@
 
     <!-- JS -->
     <script src="../../public/js/modal_alterar_senha.js" defer></script>
-    <script src="../../public/js/modal_alterar_dados_pessoais.js" defer></script>
-
+    <script src="../../public/js/modal_alterar_dados_login.js" defer></script>
     <script src="../../public/js/navegacao_menu_lateral.js" defer></script>
     <script src="../../public/js/monitor_modal.js" defer></script>
     <script src="../../public/js/modal_cadastro_confirmacao_servico.js" defer></script>
@@ -137,8 +136,8 @@
     </div>
 
     <?php
-        // include "../../public/modais/modal_alterar_dados_pessoais.php";
-        /* include "../../public/modais/modal_alterar_senha.php"; */
+        include "../../public/modais/modal_alterar_dados_login.php";
+        include "../../public/modais/modal_alterar_senha.php";
     ?>
 </body>
 </html>

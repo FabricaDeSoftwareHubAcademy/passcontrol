@@ -91,13 +91,6 @@
     margin-bottom: 20px;
 }
 
-/* Estilo do container de CPF */
-/* .cpf-container-alterar-dados {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 20px;
-} */
-
 /* Estilo dos inputs e labels */
 .label-nome-login, .label-email-login, label-file-login {
     font-size: 16px;
@@ -174,7 +167,7 @@
     .modal-editar-dados {
         width: 90%;
     }
-    .titulo{
+    .title{
         margin-bottom: 20px;
     }
 }
@@ -194,7 +187,7 @@
         width: 95%;
         padding: 20px;
     }
-    .titulo{
+    .title{
         margin-top: 7px;
         font-size: 20px;
     }
@@ -216,7 +209,7 @@
         width: 95%;
         padding: 15px;
     }
-    .titulo{
+    .title{
         margin-top: 7px;
         font-size: 20px;
     }
@@ -238,7 +231,7 @@
         width: 90%;
         padding: 15px;
     }
-    .titulo{
+    .title{
         font-size: 16px;
     }
     .logo-alterar-dados{
