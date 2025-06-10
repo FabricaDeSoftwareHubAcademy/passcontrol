@@ -70,111 +70,124 @@
 //     });
 // });
 
+document.addEventListener("DOMContentLoaded", function () {
+    let dadosOriginais = {}; // Para comparar alterações
+    let formAlterado = false;
 
-// document.addEventListener("DOMContentLoaded", function () {
-//     document.querySelectorAll("#chamamodal").forEach(button => {
+    document.querySelectorAll(".chamamodal").forEach(button => {
+        button.addEventListener("click", async function (event) {
+            event.preventDefault();
 
-//         button.addEventListener("click", async function (event) {
+            let id_value = button.getAttribute("id_value");
 
-//             let id_value = button.getAttribute("id_value");
+            const modalContainer = document.querySelector(".modal-container");
+            const buttonCancelar = document.querySelector(".cancel");
+            const buttonSalvar = document.querySelector(".save");
 
-//             const modalContainer = document.querySelector(".modal-container");
-//             const buttonFechar = document.querySelector(".close");
-//             const buttonCancelar = document.querySelector(".cancel");
-//             const buttonSalvar = document.querySelector(".save");
-//             const apareceMod = document.getElementById("confirma_editar");
+            // Buscar os dados do serviço
+            let dados_php = await fetch("../actions/servico_editar.php?id_servico=" + id_value, {
+                method: 'GET'
+            });
 
-//             // Novo modal de confirmação
-//             const modalConfirmacao = document.querySelector(".fundo-container-confirmacao-dados-registrados");
-//             const buttonNao = document.querySelector(".cancel_ConfDadosRegist");
-//             const buttonSim = document.querySelector(".save_ConfDadosRegist");
+            let response = await dados_php.json();
+            console.log(response);
 
-//             event.preventDefault(); // impede o recarregamento da pagina
+            // Preenche os campos e armazena os dados originais
+            const inputNome = document.getElementById("nome_ponto_atendimento");
+            const inputCodigo = document.getElementById("identificador_ponto_atendimento");
+            const inputId = document.getElementById("id_ponto_atendimento");
 
-//             // Buscar os dados do serviço
-//             let dados_php = await fetch("../actions/servico_editar.php?id_servico=" + id_value, {
-//                 method: 'GET'
-//             });
+            inputNome.value = response.nome_servico;
+            inputCodigo.value = response.codigo_servico;
+            inputId.value = response.id_servico;
 
-//             let response = await dados_php.json();
+            dadosOriginais = {
+                nome: response.nome_servico.trim(),
+                codigo: response.codigo_servico.trim()
+            };
 
-//             console.log(response);
+            modalContainer.classList.add("show");
 
-//             document.getElementById("nome_ponto_atendimento").value = response.nome_servico;
-//             document.getElementById("identificador_ponto_atendimento").value = response.codigo_servico;
-//             document.getElementById("id_ponto_atendimento").value = response.id_servico;
+            buttonCancelar.addEventListener("click", () => {
+                modalContainer.classList.remove("show");
+            });
 
-//             modalContainer.classList.add("show");
+            buttonSalvar.onclick = function (e) {
+                e.preventDefault();
 
-//             buttonCancelar.addEventListener("click", () => {
-//                 modalContainer.classList.remove("show");
-//             });
+                const nomeAtual = inputNome.value.trim();
+                const codigoAtual = inputCodigo.value.trim();
 
-//             buttonSalvar.addEventListener("click", async (event) => {
-//                 event.preventDefault();
+                // Verifica se houve alteração
+                if (
+                    nomeAtual === dadosOriginais.nome &&
+                    codigoAtual === dadosOriginais.codigo
+                ) {
+                    alert("Nenhuma alteração foi feita nos dados.");
+                    return;
+                }
 
-//                 // Ao invés de salvar direto, mostra o modal de confirmação
-//                 modalConfirmacao.classList.add("show");
-//                 modalContainer.classList.remove("show");
+                // Se houve alteração, abre o modal de confirmação
+                document.querySelector(".fundo-container-confirmacao-dados-registrados").classList.add("show");
+                modalContainer.classList.remove("show");
+                formAlterado = true;
+            };
+        });
+    });
 
-//                 // Botão "Não" → volta para o modal de edição
-//                 buttonNao.addEventListener("click", function () {
-//                     modalConfirmacao.classList.remove("show");
-//                     modalContainer.classList.add("show");
-//                 });
+    // Botão "Não" no modal de confirmação
+    document.querySelector(".cancel_ConfDadosRegist").addEventListener("click", function () {
+        document.querySelector(".fundo-container-confirmacao-dados-registrados").classList.remove("show");
+        document.querySelector(".modal-container").classList.add("show");
+    });
 
-//                 // Botão "Sim" → envia os dados
-//                 buttonSim.addEventListener("click", async function () {
-//                     modalConfirmacao.classList.remove("show");
+    // Botão "Sim" no modal de confirmação
+    document.querySelector(".save_ConfDadosRegist").addEventListener("click", async function () {
+        if (!formAlterado) return;
 
-//                     const myform = document.getElementById("formulario_editar");
-//                     const formData = new FormData(myform);
+        const myform = document.getElementById("formulario_editar");
+        const formData = new FormData(myform);
 
-//                     let dados2_php = await fetch("../actions/servico_editar.php", {
-//                         method: 'POST',
-//                         body: formData
-//                     });
+        let dados2_php = await fetch("../actions/servico_editar.php", {
+            method: 'POST',
+            body: formData
+        });
 
-//                     let response2 = await dados2_php.json();
+        let response2 = await dados2_php.json();
+        console.log(response2);
 
-//                     if (response2) {
-//                         apareceMod.classList.add("show");
-//                     }
+        if (response2) {
+            document.getElementById("confirma_editar").classList.add("show");
+        }
 
-//                     console.log(response2);
-//                 });
-//             });
+        // Fecha modal de confirmação
+        document.querySelector(".fundo-container-confirmacao-dados-registrados").classList.remove("show");
+    });
 
-//             buttonCancelar.addEventListener("click", function () {
-//                 modalContainer.classList.remove("show");
-//             });
-//         });
-//     });
-
-//     const buttonOkEditar = document.getElementById("btnOkEditar");
-//     buttonOkEditar.addEventListener("click", function () {
-//         const apareceMod = document.getElementById("confirma_editar");
-//         apareceMod.classList.remove("show");
-//         location.reload();
-//     });
-// });
+    // Botão OK no modal final
+    const buttonOkEditar = document.getElementById("btnOkEditar");
+    buttonOkEditar.addEventListener("click", function () {
+        document.getElementById("confirma_editar").classList.remove("show");
+        location.reload();
+    });
+});
 
 
-const btnsPagina =  document.querySelectorAll('[data-btn-modal]')
-const modaisPagina = Array.from(document.querySelectorAll('[data-nome-modal]'))
+// const btnsPagina =  document.querySelectorAll('[data-btn-modal]')
+// const modaisPagina = Array.from(document.querySelectorAll('[data-nome-modal]'))
 
-btnsPagina.forEach(function (elementoAtual) {
-    elementoAtual.addEventListener('click', abrirModal);
-})
+// btnsPagina.forEach(function (elementoAtual) {
+//     elementoAtual.addEventListener('click', abrirModal);
+// })
 
-function abrirModal(evento){
-    evento.preventDefault();
-    if(evento.target.localName === 'button'){
-        const modalAbrir = modaisPagina.find(modalAtual => modalAtual.getAttribute('data-nome-modal') === evento.target.getAttribute('data-btn-modal'));
-        modalAbrir.classList.add('show');
-    }else {
-       const modalAbrir = modaisPagina.find(modal => modal.getAttribute('data-nome-modal') === evento.target.parentElement.getAttribute('data-btn-modal'))
-       modalAbrir.classList.add('show');
-    }
+// function abrirModal(evento){
+//     evento.preventDefault();
+//     if(evento.target.localName === 'button'){
+//         const modalAbrir = modaisPagina.find(modalAtual => modalAtual.getAttribute('data-nome-modal') === evento.target.getAttribute('data-btn-modal'));
+//         modalAbrir.classList.add('show');
+//     }else {
+//        const modalAbrir = modaisPagina.find(modal => modal.getAttribute('data-nome-modal') === evento.target.parentElement.getAttribute('data-btn-modal'))
+//        modalAbrir.classList.add('show');
+//     }
 
-}
+// }

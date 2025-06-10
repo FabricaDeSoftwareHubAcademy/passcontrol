@@ -110,16 +110,16 @@ btnSalvarCadastro.addEventListener("click", function (event) {
 
     const myform = document.getElementById("formulario_cadastrar");
     const inputs = myform.querySelectorAll("input");
-    let formularioValido = true;
+    let resposta  = true;
 
     // Verifica se todos os campos estão preenchidos
     inputs.forEach(inputAtual => {
         if (inputAtual.value.trim() === "") {
-            formularioValido = false;
+            resposta  = false;
         }
     });
 
-    if (!formularioValido) {
+    if (!resposta ) {
         alert("Preencha todos os campos para continuar!");
         return;
     }

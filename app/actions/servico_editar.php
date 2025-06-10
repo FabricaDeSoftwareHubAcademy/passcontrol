@@ -25,7 +25,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         echo json_encode($resposta);
 
     } else {
-        echo '<div class="alert alert-danger">Erro ao atualizar guichê. Tente novamente.</div>';
+        $resposta = array("status"=>"ERRO");
+        echo json_encode($resposta);
+        // echo '<div class="alert alert-danger">Erro ao atualizar guichê. Tente novamente.</div>';
     }
 }
 ?>
