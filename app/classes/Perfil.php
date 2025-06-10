@@ -19,3 +19,4 @@ class Perfil{
     //     return $ob;
     // }
 }
+// adicionar cadastrar, editar e alterar status perfil
