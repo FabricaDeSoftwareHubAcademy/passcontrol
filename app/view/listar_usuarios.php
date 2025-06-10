@@ -78,7 +78,7 @@
                         </thead>
                         <tbody>
                             <?php foreach ($dados as $usuario):
-                                $UsuStatus = $usuario["status_usuario"] == 1 ? 0 : 'active';
+                                $UsuStatus = $usuario["status_usuario"] == 0 ? 1 : 'active';
                                 
                                 $id_perfil = $usuarios->listar_perfil_usuario($usuario["id_perfil_usuario_fk"]);
                             ?>

@@ -46,11 +46,11 @@ document.addEventListener("DOMContentLoaded", function() {
             if(!response.url_foto_usuario){
                 document.getElementById("foto_usuario").src = 'Imagem não encontrada.';
                 document.getElementById("foto").src = '';
-                document.getElementById("foto").value = '';
+                // document.getElementById("foto").value = '';    // --- DA PROBLEMA
             }else{
                 document.getElementById("foto_usuario").src = response.url_foto_usuario;
                 document.getElementById("foto").src = response.url_foto_usuario;
-                document.getElementById("foto").value = response.url_foto_usuario;
+                // document.getElementById("foto").value = response.url_foto_usuario;    // --- DA PROBLEMA
             }
             document.getElementById("id_perfil").value = response.id_perfil_usuario_fk;
 

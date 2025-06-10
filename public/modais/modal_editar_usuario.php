@@ -32,7 +32,7 @@
 
             <div class="perfil-container">
                 <label class="labeledit" for="perfil">Perfil De Acesso</label>
-                <select class="selecao" form="formEditarCadastro" type="select" name="id_perfil" id="id_perfil" placeholder="Nome do perfil" required>
+                <select class="selecao" form="form_editar_dados_usuario" type="select" name="id_perfil" id="id_perfil" placeholder="Nome do perfil" required>
                     <!-- <option class="pi" value="" disabled selected>Selecione</option> -->
                     <?php
                     // // LISTAR PERFIS DE USUARIO
