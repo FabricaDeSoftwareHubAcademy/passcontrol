@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="../../public/css/forms.css">
     <link rel="shortcut icon" href="../../public/img/favicon.ico" type="image/x-icon">
 
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="shortcut icon" type="imagex/png" href="../../public/img/Logo-Nota-Controlnt.ico">
     <script src="../../public/js/recuperar_senha_nova_senha.js" defer></script>
@@ -58,4 +57,14 @@
             </div>
         </form>
     </main>
+
+    <!-- Modal de confirmação -->
+    <div id="modal_confirmacao" class="modal" style="display: none;">
+        <div class="modal_content">
+            <p>Confirma a alteração da senha?</p>
+            <button id="confirmar_alteracao" class="button">Confirmar</button>
+            <button id="cancelar_alteracao" class="button">Cancelar</button>
+        </div>
+    </div>
+</body>
 </html>
