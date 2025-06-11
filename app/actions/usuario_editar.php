@@ -39,6 +39,8 @@ elseif (($_SERVER['REQUEST_METHOD'] === 'POST')){
             $res_img = ("Falha ao salvar arquivo");
             $path_foto = ''; // Define como vazio se falhar
         }
+    }else{
+        $res_img = 'Imagem nao alterada';
     }
     // else: Não faz nada, pois o envio da foto é opcional
     
@@ -51,12 +53,17 @@ elseif (($_SERVER['REQUEST_METHOD'] === 'POST')){
         $objUser->email = filter_var($email, FILTER_SANITIZE_EMAIL);
         $objUser->cpf = preg_replace('/\D/', '',(filter_var($cpf, FILTER_SANITIZE_SPECIAL_CHARS)));
         
-        $objUser->foto = $path_foto;
+        if ($path_foto == '' || $path_foto == null){
+            $objUser->foto = $_POST["foto_nula"];
+        }else{
+            $objUser->foto = $path_foto;
+        }
+
         $objUser->id_perfil = filter_var($id_perfil, FILTER_SANITIZE_NUMBER_INT);
         
         $res = $objUser->atualizar($id_usuario);
         if($res){
-            $resposta = array( "msg" => "Editado com sucesso", "img" => $res_img, "status" => "OK");
+            $resposta = array( "msg" => "Editado com sucesso", "img" => $path_foto, "status" => "OK");
             echo json_encode($resposta);
         }else{
             $resposta = array( "msg" => "Erro ao editar", "img" => $res_img, "status" => "ERRO");

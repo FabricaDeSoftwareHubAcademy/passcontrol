@@ -28,6 +28,7 @@
                 <img class="foto_usuario" id="foto_usuario" src="">
                 <label class="label-file-alterar-dados"><b>Foto de Perfil</b></label>
                 <input type="file" class="input-file" id="foto" name="foto" value="">
+                <input type="hidden" name="foto_nula" id="foto_nula" value=""> <!-- Campo oculto para o ID do usuário -->
             </div>
 
             <div class="perfil-container">
