@@ -46,7 +46,8 @@ $servicos_cadastrados = $novo_servico->buscar();
                                             </div>
                                         </td>
                                         <td class="inativar-menor">
-                                            <button id="" id_value_switch="'.$servico->id_servico.'"  class="switch_status toggle-btn '.$estadoAtivo.'" data-btn-modal="status-servico">
+                                            <button id="" id_value_switch="1"  class="switch_status toggle-btn '.$estadoAtivo.'" data-btn-modal="status-servico">
+                                        
                                                 <div class="circulo"></div>
                                             </button>
                                         </td>
@@ -75,3 +76,5 @@ $servicos_cadastrados = $novo_servico->buscar();
 </section>
 
 </body>
+
+<!-- '.$servico->id_servico.' -->

@@ -27,7 +27,7 @@
     <script src="../../public/js/monitor_modal.js" defer></script>
     <script src="../../public/js/modal_cadastro_confirmacao_servico.js" defer></script>
     <script src="../../public/js/modal_edicao_confirmar_servico.js" defer></script>
-    <script src="../../public/js/modal_status_confirmacao_servico.js" defer></script>
+    <script src="../../public/js/modal_status_servico.js" defer></script>
 
 </head>
 <body>
