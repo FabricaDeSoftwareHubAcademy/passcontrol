@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+function modalSucessoNovaSenha() {
     const buttonAbrir_ConfDados = document.querySelector(".open-confirmacao-dados");
     const modalContainer_ConfDados = document.querySelector(".fundo-container-confirmacao-dados");
     const buttonFechar_ConfDados = document.querySelector(".Okay_ConfDados");
@@ -19,4 +19,6 @@ document.addEventListener("DOMContentLoaded", () => {
     } else {
         console.warn("Botão de fechar ou modal não encontrado.");
     }
-});
+};
+
+export default modalSucessoNovaSenha;

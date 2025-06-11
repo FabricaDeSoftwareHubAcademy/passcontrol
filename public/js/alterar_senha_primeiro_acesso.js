@@ -1,3 +1,4 @@
+import modalConfirmacaoDados from './modal_confirmacao_dados.js';
 let btn_nova_senha = document.getElementById("btn_nova_senha");
 
 btn_nova_senha.addEventListener("click",  async function(e) {
@@ -26,7 +27,7 @@ btn_nova_senha.addEventListener("click",  async function(e) {
     if(response.status == 200){
         ///CHAMA O MODAL COM A MENSAGEM DE SUCESSO
         //redireciona para a página de atendimento
-        window.location.href = "./public/js/confirmacao_recuperar_senha.js";
+       modalConfirmacaoDados();
 
 
     }else{

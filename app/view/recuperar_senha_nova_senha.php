@@ -12,7 +12,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="shortcut icon" type="imagex/png" href="../../public/img/Logo-Nota-Controlnt.ico">
     <script src="../../public/js/recuperar_senha_nova_senha.js" defer></script>
-    <script src="../../public/js/alterar_senha_primeiro_acesso.js" defer></script>
+    <script type="module" src="../../public/js/alterar_senha_primeiro_acesso.js" defer></script>
+    <link rel="stylesheet" href="../../public/css/modal_confirmacao_dados.css">
+    <!-- <link rel="stylesheet" href="../../public/css/recuperar_senha_nova_senha.css"> -->
 </head>
 <body class="body_login background_image">
     <main class="container_login">
@@ -53,18 +55,25 @@
             </div>
 
             <div class="container_button">
-                <button id="btn_nova_senha" class="button">Salvar</button>
+                <!-- <button id="btn_nova_senha" class="button">Salvar</button> -->
+                <button id="btn_nova_senha" type="button" class="button open-confirmacao-dados">Salvar</button>
+
             </div>
         </form>
     </main>
 
     <!-- Modal de confirmação -->
-    <div id="modal_confirmacao" class="modal" style="display: none;">
-        <div class="modal_content">
-            <p>Confirma a alteração da senha?</p>
-            <button id="confirmar_alteracao" class="button">Confirmar</button>
-            <button id="cancelar_alteracao" class="button">Cancelar</button>
+
+    <div class="fundo-container-confirmacao-dados">
+    <section class="modal-confirmacao-dados">
+        <img src="../../../public/img/img-modais/Logo Nota Controlnt.png" alt="Logo Nota Control" class="logo-confirmacao-dados">
+        <h1 class="modal-title-confirmacao-dados">Confirmação</h1>
+        <hr class="modal-divider-confirmacao-dados">
+        <p class="modal-message-confirmacao-dados"><b>Salvo com sucesso!</b></p>
+        <div class="button-group-confirmacao-dados">
+            <button class="botao-modal-confirmacao-dados Okay_ConfDados">Ok</button>
         </div>
-    </div>
+    </section>
+</div>
 </body>
 </html>

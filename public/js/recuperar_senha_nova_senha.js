@@ -83,3 +83,48 @@ function validarConfirmacaoSenha() {
     return false;
 }
 
+const form = document.getElementById("form_recuperar_senha");
+const salvarBtn = document.getElementById("btn_nova_senha");
+const modalContainer = document.querySelector(".fundo-container-confirmacao-dados");
+const botaoFecharModal = document.querySelector(".Okay_ConfDados");
+
+// Função para verificar se todos os requisitos foram atingidos
+function senhaAtendeTodosRequisitos(senha) {
+    return (
+        senha.length >= 8 &&
+        /[A-Z]/.test(senha) &&
+        /[0-9]/.test(senha) &&
+        /[!@#$%^&*(),.?":{}|<>]/.test(senha)
+    );
+}
+
+// Ao clicar no botão "Salvar"
+salvarBtn.addEventListener("click", () => {
+    const senha = document.getElementById("nova_senha").value.trim();
+    const confSenha = document.getElementById("confirmar_senha").value.trim();
+
+    if (!senha || !confSenha) {
+        alert("Preencha todos os campos.");
+        return;
+    }
+
+    if (senha !== confSenha) {
+        alert("Senha e Confirmar Senha não conferem!");
+        return;
+    }
+
+    if (!senhaAtendeTodosRequisitos(senha)) {
+        alert("A senha não atende todos os requisitos.");
+        return;
+    }
+
+    // Senha válida → exibir modal
+    modalContainer.classList.add("show");
+});
+
+// Ao clicar no botão OK do modal
+botaoFecharModal.addEventListener("click", () => {
+    modalContainer.classList.remove("show");
+    form.submit(); // Agora envia o formulário de verdade
+});
+
