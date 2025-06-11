@@ -1,3 +1,45 @@
+<?php
+require_once '../database/Database.php';
+session_start();
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $nome = $_POST['nome'] ?? '';
+    $sobrenome = $_POST['sobrenome'] ?? '';
+    $prioridade = $_POST['prioridade'] ?? null;
+    $id_servico = $_POST['id_servico'] ?? null;
+
+    if (!empty($nome) && !empty($sobrenome) && $prioridade !== null && $id_servico !== null) {
+        $nomeCompleto = $nome . ' ' . $sobrenome;
+        $dataHora = date('Y-m-d H:i:s');
+
+        $db = new Database('fila_senha');
+        $resultado = $db->insert([
+            'nome_fila_senha' => $nomeCompleto,
+            'prioridade_fila_senha' => $prioridade,
+            'id_servico_fk' => $id_servico,
+            'fila_senha_created_in' => $dataHora,
+            'fila_senha_updated_in' => $dataHora
+        ]);
+
+        if ($resultado) {
+            $_SESSION['senha_info'] = [
+                'nome' => $nomeCompleto,
+                'prioridade' => $prioridade,
+                'id_servico' => $id_servico,
+                'criado_em' => $dataHora
+            ];
+
+            header("Location: tela_autoatendimento_page4.php");
+            exit;
+        } else {
+            echo "Erro ao inserir no banco.";
+        }
+    } else {
+        echo "Dados incompletos.";
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -39,40 +81,42 @@
             </h4>
 
 
-            <div class="box-inputs">
-                <div class="input-group">
-                    <h3 for="nome">Nome*</h3>
-                    <br>
-                    <input type="text" class="input-infos" id="nome" name="nome" placeholder="Nome">
-                </div>
-                <div class="input-group">
-                    <h3 for="sobrenome">Sobrenome*</h3>
-                    <br>
-                    <input type="text" class="input-infos" id="sobrenome" name="sobrenome" placeholder="Sobrenome">
-                </div>
-                <div class="input-group">
-                    <h3 for="telefone">Telefone</h3>
-                    <br>
-                    <input type="text" class="input-infos" id="telefone" name="telefone" placeholder="(00) 00000-0000">
-                </div>
-                <div class="input-group">
-                    <div class="information">
-                        * A SENHA NÃO SERÁ IMPRESSA <br><br>
-                        * INSIRA SEU NÚMERO DE TELEFONE PARA RECEBER AS INFORMAÇÕES DO SEU ATENDIMENTO VIA SMS
+            <form method="POST" id="form-dados">
+                <div class="box-inputs">
+                    <div class="input-group">
+                        <h3 for="nome">Nome*</h3>
+                        <br>
+                        <input type="text" class="input-infos" id="nome" name="nome" placeholder="Nome" required>
+                    </div>
+                    <div class="input-group">
+                        <h3 for="sobrenome">Sobrenome*</h3>
+                        <br>
+                        <input type="text" class="input-infos" id="sobrenome" name="sobrenome" placeholder="Sobrenome" required>
+                    </div>
+                    <div class="input-group">
+                        <h3 for="telefone">Telefone</h3>
+                        <br>
+                        <input type="text" class="input-infos" id="telefone" name="telefone" placeholder="(00) 00000-0000">
+                    </div>
+                    <div class="input-group">
+                        <div class="information">
+                            * A SENHA NÃO SERÁ IMPRESSA <br><br>
+                            * INSIRA SEU NÚMERO DE TELEFONE PARA RECEBER AS INFORMAÇÕES DO SEU ATENDIMENTO VIA SMS
+                        </div>
                     </div>
                 </div>
 
-            </div>
-
-
-            <div class="footer">
-                <button class="button">
-                    <a href="../../app/view/tela_autoatendimento_page2.php" class="btn-voltar">VOLTAR</a> <!-- ( Atualização de caminho e renomeando o nome da pasta para letras minúsculas ) -->
-                </button>
-                <button class="button">
-                    <a href="../../app/view/tela_autoatendimento_page4.php" class="btn-confirmar" id="confirmarBtn">CONFIRMAR</a> <!-- ( Atualização de caminho e renomeando o nome da pasta para letras minúsculas ) -->
-                </button>
-            </div>
+                <!-- inputs ocultos necessários para o PHP -->
+                <input type="hidden" id="prioridade" name="prioridade">
+                <input type="hidden" id="id_servico" name="id_servico">
+                
+                <div class="footer">
+                    <button type="button" class="button">
+                        <a href="../../app/view/tela_autoatendimento_page2.php" class="btn-voltar">VOLTAR</a>
+                    </button>
+                    <button type="button" class="button btn-confirmar" id="confirmarBtn">CONFIRMAR</button>
+                </div>
+            </form>
 
         </div>
 
