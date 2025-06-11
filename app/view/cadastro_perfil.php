@@ -38,7 +38,11 @@
     include "./navegacao.php";
     include "../actions/perfil_listar.php";
     include "../actions/servico_listar.php";
+    include "../actions/permissao_listar.php";
+
     ?>
+ 
+
 
     <section class="Area-Util-Projeto">
 
@@ -70,17 +74,17 @@
                             <img src="../../../public/img/icons/add_icon.svg" alt="(+)">
                         </button>
                     </label>
+                    <pre>
+
                     <select class="selecao" name="id_perfil_usuario" required>
                         <option class="pi" value="" disabled selected>Selecione</option>
-                        <?php
-                        // // LISTA PERFIS DE USUARIO
-                        foreach ($perfis as $perfil) {
-                        ?> 
-                        <option class="pi" value="<?= $perfil["id_perfil_usuario"] ?>"><?= $perfil["nome_perfil_usuario"] ?></option> 
-                        <?php
-                        };
-                        ?>
+                        <?php foreach ($perfis as $perfil): ?> 
+                            <option class="pi" value="<?= $perfil->id_perfil_usuario ?>">
+                                <?= htmlspecialchars($perfil->nome_perfil_usuario) ?>
+                            </option> 
+                        <?php endforeach; ?>
                     </select>
+
                     <span class="erro" id="erro_perfil"></span>
                 </div>
             </div>
@@ -100,6 +104,7 @@
                     </label>
                 </div>
             </div>
+
         </form>
         <div class="form-actions2">
             <button class="botao_volto" form="dados_cad" type="reset" onclick="window.location.href='./menuadm_usuario.php';">Voltar</button>

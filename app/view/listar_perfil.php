@@ -79,40 +79,34 @@
                         <tbody>
                             <?php foreach ($dados as $usuario):
                                 $UsuStatus = $usuario["status_usuario"] == 1 ? 0 : 'active';
-                                
-                                $id_perfil = $usuarios->listar_perfil_usuario($usuario["id_perfil_usuario_fk"]);
+
+                                // Buscar perfil
+                                $perfil = $usuarios->listar_perfil_usuario($usuario["id_perfil_usuario_fk"]);
+
+                                // Buscar permissões associadas ao perfil
+                                $permissoes = buscarPermissoesPorPerfil($usuario["id_perfil_usuario_fk"]);
                             ?>
-                            <tr>
-                                <td class="matricula-ajuste" scope="col"> <?= $usuario['nome_usuario'] ?> </td>
-                                <td class="matricula-ajuste" scope="col"> <?= $usuario['email_usuario'] ?> </td>
-                                <td class="perfil-ajuste" scope="col"> <?= $id_perfil['nome_perfil_usuario'] ?> </td>
-                                <td class="perfil-ajuste">
-                                    <?php
-                                        $nomePerfil = $id_perfil['nome_perfil_usuario'];
-                                        $permissoesMap = [
-                                        'admin' => 'Editar, Status, Criar usuários',
-                                        'supervisor' => 'Editar, Visualizar relatórios',
-                                        'atendente' => 'Visualização limitada'
-                                        ];
-                                        echo $permissoesMap[$nomePerfil] ?? 'Nenhuma';
-                                    ?>
-                                </td>
-                                <td class="editar-inativar-menor" scope="col">
-                                    <div class="editar">
-                                        <button class="openEditar" data-id="<?= $usuario["id_usuario"] ?>">
-                                            <img src="../../public/img/icons/Group 2924.png" alt="">
-                                        </button>
-                                    </div>
-                                </td>
-                                <td class="editar-inativar-menor" scope="col">
-                                    <div class="openInativarAtivar" data-id="<?= $usuario["id_usuario"] ?>">
-                                        <button class="toggle-btn <?= $UsuStatus ?>">
-                                            <div class="circulo"> </div>
-                                        </button>
-                                    </div>
-                                </td>
-                            </tr>
-                        <?php endforeach; ?>
+                                <tr>
+                                    <td class="matricula-ajuste"><?= $usuario['nome_usuario'] ?></td>
+                                    <td class="matricula-ajuste"><?= $usuario['email_usuario'] ?></td>
+                                    <td class="perfil-ajuste"><?= $perfil['nome_perfil_usuario'] ?></td>
+                                    <td class="perfil-ajuste"><?= implode(', ', $permissoes) ?></td>
+                                    <td class="editar-inativar-menor">
+                                        <div class="editar">
+                                            <button class="openEditar" data-id="<?= $usuario["id_usuario"] ?>">
+                                                <img src="../../public/img/icons/Group 2924.png" alt="">
+                                            </button>
+                                        </div>
+                                    </td>
+                                    <td class="editar-inativar-menor">
+                                        <div class="openInativarAtivar" data-id="<?= $usuario["id_usuario"] ?>">
+                                            <button class="toggle-btn <?= $UsuStatus ?>">
+                                                <div class="circulo"> </div>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            <?php endforeach; ?>
                         </tbody>
                     </table>
                 </div>

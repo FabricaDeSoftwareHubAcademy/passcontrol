@@ -1,31 +1,48 @@
 <?php
 require_once '../classes/Perfil.php';
+session_start();
 
-if (isset($_GET['id_servico'])) {
-    $id_servico = $_GET['id_servico'];
-    $servico = new Servico();
-    $dadosServico = $servico->buscar_por_id($id_servico);
-    echo json_encode($dadosServico);
-} 
+$perfil = new Perfil();
+
+if (isset($_GET['id_perfil_usuario'])) {
+    $id = $_GET['id_perfil_usuario'];
+    $dadosPerfil = $perfil->buscarPorId($id);
+    $permissoes = $perfil->buscarPermissoes($id);
+
+    echo json_encode([
+        'perfil' => $dadosPerfil,
+        'permissoes' => $permissoes
+    ]);
+    exit;
+}
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $id_perfil = $_POST['id_perfil_usuario'] ?? null;
+    $nome = $_POST['nome_perfil_usuario'] ?? null;
+    $permissoes = $_POST['permissoes'] ?? [];
+    $idUsuario = $_SESSION['id_usuario'] ?? null;
 
-    $edicao_servico = new Servico();
-    $edicao_servico->id_servico = $_POST['id_servico'];
-    $edicao_servico->nome_servico = $_POST['nome_servico'];
-    $edicao_servico->codigo_servico = $_POST['codigo_servico'];
-    $edicao_servico->url_imagem_servico = $_POST['url_imagem_servico'];
-    $resultado = $edicao_servico->atualizar();
+    if (!$id_perfil || !$nome) {
+        echo json_encode(['status' => 'erro', 'mensagem' => 'Dados incompletos.']);
+        exit;
+    }
 
-    
-    if ($resultado) {
-       
-        $resposta = array("status"=>"OK");
+    $atualizado = $perfil->atualizar($id_perfil, [
+        'nome_perfil_usuario' => $nome,
+        'perfil_usuario_updated_in' => date('Y-m-d H:i:s'),
+        'perfil_usuario_updated_by_id' => $idUsuario
+    ]);
 
-        echo json_encode($resposta);
+    if ($atualizado) {
+        //esse codogo ira remover permissões antigas e adicionar novas
+        $perfil->removerPermissoes($id_perfil);
+        foreach ($permissoes as $idPermissao) {
+            $perfil->vincularPermissao($id_perfil, $idPermissao);
+        }
 
+        echo json_encode(['status' => 'ok']);
     } else {
-        echo '<div class="alert alert-danger">Erro ao atualizar guichê. Tente novamente.</div>';
+        echo json_encode(['status' => 'erro', 'mensagem' => 'Erro ao atualizar o perfil.']);
     }
 }
 ?>

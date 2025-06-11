@@ -9,14 +9,38 @@ class Perfil{
     }
     
     public function buscar($where = null, $order = null, $limit = null) {
-        $obj = $this->db->select($where, $order, $limit)->fetchAll(PDO::FETCH_ASSOC);
-        return $obj;
+        return $this->db->select($where, $order, $limit)->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+    public function inserir($dados) {
+        return $this->db->insert($dados);
+    }
+
+    public function editar($id, $dados) {
+        return $this->db->update("id_perfil_usuario = {$id}", $dados);
+    }
+
+    public function alterarStatus($id_perfil, $novo_status) {
+        return $this->db->update(
+            ['status_perfil_usuario' => $novo_status],
+            'id_perfil_usuario = ' . $id_perfil
+        );
     }
     
-    // public function buscar_por_ativo($ativo){
-    //     $db= new Database('perfil');
-    //     $ob = $db->select('ativo='.$ativo)->fetchObject(self::class);
-    //     return $ob;
-    // }
+    public function vincularPermissao($idPerfil, $idPermissao) {
+        $pdo = $this->db->getConnection();  // pegando o PDO interno da Database
+        $sql = "INSERT INTO perfil_permissao (id_perfil_usuario, id_permissao) VALUES (:idPerfil, :idPermissao)";
+        $stmt = $pdo->prepare($sql);
+        $stmt->bindParam(':idPerfil', $idPerfil, PDO::PARAM_INT);
+        $stmt->bindParam(':idPermissao', $idPermissao, PDO::PARAM_INT);
+        return $stmt->execute();
+    }
+
+    public function removerPermissoes($idPerfil) {
+        $pdo = $this->db->getConnection();  // pegando o PDO interno da Database
+        $sql = "DELETE FROM perfil_permissao WHERE id_perfil_usuario = :idPerfil";
+        $stmt = $pdo->prepare($sql);
+        $stmt->bindParam(':idPerfil', $idPerfil, PDO::PARAM_INT);
+        return $stmt->execute();
+    }
 }
-// adicionar cadastrar, editar e alterar status perfil

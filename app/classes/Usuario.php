@@ -119,6 +119,17 @@ class Usuario {
         
         return true;
     }
+        public function listar_permissoes_por_perfil(int $id_perfil): array {
+        // monta um JOIN entre permissao e perfil_permissao
+        $sql  = "SELECT p.nome_permissao
+                 FROM permissao p
+                 INNER JOIN perfil_permissao pp 
+                   ON p.id_permissao = pp.id_permissao
+                 WHERE pp.id_perfil_usuario = :idPerfil
+                 ORDER BY p.nome_permissao";
+        $stmt = $this->db->execute($sql, ['idPerfil' => $id_perfil]);
+        return $stmt->fetchAll(PDO::FETCH_COLUMN);
+    }
     
 
     private function valida_cpf($cpf) {

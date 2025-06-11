@@ -36,6 +36,9 @@ class Database {
             die("Connection Failed: ". $err->getMessage());
         }
     }
+    public function getConnection() {
+        return $this->conn;
+    }
 
     public function execute($query, $binds = []){
         try{
