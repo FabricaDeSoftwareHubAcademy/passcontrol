@@ -21,8 +21,8 @@ elseif (($_SERVER['REQUEST_METHOD'] === 'POST')){
     // Verifica se o campo "foto" foi enviado
     if (isset($_FILES["foto"]) && $_FILES["foto"]["error"] === UPLOAD_ERR_OK) {
 
+        $pasta = '../../public/img/uploads/uploads_usuario/';
         $arquivo = $_FILES["foto"];
-        $pasta = __DIR__ . './public/img/uploads/uploads_usuario/';
         $nome_arquivo = $arquivo['name'];
         $novo_nome = uniqid();
         $extensao = strtolower(pathinfo($nome_arquivo, PATHINFO_EXTENSION));
@@ -34,13 +34,13 @@ elseif (($_SERVER['REQUEST_METHOD'] === 'POST')){
         $path_foto = $pasta . $novo_nome . "." . $extensao;
 
         if (move_uploaded_file($arquivo['tmp_name'], $path_foto)) {
-            $res_img = array("msg" => "Arquivo enviado com sucesso");
-            echo json_encode($res_img);
+            $res_img = ("Arquivo enviado com sucesso");
         } else {
-            $res_img = array("msg" => "Falha ao salvar arquivo");
-            echo json_encode($res_img);
+            $res_img = ("Falha ao salvar arquivo");
             $path_foto = ''; // Define como vazio se falhar
         }
+    }else{
+        $res_img = 'Imagem nao alterada';
     }
     // else: Não faz nada, pois o envio da foto é opcional
     
@@ -53,15 +53,20 @@ elseif (($_SERVER['REQUEST_METHOD'] === 'POST')){
         $objUser->email = filter_var($email, FILTER_SANITIZE_EMAIL);
         $objUser->cpf = preg_replace('/\D/', '',(filter_var($cpf, FILTER_SANITIZE_SPECIAL_CHARS)));
         
-        $objUser->foto = $path_foto;
+        if ($path_foto == '' || $path_foto == null){
+            $objUser->foto = $_POST["foto_nula"];
+        }else{
+            $objUser->foto = $path_foto;
+        }
+
         $objUser->id_perfil = filter_var($id_perfil, FILTER_SANITIZE_NUMBER_INT);
         
         $res = $objUser->atualizar($id_usuario);
         if($res){
-            $resposta = array( "msg" => "Editado com sucesso", "status" => "OK");
+            $resposta = array( "msg" => "Editado com sucesso", "img" => $path_foto, "status" => "OK");
             echo json_encode($resposta);
         }else{
-            $resposta = array( "msg" => "Erro ao editar", "status" => "ERRO");
+            $resposta = array( "msg" => "Erro ao editar", "img" => $res_img, "status" => "ERRO");
             echo json_encode($resposta);
         }                    
     }
@@ -71,25 +76,4 @@ elseif (($_SERVER['REQUEST_METHOD'] === 'POST')){
         exit;
     }
 }
-
-// if ($foto['erro']){
-    //     $resposta = array("msg" => "Falha ao enviar a foto");
-    //     echo json_encode($resposta);
-    //     exit;
-    // }
-
-    // $pasta = './public/img/uploads/uploads_usuario/';
-    // $nome_foto = $foto['name'];
-    // $novo_nome = uniqid();
-    // $extensao = strtolower(pathinfo($nome_foto, PATHINFO_EXTENSION));
-
-    // if($extensao != 'png' && $extensao != 'jpg'){
-    //     $resposta = array("msg" => "Arquivo não autorizado");
-    //     echo json_encode($resposta);
-    //     exit;
-    // }
-     
-    // $path = $pasta . $novo_nome . '.' . $extensao;
-    // $foto = move_uploaded_file($arquivo['tmp_name'], $path);
-
 ?>
