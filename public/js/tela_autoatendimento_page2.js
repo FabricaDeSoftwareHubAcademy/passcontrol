@@ -1,12 +1,17 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const comumLink = document.querySelector("a[href='../../app/view/tela_autoatendimento_page3.php']:first-child"); // ( Atualização de caminho e renomeando o nome da pasta para letras minúsculas )
-    
-    const preferencialLink = document.querySelector("a[href='../../app/view/tela_autoatendimento_page3.php']:last-child"); // ( Atualização de caminho e renomeando o nome da pasta para letras minúsculas )
+    const comumLink = document.querySelector("a[href='../../app/view/tela_autoatendimento_page3.php']:first-child");
+    const preferencialLink = document.querySelector("a[href='../../app/view/tela_autoatendimento_page3.php']:last-child");
 
-    function atualizarPrioridade(prioridade) {
+    //pode trocar os valores conforme desejar
+    const mapaPrioridade = {
+        CM: 0, // Comum = 0
+        PR: 1  // Preferencial = 1
+    };
+
+    function atualizarPrioridade(tipo) {
         let dadosUsuario = JSON.parse(localStorage.getItem("dadosUsuario")) || {};
-        
-        dadosUsuario.prioridade = prioridade;
+
+        dadosUsuario.prioridade = mapaPrioridade[tipo];
 
         localStorage.setItem("dadosUsuario", JSON.stringify(dadosUsuario));
     }

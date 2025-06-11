@@ -51,6 +51,7 @@
                 <button id="nextPage">Próximo</button>
 
             </div>
+            <div id="pageIndicator" style="display: none;"></div>
         </div>
     </main>
 

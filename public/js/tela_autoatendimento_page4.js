@@ -1,35 +1,33 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const dadosUsuario = JSON.parse(localStorage.getItem("dadosUsuario")) || {};
-    let ultimaSenha = localStorage.getItem("ultimaSenha");
+document.addEventListener("DOMContentLoaded", async () => {
+    const dados = JSON.parse(localStorage.getItem('dadosSenha'));
 
-    let novaSenha = ultimaSenha ? parseInt(ultimaSenha) + 1 : 1;
-
-    let senhaFormatada = String(novaSenha).padStart(3, "0");
-
-    localStorage.setItem("ultimaSenha", novaSenha);
-
-    dadosUsuario.senha = senhaFormatada;
-    localStorage.setItem("dadosUsuario", JSON.stringify(dadosUsuario));
-
-    const servicoSelecionado = dadosUsuario.servicoSelecionado || "Não selecionado";
-    const tipoAtendimento = dadosUsuario.prioridade || "Não selecionado";
-    let nomeCompleto = dadosUsuario.nomeCompleto || "Não selecionado";
-
-    function formatarNome(nome) {
-        return nome
-            .toLowerCase()
-            .split(" ")
-            .map(palavra => palavra.charAt(0).toUpperCase() + palavra.slice(1))
-            .join(" ");
+    if (!dados || !dados.nome || dados.prioridade === undefined || !dados.id_servico || !dados.criado_em) {
+        alert("Informações incompletas.");
+        return;
     }
 
-    nomeCompleto = formatarNome(nomeCompleto);
+    try {
+        const response = await fetch("", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/x-www-form-urlencoded"
+            },
+            body: new URLSearchParams(dados)
+        });
 
-    const nomeElemento = document.querySelector(".variable-text div:nth-child(2)");
-    const senhaElemento = document.querySelector(".variable-text div:nth-child(1)");
-    const servicoElemento = document.querySelector(".variable-text div:nth-child(3)");
+        const data = await response.json();
 
-    nomeElemento.innerHTML = `<strong>NOME:</strong> ${nomeCompleto}`;
-    senhaElemento.innerHTML = `<strong>SENHA:</strong> ${tipoAtendimento} ${senhaFormatada}`;
-    servicoElemento.innerHTML = `<strong>SERVIÇO:</strong> ${servicoSelecionado}`;
+        if (data && data.sucesso) {
+            const divs = document.querySelectorAll('.variable-text > div');
+            divs[0].innerHTML = `<strong>SENHA:</strong> ${data.senha}`;
+            divs[1].innerHTML = `<strong>NOME:</strong> ${data.nome}`;
+            divs[2].innerHTML = `<strong>SERVIÇO:</strong> ${data.servico}`;
+        } else {
+            alert("Não foi possível localizar a senha.");
+        }
+    } catch (error) {
+        console.error("Erro:", error);
+        alert("Erro ao buscar senha.");
+    }
+    
 });
