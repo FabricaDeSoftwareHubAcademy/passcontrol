@@ -51,10 +51,19 @@ class Servico{
         return $res;
     }
 
-    public function atualizar_status(){
-        $db = new Database ('servico');
-        return $db->update('id_servico =' . $this->id_servico, [
-            'status_servico' => $this->status_servico
+    public function atualizar_status($id) {
+        $dadosAtuais = $this->buscar_por_id($id);
+
+        if (!$dadosAtuais) {
+            return false;
+        }
+
+        $novoStatus = ($dadosAtuais->status_servico == 1) ? 0 : 1;
+
+        $db = new Database('servico');
+
+        return $db->update("id_servico = $id", [
+            'status_servico' => $novoStatus
         ]);
     }
 }

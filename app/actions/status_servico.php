@@ -1,26 +1,13 @@
 <?php 
 require_once '../classes/Servico.php';
 
-if (isset($_GET['id_servico'])) {
-    $id_servico = $_GET['id_servico'];
-
+if(isset($_GET['id_servico'])) {
+    $id = $_GET['id_servico'];
     $servico = new Servico();
-    $dadosAtuais = $servico->buscar_por_id($id_servico);
+    $resultado = $servico->atualizar_status($id);
 
-    if ($dadosAtuais) {
-        $novoStatus = ($dadosAtuais->$status_servico == 1) ? 0 : 1;
-        $servico->id_servico = $id_servico;
-        $servico->status_servico = $novoStatus;
-
-        $resultado = $servico->atualizarStatus();
-
-        if ($resultado) {
-            echo json_encode(['status' => 'OK']);
-        }else{
-            echo json_encode(['status' => 'ERRO','mensagem' => 'Falha ao atualizar status.']);
-        }
-    }else{
-        echo json_encode(['status' => 'ERRO','mensagem' => 'Servico não encontrado']);
-    }
-} 
+    echo json_encode(['status' => $resultado ? 'OK' : 'ERRO']);
+}else{
+    echo json_encode(['status' => 'ERRO']);
+}
 ?>

@@ -1,38 +1,36 @@
-document.addEventListener("DOMContentLoaded", function() {
-    document.querySelectorAll("#switch_status").forEach(button => {
-        button.addEventListener("click", function(event) {
-            let id_value_switch = button.getAttribute("id_value_switch");
-            const madalContainer = document.querySelector(".modal-inativar-container");
-            const buttonCancelar = document.querySelector("#btn-cancelar");
-            const apareceMod = document.querySelector("confirma_status");
-            const buttonSalvar = document.querySelector("#salvar");
+document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".switch_status").forEach(button => {
+        button.addEventListener("click", function () {
+            const id = this.getAttribute("id_value_switch");
+            const modalContainer = document.querySelector(".modal-inativar-container");
+            const btnCancelar = document.querySelector("#btn-cancelar");
+            const btnConfirmar = document.querySelector("#salvar");
+            const modalSucesso = document.getElementById("confirma_status");
 
             modalContainer.classList.add("show");
 
-            //Remove listagem antes de adicionar outro
-            const newButtonSalvar = buttonSalvar.cloneNode(true);
-            buttonSalvar.parentNode.replaceChild(newButtonSalvar, buttonSalvar);
+            const confirmarHandler = async function () {
+                const response = await fetch(`../../app/actions/status_servico.php?id_servico=${id}`);
+                const resultado = await response.json();
 
-            newButtonSalvar.addEventListener("click", async function(event) {
-                let dados_php = await fetch ("../actions/servico.php?id_servico=" + id_value_switch, {
-                    method: 'GET'
-                });
-
-                let response = await dados_php.json();
-                if (response && response.status === "OK") {
-                    apareceMod.classList.add("show");
+                if (resultado.status === "OK") {
                     modalContainer.classList.remove("show");
+                    modalSucesso.classList.add("show");
                 }
-            });
-            buttonCancelar.addEventListener("click", function() {
+
+                btnConfirmar.removeEventListener("click", confirmarHandler);
+            };
+
+            btnConfirmar.addEventListener("click", confirmarHandler);
+
+            btnCancelar.addEventListener("click", () => {
                 modalContainer.classList.remove("show");
             });
+
+            document.getElementById("btnOkStatus").addEventListener("click", () => {
+                modalSucesso.classList.remove("show");
+                location.reload();
+            });
         });
-    });
-    const buttonOKStatus = document.getElementById("btnOKStatus");
-    buttonOKStatus.addEventListener("click", function() {
-        const apareceMod = document.getElementById("confirmar_status");
-        apareceMod.classList.remove("show");
-        location.reload();
     });
 });
