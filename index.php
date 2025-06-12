@@ -63,7 +63,7 @@
 
 
                 <div class="container_button">
-                    <!-- <button type="submit" class="button">Entrar</button> -->
+            
                     <button type="button" id="btn_login" class="button">Entrar</button>
                 </div>
                 <p id="login_msg" style="color: red; display: none; text-align: center; margin-bottom: 10px;"></p>

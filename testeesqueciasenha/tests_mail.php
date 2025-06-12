@@ -44,3 +44,40 @@ try {
 } catch (Exception $e) {
     echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
 }
+
+<?php
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+require 'vendor/phpmailer/phpmailer/src/Exception.php';
+require 'vendor/phpmailer/phpmailer/src/PHPMailer.php';
+require 'vendor/phpmailer/phpmailer/src/SMTP.php';
+
+class EmailService {
+    public function enviarEmail($email, $codigo) {
+        
+        $mail = new PHPMailer(true);
+        try {
+            $mail->isSMTP();
+            $mail->SMTPAuth = true;
+            $mail->Username = 'gui.m.neves.teste@gmail.com';  // Seu e-mail do Gmail
+            $mail->Password = 'elpb yivy xjhx qmgm';  // Senha de aplicativo (se a 2FA estiver habilitada)
+            $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;  // Usando TLS
+            $mail->Host = 'smtp.gmail.com';
+            $mail->Port = 587;
+        
+            $mail->setFrom('gui.m.neves.teste@gmail.com', 'Passcontrol');
+            $mail->addAddress($email, 'Guilherme');
+            
+            $mail->isHTML(true);
+            $mail->Subject = 'Teste Envio de Email';
+            $mail->Body    = "Insira esse código para atualizar a senha! <b>Olá! $codigo</b>";
+            $mail->AltBody = "Este é o corpo da mensagem para clientes de e-mail que não reconhecem HTML";
+            
+            $mail->send();
+            echo 'A mensagem foi enviada!';
+        } catch (Exception $e) {
+            echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+        }
+    }
+}
+
