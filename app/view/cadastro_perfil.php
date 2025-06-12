@@ -52,26 +52,18 @@
         </div>
 
         <form class="quadrado" method="POST" id="dados_cad" onkeydown="return event.key != 'Enter';">
+        
+        <?php include '../../public/modais/modal_cadastro_permissao.php'; ?>
             <div class="nome">
-                <label class="labeledit" for="nome">Nome*</label>
+                <label class="labeledit" for="nome">Perfil*</label>
                 <input class="borda" type="text" name="nome_usuario" id="nome_usuario" placeholder="Digite aqui o nome do usuário" required>
                 <span class="erro" id="erro_nome"></span>
-            </div>
-            <div class="email">
-                <label class="labeledit" for="email">Email*</label>
-                <input class="borda" type="text" name="email_usuario" id="email_usuario" placeholder="Digite aqui o Email do usuário" required>
-                <span class="erro" id="erro_email"></span>
-            </div>
-            <div class="cpf">
-                <label class="labeledit" for="cpf">CPF*</label>
-                <input class="borda" type="text" name="cpf_usuario" id="cpf_usuario" maxlength="14" placeholder="000.000.000-00" required>
-                <span class="erro" id="erro_cpf"></span>
             </div>
             <div class="selecionar">
                 <div class="perfild">
                     <label class="labeledit" for="perfil">Perfil De Acesso
                         <button class="icone_add_servico" id="abrirModalCadastro">
-                            <img src="../../../public/img/icons/add_icon.svg" alt="(+)">
+                            <img src="../../public/img/icons/add_icon.svg" alt="(+)">
                         </button>
                     </label>
                     <pre>
@@ -88,8 +80,14 @@
                     <span class="erro" id="erro_perfil"></span>
                 </div>
             </div>
-            
-            <title class="servico">Permissões</title>
+            <div class="titulo-permissoes">
+                <label class="labeledit" for="permissoes">Permissões
+                    <button class="icone_add_servico" id="abrirModalCadastroPermissao" type="button">
+                        <img src="../../public/img/icons/add_icon.svg" alt="(+)">
+                    </button>
+                </label>
+            </div>
+
             <div class="checkbox-container">
                 <div class="column-1">
                     <?php foreach ($permissoes as $permissao): ?>
@@ -104,7 +102,6 @@
                     </label>
                 </div>
             </div>
-
         </form>
         <div class="form-actions2">
             <button class="botao_volto" form="dados_cad" type="reset" onclick="window.location.href='./menuadm_usuario.php';">Voltar</button>
