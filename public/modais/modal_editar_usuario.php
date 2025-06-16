@@ -24,11 +24,11 @@
                 <input type="text" class="input-cpf" id="cpf" name="cpf" value="" maxlength="14" placeholder="000.000.000-00" required>
             </div>
 
-            <div class="file-container">
-                <img class="foto_usuario" id="foto_usuario" src="">
+            <div class="file-container-alterar-dados">
                 <label class="label-file-alterar-dados"><b>Foto de Perfil</b></label>
+                <img class="foto_usuario" id="foto_usuario" src="" alt="Nada cadastrado!">
                 <input type="file" class="input-file" id="foto" name="foto" value="">
-                <input type="hidden" name="foto_nula" id="foto_nula" value=""> <!-- Campo oculto para o ID do usuário -->
+                <input type="hidden" name="foto_nula" id="foto_nula" value="">
             </div>
 
             <div class="perfil-container">
