@@ -34,7 +34,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     ]);
 
     if ($atualizado) {
-        //esse codogo ira remover permissões antigas e adicionar novas
+        //codogo para remover permissões antigas e adicionar novas
         $perfil->removerPermissoes($id_perfil);
         foreach ($permissoes as $idPermissao) {
             $perfil->vincularPermissao($id_perfil, $idPermissao);

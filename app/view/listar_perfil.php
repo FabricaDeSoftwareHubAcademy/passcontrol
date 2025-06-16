@@ -80,10 +80,10 @@
                             <?php foreach ($dados as $usuario):
                                 $UsuStatus = $usuario["status_usuario"] == 1 ? 0 : 'active';
 
-                                // Buscar perfil
+                                // Busca perfil
                                 $perfil = $usuarios->listar_perfil_usuario($usuario["id_perfil_usuario_fk"]);
 
-                                // Buscar permissões associadas ao perfil
+                                // Busca permissões associadas ao perfil
                                 $permissoes = buscarPermissoesPorPerfil($usuario["id_perfil_usuario_fk"]);
                             ?>
                                 <tr>

@@ -1,14 +1,12 @@
 <?php
-require_once '../classes/Usuario.php';
-require_once '../database/Database.php';
+require_once '../classes/Perfil.php';
 
-// Instancia a classe que acessa o banco
-$db = new Database('perfil_usuario');
+$perfil = new Perfil();
 
-// Obtém todos os perfis da tabela perfil_usuario
-$perfis = $db->select()->fetchAll(PDO::FETCH_ASSOC);
+// Buscar apenas perfis ativos (status = 1), ordenados pelo nome
+$perfis = $perfil->buscar('status_perfil_usuario = 1', 'nome_perfil_usuario ASC');
 
-// Função auxiliar para buscar permissões de um perfil específico
+// A função de buscar permissões pode continuar aqui, caso precise
 function buscarPermissoesPorPerfil($id_perfil_usuario) {
     $db = new Database('perfil_permissao');
     $result = $db->select("id_perfil_usuario = $id_perfil_usuario")->fetchAll(PDO::FETCH_ASSOC);

@@ -78,7 +78,7 @@ buttonSalvar_CadPermissao.addEventListener("click", async function (event) {
             const selectAllLabel = container.querySelector('label:last-child');
             container.insertBefore(newLabel, selectAllLabel);
 
-            // Limpa inputs do form
+           
             myform.reset();
 
             alert('Permissão cadastrada com sucesso!');

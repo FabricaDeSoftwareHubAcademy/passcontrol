@@ -66,7 +66,7 @@
             <div class="selecionar">
                 <div class="perfild">
                     <label class="labeledit" for="perfil">Perfil De Acesso
-                        <button class="icone_add_servico" id="abrirModalCadastro">
+                        <button class="icone_add_servico" id="abrirModalCadastro" type="button" onclick="window.location.href='./cadastro_perfil.php';">
                             <img src="../../../public/img/icons/add_icon.svg" alt="(+)">
                         </button>
                     </label>

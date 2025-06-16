@@ -1,5 +1,5 @@
 <?php
-require_once '../classes/Permissao.php'; // classe para manipular permissões
+require_once '../classes/Permissao.php';
 session_start();
 
 header('Content-Type: application/json');

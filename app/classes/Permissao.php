@@ -14,7 +14,7 @@ class Permissao {
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
-    // Novo método para inserir permissão
+    //método para inserir permissão
     public function inserir(array $dados) {
         $sql = "INSERT INTO {$this->table} (nome_permissao, descricao_permissao, permissao_created_in, permissao_created_by_id) 
                 VALUES (:nome, :descricao, :created_in, :created_by)";

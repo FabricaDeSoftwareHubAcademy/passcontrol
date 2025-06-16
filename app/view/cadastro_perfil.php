@@ -28,6 +28,8 @@
     <script src="../../public/js/checkbox_seleciona_todos.js" defer></script>
     <script src="../js/usuario_cadastrar.js" defer></script>
     <script src="../js/validar_cpf.js" defer></script>
+    <script src="../js/perfil_cadastrar.js" defer></script>
+
 
     <!-- LOGO -->
     <link rel="shortcut icon" type="imagex/png" href="../../public/img/Logo-Nota-Controlnt.ico">
@@ -52,33 +54,11 @@
         </div>
 
         <form class="quadrado" method="POST" id="dados_cad" onkeydown="return event.key != 'Enter';">
-        
-        <?php include '../../public/modais/modal_cadastro_permissao.php'; ?>
+    
             <div class="nome">
-                <label class="labeledit" for="nome">Perfil*</label>
+                <label class="labeledit" for="nome">Novo Nome de Perfil*</label>
                 <input class="borda" type="text" name="nome_usuario" id="nome_usuario" placeholder="Digite aqui o nome do usuário" required>
                 <span class="erro" id="erro_nome"></span>
-            </div>
-            <div class="selecionar">
-                <div class="perfild">
-                    <label class="labeledit" for="perfil">Perfil De Acesso
-                        <button class="icone_add_servico" id="abrirModalCadastro">
-                            <img src="../../public/img/icons/add_icon.svg" alt="(+)">
-                        </button>
-                    </label>
-                    <pre>
-
-                    <select class="selecao" name="id_perfil_usuario" required>
-                        <option class="pi" value="" disabled selected>Selecione</option>
-                        <?php foreach ($perfis as $perfil): ?> 
-                            <option class="pi" value="<?= $perfil->id_perfil_usuario ?>">
-                                <?= htmlspecialchars($perfil->nome_perfil_usuario) ?>
-                            </option> 
-                        <?php endforeach; ?>
-                    </select>
-
-                    <span class="erro" id="erro_perfil"></span>
-                </div>
             </div>
             <div class="titulo-permissoes">
                 <label class="labeledit" for="permissoes">Permissões
@@ -114,6 +94,7 @@
         include "../../public/modais/modal_confirmacao_dados.php";
         ?>
     </section>
+    
 </body>
 
 </html>

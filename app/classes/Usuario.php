@@ -119,8 +119,9 @@ class Usuario {
         
         return true;
     }
+        // busca e retorna todas as permissões que estão vinculadas a um perfil de usuário específico
         public function listar_permissoes_por_perfil(int $id_perfil): array {
-        // monta um JOIN entre permissao e perfil_permissao
+        
         $sql  = "SELECT p.nome_permissao
                  FROM permissao p
                  INNER JOIN perfil_permissao pp 

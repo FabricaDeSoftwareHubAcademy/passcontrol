@@ -11,7 +11,7 @@ if(isset($_GET['id'])){
     $status = $usuario_busca[0]["status_usuario"];
 
     if($usuario_busca){
-        // retorna os dados como um objeto JSON
+
         $res = $usuarioObj->alternar_status($id_usuario, $status);
 
         if($res){     

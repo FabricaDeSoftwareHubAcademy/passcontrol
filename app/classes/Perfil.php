@@ -28,7 +28,7 @@ class Perfil{
     }
     
     public function vincularPermissao($idPerfil, $idPermissao) {
-        $pdo = $this->db->getConnection();  // pegando o PDO interno da Database
+        $pdo = $this->db->getConnection();
         $sql = "INSERT INTO perfil_permissao (id_perfil_usuario, id_permissao) VALUES (:idPerfil, :idPermissao)";
         $stmt = $pdo->prepare($sql);
         $stmt->bindParam(':idPerfil', $idPerfil, PDO::PARAM_INT);
@@ -37,7 +37,7 @@ class Perfil{
     }
 
     public function removerPermissoes($idPerfil) {
-        $pdo = $this->db->getConnection();  // pegando o PDO interno da Database
+        $pdo = $this->db->getConnection();
         $sql = "DELETE FROM perfil_permissao WHERE id_perfil_usuario = :idPerfil";
         $stmt = $pdo->prepare($sql);
         $stmt->bindParam(':idPerfil', $idPerfil, PDO::PARAM_INT);
