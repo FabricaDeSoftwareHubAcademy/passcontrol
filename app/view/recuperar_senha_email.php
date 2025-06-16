@@ -33,7 +33,7 @@
             <p class="text_recuperar_senha">Você receberá um código de segurança no e-mail informado para validar sua nova senha.</p>
 
             <div class="container_button">
-                <button type="button" class="button open-confirmacao-senha">Entrar</button>
+                <button type="button" class="button open-confirmacao-senha">Enviar</button>
             </div>
         </form>
     </main>

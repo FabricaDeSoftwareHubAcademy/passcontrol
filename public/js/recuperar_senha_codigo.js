@@ -11,3 +11,4 @@ function mudaFoco(campo, max, destino) {
         }
     }
 }
+
