@@ -96,7 +96,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <div class="input-group">
                         <h3 for="telefone">Telefone</h3>
                         <br>
-                        <input type="text" class="input-infos" id="telefone" name="telefone" placeholder="(00) 00000-0000">
+                        <input type="tel" class="input-infos" id="telefone" name="telefone" placeholder="(00) 00000-0000">
                     </div>
                     <div class="input-group">
                         <div class="information">
