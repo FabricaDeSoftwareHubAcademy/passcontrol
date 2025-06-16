@@ -173,21 +173,3 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-// const btnsPagina =  document.querySelectorAll('[data-btn-modal]')
-// const modaisPagina = Array.from(document.querySelectorAll('[data-nome-modal]'))
-
-// btnsPagina.forEach(function (elementoAtual) {
-//     elementoAtual.addEventListener('click', abrirModal);
-// })
-
-// function abrirModal(evento){
-//     evento.preventDefault();
-//     if(evento.target.localName === 'button'){
-//         const modalAbrir = modaisPagina.find(modalAtual => modalAtual.getAttribute('data-nome-modal') === evento.target.getAttribute('data-btn-modal'));
-//         modalAbrir.classList.add('show');
-//     }else {
-//        const modalAbrir = modaisPagina.find(modal => modal.getAttribute('data-nome-modal') === evento.target.parentElement.getAttribute('data-btn-modal'))
-//        modalAbrir.classList.add('show');
-//     }
-
-// }

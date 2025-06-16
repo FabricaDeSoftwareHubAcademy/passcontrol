@@ -67,9 +67,11 @@ $servicos_cadastrados = $novo_servico->buscar();
             include_once "../../public/modais/modal_cadastro_servico.php";
             include_once "../../public/modais/modal_confirmacao_dados_servicos.php";
             include_once "../../public/modais/modal_edicao_servico.php";
-            include_once "../../public/modais/modal_confirmacao_edicao_servico.php";
+            include_once "../../public/modais/modal_edicao_servico.php";
             include_once "../../public/modais/modal_satus_servico.php";
             include_once "../../public/modais/modal_sucesso.php";
+            include_once "../../public/modais/modal_sucesso_edicao.php";
+            include_once "../../public/modais/modal_sucesso_status.php";
         ?>
 </section>
 
