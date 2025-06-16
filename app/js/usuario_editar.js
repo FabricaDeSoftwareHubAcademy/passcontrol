@@ -35,8 +35,7 @@ document.addEventListener("DOMContentLoaded", function() {
             })
 
             let response = await dados_php.json();
-            
-            console.log(response);
+            // console.log(response);
 
             // Preenche os campos do modal com os dados do usuário
             document.getElementById("id_usuario").value = response.id_usuario;
@@ -45,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function() {
             document.getElementById("cpf").value = response.cpf_usuario;
             if(!response.url_foto_usuario){
                 document.getElementById("foto_usuario").src = 'Imagem não encontrada.';
-                document.getElementById("foto").src = '';
+                document.getElementById("foto").alt = 'Imagem não encontrada.';
             }else{
                 document.getElementById("foto_usuario").src = response.url_foto_usuario;
                 document.getElementById("foto_nula").value = response.url_foto_usuario;
@@ -74,25 +73,40 @@ document.addEventListener("DOMContentLoaded", function() {
         const nome = document.getElementById('nome').value.trim();
         const email = document.getElementById('email').value.trim();
         const cpf = document.getElementById('cpf').value.trim();
-        const foto = document.getElementById('foto').value.trim();
-
+        const foto = document.getElementById('foto');
+        const arquivo = foto.files[0];
+        
         let erro = false;
-        msgErro.textContent = '';
-
+        msgErro.innerHTML = '';
+        
         if (!nome) {
-            msgErro.innerHTML += "Preencha o nome!<br>";
+            msgErro.innerHTML += "Preencha o nome!<br><br>";
             erro = true;
         } 
         if (!email) {
-            msgErro.innerHTML += "Preencha o email!<br>";
+            msgErro.innerHTML += "Preencha o email!<br><br>";
             erro = true;
         } 
         if (!cpf || !validarCPF(cpf)) {
-            msgErro.innerHTML += "CPF inválido!<br>";
+            msgErro.innerHTML += "CPF inválido!<br><br>";
             erro = true;
         }
+        
+        if (arquivo){
+            var arquivos_permitods = [".png", ".jpg", ".jpeg"];
+            const regex = new RegExp("(" + arquivos_permitods.join('|').replace(/\./g, "\\.") + ")$", "i");
 
-        // ----------------------COLOCAR VERIFICACAO DE TIPO DE ARQUIVO !!!!!!!!!
+            if(!regex.test(foto.value.toLowerCase())){
+                msgErro.innerHTML += "Tipo de arquivo inválido! <br> Arquivos permitidos: .png, .jpg e .jpeg <br><br>";
+                erro = true;
+            }
+
+            // validacao MIME
+            if (!arquivo.type.startsWith("image/")) {
+                msgErro.innerHTML += "Arquivo não é uma imagem válida.<br><br>";
+                erro = true;
+            }
+        }
 
         if (!erro) {
             modalContainerEdicao.classList.remove("show");
@@ -118,7 +132,7 @@ document.addEventListener("DOMContentLoaded", function() {
         event.preventDefault();
 
         const formEditarUsu = new FormData(document.getElementById("form_editar_dados_usuario"));
-        console.log(formEditarUsu);
+        // console.log(formEditarUsu);
         
         // Envia os dados via POST
         let atualizar_dados = await fetch ('../actions/usuario_editar.php', {
@@ -128,11 +142,11 @@ document.addEventListener("DOMContentLoaded", function() {
         
         // Recebe a resposta bruta do server, basicamente um debug com esteroides
         let textResponse = await atualizar_dados.text();
-        console.log("Resposta bruta do servidor:", textResponse);  // Mostra o que o PHP está retornando
+        // console.log("Resposta bruta do servidor:", textResponse);  // Mostra o que o PHP está retornando
 
         try {
             let response_post = JSON.parse(textResponse);
-            console.log(response_post + " resposta do php");
+            console.log("Resultado: " + response_post);
 
             // ABRE O MODAL DE ALTERACOES SALVAS
             modalConfirmarAltDadosUsu.classList.remove("show");
@@ -144,7 +158,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         } catch (error) {
             console.error("Erro ao analisar JSON: ", error);
-            console.log("Conteúdo não pode ser analisado como JSON:", textResponse);
+            // console.log("Conteúdo não pode ser analisado como JSON:", textResponse);
         }
      
     });

@@ -21,7 +21,17 @@
 
             // GERA UMA SENHA ALEATORIA E A ENVIA PRO BANCO
             // $objUser->senha = password_hash($objUser->gerar_senha(), PASSWORD_DEFAULT);
-            $objUser->senha = password_hash('123', PASSWORD_DEFAULT);
+            // $objUser->senha = password_hash('123', PASSWORD_DEFAULT);
+            // Pega CPF só com números (já sanitizado)
+            
+            $cpf_limpo = $objUser->cpf;
+            $cpf_parcial = substr($cpf_limpo, 0, 5); // CAPTURA OS 5 PRIMEIROS DIGITOS DO CPF
+            
+            $partes_nome = explode(' ', trim($objUser->nome)); // CAPTURA O ULTIMO NOME
+            $ultimo_nome = end($partes_nome);
+
+            $senha_generica = $cpf_parcial . '@' . $ultimo_nome;
+            $objUser->senha = password_hash($senha_generica, PASSWORD_DEFAULT);
 
             // echo ($objUser->senha);
             

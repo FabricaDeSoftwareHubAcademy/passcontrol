@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 
         let textResponse = await enviar_dados.text();
-        console.log("Resposta bruta do servidor:", textResponse);
+        // console.log("Resposta bruta do servidor:", textResponse);
 
         try {
             let response_post = JSON.parse(textResponse);
@@ -77,7 +77,7 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         } catch (error) {
             console.error("Erro ao analisar JSON:", error);
-            console.log("Conteúdo não pode ser analisado como JSON:", textResponse);
+            // console.log("Conteúdo não pode ser analisado como JSON:", textResponse);
         }
     });
 

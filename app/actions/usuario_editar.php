@@ -14,11 +14,8 @@ elseif (($_SERVER['REQUEST_METHOD'] === 'POST')){
     $email = $_POST["email"];
     $cpf = $_POST["cpf"];
     $id_perfil = $_POST["id_perfil"];
-    
-    // $foto = $_FILES["foto"];
 
     $path_foto = '';
-    // Verifica se o campo "foto" foi enviado
     if (isset($_FILES["foto"]) && $_FILES["foto"]["error"] === UPLOAD_ERR_OK) {
 
         $pasta = '../../public/img/uploads/uploads_usuario/';
@@ -37,12 +34,11 @@ elseif (($_SERVER['REQUEST_METHOD'] === 'POST')){
             $res_img = ("Arquivo enviado com sucesso");
         } else {
             $res_img = ("Falha ao salvar arquivo");
-            $path_foto = ''; // Define como vazio se falhar
+            $path_foto = ''; // EM CASO DE FALHA RETORNA VAZIO
         }
     }else{
-        $res_img = 'Imagem nao alterada';
+        $res_img = 'Imagem nao alterada'; // PERMITE O ENVIO OPCIONAL DA IMAGEM
     }
-    // else: Não faz nada, pois o envio da foto é opcional
     
     // VERIFICA SE OS DADOS FORAM PREENCHIDOS
     if($nome != null || $email != null || $cpf != null || $id_perfil != null){   
@@ -54,7 +50,7 @@ elseif (($_SERVER['REQUEST_METHOD'] === 'POST')){
         $objUser->cpf = preg_replace('/\D/', '',(filter_var($cpf, FILTER_SANITIZE_SPECIAL_CHARS)));
         
         if ($path_foto == '' || $path_foto == null){
-            $objUser->foto = $_POST["foto_nula"];
+            $objUser->foto = $_POST["foto_nula"]; // CASO O CAMPO ESTEJA VAZIO, MANTEM O CAMINHO DA IMAGEM QUE VEIO DO BANCO
         }else{
             $objUser->foto = $path_foto;
         }
