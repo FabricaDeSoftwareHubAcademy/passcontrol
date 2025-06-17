@@ -19,13 +19,38 @@ class Perfil {
         return $stmt->fetch(PDO::FETCH_ASSOC);
     }
 
-    // Ajuste: corrigir nome da coluna para singular conforme padrão
+    // Método para buscar IDs das permissões vinculadas a um perfil
     public function buscarPermissoes($idPerfil) {
         $pdo = $this->db->getConnection();
         $stmt = $pdo->prepare("SELECT id_permissao_fk FROM perfil_permissao WHERE id_perfil_usuario_fk = ?");
         $stmt->execute([$idPerfil]);
         return $stmt->fetchAll(PDO::FETCH_COLUMN);
     }
+
+    // Novo método para buscar nomes das permissões vinculadas a um perfil
+    public function buscarNomesPermissoes($idPerfil) {
+        $pdo = $this->db->getConnection();
+    
+        $sql = "
+            SELECT p.nome_permissoes
+            FROM perfil_usuario_permissoes pp
+            INNER JOIN permissoes p ON pp.id_permissoes_fk = p.id_permissoes
+            WHERE pp.id_perfil_usuario_fk = ?
+        ";
+    
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute([$idPerfil]);
+    
+        $permissoes = $stmt->fetchAll(PDO::FETCH_COLUMN); // retorna apenas os nomes das permissões
+    
+        if (!$permissoes) {
+            return ['Nenhuma'];
+        }
+    
+        return $permissoes;
+    }
+    
+    
 
     public function inserir($dados) {
         return $this->db->insert($dados);

@@ -54,15 +54,7 @@
     // $usuarios = new Usuario();
     // $perfil = new Perfil();
 
-    // Buscar usuários
-    $dados = $usuarios->listar();
-
-    // Função para buscar permissões pelo perfil (pode estar em perfil_listar.php)
-    function buscarPermissoesPorPerfil($idPerfil)
-    {
-        global $perfil;
-        return $perfil->buscarNomesPermissoes($idPerfil);
-    }
+   
     ?>
 
     <section class="Area-Util-Projeto">
@@ -100,7 +92,8 @@
                                 $perfilUsuario = $usuarios->listar_perfil_usuario($usuario["id_perfil_usuario_fk"]);
 
                                 // Busca permissões associadas ao perfil
-                                $permissoes = buscarPermissoesPorPerfil($usuario["id_perfil_usuario_fk"]);
+                                $permissoes = $perfil->buscarNomesPermissoes($usuario["id_perfil_usuario_fk"]);
+
                             ?>
                                 <tr>
                                     <td class="matricula-ajuste"><?= htmlspecialchars($usuario['nome_usuario']) ?></td>
