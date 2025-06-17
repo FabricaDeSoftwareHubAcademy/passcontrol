@@ -38,7 +38,12 @@
     include "./navegacao.php";
     include "../actions/perfil_listar.php";      // Isso define $permissoes
     include "../actions/servico_listar.php";
-    include "../actions/permissao_listar.php";
+    
+    require_once '../classes/Permissao.php';
+
+    $permissaoObj = new Permissao();
+    $permissoes = $permissaoObj->buscar();
+
     ?>
 
     <section class="Area-Util-Projeto">

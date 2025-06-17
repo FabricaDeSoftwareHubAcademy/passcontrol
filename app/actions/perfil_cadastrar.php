@@ -1,18 +1,26 @@
 <?php
 require_once '../classes/Database.php';
 session_start();
+
 header('Content-Type: application/json');
 
+// Verifica método POST
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     echo json_encode(['status' => 'erro', 'mensagem' => 'Método inválido.']);
     exit;
 }
 
-$nome = $_POST['nome_perfil_usuario'] ?? null;
+$nome = trim($_POST['nome_perfil_usuario'] ?? '');
 $permissoes = $_POST['permissoes_selecionadas'] ?? [];
 $idUsuario = $_SESSION['id_usuario'] ?? null;
 
-if (!$nome) {
+// Validação básica
+if (!$idUsuario) {
+    echo json_encode(['status' => 'erro', 'mensagem' => 'Usuário não autenticado.']);
+    exit;
+}
+
+if (empty($nome)) {
     echo json_encode(['status' => 'erro', 'mensagem' => 'Informe o nome do perfil.']);
     exit;
 }
@@ -21,10 +29,29 @@ try {
     $db = new Database();
     $conn = $db->getConnection();
 
+    // Valida IDs de permissões recebidas para evitar inserção inválida
+    if (!empty($permissoes)) {
+        $stmtValida = $conn->prepare("SELECT id_permissao FROM permissao WHERE id_permissao = ?");
+        $permissoesValidas = [];
+
+        foreach ($permissoes as $idPermissao) {
+            // Só aceita IDs inteiros positivos para segurança
+            $idPermissao = (int)$idPermissao;
+            if ($idPermissao <= 0) {
+                continue;
+            }
+            $stmtValida->execute([$idPermissao]);
+            if ($stmtValida->fetch()) {
+                $permissoesValidas[] = $idPermissao;
+            }
+        }
+        $permissoes = $permissoesValidas;
+    }
+
     // Inicia transação
     $conn->beginTransaction();
 
-    // 1. Insere o novo perfil
+    // Insere perfil
     $stmt = $conn->prepare("
         INSERT INTO perfil_usuario (
             nome_perfil_usuario,
@@ -37,7 +64,7 @@ try {
 
     $idPerfil = $conn->lastInsertId();
 
-    // 2. Insere as permissões vinculadas (se houver)
+    // Insere vinculo perfil-permissões
     if (!empty($permissoes)) {
         $stmtPerm = $conn->prepare("
             INSERT INTO perfil_usuario_permissoes (id_perfil_usuario_fk, id_permissoes_fk)
@@ -52,7 +79,13 @@ try {
     $conn->commit();
 
     echo json_encode(['status' => 'ok', 'id' => $idPerfil, 'nome' => $nome]);
+
 } catch (Exception $e) {
-    $conn->rollBack();
-    echo json_encode(['status' => 'erro', 'mensagem' => 'Erro ao cadastrar: ' . $e->getMessage()]);
+    // Reverte transação em caso de erro
+    if ($conn->inTransaction()) {
+        $conn->rollBack();
+    }
+
+    // Em produção, seria melhor logar $e->getMessage() ao invés de exibir
+    echo json_encode(['status' => 'erro', 'mensagem' => 'Erro ao cadastrar perfil.']);
 }

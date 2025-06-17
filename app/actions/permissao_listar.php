@@ -1,7 +1,7 @@
 <?php
 require_once '../classes/Permissao.php';
-session_start();
 
+session_start();
 header('Content-Type: application/json');
 
 if ($_SERVER['REQUEST_METHOD'] !== 'GET') {

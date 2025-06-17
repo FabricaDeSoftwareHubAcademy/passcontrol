@@ -19,65 +19,65 @@ class Perfil {
         return $stmt->fetch(PDO::FETCH_ASSOC);
     }
 
-    // Método para buscar IDs das permissões vinculadas a um perfil
+    // Busca IDs das permissões vinculadas a um perfil
     public function buscarPermissoes($idPerfil) {
         $pdo = $this->db->getConnection();
-        $stmt = $pdo->prepare("SELECT id_permissao_fk FROM perfil_permissao WHERE id_perfil_usuario_fk = ?");
+        $stmt = $pdo->prepare("SELECT id_permissoes_fk FROM perfil_usuario_permissoes WHERE id_perfil_usuario_fk = ?");
         $stmt->execute([$idPerfil]);
         return $stmt->fetchAll(PDO::FETCH_COLUMN);
     }
 
-    // Novo método para buscar nomes das permissões vinculadas a um perfil
+    // Busca nomes das permissões vinculadas a um perfil
     public function buscarNomesPermissoes($idPerfil) {
         $pdo = $this->db->getConnection();
-    
+
         $sql = "
             SELECT p.nome_permissoes
             FROM perfil_usuario_permissoes pp
             INNER JOIN permissoes p ON pp.id_permissoes_fk = p.id_permissoes
             WHERE pp.id_perfil_usuario_fk = ?
         ";
-    
+
         $stmt = $pdo->prepare($sql);
         $stmt->execute([$idPerfil]);
-    
-        $permissoes = $stmt->fetchAll(PDO::FETCH_COLUMN); // retorna apenas os nomes das permissões
-    
+
+        $permissoes = $stmt->fetchAll(PDO::FETCH_COLUMN);
+
         if (!$permissoes) {
             return ['Nenhuma'];
         }
-    
+
         return $permissoes;
     }
-    
-    
 
     public function inserir($dados) {
         return $this->db->insert($dados);
     }
 
-    // Ajuste: Ordem correta dos parâmetros conforme sua classe Database (condição, dados)
+    // Edita perfil com condição por id e array dados
     public function editar($id, $dados) {
         return $this->db->update("id_perfil_usuario = {$id}", $dados);
     }
 
+    // Alterar status (ativo/inativo) do perfil
     public function alterarStatus($id_perfil, $novo_status) {
-        // Ordem condição, dados
         return $this->db->update("id_perfil_usuario = {$id_perfil}", ['status_perfil_usuario' => $novo_status]);
     }
 
+    // Vincular uma permissão ao perfil
     public function vincularPermissao($idPerfil, $idPermissao) {
         $pdo = $this->db->getConnection();
-        $sql = "INSERT INTO perfil_permissao (id_perfil_usuario_fk, id_permissao_fk) VALUES (:idPerfil, :idPermissao)";
+        $sql = "INSERT INTO perfil_usuario_permissoes (id_perfil_usuario_fk, id_permissoes_fk) VALUES (:idPerfil, :idPermissao)";
         $stmt = $pdo->prepare($sql);
         $stmt->bindParam(':idPerfil', $idPerfil, PDO::PARAM_INT);
         $stmt->bindParam(':idPermissao', $idPermissao, PDO::PARAM_INT);
         return $stmt->execute();
     }
 
+    // Remover todas permissões vinculadas ao perfil
     public function removerPermissoes($idPerfil) {
         $pdo = $this->db->getConnection();
-        $sql = "DELETE FROM perfil_permissao WHERE id_perfil_usuario_fk = :idPerfil";
+        $sql = "DELETE FROM perfil_usuario_permissoes WHERE id_perfil_usuario_fk = :idPerfil";
         $stmt = $pdo->prepare($sql);
         $stmt->bindParam(':idPerfil', $idPerfil, PDO::PARAM_INT);
         return $stmt->execute();
