@@ -144,12 +144,12 @@
                 <div class="inf-modal-ponto-atendimento">
                     <div class="container-ponto-atendimento">
                         <label class="label-ponto-atendimento"><b>Nome do Ponto de Atendimento</b></label>
-                        <input type="text" id="nome_guiche" name="nome_guiche_cadastrar" class="input-text-ponto-atendimento" placeholder="Ex: Guichê, Caixa, IPTU...">
+                        <input type="text" id="nome_guiche" name="nome_ponto_atendimento_cadastrar" class="input-text-ponto-atendimento" placeholder="Ex: Guichê, Caixa, IPTU...">
                     </div>
                 </div>
                 <div class="servico-ponto-atendimento">
                     <label class="label-ponto-atendimento"><b>Número / Letra</b></label>
-                    <input type="text" id="num_guiche" name="num_guiche_cadastrar" class="input-text-ponto-atendimento" placeholder="Ex: 01, 02...">
+                    <input type="text" id="num_guiche" name="identificador_ponto_atendimento_cadastrar" class="input-text-ponto-atendimento" placeholder="Ex: 01, 02...">
                 </div>
                 <div class="button-group-ponto-atendimento">
                     <button class="botao-modal-ponto-atendimento cancel_CadPontoAtend">Voltar</button>
@@ -236,7 +236,7 @@
             const formData = new FormData(myform);
 
 
-            let dados2_php = await fetch("../actions/ponto_atendimento_cadastrar.php", {
+            /* let dados2_php = await fetch("../actions/ponto_atendimento_cadastrar.php", {
                 method: 'POST',
                 body: formData
             });
@@ -245,6 +245,26 @@
 
             if (response.status == 'ok') {
                 window.location.href = "./ponto_atendimento.php";
+            } */
+
+            let dados2_php = await fetch("../actions/ponto_atendimento_cadastrar.php", {
+                method: 'POST',
+                body: formData
+            });
+
+            let text = await dados2_php.text();
+            console.log(text); // Retorno do PHP
+
+            try {
+                let response = JSON.parse(text);
+                if (response.status == 'ok') {
+                    window.location.href = "./ponto_atendimento.php";
+                } else {
+                    alert("Erro: " + response.mensagem);
+                }
+            } catch(e) {
+                console.error("Resposta JSON inválida", e);
+                alert("Erro na resposta do servidor.")
             }
         });
     });
