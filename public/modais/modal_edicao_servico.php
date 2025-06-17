@@ -7,7 +7,7 @@
         <img src="../../../public/img/img-modais/Logo Nota Controlnt.png" alt="Logo Nota Control" class="logo">
         <h1 class="titulo">Editar Serviço</h1>
         <hr class="linha-horizontal">
-        <form id="formulario_editar" method="POST">
+        <form id="formulario_editar" method="POST" enctype="multipart/form-data">
             <div class="inf-modal">
                 <div class="container">
                     <label class="label"><b>Nome do Serviço</b></label>

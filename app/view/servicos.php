@@ -44,7 +44,6 @@ $servicos_cadastrados = $novo_servico->buscar();
 
     include "./navegacao.php";
     include "../actions/servico_listar.php";
-    include "../actions/servico_editar.php";
 ?>
 
 <section class="Area-Util-Projeto">
@@ -104,7 +103,6 @@ $servicos_cadastrados = $novo_servico->buscar();
             include_once "./monitor_modal.php";
             include_once "../../public/modais/modal_cadastro_servico.php";
             include_once "../../public/modais/modal_confirmacao_dados_servicos.php";
-            include_once "../../public/modais/modal_edicao_servico.php";
             include_once "../../public/modais/modal_edicao_servico.php";
             include_once "../../public/modais/modal_satus_servico.php";
             include_once "../../public/modais/modal_sucesso.php";

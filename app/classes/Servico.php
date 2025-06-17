@@ -8,7 +8,7 @@ class Servico{
     public string $nome_servico;
     public string $codigo_servico;
     public string $url_imagem_servico;
-    public ?int $status_servico = null;
+    public int $status_servico;
 
     public function cadastrar(){
         
@@ -17,8 +17,7 @@ class Servico{
                 [
                     'nome_servico' => $this->nome_servico,
                     'codigo_servico' => $this->codigo_servico,
-                    'url_imagem_servico' => $this->url_imagem_servico,
-                    'status_servico' => $this->status_servico
+                    'url_imagem_servico' => $this->url_imagem_servico
                 ]
             );
         return $res;
@@ -43,8 +42,8 @@ class Servico{
                             [
                                 'nome_servico' => $this->nome_servico,
                                 'codigo_servico' => $this->codigo_servico,
-                                'url_imagem_servico' => $this->url_imagem_servico,
-                                'status_servico' => $this->status_servico
+                                'url_imagem_servico' => $this->url_imagem_servico
+                                // ,'status_servico' => $this->status_servico
                             ]
                         );
 
