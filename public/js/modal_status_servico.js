@@ -38,43 +38,58 @@
 //     });
 // });
 
+document.addEventListener("DOMContentLoaded", () => {
+    const botoesStatus = document.querySelectorAll(".switch_status");
 
-document.addEventListener('DOMContentLoaded', function () {
-    document.querySelectorAll(".switch_status").forEach(button => {
-        button.addEventListener("click", function (){
-            const id = this.getAttribute("id_value_switch");
+    botoesStatus.forEach((button) => {
+        button.addEventListener("click", () => {
+            const id = button.getAttribute("id_value_switch");
             const modalContainer = document.querySelector(".modal-inativar-container");
-            const btnCancelar = document.querySelector("#btn-cancelar");
-            const btnConfirmar = document.querySelector("#salvar");
-            const modalSucesso = document.getElementById("confirmar_cadastrar");
+            const btnCancelar = document.getElementById("btn-cancelar");
+            const btnConfirmar = document.getElementById("salvar");
+            const modalSucesso = document.getElementById("confirma_status");
 
             modalContainer.classList.add("show");
 
-            const confirmarHandler = async function () {
+            const confirmarHandler = async () => {
                 try {
-                    const response = await fetch('../actions/status_servico.php?id_servico=${id}');
-                    if(!response.ok){
-                        throw new Error("Errot HTTP:" + response.status);
+                    const response = await fetch(`../../app/actions/status_servico.php?id_servico=${id}`);
+
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status}`);
                     }
+
                     const resultado = await response.json();
+
                     if (resultado.status === "OK") {
                         modalContainer.classList.remove("show");
                         modalSucesso.classList.add("show");
-                    }else {
-                        alert("Erro ao atualizar status.");
-                    } 
-                } catch (error){
-                    console.error("Error na requisição: ", error);
+                    } else {
+                        alert("Erro ao atualizar o status.");
+                    }
+
+                } catch (error) {
+                    console.error("Erro na requisição: ", error);
                     alert("Falha na conexão com o servidor.");
+                } finally {
+                    btnConfirmar.removeEventListener("click", confirmarHandler);
                 }
-                btnConfirmar.removeEventListener("click", confirmarHandler);
             };
+
             btnConfirmar.addEventListener("click", confirmarHandler);
+
             btnCancelar.addEventListener("click", () => {
                 modalContainer.classList.remove("show");
-                location.reload();
+                btnConfirmar.removeEventListener("click", confirmarHandler);
             });
+
+            const btnOk = document.getElementById("btnOkStatus");
+            if (btnOk) {
+                btnOk.addEventListener("click", () => {
+                    modalSucesso.classList.remove("show");
+                    location.reload();
+                });
+            }
         });
     });
 });
-
