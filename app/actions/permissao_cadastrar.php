@@ -28,8 +28,14 @@ try {
         'permissao_created_by_id' => $idUsuario
     ]);
 
-    echo json_encode(['status' => 'ok', 'id' => $idPermissao, 'nome' => $nome_permissao, 'descricao' => $descricao_permissao]);
-
+    echo json_encode([
+        'status' => 'ok',
+        'id' => $idPermissao,
+        'nome' => $nome_permissao,
+        'descricao' => $descricao_permissao
+    ]);
 } catch (Exception $e) {
     echo json_encode(['status' => 'erro', 'mensagem' => 'Erro ao salvar: ' . $e->getMessage()]);
 }
+
+exit;

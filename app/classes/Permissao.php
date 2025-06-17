@@ -1,32 +1,36 @@
 <?php
-require_once __DIR__ . '/../database/Database.php';
+require_once "../database/Database.php";
 
 class Permissao {
     private $db;
-    private $table = 'permissao';
 
-    public function __construct(Database $database) {
-        $this->db = $database;
+    public function __construct() {
+        // Ajuste o nome da tabela para "permissao" (sem 's' no final), se for esse o nome correto
+        $this->db = new Database('permissao');
     }
 
-    public function buscar() {
-        $stmt = $this->db->select('status_permissao = 1', 'nome_permissao');
-        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    public function buscarTodos() {
+        return $this->db->select()->fetchAll(PDO::FETCH_ASSOC);
     }
 
-    //método para inserir permissão
-    public function inserir(array $dados) {
-        $sql = "INSERT INTO {$this->table} (nome_permissao, descricao_permissao, permissao_created_in, permissao_created_by_id) 
-                VALUES (:nome, :descricao, :created_in, :created_by)";
-        
-        $stmt = $this->db->getConnection()->prepare($sql);
-        $stmt->bindValue(':nome', $dados['nome_permissao']);
-        $stmt->bindValue(':descricao', $dados['descricao_permissao']);
-        $stmt->bindValue(':created_in', $dados['permissao_created_in']);
-        $stmt->bindValue(':created_by', $dados['permissao_created_by_id']);
-        
-        $stmt->execute();
-        
-        return $this->db->getConnection()->lastInsertId();
+    public function buscarPorId($id) {
+        $pdo = $this->db->getConnection();
+        $stmt = $pdo->prepare("SELECT * FROM permissao WHERE id_permissao = ?");
+        $stmt->execute([$id]);
+        return $stmt->fetch(PDO::FETCH_ASSOC);
+    }
+
+    public function inserir($dados) {
+        return $this->db->insert($dados);
+    }
+
+    public function atualizar($id, $dados) {
+        return $this->db->update("id_permissao = {$id}", $dados);
+    }
+
+    public function excluir($id) {
+        $pdo = $this->db->getConnection();
+        $stmt = $pdo->prepare("DELETE FROM permissao WHERE id_permissao = ?");
+        return $stmt->execute([$id]);
     }
 }

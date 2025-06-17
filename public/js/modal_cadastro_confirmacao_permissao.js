@@ -2,28 +2,28 @@ const btnAbrirModalCadastro = document.getElementById("abrirModalCadastroPermiss
 const modalContainer_CadPermissao = document.querySelector(".fundo-container-cad-ponto-atendimento");
 const buttonCancelar_CadPontoAtend = document.querySelector(".cancel_CadPontoAtend");
 const buttonSalvar_CadPermissao = document.querySelector(".save_CadPontoAtend");
-const apareceMod = document.getElementById("confirma_cadastrar"); // Seu modal de confirmação, se houver
+const apareceMod = document.getElementById("confirma_cadastrar"); // Modal confirmação (se houver)
 
-// Abrir Modal
+// Abrir modal ao clicar no botão
 btnAbrirModalCadastro.addEventListener("click", () => {
     modalContainer_CadPermissao.classList.add("show");
 });
 
-// Fechar Modal
+// Fechar modal ao clicar em "Voltar"
 buttonCancelar_CadPontoAtend.addEventListener("click", (event) => {
     event.preventDefault();
     modalContainer_CadPermissao.classList.remove("show");
 });
 
-// Salvar Formulário
-buttonSalvar_CadPermissao.addEventListener("click", async function (event) {
+// Ao clicar em "Salvar"
+buttonSalvar_CadPermissao.addEventListener("click", async (event) => {
     event.preventDefault();
 
     const myform = document.getElementById("formulario_cadastrar_permissao");
     const inputs = myform.querySelectorAll("input");
     let formularioValido = true;
 
-    // Verifica se todos os campos estão preenchidos
+    // Verificar se todos os campos têm valor preenchido
     inputs.forEach(inputAtual => {
         if (inputAtual.value.trim() === "") {
             formularioValido = false;
@@ -35,7 +35,7 @@ buttonSalvar_CadPermissao.addEventListener("click", async function (event) {
         return;
     }
 
-    // Enviar dados via fetch
+    // Preparar dados para envio
     const formData = new FormData(myform);
 
     try {
@@ -50,12 +50,12 @@ buttonSalvar_CadPermissao.addEventListener("click", async function (event) {
             // Fecha modal cadastro
             modalContainer_CadPermissao.classList.remove("show");
 
-            // Exibe modal confirmação, se existir
+            // Exibe modal de confirmação, se existir
             if (apareceMod) {
                 apareceMod.classList.add("show");
             }
 
-            // Adiciona o novo checkbox na lista de permissões
+            // Cria novo checkbox da permissão cadastrada e insere na lista
             const newLabel = document.createElement('label');
             newLabel.className = 'customizado';
 
@@ -78,7 +78,7 @@ buttonSalvar_CadPermissao.addEventListener("click", async function (event) {
             const selectAllLabel = container.querySelector('label:last-child');
             container.insertBefore(newLabel, selectAllLabel);
 
-           
+            // Reseta formulário para novo cadastro
             myform.reset();
 
             alert('Permissão cadastrada com sucesso!');
@@ -91,6 +91,7 @@ buttonSalvar_CadPermissao.addEventListener("click", async function (event) {
     }
 });
 
+// Função toggle para menu mobile (preservada)
 function toggleMenu() {
     document.getElementById("mobileMenu").classList.toggle("active");
 }

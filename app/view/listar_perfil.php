@@ -2,31 +2,33 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>PassControl</title>
 
     <!-- FONTE -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet" />
 
     <!-- CSS -->
-    <link rel="stylesheet" href="../../public/css/listar_usuarios.css">
-    <link rel="stylesheet" href="../../public/css/navegacao.css">
-    <link rel="stylesheet" href="../../public/css/monitor_modal.css">
-    <link rel="stylesheet" href="../../public/css/conteudo.css">
-    <link rel="stylesheet" href="../../public/css/modal_alterar_dados_pessoais.css">
-    <link rel="stylesheet" href="../../public/css/modal_editar_dados_usuario.css">
-    <link rel="stylesheet" href="../../public/css/modal_alterar_senha.css">
-    <link rel="stylesheet" href="../../public/css/modal_alterar_status.css">
-    <link rel="stylesheet" href="../../public/css/modal_confirmacao_dados_registrados.css">
-    <link rel="stylesheet" href="../../public/css/modal_confirmacao_dados.css">    
-    <link rel="stylesheet" href="../../public/css/modal_aviso_erro.css">    
+    <link rel="stylesheet" href="../../public/css/listar_usuarios.css" />
+    <link rel="stylesheet" href="../../public/css/navegacao.css" />
+    <link rel="stylesheet" href="../../public/css/monitor_modal.css" />
+    <link rel="stylesheet" href="../../public/css/conteudo.css" />
+    <link rel="stylesheet" href="../../public/css/modal_alterar_dados_pessoais.css" />
+    <link rel="stylesheet" href="../../public/css/modal_editar_dados_usuario.css" />
+    <link rel="stylesheet" href="../../public/css/modal_alterar_senha.css" />
+    <link rel="stylesheet" href="../../public/css/modal_alterar_status.css" />
+    <link rel="stylesheet" href="../../public/css/modal_confirmacao_dados_registrados.css" />
+    <link rel="stylesheet" href="../../public/css/modal_confirmacao_dados.css" />
+    <link rel="stylesheet" href="../../public/css/modal_aviso_erro.css" />
     <!-- <link rel="stylesheet" href="../../public/css/modal_alerta_alteracoes.css"> -->
-    <link rel="stylesheet" href="../../public/css/tabela.css">
-    
+    <link rel="stylesheet" href="../../public/css/tabela.css" />
+
     <!-- JS -->
     <script src="../../public/js/navegacao_menu_lateral.js" defer></script>
     <script src="../../public/js/monitor_modal.js" defer></script>
@@ -38,7 +40,7 @@
     <script src="../js/validar_cpf.js" defer></script>
 
     <!-- LOGO -->
-    <link rel="shortcut icon" type="imagex/png" href="../../public/img/Logo-Nota-Controlnt.ico">
+    <link rel="shortcut icon" type="imagex/png" href="../../public/img/Logo-Nota-Controlnt.ico" />
 </head>
 
 <body class="control-body-navegacao">
@@ -47,6 +49,20 @@
     include "../actions/perfil_listar.php";
     // include "../actions/servico_listar.php";
     include "./navegacao.php";
+
+    // Supondo que as classes estejam instanciadas:
+    // $usuarios = new Usuario();
+    // $perfil = new Perfil();
+
+    // Buscar usuários
+    $dados = $usuarios->listar();
+
+    // Função para buscar permissões pelo perfil (pode estar em perfil_listar.php)
+    function buscarPermissoesPorPerfil($idPerfil)
+    {
+        global $perfil;
+        return $perfil->buscarNomesPermissoes($idPerfil);
+    }
     ?>
 
     <section class="Area-Util-Projeto">
@@ -57,7 +73,7 @@
                     <span>Perfis Cadastrados</span>
                 </div>
                 <div class="input-search">
-                    <input type="search" name="Buscar Atendente" placeholder="Buscar Atendente">
+                    <input type="search" name="Buscar Atendente" placeholder="Buscar Atendente" />
                 </div>
             </div>
             <div class="linha-in">
@@ -71,37 +87,37 @@
                                 <th class="matricula-ajuste" scope="col">Nome</th>
                                 <th class="matricula-ajuste" scope="col">Matricula</th>
                                 <th class="perfil-ajuste" scope="col">Perfil</th>
-                                <th class="perfil-ajuste" >Permissões</th>
+                                <th class="perfil-ajuste">Permissões</th>
                                 <th class="editar-inativar-menor" scope="col">Editar</th>
                                 <th class="editar-inativar-menor" scope="col">Status</th>
                             </tr>
                         </thead>
                         <tbody>
                             <?php foreach ($dados as $usuario):
-                                $UsuStatus = $usuario["status_usuario"] == 1 ? 0 : 'active';
+                                $UsuStatus = $usuario["status_usuario"] == 1 ? '' : 'active';
 
-                                // Busca perfil
-                                $perfil = $usuarios->listar_perfil_usuario($usuario["id_perfil_usuario_fk"]);
+                                // Busca perfil pelo ID
+                                $perfilUsuario = $usuarios->listar_perfil_usuario($usuario["id_perfil_usuario_fk"]);
 
                                 // Busca permissões associadas ao perfil
                                 $permissoes = buscarPermissoesPorPerfil($usuario["id_perfil_usuario_fk"]);
                             ?>
                                 <tr>
-                                    <td class="matricula-ajuste"><?= $usuario['nome_usuario'] ?></td>
-                                    <td class="matricula-ajuste"><?= $usuario['email_usuario'] ?></td>
-                                    <td class="perfil-ajuste"><?= $perfil['nome_perfil_usuario'] ?></td>
-                                    <td class="perfil-ajuste"><?= implode(', ', $permissoes) ?></td>
+                                    <td class="matricula-ajuste"><?= htmlspecialchars($usuario['nome_usuario']) ?></td>
+                                    <td class="matricula-ajuste"><?= htmlspecialchars($usuario['email_usuario']) ?></td>
+                                    <td class="perfil-ajuste"><?= htmlspecialchars($perfilUsuario['nome_perfil_usuario'] ?? 'Não encontrado') ?></td>
+                                    <td class="perfil-ajuste"><?= htmlspecialchars(implode(', ', $permissoes)) ?></td>
                                     <td class="editar-inativar-menor">
                                         <div class="editar">
                                             <button class="openEditar" data-id="<?= $usuario["id_usuario"] ?>">
-                                                <img src="../../public/img/icons/Group 2924.png" alt="">
+                                                <img src="../../public/img/icons/Group 2924.png" alt="Editar" />
                                             </button>
                                         </div>
                                     </td>
                                     <td class="editar-inativar-menor">
                                         <div class="openInativarAtivar" data-id="<?= $usuario["id_usuario"] ?>">
                                             <button class="toggle-btn <?= $UsuStatus ?>">
-                                                <div class="circulo"> </div>
+                                                <div class="circulo"></div>
                                             </button>
                                         </div>
                                     </td>
@@ -116,7 +132,7 @@
             </div>
         </div>
     </section>
-    
+
     <?php
     include "../../public/modais/modal_editar_usuario.php";
     include "../../public/modais/modal_alterar_status.php";
@@ -128,4 +144,5 @@
     ?>
 
 </body>
+
 </html>

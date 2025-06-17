@@ -1,37 +1,25 @@
 <?php
-require_once '../database/Database.php';
-require_once '../classes/Perfil.php'; // Crie essa classe se ainda não tiver
+require_once '../classes/Permissao.php';
+session_start();
 
-class PerfilUsuarioModel {
-    private $pdo;
+header('Content-Type: application/json');
 
-    public function __construct(PDO $pdo) {
-        $this->pdo = $pdo;
-    }
-
-    public function buscar() {
-        $stmt = $this->pdo->prepare("SELECT id_perfil_usuario, nome_perfil_usuario, status_perfil_usuario FROM perfil_usuario");
-        $stmt->execute();
-        return $stmt->fetchAll(PDO::FETCH_CLASS, 'Perfil');
-    }
+if ($_SERVER['REQUEST_METHOD'] !== 'GET') {
+    echo json_encode(['status' => 'erro', 'mensagem' => 'Requisição inválida.']);
+    exit;
 }
 
-$db = new Database();
-$pdo = $db->getConnection();
-$perfilModel = new PerfilUsuarioModel($pdo);
-$perfis = $perfilModel->buscar();
+$permissao = new Permissao();
 
-class Permissao {
-    private $db;
+try {
+    $lista = $permissao->buscar();  // Busca todas as permissões
 
-    public function __construct() {
-        $this->db = new Database('permissao');
-    }
-
-    public function buscar() {
-        return $this->db->select()->fetchAll(PDO::FETCH_ASSOC);
-    }
+    echo json_encode([
+        'status' => 'ok',
+        'permissoes' => $lista
+    ]);
+} catch (Exception $e) {
+    echo json_encode(['status' => 'erro', 'mensagem' => 'Erro ao buscar permissões: ' . $e->getMessage()]);
 }
 
-$permissaoObj = new Permissao();
-$permissoes = $permissaoObj->buscar();
+exit;
