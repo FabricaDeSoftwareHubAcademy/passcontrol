@@ -9,7 +9,7 @@ btnAbrirModalCadastro.addEventListener("click", () => {
     modalContainer_CadPermissao.classList.add("show");
 });
 
-// Fechar modal ao clicar em "Voltar"
+// Fechar modal ao clicar em "Voltar"a
 buttonCancelar_CadPontoAtend.addEventListener("click", (event) => {
     event.preventDefault();
     modalContainer_CadPermissao.classList.remove("show");

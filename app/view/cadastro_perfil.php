@@ -27,7 +27,8 @@
     <script src="../../public/js/checkbox_seleciona_todos.js" defer></script>
     <script src="../js/usuario_cadastrar.js" defer></script>
     <script src="../js/validar_cpf.js" defer></script>
-    <script src="../js/perfil_cadastrar.js" defer></script>
+    <script src="../js/perfil_cadastro.js" defer></script>
+    <script src="../../public/js/modal_cadastro_confirmacao_permissao.js" defer></script>
 
     <!-- LOGO -->
     <link rel="shortcut icon" type="image/x-icon" href="../../public/img/Logo-Nota-Controlnt.ico" />
@@ -125,10 +126,11 @@
                 </button>
             </div>
         </form>
-
+        
         <?php
         include "./monitor_modal.php";
         include "../../public/modais/modal_confirmacao_dados_registrados.php";
+        include "../../public/modais/modal_cadastro_permissao.php";
         include "../../public/modais/modal_confirmacao_dados.php";
         ?>
     </section>
