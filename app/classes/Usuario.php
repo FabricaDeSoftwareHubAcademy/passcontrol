@@ -106,6 +106,18 @@ class Usuario {
         ]);
         return true;
     }
+        // busca e retorna todas as permissões que estão vinculadas a um perfil de usuário específico
+        public function listar_permissoes_por_perfil(int $id_perfil): array {
+        
+        $sql  = "SELECT p.nome_permissao
+                 FROM permissao p
+                 INNER JOIN perfil_permissao pp 
+                   ON p.id_permissao = pp.id_permissao
+                 WHERE pp.id_perfil_usuario = :idPerfil
+                 ORDER BY p.nome_permissao";
+        $stmt = $this->db->execute($sql, ['idPerfil' => $id_perfil]);
+        return $stmt->fetchAll(PDO::FETCH_COLUMN);
+    }
     
 
     private function valida_cpf($cpf) {

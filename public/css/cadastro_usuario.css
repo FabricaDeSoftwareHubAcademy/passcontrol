@@ -120,6 +120,13 @@ input:focus {
     border-radius: 100%;
     background-color: rgba(255, 255, 255, 0.5);
 }
+.titulo-permissoes {
+    margin-left: 100px; /* ajuste o valor conforme necessário */
+    display: flex;
+    align-items: center;
+    gap: 8px; /* espaço entre o texto e o botão */
+}
+
 .icone_add_servico{
     display:flex;
 }
