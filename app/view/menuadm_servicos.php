@@ -253,7 +253,7 @@
             });
 
             let text = await dados2_php.text();
-            console.log(text); // Retorno do PHP
+            console.log(text); // Retorno do PHP te
 
             try {
                 let response = JSON.parse(text);
