@@ -1,3 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PassControl</title>
+
+    <!-- FONTE -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../../public/css/navegacao.css">
+    <link rel="stylesheet" href="../../public/css/monitor_modal.css">
+    <link rel="stylesheet" href="../../public/css/modal_alterar_dados_pessoais.css">
+    <link rel="stylesheet" href="../../public/css/modal_alterar_senha.css">
+    <link rel="stylesheet" href="../../public/css/servico.css">
+    <link rel="stylesheet" href="../../public/css/edicao_servico.css">
+    <link rel="stylesheet" href="../../public/css/modal_cadastro_servico.css">
+    <link rel="stylesheet" href="../../public/css/modal_confirmacao_dados_servico.css">
+    <link rel="stylesheet" href="../../public/css/modal_status_servico.css">
+    <link rel="stylesheet" href="../../public/css/modal_confirmacao_servico.css">
+
+
+    <!-- JS -->
+    <script src="../../public/js/navegacao_menu_lateral.js" defer></script>
+    <script src="../../public/js/monitor_modal.js" defer></script>
+    <script src="../../public/js/modal_cadastro_servico.js" defer></script>
+    <script src="../../public/js/modal_edicao_servico.js" defer></script>
+    <script src="../../public/js/modal_status_servico.js" defer></script>
+
+
+    <!-- LOGO -->
+    <link rel="shortcut icon" type="imagex/png" href="../../public/img/Logo-Nota-Controlnt.ico">
+</head>
 <?php
 require '../classes/Servico.php';
 
@@ -71,7 +109,6 @@ $servicos_cadastrados = $novo_servico->buscar();
             include_once "../../public/modais/modal_satus_servico.php";
             include_once "../../public/modais/modal_sucesso.php";
             include_once "../../public/modais/modal_sucesso_edicao.php";
-            include_once "../../public/modais/modal_sucesso_status.php";
         ?>
 </section>
 

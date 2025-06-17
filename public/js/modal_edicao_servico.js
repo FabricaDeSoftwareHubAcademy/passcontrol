@@ -166,8 +166,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Botão OK no modal final
     const buttonOkEditar = document.getElementById("btnOkEditar");
-    buttonOkEditar.addEventListener("click", function () {
-        document.getElementById("confirma_editar").classList.remove("show");
+    buttonOkEditar.addEventListener("click", function() {
+        const apareceMod = document.getElementById("confirma_editar");
+        apareceMod.classList.remove("show");
         location.reload();
     });
 });
