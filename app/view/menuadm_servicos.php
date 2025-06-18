@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="../../public/css/navegacao.css">
     <link rel="stylesheet" href="../../public/css/monitor-modal.css">
     <link rel="stylesheet" href="../../public/css/style_eli.css">
+    <link rel="stylesheet" href="../../public/css/modal_confirmacao_servico.css">
+    <link rel="stylesheet" href="../../public/css/modal_cadastro_ponto_atendimento.css">
     <link rel="stylesheet" href="../../public/modais/Modal_Alterar_Dados_Pessoais/alterar_dados_pessoais.css">
     <link rel="stylesheet" href="../../public/modais/Modal_Alterar_Senha/alterar_senha.css">
     <link rel="stylesheet" href="../../public/modais/ModalCadastrodosServicos/cadastro_servicos_final.css">
@@ -130,7 +132,6 @@
     include "./monitor_modal.php";
     ?>
 
-
     <!-- INCLUINDO O MODAL DE CADASTRO DE PONTO DE ATENDIMENTO - GUICHES!!!!!!  -->
     <div class="fundo-container-cad-ponto-atendimento">
         <section class="modal-ponto-atendimento">
@@ -173,6 +174,23 @@
             </div>
         </section>
     </div >
+
+    <script>
+        // Seleciona os elementos
+        const botaoCadastrar = document.getElementById('btnCadastrarPonto');
+        const modalConfirma = document.getElementById('confirma');
+        const botaoFecharModal = document.getElementById('btnOkCadastrar');
+
+        // Abre o modal ao clicar no botão
+        botaoCadastrar.addEventListener('click', () => {
+            modalConfirma.classList.add('show');
+        });
+
+        // Fecha o modal ao clicar em "OK"
+        botaoFecharModal.addEventListener('click', () => {
+            modalConfirma.classList.remove('show');
+        });
+    </script>
 
 
     

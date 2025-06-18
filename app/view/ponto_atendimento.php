@@ -20,6 +20,7 @@ $guiches = $guiche->buscar();
     <!-- IMPORT DO CSS -->
     <link rel="stylesheet" href="../../public/css/navegacao.css">
     <link rel="stylesheet" href="../../public/css/ponto_atendimento.css">
+    <link rel="stylesheet" href="../../public/css/servico.css">
     <!-- <link rel="stylesheet" href="../../public/modais/ModalEdicaoPontoAtendimento/estilo.css">
     <link rel="stylesheet" href="../../public/modais/ModalInativacaoGuiche/cadastro.css">
     <link rel="stylesheet" href="../../public/modais/ModalConfirmaDados/estilo.css">
@@ -57,8 +58,8 @@ $guiches = $guiche->buscar();
                         <tr class="topo-tabela-servicos">
                             <th  class="cabecalho-tabela1">Tipo</th>
                             <th class="indentificador-menor"  class="cabecalho-tabela2">Identificador</th>
-                            <th class="editar-menor"  class="cabecalho-tabela3">Editar</th>
-                            <th class="inativar-menor"  class="cabecalho-tabela1">Status</th>
+                            <th class="editar-menor" class="cabecalho-tabela3">Editar</th>
+                            <th class="inativar-menor" class="cabecalho-tabela1">Status</th>
                         </tr>
                     </thead>
                     <tbody class="resto-tabela-Ponto-atendimento">
