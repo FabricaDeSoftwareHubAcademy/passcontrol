@@ -25,16 +25,18 @@
             </div>
 
             <div class="servico-ponto-atendimento">
-                <label class="label-ponto-atendimento" for="codigo_permissao"><b>Código</b></label>
+                <label class="label-ponto-atendimento" for="descricao_permissao"><b>Descrição</b></label>
                 <input
                     type="text"
-                    id="codigo_permissao"
-                    name="codigo_permissao"
+                    id="descricao_permissao"
+                    name="descricao_permissao"
                     class="input-text-ponto-atendimento"
-                    maxlength="50"
+                    maxlength="255"
                     autocomplete="off"
-                />
+                    />
+
             </div>
+
 
             <div class="button-group-ponto-atendimento">
                 <button type="button" class="botao-modal-ponto-atendimento cancel_CadPontoAtend">Voltar</button>
