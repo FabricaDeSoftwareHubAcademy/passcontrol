@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="../../public/css/navegacao.css" />
     <link rel="stylesheet" href="../../public/css/monitor_modal.css" />
     <link rel="stylesheet" href="../../public/css/cadastro_usuario.css" />
+    <link rel="stylesheet" href="../../public/css/modal_cadastro_servico.css" />
     <link rel="stylesheet" href="../../public/css/modal_alterar_dados_pessoais.css" />
     <link rel="stylesheet" href="../../public/css/modal_alterar_senha.css" />
     <link rel="stylesheet" href="../../public/css/modal_confirmacao_dados_registrados.css" />
@@ -116,10 +117,7 @@
                 <button
                     class="botao_volto"
                     type="button"
-                    onclick="window.location.href='./menuadm_usuario.php';"
-                >
-                    Voltar
-                </button>
+                    onclick="window.location.href='./menuadm_usuario.php';">Voltar</button>
 
                 <button class="botao_salvo" type="submit" id="save_sucess" name="cadastrar">
                     Salvar
