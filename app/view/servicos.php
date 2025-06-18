@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="../../public/css/modal_confirmacao_dados_servico.css">
     <link rel="stylesheet" href="../../public/css/modal_status_servico.css">
     <link rel="stylesheet" href="../../public/css/modal_confirmacao_servico.css">
+    <link rel="stylesheet" href="../../public/css/modal_confirmacao_dados.css">
 
 
     <!-- JS -->
@@ -104,12 +105,10 @@ $servicos_cadastrados = $novo_servico->buscar();
             include_once "../../public/modais/modal_cadastro_servico.php";
             include_once "../../public/modais/modal_confirmacao_dados_servicos.php";
             include_once "../../public/modais/modal_edicao_servico.php";
-            include_once "../../public/modais/modal_satus_servico.php";
-            include_once "../../public/modais/modal_sucesso.php";
             include_once "../../public/modais/modal_sucesso_edicao.php";
+            include_once "../../public/modais/modal_status_servico.php";
+            include_once "../../public/modais/modal_confirmacao_dados.php";
         ?>
 </section>
 
 </body>
-
-<!-- '.$servico->id_servico.' -->
