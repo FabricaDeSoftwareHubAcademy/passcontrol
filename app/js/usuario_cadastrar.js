@@ -49,39 +49,40 @@ document.addEventListener("DOMContentLoaded", function () {
         if (erro) return;
 
         modalConfirmarSalvarDadosUsu.classList.add("show");
-    });
+        
 
-    // MODAL CONFIRMACAO
-    confirmarSalvar.addEventListener("click", async function (event) {
-        event.preventDefault();
+        // MODAL CONFIRMACAO
+        confirmarSalvar.addEventListener("click", async function (event) {
+            event.preventDefault();
 
-        const formCadastrarUsuario = new FormData(document.getElementById("dados_cad"));
-        // console.log(formCadastrarUsuario);
+            const formCadastrarUsuario = new FormData(document.getElementById("dados_cad"));
+            // console.log(formCadastrarUsuario);
 
-        let enviar_dados = await fetch('../actions/usuario_cadastrar.php', {
-            method: "POST",
-            body: formCadastrarUsuario
+            let enviar_dados = await fetch('../actions/usuario_cadastrar.php', {
+                method: "POST",
+                body: formCadastrarUsuario
+            });
+
+            let textResponse = await enviar_dados.text();
+            // console.log("Resposta bruta do servidor:", textResponse);
+
+            try {
+                let response_post = JSON.parse(textResponse);
+
+                modalConfirmarSalvarDadosUsu.classList.remove("show");
+                modalDadosSalvos.classList.add("show");
+
+                buttonOk.addEventListener("click", () => {
+                    location.href = './listar_usuarios.php';
+                });
+            } catch (error) {
+                console.error("Erro ao analisar JSON:", error);
+                // console.log("Conteúdo não pode ser analisado como JSON:", textResponse);
+            }
         });
 
-        let textResponse = await enviar_dados.text();
-        // console.log("Resposta bruta do servidor:", textResponse);
-
-        try {
-            let response_post = JSON.parse(textResponse);
-
+        cancelarSalvar.addEventListener("click", () => {
             modalConfirmarSalvarDadosUsu.classList.remove("show");
-            modalDadosSalvos.classList.add("show");
-
-            buttonOk.addEventListener("click", () => {
-                location.href = './listar_usuarios.php';
-            });
-        } catch (error) {
-            console.error("Erro ao analisar JSON:", error);
-            // console.log("Conteúdo não pode ser analisado como JSON:", textResponse);
-        }
-    });
-
-    cancelarSalvar.addEventListener("click", () => {
-        modalConfirmarSalvarDadosUsu.classList.remove("show");
+        });
     });
 });

@@ -52,123 +52,124 @@ document.addEventListener("DOMContentLoaded", function() {
             document.getElementById("id_perfil").value = response.id_perfil_usuario_fk;
 
             modalContainerEdicao.classList.add("show"); //ABRE O MODAL
-        });
-    });
 
-    // MASCARA DO CPF
-    const cpfInput = document.getElementById('cpf');
-    cpfInput.addEventListener('input', function () {
-        let valor = cpfInput.value.replace(/\D/g, '');
-        if (valor.length > 11) valor = valor.slice(0, 11);
-        cpfInput.value = valor
-        .replace(/^(\d{3})(\d)/, '$1.$2')
-        .replace(/^(\d{3})\.(\d{3})(\d)/, '$1.$2.$3')
-        .replace(/\.(\d{3})(\d)/, '.$1-$2');
-    });
 
-    // ENVIAR DADOS EDITADOS CASO CLIQUE NO CONFIRMAR
-    buttonSalvarEdicao.addEventListener("click", async (event) => {
-        event.preventDefault();
+            // MASCARA DO CPF
+            const cpfInput = document.getElementById('cpf');
+            cpfInput.addEventListener('input', function () {
+                let valor = cpfInput.value.replace(/\D/g, '');
+                if (valor.length > 11) valor = valor.slice(0, 11);
+                cpfInput.value = valor
+                .replace(/^(\d{3})(\d)/, '$1.$2')
+                .replace(/^(\d{3})\.(\d{3})(\d)/, '$1.$2.$3')
+                .replace(/\.(\d{3})(\d)/, '.$1-$2');
+            });
 
-        const nome = document.getElementById('nome').value.trim();
-        const email = document.getElementById('email').value.trim();
-        const cpf = document.getElementById('cpf').value.trim();
-        const foto = document.getElementById('foto');
-        const arquivo = foto.files[0];
-        
-        let erro = false;
-        msgErro.innerHTML = '';
-        
-        if (!nome) {
-            msgErro.innerHTML += "Preencha o nome!<br><br>";
-            erro = true;
-        } 
-        if (!email) {
-            msgErro.innerHTML += "Preencha o email!<br><br>";
-            erro = true;
-        } 
-        if (!cpf || !validarCPF(cpf)) {
-            msgErro.innerHTML += "CPF inválido!<br><br>";
-            erro = true;
-        }
-        
-        if (arquivo){
-            var arquivos_permitods = [".png", ".jpg", ".jpeg"];
-            const regex = new RegExp("(" + arquivos_permitods.join('|').replace(/\./g, "\\.") + ")$", "i");
+            // ENVIAR DADOS EDITADOS CASO CLIQUE NO CONFIRMAR
+            buttonSalvarEdicao.addEventListener("click", async (event) => {
+                event.preventDefault();
 
-            if(!regex.test(foto.value.toLowerCase())){
-                msgErro.innerHTML += "Tipo de arquivo inválido! <br> Arquivos permitidos: .png, .jpg e .jpeg <br><br>";
-                erro = true;
-            }
+                const nome = document.getElementById('nome').value.trim();
+                const email = document.getElementById('email').value.trim();
+                const cpf = document.getElementById('cpf').value.trim();
+                const foto = document.getElementById('foto');
+                const arquivo = foto.files[0];
+                
+                let erro = false;
+                msgErro.innerHTML = '';
+                
+                if (!nome) {
+                    msgErro.innerHTML += "Preencha o nome!<br><br>";
+                    erro = true;
+                } 
+                if (!email) {
+                    msgErro.innerHTML += "Preencha o email!<br><br>";
+                    erro = true;
+                } 
+                if (!cpf || !validarCPF(cpf)) {
+                    msgErro.innerHTML += "CPF inválido!<br><br>";
+                    erro = true;
+                }
+                
+                if (arquivo){
+                    var arquivos_permitods = [".png", ".jpg", ".jpeg"];
+                    const regex = new RegExp("(" + arquivos_permitods.join('|').replace(/\./g, "\\.") + ")$", "i");
 
-            // validacao MIME
-            if (!arquivo.type.startsWith("image/")) {
-                msgErro.innerHTML += "Arquivo não é uma imagem válida.<br><br>";
-                erro = true;
-            }
-        }
+                    if(!regex.test(foto.value.toLowerCase())){
+                        msgErro.innerHTML += "Tipo de arquivo inválido! <br> Arquivos permitidos: .png, .jpg e .jpeg <br><br>";
+                        erro = true;
+                    }
 
-        if (!erro) {
-            modalContainerEdicao.classList.remove("show");
-            modalConfirmarAltDadosUsu.classList.add("show");
-        }else{
-            modalContainerEdicao.classList.remove("show");
-            modalErro.classList.add("show");
-        }
-    });
+                    // validacao MIME
+                    if (!arquivo.type.startsWith("image/")) {
+                        msgErro.innerHTML += "Arquivo não é uma imagem válida.<br><br>";
+                        erro = true;
+                    }
+                }
 
-    buttonOkErro.addEventListener("click", ()=>{
-        modalErro.classList.remove("show");
-        modalContainerEdicao.classList.add("show");
-    })
+                if (!erro) {
+                    modalContainerEdicao.classList.remove("show");
+                    modalConfirmarAltDadosUsu.classList.add("show");
+                }else{
+                    modalContainerEdicao.classList.remove("show");
+                    modalErro.classList.add("show");
+                }
+            });
 
-    // CLIQUE NO NAO CONFIRMAR
-    cancelarEdicao.addEventListener("click", () =>{
-        modalConfirmarAltDadosUsu.classList.remove("show");
-        modalContainerEdicao.classList.add("show");
-    });
-
-    confirmarEdicao.addEventListener("click", async function(event){
-        event.preventDefault();
-
-        const formEditarUsu = new FormData(document.getElementById("form_editar_dados_usuario"));
-        // console.log(formEditarUsu);
-        
-        // Envia os dados via POST
-        let atualizar_dados = await fetch ('../actions/usuario_editar.php', {
-            method: "POST",
-            body: formEditarUsu
-        })
-        
-        // Recebe a resposta bruta do server, basicamente um debug com esteroides
-        let textResponse = await atualizar_dados.text();
-        // console.log("Resposta bruta do servidor:", textResponse);  // Mostra o que o PHP está retornando
-
-        try {
-            let response_post = JSON.parse(textResponse);
-            console.log("Resultado: " + response_post);
-
-            // ABRE O MODAL DE ALTERACOES SALVAS
-            modalConfirmarAltDadosUsu.classList.remove("show");
-            modalAlteracaoFeita.classList.add("show");
-
-            buttonOk.addEventListener("click", ()=>{
-                location.reload();
+            buttonOkErro.addEventListener("click", ()=>{
+                modalErro.classList.remove("show");
+                modalContainerEdicao.classList.add("show");
             })
 
-        } catch (error) {
-            console.error("Erro ao analisar JSON: ", error);
-            // console.log("Conteúdo não pode ser analisado como JSON:", textResponse);
-        }
-     
+            // CLIQUE NO NAO CONFIRMAR
+            cancelarEdicao.addEventListener("click", () =>{
+                modalConfirmarAltDadosUsu.classList.remove("show");
+                modalContainerEdicao.classList.add("show");
+            });
+
+            confirmarEdicao.addEventListener("click", async function(event){
+                event.preventDefault();
+
+                const formEditarUsu = new FormData(document.getElementById("form_editar_dados_usuario"));
+                // console.log(formEditarUsu);
+                
+                // Envia os dados via POST
+                let atualizar_dados = await fetch ('../actions/usuario_editar.php', {
+                    method: "POST",
+                    body: formEditarUsu
+                })
+                
+                // Recebe a resposta bruta do server, basicamente um debug com esteroides
+                let textResponse = await atualizar_dados.text();
+                // console.log("Resposta bruta do servidor:", textResponse);  // Mostra o que o PHP está retornando
+
+                try {
+                    let response_post = JSON.parse(textResponse);
+                    console.log("Resultado: " + response_post);
+
+                    // ABRE O MODAL DE ALTERACOES SALVAS
+                    modalConfirmarAltDadosUsu.classList.remove("show");
+                    modalAlteracaoFeita.classList.add("show");
+
+                    buttonOk.addEventListener("click", ()=>{
+                        location.reload();
+                    })
+
+                } catch (error) {
+                    console.error("Erro ao analisar JSON: ", error);
+                    // console.log("Conteúdo não pode ser analisado como JSON:", textResponse);
+                }
+            
+            });
+
+        
+            buttonCancelarEdicao.addEventListener("click", () => {
+                modalContainerEdicao.classList.remove("show");
+            });
+            
+            buttonSalvarEdicao.addEventListener("click", () => {
+                modalContainerEdicao.classList.remove("show");
+            });
+        });
     });
-
-});
-
-buttonCancelarEdicao.addEventListener("click", () => {
-    modalContainerEdicao.classList.remove("show");
-});
-
-buttonSalvarEdicao.addEventListener("click", () => {
-    modalContainerEdicao.classList.remove("show");
 });
