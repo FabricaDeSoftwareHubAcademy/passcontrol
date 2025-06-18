@@ -15,11 +15,10 @@
     <link rel="stylesheet" href="../../public/css/navegacao.css">
     <link rel="stylesheet" href="../../public/css/monitor-modal.css">
     <link rel="stylesheet" href="../../public/css/style_eli.css">
-    <!-- <link rel="stylesheet" href="../../public/modais/Modal_Alterar_Dados_Pessoais/alterar_dados_pessoais.css"> -->
-    <!-- <link rel="stylesheet" href="../../public/modais/Modal_Alterar_Senha/alterar_senha.css"> -->
-    <!-- <link rel="stylesheet" href="../../public/modais/ModalCadastrodosServicos/cadastro_servicos_final.css"> -->
+    <!-- <link rel="stylesheet" href="../../public/modais/alterar_dados_pessoais.css"> -->
+    <!-- <link rel="stylesheet" href="../../public/modais/alterar_senha.css"> -->
     <link rel="stylesheet" href="../../public/css/modal_cadastro_servico.css">
-    <!-- <link rel="stylesheet" href="../../public/modais/Modal_Cadastro_Ponto_Atendimento/cadastro_ponto_atendimento.css"> -->
+    <!-- <link rel="stylesheet" href="../../public/modais/cadastro_ponto_atendimento.css"> -->
     <link rel="stylesheet" href="../../public/modais/ModalConfirmaDados/estilo.css">
     
     <!-- JS -->
