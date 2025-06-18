@@ -44,7 +44,6 @@
 <body class="control-body-navegacao">
     <?php
     include "../actions/usuario_listar.php";
-    include "../actions/perfil_listar.php";
     // include "../actions/servico_listar.php";
     include "./navegacao.php";
     ?>
