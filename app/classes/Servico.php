@@ -31,8 +31,8 @@ class Servico{
 
     public function buscar_por_id($id){
         $db = new Database('servico');
-        $obj = $db->select('id_servico ='.$id)->fetchObject(self::class);
-        return $obj; //retorna um objeto da CLASSE USUARIO!!!!
+        $obj = $db->select('id_servico = '.$id)->fetchObject(self::class);
+        return $obj; //retorna um objeto da CLASSE SERVICO!!!!
     }
 
     public function atualizar(){
