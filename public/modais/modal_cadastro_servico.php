@@ -13,12 +13,12 @@
             <div class="inf-modal-ponto-atendimento">
                 <div class="container-ponto-atendimento">
                     <label class="label-ponto-atendimento"><b>Nome do Serviço</b></label>
-                    <input type="text" id="nome_ponto_atendimento_cadastrar" name="nome_servico" class="input-text-ponto-atendimento">
+                    <input type="text" id="nome_ponto_atendimento_cadastrar" name="nome_servico" class="input-text-ponto-atendimento" placeholder="Ex: Transporte, Poda de Árvores, IPTU... ">
                 </div>
             </div>
             <div class="servico-ponto-atendimento">
                 <label class="label-ponto-atendimento"><b>Código</b></label>
-                <input type="text" id="identificador_ponto_atendimento_cadastrar" name="codigo_servico" class="input-text-ponto-atendimento">
+                <input type="text" id="identificador_ponto_atendimento_cadastrar" name="codigo_servico" class="input-text-ponto-atendimento" placeholder="Ex: Tr142, Pa234, IP192">
             </div>
             <div class="servico-ponto-atendimento">
                 <label class="label-ponto-atendimento"><b>Foto</b></label>
