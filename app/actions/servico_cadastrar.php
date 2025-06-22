@@ -1,25 +1,55 @@
 <?php
 require_once '../classes/Servico.php';
 
+// Validação básica dos campos
+$nome = $_POST['nome_servico'] ?? '';
+$codigo = $_POST['codigo_servico'] ?? '';
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+if (empty($nome) || empty($codigo)) {
+    echo json_encode(['status' => 'erro', 'message' => 'Preencha todos os campos obrigatórios.']);
+    exit;
+}
 
-    $nome_servico = $_POST['nome_servico'];
-    $codigo_servico = $_POST['codigo_servico'];
-    $url_img = $_POST['url_imagem_servico'];
-    $servico = new Servico();
+// Processamento da imagem
+$nomeImagem = '';
 
-    $servico->nome_servico = $nome_servico;
-    $servico->codigo_servico = $codigo_servico;
-    $servico->url_imagem_servico = $url_img;
+if (isset($_FILES['url_imagem_servico']) && $_FILES['url_imagem_servico']['error'] === UPLOAD_ERR_OK) {
+    $arquivoTmp = $_FILES['url_imagem_servico']['tmp_name'];
+    $nomeArquivo = basename($_FILES['url_imagem_servico']['name']);
+    $extensao = strtolower(pathinfo($nomeArquivo, PATHINFO_EXTENSION));
 
+    $permitidos = ['jpg', 'jpeg', 'png'];
 
-    if ($servico->cadastrar()) {
-        echo json_encode(['status' => 'ok']);
+    if (in_array($extensao, $permitidos)) {
+        $nomeImagem = uniqid('img_') . "." . $extensao;
+        $pastaDestino = '../../public/img/img-servicos/';
+
+        if (!is_dir($pastaDestino)) {
+            mkdir($pastaDestino, 0777, true);
+        }
+
+        move_uploaded_file($arquivoTmp, $pastaDestino . $nomeImagem);
     } else {
-        echo json_encode(['status' => 'erro', 'mensagem' => 'Erro ao cadastrar o guichê.']);
+        echo json_encode(['status' => 'erro', 'message' => 'Formato de imagem inválido']);
+        exit;
     }
 } else {
-    echo json_encode(['status' => 'erro', 'mensagem' => 'Requisição inválida.']);
+    echo json_encode(['status' => 'erro', 'message' => 'Erro no upload da imagem']);
+    exit;
+}
+
+// Instanciar a classe e atribuir os valores
+$servico = new Servico();
+$servico->nome_servico = $nome;
+$servico->codigo_servico = $codigo;
+$servico->url_imagem_servico = $nomeImagem;
+
+// Cadastrar no banco
+$resultado = $servico->cadastrar();
+
+if ($resultado) {
+    echo json_encode(['status' => 'ok']);
+} else {
+    echo json_encode(['status' => 'erro', 'message' => 'Erro ao salvar no banco']);
 }
 ?>

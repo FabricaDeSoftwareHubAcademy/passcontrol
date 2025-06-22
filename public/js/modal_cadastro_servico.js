@@ -16,45 +16,64 @@ const btnOkCadastrar = document.getElementById("btnOkCadastrar");
 btn_cadastrar_servico.addEventListener("click", () => {
     modalCadastro.classList.add("show");
 
-
-    // 2. Cancelar Cadastro
+    // Cancelar cadastro
     btnCancelarCadastro.addEventListener("click", (event) => {
         event.preventDefault();
         modalCadastro.classList.remove("show");
     });
 
-    // 3. Clicar em Salvar no Cadastro
+    // Salvar cadastro (validação + confirmação)
     btnSalvarCadastro.addEventListener("click", function (event) {
         event.preventDefault();
 
-        const myform = document.getElementById("formulario_cadastrar");
-        const inputs = myform.querySelectorAll("input");
-        let resposta  = true;
+        // Pegando os campos
+        const nome_servico = document.getElementById('nome_ponto_atendimento_cadastrar').value.trim();
+        const codigo_servico = document.getElementById('codigo_ponto_atendimento_cadastrar').value.trim();
+        const imagem_servico = document.getElementById('imagem_ponto_atendimento_cadastrar').value.trim();
 
-        // Verifica se todos os campos estão preenchidos
-        inputs.forEach(inputAtual => {
-            if (inputAtual.value.trim() === "") {
-                resposta  = false;
-            }
-        });
+        let erro = false;
 
-        if (!resposta ) {
-            alert("Preencha todos os campos para continuar!");
+        // Validação nome do serviço
+        if (!nome_servico) {
+            document.getElementById('erro_nome_servico').textContent = "Preencha o nome do serviço.";
+            erro = true;
+        } else {
+            document.getElementById('erro_nome_servico').textContent = "";
+        }
+
+        // Validação código
+        if (!codigo_servico) {
+            document.getElementById('erro_codigo_servico').textContent = "Preencha o código.";
+            erro = true;
+        } else {
+            document.getElementById('erro_codigo_servico').textContent = "";
+        }
+
+        // Validação imagem
+        if (!imagem_servico) {
+            document.getElementById('erro_img_servico').textContent = "Preencha a URL da imagem.";
+            erro = true;
+        } else {
+            document.getElementById('erro_img_servico').textContent = "";
+        }
+
+        // 👉 Se houver erro, não avança
+        if (erro) {
             return;
         }
 
-        // Esconde o modal de cadastro e mostra o modal de confirmação
+        // 👉 Se tudo certo, fecha modal cadastro e abre confirmação
         modalCadastro.classList.remove("show");
         modalConfirmacao.classList.add("show");
     });
 
-    // 4. Se clicar em NÃO, volta para o modal de cadastro
+    // NÃO na confirmação → volta para o modal de cadastro
     btnNaoConfirmacao.addEventListener("click", () => {
         modalConfirmacao.classList.remove("show");
         modalCadastro.classList.add("show");
     });
 
-    // 5. Se clicar em SIM, envia os dados e mostra modal de sucesso
+    // SIM na confirmação → envia os dados para o PHP
     btnSimConfirmacao.addEventListener("click", async () => {
         const myform = document.getElementById("formulario_cadastrar");
         const formData = new FormData(myform);
@@ -80,13 +99,32 @@ btn_cadastrar_servico.addEventListener("click", () => {
         }
     });
 
-    // 6. Botão OK finaliza o fluxo
+    // OK no sucesso → fecha tudo e recarrega
     btnOkCadastrar.addEventListener("click", () => {
         apareceMod.classList.remove("show");
         location.reload();
     });
-});
+    const inputImagem = document.getElementById('imagem_ponto_atendimento_cadastrar');
+    const previewImagem = document.getElementById('preview_imagem_cadastrar');
 
+    inputImagem.addEventListener('change', function(){
+        const file = this.files[0];
+
+        if(file){
+            const reader = new FileReader();
+
+            reader.addEventListener('load', function(){
+                previewImagem.setAttribute('src', this.result);
+                previewImagem.style.display = 'block';
+            });
+
+            reader.readAsDataURL(file);
+        } else {
+            previewImagem.setAttribute('src', '#');
+            previewImagem.style.display = 'none';
+        }
+    });
+});
 
 
 //////// CODIGO ANTIGO COM PROBLEMAS - INUTILIZADO/PARCIALMENTE FUNCIONAL ---NÃO USAR!!---
