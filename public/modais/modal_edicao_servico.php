@@ -21,7 +21,7 @@
             </div>
             <div class="servico">
                 <label class="label"><b>Imagem</b></label>
-                <input type="text" id="identificador_ponto_atendimento" name="url_imagem_servico" class="input-text" placeholder="">
+                <input type="file" id="identificador_ponto_atendimento" name="url_imagem_servico" class="input-text" accept="image/*">
             </div>
             <div class="button-group">
                 <button class="botao-modal cancel">Voltar</button>
