@@ -36,8 +36,8 @@
 <body class="control-body-navegacao">
     <?php
     include "./navegacao.php";
-    include "../actions/perfil_listar.php";
-    include "../actions/servico_listar.php";
+    include "../actions/usuario_listar.php";
+    include "../actions/servico_listar.php";    
     ?>
 
     <section class="Area-Util-Projeto">

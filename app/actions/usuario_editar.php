@@ -18,7 +18,7 @@ elseif (($_SERVER['REQUEST_METHOD'] === 'POST')){
     $path_foto = '';
     if (isset($_FILES["foto"]) && $_FILES["foto"]["error"] === UPLOAD_ERR_OK) {
 
-        $pasta = '../../public/img/uploads/uploads_usuario/';
+        $pasta = '../../public/img/uploads/';
         $arquivo = $_FILES["foto"];
         $nome_arquivo = $arquivo['name'];
         $novo_nome = uniqid();
@@ -67,7 +67,7 @@ elseif (($_SERVER['REQUEST_METHOD'] === 'POST')){
         }                    
     }
     else{
-        $resposta = array( "msg" => "Preencha todos os campos", "status" => "ERRO");
+        $resposta = array("msg" => "Preencha todos os campos", "status" => "ERRO");
         echo json_encode($resposta);
         exit;
     }
