@@ -15,12 +15,12 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
-CREATE DATABASE passcontrol;
-USE passcontrol;
-
 --
 -- Table structure for table `fila_senha`
 --
+
+CREATE DATABASE passcontrol;
+USE passcontrol;
 
 DROP TABLE IF EXISTS `fila_senha`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
@@ -149,7 +149,7 @@ CREATE TABLE `ponto_atendimento` (
   `ponto_atendimento_created_by_id` int(11) DEFAULT NULL,
   `ponto_atendimento_updated_by_id` int(11) DEFAULT NULL,
   PRIMARY KEY (`id_ponto_atendimento`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -158,6 +158,7 @@ CREATE TABLE `ponto_atendimento` (
 
 LOCK TABLES `ponto_atendimento` WRITE;
 /*!40000 ALTER TABLE `ponto_atendimento` DISABLE KEYS */;
+INSERT INTO `ponto_atendimento` VALUES (1,'INSS','09',1,'2025-06-17 09:41:20','2025-06-17 09:41:20',NULL,NULL),(2,'IPTU','87',1,'2025-06-17 09:42:10','2025-06-17 09:42:10',NULL,NULL),(3,'Poda Arvore','45',1,'2025-06-17 09:43:11','2025-06-17 09:43:11',NULL,NULL),(4,'Aguá','21',1,'2025-06-17 11:08:30','2025-06-17 11:08:30',NULL,NULL),(5,'roblox','2we',1,'2025-06-17 11:14:05','2025-06-17 11:14:05',NULL,NULL),(6,'NOd','214',1,'2025-06-17 11:26:40','2025-06-17 11:26:40',NULL,NULL),(7,'sesper','45',1,'2025-06-17 11:41:47','2025-06-17 11:41:47',NULL,NULL),(8,'Inss','98',1,'2025-06-18 09:02:58','2025-06-18 09:02:58',NULL,NULL),(9,'INSS','65',1,'2025-06-18 10:34:51','2025-06-18 10:34:51',NULL,NULL),(10,'Conselho Minici','77',1,'2025-06-18 11:39:06','2025-06-18 11:39:06',NULL,NULL);
 /*!40000 ALTER TABLE `ponto_atendimento` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -179,7 +180,7 @@ CREATE TABLE `servico` (
   `servico_created_by_id` int(11) DEFAULT NULL,
   `servico_updated_by_id` int(11) DEFAULT NULL,
   PRIMARY KEY (`id_servico`)
-) ENGINE=InnoDB AUTO_INCREMENT=69 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=101 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -188,7 +189,7 @@ CREATE TABLE `servico` (
 
 LOCK TABLES `servico` WRITE;
 /*!40000 ALTER TABLE `servico` DISABLE KEYS */;
-INSERT INTO `servico` VALUES (58,'dadad1111222','aahg','',0,'2025-06-10 12:30:15','2025-06-16 09:49:29',NULL,NULL),(59,'p0p0','0p0p','',0,'2025-06-10 12:30:20','2025-06-16 10:29:00',NULL,NULL),(60,'','','',0,'2025-06-10 12:30:56','2025-06-12 12:01:45',NULL,NULL),(61,'','','',NULL,'2025-06-10 12:31:31','2025-06-16 11:52:33',NULL,NULL),(62,'','','',NULL,'2025-06-10 12:32:05','2025-06-10 12:32:05',NULL,NULL),(63,'','','',NULL,'2025-06-10 12:32:23','2025-06-11 11:50:25',NULL,NULL),(64,'','','',1,'2025-06-10 12:33:39','2025-06-16 09:49:36',NULL,NULL),(65,'','','',NULL,'2025-06-10 12:33:42','2025-06-10 12:33:42',NULL,NULL),(66,'','','',NULL,'2025-06-12 08:48:09','2025-06-12 08:48:09',NULL,NULL),(67,'teste','12','',NULL,'2025-06-12 08:48:24','2025-06-12 12:09:22',NULL,NULL),(68,'sds','sds','sds',NULL,'2025-06-16 11:16:12','2025-06-16 11:16:12',NULL,NULL);
+INSERT INTO `servico` VALUES (96,'bola1','Teste','',1,'2025-06-17 12:14:05','2025-06-18 12:27:59',NULL,NULL),(97,'bola2','teste','',1,'2025-06-17 12:16:22','2025-06-18 12:30:38',NULL,NULL),(98,'bola3','teste','',0,'2025-06-17 12:16:35','2025-06-18 12:30:29',NULL,NULL),(99,'bola4','teste','',0,'2025-06-17 12:26:06','2025-06-18 12:30:54',NULL,NULL),(100,'bola5','Teste','xdsdadsa',0,'2025-06-17 12:28:23','2025-06-18 12:30:00',NULL,NULL);
 /*!40000 ALTER TABLE `servico` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -218,7 +219,7 @@ CREATE TABLE `usuario` (
   UNIQUE KEY `cpf_usuario` (`cpf_usuario`),
   KEY `id_perfil_usuario_fk` (`id_perfil_usuario_fk`),
   CONSTRAINT `usuario_ibfk_1` FOREIGN KEY (`id_perfil_usuario_fk`) REFERENCES `perfil_usuario` (`id_perfil_usuario`)
-) ENGINE=InnoDB AUTO_INCREMENT=42 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=45 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -227,8 +228,34 @@ CREATE TABLE `usuario` (
 
 LOCK TABLES `usuario` WRITE;
 /*!40000 ALTER TABLE `usuario` DISABLE KEYS */;
-INSERT INTO `usuario` VALUES (1,'Admin','admin@adm.com','00000000000','$2y$10$YtnErYhzw82N2BNzW99Y4Oc5ReB/SRV3bIvou0cRRWaLOX7MojONS','',1,0,'2025-05-30 12:19:56','2025-06-12 11:58:24',NULL,NULL,5),(2,'testetestea','teste_edit@email.com','26261319030','$2y$10$4qMXOWnZ2CrktN44otSAJeQT8qwfVNg6rOJb6pQ.F1Z.nIyaUr.zO','../../public/img/uploads/uploads_usuario/68500e6a736fc.png',0,0,'2025-06-02 11:38:15','2025-06-16 09:30:34',NULL,NULL,7),(3,'testeparalelo','testepar@email.com','29373500031','$2y$10$J16M04tcx4SMpYVbymFTxuWxNC/HSJpc2w.SjnmLlW4k4bSGTploe','',0,0,'2025-06-02 12:19:44','2025-06-16 11:14:16',NULL,NULL,6),(4,'João','joao@gmail.com','00012333433','$2y$10$XDisMldzDfmFDGHnST1VDODWK4bieJl2o0XAnEfYIvkpB.r1SSmeq','../../public/img/uploads/uploads_usuario/68501bd2ecb81.png',0,1,'2025-06-04 09:23:11','2025-06-16 10:27:46',NULL,NULL,6),(5,'Fred','fred@gmail.com','60292153023','$2y$10$HV63vcd5KksSn7s4nlYsN.or3tT8nEJzQUTv1EF62IYjFQbkyOciK','../../public/img/uploads/uploads_usuario/6850317119686.jpeg',0,1,'2025-06-04 10:13:04','2025-06-16 12:00:01',NULL,NULL,6),(6,'Lucas','lucas@gmail.com','33572536073','$2y$10$BuUC.RZNJ99zAvSJXQGWnegRNcYYzVLHs9nRWwZvMhhyLdr5XD3eu','',0,0,'2025-06-05 09:15:59','2025-06-10 11:28:11',NULL,NULL,7),(7,'thiago','thiago@gmail.com','01342850181','$2y$10$IcqVxgkZtBmBQle/lNebHeOfJhLnAFHAk5.mWttQATcAzK9j5L0VS','',0,0,'2025-06-05 09:29:09','2025-06-10 11:28:11',NULL,NULL,5),(8,'nome_teste','nome_teste@email.com','07427698100','$2y$10$TQRtoWSC3p.mmOLcIhx.ge.kz679niIY/jGjKO1SKgZiRJF9vQsTW','',0,0,'2025-06-05 09:29:39','2025-06-10 12:32:34',NULL,NULL,6),(9,'Novo Teste','newteste@email.com','16997205097','$2y$10$i6HvMrJoIPQYTSjPeBAuS.qvUiry84lg66SCNSr/KRc0nyAyfX6.C','',0,1,'2025-06-06 09:17:24','2025-06-10 11:28:11',NULL,NULL,7),(10,'Gabriel Alvin','alvin@email.com','88310017103','$2y$10$aR/THX/ZOkkmOGUgv83FlOCZuYiKgw/GzQF/1rkGpy3Z4AKuQmS76','',0,1,'2025-06-06 09:39:16','2025-06-10 11:28:11',NULL,NULL,5),(11,'Graziela','emaildagrazi@gmail.com','80095216120','$2y$10$5F9M6CP6oWBJTN2u6b4ydOiIdNUE..AR7F0szn1O7cvRFiNiVh1nS','',0,0,'2025-06-06 10:40:33','2025-06-11 09:35:50',NULL,NULL,7),(39,'Antônio Braga','antoniobraga@gmail.com','40415805015','$2y$10$5yS.i2rIhJpKbERmfXrd5OZXm2ZZxHaedXXD1izE.aJQdQqVR9pra','',0,1,'2025-06-09 10:04:03','2025-06-11 08:38:45',NULL,NULL,6),(40,'Teste@teste','testetestetetestee@teste.com','97491497004','$2y$10$aZvmaTK25DkGSjRw/X5IPe95rhcl./MZ6d1FM9KfZeQ6abv9O4M.y','../../public/img/uploads/uploads_usuario/685034ca6dd12.jpeg',0,0,'2025-06-10 12:11:55','2025-06-16 12:14:18',NULL,NULL,5),(41,'caique santos fd','caiqueeflopes@hotmail.com','07760805128','$2y$10$vMOBHCTNTHhOMMK4RubRlehxtjJ.twkRjSfHC4JRGAgnlyL50EwYq','../../public/img/uploads/uploads_usuario/68499364a58fa.png',0,0,'2025-06-11 11:07:50','2025-06-16 09:18:27',NULL,NULL,6);
+INSERT INTO `usuario` VALUES (1,'Admin','admin@adm.com','00000000000','$2y$10$YtnErYhzw82N2BNzW99Y4Oc5ReB/SRV3bIvou0cRRWaLOX7MojONS','',1,0,'2025-05-30 12:19:56','2025-06-23 09:02:42',NULL,NULL,5),(2,'testetestea','teste_edit@email.com','26261319030','$2y$10$4qMXOWnZ2CrktN44otSAJeQT8qwfVNg6rOJb6pQ.F1Z.nIyaUr.zO','../../public/img/uploads/uploads_usuario/68500e6a736fc.png',0,0,'2025-06-02 11:38:15','2025-06-18 12:14:46',NULL,NULL,7),(3,'testeparalelo','testepar@email.com','29373500031','$2y$10$J16M04tcx4SMpYVbymFTxuWxNC/HSJpc2w.SjnmLlW4k4bSGTploe','',0,0,'2025-06-02 12:19:44','2025-06-16 11:14:16',NULL,NULL,6),(4,'João','joao@gmail.com','00012333433','$2y$10$XDisMldzDfmFDGHnST1VDODWK4bieJl2o0XAnEfYIvkpB.r1SSmeq','../../public/img/uploads/uploads_usuario/68501bd2ecb81.png',0,1,'2025-06-04 09:23:11','2025-06-18 12:16:43',NULL,NULL,6),(5,'Fred','fred@gmail.com','60292153023','$2y$10$HV63vcd5KksSn7s4nlYsN.or3tT8nEJzQUTv1EF62IYjFQbkyOciK','../../public/img/uploads/uploads_usuario/6850317119686.jpeg',0,1,'2025-06-04 10:13:04','2025-06-18 12:16:40',NULL,NULL,6),(6,'Lucas','lucas@gmail.com','33572536073','$2y$10$BuUC.RZNJ99zAvSJXQGWnegRNcYYzVLHs9nRWwZvMhhyLdr5XD3eu','',0,0,'2025-06-05 09:15:59','2025-06-10 11:28:11',NULL,NULL,7),(7,'thiago','thiago@gmail.com','01342850181','$2y$10$IcqVxgkZtBmBQle/lNebHeOfJhLnAFHAk5.mWttQATcAzK9j5L0VS','',0,0,'2025-06-05 09:29:09','2025-06-10 11:28:11',NULL,NULL,5),(8,'nome_teste','nome_teste@email.com','07427698100','$2y$10$TQRtoWSC3p.mmOLcIhx.ge.kz679niIY/jGjKO1SKgZiRJF9vQsTW','',0,0,'2025-06-05 09:29:39','2025-06-10 12:32:34',NULL,NULL,6),(9,'Novo Teste','newteste@email.com','16997205097','$2y$10$i6HvMrJoIPQYTSjPeBAuS.qvUiry84lg66SCNSr/KRc0nyAyfX6.C','',0,1,'2025-06-06 09:17:24','2025-06-10 11:28:11',NULL,NULL,7),(10,'Gabriel Alvin','alvin@email.com','88310017103','$2y$10$/c26/7V8opQL16zprtQGpuSm0LC1XUoRwTB2kTfpuAvVQi09EHunG','',0,0,'2025-06-06 09:39:16','2025-06-17 09:24:04',NULL,NULL,5),(11,'Graziela','emaildagrazi@gmail.com','80095216120','$2y$10$5F9M6CP6oWBJTN2u6b4ydOiIdNUE..AR7F0szn1O7cvRFiNiVh1nS','',0,0,'2025-06-06 10:40:33','2025-06-11 09:35:50',NULL,NULL,7),(39,'Antônio Braga','antoniobraga@gmail.com','40415805015','$2y$10$5yS.i2rIhJpKbERmfXrd5OZXm2ZZxHaedXXD1izE.aJQdQqVR9pra','',0,1,'2025-06-09 10:04:03','2025-06-11 08:38:45',NULL,NULL,6),(40,'Teste@teste','testetestetetestee@teste.com','97491497004','$2y$10$aZvmaTK25DkGSjRw/X5IPe95rhcl./MZ6d1FM9KfZeQ6abv9O4M.y','../../public/img/uploads/uploads_usuario/685034ca6dd12.jpeg',0,0,'2025-06-10 12:11:55','2025-06-18 12:16:57',NULL,NULL,5),(41,'caique santos fd','caiqueeflopes@hotmail.com','07760805128','$2y$10$vMOBHCTNTHhOMMK4RubRlehxtjJ.twkRjSfHC4JRGAgnlyL50EwYq','../../public/img/uploads/uploads_usuario/68499364a58fa.png',0,0,'2025-06-11 11:07:50','2025-06-16 09:18:27',NULL,NULL,6),(43,'Teste nova senha pass_hash ','newpass@email.com','90553525000','$2y$10$p0NGYkNtKLdQ.08Syd54bOofFJeCrxddag0QCsCQentCdUL.Ran8a','',0,0,'2025-06-17 09:16:53','2025-06-17 09:20:08',NULL,NULL,7),(44,'Pedro Pedra','ppedra@email.com','92208029020','92208@Pedra',NULL,0,1,'2025-06-17 09:33:46','2025-06-18 12:15:35',NULL,NULL,7);
 /*!40000 ALTER TABLE `usuario` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `usuario_servico`
+--
+
+DROP TABLE IF EXISTS `usuario_servico`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `usuario_servico` (
+  `id_usuario_fk` int(11) NOT NULL,
+  `id_servico_fk` int(11) NOT NULL,
+  PRIMARY KEY (`id_usuario_fk`,`id_servico_fk`),
+  KEY `id_servico_fk` (`id_servico_fk`),
+  CONSTRAINT `usuario_servico_ibfk_1` FOREIGN KEY (`id_usuario_fk`) REFERENCES `usuario` (`id_usuario`),
+  CONSTRAINT `usuario_servico_ibfk_2` FOREIGN KEY (`id_servico_fk`) REFERENCES `servico` (`id_servico`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `usuario_servico`
+--
+
+LOCK TABLES `usuario_servico` WRITE;
+/*!40000 ALTER TABLE `usuario_servico` DISABLE KEYS */;
+/*!40000 ALTER TABLE `usuario_servico` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -240,4 +267,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-06-16 11:35:42
+-- Dump completed on 2025-06-23  8:54:03

@@ -98,10 +98,10 @@ $guiches = $guiche->buscar();
 </section>
 
 <?php
-include "./monitor_modal.php";
-/* include "../../public/modais/modal_edicao_ponto_atendimento.php";
-include "../../public/modais/modal_cadastro_ponto_atendimento.php";
-include "../../public/modais/modal_alterar_status_ponto_atendimento.php"; */
+include_once "./monitor_modal.php";
+# include "../../public/modais/modal_edicao_ponto_atendimento.php";
+# include "../../public/modais/modal_cadastro_ponto_atendimento.php";
+# include "../../public/modais/modal_alterar_status_ponto_atendimento.php";
 ?>
 
 </body>
