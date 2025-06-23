@@ -1,4 +1,4 @@
-let btn_cadastrar_guiche = document.getElementById("btn_cadastrar_servico");
+let btn_cadastrar_servico = document.getElementById("btn_cadastrar_servico");
 const apareceMod = document.getElementById("confirma_cadastrar");
 
 const modalCadastro = document.querySelector(".fundo-container-cad-ponto-atendimento");
@@ -13,7 +13,7 @@ const btnNaoConfirmacao = document.querySelector(".cancel_ConfDadosRegist");
 const btnOkCadastrar = document.getElementById("btnOkCadastrar");
 
 // 1. Abrir Modal de Cadastro
-btn_cadastrar_guiche.addEventListener("click", () => {
+btn_cadastrar_servico.addEventListener("click", () => {
     modalCadastro.classList.add("show");
 
 
