@@ -2,6 +2,10 @@
 session_start();
 require_once '../database/Database.php';
 
+if (!isset($_SESSION['historico_senhas']) || !is_array($_SESSION['historico_senhas'])) {
+    $_SESSION['historico_senhas'] = [];
+}
+
 function ordenarSenhasComPrioridade(array $senhas): array {
     $filaFinal = [];
     $puladas = [];
@@ -57,7 +61,9 @@ if (!isset($_SESSION['senha_principal']) || !isset($_SESSION['fila_senhas'])) {
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['proxima'])) {
     $atual = $_SESSION['senha_principal'];
-    array_push($_SESSION['fila_senhas'], $atual);
+
+    array_unshift($_SESSION['historico_senhas'], $atual);
+
     $_SESSION['senha_principal'] = array_shift($_SESSION['fila_senhas']);
 
     header('Location: ' . $_SERVER['PHP_SELF']);
@@ -65,8 +71,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['proxima'])) {
 }
 
 $senhaPrincipal = $_SESSION['senha_principal'];
-$senhas = $_SESSION['fila_senhas'];
-$senhasParaMostrar = array_slice($senhas, 0, 4);
+$ultimasChamadas = array_slice($_SESSION['historico_senhas'], 0, 4);
 
 $servicoDB = new Database('servico');
 ?>
@@ -94,7 +99,7 @@ $servicoDB = new Database('servico');
         <div class="fundo-azul-lateral">
             <h1>Últimas<br>Chamadas</h1>
             <div class="area-das-senhas">
-                <?php foreach ($senhasParaMostrar as $senha): ?>
+                <?php foreach ($ultimasChamadas as $senha): ?>
                     <?php
                         $servico = $servicoDB->select('id_servico = ' . $senha['id_servico_fk'])->fetch(PDO::FETCH_ASSOC);
                         $prioridade = $senha['prioridade_fila_senha'] ? 'PR' : 'CM';
@@ -141,10 +146,10 @@ $servicoDB = new Database('servico');
         </div>
     </section>
 
-    <!-- Botão Próxima Senha
+    <!-- Botão proxima senha -->
     <form method="POST" style="position: fixed; bottom: 30px; right: 30px;">
         <button type="submit" name="proxima" style="padding: 10px 20px; font-size: 16px;">Próxima Senha</button>
-    </form> -->
+    </form>
    
 </body>
 </html>
