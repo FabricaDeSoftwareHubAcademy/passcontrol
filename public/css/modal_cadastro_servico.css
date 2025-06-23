@@ -46,6 +46,13 @@
     display: flex;
     pointer-events: auto;
 }
+.messagem-erro {
+    color: red;
+    font-size: 12px;
+    margin-top: 4px;
+    display: block;
+}
+
 
 /* Estilo do modal */
 .modal-ponto-atendimento {
