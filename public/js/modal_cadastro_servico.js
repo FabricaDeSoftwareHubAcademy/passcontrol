@@ -20,6 +20,7 @@ btn_cadastrar_servico.addEventListener("click", () => {
     btnCancelarCadastro.addEventListener("click", (event) => {
         event.preventDefault();
         modalCadastro.classList.remove("show");
+        location.reload();
     });
 
     // Salvar cadastro (validação + confirmação)
@@ -57,23 +58,23 @@ btn_cadastrar_servico.addEventListener("click", () => {
             document.getElementById('erro_img_servico').textContent = "";
         }
 
-        // 👉 Se houver erro, não avança
+        // Se houver erro, não avança
         if (erro) {
             return;
         }
 
-        // 👉 Se tudo certo, fecha modal cadastro e abre confirmação
+        // Se tudo certo, fecha modal cadastro e abre confirmação
         modalCadastro.classList.remove("show");
         modalConfirmacao.classList.add("show");
     });
 
-    // NÃO na confirmação → volta para o modal de cadastro
+    // NÃO na confirmação -> volta para o modal de cadastro
     btnNaoConfirmacao.addEventListener("click", () => {
         modalConfirmacao.classList.remove("show");
         modalCadastro.classList.add("show");
     });
 
-    // SIM na confirmação → envia os dados para o PHP
+    // SIM na confirmação -> envia os dados para o PHP
     btnSimConfirmacao.addEventListener("click", async () => {
         const myform = document.getElementById("formulario_cadastrar");
         const formData = new FormData(myform);
@@ -99,11 +100,7 @@ btn_cadastrar_servico.addEventListener("click", () => {
         }
     });
 
-    // OK no sucesso → fecha tudo e recarrega
-    btnOkCadastrar.addEventListener("click", () => {
-        apareceMod.classList.remove("show");
-        location.reload();
-    });
+    // OK no sucesso -> fecha tudo e recarrega
     const inputImagem = document.getElementById('imagem_ponto_atendimento_cadastrar');
     const previewImagem = document.getElementById('preview_imagem_cadastrar');
 
@@ -124,86 +121,8 @@ btn_cadastrar_servico.addEventListener("click", () => {
             previewImagem.style.display = 'none';
         }
     });
+        btnOkCadastrar.addEventListener("click", () => {
+        apareceMod.classList.remove("show");
+        location.reload();
+    });
 });
-
-
-//////// CODIGO ANTIGO COM PROBLEMAS - INUTILIZADO/PARCIALMENTE FUNCIONAL ---NÃO USAR!!---
-// let btn_cadastrar_guiche = document.getElementById("btn_cadastrar_servico");
-// const apareceMod = document.getElementById("confirma_cadastrar");
-
-// const modalContainer_CadPontoAtend = document.querySelector(".fundo-container-cad-ponto-atendimento");
-// const buttonCancelar_CadPontoAtend = document.querySelector(".cancel_CadPontoAtend");
-// const buttonSalvar_CadPontoAtend = document.querySelector(".save_CadPontoAtend");
-
-// // Abrir Modal
-// btn_cadastrar_guiche.addEventListener("click", () => {
-//     modalContainer_CadPontoAtend.classList.add("show");
-// });
-
-// // Fechar Modal
-// buttonCancelar_CadPontoAtend.addEventListener("click", (event) => {
-//     event.preventDefault();
-//     modalContainer_CadPontoAtend.classList.remove("show");
-// });
-
-// // Salvar Formulário
-// buttonSalvar_CadPontoAtend.addEventListener("click", function (event) {
-//     event.preventDefault();
-
-//     const myform = document.getElementById("formulario_cadastrar");
-//     const inputs = myform.querySelectorAll("input");
-//     let formularioValido = true;
-
-//     // Verifica se todos os campos estão preenchidos
-//     inputs.forEach(inputAtual => {
-//         if (inputAtual.value.trim() === "") {
-//             formularioValido = false;
-//         }
-//     });
-
-//     if (!formularioValido) {
-//         alert("Preencha todos os campos para continuar!");
-//         return;
-//     }
-
-//     modalContainer_CadPontoAtend.classList.remove("show");
-//     apareceMod.classList.add("show");
-
-//     // Adiciona o evento no botão "OK" após exibir o modal de confirmação
-//     const btnOkCadastrar = document.getElementById("btnOkCadastrar");
-
-//     if (btnOkCadastrar) {
-//         btnOkCadastrar.addEventListener("click", async function handleClick() {
-//             console.log("ENTROU AQUI");
-
-//             const formData = new FormData(myform);
-
-//             try {
-//                 const dados2_php = await fetch("../../app/actions/servico_cadastrar.php", {
-//                     method: 'POST',
-//                     body: formData
-//                 });
-
-//                 const response = await dados2_php.json();
-
-//                 if (response.status === 'ok') {
-//                     console.log(response);
-//                 } else {
-//                     alert("Erro ao cadastrar: " + (response.message || "Erro desconhecido"));
-//                 }
-//             } catch (error) {
-//                 console.error("Erro na requisição:", error);
-//                 alert("Erro de conexão com o servidor.");
-//             }
-
-//             // Remove o listener após execução para evitar múltiplos envios
-//             btnOkCadastrar.removeEventListener("click", handleClick);
-//         }, { once: true });
-//         } else {
-//             console.warn("Botão btnOkCadastrar não encontrado.");
-//         }
-//     });
-
-//     function toggleMenu() {
-//         document.getElementById("mobileMenu").classList.toggle("active");
-//     }
