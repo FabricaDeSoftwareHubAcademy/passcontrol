@@ -296,13 +296,13 @@
     }
 
     .form {
-        width: 60%;
+        width: 100%;
         max-width: 450px;
         margin-right: 5%;
     }
 
     .form_login {
-        margin-left: 5%;
+        margin-left: 0%;
         margin-right: 5%;
     }
 
@@ -329,7 +329,7 @@
 
 @media (min-width: 80rem) {
     .form {
-        width: 55%;
+        width: 75%;
         max-width: 500px;
     }
 
