@@ -24,10 +24,10 @@
             <h1 class="title">PASS CONTROL</h1>
         </div>
  
-        <form action="" class="form">
+        <form id="form_rec_senha" method="POST" class="form">
             <div class="input_group">
                 <label class="label_recuperar_senha" for="">Recuperar Senha</label>
-                <input class="input" type="email" name="" id="" placeholder="E-mail">
+                <input class="input" type="email" name="email_user" id="email_user" placeholder="E-mail">
             </div>
 
             <p class="text_recuperar_senha">Você receberá um código de segurança no e-mail informado para validar sua nova senha.</p>
