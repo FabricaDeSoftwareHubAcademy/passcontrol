@@ -29,6 +29,7 @@ $guiches = $guiche->buscar();
     <script src="../../public/js/modal_edicao_ponto_atendimento.js" defer></script>
     <script src="../../public/js/modal_cadastro_ponto_atendimento.js" defer></script>
     <script src="../../public/js/modal_status_ponto_atendimento.js" defer></script>
+    <script src="../../app/js/barra_pesquisa_ponto_atendimento.js" defer></script>
     
     <!-- LOGO -->
     <link rel="shortcut icon" type="imagex/png" href="../../../public/img/Logo-Nota-Controlnt.ico">

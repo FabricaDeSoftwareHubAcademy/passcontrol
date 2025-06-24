@@ -32,6 +32,7 @@
     <script src="../../public/js/modal_cadastro_servico.js" defer></script>
     <script src="../../public/js/modal_edicao_servico.js" defer></script>
     <script src="../../public/js/modal_status_servico.js" defer></script>
+    <script src="../../app/js/barra_pesquisa_ponto_atendimento.js"></script>
 
 
     <!-- LOGO -->

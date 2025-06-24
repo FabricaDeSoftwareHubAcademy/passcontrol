@@ -36,6 +36,7 @@
     <script src="../js/usuario_alterar_status.js" defer></script>
     <script src="../js/usuario_editar.js" defer></script>
     <script src="../js/validar_cpf.js" defer></script>
+    <script src="../../app/js/barra_pesquisa_usuarios_cadastrados.js"></script>
 
     <!-- LOGO -->
     <link rel="shortcut icon" type="imagex/png" href="../../public/img/Logo-Nota-Controlnt.ico">
