@@ -65,11 +65,11 @@
             </div>
             <div class="selecionar">
                 <div class="perfild">
-                    <label class="labeledit" for="perfil">Perfil De Acesso
+                    <!-- <label class="labeledit" for="perfil">Perfil De Acesso
                         <button class="icone_add_servico" id="abrirModalCadastro" type="button" onclick="window.location.href='./cadastro_perfil.php';">
                             <img src="../../public/img/icons/add_icon.svg" alt="(+)">
                         </button>
-                    </label>
+                    </label> -->
                     <select class="selecao" name="id_perfil_usuario" required>
                         <option class="pi" value="" disabled selected>Selecione</option>
                         <?php
