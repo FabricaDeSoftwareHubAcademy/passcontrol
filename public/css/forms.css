@@ -18,10 +18,6 @@
     height: 70%;
 }
 
-.input_group_login {
-    margin-top: 1.5rem;
-}
-
 .container_link {
     text-align: right;
     margin-top: 0.8rem;
@@ -117,7 +113,7 @@
 }
 
 .container_requisitos {
-    margin-top: 1.5rem;
+    margin-top: 0.5rem;
     margin-bottom: 1.5rem;
 }
 
@@ -179,6 +175,10 @@
 
     .list_requisitos {
         font-size: 0.9rem;
+    }
+
+    .input_group_login {
+        margin-top: 1.5rem;
     }
 }
 
