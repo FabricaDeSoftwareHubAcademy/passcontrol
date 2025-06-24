@@ -65,7 +65,7 @@ $guiches = $guiche->buscar();
                     <tbody class="resto-tabela-Ponto-atendimento">
                             <?php
                                 foreach($guiches as $guiche) {
-                                    /* $estadoAtivo = ($guiche->ativo == 'ATIVO') ? 'active' : ''; */
+                                    $estadoAtivo = ($guiche->status_ponto_atendimento == 1) ? 'ativo' : 'inativo';
                                     echo '
                                     <tr>
                                         <td>'.$guiche->nome_ponto_atendimento.'</td>
@@ -82,7 +82,6 @@ $guiches = $guiche->buscar();
                                                 <div class="circulo"></div>
                                             </button>
                                         </td>
-    
                                     </tr>';
                                 }
                             ?>
