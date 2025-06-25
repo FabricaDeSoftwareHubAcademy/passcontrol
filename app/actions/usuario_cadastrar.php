@@ -18,11 +18,6 @@
             $objUser->email = filter_var($email, FILTER_SANITIZE_EMAIL);
             $objUser->cpf = preg_replace('/\D/', '',(filter_var($cpf, FILTER_SANITIZE_SPECIAL_CHARS)));
             $objUser->id_perfil = filter_var($id_perfil, FILTER_SANITIZE_NUMBER_INT);
-
-            // GERA UMA SENHA ALEATORIA E A ENVIA PRO BANCO
-            // $objUser->senha = password_hash($objUser->gerar_senha(), PASSWORD_DEFAULT);
-            // $objUser->senha = password_hash('123', PASSWORD_DEFAULT);
-            // Pega CPF só com números (já sanitizado)
             
             $cpf_limpo = $objUser->cpf;
             $cpf_parcial = substr($cpf_limpo, 0, 5); // CAPTURA OS 5 PRIMEIROS DIGITOS DO CPF
