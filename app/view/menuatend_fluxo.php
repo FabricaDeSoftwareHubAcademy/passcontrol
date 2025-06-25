@@ -1,3 +1,6 @@
+<?php
+    include_once '../actions/verifica_permissao.php';
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -24,6 +27,8 @@
     <link rel="stylesheet" href="../../public/modais/Modal_Iniciar_Intervalo/iniciar_intervalo.css">
     <link rel="stylesheet" href="../../public/modais/Modal_Encerrar_Atendimento/encerrar-atendimento.css">
 
+    
+
     <!-- JS -->
     <script src="../../public/js/navegacao_menu_lateral.js" defer></script>
     <script src="../../public/js/modal_teladelogin.js" defer></script>
@@ -39,6 +44,7 @@
     <!-- LOGO -->
     <link rel="shortcut icon" type="imagex/png" href="../../public/img/Logo-Nota-Controlnt.ico">
 </head>
+
 
 <body class="control-body-navegacao">
     <?php
