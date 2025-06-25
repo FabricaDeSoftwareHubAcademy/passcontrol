@@ -1,0 +1,150 @@
+@import url(style_main.css);
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.Area-Util-Projeto{
+    align-items: center;
+}
+
+.container_titulo{
+    width: 100%;
+    height: 8%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+    margin-top: 2rem;  
+}
+.container_titulo .titulo{
+    /* margin-left: 77px;   */
+    font-family: var(--font-main);
+    font-size: 24px;
+}
+.container_linha{
+    width: 100%;
+}
+.container_linha .linha{
+    border: 0;
+    height: 5px;
+    background: var(--cor-nave-botaa);
+    margin: 20px 0;
+    width: 90%;
+    top: 20px;
+    left: 5%;
+}
+
+
+
+
+
+
+
+/* seleção de perfil de acesso */
+
+.selecionar{
+    position: relative;
+    top: -58px;
+    left: 50%;
+    margin: 20px 0;
+    /* padding: 10px; */
+    /* border: 1px solid #ff0000; */
+    border-radius: 5px;
+    width: 50%;
+    
+}
+.perfil_container{
+    display: flex;
+    flex-direction: column;
+    /* margin-bottom: 15px; */
+}
+.labeledit{
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+.labeledit button{
+    outline: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+.titulo-permissoes {
+    margin-left: 100px; /* ajuste o valor conforme necessário */
+    display: flex;
+    align-items: center;
+    gap: 8px; /* espaço entre o texto e o botão */
+}
+
+.icone_add_servico{
+    display:flex;
+}
+.selecao_perfil{
+    top: 50px;
+    left: 20px;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    outline: none;
+    background-color: white;
+}
+.selecao_perfil .opcao{
+    padding: 10px;
+    font-size: 14px;
+}
+.opcao{
+    color: #555;
+}
+
+/* informação de erro */
+.erro {
+    color: red;
+    font-size: 0.85rem;
+    margin-top: 4px;
+    display: block;
+}
+
+ 
+
+
+
+
+/* botao da tela */
+.form-actions2{
+    display: flex;
+    justify-content: flex-end;
+    gap: 16px;
+    margin-top: 620px;
+    margin-bottom: 40px;
+    margin-right: 79px;
+}
+
+.botao_volto, .botao_salvo {
+    z-index: 1;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: 500;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    color: #fff;
+    background-color: #33404D;
+}
+
+.botao_volto:hover {
+    color: #FFFFFF;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.botao_salvo:hover {
+    color: #3AA867;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
