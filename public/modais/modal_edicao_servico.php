@@ -19,12 +19,12 @@
             <!-- CÓDIGO SERVIÇO -->
             <div class="servico">
                 <label class="label"><b>Código do Serviço</b></label>
-                <input type="text" id="indentificador_ponto_atendimento" name="codigo_servico" class="input-text">
+                <input type="text" id="identificador_ponto_atendimento" name="codigo_servico" class="input-text">
             </div>
             <!-- IMAGEM DO SERVIÇO -->
             <div class="servico">
                 <label class="label"><b>Imagem</b></label>
-                <input type="file" id="imagem_ponto_atendimento" name="url_imagem_servico" class="input-text" accept="iamge/*">
+                <input type="file" id="imagem_ponto_atendimento" name="url_imagem_servico" class="input-text" accept="image/*">
                 <img id="preview_imagem_editar" src="#" alt="Preview da Imagem" style="display:none; width: 80px, heigt:80px; height:80px; margin-top:10px; object-fit:cover; border-radius:8px;">
             </div>
             <!-- BOTÕES -->
