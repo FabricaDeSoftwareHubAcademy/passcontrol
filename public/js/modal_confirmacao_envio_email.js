@@ -10,13 +10,17 @@ if (buttonAbrir_ConfSenha && modalContainer_ConfSenha && buttonFechar_ConfSenha)
     
        let form_rec_senha = document.querySelector("#form_rec_senha");
        let formulario = new FormData(form_rec_senha);
-       
+
        let dados_php = await fetch("../actions/envio_email_recuperar_senha.php", {
         method: "POST",
         body: formulario
        });
 
+
         let response = await dados_php.json();
+
+        console.log("Resposta do PHP:", response); 
+        
         if (response.status === 200) {
             // Exibe o modal de confirmação
             modalContainer_ConfSenha.classList.add("show");
