@@ -29,6 +29,39 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 'criado_em' => $dataHora
             ];
 
+            // Teste do Zenvia para mandar sms
+            if (!empty($telefone)) {
+        
+                $telefoneLimpo = preg_replace('/\D/', '', $telefone);
+
+                if (strlen($telefoneLimpo) === 11) {
+                    $telefoneLimpo = '55' . $telefoneLimpo;
+
+                    $smsData = [
+                        'from' => 'PassControl',
+                        'to' => $telefoneLimpo,
+                        'contents' => [
+                            [
+                                'type' => 'text',
+                                'text' => "Olá $nomeCompleto! Sua senha foi gerada com sucesso. Aguarde ser chamado."
+                            ]
+                        ]
+                    ];
+
+                    $ch = curl_init('https://api.zenvia.com/v2/channels/sms/messages');
+                    curl_setopt($ch, CURLOPT_HTTPHEADER, [
+                        'Content-Type: application/json',
+                        // Aqui abaixo que e para ser adicionado o token zenvia de envio de mensagens
+                        'Authorization: Bearer SEU_TOKEN_ZENVIA'
+                    ]);
+                    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+                    curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($smsData));
+                    $response = curl_exec($ch);
+                    curl_close($ch);
+
+                }
+            }
+
             header("Location: tela_autoatendimento_page4.php");
             exit;
         } else {
