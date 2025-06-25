@@ -192,6 +192,12 @@
         });
     </script>
 
+    <script>
+        document.getElementById('nome_guiche').addEventListener('input', function (e) {
+            this.value = this.value.replace(/[^A-Za-zÀ-ÿ\s]/g, '');
+        });
+    </script>
+
 
     
     <script>
