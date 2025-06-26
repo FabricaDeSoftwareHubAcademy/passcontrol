@@ -18,14 +18,14 @@
     <!-- <link rel="stylesheet" href="../../public/modais/alterar_dados_pessoais.css"> -->
     <!-- <link rel="stylesheet" href="../../public/modais/alterar_senha.css"> -->
     <link rel="stylesheet" href="../../public/css/modal_cadastro_servico.css">
-    <!-- <link rel="stylesheet" href="../../public/modais/cadastro_ponto_atendimento.css"> -->
+    <link rel="stylesheet" href="../../public/css/modal_cadastro_ponto_atendimento.css">
     <link rel="stylesheet" href="../../public/modais/ModalConfirmaDados/estilo.css">
+    <link rel="stylesheet" href="../../public/css/modal_confirmacao_dados.css">
     
     <!-- JS -->
-    <script src="../../public/js/navegacao_menu_lateral.js" defer></script>
     <script src="../../public/js/monitor_modal.js" defer></script>
-    <!-- <script src="../../../public/js/modal_cadastro_guiche_adm.js" defer></script> -->
-    <!-- <script src="../../public/modais/ModalCadastrodosServicos/cadastro_servicos.js" defer></script> -->
+    <script src="../../public/js/navegacao_menu_lateral.js" defer></script>
+    <script src="../js/ponto_atendimento_cadastrar.js" defer></script>
     <script src="../../public/js/modal_cadastro_servico.js" defer></script>
 
     <!-- LOGO -->
@@ -131,7 +131,7 @@
     include "./monitor_modal.php";
     include_once "../../public/modais/modal_cadastro_servico.php";
     include "../../public/modais/modal_cadastro_ponto_atendimento.php";
-    include "../../public/modais/modal_confirmacao_dados.php"; // DA TEU JEITO DE PUXAR E USAR ESSE MODAL, SEJA LÁ QUEM FOR --Ass. Alvin <3
+    include "../../public/modais/modal_confirmacao_dados.php";
     ?>
 </body>
 </html>
