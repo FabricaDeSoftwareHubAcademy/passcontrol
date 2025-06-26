@@ -15,20 +15,8 @@
     background-color: #f5f5f5;
 }
 
-/* Estilo dos botões */
-.botao-modal {
-    padding: 10px 20px;
-    background-color: var(--cinza-control);
-    border: 0;
-    border-radius: 10px;
-    font-size: 18px;
-    color: #FFFFFF;
-    font-weight: 500;
-    cursor: pointer;
-}
-
 /* Estilo do container do modal */
-.modal-container {
+.modal-container-servico {
     background: rgba(0, 0, 0, 0.5);
     width: 100vw;
     height: 100vh;
@@ -43,14 +31,13 @@
     transition: opacity 0.3s ease;
     z-index: 1;
 }
-
-.modal-container.show {
+.modal-container-servico.show {
     opacity: 1;
     pointer-events: auto;
 }
 
 /* Estilo do modal */
-.modal {
+.modal-serv {
     background-color: #e0e0e0;
     width: 80%;
     max-width: 600px;
@@ -60,31 +47,43 @@
     text-align: left;
 }
 
-/* Estilo da linha horizontal */
-.linha-horizontal {
-    border: none;
-    border-top: 3px solid #000;
-    width: 100%;
-
-}
-
 /* Estilo do logo */
-.logo {
+.logo-servico {
     position: absolute;
     top: 25px;
     right: 20px;
     width: 10%;
 }
 
+/* Estilo da linha horizontal */
+.linha-horizontal-servico {
+    border: none;
+    border-top: 3px solid #000;
+    width: 100%;
+
+}
+
+/* Estilo dos botões */
+.botao-modal-edit-serv {
+    padding: 10px 20px;
+    background-color: var(--cinza-control);
+    border: 0;
+    border-radius: 10px;
+    font-size: 18px;
+    color: #FFFFFF;
+    font-weight: 500;
+    cursor: pointer;
+}
+
 /* Estilo dos labels */
-.label {
+.label-serv {
     font-size: 16px;
     margin-bottom: 5px;
     float: inline-start;
 }
 
 /* Estilo dos inputs */
-.input-text {
+.input-text-edit {
     width: 100%;
     padding: 10px;
     margin-bottom: 20px;
@@ -94,7 +93,7 @@
 }
 
 /* Grupo de botões */
-.button-group {
+.button-grup-edit-servico {
     display: flex;
     justify-content: right;
     gap: 0px;
@@ -102,7 +101,7 @@
 }
 
 /* Estilo do botão cancelar */
-.cancel {
+.cancelEditServ {
     background-color: #33404D;
     color: white;
     margin-right: 30px;
@@ -111,13 +110,13 @@
     padding: 10px 30px;
 }
 
-.cancel:hover {
+.cancelEditServ:hover {
     color: #FFF;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }
 
 /* Estilo do botão salvar */
-.save {
+.saveEditServ {
     background-color: #33404D;
     color: white;
     border-radius: 5px;
@@ -125,20 +124,20 @@
     padding: 10px 30px;
 }
 
-.save:hover {
+.saveEditServ:hover {
     color: #3AA867;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }
 
 /* Responsividade */
 @media (max-width: 1200px) {
-    .modal {
+    .modal-serv {
         width: 70%;
     }
-    .titulo{
+    .titulo-edi-servico{
         margin-bottom: 30px;
     }
-    .linha-horizontal{
+    .linha-horizontal-servico{
         border: none;
         border-top: 3px solid #000;
         width: 115%; /* Garante que a linha ocupe toda a largura do modal */
@@ -147,13 +146,13 @@
 }
 
 @media (max-width: 1024px) {
-    .modal {
+    .modal-serv {
         width: 80%;
     }
-    .titulo{
+    .titulo-edi-servico{
         margin-bottom: 30px;
     }
-    .linha-horizontal{
+    .linha-horizontal-servico{
         border: none;
         border-top: 3px solid #000;
         width: 115%; /* Garante que a linha ocupe toda a largura do modal */
@@ -162,13 +161,13 @@
 }
 
 @media (max-width: 768px) {
-    .modal {
+    .modal-serv {
         width: 90%;
     }
     .titulo{
         margin-bottom: 30px;
     }
-    .linha-horizontal{
+    .linha-horizontal-servico{
         border: none;
         border-top: 3px solid #000;
         width: 115%; /* Garante que a linha ocupe toda a largura do modal */
@@ -177,7 +176,7 @@
 }
 
 @media (max-width: 480px) {
-    .linha-horizontal{
+    .linha-horizontal-servico{
         border: none;
         border-top: 3px solid #000;
         width: 123%; /* Garante que a linha ocupe toda a largura do modal */
@@ -186,19 +185,19 @@
 }
 
 @media (min-width: 401px) and (max-width: 550px){
-    .modal {
+    .modal-serv {
         width: 95%;
         padding: 20px;
     }
-    .titulo{
+    .titulo-edi-servico{
         margin-top: 5px;
         font-size: 18px;
     }
-    .logo{
+    .logo-servico{
         top: 10px;
         width: 50px;
     }
-    .linha-horizontal{
+    .linha-horizontal-servico{
         border: none;
         border-top: 3px solid #000;
         width: 108.50%; /* Garante que a linha ocupe toda a largura do modal */
@@ -207,19 +206,19 @@
 }
 
 @media (max-width: 400px) {
-    .modal {
+    .modal-serv {
         width: 95%;
         padding: 15px;
     }
-    .titulo{
+    .titulo-edi-servico{
         margin-top: 7px;
         font-size: 18px;
     }
-    .logo{
+    .logo-servico{
         top: 10px;
         width: 50px;
     }
-    .linha-horizontal{
+    .linha-horizontal-servico{
         border: none;
         border-top: 3px solid #000;
         width: 108.50%; /* Garante que a linha ocupe toda a largura do modal */
@@ -228,18 +227,18 @@
 }
 
 @media (min-width: 320px) and (max-width: 399px) {
-    .modal {
+    .modal-serv {
         width: 95%;
         padding: 15px;
     }
-    .titulo{
+    .titulo-edi-servico{
         font-size: 14px;
     }
-    .logo{
+    .logo-servico{
         top: 15px;
         width: 40px;
     }
-    .linha-horizontal{
+    .linha-horizontal-servico{
         border: none;
         border-top: 3px solid #000;
         width: 111%; /* Garante que a linha ocupe toda a largura do modal */
