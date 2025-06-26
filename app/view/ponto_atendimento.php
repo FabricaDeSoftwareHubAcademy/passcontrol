@@ -21,18 +21,15 @@ $guiches = $guiche->buscar();
     <link rel="stylesheet" href="../../public/css/navegacao.css">
     <link rel="stylesheet" href="../../public/css/ponto_atendimento.css">
     <link rel="stylesheet" href="../../public/css/servico.css">
-    <!-- <link rel="stylesheet" href="../../public/modais/ModalEdicaoPontoAtendimento/estilo.css">
-    <link rel="stylesheet" href="../../public/modais/ModalInativacaoGuiche/cadastro.css">
-    <link rel="stylesheet" href="../../public/modais/ModalConfirmaDados/estilo.css">
-    <link rel="stylesheet" href="../../public/modais/Modal_Alterar_Dados_Pessoais/alterar_dados_pessoais.css">
-    <link rel="stylesheet" href="../../public/modais/Modal_Alterar_Senha/alterar_senha.css">
-    <link rel="stylesheet" href="../../public/modais/Modal_Cadastro_Ponto_Atendimento/cadastro_ponto_atendimento.css"> -->
+    <!-- <link rel="stylesheet" href="../../public/modais/alterar_dados_pessoais.css">
+    <link rel="stylesheet" href="../../public/modais/alterar_senha.css"> -->
+    <link rel="stylesheet" href="../../public/modais/cadastro_ponto_atendimento.css">
 
     <!-- IMPORT DO JS -->
-    <script src="../../public/js/modal_edicao_ponto_atendimento.js"></script>
-    <script src="../../public/js/modal_cadastro_ponto_atendimento.js"></script>
-    <script src="../../public/js/modal_status_ponto_atendimento.js"></script>
-    <script src="../../app/js/barra_pesquisa_ponto_atendimento.js"></script>
+    <script src="../../public/js/modal_edicao_ponto_atendimento.js" defer></script>
+    <script src="../../public/js/modal_cadastro_ponto_atendimento.js" defer></script>
+    <script src="../../public/js/modal_status_ponto_atendimento.js" defer></script>
+    <script src="../../app/js/barra_pesquisa_ponto_atendimento.js" defer></script>
     
     <!-- LOGO -->
     <link rel="shortcut icon" type="imagex/png" href="../../../public/img/Logo-Nota-Controlnt.ico">
