@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-require '../database/Database.php';
+require '../classes/Usuario.php';
 require '../../vendor/phpmailer/phpmailer/src/Exception.php';
 require '../../vendor/phpmailer/phpmailer/src/PHPMailer.php';
 require '../../vendor/phpmailer/phpmailer/src/SMTP.php';
@@ -56,51 +56,36 @@ class EmailService {
 }
 
 
-        if (isset($_POST['cpf_user'])) {
-            $cpf = preg_replace('/[^0-9]/', '', $_POST['cpf_user']);
+    if (isset($_POST['cpf_user'])) {
+        
+        $cpf = preg_replace('/[^0-9]/', '', $_POST['cpf_user']);
 
-            if (empty($cpf)) {
-                echo json_encode([
-                    'status' => 400,
-                    'message' => 'O campo cpf não pode estar vazio.'
-                ]);
+        $objUser = new Usuario();
+        $buscaCPF = 'cpf_usuario = '.$cpf;
 
-                exit;
-            }
+        $buscar = $objUser->buscar($buscaCPF);
 
-        $db = new Database('usuario');
-
-
-
-        $stmt = $db->execute("SELECT id, email FROM usuario WHERE cpf = ?", [$cpf]);
-        $usuario = $stmt->fetch(PDO::FETCH_ASSOC);
-
-        if (!$usuario) {
+        if (!$buscar) {
             echo json_encode([
                 'status' => 404,
                 'message' => 'Usuário não encontrado.'
             ]);
             exit;
         }
+        else{
 
-        $id_usuario = $usuario['id'];
-        $email = $usuario['email'];
+            $id_usuario = $buscar[0]['id_usuario'];
+            $email = $buscar[0]['email_usuario'];
 
-        if (empty($email)) {
-            echo json_encode([
-                'status' => 400,
-                'message' => 'E-mail não cadastrado para este CPF.'
-            ]);
-            exit;
+            $codigo = rand(10000, 99999);
+            $_SESSION['codigo_recuperacao'] = $codigo;
+            $_SESSION['id_usuario'] = $id_usuario;
+        
+            // Envia o e-mail com o código de recuperação
+            $emailService = new EmailService();
+            $emailService->enviarEmail($email, $codigo);
+
         }
-
-        $codigo = rand(10000, 99999);
-        $_SESSION['codigo_recuperacao'] = $codigo;
-        $_SESSION['id_usuario'] = $id_usuario;
-    
-        // Envia o e-mail com o código de recuperação
-        $emailService = new EmailService();
-        $emailService->enviarEmail($email, $codigo);
     
     } else {
         echo json_encode([
