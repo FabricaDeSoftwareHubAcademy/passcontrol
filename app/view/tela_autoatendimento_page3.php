@@ -7,6 +7,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $sobrenome = $_POST['sobrenome'] ?? '';
     $prioridade = $_POST['prioridade'] ?? null;
     $id_servico = $_POST['id_servico'] ?? null;
+    $telefone = $_POST['telefone'] ?? '';
 
     if (!empty($nome) && !empty($sobrenome) && $prioridade !== null && $id_servico !== null) {
         $nomeCompleto = $nome . ' ' . $sobrenome;
@@ -30,15 +31,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             ];
 
             // Teste do Zenvia para mandar sms
+           echo "Telefone informado: $telefone<br>";
             if (!empty($telefone)) {
-        
+                
                 $telefoneLimpo = preg_replace('/\D/', '', $telefone);
-
+                echo "informações do telefonelimpo sem espaços: $telefoneLimpo<br>";
                 if (strlen($telefoneLimpo) === 11) {
-                    $telefoneLimpo = '55' . $telefoneLimpo;
-
+                    $telefoneLimpo = '+55' . $telefoneLimpo;
+                    echo "informações do telefonelimpo apos o +55: $telefoneLimpo<br>";
                     $smsData = [
-                        'from' => 'PassControl',
+                        'from' => 'lavender-porpoise', // Use exatamente o identificador da sua conta Zenvia aqui
                         'to' => $telefoneLimpo,
                         'contents' => [
                             [
@@ -47,23 +49,69 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             ]
                         ]
                     ];
-
+                    echo 'informações do $smsData: <pre>';
+                    print_r($smsData);
+                    echo '</pre>';
+            
                     $ch = curl_init('https://api.zenvia.com/v2/channels/sms/messages');
                     curl_setopt($ch, CURLOPT_HTTPHEADER, [
                         'Content-Type: application/json',
-                        // Aqui abaixo que e para ser adicionado o token zenvia de envio de mensagens
-                        'Authorization: Bearer SEU_TOKEN_ZENVIA'
+                        // token zenvia 1: Q-E3GbFCQoCy4LY9DODinGi4C0TI25u9-qBG
+                        // token zenvia 2: Gxc8y6AKed3wbFe6SlSEgZKbwKAhLHY8dib2,"wA6kEyWvmPlXO8mX2N8JDGq9f-SXKex-RWCxdmmxokDvuPclHK2DqJIapJOq8K2x"
+                        'X-API-TOKEN: Gxc8y6AKed3wbFe6SlSEgZKbwKAhLHY8dib2,"wA6kEyWvmPlXO8mX2N8JDGq9f-SXKex-RWCxdmmxokDvuPclHK2DqJIapJOq8K2x"' // Coloque aqui seu token real da Zenvia
                     ]);
+                    echo 'informações do ch linha 63: <pre>';
+                    print_r($ch);
+                    echo '</pre>';
+
                     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+                    echo 'informações do ch linha 67: <pre>';
+                    print_r($ch);
+                    echo '</pre>';
+
+                    curl_setopt($ch, CURLOPT_POST, true);
+                    echo 'informações do ch linha 73: <pre>';
+                    print_r($ch);
+                    echo '</pre>';
+
                     curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($smsData));
+                    echo 'informações do ch linha 77: <pre>';
+                    print_r($ch);
+                    echo '</pre>';
+                    echo 'informações do smsData linha 77: <pre>';
+                    print_r($smsData);
+                    echo '</pre>';
+
                     $response = curl_exec($ch);
+                    echo 'informações do ch linha 85: <pre>';
+                    print_r($response);
+                    echo '</pre>';
+
+                    $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+                    echo 'informações do ch linha 90: <pre>';
+                    print_r($httpCode);
+                    echo '</pre>';
+
+                    $curlError = curl_error($ch);
+                    echo 'informações do ch linha 96: <pre>';
+                    print_r($curlError);
+                    echo '</pre>';
+
                     curl_close($ch);
+                    echo 'informações do ch linha 100: <pre>';
+                    print_r($ch);
+                    echo '</pre>';
 
+                    echo "HTTP Status: $httpCode\n<br>";
+                    echo "Resposta da API: $response\n<br>";
+                    if ($curlError) {
+                        echo "Erro cURL: $curlError\n<br>";
+                    }
                 }
-            }
+            }            
 
-            header("Location: tela_autoatendimento_page4.php");
-            exit;
+            // header("Location: tela_autoatendimento_page4.php");
+            // exit;
         } else {
             echo "Erro ao inserir no banco.";
         }
@@ -142,6 +190,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <!-- inputs ocultos necessários para o PHP -->
                 <input type="hidden" id="prioridade" name="prioridade">
                 <input type="hidden" id="id_servico" name="id_servico">
+                <input type="hidden" id="telefone_hidden" name="telefone">
                 
                 <div class="footer">
                     <button type="button" class="button">
