@@ -15,7 +15,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="../../public/css/navegacao.css">
     <link rel="stylesheet" href="../../public/css/monitor_modal.css">
-    <link rel="stylesheet" href="../../public/css/cadastro_usuario.css">
+    <link rel="stylesheet" href="../../public/css/cadastro_usuario_old.css">
     <link rel="stylesheet" href="../../public/css/modal_alterar_dados_pessoais.css">
     <link rel="stylesheet" href="../../public/css/modal_alterar_senha.css">
     <link rel="stylesheet" href="../../public/css/modal_confirmacao_dados_registrados.css">
@@ -41,12 +41,10 @@
     ?>
 
     <section class="Area-Util-Projeto">
-        <div class="container_titulo">
-            <span class="titulo">Cadastrar Usuário</span>
-            <!-- INSERIR INPUT DE BUSCA -->
-        </div>
-        <div class="container_linha">            
-            <span class="linha">
+
+        <div class="titulo_cds">
+            <h1>Cadastrar Usuário</h1>
+            <hr>
         </div>
 
         <form class="quadrado" method="POST" id="dados_cad" onkeydown="return event.key != 'Enter';">
@@ -66,15 +64,19 @@
                 <span class="erro" id="erro_cpf"></span>
             </div>
             <div class="selecionar">
-                <div class="perfil_container">
-                    <label class="labeledit" for="perfil">Perfil De Acesso</label>
-                    <select class="selecao_perfil" name="id_perfil_usuario" required>
-                        <option class="opcao" value="" disabled selected>Selecione</option>
+                <div class="perfild">
+                    <!-- <label class="labeledit" for="perfil">Perfil De Acesso
+                        <button class="icone_add_servico" id="abrirModalCadastro" type="button" onclick="window.location.href='./cadastro_perfil.php';">
+                            <img src="../../public/img/icons/add_icon.svg" alt="(+)">
+                        </button>
+                    </label> -->
+                    <select class="selecao" name="id_perfil_usuario" required>
+                        <option class="pi" value="" disabled selected>Selecione</option>
                         <?php
                         // // LISTA PERFIS DE USUARIO
                         foreach ($perfis as $perfil) {
                         ?> 
-                        <option class="opcao" value="<?= $perfil["id_perfil_usuario"] ?>"><?= $perfil["nome_perfil_usuario"] ?></option> 
+                        <option class="pi" value="<?= $perfil["id_perfil_usuario"] ?>"><?= $perfil["nome_perfil_usuario"] ?></option> 
                         <?php
                         };
                         ?>
@@ -82,19 +84,26 @@
                     <span class="erro" id="erro_perfil"></span>
                 </div>
             </div>
-            <div >
-
-                <title class="servico">Seviços</title>
-                <select class="selecao" name="id_servico" multiple multiselect-search="true" required>
-                    <!-- <label class="customizado">
-                        <input type="checkbox" id="select-all">id="select-all">
+            
+            <title class="servico">Seviços</title>
+            <div class="checkbox-container">
+                <div class="column-1">
+                    <?php
+                    // // LISTA SERVICOS DISPONIVEIS
+                    foreach ($servicos as $servico) {
+                    ?>
+                        <label class="customizado">
+                            <input type="checkbox" class="item" id="checkbox1" value="<?= $servico->id_servico ?>">
+                            <span class="teste"></span> <?= $servico->nome_servico ?>
+                        </label>
+                    <?php
+                    }
+                    ?>
+                    <label class="customizado">
+                        <input type="checkbox" id="select-all">
                         <span class="teste"></span>Selecionar Todos
-                    </label> -->
-                    <option value="1" id="select-all"></option>>Selecionar Todos</option>
-                    
-                    
-                    
-                </select>
+                    </label>
+                </div>
             </div>
         </form>
         <div class="form-actions2">
@@ -111,19 +120,3 @@
 </body>
 
 </html>
-
-<!-- <div class="checkbox-container">
-    <div class="column-1">
-        <?php
-        // // LISTA SERVICOS DISPONIVEIS
-        foreach ($servicos as $servico) {
-        ?>
-            <label class="customizado">
-                <input type="checkbox" class="item" id="checkbox1" value="<?= $servico->id_servico ?>">
-                <span class="teste"></span> <?= $servico->nome_servico ?>
-            </label>
-        <?php
-        }
-        ?>
-    </div>
-</div> -->
