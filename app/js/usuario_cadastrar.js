@@ -69,12 +69,18 @@ document.addEventListener("DOMContentLoaded", function () {
             try {
                 let response_post = JSON.parse(textResponse);
 
-                modalConfirmarSalvarDadosUsu.classList.remove("show");
-                modalDadosSalvos.classList.add("show");
+                if(response_post.status === 'OK'){
+                    modalConfirmarSalvarDadosUsu.classList.remove("show");
+                    modalDadosSalvos.classList.add("show");
+    
+                    buttonOk.addEventListener("click", () => {
+                        location.href = './listar_usuarios.php';
+                    });
+                }else{
+                    console.log("Erro: ", response_post.msg);
+                    return;
+                }
 
-                buttonOk.addEventListener("click", () => {
-                    location.href = './listar_usuarios.php';
-                });
             } catch (error) {
                 console.error("Erro ao analisar JSON:", error);
                 // console.log("Conteúdo não pode ser analisado como JSON:", textResponse);
