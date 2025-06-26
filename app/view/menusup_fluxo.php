@@ -1,6 +1,8 @@
 <?php
-    include_once '../actions/verifica_permissao.php';
+include_once '../actions/verificar_permissao.php';
+// aqui começa o resto do seu código
 ?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 

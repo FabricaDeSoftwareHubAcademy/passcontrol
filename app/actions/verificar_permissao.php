@@ -1,28 +1,42 @@
 <?php
-session_start();
-require_once '../classes/Permissao.php';
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
 
-// 1. Verifica se usuário está logado
-if (!isset($_SESSION['id_usuario'])) {
-    header("Location: ../../login.php");
+// Verifica se o usuário está logado e tem perfil
+if (!isset($_SESSION['id_usuario']) || !isset($_SESSION['id_perfil_usuario_fk'])) {
+    header("Location: ../../index.php"); // ajuste para sua página de login inicial
     exit();
 }
 
-$id_usuario = $_SESSION['id_usuario'];
-$perm = new Permissao();
+$id_perfil = $_SESSION['id_perfil_usuario_fk'];
 
-// 2. Defina a permissão que será verificada nesta página
-// Para facilitar reutilização, pode passar via variável antes do include
-if (!isset($nome_permissao_necessaria)) {
-    // Caso não tenha sido definida a permissão, definir padrão ou negar acesso
-    $nome_permissao_necessaria = 'acessar_tela_admin';
+// Controle de acesso por perfil
+switch ($id_perfil) {
+    case 5:  // Admin
+        if (strpos($_SERVER['PHP_SELF'], 'menuadm_fluxo.php') === false) {
+            header("Location: /passcon/passcontrol/app/view/menuadm_fluxo.php");
+            exit();
+        }
+        break;
+
+    case 7:  // Atendente
+        if (strpos($_SERVER['PHP_SELF'], 'menuatend_fluxo.php') === false) {
+            header("Location: /passcon/passcontrol/app/view/menuatend_fluxo.php");
+            exit();
+        }
+        break;
+
+    case 6:  // Supervisor
+        if (strpos($_SERVER['PHP_SELF'], 'menusup_fluxo.php') === false) {
+            header("Location: /passcon/passcontrol/app/view/menusup_fluxo.php");
+            exit();
+        }
+        break;
+
+    default:
+        // Perfil desconhecido: bloquear acesso ou redirecionar
+        echo "Acesso negado: perfil inválido.";
+        exit();
 }
-
-// 3. Verifica se o usuário tem essa permissão
-if (!$perm->temPermissao($id_usuario, $nome_permissao_necessaria)) {
-    header("Location: ../view/acesso_negado.php");
-    exit();
-}
-
-// Se passou por todos os testes, continua execução da página normalmente
 ?>
