@@ -84,10 +84,8 @@
             </div>
 
             <div class="container_input servico">
-
                 <label class="servico_container" for="servico">Seviços</label>
-                <select class="selecao" name="id_servico" multiple multiselect-search="true" required>
-                    
+                <select class="input_dados selecao_servico" name="id_servico" multiple required>
                     <option value="1" id="select-all">Selecionar Todos</option>
                     <?php
                     // // LISTA SERVICOS DISPONIVEIS
@@ -96,9 +94,7 @@
                     <option value="<?=$servico->id_servico?>" id="fadasd" type="checkbox"><?= $servico->nome_servico ?></option>
                     <?php
                     endforeach;
-                    ?>
-                    
-                    
+                    ?>                  
                 </select>
             </div>
         </form>
@@ -117,22 +113,88 @@
 
 </html>
 
-<!-- <div class="checkbox-container">
-    <div class="column-1">
-        <label class="customizado">
-            <input type="checkbox" id="select-all">id="select-all">
-            <span class="teste"></span>Selecionar Todos
-        </label>
-        <?php
-        // // LISTA SERVICOS DISPONIVEIS
-        // foreach ($servicos as $servico) {
-        ?>
-            <label class="customizado">
-                <input type="checkbox" class="item" id="checkbox1" value="<?= $servico->id_servico ?>">
-                <span class="teste"></span> <?= $servico->nome_servico ?>
-            </label>
-        <?php
-        // }
-        ?>
-    </div>
-</div> -->
+<!-- EM TRABALHO -->
+ <!-- <style>
+    .dropdown {
+      position: relative;
+      display: inline-block;
+      width: 250px;
+    }
+
+    .dropdown-btn {
+      padding: 10px;
+      width: 100%;
+      text-align: left;
+      background-color: #f0f0f0;
+      border: 1px solid #ccc;
+      cursor: pointer;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      max-height: 200px;
+      overflow-y: auto;
+      width: 100%;
+      z-index: 1;
+    }
+
+    .dropdown-content label {
+      display: block;
+      padding: 8px;
+      cursor: pointer;
+    }
+
+    .dropdown-content input[type="checkbox"] {
+      margin-right: 8px;
+    }
+
+    .dropdown.show .dropdown-content {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+<div class="dropdown" id="checkboxDropdown">
+  <div class="dropdown-btn" onclick="toggleDropdown()">Selecione opções</div>
+  <div class="dropdown-content">
+    <label>
+      <input type="checkbox" id="selectAll" onchange="toggleAll(this)">
+      Selecionar todos
+    </label>
+    <label><input type="checkbox" class="option" value="opcao1"> Opção 1</label>
+    <label><input type="checkbox" class="option" value="opcao2"> Opção 2</label>
+    <label><input type="checkbox" class="option" value="opcao3"> Opção 3</label>
+    <label><input type="checkbox" class="option" value="opcao4"> Opção 4</label>
+  </div>
+</div>
+
+<script>
+  function toggleDropdown() {
+    document.getElementById("checkboxDropdown").classList.toggle("show");
+  }
+
+  function toggleAll(source) {
+    let checkboxes = document.querySelectorAll('.dropdown-content .option');
+    checkboxes.forEach(cb => cb.checked = source.checked);
+  }
+
+  // Atualiza "Selecionar todos" se todas forem marcadas/desmarcadas manualmente
+  document.querySelectorAll('.dropdown-content .option').forEach(cb => {
+    cb.addEventListener('change', () => {
+      let all = document.querySelectorAll('.dropdown-content .option');
+      let selected = document.querySelectorAll('.dropdown-content .option:checked');
+      document.getElementById("selectAll").checked = (all.length === selected.length);
+    });
+  });
+
+  // Fecha dropdown ao clicar fora
+  window.addEventListener('click', function(e) {
+    if (!document.getElementById("checkboxDropdown").contains(e.target)) {
+      document.getElementById("checkboxDropdown").classList.remove("show");
+    }
+  });
+</script> -->
