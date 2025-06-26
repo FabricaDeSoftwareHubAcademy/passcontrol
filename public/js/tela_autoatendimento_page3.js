@@ -41,6 +41,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
         dadosUsuario.telefone = telefone;
         localStorage.setItem("dadosUsuario", JSON.stringify(dadosUsuario));
+        console.log('dados do usuario',dadosUsuario);
+        document.getElementById("telefone_hidden").value = telefone;
+        console.log('dados telefone',telefone);
 
         document.getElementById("form-dados").submit();
     });
