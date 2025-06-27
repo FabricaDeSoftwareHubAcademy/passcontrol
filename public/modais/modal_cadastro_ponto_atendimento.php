@@ -1,6 +1,6 @@
     <div class="fundo-container-cad-ponto-atendimento">
         <section class="modal-ponto-atendimento">
-            <img src="../../public/img/img-modais/Logo Nota Controlnt.png" alt="Logo Nota Control" class="logo-ponto-atendimento">
+            <img src="../../public/img/icons/logo_control.svg" alt="Logo Nota Control" class="logo-ponto-atendimento">
             <h1 class="titulo-ponto-atendimento">Cadastrar Ponto de Atendimento</h1>
 
             <hr class="linha-horizontal-ponto-atendimento">

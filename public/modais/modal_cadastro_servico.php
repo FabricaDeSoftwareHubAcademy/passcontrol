@@ -3,7 +3,7 @@
 <!-- MODAL DE CADASTRO SERVIÇOS -->
 <div class="fundo-container-cad-servico" data-nome-modal="cadastrar">
     <section class="modal-servico">
-        <img src="../../public/img/img-modais/Logo Nota Controlnt.png" alt="Logo Nota Control" class="logo-servico">
+        <img src="../../public/img/icons/logo_control.svg" alt="Logo Nota Control" class="logo-servico">
         <h1 class="titulo-servico">Cadastrar Serviços</h1>
 
         <hr class="linha-horizontal-servico">

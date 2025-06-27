@@ -1,6 +1,6 @@
 <div class="fundo-retornar-da-inatividade">
     <section class="modal-retornar-da-inatividade">
-        <img src="../../../public/img/img-modais/Logo Nota Controlnt.png" alt="Logo Nota Control" class="logo">
+        <img src="../../public/img/icons/logo_control.svg" alt="Logo Nota Control" class="logo">
         <h1 class="titulo">Retornar da Inatividade</h1>
 
         <hr class="linha">

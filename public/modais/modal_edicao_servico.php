@@ -4,7 +4,7 @@
 <!-- Modal  EDITAR Ponto de Atendimento-->
 <div class="modal-container-servico" data-nome-modal="editar-servico">
     <section class="modal-serv">
-        <img src="../../public/img/img-modais/Logo Nota Controlnt.png" alt="Logo Nota Control" class="logo-servico">
+        <img src="../../public/img/icons/logo_control.svg" alt="Logo Nota Control" class="logo-servico">
         <h1 class="titulo-edit-servico">Editar Serviço</h1>
         <hr class="linha-horizontal-servico">
         <form id="formulario_editar_servico" method="POST" enctype="multipart/form-data">

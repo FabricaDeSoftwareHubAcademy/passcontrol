@@ -1,6 +1,6 @@
 <div class="fundo-editar-dados">
     <section class="modal-editar-dados">
-        <img src="../../public/img/img-modais/Logo Nota Controlnt.png" alt="Logo Nota Control" class="logo-alterar-dados">
+        <img src="../../public/img/icons/logo_control.svg" alt="Logo Nota Control" class="logo-alterar-dados">
         <h1 class="titulo">Alterar Dados Pessoais</h1>
         <hr class="linha-alterar-dados">
         <form class="editarCadastro" id="formEditarCadastro" method=POST enctype=multipart/form-data>

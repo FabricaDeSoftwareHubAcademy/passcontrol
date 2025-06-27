@@ -1,6 +1,6 @@
 <div class="fundo-cadastro-novo-perfil-acesso">
     <section class="modal-cadastro-novo-perfil-acesso">
-        <img src="../../../public/img/img-modais/Logo Nota Controlnt.png" alt="Logo Nota Control" class="logo">
+        <img src="../../public/img/icons/logo_control.svg" alt="Logo Nota Control" class="logo">
         <h1 class="titulo-modal">Novo Perfil de Acesso</h1>
 
         <hr class="divisoria-modal">

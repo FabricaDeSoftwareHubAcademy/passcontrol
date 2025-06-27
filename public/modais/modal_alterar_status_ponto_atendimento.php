@@ -1,6 +1,6 @@
 <div class="modal-inativar-container">
     <section class="modal">
-        <img src="../../public/img/img-modais/Logo Nota Controlnt.png" alt="Logo Nota Control" class="logo">
+        <img src="../../public/img/icons/logo_control.svg" alt="Logo Nota Control" class="logo">
         <h1 class="titulo">Confirmação</h1>
         <hr class="linha">
         <p class="texto"><b>Deseja Alterar o Status do Ponto de Atendimento?</b></p>

@@ -1,7 +1,7 @@
 <!-- Modal Confirma EDITAR -->
 <div id="confirma_editar"  class="modal-confirma-container">
     <section class="modal">
-        <img src="../../public/img/img-modais/Logo Nota Controlnt.png" alt="Logo Nota Control" class="logo">
+        <img src="../../public/img/icons/logo_control.svg" alt="Logo Nota Control" class="logo">
         <h1 class="modal-title">Confirmação</h1>
         <hr class="modal-divider">
         <p class="modal-message"><b>Serviço Atualizado com Sucesso!</b></p>

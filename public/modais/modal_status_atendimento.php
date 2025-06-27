@@ -2,7 +2,7 @@
     <section class="modal-status-atendimento">
         <div class="modal-header">
             <span class="modal-title">Status de Atendimento</span>
-            <img src="../../../public/img/img-modais/Logo Nota Controlnt.png" alt="Logo Nota Control" alt="Ícone" class="modal-icon">
+            <img src="../../public/img/icons/logo_control.svg" alt="Logo Nota Control" alt="Ícone" class="modal-icon">
         </div>
 
         <hr class="row">
