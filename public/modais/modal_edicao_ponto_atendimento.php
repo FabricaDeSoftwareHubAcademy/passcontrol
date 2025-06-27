@@ -1,6 +1,6 @@
 <div class="fundo-editar-ponto-atendimento">
     <section class="modal-editar-ponto-atendimento">
-        <img src="../../../public/img/img-modais/Logo Nota Controlnt.png" alt="Logo Nota Control" class="logo">
+        <img src="../../public/img/icons/logo_control.svg" alt="Logo Nota Control" class="logo">
         <h1 class="titulo-modal">Edição Ponto de Atendimento</h1>
 
         <hr class="linha-horizontal">
