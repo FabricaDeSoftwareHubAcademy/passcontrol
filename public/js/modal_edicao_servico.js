@@ -8,9 +8,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
             let id_value = button.getAttribute("id_value");
 
-            const modalContainer = document.querySelector(".modal-container");
-            const buttonCancelar = document.querySelector(".cancel");
-            const buttonSalvar = document.querySelector(".save");
+            const modalContainer = document.querySelector(".modal-container-servico");
+            const buttonCancelar = document.querySelector(".cance_lEditServ");
+            const buttonSalvar = document.querySelector(".save_EditServ");
 
             // Buscar os dados do serviço
             let dados_php = await fetch("../actions/servico_editar.php?id_servico=" + id_value, {
@@ -59,20 +59,11 @@ document.addEventListener("DOMContentLoaded", function () {
                 const nomeAtual = inputNome.value.trim();
                 const codigoAtual = inputCodigo.value.trim();
 
-                if (
-                    nomeAtual === dadosOriginais.nome &&
-                    codigoAtual === dadosOriginais.codigo
-                ) {
-                    alert("Nenhuma alteração foi feita nos dados.");
-                    return;
-                } else if (nomeAtual === '' || codigoAtual === '') {
-                    alert("Preencha todos os campos!");
-                    return;
-                } else {
-                    document.querySelector(".fundo-container-confirmacao-dados-registrados").classList.add("show");
-                    modalContainer.classList.remove("show");
-                    formAlterado = true;
-                }
+                
+                document.querySelector(".fundo-container-confirmacao-dados-registrados").classList.add("show");
+                modalContainer.classList.remove("show");
+                formAlterado = true;
+
             };
 
             // Botão NÃO na confirmação
@@ -81,13 +72,14 @@ document.addEventListener("DOMContentLoaded", function () {
                 modalContainer.classList.add("show");
             });
 
-            // Botão SIM na confirmação → Enviar dados
+            // Botão SIM na confirmação -> Enviar dados
             document.querySelector(".save_ConfDadosRegist").addEventListener("click", async function () {
                 if (!formAlterado) return;
 
-                const myform = document.getElementById("formulario_editar");
+                const myform = document.getElementById("formulario_editar_servico");
                 const formData = new FormData(myform);
 
+                // console.log(formData);
                 let dados2_php = await fetch("../actions/servico_editar.php", {
                     method: 'POST',
                     body: formData
@@ -114,7 +106,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // Preview da nova imagem selecionada
-    const inputImagem = document.getElementById('imagem_ponto_atendimento');
+    const inputImagem = document.getElementById('imagem_edit_servico');
     const previewImagem = document.getElementById('preview_imagem_editar');
 
     inputImagem.addEventListener('change', function () {

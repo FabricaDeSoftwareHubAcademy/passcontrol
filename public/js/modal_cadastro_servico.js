@@ -77,7 +77,7 @@
 
         // SIM na confirmação -> envia os dados para o PHP
         btnSimConfirmacao.addEventListener("click", async () => {
-            const myform = document.getElementById("formulario_cadastrar");
+            const myform = document.getElementById("formulario_cadastrar_servico");
             const formData = new FormData(myform);
 
             modalConfirmacao.classList.remove("show");
@@ -102,7 +102,7 @@
         });
 
         // OK no sucesso -> fecha tudo e recarrega
-        const inputImagem = document.getElementById('imagem_ponto_atendimento_cadastrar');
+        const inputImagem = document.getElementById('imagem_servico_cadastrar');
         const previewImagem = document.getElementById('preview_imagem_cadastrar');
 
         inputImagem.addEventListener('change', function () {

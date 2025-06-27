@@ -29,8 +29,8 @@
             </div>
             <!-- BOTÕES -->
             <div class="button-grup-edit-servico">
-                <button class="botao-modal-edit-serv cancelEditServ">Voltar</button>
-                <button class="botao-modal-edit-serv saveEditServ">Salvar</button>
+                <button class="botao-modal-edit-serv cance_lEditServ">Voltar</button>
+                <button class="botao-modal-edit-serv save_EditServ">Salvar</button>
             </div>
         </form>
     </section>

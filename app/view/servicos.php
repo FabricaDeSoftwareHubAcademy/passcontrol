@@ -108,7 +108,8 @@ $servicos_cadastrados = $novo_servico->buscar();
             include_once "../../public/modais/modal_edicao_servico.php";
             include_once "../../public/modais/modal_sucesso_edicao.php";
             include_once "../../public/modais/modal_status_servico.php";
-            include_once "../../public/modais/modal_confirmacao_dados.php";
+            include_once "../../public/modais/modal_sucesso.php";
+            // include_once "../../public/modais/modal_confirmacao_dados.php";
         ?>
 </section>
 
