@@ -1,12 +1,12 @@
-try {
+// try {
     const btn_cadastrar_servico = document.getElementById("btn_cadastrar_servico");
     const apareceMod = document.getElementById("confirma_cadastrar");
 
     const modalCadastro = document.querySelector(".fundo-container-cad-servico");
     const modalConfirmacao = document.querySelector(".fundo-container-confirmacao-dados-registrados");
 
-    const btnCancelarCadastro = document.querySelector(".cancel_CadPontoAtend");
-    const btnSalvarCadastro = document.querySelector(".save_CadPontoAtend");
+    const btnCancelarCadastro = document.querySelector(".cancel_CadServ");
+    const btnSalvarCadastro = document.querySelector(".save_CadServ");
 
     const btnSimConfirmacao = document.querySelector(".save_ConfDadosRegist");
     const btnNaoConfirmacao = document.querySelector(".cancel_ConfDadosRegist");
@@ -29,9 +29,9 @@ try {
             event.preventDefault();
 
             // Pegando os campos
-            const nome_servico = document.getElementById('nome_ponto_atendimento_cadastrar').value.trim();
-            const codigo_servico = document.getElementById('codigo_ponto_atendimento_cadastrar').value.trim();
-            const imagem_servico = document.getElementById('imagem_ponto_atendimento_cadastrar').value.trim();
+            const nome_servico = document.getElementById('nome_servico_cadastrar').value.trim();
+            const codigo_servico = document.getElementById('codigo_servico_cadastrar').value.trim();
+            const imagem_servico = document.getElementById('imagem_servico_cadastrar').value.trim();
 
             let erro = false;
 
@@ -127,6 +127,6 @@ try {
             location.reload();
         });
     });
-} catch {
-    location.reload;
-}
+// } catch {
+//     location.reload;
+// }

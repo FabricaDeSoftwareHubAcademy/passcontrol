@@ -128,13 +128,12 @@
     display: flex;
     pointer-events: auto;
 }
-.messagem-erro {
+.messagem-erro-serv {
     color: red;
     font-size: 12px;
     margin-top: 4px;
     display: block;
 }
-
 
 
 
