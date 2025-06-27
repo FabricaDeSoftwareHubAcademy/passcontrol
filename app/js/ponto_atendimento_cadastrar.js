@@ -1,97 +1,73 @@
-try{
-let btn_cadastrar_guiche = document.getElementById("btn_cadastrar_adm");
-const apareceMod = document.getElementById("confirma");
+try {
+    let btn_cadastrar_guiche = document.getElementById("btn_cadastrar_adm");
 
-const modalContainer_CadPontoAtend = document.querySelector(".fundo-container-cad-ponto-atendimento");
-// const buttonFechar_CadPontoAtend = document.querySelector(".close_CadPontoAtend");
-const buttonCancelar_CadPontoAtend = document.querySelector(".cancel_CadPontoAtend");
-const buttonSalvar_CadPontoAtend = document.querySelector(".save_CadPontoAtend");
+    const modalCadastro = document.querySelector(".fundo-container-cad-ponto-atendimento");
+    const btnCancelarCadastro = document.querySelector(".cancel_CadPontoAtend");
+    const btnSalvarCadastro = document.querySelector(".save_CadPontoAtend");
+    const modalConfirmacao = document.querySelector(".fundo-container-confirmacao-dados");
+    const btnOkConfirmacao = document.querySelector(".Okay_ConfDados");
 
-//Abrir Modal
-btn_cadastrar_guiche.addEventListener("click", () => {
+    let formDataGlobal = null;
 
-    modalContainer_CadPontoAtend.classList.add("show");
-
-    //Fechar Modal
-    buttonCancelar_CadPontoAtend.addEventListener("click", (event) => {
-        event.preventDefault();
-        modalContainer_CadPontoAtend.classList.remove("show");
-    });
-
-    //Salvar Formulário
-    buttonSalvar_CadPontoAtend.addEventListener("click", function (event) {
-        event.preventDefault();
-
-        const myform = document.getElementById("formulario");
-        const inputs = myform.querySelectorAll("input");
-        let formularioValido = true;
-
-        // Verifica se todos os campos estão preenchidos
-        inputs.forEach(inputAtual => {
-
-            if (inputAtual.value.trim() === "") { //trim para não aceitar espaço
-                formularioValido = false;
-            }
+    btn_cadastrar_guiche.addEventListener("click", () => {
+        modalCadastro.classList.add("show");
+        btnCancelarCadastro.addEventListener("click", (event) => {
+            event.preventDefault();
+            modalCadastro.classList.remove("show");
         });
 
-        if (!formularioValido) {
-            alert("Preencha todos os campos para continuar!");
-            return;
-        }
-
-        modalContainer_CadPontoAtend.classList.remove("show");
-        apareceMod.classList.add("show");
-
-        //Envia para o PHP
-        const formData = new FormData(myform);
-
-
-
-        let btnOkCadastrar = document.getElementById("btnOkCadastrar");
-
-        btnOkCadastrar.addEventListener("click", async function () {
+        btnSalvarCadastro.addEventListener("click", (event) => {
+            event.preventDefault();
             const myform = document.getElementById("formulario");
-            const formData = new FormData(myform);
-
-
-            /* let dados2_php = await fetch("../actions/ponto_atendimento_cadastrar.php", {
-                method: 'POST',
-                body: formData
-            });
-    
-            let response = await dados2_php.json();
-    
-            if (response.status == 'ok') {
-                window.location.href = "./ponto_atendimento.php";
-            } */
-
-            let dados2_php = await fetch("../actions/ponto_atendimento_cadastrar.php", {
-                method: 'POST',
-                body: formData
+            const inputs = myform.querySelectorAll("input");
+            
+            let formularioValido = true;
+            inputs.forEach(inputAtual => {
+                if (inputAtual.value.trim() === "") {
+                    formularioValido = false;
+                }
             });
 
-            let text = await dados2_php.text();
-            console.log(text); // Retorno do PHP te
+            if (!formularioValido) {
+                alert("Preencha todos os campos para continuar!");
+                return;
+            }
+
+            // Fecha o modal de cadastro e mostra o de confirmação
+            modalCadastro.classList.remove("show");
+            modalConfirmacao.classList.add("show");
+
+            // Guarda os dados para enviar depois
+            formDataGlobal = new FormData(myform);
+        });
+
+        btnOkConfirmacao.addEventListener("click", async function () {
+            if (!formDataGlobal) return;
+
+            let response = await fetch("../actions/ponto_atendimento_cadastrar.php", {
+                method: 'POST',
+                body: formDataGlobal
+            });
+
+            let text = await response.text();
+            console.log(text);
 
             try {
-                let response = JSON.parse(text);
-                if (response.status == 'ok') {
+                let result = JSON.parse(text);
+
+                if (result.status === 'ok') {
+                    // Redirecionar após sucesso
                     window.location.href = "./ponto_atendimento.php";
                 } else {
-                    alert("Erro: " + response.mensagem);
+                    alert("Erro: " + result.mensagem);
                 }
             } catch (e) {
-                console.error("Resposta JSON inválida", e);
-                alert("Erro na resposta do servidor.")
+                console.error("Erro ao interpretar resposta do servidor:", e);
+                alert("Erro inesperado ao salvar.");
             }
         });
     });
 
-
-    // function toggleMenu() {
-    //     document.getElementById("mobileMenu").classList.toggle("active");
-    // }
-});
-}catch{
-    location.reload;
+} catch {
+    location.reload();
 }
