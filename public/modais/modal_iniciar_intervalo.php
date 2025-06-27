@@ -1,6 +1,6 @@
 <div class="fundo-iniciar-intervalo">
     <section class="modal-iniciar-intervalo">
-        <img src="../../../public/img/img-modais/Logo Nota Controlnt.png" alt="Logo Nota Control" class="logo">
+        <img src="../../public/img/icons/logo_control.svg" alt="Logo Nota Control" class="logo">
         <h1 class="titulo">Iniciar Intervalo</h1>
 
         <hr class="linha">

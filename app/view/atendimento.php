@@ -17,12 +17,12 @@
     <link rel="stylesheet" href="../../public/css/menu_eli.css">
     <link rel="stylesheet" href="../../public/css/atendimento.css">
     <link rel="stylesheet" href="../../public/css/monitor_modal.css">
-    <link rel="stylesheet" href="../../public/modais/Modal_Alterar_Dados_Pessoais/alterar_dados_pessoais.css">
-    <link rel="stylesheet" href="../../public/modais/Modal_Alterar_Senha/alterar_senha.css">
-    <link rel="stylesheet" href="../../public/modais/Modal_Consultar_Fila/modal_consultar_fila.css">
-    <link rel="stylesheet" href="../../public/modais/Modal_Chamar_prox_senha/chamar_prox_senha.css">
-    <link rel="stylesheet" href="../../public/modais/Modal_Iniciar_Intervalo/iniciar_intervalo.css">
-    <link rel="stylesheet" href="../../public/modais/Modal_Encerrar_Atendimento/encerrar-atendimento.css">
+    <link rel="stylesheet" href="../../public/css/modal_alterar_dados_pessoais.css">
+    <link rel="stylesheet" href="../../public/css/modal_alterar_senha.css">
+    <link rel="stylesheet" href="../../public/css/modal_consultar_fila.css">
+    <link rel="stylesheet" href="../../public/css/modal_chamar_prox_senha.css"> 
+    <link rel="stylesheet" href="../../public/css/modal_iniciar_intervalo.css">
+    <link rel="stylesheet" href="../../public/css/modal_encerrar_atendimento.css">
 
     <!-- JS -->
     <script src="../../public/js/navegacao_menu_lateral.js" defer></script>
@@ -30,11 +30,11 @@
     <script src="../../public/js/modal_proxima_senha.js" defer></script>
     <script src="../../public/js/modal_conf_saida.js" defer></script>
     <script src="../../public/js/monitor_modal.js" defer></script>
-    <script src="../../public/modais/Modal_Consultar_Fila/modal_consultar_fila.js" defer></script>
-    <script src="../../public/modais/Modal_Chamar_prox_senha/chamar_prox_senha.js" defer></script>
-    <script src="../../public/modais/Modal_Iniciar_Intervalo/iniciar_intervalo.js" defer></script>
-    <script src="../../public/modais/Modal_Encerrar_Atendimento/encerrar_atendimento.js" defer></script>
-    <script src="../../public/modais/Modal_Chamar_prox_senha/ler_prox_senha.js" defer></script>
+    <script src="../../public/js/modal_consultar_fila.js" defer></script>
+    <script src="../../public/js/modal_chamar_prox_senha.js" defer></script>
+    <script src="../../public/js/modal_iniciar_intervalo.js" defer></script>
+    <script src="../../public/js/modal_encerrar_atendimento.js" defer></script>
+    <script src="../../public/js/modal_ler_prox_senha.js" defer></script>
 
     <!-- LOGO -->
     <link rel="shortcut icon" type="imagex/png" href="../../public/img/Logo-Nota-Controlnt.ico">
@@ -250,11 +250,11 @@
     </section>
 
     <?php
-     include "./monitor_modal.php"; 
-    /*include "../../public/modais/Modal_Consultar_Fila/modal_consultar_fila.php";
-    include "../../public/modais/Modal_Chamar_prox_senha/chamar_prox_senha.php"; 
-    include "../../public/modais/Modal_Iniciar_Intervalo/iniciar_intervalo.php";
-    include "../../public/modais/Modal_Encerrar_Atendimento/encerrar-atendimento.php"; */
+    include "./monitor_modal.php"; 
+    include "../../public/modais/modal_consultar_fila.php";
+    include "../../public/modais/modal_chamar_prox_senha.php"; 
+    include "../../public/modais/modal_iniciar_intervalo.php";
+    include "../../public/modais/modal_encerrar_atendimento.php";
     ?>
 
     <script>

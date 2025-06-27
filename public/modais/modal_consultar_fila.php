@@ -7,7 +7,7 @@
                 <div class="topo-esquerda-consultar-fila">
                     <h3>Fila de Espera</h3>
                 </div>
-                <img src="../../../public/img/img-modais/Logo Nota Controlnt.png" alt="Logo Nota Control" class="logo-consultar-fila">
+                <img src="../../public/img/icons/logo_control.svg" alt="Logo Nota Control" class="logo-consultar-fila">
             </div>
 
             <div class="area-em-cima-tabela-fila">

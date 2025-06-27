@@ -23,7 +23,7 @@
     <header class="cabeca-navegacao-control">
         <div class="nav-cabeca">
             <div class="logo-control">
-                <img src="../../public/img/icons/logo control.svg" alt="LOGOCONTROL" id="img-logo">
+                <img src="../../public/img/icons/logo_control.svg" alt="LOGOCONTROL" id="img-logo">
                 <h1 class="titulo-projeto">PassControl</h1>
             </div>
             <p class="usu-nome">Nome do Usuário</p>

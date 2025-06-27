@@ -1,6 +1,6 @@
 <div class="fundo-container-confirmacao-presenca">
     <section class="modal-confirmacao-presenca">
-        <img src="../../../public/img/img-modais/Logo Nota Controlnt.png" alt="Logo Nota Control" class="logo-confirmacao-presenca">
+        <img src="../../public/img/icons/logo_control.svg" alt="Logo Nota Control" class="logo-confirmacao-presenca">
         <h1 class="title-confirmacao-presenca">Confirmar Presença</h1>
         <hr class="row-confirmacao-presenca">
         <p class="desk-info-confirmacao-presenca"><b>Guichê 1</b></p>
