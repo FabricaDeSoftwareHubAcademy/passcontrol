@@ -1,6 +1,6 @@
 <div class="fundo-encerrar-atendimento">
     <section class="modal-encerrar-atendimento">
-        <img src="../../../public/img/img-modais/Logo Nota Controlnt.png" alt="Logo Nota Control" class="logo">
+        <img src="../../public/img/icons/logo_control.svg" alt="Logo Nota Control" class="logo">
         <h1 class="titulo">Encerrarmento</h1>
         <hr class="linha">
         <p class="texto"><b>Deseja Encerrar o Atendimento?</b></p>

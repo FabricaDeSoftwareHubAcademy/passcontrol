@@ -31,7 +31,7 @@
     z-index: 10;
 }
 
-.fundo-container-confirmacao-presenca.show {
+.show {
     opacity: 1;
     display: flex;
     pointer-events: auto;

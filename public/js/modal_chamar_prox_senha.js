@@ -16,5 +16,5 @@ buttonPresente_ChamarSenha.addEventListener("click", () => {
     modalContainer_ChamarSenha.classList.remove("show");
 });
 
-button_ChamarSenha.addEventListener("click", () => {
-});
+// button_ChamarSenha.addEventListener("click", () => {
+// });
