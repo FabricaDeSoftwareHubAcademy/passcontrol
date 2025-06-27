@@ -25,6 +25,17 @@ if (!$res) {
     exit;
 }
 
+if ($res['status_usuario'] == 0) {
+    echo json_encode([
+        'status' => 'usuario_inativo',
+        'code' => 403,
+        'msg' => 'Usuário inativo. Entre em contato com o administrador.'
+    ]);
+    exit;
+}
+
+
+
 if (password_verify($senha, $res['senha_usuario']) && ($res['primeiro_login'] == 1)) {
     echo json_encode([
         'status' => 'primeiro_login',
@@ -32,6 +43,8 @@ if (password_verify($senha, $res['senha_usuario']) && ($res['primeiro_login'] ==
         'id_usuario' => $res['id_usuario'],
         'msg' => 'Por favor, defina sua senha para continuar.'
     ]);
+    exit;
+
 } elseif (password_verify($senha, $res['senha_usuario']) && ($res['primeiro_login'] == 0)) {
     $_SESSION['id_usuario'] = $res['id_usuario'];
     $_SESSION['nome_usuario'] = $res['nome_usuario'];
@@ -45,6 +58,8 @@ if (password_verify($senha, $res['senha_usuario']) && ($res['primeiro_login'] ==
         'id_usuario' => $res['id_usuario'],
         'msg' => 'Redirecionar para a tela inicial de atendimento.'
     ]);
+    exit;
+
 } else {
     echo json_encode([
         'status' => 'senha incorreta',
