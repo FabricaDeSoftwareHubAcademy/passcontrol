@@ -42,6 +42,11 @@ btn_login.addEventListener("click", async function(event) {
         msg.textContent = "Senha incorreta. Tente novamente.";
         msg.style.display = "block";
     } 
+
+    else if (response.code == 403) {
+        msg.textContent = "Usuário inativo. Entre em contato com o administrador.";
+        msg.style.display = "block";
+    }
     
     else if (response.code == 404) {
         msg.textContent = "Usuário não cadastrado. Verifique o CPF informado.";
