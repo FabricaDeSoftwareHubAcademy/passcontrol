@@ -1,16 +1,20 @@
 <?php
 session_start();
 
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
+require '../classes/Usuario.php';
 require '../../vendor/phpmailer/phpmailer/src/Exception.php';
 require '../../vendor/phpmailer/phpmailer/src/PHPMailer.php';
 require '../../vendor/phpmailer/phpmailer/src/SMTP.php';
+
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
 
 class EmailService {
     public function enviarEmail($email, $codigo) {
         
         $mail = new PHPMailer(true);
+        $mail->CharSet = 'UTF-8';
+
         try {
             $mail->isSMTP();
             $mail->SMTPAuth = true;
@@ -39,6 +43,8 @@ class EmailService {
                 'status' => 200,
                 'message' => 'E-mail enviado com sucesso!'
             ]);
+            exit;
+
         } catch (Exception $e) {
             $response = [
                 'status' => 400,
@@ -50,33 +56,40 @@ class EmailService {
 }
 
 
-if (isset($_POST['email_user'])) {
-    $email = $_POST['email_user'];
+    if (isset($_POST['cpf_user'])) {
+        
+        $cpf = preg_replace('/[^0-9]/', '', $_POST['cpf_user']);
 
-    if (empty($email)) {
-        echo json_encode([
-            'status' => 'empty',
-            'message' => 'O campo de e-mail não pode estar vazio.'
-        ]);
-    } elseif (filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        // Gerar código de 5 dígitos
-        $codigo = rand(10000, 99999);
+        $objUser = new Usuario();
+        $buscaCPF = 'cpf_usuario = '.$cpf;
 
-        // Armazenar o código e o e-mail na sessão
-        $_SESSION['codigo_recuperacao'] = $codigo;
-        $_SESSION['email_recuperacao'] = $email;
+        $buscar = $objUser->buscar($buscaCPF);
 
-        // Chamar a função de envio de e-mail e capturar o retorno
-        $emailService = new EmailService();
-        $mensagem = $emailService->enviarEmail($email, $codigo);
+        if (!$buscar) {
+            echo json_encode([
+                'status' => 404,
+                'message' => 'Usuário não encontrado.'
+            ]);
+            exit;
+        }
+        else{
 
-        exit;
+            $id_usuario = $buscar[0]['id_usuario'];
+            $email = $buscar[0]['email_usuario'];
 
+            $codigo = rand(10000, 99999);
+            $_SESSION['codigo_recuperacao'] = $codigo;
+            $_SESSION['id_usuario'] = $id_usuario;
+        
+            // Envia o e-mail com o código de recuperação
+            $emailService = new EmailService();
+            $emailService->enviarEmail($email, $codigo);
+
+        }
+    
     } else {
         echo json_encode([
             'status' => 400,
-            'message' => 'O e-mail informado não é válido.'
+            'message' => 'CPF não enviado.'
         ]);
     }
-}
-

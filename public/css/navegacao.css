@@ -15,7 +15,7 @@
 
 .control-body-navegacao{
     background-color: var(--cor-fundo);
-    background-image: url(../../public/img/Background-logo\ 2.svg);
+    background-image: url(../../public/img/background_logo.svg);
     background-size: 35vh;
     background-repeat: no-repeat;
     background-position: bottom right;

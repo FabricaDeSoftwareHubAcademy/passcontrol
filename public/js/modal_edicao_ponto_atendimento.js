@@ -1,89 +1,78 @@
-/* const buttonAbrir_EdicaoPontoAtendimento = document.querySelector(".open-editar-ponto-atendimento");
-const modalContainer_EdicaoPontoAtendimento = document.querySelector(".fundo-editar-ponto-atendimento");
-const buttonFechar_EdicaoPontoAtendimento = document.querySelector(".close_EdicaoPontoAtendimento");
-const buttonCancelar_EdicaoPontoAtendimento = document.querySelector(".cancel_EdicaoPontoAtendimento");
-const buttonSalvar_EdicaoPontoAtendimento = document.querySelector(".save_EdicaoPontoAtendimento");
+document.addEventListener("DOMContentLoaded", () => {
+    const modalContainer = document.querySelector(".modal-container");
+    const buttonFechar = document.querySelector(".close");
+    const buttonCancelar = document.querySelector(".cancel");
+    const buttonSalvar = document.querySelector(".save");
+    const apareceMod = document.getElementById("confirma_editar");
 
-buttonAbrir_EdicaoPontoAtendimento.addEventListener("click", () => {
-    modalContainer_EdicaoPontoAtendimento.classList.add("show");
-});
-
-buttonCancelar_EdicaoPontoAtendimento.addEventListener("click", () => {
-    modalContainer_EdicaoPontoAtendimento.classList.remove("show");
-});
-
-buttonSalvar_EdicaoPontoAtendimento.addEventListener("click", () => {
-    modalContainer_EdicaoPontoAtendimento.classList.remove("show");
-}); */
-
-document.addEventListener("DOMContentLoaded", function() {
-    document.querySelectorAll("#chamamodal").forEach(button => {
-
-        button.addEventListener("click", async function(event) {
-            
-            let id_value = button.getAttribute("id_value");
-
-            const modalContainer = document.querySelector(".modal-container");
-            const buttonFechar = document.querySelector(".close");
-            const buttonCancelar = document.querySelector(".cancel");
-            const buttonSalvar = document.querySelector(".save");
-            const apareceMod = document.getElementById("confirma_editar");
-
-            event.preventDefault(); // impede o recarregamento da pagina
-
-
-            // Fazer requisição para buscar os dados do ponto de atendimento
-            let dados_php = await fetch("../actions/ponto_atendimento_editar.php?id_ponto_atendimento="+id_value , {
+    // Abre o modal e carrega os dados do servidor
+    async function abrirModalEditar(id_value) {
+        try {
+            let response = await fetch(`../actions/ponto_atendimento_editar.php?id_ponto_atendimento=${id_value}`, {
                 method: 'GET'
             });
 
-            let response = await dados_php.json();
+            let text = await response.text();
+            console.log("Resposta do PHP:", text);
 
-            console.log(response);
-    
-            document.getElementById("nome_ponto_atendimento").value = response.nome_ponto_atendimento;
-            document.getElementById("identificador_ponto_atendimento").value = response.identificador_ponto_atendimento;
-            document.getElementById("id_ponto_atendimento").value = response.id_ponto_atendimento; 
-            
+            /* let data = await response.json(); */
+            let data = JSON.parse(text); // Retorna o erro se o JSON não for válido
+
+            document.getElementById("nome_ponto_atendimento").value = data.nome_ponto_atendimento || "";
+            document.getElementById("identificador_ponto_atendimento").value = data.identificador_ponto_atendimento || "";
+            document.getElementById("id_ponto_atendimento").value = data.id_ponto_atendimento || "";
+
             modalContainer.classList.add("show");
+        } catch (error) {
+            alert("Erro ao carregar os dados.");
+            console.error(error);
+        }
+    }
 
-            buttonCancelar.addEventListener("click", () => {
-                modalContainer.classList.remove("show");
-            });
-
-
-            buttonSalvar.addEventListener("click", async(event) => {
-
-                    event.preventDefault(); // impede o recarregamento da pagina
-
-                    myform = document.getElementById("formulario_editar");
-
-                    const formData = new FormData(myform);
-
-                    let dados2_php = await fetch("../actions/ponto_atendimento_cadastrar.php",{
-                        method:'POST',
-                        body:formData
-                    })
-
-                    let response2 = await dados2_php.json();
-                if (response) {
-                    apareceMod.classList.add("show");
-                    modalContainer.classList.remove("show");
-                }
-
-                console.log(response);
-            });
-
-            buttonCancelar.addEventListener("click", function() {
-                modalContainer.classList.remove("show");
-            });
+    // Adiciona o evento para abrir o modal em todos os botões
+    document.querySelectorAll(".chama-modal").forEach(button => {
+        button.addEventListener("click", event => {
+            event.preventDefault();
+            const id_value = button.getAttribute("id_value");
+            abrirModalEditar(id_value);
         });
     });
 
+    // Fechar modal (botão fechar e cancelar)
+    buttonFechar.addEventListener("click", () => modalContainer.classList.remove("show"));
+    buttonCancelar.addEventListener("click", () => modalContainer.classList.remove("show"));
+
+    // Salvar formulário
+    buttonSalvar.addEventListener("click", async (event) => {
+        event.preventDefault();
+
+        const myform = document.getElementById("formulario_editar");
+        const formData = new FormData(myform);
+
+        try {
+            let response = await fetch("../actions/ponto_atendimento_cadastrar.php", {
+                method: 'POST',
+                body: formData
+            });
+
+            let data = await response.json();
+
+            if (data.status === 'ok') {
+                modalContainer.classList.remove("show");
+                apareceMod.classList.add("show");
+            } else {
+                alert("Erro: " + (data.mensagem || "Erro ao salvar"));
+            }
+        } catch (error) {
+            alert("Erro na requisição.");
+            console.error(error);
+        }
+    });
+
+    // Botão Ok da confirmação
     const buttonOkEditar = document.getElementById("btnOkEditar");
-    buttonOkEditar.addEventListener("click", function() {
-        const apareceMod = document.getElementById("confirma_editar");
+    buttonOkEditar.addEventListener("click", () => {
         apareceMod.classList.remove("show");
-        location.reload();
+        location.reload(); // ou redirecione para a página desejada
     });
 });

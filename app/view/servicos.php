@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="../../public/css/modal_alterar_dados_pessoais.css">
     <link rel="stylesheet" href="../../public/css/modal_alterar_senha.css">
     <link rel="stylesheet" href="../../public/css/servico.css">
-    <link rel="stylesheet" href="../../public/css/edicao_servico.css">
+    <link rel="stylesheet" href="../../public/css/modal_edicao_servico.css">
     <link rel="stylesheet" href="../../public/css/modal_cadastro_servico.css">
     <link rel="stylesheet" href="../../public/css/modal_confirmacao_dados_servico.css">
     <link rel="stylesheet" href="../../public/css/modal_status_servico.css">

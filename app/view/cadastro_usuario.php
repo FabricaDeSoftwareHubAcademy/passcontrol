@@ -41,69 +41,61 @@
     ?>
 
     <section class="Area-Util-Projeto">
-
-        <div class="titulo_cds">
-            <h1>Cadastrar Usuário</h1>
-            <hr>
+        <div class="container_titulo">
+            <span class="titulo_pagina">Cadastrar Usuário</span>
+        </div>
+        <div class="container_linha">            
+            <span class="linha">
         </div>
 
-        <form class="quadrado" method="POST" id="dados_cad" onkeydown="return event.key != 'Enter';">
-            <div class="nome">
+        <form class="container_form" method="POST" id="dados_cad" onkeydown="return event.key != 'Enter';">
+            <div class="container_input nome">
                 <label class="labeledit" for="nome">Nome*</label>
-                <input class="borda" type="text" name="nome_usuario" id="nome_usuario" placeholder="Digite aqui o nome do usuário" required>
+                <input class="input_dados" type="text" name="nome_usuario" id="nome_usuario" placeholder="Digite aqui o nome do usuário" required>
                 <span class="erro" id="erro_nome"></span>
             </div>
-            <div class="email">
+
+            <div class="container_input email">
                 <label class="labeledit" for="email">Email*</label>
-                <input class="borda" type="text" name="email_usuario" id="email_usuario" placeholder="Digite aqui o Email do usuário" required>
+                <input class="input_dados" type="text" name="email_usuario" id="email_usuario" placeholder="Digite aqui o Email do usuário" required>
                 <span class="erro" id="erro_email"></span>
             </div>
-            <div class="cpf">
+
+            <div class="container_input cpf">
                 <label class="labeledit" for="cpf">CPF*</label>
-                <input class="borda" type="text" name="cpf_usuario" id="cpf_usuario" maxlength="14" placeholder="000.000.000-00" required>
+                <input class="input_dados" type="text" name="cpf_usuario" id="cpf_usuario" maxlength="14" placeholder="000.000.000-00" required>
                 <span class="erro" id="erro_cpf"></span>
             </div>
-            <div class="selecionar">
-                <div class="perfild">
-                    <!-- <label class="labeledit" for="perfil">Perfil De Acesso
-                        <button class="icone_add_servico" id="abrirModalCadastro" type="button" onclick="window.location.href='./cadastro_perfil.php';">
-                            <img src="../../public/img/icons/add_icon.svg" alt="(+)">
-                        </button>
-                    </label> -->
-                    <select class="selecao" name="id_perfil_usuario" required>
-                        <option class="pi" value="" disabled selected>Selecione</option>
-                        <?php
-                        // // LISTA PERFIS DE USUARIO
-                        foreach ($perfis as $perfil) {
-                        ?> 
-                        <option class="pi" value="<?= $perfil["id_perfil_usuario"] ?>"><?= $perfil["nome_perfil_usuario"] ?></option> 
-                        <?php
-                        };
-                        ?>
-                    </select>
-                    <span class="erro" id="erro_perfil"></span>
-                </div>
+
+            <div class="container_input perfil">
+                <label class="labeledit" for="perfil">Perfil De Acesso</label>
+                <select class="input_dados selecao_perfil" name="id_perfil_usuario" required>
+                    <option class="opcao" value="" disabled selected>Selecione</option>
+                    <?php
+                    // // LISTA PERFIS DE USUARIO
+                    foreach ($perfis as $perfil) {
+                    ?> 
+                    <option class="opcao" value="<?= $perfil["id_perfil_usuario"] ?>"><?= $perfil["nome_perfil_usuario"] ?></option> 
+                    <?php
+                    };
+                    ?>
+                </select>
+                <span class="erro" id="erro_perfil"></span>
             </div>
-            
-            <title class="servico">Seviços</title>
-            <div class="checkbox-container">
-                <div class="column-1">
+
+            <div class="container_input servico">
+                <label class="servico_container" for="servico">Seviços</label>
+                <select class="input_dados selecao_servico" name="id_servico" multiple required>
+                    <option value="1" id="select-all">Selecionar Todos</option>
                     <?php
                     // // LISTA SERVICOS DISPONIVEIS
-                    foreach ($servicos as $servico) {
+                    foreach ($servicos as $servico):
                     ?>
-                        <label class="customizado">
-                            <input type="checkbox" class="item" id="checkbox1" value="<?= $servico->id_servico ?>">
-                            <span class="teste"></span> <?= $servico->nome_servico ?>
-                        </label>
+                    <option value="<?=$servico->id_servico?>" id="fadasd" type="checkbox"><?= $servico->nome_servico ?></option>
                     <?php
-                    }
-                    ?>
-                    <label class="customizado">
-                        <input type="checkbox" id="select-all">
-                        <span class="teste"></span>Selecionar Todos
-                    </label>
-                </div>
+                    endforeach;
+                    ?>                  
+                </select>
             </div>
         </form>
         <div class="form-actions2">
@@ -120,3 +112,89 @@
 </body>
 
 </html>
+
+<!-- EM TRABALHO -->
+ <!-- <style>
+    .dropdown {
+      position: relative;
+      display: inline-block;
+      width: 250px;
+    }
+
+    .dropdown-btn {
+      padding: 10px;
+      width: 100%;
+      text-align: left;
+      background-color: #f0f0f0;
+      border: 1px solid #ccc;
+      cursor: pointer;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      max-height: 200px;
+      overflow-y: auto;
+      width: 100%;
+      z-index: 1;
+    }
+
+    .dropdown-content label {
+      display: block;
+      padding: 8px;
+      cursor: pointer;
+    }
+
+    .dropdown-content input[type="checkbox"] {
+      margin-right: 8px;
+    }
+
+    .dropdown.show .dropdown-content {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+<div class="dropdown" id="checkboxDropdown">
+  <div class="dropdown-btn" onclick="toggleDropdown()">Selecione opções</div>
+  <div class="dropdown-content">
+    <label>
+      <input type="checkbox" id="selectAll" onchange="toggleAll(this)">
+      Selecionar todos
+    </label>
+    <label><input type="checkbox" class="option" value="opcao1"> Opção 1</label>
+    <label><input type="checkbox" class="option" value="opcao2"> Opção 2</label>
+    <label><input type="checkbox" class="option" value="opcao3"> Opção 3</label>
+    <label><input type="checkbox" class="option" value="opcao4"> Opção 4</label>
+  </div>
+</div>
+
+<script>
+  function toggleDropdown() {
+    document.getElementById("checkboxDropdown").classList.toggle("show");
+  }
+
+  function toggleAll(source) {
+    let checkboxes = document.querySelectorAll('.dropdown-content .option');
+    checkboxes.forEach(cb => cb.checked = source.checked);
+  }
+
+  // Atualiza "Selecionar todos" se todas forem marcadas/desmarcadas manualmente
+  document.querySelectorAll('.dropdown-content .option').forEach(cb => {
+    cb.addEventListener('change', () => {
+      let all = document.querySelectorAll('.dropdown-content .option');
+      let selected = document.querySelectorAll('.dropdown-content .option:checked');
+      document.getElementById("selectAll").checked = (all.length === selected.length);
+    });
+  });
+
+  // Fecha dropdown ao clicar fora
+  window.addEventListener('click', function(e) {
+    if (!document.getElementById("checkboxDropdown").contains(e.target)) {
+      document.getElementById("checkboxDropdown").classList.remove("show");
+    }
+  });
+</script> -->

@@ -60,11 +60,9 @@ class Database {
         $res = $this->execute($query,array_values($values));
 
         if($res){
-            // echo "<script> alert ('Cadastrado com sucesso!') </script>";
             return $res;
         }
         else{
-            // echo "<script> alert ('Falha na execução, usuário não cadastrado!') </script>";
             return false;
         }
     }
@@ -89,8 +87,4 @@ class Database {
         $res = $this->execute($query, $values);
         return $res->rowCount();
     }
-
-    /* public function getConnection() {
-        return $this->conn;
-    }  */ 
 }
