@@ -5,10 +5,10 @@ session_start();
 $perfil = isset($_GET['perfil']) ? (int)$_GET['perfil'] : null;
 
 if (!$perfil || !in_array($perfil, [5, 6, 7])) {
-    echo "Parâmetro 'perfil' inválido ou não informado. Use 5 (admin), 6 (supervisor) ou 7 (atendente).<br>";
-    echo "Exemplo: <a href='?perfil=5'>teste_permissoes.php?perfil=5</a>";
-    echo "Exemplo: <a href='?perfil=6'>teste_permissoes.php?perfil=6</a>";
-    echo "Exemplo: <a href='?perfil=7'>teste_permissoes.php?perfil=7</a>";
+    echo "Teste do Fluxo (admin), (supervisor) ou (atendente).<br>";
+    echo "Exemplo: <a href='?perfil=5'>Fluxo_Admin.php</a><br>";
+    echo "Exemplo: <a href='?perfil=6'>Fluxo_Atendente.php</a><br>";
+    echo "Exemplo: <a href='?perfil=7'>Fluxo_Supervisor.php</a><br>";
     exit;
 }
 
