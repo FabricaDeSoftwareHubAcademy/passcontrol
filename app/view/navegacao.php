@@ -1,3 +1,10 @@
+<?php
+session_start();
+if (!isset($_SESSION['id_usuario'])) {
+    header("Location: ../../index.php");
+    exit();
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,7 +33,10 @@
                 <img src="../../public/img/icons/logo_control.svg" alt="LOGOCONTROL" id="img-logo">
                 <h1 class="titulo-projeto">PassControl</h1>
             </div>
-            <p class="usu-nome">Nome do Usuário</p>
+            <p class="usu-nome">
+                <?= isset($_SESSION['nome_usuario']) ? htmlspecialchars($_SESSION['nome_usuario']) : 'Nome do Usuário' ?>
+            </p>
+
             <!-- <a href="">
                 <img class="usu-nome" src="../../public/img/icons/image 33.svg" alt="Loading..."">
             </a> -->
@@ -36,18 +46,17 @@
 
     <!-- INFO DO USUARIO -->
     <div class="menu-usuario">
-        <img class="icone-usuario" src="../../public/img/icons/image 33.svg" alt="">
+        <img class="icone-usuario" src="<?= $_SESSION['url_foto_usuario'] ?? '../../public/img/icons/image 33.svg' ?>" alt="">
         <nav class="usu-detalhes"> 
             <ul class="texto-usu">
-                <li class="nome-usu">Nome do Usuário</li>
-                <li class="email-usu">funcionario123@fun.br</li>
+                <li class="nome-usu"><?= htmlspecialchars($_SESSION['nome_usuario']) ?></li>
+                <li class="email-usu"><?= htmlspecialchars($_SESSION['email_usuario']) ?></li>
                 <li><a class="usu-util open-editar-dados">Editar Informações</a></li>
                 <li><a class="usu-util open-alterar-senha">Alterar Senha</a></li>
                 <li><a class="usu-util usu-sair" href="../../index.php">Sair</a></li>
             </ul>
         </nav>
     </div>
-
     <!-- MENU LATERAL -->
     <div class="area-lateral-navegacao">
         <nav class="menu-lateral-navegacao">
