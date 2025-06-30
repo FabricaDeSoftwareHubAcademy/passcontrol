@@ -90,7 +90,7 @@
                                 <td class="editar-inativar-menor" scope="col">
                                     <div class="editar">
                                         <button class="openEditar" data-id="<?= $usuario["id_usuario"] ?>">
-                                            <img src="../../public/img/icons/Group 2924.png" alt="">
+                                            <img src="../../public/img/icons/editar.png" alt="">
                                         </button>
                                     </div>
                                 </td>
