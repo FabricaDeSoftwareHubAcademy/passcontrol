@@ -1,12 +1,13 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const modalContainer = document.querySelector(".modal-container");
+    const modalContainer = document.querySelector(".fundo-editar-ponto-atendimento");
     const buttonFechar = document.querySelector(".close");
-    const buttonCancelar = document.querySelector(".cancel");
-    const buttonSalvar = document.querySelector(".save");
+    const buttonCancelar = document.querySelector(".cancel_EdicaoPontoAtendimento");
+    const buttonSalvar = document.querySelector(".save_EdicaoPontoAtendimento");
     const apareceMod = document.getElementById("confirma_editar");
 
     // Abre o modal e carrega os dados do servidor
     async function abrirModalEditar(id_value) {
+        console.log(id_value)
         try {
             let response = await fetch(`../actions/ponto_atendimento_editar.php?id_ponto_atendimento=${id_value}`, {
                 method: 'GET'
@@ -30,17 +31,17 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // Adiciona o evento para abrir o modal em todos os botões
-    document.querySelectorAll(".chama-modal").forEach(button => {
+    document.querySelectorAll(".bot-editar").forEach(button => {
         button.addEventListener("click", event => {
             event.preventDefault();
-            const id_value = button.getAttribute("id_value");
+            const id_value = button.getAttribute("data-id");
             abrirModalEditar(id_value);
         });
     });
 
     // Fechar modal (botão fechar e cancelar)
-    buttonFechar.addEventListener("click", () => modalContainer.classList.remove("show"));
-    buttonCancelar.addEventListener("click", () => modalContainer.classList.remove("show"));
+    /* buttonFechar.addEventListener("click", () => modalContainer.classList.remove("show"));
+    buttonCancelar.addEventListener("click", () => modalContainer.classList.remove("show")); */
 
     // Salvar formulário
     buttonSalvar.addEventListener("click", async (event) => {

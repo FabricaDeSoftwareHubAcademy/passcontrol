@@ -71,7 +71,7 @@ $guiches = $guiche->buscar();
                                         <td class="indentificador-menor">'.$guiche->identificador_ponto_atendimento.'</td>
                                         <td class="editar-menor">
                                             <div class="editar">
-                                                <button class="bot-editar" data-id="<?= $guiche->id_ponto_atendimento ?>">
+                                                <button class="bot-editar" data-id="'.$guiche->id_ponto_atendimento.'">
                                                     <img id="icone-editar" src="../../public/img/icons/editar.png" alt="Editar">
                                                 </button>
                                             </div>
