@@ -43,7 +43,6 @@ class Servico{
                                 'nome_servico' => $this->nome_servico,
                                 'codigo_servico' => $this->codigo_servico,
                                 'url_imagem_servico' => $this->url_imagem_servico
-                                // ,'status_servico' => $this->status_servico
                             ]
                         );
 
