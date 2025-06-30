@@ -11,6 +11,7 @@
 
     <link rel="shortcut icon" href="../../public/img/favicon.ico" type="image/x-icon">
 
+    <script src="../js/mascara_cpf.js" defer></script>
     <script src="../../public/js/modal_confirmacao_envio_email.js" defer></script>
 </head>
 <body class="body_login background_image">
@@ -27,7 +28,7 @@
         <form id="form_rec_senha" method="POST" class="form">
             <div class="input_group">
                 <label class="label_recuperar_senha" for="">Recuperar Senha</label>
-                <input class="input" type="text" name="cpf_user" id="cpf_user" placeholder="CPF">
+                <input class="input" type="text" name="cpf_user" id="cpf" placeholder="000.000.000-00">
             </div>
 
             <p class="text_recuperar_senha">Você receberá um código de segurança no email cadastrado para esse CPF, para validar sua nova senha.</p>
