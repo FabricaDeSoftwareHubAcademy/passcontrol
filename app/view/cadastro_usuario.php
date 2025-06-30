@@ -85,26 +85,29 @@
 
       <div class="container_input servico" id="checkboxDropdown">
         <label class="labeledit" for="Servico">Servicos Atendidos</label>
-        <div class="input_dados selecao_servico" onclick="toggleDropdown()">
-          <span>Selecione opções</span>
-          <span class="seta_dropdown">></span>
-        </div>
-        <div class="input_dados dropdown_select">
-          <label class="labeledit">
-            <input type="checkbox" id="selectAll" onchange="toggleAll(this)">
-            Selecionar todos
-          </label>
-          <?php
-          // // LISTA SERVICOS DISPONIVEIS
-          foreach ($servicos as $servico):
-          ?>
-          <label>
-            <input type="checkbox" class="option" name="id_servico" value="<?= $servico->id_servico ?>">
-            <?= $servico->nome_servico ?>
-          </label>
-          <?php
-        endforeach;
-        ?>
+        <div class="container_dropdown">
+          <div class="input_dados selecao_servico" onclick="toggleDropdown()">
+            <span>Selecione opções</span>
+            <span class="seta_dropdown">></span>
+          </div>
+          <div class="input_dados dropdown_select">
+            <label class="labeledit">
+              <input type="checkbox" id="selectAll" onchange="toggleAll(this)">
+              Selecionar todos
+            </label>
+            <span class="linha_select"></span>
+            <?php
+            // // LISTA SERVICOS DISPONIVEIS
+            foreach ($servicos as $servico):
+              ?>
+            <label>
+              <input type="checkbox" class="option" name="id_servico" value="<?= $servico->id_servico ?>">
+              <?= $servico->nome_servico ?>
+            </label>
+            <?php
+            endforeach;
+            ?>
+          </div>
         </div>
       </div>
       <!-- <div class="dropdown" id="checkboxDropdown">
@@ -121,8 +124,7 @@
         </div>
       </div> -->
 
-
-      
+    
     </form>
     <div class="container_botao_form">
       <button class="botao_volto" form="dados_cad" type="reset" onclick="window.location.href='./menuadm_usuario.php';">Voltar</button>
