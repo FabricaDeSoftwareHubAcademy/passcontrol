@@ -135,25 +135,18 @@
 
 /* EM TRABALHO - SELECAO SERVICO*/
 
-.servico{
-    border: 1px dotted red;
-}
-
 .selecao_servico {
-  /* padding: 10px; */
   width: 100%;
   text-align: left;
-  /* background-color: #f0f0f0; */
-  /* border: 1px solid #ccc; */
   cursor: pointer;
   display: flex;
   justify-content: space-between;
 }
 .seta_dropdown{
-    display: flex;
-    transform: rotate(90deg);
-    font-size: 12px;
-    font-family: 'Arial Narrow';
+  display: flex;
+  transform: rotate(90deg);
+  font-size: 12px;
+  font-family: 'Arial Narrow';
 }
 .dropdown_select {
   display: none;
@@ -170,10 +163,6 @@
   display: block;
   padding: 8px;
   cursor: pointer;
-}
-
-#checkbox_servico {
-  margin-right: 8px;
 }
 
 .select_show .dropdown_select {
