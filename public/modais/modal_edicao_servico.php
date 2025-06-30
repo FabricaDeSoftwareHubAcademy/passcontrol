@@ -30,7 +30,7 @@
             <!-- BOTÕES -->
             <div class="button-grup-edit-servico">
                 <button class="botao-modal-edit-serv cance_lEditServ">Voltar</button>
-                <button class="botao-modal-edit-serv save_EditServ">Salvar</button>
+                <button class="botao-modal-edit-serv save_EditServ" form="formulario_editar_servico">Salvar</button>
             </div>
         </form>
     </section>
