@@ -57,13 +57,13 @@ if (password_verify($senha, $res['senha_usuario']) && ($res['primeiro_login'] ==
 
     switch ($perfil) {
         case 5:
-            $redirect_url = '/passcon/passcontrol/app/view/menuadm_fluxo.php';
+            $redirect_url = './app/view/menuadm_fluxo.php';
             break;
         case 6:
-            $redirect_url = '/passcon/passcontrol/app/view/menusup_fluxo.php';
+            $redirect_url = './app/view/menusup_fluxo.php';
             break;
         case 7:
-            $redirect_url = '/passcon/passcontrol/app/view/menuatend_fluxo.php';
+            $redirect_url = './app/view/menuatend_fluxo.php';
             break;
         default:
             echo json_encode([
