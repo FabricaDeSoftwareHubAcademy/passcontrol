@@ -146,7 +146,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <header class="head">
         <nav class="nav-head">
             <div class="logo-control">
-                <img src="../../public/img/icons/logo control.svg" alt="LOGOCONTROL" id="img-logo"> <!-- ( Atualização de caminho ) -->
+                <img src="../../public/img/icons/logo_control.svg" alt="LOGOCONTROL" id="img-logo"> <!-- ( Atualização de caminho ) -->
             </div>
             <H3>PassControl</H3>
     </header>
