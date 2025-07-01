@@ -99,12 +99,29 @@ class Usuario {
 
         // Verifica se a senha contém pelo menos um número, uma letra maiúscula e um caractere especial
         $id_usuario = (int)$id_usuario;
+
+        $nova_senha_hash = password_hash($nova_senha, PASSWORD_DEFAULT);
         // Atualiza a senha e marca como não sendo mais primeiro acesso
-        $this->db->update("id_usuario = $id_usuario", [
-            'senha_usuario' => $nova_senha,
+        $resultado = $this->db->update("id_usuario = $id_usuario", [
+            'senha_usuario' => $nova_senha_hash,
             'primeiro_login' => 0
         ]);
-        return true;
+        if ($resultado === false) {
+            return json_encode([
+                'success' => false,
+                'message' => 'Erro ao atualizar a senha.'
+            ]);
+        } elseif ($resultado === 0) {
+            return json_encode([
+                'success' => true,
+                'message' => 'Mesma senha anterior.'
+            ]);
+        } else {
+            return json_encode([
+                'success' => true,
+                'message' => 'Senha atualizada com sucesso.'
+            ]);
+        }
     }
         // busca e retorna todas as permissões que estão vinculadas a um perfil de usuário específico
         public function listar_permissoes_por_perfil(int $id_perfil): array {

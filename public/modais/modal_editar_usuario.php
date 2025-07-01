@@ -44,16 +44,7 @@
                 </select>
             </div>
  
-            <div class="servico_container">
-                <label class="labeledit" for="servico">Servicos Atendidos</label>
-                <select id="selecao" form="form_editar_dados_usuario" multiple="multiple" required=required name="id_servico" id="id_servico">
-                    <?php
-                        foreach ($servicos as $servico):
-                        ?> <option class="pi" value="<?=$servico["id_servico"]?>"><?=$servico["nome_servico"]?></option> <?php
-                        endforeach;
-                    ?>
-                </select>  
-            </div>
+            <!-- INSERIR O DROPDOWN DE SELECIONAR SERVICOS -->
 
             <div class="button-group-alterar-dados">
                 <button class="botao-modal-alterar-dados cancel_edit_dados_usu" type="reset" form="form_editar_dados_usuario">Voltar</button>

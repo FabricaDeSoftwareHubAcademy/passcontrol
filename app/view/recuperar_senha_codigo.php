@@ -7,17 +7,16 @@ if (isset($_POST['validar'])) {
 
     // Verifica se o código informado corresponde ao código armazenado na sessão
     if (empty($codigo_informado)) {
-        echo "Por favor, insira o código.";
+        echo "<p style='color: red; text-align: center;'>Por favor, insira o código.</p>";
     } elseif ($codigo_informado == $_SESSION['codigo_recuperacao']) {
         // Código correto, direciona para a página de recuperação de senha
         header('Location: ./recuperar_senha_nova_senha.php');
         exit();
     } else {
-        echo "Código inválido. Tente novamente.";
+        echo "<p style='color: red; text-align: center;'>Código inválido. Tente novamente.</p>";
     }
 }
 ?>
-
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -29,6 +28,8 @@ if (isset($_POST['validar'])) {
     <link rel="stylesheet" href="../../public/css/root.css">
     <link rel="stylesheet" href="../../public/css/forms.css">
     <link rel="shortcut icon" href="../../public/img/favicon.ico" type="image/x-icon">
+
+    <script src="../../public/js/recuperar_senha_codigo.js" defer></script>
 </head>
 <body class="body_login background_image">
     <main class="container_login">
@@ -41,22 +42,64 @@ if (isset($_POST['validar'])) {
             <h1 class="title">PASS CONTROL</h1>
         </div>
 
-        <form action="" class="form"> <div class="input_group">
+        <form id="form_codigo" method="POST" class="form">
+            <div class="input_group">
                 <label class="label_recuperar_senha" for="">Recuperar Senha</label>
-                <div class="container_input_codigo"> <input type="text" class="input" name="" id="input_1" maxlength="1" required onkeyup="mudaFoco(this, 1, input_2)">
-                    <input type="text" class="input" name="" id="input_2" maxlength="1" required onkeyup="mudaFoco(this, 1, input_3)">
-                    <input type="text" class="input" name="" id="input_3" maxlength="1" required onkeyup="mudaFoco(this, 1, input_4)">
-                    <input type="text" class="input" name="" id="input_4" maxlength="1" required onkeyup="mudaFoco(this, 1, input_5)">
-                    <input type="text" class="input" name="" id="input_5" maxlength="1" required onkeyup="mudaFoco(this, 1, null)">
+                <div class="container_input_codigo">
+                    <input type="text" class="input" name="codigo1" id="input_1" maxlength="1" onkeyup="mudaFoco(this, 1, input_2)">
+                    <input type="text" class="input" name="codigo2" id="input_2" maxlength="1" onkeyup="mudaFoco(this, 1, input_3)">
+                    <input type="text" class="input" name="codigo3" id="input_3" maxlength="1" onkeyup="mudaFoco(this, 1, input_4)">
+                    <input type="text" class="input" name="codigo4" id="input_4" maxlength="1" onkeyup="mudaFoco(this, 1, input_5)">
+                    <input type="text" class="input" name="codigo5" id="input_5" maxlength="1" onkeyup="mudaFoco(this, 1, null)">
                 </div>
             </div>
+
+            <p id="codigo_msg" style="color: red; text-align: left; margin-top: 10px; display: none; font-size: 0.9rem;"></p>
+
             <p class="text_recuperar_senha">Insira o código recebido no e-mail.</p>
+
             <div class="container_button">
-                <a class="button" href="./recuperar_senha_nova_senha.php">Enviar</a>
+                <button type="submit" id="btn_enviar" name="validar" class="button">Enviar</button>
             </div>
         </form>
     </main>
 
-    <script src="../../public/js/recuperar_senha_codigo.js" defer></script>
+    <script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const form = document.querySelector("#form_codigo");
+        const btn = document.querySelector("#btn_enviar");
+        const msg = document.querySelector("#codigo_msg");
+        const inputs = [
+            document.querySelector("#input_1"),
+            document.querySelector("#input_2"),
+            document.querySelector("#input_3"),
+            document.querySelector("#input_4"),
+            document.querySelector("#input_5")
+        ];
+
+        form.addEventListener("submit", (event) => {
+            let camposPreenchidos = inputs.every(input => input.value.trim() !== "");
+
+            if (!camposPreenchidos) {
+                event.preventDefault();
+                msg.textContent = "Por favor, preencha todos os campos.";
+                msg.style.display = "block";
+            }
+        });
+
+        inputs.forEach(input => {
+            input.addEventListener("input", () => {
+                msg.style.display = "none";
+            });
+        });
+    });
+
+    // Função auxiliar (caso você esteja usando isso nos inputs)
+    function mudaFoco(atual, maxLength, proximoInput) {
+        if (atual.value.length >= maxLength && proximoInput) {
+            proximoInput.focus();
+        }
+    }
+    </script>
 </body>
 </html>

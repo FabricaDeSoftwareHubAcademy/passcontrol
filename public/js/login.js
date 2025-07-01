@@ -3,7 +3,7 @@ const password = document.querySelector("#input_password");
 const btn_login = document.querySelector("#btn_login");
 const msg = document.querySelector("#login_msg");
 
-togglePassword.addEventListener("click", function(){
+togglePassword.addEventListener("click", function () {
     const type = password.type === "password" ? "text" : "password";
 
     password.type = type;
@@ -12,10 +12,19 @@ togglePassword.addEventListener("click", function(){
     this.classList.toggle("fa-eye-slash");
 });
 
-btn_login.addEventListener("click", async function(event) {
+btn_login.addEventListener("click", async function (event) {
     event.preventDefault();
 
-    msg.style.display = "none";  // esconde mensagem antes
+    msg.style.display = "none"; // esconde mensagem antes
+
+    const cpf = document.querySelector("#cpf").value.trim();
+    const senha = document.querySelector("#input_password").value.trim();
+
+    if (!cpf || !senha) {
+        msg.textContent = "Por favor, preencha todos os campos.";
+        msg.style.display = "block";
+        return; // não envia se algum campo estiver vazio
+    }
 
     let form_login = document.querySelector("#form_login");
     let formData = new FormData(form_login);
@@ -27,27 +36,26 @@ btn_login.addEventListener("click", async function(event) {
 
     let response = await dados_php.json();
 
-    if(response.code == 200) {
-            //redireciona para a página de atendimento
-            window.location.href = "./app/view/atendimento.php";
+    if (response.code == 200) {
+        // redireciona para a página de atendimento
+        window.location.href = "./app/view/atendimento.php";
     }
 
     else if (response.code == 201) {
-        // console.log("CHAMANDO O MODAL DE PRIMEIRO ACESSO");
-        // console.log(response.id_usuario);
+        // redireciona para redefinição de senha no primeiro acesso
         window.location.href = "./app/view/recuperar_senha_nova_senha.php?id=" + response.id_usuario;
-    }  
-    
+    }
+
     else if (response.code == 400) {
         msg.textContent = "Senha incorreta. Tente novamente.";
         msg.style.display = "block";
-    } 
+    }
 
     else if (response.code == 403) {
         msg.textContent = "Usuário inativo. Entre em contato com o administrador.";
         msg.style.display = "block";
     }
-    
+
     else if (response.code == 404) {
         msg.textContent = "Usuário não cadastrado. Verifique o CPF informado.";
         msg.style.display = "block";
@@ -55,4 +63,12 @@ btn_login.addEventListener("click", async function(event) {
 
     console.log(response);
 });
-     
+
+// Esconde a mensagem de erro ao começar a digitar novamente
+document.querySelector("#cpf").addEventListener("input", () => {
+    msg.style.display = "none";
+});
+
+document.querySelector("#input_password").addEventListener("input", () => {
+    msg.style.display = "none";
+});

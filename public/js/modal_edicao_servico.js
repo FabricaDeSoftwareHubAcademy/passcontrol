@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
             });
 
             let response = await dados_php.json();
-            console.log(response);
+            // console.log(response);
 
             // Preencher os campos do formulário
             const inputNome = document.getElementById("nome_ponto_atendimento");
@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             // Carregar a imagem atual
             if (response.url_imagem_servico) {
-                previewImagem.src = "../../public/img/img-servicos/" + response.url_imagem_servico;
+                previewImagem.src = "../../public/img/uploads/" + response.url_imagem_servico;
                 previewImagem.style.display = "block";
             } else {
                 previewImagem.src = "#";
@@ -59,6 +59,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 const nomeAtual = inputNome.value.trim();
                 const codigoAtual = inputCodigo.value.trim();
 
+                // console.log("Nome Atual:", nomeAtual);
+                // console.log("Código Atual:", codigoAtual); 
                 
                 document.querySelector(".fundo-container-confirmacao-dados-registrados").classList.add("show");
                 modalContainer.classList.remove("show");
@@ -79,7 +81,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 const myform = document.getElementById("formulario_editar_servico");
                 const formData = new FormData(myform);
 
-                // console.log(formData);
+                console.log(formData);
                 let dados2_php = await fetch("../actions/servico_editar.php", {
                     method: 'POST',
                     body: formData

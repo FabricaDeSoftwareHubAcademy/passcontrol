@@ -57,6 +57,8 @@
                     </div>
                 </div>
 
+                <p id="login_msg" style="color: red; display: none; text-align: left; margin-top: 10px; font-size: 0.9rem;"></p>
+
                 <div class="container_link">
                     <a href="./app/view/recuperar_senha_email.php" class="link">Esqueci Minha Senha</a>
                 </div>
@@ -66,7 +68,6 @@
             
                     <button type="button" id="btn_login" class="button">Entrar</button>
                 </div>
-                <p id="login_msg" style="color: red; display: none; text-align: center; margin-bottom: 10px;"></p>
             </form>
         </div>
     </main>

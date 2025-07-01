@@ -22,7 +22,7 @@ if (isset($_FILES['url_imagem_servico']) && $_FILES['url_imagem_servico']['error
 
     if (in_array($extensao, $permitidos)) {
         $nomeImagem = uniqid('img_') . "." . $extensao;
-        $pastaDestino = '../../public/img/img-servicos/';
+        $pastaDestino = '../../public/img/uploads/';
 
         if (!is_dir($pastaDestino)) {
             mkdir($pastaDestino, 0777, true);
