@@ -1,7 +1,7 @@
 
 <!-- ************************************   EDITAR SERVIÇO  ************************************ -->
 
-<!-- Modal  EDITAR Ponto de Atendimento-->
+<!-- Modal  EDITAR Ponto de Servico-->
 <div class="modal-container-servico" data-nome-modal="editar-servico">
     <section class="modal-serv">
         <img src="../../public/img/icons/logo_control.svg" alt="Logo Nota Control" class="logo-servico">
@@ -23,9 +23,9 @@
             </div>
             <!-- IMAGEM DO SERVIÇO -->
             <div class="img-edit-servico">
-                <label class="label"><b>Imagem</b></label>
+                <label class="label"><b>Editar Imagem Serviço</b></label>
+                <img id="preview_imagem_editar" src="#" alt="Sem Imagem" class="manipula-img-editar" >
                 <input type="file" id="imagem_edit_servico" name="url_imagem_servico" class="input-text-edit" accept="image/*">
-                <img id="preview_imagem_editar" src="#" alt="Preview da Imagem" style="display:none; width: 80px, heigt:80px; height:80px; margin-top:10px; object-fit:cover; border-radius:8px;">
             </div>
             <!-- BOTÕES -->
             <div class="button-grup-edit-servico">

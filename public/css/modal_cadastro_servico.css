@@ -70,9 +70,18 @@
     width: 100%;
     padding: 10px;
     margin-bottom: 20px;
+    margin-top: 5px;
     border: 1px solid #ccc;
     border-radius: 4px;
     background-color: white;
+}
+.manipula-img-cadastrar{
+    display:none; 
+    width:80px; 
+    height:80px; 
+    margin-top:10px; 
+    object-fit:cover; 
+    border-radius:8px;
 }
 
 

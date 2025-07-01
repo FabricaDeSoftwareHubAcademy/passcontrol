@@ -86,17 +86,25 @@
 .input-text-edit {
     width: 100%;
     padding: 10px;
+    margin-top: 5px;
     margin-bottom: 20px;
     border: 1px solid #ccc;
     border-radius: 4px;
     background-color: white;
 }
-
+.manipula-img-editar{
+    display: flex; 
+    width: 80px; 
+    height: 80px; 
+    margin-top: 10px; 
+    object-fit: cover;
+    border-radius: 8px;
+} 
 /* Grupo de botões */
 .button-grup-edit-servico {
     display: flex;
     justify-content: right;
-    gap: 15px;
+    gap: 25px;
     margin-top: 35px;
 }
 
