@@ -9,8 +9,9 @@ if (isset($_POST['validar'])) {
     if (empty($codigo_informado)) {
         echo "<p style='color: red; text-align: center;'>Por favor, insira o código.</p>";
     } elseif ($codigo_informado == $_SESSION['codigo_recuperacao']) {
+        $id_user = $_SESSION['id_usuario'];
         // Código correto, direciona para a página de recuperação de senha
-        header('Location: ./recuperar_senha_nova_senha.php');
+        header('Location: ./recuperar_senha_nova_senha.php?id_user=' . $id_user);
         exit();
     } else {
         echo "<p style='color: red; text-align: center;'>Código inválido. Tente novamente.</p>";
