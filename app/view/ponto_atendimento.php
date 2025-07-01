@@ -25,12 +25,14 @@ $guiches = $guiche->buscar();
     <link rel="stylesheet" href="../../public/modais/alterar_senha.css"> -->
     <link rel="stylesheet" href="../../public/modais/cadastro_ponto_atendimento.css">
     <link rel="stylesheet" href="../../public/css/modal_edicao_ponto_atendimento.css">
+    <link rel="stylesheet" href="../../public/css/modal_confirmacao_dados.css">
 
     <!-- IMPORT DO JS -->
     <script src="../../public/js/modal_edicao_ponto_atendimento.js" defer></script>
     <script src="../../public/js/modal_cadastro_ponto_atendimento.js" defer></script>
     <script src="../../public/js/modal_status_ponto_atendimento.js" defer></script>
     <script src="../../app/js/barra_pesquisa_ponto_atendimento.js" defer></script>
+    <script src="../../public/js/modal_confirmacao_dados.js" defer></script>
     
     <!-- LOGO -->
     <link rel="shortcut icon" type="imagex/png" href="../../../public/img/Logo-Nota-Controlnt.ico">
@@ -101,6 +103,7 @@ $guiches = $guiche->buscar();
 <?php
 include_once "./monitor_modal.php";
 include_once "../../public/modais/modal_edicao_ponto_atendimento.php";
+include_once "../../public/modais/modal_confirmacao_dados.php";
 # include "../../public/modais/modal_cadastro_ponto_atendimento.php";
 # include "../../public/modais/modal_alterar_status_ponto_atendimento.php";
 ?>

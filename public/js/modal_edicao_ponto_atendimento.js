@@ -1,79 +1,119 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const modalContainer = document.querySelector(".fundo-editar-ponto-atendimento");
-    const buttonFechar = document.querySelector(".close");
-    const buttonCancelar = document.querySelector(".cancel_EdicaoPontoAtendimento");
-    const buttonSalvar = document.querySelector(".save_EdicaoPontoAtendimento");
-    const apareceMod = document.getElementById("confirma_editar");
+document.addEventListener("DOMContentLoaded", function () {
+    let dadosOriginais = {};
+    let formAlterado = false;
 
-    // Abre o modal e carrega os dados do servidor
-    async function abrirModalEditar(id_value) {
-        console.log(id_value)
-        try {
-            let response = await fetch(`../actions/ponto_atendimento_editar.php?id_ponto_atendimento=${id_value}`, {
+    document.querySelectorAll(".bot-editar").forEach(button => {
+        button.addEventListener("click", async function (event) {
+            event.preventDefault();
+
+            let id_value = button.getAttribute("data-id");
+
+            const modalContainer = document.querySelector(".fundo-editar-ponto-atendimento");
+            const buttonCancelar = document.querySelector(".cancel_EdicaoPontoAtendimento");
+            const buttonSalvar = document.querySelector(".save_EdicaoPontoAtendimento");
+
+            // Buscar os dados do ponto de atendimento
+            let dados_php = await fetch("../actions/ponto_atendimento_editar.php?id_ponto_atendimento=" + id_value, {
                 method: 'GET'
             });
 
-            let text = await response.text();
-            console.log("Resposta do PHP:", text);
+            let text = await dados_php.text();
+            let response;
+            try {
+                response = JSON.parse(text);
+            } catch (e) {
+                console.error("Erro ao fazer parse do JSON:", e);
+                alert("Erro ao carregar os dados.");
+                return;
+            }
 
-            /* let data = await response.json(); */
-            let data = JSON.parse(text); // Retorna o erro se o JSON não for válido
+            // Preencher os campos
+            const inputNome = document.getElementById("nome_ponto_atendimento");
+            const inputIdentificador = document.getElementById("identificador_ponto_atendimento");
+            const inputId = document.getElementById("id_ponto_atendimento");
 
-            document.getElementById("nome_ponto_atendimento").value = data.nome_ponto_atendimento || "";
-            document.getElementById("identificador_ponto_atendimento").value = data.identificador_ponto_atendimento || "";
-            document.getElementById("id_ponto_atendimento").value = data.id_ponto_atendimento || "";
+            if (!inputNome || !inputIdentificador || !inputId) {
+                console.error("Algum campo do modal não foi encontrado no DOM.");
+                return;
+            }
+
+            inputNome.value = response.nome_ponto_atendimento || "";
+            inputIdentificador.value = response.identificador_ponto_atendimento || "";
+            inputId.value = response.id_ponto_atendimento || "";
+
+            // Guardar os dados originais
+            dadosOriginais = {
+                nome: response.nome_ponto_atendimento.trim(),
+                identificador: response.identificador_ponto_atendimento.trim()
+            };
 
             modalContainer.classList.add("show");
-        } catch (error) {
-            alert("Erro ao carregar os dados.");
-            console.error(error);
-        }
-    }
 
-    // Adiciona o evento para abrir o modal em todos os botões
-    document.querySelectorAll(".bot-editar").forEach(button => {
-        button.addEventListener("click", event => {
-            event.preventDefault();
-            const id_value = button.getAttribute("data-id");
-            abrirModalEditar(id_value);
-        });
-    });
-
-    // Fechar modal (botão fechar e cancelar)
-    /* buttonFechar.addEventListener("click", () => modalContainer.classList.remove("show"));
-    buttonCancelar.addEventListener("click", () => modalContainer.classList.remove("show")); */
-
-    // Salvar formulário
-    buttonSalvar.addEventListener("click", async (event) => {
-        event.preventDefault();
-
-        const myform = document.getElementById("formulario_editar");
-        const formData = new FormData(myform);
-
-        try {
-            let response = await fetch("../actions/ponto_atendimento_cadastrar.php", {
-                method: 'POST',
-                body: formData
+            // Botão CANCELAR
+            buttonCancelar.addEventListener("click", () => {
+                modalContainer.classList.remove("show");
             });
 
-            let data = await response.json();
+            // Botão SALVAR
+            buttonSalvar.onclick = function (e) {
+                e.preventDefault();
 
-            if (data.status === 'ok') {
-                modalContainer.classList.remove("show");
-                apareceMod.classList.add("show");
-            } else {
-                alert("Erro: " + (data.mensagem || "Erro ao salvar"));
-            }
-        } catch (error) {
-            alert("Erro na requisição.");
-            console.error(error);
-        }
-    });
+                const nomeAtual = inputNome.value.trim();
+                const identificadorAtual = inputIdentificador.value.trim();
 
-    // Botão Ok da confirmação
-    const buttonOkEditar = document.getElementById("btnOkEditar");
-    buttonOkEditar.addEventListener("click", () => {
-        apareceMod.classList.remove("show");
-        location.reload(); // ou redirecione para a página desejada
+                // Verifica se houve alteração
+                if (
+                    nomeAtual !== dadosOriginais.nome ||
+                    identificadorAtual !== dadosOriginais.identificador
+                ) {
+                    formAlterado = true;
+                    document.querySelector(".fundo-container-confirmacao-dados-registrados").classList.add("show");
+                    modalContainer.classList.remove("show");
+                } else {
+                    alert("Nenhuma alteração detectada.");
+                }
+            };
+
+            // Botão NÃO na confirmação
+            document.querySelector(".cancel_ConfDadosRegist").addEventListener("click", function () {
+                document.querySelector(".fundo-container-confirmacao-dados-registrados").classList.remove("show");
+                modalContainer.classList.add("show");
+            });
+
+            // Botão SIM na confirmação
+            document.querySelector(".save_ConfDadosRegist").addEventListener("click", async function () {
+                if (!formAlterado) return;
+
+                const myform = document.getElementById("formulario_editar");
+                const formData = new FormData(myform);
+
+                try {
+                    let responseSalvar = await fetch("../actions/ponto_atendimento_cadastrar.php", {
+                        method: 'POST',
+                        body: formData
+                    });
+
+                    let data = await responseSalvar.json();
+
+                    if (data.status === 'ok') {
+                        document.getElementById("confirma_editar").classList.add("show");
+                    } else {
+                        alert("Erro ao salvar: " + (data.mensagem || "Erro desconhecido"));
+                    }
+
+                    document.querySelector(".fundo-container-confirmacao-dados-registrados").classList.remove("show");
+                } catch (error) {
+                    console.error("Erro ao enviar os dados:", error);
+                    alert("Erro ao enviar os dados.");
+                }
+            });
+
+            // Botão OK final
+            const buttonOkEditar = document.getElementById("btnOkEditar");
+            buttonOkEditar.addEventListener("click", function () {
+                document.getElementById("confirma_editar").classList.remove("show");
+                location.reload();
+            });
+        });
     });
 });
