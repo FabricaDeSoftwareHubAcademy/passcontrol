@@ -24,6 +24,7 @@
     <link rel="stylesheet" href="../../public/css/modal_status_servico.css">
     <link rel="stylesheet" href="../../public/css/modal_confirmacao_servico.css">
     <link rel="stylesheet" href="../../public/css/modal_confirmacao_dados.css">
+    <link rel="stylesheet" href="../../public/css/modal_aviso_erro.css">
 
 
     <!-- JS -->
@@ -32,7 +33,7 @@
     <script src="../../public/js/modal_cadastro_servico.js" defer></script>
     <script src="../../public/js/modal_edicao_servico.js" defer></script>
     <script src="../../public/js/modal_status_servico.js" defer></script>
-    <script src="../../app/js/barra_pesquisa_ponto_atendimento.js"></script>
+    <script src="../../app/js/barra_pesquisa_ponto_atendimento.js" defer></script>
 
 
     <!-- LOGO -->
@@ -109,6 +110,7 @@ $servicos_cadastrados = $novo_servico->buscar();
             include_once "../../public/modais/modal_sucesso_edicao.php";
             include_once "../../public/modais/modal_status_servico.php";
             include_once "../../public/modais/modal_confirmacao_dados.php";
+            include_once "../../public/modais/modal_aviso_erro.php";
         ?>
 </section>
 

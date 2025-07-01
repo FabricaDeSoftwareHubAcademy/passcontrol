@@ -31,7 +31,7 @@
     z-index: 10;
 }
 
-.fundo-container-confirmacao-dados.show {
+.show {
     opacity: 1;
     display: flex;
     pointer-events: auto;
@@ -40,9 +40,9 @@
 /* Estilo do modal */
 .modal-confirmacao-dados {
     background-color: #ddd;
-    width: 60%;
-    max-width: 550px;
-    padding: 30px;
+    width: 80%;
+    max-width: 600px;
+    padding: 40px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     position: relative;
     text-align: center;
@@ -58,32 +58,35 @@
 }
 
 .logo-confirmacao-dados {
-    width: 60px;
     position: absolute;
-    top: 15px;
+    top: 20px;
     right: 30px;
+    width: 80px;
+    max-width: 200px;
+    height: auto;
 }
 
 /* Tipografia */
 .modal-title-confirmacao-dados {
-    font-size: 24px;
+    font-size: 28px;
+    margin-bottom: 40px;
     font-weight: bold;
     text-align: left;
-    margin-bottom: 30px;
 }
 
 .modal-message-confirmacao-dados {
+    font-size: 20px;
     margin-top: 40px;
-    font-size: 18px;
-    font-weight: bold;
     text-align: center;
+    width: 100%;
+    font-weight: bold;
 }
 
 /* Grupo de botões */
 .button-group-confirmacao-dados {
     display: flex;
     justify-content: flex-end   ;
-    margin-top: 15px;
+    margin-top: 20px;
 }
 
 .Okay_ConfDados {
@@ -101,83 +104,7 @@
 }
 
 /* Responsividade */
-@media (max-width: 1200px) {
-    .modal-confirmacao-dados {
-        width: 100%;
-    }
-    .modal-title-confirmacao-dados {
-        font-size: 25px;
-    }
-    .modal-message-confirmacao-dados {
-        font-size: 22px;
-    }
-    .logo-confirmacao-dados  {
-        width: 70px;
-        top: 15px;
-    }
-}
-
-@media (max-width: 1024px) {
-    .modal-confirmacao-dados {
-        width: 100%;
-    }
-    .modal-title-confirmacao-dados {
-        font-size: 25px;
-    }
-    .modal-message-confirmacao-dados {
-        font-size: 22px;
-    }
-    .logo-confirmacao-dados  {
-        width: 70px;
-        top: 15px;
-    }
-}
-
-@media (max-width: 768px) {
-    .modal-confirmacao-dados {
-        width: 100%;
-    }
-    .modal-title-confirmacao-dados {
-        font-size: 25px;
-    }
-    .modal-message-confirmacao-dados {
-        font-size: 22px;
-    }
-    .logo-confirmacao-dados  {
-        width: 70px;
-        top: 15px;
-    }
-}
-
-@media (max-width: 480px) {
-    .modal-confirmacao-dados {
-        width: 90%;
-    }
-    .modal-title-confirmacao-dados {
-        font-size: 20px;
-    }
-    .modal-message-confirmacao-dados {
-        font-size: 20px;
-    }
-    .logo-confirmacao-dados  {
-        margin-top: 2px;
-        width: 60px;
-    }
-}
-
 @media (max-width: 400px){
-    .modal-message-confirmacao-dados{
-        font-size: 18px;
-    }
-    .botao-modal-confirmacao-dados.Okay{
-        margin-top: 20px;
-    }
-    .button-group-confirmacao-dados{
-        justify-content: center;
-    }
-}
-
-@media (max-width: 320px){
     .modal-message-confirmacao-dados{
         font-size: 18px;
     }
