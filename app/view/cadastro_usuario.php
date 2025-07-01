@@ -83,7 +83,7 @@
         <span class="erro" id="erro_perfil"></span>
       </div>
 
-      <div class="container_input servico" id="checkboxDropdown">
+      <div class="container_input servico" id="select_servico_usuario">
         <label class="labeledit" for="Servico">Servicos Atendidos</label>
         <div class="container_dropdown">
           <div class="input_dados selecao_servico" onclick="toggleDropdown()">
@@ -97,34 +97,20 @@
             </label>
             <span class="linha_select"></span>
             <?php
-            // // LISTA SERVICOS DISPONIVEIS
-            foreach ($servicos as $servico):
-              ?>
-            <label>
-              <input type="checkbox" class="option" name="id_servico" value="<?= $servico->id_servico ?>">
+              // // LISTA SERVICOS DISPONIVEIS
+              foreach ($servicos as $servico):
+            ?>
+            <label class="labeledit">
+              <input type="checkbox" class="option_servico" name="id_servico" value="<?= $servico->id_servico ?>">
               <?= $servico->nome_servico ?>
             </label>
             <?php
-            endforeach;
+              endforeach;
             ?>
           </div>
         </div>
       </div>
-      <!-- <div class="dropdown" id="checkboxDropdown">
-        <div class="dropdown-btn" onclick="toggleDropdown()">Selecione opções</div>
-        <div class="dropdown-content">
-          <label>
-            <input type="checkbox" id="selectAll" onchange="toggleAll(this)">
-            Selecionar todos
-          </label>
-          <label><input type="checkbox" class="option" value="opcao1"> Opção 1</label>
-          <label><input type="checkbox" class="option" value="opcao2"> Opção 2</label>
-          <label><input type="checkbox" class="option" value="opcao3"> Opção 3</label>
-          <label><input type="checkbox" class="option" value="opcao4"> Opção 4</label>
-        </div>
-      </div> -->
 
-    
     </form>
     <div class="container_botao_form">
       <button class="botao_volto" form="dados_cad" type="reset" onclick="window.location.href='./menuadm_usuario.php';">Voltar</button>
@@ -137,51 +123,6 @@
     include "../../public/modais/modal_confirmacao_dados.php";
     ?>
   </section>
-
-  <script>
-    function toggleDropdown() {
-      document.getElementById("checkboxDropdown").classList.toggle("select_show");
-    }
-
-    function toggleAll(source) {
-      let checkboxes = document.querySelectorAll('.dropdown_select .option');
-      checkboxes.forEach(cb => cb.checked = source.checked);
-    }
-
-    // Atualiza "Selecionar todos" se todas forem marcadas/desmarcadas manualmente
-    document.querySelectorAll('.dropdown_select .option').forEach(cb => {
-      cb.addEventListener('change', () => {
-        let all = document.querySelectorAll('.dropdown_select .option');
-        let selected = document.querySelectorAll('.dropdown_select .option:checked');
-        document.getElementById("selectAll").checked = (all.length === selected.length);
-      });
-    });
-
-    // Fecha dropdown ao clicar fora
-    window.addEventListener('click', function(event) {
-      if (!document.getElementById("checkboxDropdown").contains(event.target)) {
-        document.getElementById("checkboxDropdown").classList.remove("select_show");
-      }
-    });
-  </script>
-
 </body>
 
 </html>
-
-<!-- EM TRABALHO -->
-
-<!-- <div class="container_input servico">
-  <label class="servico_container" for="servico">Seviços</label>
-  <select class="input_dados selecao_servico" name="id_servico" multiple required>
-    <option value="1" id="select-all">Selecionar Todos</option>
-    <?php
-    // // LISTA SERVICOS DISPONIVEIS
-    foreach ($servicos as $servico):
-    ?>
-      <option value="<?= $servico->id_servico ?>" id="checkbox_servico" type="checkbox"><?= $servico->nome_servico ?></option>
-    <?php
-    endforeach;
-    ?>
-  </select>
-</div> -->

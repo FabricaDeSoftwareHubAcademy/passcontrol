@@ -71,6 +71,7 @@
   outline: none;
   background-color: white;
   padding: 11px;
+  cursor: pointer;
 }
 
 .input_dados:focus {
@@ -148,23 +149,33 @@
   font-size: 12px;
   font-family: 'Arial Narrow';
 }
+.linha_select{
+  margin-top: 2px;
+  display: flex;
+  background-color: #33404D;
+  width: 100%;
+  height: 1px;
+}
 .dropdown_select {
   display: none;
+  flex-direction: column;
   position: absolute;
-  /* background-color: #fff; */
   border: 1px solid #ccc;
   max-height: 200px;
   overflow-y: auto;
   width: calc(((90% - 5%) - 50%) - 10px);
   z-index: 3;
 }
-
-.dropdown_select label {
-  display: block;
-  padding: 8px;
-  cursor: pointer;
-}
-
 .select_show .dropdown_select {
-  display: block;
+  display: flex;
+}
+.dropdown_select label {
+  display: flex;
+  flex-direction: row;
+  padding: 7px;
+  cursor: pointer;
+  border: 0.5px solid rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  width: 100%;
+  gap: 10px;
 }
