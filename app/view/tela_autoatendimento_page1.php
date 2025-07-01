@@ -25,7 +25,7 @@
         <nav class="nav-head">
             <div class="logo-control">
                 <a href="../../app/view/menuadm_autoatendimento.php"> <!-- Atualização de caminho -->
-                <img src="../../public/img/icons/logo control.svg" alt="LOGOCONTROL" id="img-logo"> <!-- Atualização de caminho -->
+                <img src="../../public/img/icons/logo_control.svg" alt="LOGOCONTROL" id="img-logo"> <!-- Atualização de caminho -->
                 </a>
             </div>
             <h3>PassControl</h3>
