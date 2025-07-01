@@ -1,9 +1,35 @@
 // MODAIS
 const modalConfirmarSalvarDadosUsu = document.querySelector(".fundo-container-confirmacao-dados-registrados");
+const btn_select_servico = document.querySelector("");
 const confirmarSalvar = document.querySelector(".save_ConfDadosRegist");
 const cancelarSalvar = document.querySelector(".cancel_ConfDadosRegist");
 const modalDadosSalvos = document.querySelector(".fundo-container-confirmacao-dados");
 const buttonOk = document.querySelector(".Okay_ConfDados");
+
+function toggleDropdown() {
+      document.getElementById("select_servico_usuario").classList.toggle("select_show");
+    }
+
+    function toggleAll(source) {
+      let checkboxes = document.querySelectorAll('.dropdown_select .option');
+      checkboxes.forEach(cb => cb.checked = source.checked);
+    }
+
+    // Atualiza "Selecionar todos" se todas forem marcadas/desmarcadas manualmente
+    document.querySelectorAll('.dropdown_select .option').forEach(cb => {
+      cb.addEventListener('change', () => {
+        let all = document.querySelectorAll('.dropdown_select .option');
+        let selected = document.querySelectorAll('.dropdown_select .option:checked');
+        document.getElementById("selectAll").checked = (all.length === selected.length);
+      });
+    });
+
+    // Fecha dropdown ao clicar fora
+    window.addEventListener('click', function(event) {
+      if (!document.getElementById("checkboxDropdown").contains(event.target)) {
+        document.getElementById("checkboxDropdown").classList.remove("select_show");
+      }
+    });
 
 document.addEventListener("DOMContentLoaded", function () {
     // Máscara de CPF
@@ -16,6 +42,8 @@ document.addEventListener("DOMContentLoaded", function () {
             .replace(/^(\d{3})\.(\d{3})(\d)/, '$1.$2.$3')
             .replace(/\.(\d{3})(\d)/, '.$1-$2');
     });
+
+    
 
     // Botão "Salvar"
     document.querySelector(".cadastrar_usuario").addEventListener("click", () => {
