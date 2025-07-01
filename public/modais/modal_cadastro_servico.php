@@ -25,9 +25,9 @@
             </div>
 
             <div class="servico-ponto-atendimento">
-                <label class="label-ponto-atendimento"><b>Foto</b></label>
+                <label class="label-ponto-atendimento"><b>Cadastrar Imagem Serviço</b></label>
+                <img id="preview_imagem_cadastrar" src="#" alt="Preview da Imagem" class="manipula-img-cadastrar">
                 <input type="file" id="imagem_servico_cadastrar" name="url_imagem_servico" class="input-text-servico" accept="image/*">
-                <img id="preview_imagem_cadastrar" src="#" alt="Preview da Imagem" style="display:none; width:80px; height:80px; margin-top:10px; object-fit:cover; border-radius:8px;">
                 <span id="erro_img_servico" class="messagem-erro-serv"></span>
             </div>
 
