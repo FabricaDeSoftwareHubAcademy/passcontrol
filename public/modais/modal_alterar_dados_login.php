@@ -28,7 +28,8 @@
 
                 <div class="button-alterar-dados-login">
                     <button class="botao-modal-alterar-dados cancel_AltDadosPessoais" type="reset" form="formEditDados">Voltar</button>
-                    <button class="botao-modal-alterar-dados save_AltDadosPessoais" type="submit" form="formEditarCadastro" name="confSistema">Salvar</button>
+                    <button class="botao-modal-alterar-dados save_AltDadosPessoais" type="submit" form="formEditDados" name="confSistema">Salvar</button>
+
                 </div>
             </form>
 
