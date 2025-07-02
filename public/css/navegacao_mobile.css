@@ -51,7 +51,7 @@
     width: 80vw;
     height: 100vh;
     background-color: var(--cinza-control);
-    background-image: url(../../public/img/Logo-Nota-Controlnt.ico);
+    background-image: url(../../public/img/icons/logo_control.svg);
     background-repeat: no-repeat;
     background-position: 10vw 8vh;
     background-size: 10vh;

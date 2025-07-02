@@ -37,7 +37,7 @@ elseif (($_SERVER['REQUEST_METHOD'] === 'POST')){
             $path_foto = ''; // EM CASO DE FALHA RETORNA VAZIO
         }
     }else{
-        $res_img = 'Imagem nao alterada'; // PERMITE O ENVIO OPCIONAL DA IMAGEM
+        $res_img = ('Imagem nao alterada'); // PERMITE O ENVIO OPCIONAL DA IMAGEM
     }
     
     // VERIFICA SE OS DADOS FORAM PREENCHIDOS

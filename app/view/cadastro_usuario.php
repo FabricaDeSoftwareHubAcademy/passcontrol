@@ -25,12 +25,12 @@
   <!-- JS -->
   <script src="../../public/js/navegacao_menu_lateral.js" defer></script>
   <script src="../../public/js/monitor_modal.js" defer></script>
-  <script src="../../public/js/checkbox_seleciona_todos.js" defer></script>
+  <!-- <script src="../../public/js/checkbox_seleciona_todos.js" defer></script> -->
   <script src="../js/usuario_cadastrar.js" defer></script>
   <script src="../js/validar_cpf.js" defer></script>
 
   <!-- LOGO -->
-  <link rel="shortcut icon" type="imagex/png" href="../../public/img/Logo-Nota-Controlnt.ico">
+  <link rel="shortcut icon" type="imagex/png" href="../../public/img/icons/logo_control.svg">
 </head>
 
 <body class="control-body-navegacao">
@@ -86,13 +86,13 @@
       <div class="container_input servico" id="select_servico_usuario">
         <label class="labeledit" for="Servico">Servicos Atendidos</label>
         <div class="container_dropdown">
-          <div class="input_dados selecao_servico" onclick="toggleDropdown()">
+          <div class="input_dados selecao_servico"> <!-- onclick="toggleDropdown()" -->
             <span>Selecione opções</span>
             <span class="seta_dropdown">></span>
           </div>
           <div class="input_dados dropdown_select">
-            <label class="labeledit">
-              <input type="checkbox" id="selectAll" onchange="toggleAll(this)">
+            <label class="label_option_servico">
+              <input type="checkbox" id="selectAll"> <!-- onchange="toggleAll(this)" -->
               Selecionar todos
             </label>
             <span class="linha_select"></span>
@@ -100,9 +100,9 @@
               // // LISTA SERVICOS DISPONIVEIS
               foreach ($servicos as $servico):
             ?>
-            <label class="labeledit">
-              <input type="checkbox" class="option_servico" name="id_servico" value="<?= $servico->id_servico ?>">
-              <?= $servico->nome_servico ?>
+            <label class="label_option_servico">
+              <input type="checkbox" class="option_servico" name="id_servico[]" value="<?= $servico->id_servico ?>">
+              <?= $servico->nome_servico . " - " . $servico->codigo_servico ?>
             </label>
             <?php
               endforeach;
