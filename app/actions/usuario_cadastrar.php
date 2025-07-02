@@ -8,7 +8,7 @@
         $email = $_POST["email_usuario"];
         $cpf = $_POST["cpf_usuario"];
         $id_perfil = $_POST["id_perfil_usuario"];
-        $servicos_selecionados = isset($_POST['id_servico']) ? $_POST['id_servico'] : [];
+        // $servicos_selecionados = isset($_POST['id_servico']) ? $_POST['id_servico'] : [];
         
         // VERIFICA SE OS DADOS FORAM PREENCHIDOS
         if($nome != null || $email != null || $cpf != null || $id_perfil != null){   
@@ -34,10 +34,10 @@
             $res = $objUser->cadastrar();
             if($res){
                 // AVALIAR FORMA DE SALVAR NA TABELA INTERMEDIARIA DE SERVICOS ATENDIDOS PELO USUARIO
-                foreach($servicosSelecionados as $id_servico){
-                    // AVALIAR UTILIZACAO DE METODO OU CRIACAO DE NOVA CLASSE
-                    // $objUser->vincularServico($id_servico);
-                }
+                // foreach($servicosSelecionados as $id_servico){
+                //     // AVALIAR UTILIZACAO DE METODO OU CRIACAO DE NOVA CLASSE
+                //     $objUser->vincularServico($id_usuario,$id_servico);
+                // }
                 
                 $resposta = array( "msg" => "Cadastrado com sucesso", "status" => "OK");
                 echo json_encode($resposta);
