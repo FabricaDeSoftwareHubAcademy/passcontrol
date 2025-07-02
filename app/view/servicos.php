@@ -19,12 +19,14 @@
     <link rel="stylesheet" href="../../public/css/monitor_modal.css">
     <link rel="stylesheet" href="../../public/css/modal_alterar_dados_pessoais.css">
     <link rel="stylesheet" href="../../public/css/modal_alterar_senha.css">
+
     <link rel="stylesheet" href="../../public/css/servico.css">
     <link rel="stylesheet" href="../../public/css/modal_edicao_servico.css">
     <link rel="stylesheet" href="../../public/css/modal_cadastro_servico.css">
     <link rel="stylesheet" href="../../public/css/modal_confirmacao_dados_servico.css">
     <link rel="stylesheet" href="../../public/css/modal_status_servico.css">
     <link rel="stylesheet" href="../../public/css/modal_confirmacao_servico.css">
+    <link rel="stylesheet" href="../../public/css/modal_confirmacao_dados_servico.css">
     <link rel="stylesheet" href="../../public/css/modal_confirmacao_dados.css">
     <link rel="stylesheet" href="../../public/css/modal_aviso_erro.css">
 
@@ -111,12 +113,12 @@ include "../actions/servico_listar.php";
 <?php
 include_once "./monitor_modal.php";
 include_once "../../public/modais/modal_cadastro_servico.php";
-include_once "../../public/modais/modal_confirmacao_dados_servicos.php";
 include_once "../../public/modais/modal_edicao_servico.php";
-include_once "../../public/modais/modal_sucesso_edicao.php";
-include_once "../../public/modais/modal_status_servico.php";
-include_once "../../public/modais/modal_sucesso.php";
+// include_once "../../public/modais/modal_confirmacao_dados_servicos.php";
 include_once "../../public/modais/modal_confirmacao_dados.php";
+include_once "../../public/modais/modal_status_servico.php";
+include_once "../../public/modais/modal_sucesso_edicao.php";
+// include_once "../../public/modais/modal_sucesso.php";s
 include_once "../../public/modais/modal_aviso_erro.php";
 ?>
 
