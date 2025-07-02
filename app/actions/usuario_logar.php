@@ -50,6 +50,7 @@ if (password_verify($senha, $res['senha_usuario']) && ($res['primeiro_login'] ==
     $_SESSION['nome_usuario'] = $res['nome_usuario'];
     $_SESSION['email_usuario'] = $res['email_usuario'];
     $_SESSION['cpf_usuario'] = $res['cpf_usuario'];
+    $_SESSION['url_foto_usuario'] = $res['url_foto_usuario'];
     $_SESSION['id_perfil_usuario_fk'] = $res['id_perfil_usuario_fk'];
 
     $perfil = (int)$res['id_perfil_usuario_fk'];

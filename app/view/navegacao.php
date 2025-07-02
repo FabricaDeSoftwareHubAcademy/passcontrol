@@ -25,6 +25,8 @@ if (!isset($_SESSION['id_usuario'])) {
     <script src="../../public/js/navegacao_menu_lateral.js" defer></script>
     <script src="../../public/js/monitor_modal.js" defer></script>
   
+    <!-- LOGO -->
+    <link rel="shortcut icon" type="imagex/png" href="../../public/img/icons/logo_control.svg">
 </head>
 <body>
     <header class="cabeca-navegacao-control">
@@ -46,7 +48,7 @@ if (!isset($_SESSION['id_usuario'])) {
 
     <!-- INFO DO USUARIO -->
     <div class="menu-usuario">
-        <img class="icone-usuario" src="<?= $_SESSION['url_foto_usuario'] ?? '../../public/img/icons/image 33.svg' ?>" alt="">
+        <img class="icone-usuario" src="<?= htmlentities($_SESSION['url_foto_usuario']) ?>" alt="erro">
         <nav class="usu-detalhes"> 
             <ul class="texto-usu">
                 <li class="nome-usu"><?= htmlspecialchars($_SESSION['nome_usuario']) ?></li>
