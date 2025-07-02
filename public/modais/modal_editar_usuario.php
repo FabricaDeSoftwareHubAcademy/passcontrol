@@ -38,7 +38,7 @@
                     <?php
                     // // LISTAR PERFIS DE USUARIO
                     foreach ($perfis as $perfil):
-                    ?> <option class="pi" value="<?=$perfil["id_perfil_usuario"]?>"><?=$perfil["nome_perfil_usuario"]?></option> <?php
+                    ?> <option class="pi" value="<?= $perfil["id_perfil_usuario"] ?>"><?= $perfil["nome_perfil_usuario"] ?></option> <?php
                     endforeach;
                     ?>
                 </select>

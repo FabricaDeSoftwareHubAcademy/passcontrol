@@ -80,12 +80,12 @@
                             <?php foreach ($dados as $usuario):
                                 $UsuStatus = $usuario["status_usuario"] == 1 ? 0 : 'active';
                                 
-                                $id_perfil = $usuarios->listar_perfil_usuario($usuario["id_perfil_usuario_fk"]);
+                                $id_perfil = $objperfil->buscar("id_perfil_usuario =" . $usuario['id_perfil_usuario_fk'], null );
                             ?>
                             <tr>
                                 <td class="matricula-ajuste" scope="col"> <?= $usuario['nome_usuario'] ?> </td>
                                 <td class="matricula-ajuste" scope="col"> <?= $usuario['email_usuario'] ?> </td>
-                                <td class="perfil-ajuste" scope="col"> <?= $id_perfil['nome_perfil_usuario'] ?> </td>
+                                <td class="perfil-ajuste" scope="col"> <?= $id_perfil[0]['nome_perfil_usuario'] ?> </td>
                                 <td class="perfil-ajuste">SERVIÇO</td>
                                 <td class="editar-inativar-menor" scope="col">
                                     <div class="editar">
