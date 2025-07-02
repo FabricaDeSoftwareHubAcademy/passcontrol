@@ -1,6 +1,6 @@
 // try {
     const btn_cadastrar_servico = document.getElementById("btn_cadastrar_servico");
-    const apareceMod = document.getElementById("confirma_cadastrar");
+    const apareceMod = document.getElementById("fundo-container-confirmacao-dados");
 
     const modalCadastro = document.querySelector(".fundo-container-cad-servico");
     const modalConfirmacao = document.querySelector(".fundo-container-confirmacao-dados-registrados");
@@ -11,7 +11,7 @@
     const btnSimConfirmacao = document.querySelector(".save_ConfDadosRegist");
     const btnNaoConfirmacao = document.querySelector(".cancel_ConfDadosRegist");
 
-    const btnOkCadastrar = document.getElementById("btnOkCadastrar");
+    const btnOkCadastrar = document.getElementById("Okay_ConfDados");
 
     // 1. Abrir Modal de Cadastro
     btn_cadastrar_servico.addEventListener("click", () => {
