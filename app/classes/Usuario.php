@@ -106,6 +106,7 @@ class Usuario {
             'senha_usuario' => $nova_senha_hash,
             'primeiro_login' => 0
         ]);
+        
         if ($resultado === false) {
             return json_encode([
                 'success' => false,

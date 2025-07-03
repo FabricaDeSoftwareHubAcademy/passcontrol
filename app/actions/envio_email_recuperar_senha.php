@@ -18,8 +18,9 @@ class EmailService {
         try {
             $mail->isSMTP();
             $mail->SMTPAuth = true;
-            $mail->Username = 'fabricapasscontrol@gmail.com';  // Seu e-mail do Gmail
-            $mail->Password = 'qtcd qeui xmbg eoqy';  // Senha de aplicativo (se a 2FA estiver habilitada)
+            $mail->Username = 'duegra@gmail.com';  // Seu e-mail do Gmail
+            // $mail->Password = 'qtcd qeui xmbg eoqy';
+            $mail->Password = 'picn brup qapr inlj';  // Senha de aplicativo (se a 2FA estiver habilitada)
             $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;  // Usando TLS
             $mail->Host = 'smtp.gmail.com';
             $mail->Port = 587;
