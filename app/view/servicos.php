@@ -23,9 +23,7 @@
     <link rel="stylesheet" href="../../public/css/servico.css">
     <link rel="stylesheet" href="../../public/css/modal_cadastro_servico.css">
     <link rel="stylesheet" href="../../public/css/modal_edicao_servico.css">
-    <link rel="stylesheet" href="../../public/css/modal_confirmacao_dados_servico.css">
     <link rel="stylesheet" href="../../public/css/modal_status_servico.css">
-    <link rel="stylesheet" href="../../public/css/modal_confirmacao_servico.css">
     <link rel="stylesheet" href="../../public/css/modal_confirmacao_dados_registrados.css">
     <link rel="stylesheet" href="../../public/css/modal_confirmacao_dados.css">
     <link rel="stylesheet" href="../../public/css/modal_aviso_erro.css">
@@ -34,10 +32,10 @@
     <!-- JS -->
     <script src="../../public/js/navegacao_menu_lateral.js" defer></script>
     <script src="../../public/js/monitor_modal.js" defer></script>
-    <script src="../../public/js/modal_cadastro_servico.js" defer></script>
-    <script src="../../public/js/modal_edicao_servico.js" defer></script>
-    <script src="../../public/js/modal_status_servico.js" defer></script>
     <script src="../../app/js/barra_pesquisa_ponto_atendimento.js" defer></script>
+    <script src="../js/servico_cadastrar.js" defer></script>
+    <script src="../js/servico_editar.js" defer></script>
+    <script src="../js/servico_alterar_status.js" defer></script>
 
 
     <!-- LOGO -->
@@ -114,11 +112,9 @@ include "../actions/servico_listar.php";
 include_once "./monitor_modal.php";
 include_once "../../public/modais/modal_cadastro_servico.php";
 include_once "../../public/modais/modal_edicao_servico.php";
-// include_once "../../public/modais/modal_confirmacao_dados_servicos.php";
+include_once "../../public/modais/modal_confirmacao_dados_registrados.php";
 include_once "../../public/modais/modal_confirmacao_dados.php";
 include_once "../../public/modais/modal_status_servico.php";
-include_once "../../public/modais/modal_sucesso_edicao.php";
-// include_once "../../public/modais/modal_sucesso.php";s
 include_once "../../public/modais/modal_aviso_erro.php";
 ?>
 

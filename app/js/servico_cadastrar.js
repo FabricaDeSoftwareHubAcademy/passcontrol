@@ -13,8 +13,8 @@
     const btnNaoConfirmacao = document.querySelector(".cancel_ConfDadosRegist");
     
     // MODAL DE OK PARA FINALIZAR FLUXO DO CADASTRO
-    const apareceMod = document.querySelector("fundo-container-confirmacao-dados");
-    const btnOkCadastrar = document.querySelector("Okay_ConfDados");
+    const apareceMod = document.querySelector(".fundo-container-confirmacao-dados");
+    const btnOkCadastrar = document.querySelector(".Okay_ConfDados");
 
     //Abre Modal de Cadastro
     btn_cadastrar_servico.addEventListener("click", () => {
@@ -105,7 +105,12 @@
         });
 
         // OK no sucesso -> fecha tudo e recarrega
-        const inputImagem = document.getElementById('imagem_servico_cadastrar');
+        btnOkCadastrar.addEventListener("click", () => {
+            apareceMod.classList.remove("show");
+            location.reload();
+        });
+    });
+       const inputImagem = document.getElementById('imagem_servico_cadastrar');
         const previewImagem = document.getElementById('preview_imagem_cadastrar');
 
         inputImagem.addEventListener('change', function () {
@@ -125,11 +130,6 @@
                 previewImagem.style.display = 'none';
             }
         });
-        btnOkCadastrar.addEventListener("click", () => {
-            apareceMod.classList.remove("show");
-            location.reload();
-        });
-    });
 // } catch {
 //     location.reload;
 // }

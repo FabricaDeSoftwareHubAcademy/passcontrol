@@ -12,8 +12,8 @@
             <div class="inf-modal-edit-servico">
                 <div class="container-edit-nomeservico">
                     <label class="label"><b>Nome do Serviço</b></label>
-                    <input type="text" id="nome_ponto_atendimento" name="nome_servico" class="input-text-edit">
-                    <input type="hidden" id="id_ponto_atendimento" name="id_servico">
+                    <input type="text" id="nome_edit_servico" name="nome_servico" class="input-text-edit">
+                    <input type="hidden" id="id_edit_servico" name="id_servico">
                 </div>
             </div>
             <!-- CÓDIGO SERVIÇO -->
