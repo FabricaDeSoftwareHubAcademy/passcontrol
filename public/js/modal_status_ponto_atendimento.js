@@ -2,7 +2,7 @@
     document.querySelectorAll("#switch_status").forEach(button => {
         button.addEventListener("click", function(event) {
             let id_value_switch = button.getAttribute("id_value_switch");
-            const modalContainer = document.querySelector(".modal-inativar-container");
+            const modalContainer = document.querySelector(".fundo_AltStatusUsu");
             // const buttonCancelar = document.querySelector(".cancel");
             const buttonCancelar = document.querySelector("#btn-cancelar");
             const apareceMod = document.getElementById("confirma_status");
