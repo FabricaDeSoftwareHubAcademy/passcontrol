@@ -5,7 +5,9 @@ try {
     const btnCancelarCadastro = document.querySelector(".cancel_CadPontoAtend");
     const btnSalvarCadastro = document.querySelector(".save_CadPontoAtend");
     const modalConfirmacao = document.querySelector(".fundo-container-confirmacao-dados");
-    const btnOkConfirmacao = document.querySelector(".Okay_ConfDados");
+    const modalConfirmarSalvarPA = document.querySelector(".fundo-container-confirmacao-dados-registrados");
+    const confirmar_salvar_dados = document.querySelector(".save_ConfDadosRegist");
+    const btn_OK_cadastrado = document.querySelector(".Okay_ConfDados");
 
     let formDataGlobal = null;
 
@@ -35,37 +37,45 @@ try {
 
             // Fecha o modal de cadastro e mostra o de confirmação
             modalCadastro.classList.remove("show");
-            modalConfirmacao.classList.add("show");
+            modalConfirmarSalvarPA.classList.add("show");
 
-            // Guarda os dados para enviar depois
-            formDataGlobal = new FormData(myform);
-        });
+            confirmar_salvar_dados.addEventListener("click", async function () {
+                // Guarda os dados para enviar depois
+                formDataGlobal = new FormData(myform);
 
-        btnOkConfirmacao.addEventListener("click", async function () {
-            if (!formDataGlobal) return;
+                if (!formDataGlobal) return;
+    
+                let response = await fetch("../actions/ponto_atendimento_cadastrar.php", {
+                    method: 'POST',
+                    body: formDataGlobal
+                });
+    
+                let text = await response.text();
+                console.log(text);
+    
+                try {
+                    let result = JSON.parse(text);
+    
+                    if (result.status === 'OK') {
+                        modalConfirmarSalvarPA.classList.remove("show");
+                        modalConfirmacao.classList.add("show");
 
-            let response = await fetch("../actions/ponto_atendimento_cadastrar.php", {
-                method: 'POST',
-                body: formDataGlobal
-            });
-
-            let text = await response.text();
-            console.log(text);
-
-            try {
-                let result = JSON.parse(text);
-
-                if (result.status === 'ok') {
-                    // Redirecionar após sucesso
-                    window.location.href = "./ponto_atendimento.php";
-                } else {
-                    alert("Erro: " + result.mensagem);
+                        // Redirecionar após sucesso
+                        btn_OK_cadastrado.addEventListener("click", () => {
+                        modalConfirmacao.classList.remove("show");
+                        // location.href = "./ponto_atendimento.php";
+                        location.reload();
+                    });
+                    } else {
+                        alert("Erro: " + result.mensagem);
+                    }
+                } catch (e) {
+                    console.error("Erro ao interpretar resposta do servidor:", e);
+                    alert("Erro inesperado ao salvar.");
                 }
-            } catch (e) {
-                console.error("Erro ao interpretar resposta do servidor:", e);
-                alert("Erro inesperado ao salvar.");
-            }
+            });
         });
+
     });
 
 } catch {

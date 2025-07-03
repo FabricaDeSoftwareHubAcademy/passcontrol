@@ -10,11 +10,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $guiche->nome_ponto_atendimento = $nome_ponto_atendimento;
 
     if ($guiche->cadastrar()) {
-        echo json_encode(['status' => 'ok']);
+        echo json_encode(['status' => 'OK']);
     } else {
-        echo json_encode(['status' => 'erro', 'mensagem' => 'Erro ao cadastrar o guichê.']);
+        echo json_encode(['status' => 'ERRO', 'mensagem' => 'Erro ao cadastrar o guichê.']);
     }
 } else {
-    echo json_encode(['status' => 'erro', 'mensagem' => 'Requisição inválida.']);
+    echo json_encode(['status' => 'ERRO', 'mensagem' => 'Requisição inválida.']);
 }
 ?>
