@@ -70,7 +70,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['proxima'])) {
     exit;
 }
 
-$senhaPrincipal = $_SESSION['senha_principal'];
+$senhaPrincipal = $_SESSION['senha_principal'] ?? null;
 $ultimasChamadas = array_slice($_SESSION['historico_senhas'], 0, 4);
 
 $servicoDB = new Database('servico');
@@ -99,49 +99,61 @@ $servicoDB = new Database('servico');
         <div class="fundo-azul-lateral">
             <h1>Últimas<br>Chamadas</h1>
             <div class="area-das-senhas">
-                <?php foreach ($ultimasChamadas as $senha): ?>
-                    <?php
-                        $servico = $servicoDB->select('id_servico = ' . $senha['id_servico_fk'])->fetch(PDO::FETCH_ASSOC);
-                        $prioridade = $senha['prioridade_fila_senha'] ? 'PR' : 'CM';
-                        $numero = str_pad($senha['id_fila_senha'], 3, '0', STR_PAD_LEFT);
-                    ?>
-                    <div class="caixa-das-senhas">
-                        <h2><?= htmlspecialchars($senha['nome_fila_senha']) ?></h2>
-                        <div class="conjunto-senhas">
-                            <div class="senha">
-                                <h3>SENHA:</h3>
-                                <h4><?= $prioridade ?> <?= $numero ?></h4>
-                            </div>
-                            <div class="guiche">
-                                <h3>GUICHÊ:</h3>
-                                <h4>test</h4>
+                <?php if (!empty($ultimasChamadas)): ?>
+                    <?php foreach ($ultimasChamadas as $senha): ?>
+                        <?php
+                            $servico = $servicoDB->select('id_servico = ' . $senha['id_servico_fk'])->fetch(PDO::FETCH_ASSOC);
+                            $prioridade = $senha['prioridade_fila_senha'] ? 'PR' : 'CM';
+                            $numero = str_pad($senha['id_fila_senha'], 3, '0', STR_PAD_LEFT);
+                        ?>
+                        <div class="caixa-das-senhas">
+                            <h2><?= htmlspecialchars($senha['nome_fila_senha']) ?></h2>
+                            <div class="conjunto-senhas">
+                                <div class="senha">
+                                    <h3>SENHA:</h3>
+                                    <h4><?= $prioridade ?> <?= $numero ?></h4>
+                                </div>
+                                <div class="guiche">
+                                    <h3>GUICHÊ:</h3>
+                                    <h4>test</h4>
+                                </div>
                             </div>
                         </div>
+                    <?php endforeach; ?>
+                <?php else: ?>
+                    <div class="caixa-das-senhas">
+                        <h2>SEM INFORMAÇÕES</h2>
                     </div>
-                <?php endforeach; ?>
+                <?php endif; ?>
             </div>
         </div>
         <div class="fundo-senha-principal">
             <div class="fundo-senha-principal-wrap">
-                <div class="nome-pessoa">
-                    <h1><?= htmlspecialchars($senhaPrincipal['nome_fila_senha']) ?></h1>
-                </div>
-                <div class="infos-senha-principal">
-                    <li><h2>SENHA:</h2>
-                        <span><?= $senhaPrincipal['prioridade_fila_senha'] ? 'PR' : 'CM' ?> <?= str_pad($senhaPrincipal['id_fila_senha'], 3, '0', STR_PAD_LEFT) ?></span>
-                    </li>
-                    <li><h2>GUICHÊ:</h2> <span>test</span></li>
-                </div>
-                <div class="nome-servico">
-                    <li><h2>SERVIÇO:</h2>
-                        <span>
-                            <?php
-                                $servico = $servicoDB->select('id_servico = ' . $senhaPrincipal['id_servico_fk'])->fetch(PDO::FETCH_ASSOC);
-                                echo htmlspecialchars($servico['nome_servico']);
-                            ?>
-                        </span>
-                    </li>
-                </div>
+                <?php if ($senhaPrincipal): ?>
+                    <div class="nome-pessoa">
+                        <h1><?= htmlspecialchars($senhaPrincipal['nome_fila_senha']) ?></h1>
+                    </div>
+                    <div class="infos-senha-principal">
+                        <li><h2>SENHA:</h2>
+                            <span><?= $senhaPrincipal['prioridade_fila_senha'] ? 'PR' : 'CM' ?> <?= str_pad($senhaPrincipal['id_fila_senha'], 3, '0', STR_PAD_LEFT) ?></span>
+                        </li>
+                        <li><h2>GUICHÊ:</h2> <span>test</span></li>
+                    </div>
+                    <div class="nome-servico">
+                        <li><h2>SERVIÇO:</h2>
+                            <span>
+                                <?php
+                                    $servico = $servicoDB->select('id_servico = ' . $senhaPrincipal['id_servico_fk'])->fetch(PDO::FETCH_ASSOC);
+                                    echo htmlspecialchars($servico['nome_servico'] ?? 'SEM INFORMAÇÕES');
+                                ?>
+                            </span>
+                        </li>
+                    </div>
+                <?php else: ?>
+                    <div class="nome-pessoa">
+                        <h1>SEM INFORMAÇÕES</h1>
+                    </div>
+                <?php endif; ?>
             </div>
         </div>
     </section>

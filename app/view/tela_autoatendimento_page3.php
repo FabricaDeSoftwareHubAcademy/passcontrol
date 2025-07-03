@@ -58,7 +58,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         'Content-Type: application/json',
                         // token zenvia 1: Q-E3GbFCQoCy4LY9DODinGi4C0TI25u9-qBG
                         // token zenvia 2: Gxc8y6AKed3wbFe6SlSEgZKbwKAhLHY8dib2,"wA6kEyWvmPlXO8mX2N8JDGq9f-SXKex-RWCxdmmxokDvuPclHK2DqJIapJOq8K2x"
-                        'X-API-TOKEN: Gxc8y6AKed3wbFe6SlSEgZKbwKAhLHY8dib2,"wA6kEyWvmPlXO8mX2N8JDGq9f-SXKex-RWCxdmmxokDvuPclHK2DqJIapJOq8K2x"' // Coloque aqui seu token real da Zenvia
+                        //'X-API-TOKEN: Gxc8y6AKed3wbFe6SlSEgZKbwKAhLHY8dib2,"wA6kEyWvmPlXO8mX2N8JDGq9f-SXKex-RWCxdmmxokDvuPclHK2DqJIapJOq8K2x"' // Coloque aqui seu token real da Zenvia
+                        'Authorization: Bearer Gxc8y6AKed3wbFe6SlSEgZKbwKAhLHY8dib2wA6kEyWvmPlXO8mX2N8JDGq9fSXKexRWCxdmmxokDvuPclHK2DqJIapJOq8K2x'
                     ]);
                     echo 'informações do ch linha 63: <pre>';
                     print_r($ch);
