@@ -54,8 +54,8 @@
     border: none;
     border-top: 2px solid #000;
     width: 100%;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 10px;
+    margin-bottom: 50px;
 
 }
 
@@ -80,27 +80,27 @@
 }
 
 /* Estilo dos labels */
-.label-serv {
+.label-servico {
     font-size: 16px;
     margin-bottom: 5px;
-    float: inline-start;
 }
 
 /* Estilo dos inputs */
 .input-text-edit {
     width: 100%;
     padding: 10px;
-    margin-top: 5px;
-    margin-bottom: 20px;
+    margin-top: 0px;
+    margin-bottom: 30px;
     border: 1px solid #ccc;
     border-radius: 4px;
     background-color: white;
 }
 .manipula-img-editar{
-    display: flex; 
-    width: 80px; 
-    height: 80px; 
-    margin-top: 10px; 
+    display: none; 
+    width: 90px; 
+    height: 90px; 
+    margin-top: 10px;
+    margin-bottom: 10px; 
     object-fit: cover;
     border-radius: 8px;
 } 
