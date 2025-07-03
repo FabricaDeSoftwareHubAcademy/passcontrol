@@ -117,7 +117,5 @@ include_once "../../public/modais/modal_confirmacao_dados.php";
 include_once "../../public/modais/modal_status_servico.php";
 include_once "../../public/modais/modal_aviso_erro.php";
 ?>
-
 </body>
-
 </html>
