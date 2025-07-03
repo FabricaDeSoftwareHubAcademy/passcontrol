@@ -21,9 +21,9 @@ document.addEventListener("DOMContentLoaded", function () {
             // console.log(response);
 
             // Preencher os campos do formulário
-            const inputNome = document.getElementById("nome_ponto_atendimento");
+            const inputNome = document.getElementById("nome_edit_servico");
             const inputCodigo = document.getElementById("identificador_ponto_atendimento");
-            const inputId = document.getElementById("id_ponto_atendimento");
+            const inputId = document.getElementById("id_edit_servico");
             const previewImagem = document.getElementById("preview_imagem_editar");
 
             inputNome.value = response.nome_servico;
@@ -91,16 +91,16 @@ document.addEventListener("DOMContentLoaded", function () {
                 console.log(response2);
 
                 if (response2) {
-                    document.getElementById("confirma_editar").classList.add("show");
+                    document.querySelector(".fundo-container-confirmacao-dados").classList.add("show");
                 }
 
                 document.querySelector(".fundo-container-confirmacao-dados-registrados").classList.remove("show");
             });
 
             // Botão OK no modal final
-            const buttonOkEditar = document.getElementById("btnOkEditar");
+            const buttonOkEditar = document.querySelector(".Okay_ConfDados");
             buttonOkEditar.addEventListener("click", function () {
-                const apareceMod = document.getElementById("confirma_editar");
+                const apareceMod = document.querySelector(".fundo-container-confirmacao-dados");
                 apareceMod.classList.remove("show");
                 location.reload();
             });

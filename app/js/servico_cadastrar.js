@@ -1,19 +1,22 @@
 // try {
+    // BOTÃO ABRE MODAL DE CADASTRO
     const btn_cadastrar_servico = document.getElementById("btn_cadastrar_servico");
-    const apareceMod = document.getElementById("fundo-container-confirmacao-dados");
-
+    
+    // MODAL DE CADASTRO SERVIÇO
     const modalCadastro = document.querySelector(".fundo-container-cad-servico");
-    const modalConfirmacao = document.querySelector(".fundo-container-confirmacao-dados-registrados");
-
     const btnCancelarCadastro = document.querySelector(".cancel_CadServ");
     const btnSalvarCadastro = document.querySelector(".save_CadServ");
-
+    
+    // MODAL DE CONFIRMAÇÃO SIM/NÃO APÓS CADASTRAR
+    const modalConfirmacao = document.querySelector(".fundo-container-confirmacao-dados-registrados");
     const btnSimConfirmacao = document.querySelector(".save_ConfDadosRegist");
     const btnNaoConfirmacao = document.querySelector(".cancel_ConfDadosRegist");
+    
+    // MODAL DE OK PARA FINALIZAR FLUXO DO CADASTRO
+    const apareceMod = document.querySelector(".fundo-container-confirmacao-dados");
+    const btnOkCadastrar = document.querySelector(".Okay_ConfDados");
 
-    const btnOkCadastrar = document.getElementById("Okay_ConfDados");
-
-    // 1. Abrir Modal de Cadastro
+    //Abre Modal de Cadastro
     btn_cadastrar_servico.addEventListener("click", () => {
         modalCadastro.classList.add("show");
 
@@ -102,7 +105,12 @@
         });
 
         // OK no sucesso -> fecha tudo e recarrega
-        const inputImagem = document.getElementById('imagem_servico_cadastrar');
+        btnOkCadastrar.addEventListener("click", () => {
+            apareceMod.classList.remove("show");
+            location.reload();
+        });
+    });
+       const inputImagem = document.getElementById('imagem_servico_cadastrar');
         const previewImagem = document.getElementById('preview_imagem_cadastrar');
 
         inputImagem.addEventListener('change', function () {
@@ -122,11 +130,6 @@
                 previewImagem.style.display = 'none';
             }
         });
-        btnOkCadastrar.addEventListener("click", () => {
-            apareceMod.classList.remove("show");
-            location.reload();
-        });
-    });
 // } catch {
 //     location.reload;
 // }
