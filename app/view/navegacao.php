@@ -18,13 +18,14 @@ if (!isset($_SESSION['id_usuario'])) {
     <link rel="stylesheet" href="../../public/css/modal_alterar_dados_login.css">
     <link rel="stylesheet" href="../../public/css/modal_alterar_senha.css">
     <link rel="stylesheet" href="../../public/css/modal_alterar_dados_pessoais.css">
+    <link rel="stylesheet" href="../../public/css/modal_confirmacao_dados.css">
   
     <!-- JS -->
     <script src="../../public/js/modal_alterar_senha.js" defer></script>
     <script src="../../public/js/modal_alterar_dados_login.js" defer></script>
     <script src="../../public/js/navegacao_menu_lateral.js" defer></script>
     <script src="../../public/js/monitor_modal.js" defer></script>
-    <script src="../../public/js/modal_alterar_dados_login.js" defer></script>
+
   
     <!-- LOGO -->
     <link rel="shortcut icon" type="imagex/png" href="../../public/img/icons/logo_control.svg">
@@ -49,7 +50,13 @@ if (!isset($_SESSION['id_usuario'])) {
 
     <!-- INFO DO USUARIO -->
     <div class="menu-usuario">
-        <img class="icone-usuario" src="<?= htmlentities($_SESSION['url_foto_usuario']) ?>" alt="erro">
+    <?php
+        // Só o nome do arquivo guardado na sessão (exemplo: perfil_abc.avif)
+        $nomeImagem = $_SESSION['url_foto_usuario'] ?? 'default_user.jpeg';
+        // Caminho relativo da página para a pasta uploads
+        $caminhoRelativo = '../../public/img/uploads/' . basename($nomeImagem);
+    ?>
+        <img class="icone-usuario" src="<?= htmlentities($caminhoRelativo) ?>" alt="erro">
         <nav class="usu-detalhes"> 
             <ul class="texto-usu">
                 <li class="nome-usu"><?= htmlspecialchars($_SESSION['nome_usuario']) ?></li>
@@ -138,6 +145,7 @@ if (!isset($_SESSION['id_usuario'])) {
 
     <?php
         include "../../public/modais/modal_alterar_dados_login.php";
+        include "../../public/modais/modal_confirmacao_dados.php"
         // include "../../public/modais/modal_alterar_senha.php";
     ?>
 </body>

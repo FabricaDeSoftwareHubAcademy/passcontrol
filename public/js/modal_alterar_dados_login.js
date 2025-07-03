@@ -1,49 +1,53 @@
-const formEditDados = document.getElementById('formEditDados');
-const modalContainer = document.querySelector('.edit_dados'); // ou modal específico
-const buttonAbrir = document.querySelector('.open-editar-dados');
-const buttonCancelar = document.querySelector('.cancel_AltDadosPessoais');
-const feedback = document.createElement('p'); // para mensagens de erro/sucesso
+document.addEventListener('DOMContentLoaded', () => {
+  const formEditDados = document.getElementById('formEditDados');
+  const modalContainer = document.querySelector('.edit_dados');
+  const buttonAbrir = document.querySelector('.open-editar-dados');
+  const buttonCancelar = document.querySelector('.cancel_AltDadosPessoais');
 
-formEditDados.appendChild(feedback);
+  const modalConfirmar = document.querySelector('.fundo-container-confirmacao-dados');
+  const btnOkCadastrar = document.querySelector('.Okay_ConfDados');
 
-buttonAbrir.addEventListener('click', () => {
-  modalContainer.classList.add('show');
-});
+  const feedback = document.createElement('p');
+  formEditDados.appendChild(feedback);
 
-buttonCancelar.addEventListener('click', () => {
-  modalContainer.classList.remove('show');
-  feedback.textContent = '';
-});
+  buttonAbrir?.addEventListener('click', () => {
+    modalContainer.classList.add('show');
+  });
 
-formEditDados.addEventListener('submit', async (e) => {
-  e.preventDefault();
+  buttonCancelar?.addEventListener('click', () => {
+    modalContainer.classList.remove('show');
+    feedback.textContent = '';
+  });
 
-  const formData = new FormData(formEditDados);
+  formEditDados?.addEventListener('submit', async (e) => {
+    e.preventDefault();
 
-  try {
-    const response = await fetch('../../app/actions/alterar_dados.php', {
-      method: 'POST',
-      body: formData,
-    });
+    const formData = new FormData(formEditDados);
 
-    const result = await response.json();
+    try {
+      const response = await fetch('../../app/actions/alterar_dados.php', {
+        method: 'POST',
+        body: formData,
+      });
 
-    if (result.success) {
-      feedback.style.color = 'green';
-      feedback.textContent = result.message;
-      setTimeout(() => {
+      const result = await response.json();
+
+      if (result.success) {
         modalContainer.classList.remove('show');
-        feedback.textContent = '';
-        // opcional: atualizar elementos da página com os novos dados
-        location.reload(); // para recarregar e atualizar sessão
-      }, 1500);
-    } else {
+        modalConfirmar.classList.add('show');
+
+        btnOkCadastrar.onclick = () => {
+          modalConfirmar.classList.remove('show');
+          location.reload();
+        };
+      } else {
+        feedback.style.color = 'red';
+        feedback.textContent = result.message || 'Erro ao salvar.';
+      }
+    } catch (error) {
       feedback.style.color = 'red';
-      feedback.textContent = result.message || 'Erro ao salvar.';
+      feedback.textContent = 'Erro na comunicação com o servidor.';
+      console.error(error);
     }
-  } catch (error) {
-    feedback.style.color = 'red';
-    feedback.textContent = 'Erro na comunicação com o servidor.';
-    console.error(error);
-  }
+  });
 });
