@@ -130,7 +130,7 @@ class Usuario
         return true;
     }
 
-    private function vincularServico($id_usuario, $id_servico) {
+    public function vincular_servico($id_usuario, $id_servico) {
         $this->db = new Database("usuario_servico");
         $values = [
             "id_usuario_fk = ". $id_usuario,

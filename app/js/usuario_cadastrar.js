@@ -93,7 +93,7 @@ document.addEventListener("DOMContentLoaded", function () {
             event.preventDefault();
             
             const formCadastrarUsuario = new FormData(document.getElementById("dados_cad"));
-            // console.log(formCadastrarUsuario);
+            console.log(formCadastrarUsuario);
 
             let enviar_dados = await fetch('../actions/usuario_cadastrar.php', {
                 method: "POST",
@@ -111,7 +111,9 @@ document.addEventListener("DOMContentLoaded", function () {
                     modalDadosSalvos.classList.add("show");
     
                     buttonOk.addEventListener("click", () => {
-                        location.href = './listar_usuarios.php';
+                        modalDadosSalvos.classList.remove("show");
+                        console.log(response_post.array);
+                        // location.href = './listar_usuarios.php';
                     });
                 }else{
                     console.log("Erro: ", response_post.msg);

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,6 +18,8 @@
     <script src="../../public/js/modal_alterar_dados_login.js" defer></script>
     <script src="../../public/js/navegacao_menu_lateral.js" defer></script>
     <script src="../../public/js/monitor_modal.js" defer></script>
+    <script src="../../modal_alterar_dados_login.js" defer></script>
+
 
 </head>
 <body>
@@ -126,9 +129,10 @@
     </div>
 
     <?php
-        // include "../../public/modais/modal_alterar_dados_login.php";
+        include "../../public/modais/modal_alterar_dados_login.php";
         // include "../../public/modais/modal_alterar_senha.php";
         include "./monitor_modal.php";
     ?>
+    
 </body>
 </html>
