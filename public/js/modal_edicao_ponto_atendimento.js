@@ -86,17 +86,25 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 const myform = document.getElementById("formulario_editar");
                 const formData = new FormData(myform);
+                console.log(formData);
 
                 try {
-                    let responseSalvar = await fetch("../actions/ponto_atendimento_cadastrar.php", {
+                    let responseSalvar = await fetch("../actions/ponto_atendimento_editar.php", {
                         method: 'POST',
                         body: formData
                     });
 
                     let data = await responseSalvar.json();
+                    console.log(data);
 
-                    if (data.status === 'ok') {
-                        document.getElementById("confirma_editar").classList.add("show");
+                    if (data.status === 'OK') {
+                        document.querySelector(".fundo-container-confirmacao-dados").classList.add("show");
+
+                        document.querySelector(".Okay_ConfDados").addEventListener("click", function () {
+                            document.querySelector(".fundo-container-confirmacao-dados").classList.remove("show");
+                            location.reload();
+                        });
+
                     } else {
                         alert("Erro ao salvar: " + (data.mensagem || "Erro desconhecido"));
                     }
@@ -108,12 +116,12 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
             });
 
-            // Botão OK final
-            const buttonOkEditar = document.getElementById("btnOkEditar");
-            buttonOkEditar.addEventListener("click", function () {
-                document.getElementById("confirma_editar").classList.remove("show");
-                location.reload();
-            });
+            // // Botão OK final
+            // const buttonOkEditar = document.querySelector(".Okay_ConfDados");
+            // buttonOkEditar.addEventListener("click", function () {
+            //     document.getElementById("fundo-container-confimarcao-dados").classList.remove("show");
+            //     location.reload();
+            // });
         });
     });
 });

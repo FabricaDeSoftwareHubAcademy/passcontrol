@@ -46,8 +46,8 @@ Class Ponto_Atendimento{
     public function editar(){
         $db = new Database('ponto_atendimento');
         $dados=[
-            'nome_ponto_atendimento'=>$this->nome_ponto_atendimento,
-            'identificador_ponto_atendimento'=>$this->identificador_ponto_atendimento,
+            'nome_ponto_atendimento' => $this->nome_ponto_atendimento,
+            'identificador_ponto_atendimento' => $this->identificador_ponto_atendimento
         ];
         $where = 'id_ponto_atendimento = ' . $this->id_ponto_atendimento;
 
