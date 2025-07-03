@@ -40,7 +40,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     $telefoneLimpo = '+55' . $telefoneLimpo;
                     echo "informações do telefonelimpo apos o +55: $telefoneLimpo<br>";
                     $smsData = [
-                        'from' => 'lavender-porpoise', // Use exatamente o identificador da sua conta Zenvia aqui
+                        'from' => 'Zenvia', // Use exatamente o identificador da sua conta Zenvia aqui
                         'to' => $telefoneLimpo,
                         'contents' => [
                             [
@@ -58,8 +58,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         'Content-Type: application/json',
                         // token zenvia 1: Q-E3GbFCQoCy4LY9DODinGi4C0TI25u9-qBG
                         // token zenvia 2: Gxc8y6AKed3wbFe6SlSEgZKbwKAhLHY8dib2,"wA6kEyWvmPlXO8mX2N8JDGq9f-SXKex-RWCxdmmxokDvuPclHK2DqJIapJOq8K2x"
-                        //'X-API-TOKEN: Gxc8y6AKed3wbFe6SlSEgZKbwKAhLHY8dib2,"wA6kEyWvmPlXO8mX2N8JDGq9f-SXKex-RWCxdmmxokDvuPclHK2DqJIapJOq8K2x"' // Coloque aqui seu token real da Zenvia
-                        'Authorization: Bearer Gxc8y6AKed3wbFe6SlSEgZKbwKAhLHY8dib2wA6kEyWvmPlXO8mX2N8JDGq9fSXKexRWCxdmmxokDvuPclHK2DqJIapJOq8K2x'
+                        // 'X-API-TOKEN: Gxc8y6AKed3wbFe6SlSEgZKbwKAhLHY8dib2,"wA6kEyWvmPlXO8mX2N8JDGq9f-SXKex-RWCxdmmxokDvuPclHK2DqJIapJOq8K2x"' // Coloque aqui seu token real da Zenvia
+                        // 'Authorization: Bearer Gxc8y6AKed3wbFe6SlSEgZKbwKAhLHY8dib2wA6kEyWvmPlXO8mX2N8JDGq9fSXKexRWCxdmmxokDvuPclHK2DqJIapJOq8K2x'
+                        'X-API-TOKEN: z1TCrlshp4MJdUrokoR7WWaPQ_byCWuhl6bM'
                     ]);
                     echo 'informações do ch linha 63: <pre>';
                     print_r($ch);
@@ -77,6 +78,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                     curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($smsData));
                     echo 'informações do ch linha 77: <pre>';
+
+                    // Código para desativar a verificação do ssl, apenas para testes de resposta do zenvia.
+
+                    // curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+                    // $response = curl_exec($ch);
+                    // echo '</pre>';
+                    // echo 'informações do smsData linha 83333333: <pre>';
+                    // print_r($response);
+                    // echo '</pre>';
+
                     print_r($ch);
                     echo '</pre>';
                     echo 'informações do smsData linha 77: <pre>';
