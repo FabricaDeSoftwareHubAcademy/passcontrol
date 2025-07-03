@@ -117,12 +117,12 @@
       <button class="botao_salvo cadastrar_usuario" name="cadastrar" id="save_sucess">Salvar</button>
     </div>
 
-    <?php
-    include "./monitor_modal.php";
-    include "../../public/modais/modal_confirmacao_dados_registrados.php";
-    include "../../public/modais/modal_confirmacao_dados.php";
-    ?>
   </section>
+  <?php
+  include "./monitor_modal.php";
+  include "../../public/modais/modal_confirmacao_dados_registrados.php";
+  include "../../public/modais/modal_confirmacao_dados.php";
+  ?>
 </body>
 
 </html>
