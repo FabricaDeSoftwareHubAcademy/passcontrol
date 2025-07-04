@@ -27,12 +27,12 @@ $guiches = $guiche->buscar();
     <link rel="stylesheet" href="../../public/css/modal_edicao_ponto_atendimento.css">
     <link rel="stylesheet" href="../../public/css/modal_confirmacao_dados.css">
     <link rel="stylesheet" href="../../public/css/modal_confirmacao_dados_registrados.css">
-    <!-- <link rel="stylesheet" href="../../public/css/modal_status_ponto_atendimento.css"> -->
+    <link rel="stylesheet" href="../../public/css/modal_alterar_status.css">
 
     <!-- IMPORT DO JS -->
     <script src="../../public/js/modal_edicao_ponto_atendimento.js" defer></script>
     <script src="../js/ponto_atendimento_cadastrar.js" defer></script>
-    <script src="../../public/js/modal_status_ponto_atendimento.js" defer></script>
+    <script src="../js/ponto_atendimento_status.js" defer></script>
     <script src="../../app/js/barra_pesquisa_ponto_atendimento.js" defer></script>
     <script src="../../public/js/modal_confirmacao_dados.js" defer></script>
     <!-- <script src="../../public/js/modal_status_ponto_atendimento.js"></script> -->
@@ -109,9 +109,11 @@ include_once "../../public/modais/modal_edicao_ponto_atendimento.php";
 include_once "../../public/modais/modal_cadastro_ponto_atendimento.php";
 include_once "../../public/modais/modal_confirmacao_dados_registrados.php";
 include_once "../../public/modais/modal_confirmacao_dados.php";
-/* include_once "../../public/modais/modal_status_ponto_atendimento.php"; */
-# include "../../public/modais/modal_cadastro_ponto_atendimento.php";
-# include "../../public/modais/modal_alterar_status_ponto_atendimento.php";
+include_once "../../public/modais/modal_alterar_status.php"
+// include_once "../../public/modais/modal_status_ponto_atendimento.php";
+// include_once "../../public/modais/modal_cadastro_ponto_atendimento.php";
+// include_once "../../public/modais/modal_alterar_status_ponto_atendimento.php";
 ?>
 
 </body>
+</html>
