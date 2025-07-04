@@ -39,13 +39,13 @@
                 <a href="./menusup_usuario.php" class="active">Usuários</a>
                 <a href="./menusup_servicos.php">Serviços</a>
                 <!-- <a href="./menuadm_autoatendimento.php" class="active">Autoatendimento</a> -->
-                <a href="./menuadm_usuario.php">ADM</a>
+                <!-- <a href="./menuadm_usuario.php">ADM</a> -->
             </div>
             <div class="menu-mobile" id="mobileMenu">
                 <a href="./menusup_usuario.php" class="active">Usuários</a>
                 <a href="./menusup_servicos.php">Serviços</a>
                 <!-- <a href="./menuadm_autoatendimento.php" class="active">Autoatendimento</a> -->
-                <a href="./menuadm_usuario.php">ADM</a>
+                <!-- <a href="./menuadm_usuario.php">ADM</a> -->
             </div>
         </div>
         <script>

@@ -23,6 +23,7 @@
 
                 <div class="file-login-container">
                     <label class="label-file-login"><b>Foto de Perfil</b></label>
+                    <img id="preview-foto-login" src="" alt="Pré-visualização" style="display: none; max-width: 120px; margin-top: 10px; border-radius: 5px;">
                     <input type="file" class="input-file-login" id="foto-login" name="foto-login">
                 </div>
 
