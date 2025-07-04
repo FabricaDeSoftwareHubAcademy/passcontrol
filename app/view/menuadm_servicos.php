@@ -45,14 +45,14 @@
                 <a href="./menuadm_usuario.php">Usuários</a>
                 <a href="./menuadm_servicos.php" class="active">Serviços</a>
                 <a href="./menuadm_autoatendimento.php">Autoatendimento</a>
-                <a href="./menusup_usuario.php">SUP</a>
+                <!-- <a href="./menusup_usuario.php">SUP</a> -->
             </div>
             
             <div class="menu-mobile" id="mobileMenu">
                 <a href="./menuadm_usuario.php">Usuários</a>
                 <a href="./menuadm_servicos.php" class="active">Serviços</a>
                 <a href="./menuadm_autoatendimento.php">Autoatendimento</a>
-                <a href="./menusup_usuario.php">SUP</a>
+                <!-- <a href="./menusup_usuario.php">SUP</a> -->
             </div>
         </div>
 

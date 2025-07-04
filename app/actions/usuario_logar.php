@@ -79,9 +79,9 @@ if (password_verify($senha, $res['senha_usuario']) && ($res['primeiro_login'] ==
         'status' => 'ok',
         'code' => 200,
         'id_usuario' => $res['id_usuario'],
-        'msg' => 'Redirecionar para a tela inicial de atendimento.'
+        'msg' => 'Redirecionar para a tela inicial de atendimento.',
+        'redirect' => $redirect_url
     ]);
-    exit;
 
 } else {
     echo json_encode([
