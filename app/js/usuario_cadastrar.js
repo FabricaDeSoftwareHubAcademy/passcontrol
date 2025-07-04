@@ -15,6 +15,12 @@ const cancelarSalvar = document.querySelector(".cancel_ConfDadosRegist");
 const modalDadosSalvos = document.querySelector(".fundo-container-confirmacao-dados");
 const buttonOk = document.querySelector(".Okay_ConfDados");
 
+// MODAL ERRO
+
+const modalErro = document.querySelector(".modal-container-aviso-erro");
+const msgErro = document.querySelector(".aviso-erro");
+const buttonOkErro = document.querySelector(".voltar_AvisoErro");
+
 document.addEventListener("DOMContentLoaded", function () {
     // Máscara de CPF
     const cpfInput = document.getElementById('cpf_usuario');
@@ -92,8 +98,8 @@ document.addEventListener("DOMContentLoaded", function () {
         confirmarSalvar.addEventListener("click", async function (event) {
             event.preventDefault();
             
-            const formCadastrarUsuario = new FormData(document.getElementById("dados_cad"));
-            console.log(formCadastrarUsuario);
+            var formCadastrarUsuario = new FormData(document.getElementById("dados_cad"));
+            // console.log(formCadastrarUsuario);
 
             let enviar_dados = await fetch('../actions/usuario_cadastrar.php', {
                 method: "POST",
@@ -105,29 +111,43 @@ document.addEventListener("DOMContentLoaded", function () {
 
             try {
                 let response_post = JSON.parse(textResponse);
+                msgErro.innerHTML = '';
 
                 if(response_post.status === 'OK'){
                     modalConfirmarSalvarDadosUsu.classList.remove("show");
                     modalDadosSalvos.classList.add("show");
-    
+                    
+                    console.log(response_post);
+
                     buttonOk.addEventListener("click", () => {
                         modalDadosSalvos.classList.remove("show");
-                        console.log(response_post.array);
-                        // location.href = './listar_usuarios.php';
+                        location.href = './listar_usuarios.php';
                     });
                 }else{
-                    console.log("Erro: ", response_post.msg);
+                    modalConfirmarSalvarDadosUsu.classList.remove("show");
+                    console.log("Erro: ", response_post);
+                    
+                    msgErro.innerHTML += response_post.msg;
+                    modalErro.classList.add("show");
+
+                    buttonOkErro.addEventListener("click", function(){
+                        formCadastrarUsuario = null;
+                        modalErro.classList.remove("show");
+                    })
                     return;
                 }
 
             } catch (error) {
                 console.error("Erro ao analisar JSON:", error);
                 // console.log("Conteúdo não pode ser analisado como JSON:", textResponse);
+                return;
             }
         });
 
         cancelarSalvar.addEventListener("click", () => {
+            formCadastrarUsuario = null;
             modalConfirmarSalvarDadosUsu.classList.remove("show");
+            return;
         });
     });
 });
