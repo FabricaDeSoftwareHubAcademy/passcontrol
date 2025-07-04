@@ -20,6 +20,7 @@
   <link rel="stylesheet" href="../../public/css/modal_alterar_senha.css">
   <link rel="stylesheet" href="../../public/css/modal_confirmacao_dados_registrados.css">
   <link rel="stylesheet" href="../../public/css/modal_confirmacao_dados.css">
+  <link rel="stylesheet" href="../../public/css/modal_aviso_erro.css">
   <!-- <link rel="stylesheet" href="../../../public/modais/Modal_Confirmacao_dos_Dados_Registrados/confirmacao_dados_registrados.css"> -->
 
   <!-- JS -->
@@ -35,9 +36,9 @@
 
 <body class="control-body-navegacao">
   <?php
-  include "./navegacao.php";
-  include "../actions/usuario_listar.php";
-  include "../actions/servico_listar.php";
+  include_once "./navegacao.php";
+  include_once "../actions/usuario_listar.php";
+  include_once "../actions/servico_listar.php";
   ?>
 
   <section class="Area-Util-Projeto">
@@ -119,9 +120,10 @@
 
   </section>
   <?php
-  include "./monitor_modal.php";
-  include "../../public/modais/modal_confirmacao_dados_registrados.php";
-  include "../../public/modais/modal_confirmacao_dados.php";
+  include_once "./monitor_modal.php";
+  include_once "../../public/modais/modal_confirmacao_dados_registrados.php";
+  include_once "../../public/modais/modal_confirmacao_dados.php";
+  include_once "../../public/modais/modal_aviso_erro.php";
   ?>
 </body>
 

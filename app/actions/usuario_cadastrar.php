@@ -8,7 +8,6 @@
         $email = $_POST["email_usuario"];
         $cpf = $_POST["cpf_usuario"];
         $id_perfil = $_POST["id_perfil_usuario"];
-        $servicos_selecionados = isset($_POST['id_servico']) ? $_POST['id_servico'] : [];
         
         // VERIFICA SE OS DADOS FORAM PREENCHIDOS
         if($nome != null || $email != null || $cpf != null || $id_perfil != null){   
@@ -25,31 +24,48 @@
             
             $partes_nome = explode(' ', trim($objUser->nome)); // CAPTURA O ULTIMO NOME
             $ultimo_nome = end($partes_nome);
-
+            
             $senha_generica = $cpf_parcial . '@' . $ultimo_nome;
             $objUser->senha = password_hash($senha_generica, PASSWORD_DEFAULT);
-
+            
             // echo ($objUser->senha);
             
             $res = $objUser->cadastrar();
             if($res){
-                // ENVIA O ARRAY DE SERVICOS PARA O BANCO DE DADOS
-                foreach($servicos_selecionados as $id_servico){
-                    // AVALIAR UTILIZACAO DE METODO OU CRIACAO DE NOVA CLASSE
-                    $vincula = $objUser->vincular_servico($id_usuario,$id_servico);
-                    if($vincula){
-                        $res_vincula = "Vinculado";
-                    }else{
-                        $res_vincula = "Nao Vinculado";
-                    }
-                }
-                
-                $resposta = array( "msg" => "Cadastrado com sucesso", "status" => "OK", "servico" => $resp_servico);
-                echo json_encode($resposta);
+                $status_res = "OK";
+                $res_vincula = "Nao Vinculado";
 
-            }else{
-                $resposta = array( "msg" => "Erro ao cadastrar", "status" => "ERRO");
+                //// CAPTURA SERVICOS SELECIONADOS
+
+                //// if(isset($_POST['id_servico'])){
+                ////     $servicos_selecionados = $_POST['id_servico'];
+                //// }else{
+                ////     $servicos_selecionados =  [];
+                //// };
+
+                //// try{
+                ////     if(count($servicos_selecionados) >= 1){
+                ////         // ENVIA O ARRAY DE SERVICOS PARA O BANCO DE DADOS
+                ////         foreach($servicos_selecionados as $id_servico){
+                ////             // AVALIAR UTILIZACAO DE METODO OU CRIACAO DE NOVA CLASSE
+                ////             $vincula = $objUser->vincular_servico($id_usuario,$id_servico);
+                ////             if($vincula){
+                ////                 $res_vincula = "Vinculado";
+                ////             }else{
+                ////                 $res_vincula = "Nao Vinculado";
+                ////             }
+                ////         }
+                ////     }
+                //// }catch(Exception $erro){
+                ////     $res_vincula = "Nao Vinculado $erro";
+                //// }
+                
+                $resposta = array( "msg" => "Usuario cadastrado com sucesso", "status" => $status_res, "servico" => $res_vincula);
                 echo json_encode($resposta);
+            }else{
+                $resposta = array( "msg" => "Erro ao cadastrar", "status" => "ERRO", "servico" => "Nao Vinculado");
+                echo json_encode($resposta);
+                $objUser = null;
             }                    
         }
         else{

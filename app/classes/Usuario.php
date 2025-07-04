@@ -36,9 +36,9 @@ class Usuario
     }
 
     // Função padrao para buscar na tabela usuario
-    public function buscar($where = null, $order = null, $limit = null)
+    public function buscar($where = null, $order = null, $limit = null, $fields = '*')
     {
-        return $this->db->select($where, $order, $limit)->fetchAll(PDO::FETCH_ASSOC);
+        return $this->db->select($where, $order, $limit, $fields)->fetchAll(PDO::FETCH_ASSOC);
     }
 
     // Função para atualizar dados do usuário
@@ -131,13 +131,21 @@ class Usuario
         return true;
     }
 
-    public function vincular_servico($id_usuario, $id_servico) {
+    public function vincular_servico($cpf, $id_servico) {
+        $id_usuario = $this->buscar("cpf_usuario =" . $cpf, null, null, "id_usuario");
         $this->db = new Database("usuario_servico");
         $values = [
-            "id_usuario_fk = ". $id_usuario,
+            "id_usuario_fk = ". $id_usuario[0],
             "id_servico_fk = " . $id_servico
         ];
-        return $this->db->insert($values);
+        
+        $res = $this->db->insert($values);
+        if($res){
+            return true;
+        }else{
+            return false;
+        }
+
     }
 }
 
