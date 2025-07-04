@@ -120,11 +120,14 @@ salvarBtn.addEventListener("click", () => {
 
     // Senha válida → exibir modal
     modalContainer.classList.add("show");
+
+    // Ao clicar no botão OK do modal
+    botaoFecharModal.addEventListener("click", () => {
+        modalContainer.classList.remove("show");
+        form.submit(); 
+        location.href = "../../index.php";
+    });
 });
 
-// Ao clicar no botão OK do modal
-botaoFecharModal.addEventListener("click", () => {
-    modalContainer.classList.remove("show");
-    form.submit(); // Agora envia o formulário de verdade
-});
+
 
