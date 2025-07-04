@@ -66,13 +66,22 @@ export default function modalConfirmacaoDados() {
         if (response.status === 200) {
             // Exibe o modal de confirmação
             modalContainer_ConfDados.classList.add("show");
-            
+
             btn_ok.addEventListener("click", () => {
                 modalContainer_ConfDados.classList.remove("show");
                 window.location.href = "../../index.php";
-            });
+            }, { once: true });
+        } else {
+            alert("Erro ao alterar a senha. Tente novamente.");
         }
-
-
     });
+            
+    //         btn_ok.addEventListener("click", () => {
+    //             modalContainer_ConfDados.classList.remove("show");
+    //             window.location.href = "../../index.php";
+    //         });
+    //     }
+
+
+    // });
 }
