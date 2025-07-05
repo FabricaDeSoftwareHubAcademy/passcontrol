@@ -2,7 +2,7 @@
 require '../classes/PontoAtendimento.php';
 
 $guiche = new Ponto_Atendimento();
-$guiches = $guiche->buscar();
+$guiches = $guiche->buscar(null, " status_ponto_atendimento DESC");
 ?>
 
 <!DOCTYPE html>
@@ -34,7 +34,7 @@ $guiches = $guiche->buscar();
     <script src="../js/ponto_atendimento_cadastrar.js" defer></script>
     <script src="../js/ponto_atendimento_status.js" defer></script>
     <script src="../../app/js/barra_pesquisa_ponto_atendimento.js" defer></script>
-    <script src="../../public/js/modal_confirmacao_dados.js" defer></script>
+    <!-- <script src="../../public/js/modal_confirmacao_dados.js" defer></script> -->
     <!-- <script src="../../public/js/modal_status_ponto_atendimento.js"></script> -->
     
     <!-- LOGO -->
@@ -69,7 +69,7 @@ $guiches = $guiche->buscar();
                     <tbody class="resto-tabela-Ponto-atendimento">
                             <?php
                                 foreach($guiches as $guiche) {
-                                    $estadoAtivo = ($guiche->status_ponto_atendimento == 1) ? 'ativo' : 'inativo';
+                                    $estadoAtivo = ($guiche->status_ponto_atendimento == 1) ? 'active' : '';
                                     echo '
                                     <tr>
                                         <td>'.$guiche->nome_ponto_atendimento.'</td>
@@ -82,7 +82,7 @@ $guiches = $guiche->buscar();
                                             </div>
                                         </td>
                                         <td class="inativar-menor">
-                                            <button id="switch_status" id_value_switch="'.$guiche->id_ponto_atendimento.'"  class="toggle-btn '.$estadoAtivo.'">
+                                            <button id="switch_status" id_value_switch="'.$guiche->id_ponto_atendimento.'"  class="switch_status toggle-btn '.$estadoAtivo.'">
                                                 <div class="circulo"></div>
                                             </button>
                                         </td>

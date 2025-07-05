@@ -6,5 +6,5 @@ $usuarios = new Usuario();
 $dados = $usuarios->buscar(null, ' status_usuario DESC');
 
 $objperfil = new Perfil();
-$perfis = $objperfil->buscar(null, 'id_perfil_usuario ASC');
+$perfis = $objperfil->buscar(null, ' id_perfil_usuario ASC');
 ?>
