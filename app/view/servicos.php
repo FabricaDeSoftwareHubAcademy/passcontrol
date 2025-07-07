@@ -44,7 +44,7 @@
     require '../classes/Servico.php';
 
     $novo_servico = new Servico();
-    $servicos_cadastrados = $novo_servico->buscar();
+    $servicos_cadastrados = $novo_servico->buscar(null, "status_servico DESC");
 
     include_once "./navegacao.php";
     include_once "../actions/servico_listar.php";
