@@ -83,35 +83,78 @@ class Usuario
     }
 
     // Função para definir uma nova senha e atualizar o status de primeiro acesso
-    public function definirNovaSenha($id_usuario, $nova_senha)
-    {
+    // public function definirNovaSenha($id_usuario, $nova_senha)
+    // {
         // Verifica se a senha contém pelo menos um número, uma letra maiúscula e um caractere especial
-        $id_usuario = (int)$id_usuario;
+        // $id_usuario = (int)$id_usuario;
         
-        $nova_senha_hash = password_hash($nova_senha, PASSWORD_DEFAULT);
+        // $nova_senha_hash = password_hash($nova_senha, PASSWORD_DEFAULT);
         // Atualiza a senha e marca como não sendo mais primeiro acesso
-        $resultado = $this->db->update("id_usuario = $id_usuario", [
-            'senha_usuario' => $nova_senha_hash,
-            'primeiro_login' => 0
-        ]);
+    //     $resultado = $this->db->update("id_usuario = $id_usuario", [
+    //         'senha_usuario' => $nova_senha_hash,
+    //         'primeiro_login' => 0
+    //     ]);
         
-        if ($resultado === false) {
-            return json_encode([
-                'success' => false,
-                'message' => 'Erro ao atualizar a senha.'
-            ]);
-        } elseif ($resultado === 0) {
-            return json_encode([
-                'success' => true,
-                'message' => 'Mesma senha anterior.'
-            ]);
-        } else {
-            return json_encode([
-                'success' => true,
-                'message' => 'Senha atualizada com sucesso.'
-            ]);
-        }
+    //     if ($resultado === false) {
+    //         return json_encode([
+    //             'success' => false,
+    //             'message' => 'Erro ao atualizar a senha.'
+    //         ]);
+    //     } elseif ($resultado === 0) {
+    //         return json_encode([
+    //             'success' => true,
+    //             'message' => 'Mesma senha anterior.'
+    //         ]);
+    //     } else {
+    //         return json_encode([
+    //             'success' => true,
+    //             'message' => 'Senha atualizada com sucesso.'
+    //         ]);
+    //     }
+    // }
+
+    public function definirNovaSenha($id_usuario, $nova_senha)
+{
+    $id_usuario = (int)$id_usuario;
+
+    // Valida se a senha atende aos critérios
+    if (
+        strlen($nova_senha) < 8 ||
+        !preg_match('/[A-Z]/', $nova_senha) ||
+        !preg_match('/[0-9]/', $nova_senha) ||
+        !preg_match('/[!@#$%^&*(),.?":{}|<>]/', $nova_senha)
+    ) {
+        return json_encode([
+            'success' => false,
+            'message' => 'A senha não atende aos requisitos de segurança.'
+        ]);
     }
+
+    $nova_senha_hash = password_hash($nova_senha, PASSWORD_DEFAULT);
+
+    $resultado = $this->db->update("id_usuario = $id_usuario", [
+        'senha_usuario' => $nova_senha_hash,
+        'primeiro_login' => 0
+    ]);
+
+    if ($resultado === false) {
+        return json_encode([
+            'success' => false,
+            'message' => 'Erro ao atualizar a senha.'
+        ]);
+    } elseif ($resultado === 0) {
+        return json_encode([
+            'success' => true,
+            'message' => 'Mesma senha anterior.'
+        ]);
+    } else {
+        return json_encode([
+            'success' => true,
+            'message' => 'Senha atualizada com sucesso.'
+        ]);
+    }
+}
+
     
     private function valida_cpf($cpf)
     {
