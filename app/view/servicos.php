@@ -44,10 +44,10 @@
     require '../classes/Servico.php';
 
     $novo_servico = new Servico();
-    $servicos_cadastrados = $novo_servico->buscar(null, "status_servico DESC");
+    $servicos_cadastrados = $novo_servico->buscar(null, " status_servico DESC ");
 
     include_once "./navegacao.php";
-    include_once "../actions/servico_listar.php";
+    // include_once "../actions/servico_listar.php";
     ?>
 
     <section class="Area-Util-Projeto">
@@ -108,7 +108,7 @@
             </div>
     </section>
     <?php
-    include_once "./monitor_modal.php";
+    // include_once "./monitor_modal.php";
     include_once "../../public/modais/modal_cadastro_servico.php";
     include_once "../../public/modais/modal_edicao_servico.php";
     include_once "../../public/modais/modal_confirmacao_dados_registrados.php";

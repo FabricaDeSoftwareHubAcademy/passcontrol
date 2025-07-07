@@ -86,32 +86,32 @@ btnSalvarCadastro.addEventListener("click", function (event) {
     modalConfirmacao.classList.remove("show");
     modalCadastro.classList.add("show");
   });
-});
-
-// SIM na confirmação -> envia os dados para o PHP
-btnSimConfirmacao.addEventListener("click", async () => {
-  const myform = document.getElementById("formulario_cadastrar_servico");
-  const formData = new FormData(myform);
-
-  modalConfirmacao.classList.remove("show");
-
-  try {
-    const dados2_php = await fetch("../../app/actions/servico_cadastrar.php", {
-      method: "POST",
-      body: formData,
-    });
-
-    const response = await dados2_php.json();
-
-    if (response.status === "ok") {
-      apareceMod.classList.add("show");
-    } else {
-      alert("Erro ao cadastrar: " + (response.message || "Erro desconhecido"));
+    
+  // SIM na confirmação -> envia os dados para o PHP
+  btnSimConfirmacao.addEventListener("click", async () => {
+    const myform = document.getElementById("formulario_cadastrar_servico");
+    const formData = new FormData(myform);
+  
+    modalConfirmacao.classList.remove("show");
+  
+    try {
+      const dados2_php = await fetch("../../app/actions/servico_cadastrar.php", {
+        method: "POST",
+        body: formData,
+      });
+  
+      const response = await dados2_php.json();
+  
+      if (response.status === "ok") {
+        apareceMod.classList.add("show");
+      } else {
+        alert("Erro ao cadastrar: " + (response.message || "Erro desconhecido"));
+      }
+    } catch (error) {
+      console.error("Erro na requisição:", error);
+      alert("Erro de conexão com o servidor.");
     }
-  } catch (error) {
-    console.error("Erro na requisição:", error);
-    alert("Erro de conexão com o servidor.");
-  }
+  });
 });
 
 // OK no sucesso -> fecha tudo e recarrega
