@@ -41,14 +41,14 @@
 
             <div class="box-area">
 
-                <a href="../../app/view/tela_autoatendimento_page3.php" class="box"> <!-- ( Atualização de caminho e renomeando o nome da pasta para letras minúsculas ) -->
+                <a href="../../app/view/tela_autoatendimento_page3.php?id_servico=<?= $_GET['id_servico'] ?>" class="box"> <!-- ( Atualização de caminho e renomeando o nome da pasta para letras minúsculas ) -->
                     <img class="imagem-servico" src="../../public/img/icons/comum_img.svg" alt="Servico" id="img-servico"> <!-- ( Atualização de caminho ) -->
                     <h4>COMUM</h4>
                 </a>
 
 
 
-                <a href="../../app/view/tela_autoatendimento_page3.php" class="box"> <!-- ( Atualização de caminho e renomeando o nome da pasta para letras minúsculas ) -->
+                <a href="../../app/view/tela_autoatendimento_page3.php?id_servico=<?= $_GET['id_servico'] ?>" class="box"> <!-- ( Atualização de caminho e renomeando o nome da pasta para letras minúsculas ) -->
                     <div class="imagem-servico-container">
                         <img class="imagem-servico" src="../../public/img/icons/idoso_pref.svg" alt="Servico" id="img-servico"> <!-- ( Atualização de caminho ) -->
                         <img class="imagem-servico" src="../../public/img/icons/gestante_pref.svg" alt="Servico" id="img-servico"> <!-- ( Atualização de caminho ) -->

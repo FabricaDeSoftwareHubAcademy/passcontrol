@@ -13,22 +13,24 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const dadosUsuario = JSON.parse(localStorage.getItem("dadosUsuario") || "{}");
 
-        const mapaServicos = {
-            "IPTU": 1,
-            "Iluminação Pública": 2,
-            "Conselho Municipal": 3,
-            "Fiscalização": 4,
-            "Ouvidoria": 5,
-            "Poda de Árvores": 6,
-            "Licenças": 7,
-            "Negociação": 8,
-            "Limpeza": 9,
-            "Transporte": 10,
-            "Água": 11,
-            "Energia": 12
-        };
+        // const mapaServicos = {
+        //     "IPTU": 1,
+        //     "Iluminação Pública": 2,
+        //     "Conselho Municipal": 3,
+        //     "Fiscalização": 4,
+        //     "Ouvidoria": 5,
+        //     "Poda de Árvores": 6,
+        //     "Licenças": 7,
+        //     "Negociação": 8,
+        //     "Limpeza": 9,
+        //     "Transporte": 10,
+        //     "Água": 11,
+        //     "Energia": 12
+        // };
 
-        const idServico = mapaServicos[dadosUsuario.servicoSelecionado];
+
+        // const idServico = mapaServicos[dadosUsuario.servicoSelecionado];
+        const idServico = URLSearchParams("id_servico");
         const prioridade = dadosUsuario.prioridade;
 
         if (!idServico || prioridade === undefined) {

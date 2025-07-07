@@ -156,8 +156,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                 <!-- inputs ocultos necessários para o PHP -->
                 <input type="hidden" id="prioridade" name="prioridade">
-                <input type="hidden" id="id_servico" name="id_servico">
+                <input type="hidden" id="id_servico" name="id_servico" value="<?= htmlspecialchars($id_servico) ?>">
                 <input type="hidden" id="telefone_hidden" name="telefone">
+
                 
                 <div class="footer">
                     <button type="button" class="button">
