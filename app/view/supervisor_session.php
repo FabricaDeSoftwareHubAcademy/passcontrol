@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../../public/css/navegacao.css">
     <link rel="stylesheet" href="../../public/css/menu_eli.css">
     <link rel="stylesheet" href="../../public/css/modal_alterar_dados_login.css">
+    <link rel="stylesheet" href="../../public/css/modal_confirmacao_dados.css">
     <link rel="stylesheet" href="../../public/css/modal_alterar_senha.css">
 
 
@@ -133,7 +134,8 @@
     </div>
 
     <?php
-        // include "../../public/modais/modal_alterar_dados_login.php";
+        include "../../public/modais/modal_alterar_dados_login.php";
+        include "../../public/modais/modal_confirmacao_dados.php";
         // include "../../public/modais/modal_alterar_senha.php";
         include "./monitor_modal.php";
     ?>

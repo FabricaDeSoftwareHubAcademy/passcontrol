@@ -99,8 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
         modalConfirmar.classList.add('show');
 
         btnOkCadastrar.onclick = () => {
-          modalConfirmar.classList.remove('show');
-          location.reload();
+          window.location.reload(); // Atualiza a página após clicar em "Ok"
         };
       } else {
         feedback.style.color = 'red';
