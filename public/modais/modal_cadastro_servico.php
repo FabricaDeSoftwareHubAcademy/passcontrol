@@ -32,7 +32,7 @@
             </div>
 
             <div class="button-group-servico">
-                <button class="botao-modal-servico cancel_CadServ">Voltar</button>
+                <button type="reset" class="botao-modal-servico cancel_CadServ">Voltar</button>
                 <button type="button" class="botao-modal-servico save_CadServ">Salvar</button>
             </div>
         </form>
