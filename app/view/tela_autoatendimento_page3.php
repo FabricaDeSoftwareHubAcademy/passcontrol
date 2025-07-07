@@ -31,14 +31,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             ];
 
             // Teste do Zenvia para mandar sms
-           echo "Telefone informado: $telefone<br>";
             if (!empty($telefone)) {
                 
                 $telefoneLimpo = preg_replace('/\D/', '', $telefone);
-                echo "informações do telefonelimpo sem espaços: $telefoneLimpo<br>";
                 if (strlen($telefoneLimpo) === 11) {
                     $telefoneLimpo = '+55' . $telefoneLimpo;
-                    echo "informações do telefonelimpo apos o +55: $telefoneLimpo<br>";
                     $smsData = [
                         'from' => 'Zenvia', // Use exatamente o identificador da sua conta Zenvia aqui
                         'to' => $telefoneLimpo,
@@ -49,10 +46,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             ]
                         ]
                     ];
-                    echo 'informações do $smsData: <pre>';
-                    print_r($smsData);
-                    echo '</pre>';
-            
                     $ch = curl_init('https://api.zenvia.com/v2/channels/sms/messages');
                     curl_setopt($ch, CURLOPT_HTTPHEADER, [
                         'Content-Type: application/json',
@@ -62,23 +55,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         // 'Authorization: Bearer Gxc8y6AKed3wbFe6SlSEgZKbwKAhLHY8dib2wA6kEyWvmPlXO8mX2N8JDGq9fSXKexRWCxdmmxokDvuPclHK2DqJIapJOq8K2x'
                         'X-API-TOKEN: z1TCrlshp4MJdUrokoR7WWaPQ_byCWuhl6bM'
                     ]);
-                    echo 'informações do ch linha 63: <pre>';
-                    print_r($ch);
-                    echo '</pre>';
-
                     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-                    echo 'informações do ch linha 67: <pre>';
-                    print_r($ch);
-                    echo '</pre>';
-
                     curl_setopt($ch, CURLOPT_POST, true);
-                    echo 'informações do ch linha 73: <pre>';
-                    print_r($ch);
-                    echo '</pre>';
-
                     curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($smsData));
-                    echo 'informações do ch linha 77: <pre>';
-
                     // Código para desativar a verificação do ssl, apenas para testes de resposta do zenvia.
 
                     // curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
@@ -88,42 +67,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     // print_r($response);
                     // echo '</pre>';
 
-                    print_r($ch);
-                    echo '</pre>';
-                    echo 'informações do smsData linha 77: <pre>';
-                    print_r($smsData);
-                    echo '</pre>';
-
                     $response = curl_exec($ch);
-                    echo 'informações do ch linha 85: <pre>';
-                    print_r($response);
-                    echo '</pre>';
-
                     $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-                    echo 'informações do ch linha 90: <pre>';
-                    print_r($httpCode);
-                    echo '</pre>';
-
                     $curlError = curl_error($ch);
-                    echo 'informações do ch linha 96: <pre>';
-                    print_r($curlError);
-                    echo '</pre>';
-
                     curl_close($ch);
-                    echo 'informações do ch linha 100: <pre>';
-                    print_r($ch);
-                    echo '</pre>';
-
-                    echo "HTTP Status: $httpCode\n<br>";
-                    echo "Resposta da API: $response\n<br>";
                     if ($curlError) {
                         echo "Erro cURL: $curlError\n<br>";
                     }
                 }
             }            
 
-            // header("Location: tela_autoatendimento_page4.php");
-            // exit;
+            header("Location: tela_autoatendimento_page4.php");
+            exit;
         } else {
             echo "Erro ao inserir no banco.";
         }
@@ -148,17 +103,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- CSS -->
-    <link rel="stylesheet" href="../../public/css/tela_autoatendimento_page3.css"> <!-- ( Atualização de caminho e renomeando o nome da pasta para letras minúsculas ) -->
+    <link rel="stylesheet" href="../../public/css/tela_autoatendimento_page3.css">
 
     <!-- LOGO -->
-    <link rel="shortcut icon" type="imagex/png" href="../../public/img/Logo-Nota-Controlnt.ico"> <!-- ( Atualização de caminho ) -->
+    <link rel="shortcut icon" type="imagex/png" href="../../public/img/Logo-Nota-Controlnt.ico">
 </head>
 
 <body>
     <header class="head">
         <nav class="nav-head">
             <div class="logo-control">
-                <img src="../../public/img/icons/logo_control.svg" alt="LOGOCONTROL" id="img-logo"> <!-- ( Atualização de caminho ) -->
+                <img src="../../public/img/icons/logo_control.svg" alt="LOGOCONTROL" id="img-logo">
             </div>
             <H3>PassControl</H3>
     </header>
@@ -218,6 +173,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </div>
     </main>
 
-    <script src="../../public/js/tela_autoatendimento_page3.js"></script> <!-- ( Atualização de caminho e renomeando o nome da pasta para letras minúsculas ) -->
+    <script src="../../public/js/tela_autoatendimento_page3.js"></script>
 </body>
 </html>

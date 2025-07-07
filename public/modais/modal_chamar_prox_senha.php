@@ -1,12 +1,33 @@
+<?php
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+require_once '../database/Database.php';
+
+$senhaPrincipal = $_SESSION['senha_principal'] ?? null;
+$servicoDB = new Database('servico');
+
+$prioridade = $senhaPrincipal && $senhaPrincipal['prioridade_fila_senha'] ? 'PR' : 'CM';
+$numero = $senhaPrincipal ? str_pad($senhaPrincipal['id_fila_senha'], 3, '0', STR_PAD_LEFT) : '---';
+$nome = $senhaPrincipal['nome_fila_senha'] ?? '---';
+
+$servicoNome = '---';
+if ($senhaPrincipal) {
+    $servico = $servicoDB->select('id_servico = ' . $senhaPrincipal['id_servico_fk'])->fetch(PDO::FETCH_ASSOC);
+    if ($servico) {
+        $servicoNome = $servico['nome_servico'];
+    }
+}
+?>
 <div class="fundo-container-confirmacao-presenca">
     <section class="modal-confirmacao-presenca">
         <img src="../../public/img/icons/logo_control.svg" alt="Logo Nota Control" class="logo-confirmacao-presenca">
         <h1 class="title-confirmacao-presenca">Confirmar Presença</h1>
         <hr class="row-confirmacao-presenca">
         <p class="desk-info-confirmacao-presenca"><b>Guichê 1</b></p>
-        <p class="name-confirmacao-presenca"><b>João Guilherme Ortigosa</b></p>
-        <p class="info-confirmacao-presenca"><b>Senha:</b> <span class="senha-confirmacao-presenca">CM 001</span></p>
-        <p class="info-confirmacao-presenca"><b>Serviço:</b> <strong>IPTU</strong></p>
+        <p class="name-confirmacao-presenca"><b><?= htmlspecialchars($nome) ?></b></p>
+        <p class="info-confirmacao-presenca"><b>Senha:</b> <span class="senha-confirmacao-presenca"><?= $prioridade ?> <?= $numero ?></span></p>
+        <p class="info-confirmacao-presenca"><b>Serviço:</b> <strong><?= htmlspecialchars($servicoNome) ?></strong></p>
         <div class="button-group-confirmacao-presenca">
             <div class="button-row-confirmacao-presenca">
                 <button class="botao-modal-confirmacao-presenca ausente_ChamarSenha">Ausente</button>
