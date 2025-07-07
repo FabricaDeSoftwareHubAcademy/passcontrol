@@ -157,11 +157,13 @@ $servicoDB = new Database('servico');
             </div>
         </div>
     </section>
+    
+    <!-- script para atualizar o monitor -->
+   <script>
+        setInterval(() => {
+            location.reload();
+        }, 2000); // 2 segundos = 2000
+    </script>
 
-    <!-- Botão proxima senha -->
-    <form method="POST" style="position: fixed; bottom: 30px; right: 30px;">
-        <button type="submit" name="proxima" style="padding: 10px 20px; font-size: 16px;">Próxima Senha</button>
-    </form>
-   
 </body>
 </html>
