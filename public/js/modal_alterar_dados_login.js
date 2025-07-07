@@ -32,7 +32,20 @@ document.addEventListener('DOMContentLoaded', () => {
   // preview da imagem
   inputFoto?.addEventListener('change', () => {
     const file = inputFoto.files[0];
-    if (file && file.type.startsWith('image/')) {
+    if (file) {
+      const extensao = file.name.split('.').pop().toLowerCase();
+      const tiposPermitidos = ['image/png', 'image/jpeg'];
+      const extensoesPermitidas = ['png', 'jpg', 'jpeg'];
+
+      if (!tiposPermitidos.includes(file.type) || !extensoesPermitidas.includes(extensao)) {
+        feedback.style.color = 'red';
+        feedback.textContent = 'A imagem deve ser PNG ou JPG.';
+        inputFoto.value = '';
+        previewFoto.style.display = 'none';
+        previewFoto.src = '';
+        return;
+      }
+
       const reader = new FileReader();
       reader.onload = () => {
         previewFoto.src = reader.result;
@@ -49,27 +62,28 @@ document.addEventListener('DOMContentLoaded', () => {
   formEditDados?.addEventListener('submit', async (e) => {
     e.preventDefault();
 
-    // validar antes do envio
-    const nome = document.getElementById('nome-login').value.trim();
     const email = document.getElementById('email-login').value.trim();
     const foto = inputFoto.files[0];
-
-    //  validação do e-mail
+    // validação do email
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
       feedback.style.color = 'red';
       feedback.textContent = 'Informe um e-mail válido.';
       return;
     }
+     // validação de fotas para ver se é png, jpg, jpeg atraves da const tipos permitidos
+    if (foto) {
+      const extensao = foto.name.split('.').pop().toLowerCase();
+      const tiposPermitidos = ['image/png', 'image/jpeg'];
+      const extensoesPermitidas = ['png', 'jpg', 'jpeg'];
 
-    //  validação do tipo da imagem
-    if (foto && !foto.type.startsWith('image/')) {
-      feedback.style.color = 'red';
-      feedback.textContent = 'A imagem selecionada é inválida.';
-      return;
+      if (!tiposPermitidos.includes(foto.type) || !extensoesPermitidas.includes(extensao)) {
+        feedback.style.color = 'red';
+        feedback.textContent = 'A imagem deve ser PNG ou JPG.';
+        return;
+      }
     }
 
-    // enviar dos dados depois validação
     const formData = new FormData(formEditDados);
 
     try {

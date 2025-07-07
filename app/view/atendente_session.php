@@ -38,7 +38,13 @@
 
     <!-- INFO DO USUARIO -->
     <div class="menu-usuario">
-        <img class="icone-usuario" src="<?= $_SESSION['url_foto_usuario'] ?? '../../public/img/icons/image 33.svg' ?>" alt="">
+        <?php
+            // Só o nome do arquivo guardado na sessão (exemplo: perfil_abc.avif)
+            $nomeImagem = $_SESSION['url_foto_usuario'] ?? 'default_user.jpeg';
+            // Caminho relativo da página para a pasta uploads
+            $caminhoRelativo = '../../public/img/uploads/' . basename($nomeImagem);
+        ?>
+        <img class="icone-usuario" src="<?= htmlentities($caminhoRelativo) ?>" alt="erro">
         <nav class="usu-detalhes"> 
             <ul class="texto-usu">
                 <li class="nome-usu"><?= htmlspecialchars($_SESSION['nome_usuario']) ?></li>
@@ -116,7 +122,7 @@
     </div>
 
     <?php
-        // include "../../public/modais/modal_alterar_dados_login.php";
+        include "../../public/modais/modal_alterar_dados_login.php";
         // include "../../public/modais/modal_alterar_senha.php";
         include "./monitor_modal.php";
     ?>
