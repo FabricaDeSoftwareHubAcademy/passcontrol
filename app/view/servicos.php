@@ -77,8 +77,8 @@
                             <?php foreach ($servicos_cadastrados as $servico): ?>
                                 <?php $classeStatus = ($servico->status_servico == 1) ? 'active' : ''; ?>
                                 <tr>
-                                    <td><?= $servico->nome_servico ?></td>
-                                    <td class="indentificador-menor"><?= $servico->codigo_servico ?></td>
+                                    <td><?= $servico->codigo_servico ?></td>
+                                    <td class="indentificador-menor"><?= $servico->nome_servico ?></td>
                                     <td class="editar-menor">
                                         <div class="editar">
                                             <button class="bot-editar chamamodal" id_value="<?= $servico->id_servico ?>"
