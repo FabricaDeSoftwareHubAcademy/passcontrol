@@ -47,7 +47,7 @@
             <div class="box-area" id="box-container">
                 <?php 
                 foreach ($listaServicos as $serv): ?>
-                    <a href="./tela_autoatendimento_page2.php?id_servico=<?= $serv->codigo_servico ?>" class="box">
+                    <a href="./tela_autoatendimento_page2.php?id_servico=<?= $serv->id_servico ?>" class="box">
                         <img class="imagem-servico" src="../../public/img/uploads/<?php echo htmlspecialchars($serv->url_imagem_servico); ?>" alt="<?php echo htmlspecialchars($serv->nome_servico); ?>">
                         <h4><?php echo htmlspecialchars($serv->nome_servico); ?></h4>
                     </a>
