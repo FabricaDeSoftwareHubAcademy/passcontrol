@@ -135,6 +135,7 @@
 .icone-usuario{
     border-radius: 100px;
     width: 50%;
+    max-width: 300px;
 }
 .usu-detalhes{
     width: 100%;
@@ -259,11 +260,11 @@
 
 .sair-navegacao{
     width: 80%;
-    height: 40%;
+    height: 45%;
     display: flex;
     margin: 0;
     padding: 0;
-    align-self: center ;
+    align-self: center;
     align-items: end;
     justify-content: center;
 }
@@ -284,7 +285,7 @@
 
 .sair-navegacao .botao-lateal-navegacao:hover{
     background-color: #181f26;
-    color: var(--vermelho);
+    color: var(--red_color);
 }
 
 .sair-navegacao .botao-lateal-navegacao:hover .icone-menu-lateral{
