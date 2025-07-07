@@ -159,11 +159,11 @@ $servicoDB = new Database('servico');
     </section>
     
     <!-- script para atualizar o monitor -->
-   <script>
+   <!-- <script>
         setInterval(() => {
             location.reload();
         }, 2000); // 2 segundos = 2000
-    </script>
+    </script> -->
 
 </body>
 </html>
