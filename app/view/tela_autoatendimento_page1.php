@@ -14,18 +14,24 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
     <!-- CSS -->
-    <link rel="stylesheet" href="../../public/css/tela_autoatendimento_page1.css"> <!-- Atualização de caminho e renomeando o nome da pasta para letras minúsculas -->
+    <link rel="stylesheet" href="../../public/css/tela_autoatendimento_page1.css">
 
     <!-- LOGO -->
-    <link rel="shortcut icon" type="imagex/png" href="../../public/img/Logo-Nota-Controlnt.ico"> <!-- Atualização de caminho -->
+    <link rel="shortcut icon" type="imagex/png" href="../../public/img/Logo-Nota-Controlnt.ico">
 </head>
 
 <body>
+    <?php
+    require_once '../../app/classes/Servico.php';
+    $servico = new Servico();
+    $listaServicos = $servico->buscar('status_servico = 1');
+    ?>
+
     <header class="head">
         <nav class="nav-head">
             <div class="logo-control">
-                <a href="../../app/view/menuadm_autoatendimento.php"> <!-- Atualização de caminho -->
-                <img src="../../public/img/icons/logo_control.svg" alt="LOGOCONTROL" id="img-logo"> <!-- Atualização de caminho -->
+                <a href="../../app/view/menuadm_autoatendimento.php">
+                    <img src="../../public/img/icons/logo_control.svg" alt="LOGOCONTROL" id="img-logo">
                 </a>
             </div>
             <h3>PassControl</h3>
@@ -39,7 +45,13 @@
             <h4 class="page-title">Selecione o serviço para o qual deseja atendimento:</h4>
             
             <div class="box-area" id="box-container">
-                <!-- itens adicionados pelo js -->
+                <?php 
+                foreach ($listaServicos as $serv): ?>
+                    <a href="./tela_autoatendimento_page2.php?id_servico=<?= $serv->codigo_servico ?>" class="box">
+                        <img class="imagem-servico" src="../../public/img/uploads/<?php echo htmlspecialchars($serv->url_imagem_servico); ?>" alt="<?php echo htmlspecialchars($serv->nome_servico); ?>">
+                        <h4><?php echo htmlspecialchars($serv->nome_servico); ?></h4>
+                    </a>
+                <?php endforeach; ?>
             </div>
 
             <!-- controle da paginação -->
@@ -55,6 +67,7 @@
         </div>
     </main>
 
-    <script src="../../public/js/tela_autoatendimento_paginação.js"></script> <!-- Atualização de caminho e renomeando o nome da pasta para letras minúsculas -->
+    <!-- Link para o arquivo JS separado -->
+    <script src="../../public/js"></script>
 </body>
 </html>
