@@ -29,7 +29,8 @@ if (isset($_FILES['url_imagem_servico']) && $_FILES['url_imagem_servico']['error
         }
 
         move_uploaded_file($arquivoTmp, $pastaDestino . $nomeImagem);
-    } else {
+    } 
+    else {
         echo json_encode(['status' => 'erro', 'message' => 'Formato de imagem inválido']);
         exit;
     }

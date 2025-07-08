@@ -7,15 +7,19 @@ const btnCancelarCadastro = document.querySelector(".cancel_CadServ");
 const btnSalvarCadastro = document.querySelector(".save_CadServ");
 
 // MODAL DE CONFIRMAÇÃO SIM/NÃO APÓS CADASTRAR
-const modalConfirmacao = document.querySelector(
-  ".fundo-container-confirmacao-dados-registrados"
-);
+const modalConfirmacao = document.querySelector(".fundo-container-confirmacao-dados-registrados");
 const btnSimConfirmacao = document.querySelector(".save_ConfDadosRegist");
 const btnNaoConfirmacao = document.querySelector(".cancel_ConfDadosRegist");
 
 // MODAL DE OK PARA FINALIZAR FLUXO DO CADASTRO
 const apareceMod = document.querySelector(".fundo-container-confirmacao-dados");
 const btnOkCadastrar = document.querySelector(".Okay_ConfDados");
+
+// MODAL DE VALIDAÇÃO DE ARQUIVO IMAGEM
+const modalError = document.querySelector(".modal-container-aviso-erro");
+const msgError = document.querySelector(".aviso-erro");
+const buttonOkError = document.querySelector(".voltar_AvisoErro")
+
 
 //Abre Modal de Cadastro
 btn_cadastrar_servico.addEventListener("click", (event) => {
@@ -33,53 +37,72 @@ btnSalvarCadastro.addEventListener("click", function (event) {
   event.preventDefault();
 
   // Pegando os campos
-  const nome_servico = document
-    .getElementById("nome_servico_cadastrar")
-    .value.trim();
-  const codigo_servico = document
-    .getElementById("codigo_servico_cadastrar")
-    .value.trim();
-  const imagem_servico = document
-    .getElementById("imagem_servico_cadastrar")
-    .value.trim();
+  const nome_servico = document.getElementById("nome_servico_cadastrar").value.trim();
+  const codigo_servico = document.getElementById("codigo_servico_cadastrar").value.trim();
+  const imagem_servico = document.getElementById("imagem_servico_cadastrar");
+  const arquivos = imagem_servico.files[0];
 
   let erro = false;
+  msgError.innerHTML = ''
 
   // Validação nome do serviço
   if (!nome_servico) {
-    document.getElementById("erro_nome_servico").textContent =
-      "Preencha o nome do serviço.";
+    // document.getElementById("erro_nome_servico").textContent =
+    //   "Preencha o nome do serviço.";
+    msgError.innerHTML += "Preencha o nome do serviço!<br><br>";
     erro = true;
-  } else {
-    document.getElementById("erro_nome_servico").textContent = "";
-  }
+  } 
+  // else {
+  //   document.getElementById("erro_nome_servico").textContent = "";
+  // }
 
   // Validação código
   if (!codigo_servico) {
-    document.getElementById("erro_codigo_servico").textContent =
-      "Preencha o código.";
+    // document.getElementById("erro_codigo_servico").textContent =
+    //   "Preencha o código.";
+    msgError.innerHTML += "Preencha o código do Serviço!<br><br>";
     erro = true;
-  } else {
-    document.getElementById("erro_codigo_servico").textContent = "";
-  }
+  } 
+  // else {
+  //   document.getElementById("erro_codigo_servico").textContent = "";
+  // }
 
   // Validação imagem
-  if (!imagem_servico) {
-    document.getElementById("erro_img_servico").textContent =
-      "Preencha a URL da imagem.";
-    erro = true;
-  } else {
-    document.getElementById("erro_img_servico").textContent = "";
-  }
+  if (arquivos) {
+  //   document.getElementById("erro_img_servico").textContent =
+  //     "Preencha a URL da imagem.";
+  //   erro = true;
+  // } else {
+  //   document.getElementById("erro_img_servico").textContent = "";
+  // }
+    var img_permitidos = [".png", ".jpg", ".jpeg"];
+    const regex = new RegExp("(" + img_permitidos.join('|').replace(/\./g, "\\.") + ")$", "i");
+
+    if(!regex.test(imagem_servico.value.toLowerCase())){
+      msgError.innerHTML += "Tipo de arquivo inválido! <br> Arquivos permitidos: .png, .jpg e .jpeg <br><br>";
+      erro = true;
+    }
+    if(!arquivos.type.startsWith("image/")){
+      msgError.innerHTML += "Arquivo não é uma imagem válida.<br><br>";
+      erro = true;
+    }
+  } 
 
   // Se houver erro, não avança
-  if (erro) {
-    return;
+  if (!erro) {
+    modalCadastro.classList.remove("show");
+    modalConfirmacao.classList.add("show");
+  }else{
+    modalCadastro.classList.remove("show");
+    modalError.classList.add("show");
+
+    buttonOkError.addEventListener("click", ()=>{
+      modalError.classList.remove("show");
+      modalCadastro.classList.add("show");
+    })
   }
 
   // Se tudo certo, fecha modal cadastro e abre confirmação
-  modalCadastro.classList.remove("show");
-  modalConfirmacao.classList.add("show");
 
   // NÃO na confirmação -> volta para o modal de cadastro
   btnNaoConfirmacao.addEventListener("click", () => {
@@ -95,7 +118,7 @@ btnSalvarCadastro.addEventListener("click", function (event) {
     modalConfirmacao.classList.remove("show");
   
     try {
-      const dados2_php = await fetch("../../app/actions/servico_cadastrar.php", {
+      const dados2_php = await fetch("../actions/servico_cadastrar.php", {
         method: "POST",
         body: formData,
       });
