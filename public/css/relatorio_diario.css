@@ -1,161 +1,189 @@
-:root{
+:root {
     /* Cores background */
-    --collor-Background-White: rgb(255, 255, 255, 0.5);
-    --collor-Bakcground-gray: rgba(182, 178, 178, 0.158);
-    
-    /* Cores Principais*/
+    --color-background-white: rgba(255, 255, 255, 0.5);
+    --color-background-gray: rgba(182, 178, 178, 0.158);
+
+    /* Cores principais */
     --color-primary-blue: #37474F;
     --color-primary-blue2: #33404d;
 }
 
-.containerDelimitador{
+.containerDelimitador {
     width: 100%;
     height: 100%;
-
     border: 1px solid red;
 
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* justify-content: center; */
 }
 
-
-.containerRelatioTitle{
+.containerRelatioTitle {
     width: 95%;
     height: 30px;
     margin-top: 30px;
-
     border-bottom: 4px solid var(--color-primary-blue);
 }
 
-.areaBrancaRd{
+.areaBrancaRd {
     width: 95%;
     height: 85%;
     margin-top: 20px;
-
-    background-color: var(--collor-Background-White);
+    background-color: var(--color-background-white);
 
     display: flex;
     align-items: center;
     justify-content: space-around;
 }
 
-.containerOptionsLateral{
+.containerOptionsLateral {
     width: 400px;
     height: 90%;
-
     border: 1px solid red;
 }
-.containerMainRd{
+
+.containerMainRd {
     width: 1000px;
     height: 90%;
-
+    overflow-y: auto;
     border: 1px solid blue;
+    padding: 10px;
+    background-color: white;
+    border-radius: 8px;
 }
 
-.containerFiltro{
+.containerFiltro {
     width: 100%;
     height: 50%;
-
     border-radius: 10px;
     border: 1px solid purple;
-    background-color: var(--collor-Bakcground-gray);
+    background-color: var(--color-background-gray);
 
     display: flex;
     align-items: center;
-    /* justify-content: center; */
     flex-direction: column;
 }
 
-.containerTitleFiltro{
+.containerTitleFiltro {
     width: 100%;
     height: 10%;
-    
     border: 1px solid red;
     display: flex;
     align-items: center;
     padding: 20px;
 }
 
-.containerPeriodo{
+.containerPeriodo {
     width: 90%;
     height: 90%;
-    /* margin-top: 10px; */
-
     border: 1px solid orange;
 }
-.periodoTitle{
+
+.periodoTitle {
     width: 100%;
     height: 10%;
-
     display: flex;
     align-items: center;
-
     border: 1px solid red;
 }
 
-.containerPeriodoFiltro{
+.containerPeriodoFiltro {
     width: 100%;
     height: 90%;
-
     border: 1px solid black;
 }
 
-.containerInputDate{
+.containerInputDate {
     width: 100%;
     height: 40%;
-
     border: 1px solid brown;
 
     display: flex;
     align-items: center;
     justify-content: space-around;
 }
-.inputDate1, .inputDate2{
+
+.inputDate1, .inputDate2 {
     width: 40%;
     padding: 3px;
     border-radius: 8px;
     border: 2px solid var(--color-primary-blue);
     color: #37474F;
-} 
+}
 
-.containerInputLocal{
+.containerInputLocal {
     width: 100%;
     height: 40%;
-
     border: 1px solid brown;
 
     display: flex;
     align-items: center;
     justify-content: space-around;
 }
-#inputLocal{
+
+#inputLocal {
     width: 80%;
     height: 30px;
-
     border-radius: 8px;
     border: 2px solid var(--color-primary-blue);
     color: #37474F;
 }
-.containerFiltrar{
+
+.containerFiltrar {
     width: 100%;
     height: 20%;
 
     display: flex;
     align-items: center;
     justify-content: end;
-
     padding-right: 25px;
-
     border: 1px solid green;
 }
 
-.inputFIltrar{
-    width:90px;
+.inputFIltrar {
+    width: 90px;
     height: 25px;
+    margin-left: 10px;
     border-radius: 5px;
     border: none;
     background-color: var(--color-primary-blue2);
     color: white;
+    cursor: pointer;
+    transition: background 0.2s ease-in-out;
+}
+
+.inputFIltrar:hover {
+    background-color: var(--color-primary-blue);
+}
+
+/* TABELA DO RELATÓRIO */
+.relatorio-tabela {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Inter', sans-serif;
+    margin-top: 10px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(55, 71, 79, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.relatorio-tabela thead {
+    background-color: var(--color-primary-blue);
+    color: white;
+}
+
+.relatorio-tabela th,
+.relatorio-tabela td {
+    padding: 10px 12px;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+}
+
+.relatorio-tabela tbody tr:nth-child(even) {
+    background-color: var(--color-background-gray);
+}
+
+.relatorio-tabela tbody tr:hover {
+    background-color: rgba(55, 71, 79, 0.1);
 }
