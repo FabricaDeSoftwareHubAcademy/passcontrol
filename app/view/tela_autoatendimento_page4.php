@@ -124,4 +124,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <script src="../../public/js/tela_autoatendimento_page4.js"></script>
     <!-- <script src="../../public/js/enviar_dados_fila_senha.js"></script> -->
 </body>
-</html>
+</html> 
