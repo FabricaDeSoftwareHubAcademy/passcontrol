@@ -19,9 +19,13 @@
     <!-- JS custom -->
     <script src="../js/exportacao_relatorio.js" defer></script>
     <script src="../js/relatorio_dinamico.js" defer></script>
+    <script src="../../app/js/busca_servicos.js" defer></script>
 </head>
 <body class="control-body-navegacao">
-    <?php include "./navegacao.php"; ?>
+    <?php 
+    include "./navegacao.php"; 
+    /* include "../actions/get_servicos.php"; */
+    ?>
 
     <section class="Area-Util-Projeto">
         <div class="scrollmenu">
@@ -47,9 +51,10 @@
                                 </div>
                                 <div class="containerInputLocal">
                                     <select id="inputLocal">
-                                        <option value="INSS">INSS</option>
+                                        <option value="">Selecione um Serviço</option>
+                                        <!-- <option value="INSS">INSS</option>
                                         <option value="IPTU">IPTU</option>
-                                        <option value="Poda Arvore">Poda Arvore</option>
+                                        <option value="Poda Arvore">Poda Arvore</option> -->
                                     </select>
                                 </div>
                                 <div class="containerFiltrar">
