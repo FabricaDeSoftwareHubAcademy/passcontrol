@@ -20,7 +20,7 @@ $guiches = $guiche->buscar(null, " status_ponto_atendimento DESC");
     <!-- IMPORT DO CSS -->
     <link rel="stylesheet" href="../../public/css/navegacao.css">
     <link rel="stylesheet" href="../../public/css/ponto_atendimento.css">
-    <link rel="stylesheet" href="../../public/css/servico.css">
+    <!-- <link rel="stylesheet" href="../../public/css/servico.css"> -->
     <!-- <link rel="stylesheet" href="../../public/modais/alterar_dados_pessoais.css">
     <link rel="stylesheet" href="../../public/modais/alterar_senha.css"> -->
     <link rel="stylesheet" href="../../public/css/modal_cadastro_ponto_atendimento.css">
@@ -47,12 +47,14 @@ $guiches = $guiche->buscar(null, " status_ponto_atendimento DESC");
 
 <section class="Area-Util-Projeto">
     <!-- INICIO DA ÁREA ÚTIL DA PÁGINA -->
-    <div id="PontoAtendimentoCad">
+    <!-- <div id="PontoAtendimentoCad"> -->
         <div class="topo-tela-PontoAtendimentoCad">
-            <div class="campo-busca">
-                <input id="buscar-Ponto-atendimento" type="text" placeholder="Buscar Registro">
+            <div class="sev"><p id="Ponto-atendimento">Ponto de Atendimento</p>
+                <div class="campo-busca">
+                    <input id="buscar-Ponto-atendimento" type="text" placeholder="Buscar Registro">
+                </div>
+            
             </div>
-            <div class="sev"><p id="Ponto-atendimento">Ponto de Atendimento</p></div>
             <div class="linha-divisoria-Ponto-atendimento"></div>
         </div>
         <div id="tela-branca-Ponto-atendimento"> 
@@ -100,7 +102,7 @@ $guiches = $guiche->buscar(null, " status_ponto_atendimento DESC");
 
         </div>
 
-    </div>
+    <!-- </div> -->
 </section>
 
 <?php

@@ -37,7 +37,7 @@ th {
   background-color: var(--cinza-control);
   color: var(--cor-fundo);
   position: sticky;
-  z-index: 100;
+  z-index: 3;
   top: 0;
 }
 
@@ -213,7 +213,7 @@ td, th {
   white-space: nowrap;
   overflow: hidden; 
   text-overflow: ellipsis;  
-  /* width: 200px;               */
+  /* width: 200px;*/
 }
 thead, tbody tr { 
   display: table; 
@@ -224,7 +224,7 @@ tbody {
   display: block;  
   overflow-y: scroll;  
   position: relative;
-  height: 300px; 
+  max-height: 400px; 
 
 } 
 .tabela tbody::-webkit-scrollbar { 
