@@ -175,8 +175,11 @@ class Usuario
     }
 
     public function vincular_servico($cpf, $id_servico) {
-        $id_usuario = $this->buscar("cpf_usuario =" . $cpf, null, null, "id_usuario");
+        $usuario = $this->buscar("cpf_usuario =" . $cpf, null, null, "id_usuario");
+        $id_usuario = $usuario["id_usuario"];
+
         $this->db = new Database("usuario_servico");
+        
         $values = [
             "id_usuario_fk = ". $id_usuario[0],
             "id_servico_fk = " . $id_servico

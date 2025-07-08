@@ -92,8 +92,8 @@ document.addEventListener("DOMContentLoaded", function() {
                 }
                 
                 if (arquivo){
-                    var arquivos_permitods = [".png", ".jpg", ".jpeg"];
-                    const regex = new RegExp("(" + arquivos_permitods.join('|').replace(/\./g, "\\.") + ")$", "i");
+                    var arquivos_permitidos = [".png", ".jpg", ".jpeg"];
+                    const regex = new RegExp("(" + arquivos_permitidos.join('|').replace(/\./g, "\\.") + ")$", "i");
 
                     if(!regex.test(foto.value.toLowerCase())){
                         msgErro.innerHTML += "Tipo de arquivo inválido! <br> Arquivos permitidos: .png, .jpg e .jpeg <br><br>";
