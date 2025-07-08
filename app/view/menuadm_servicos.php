@@ -19,14 +19,15 @@
     <!-- <link rel="stylesheet" href="../../public/modais/alterar_senha.css"> -->
     <link rel="stylesheet" href="../../public/css/modal_cadastro_servico.css">
     <link rel="stylesheet" href="../../public/css/modal_cadastro_ponto_atendimento.css">
-    <link rel="stylesheet" href="../../public/modais/ModalConfirmaDados/estilo.css">
+    <link rel="stylesheet" href="../../public/css/modal_confirmacao_dados_registrados.css">
     <link rel="stylesheet" href="../../public/css/modal_confirmacao_dados.css">
     
     <!-- JS -->
     <script src="../../public/js/monitor_modal.js" defer></script>
     <script src="../../public/js/navegacao_menu_lateral.js" defer></script>
-    <script src="../js/ponto_atendimento_cadastrar.js" defer></script>
     <script src="../../public/js/modal_cadastro_servico.js" defer></script>
+    <script src="../js/ponto_atendimento_cadastrar.js" defer></script>
+    <script src="../js/servico_cadastrar.js" defer></script>
 
     <!-- LOGO -->
     <link rel="shortcut icon" type="imagex/png" href="../../public/img/Logo-Nota-Controlnt.ico">
@@ -128,10 +129,11 @@
     </section>
     
     <?php
-    include "./monitor_modal.php";
+    include_once "./monitor_modal.php";
     include_once "../../public/modais/modal_cadastro_servico.php";
-    include "../../public/modais/modal_cadastro_ponto_atendimento.php";
-    include "../../public/modais/modal_confirmacao_dados.php";
+    include_once "../../public/modais/modal_cadastro_ponto_atendimento.php";
+    include_once "../../public/modais/modal_confirmacao_dados_registrados.php";
+    include_once "../../public/modais/modal_confirmacao_dados.php";
     ?>
 </body>
 </html>
