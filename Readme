@@ -1,0 +1,155 @@
+# Sistema de Controle de Senhas para atendimento presencial de clientes - Nota Control
+
+## 📌 Visão Geral
+
+Este projeto foi desenvolvido em parceria com a empresa **Nota Control**, especializada em soluções tecnológicas para gestão fiscal e tributária. Com 25 anos de experiência no mercado, a empresa identificou a necessidade de modernizar seu atendimento presencial por meio de um **Sistema de Controle de Senhas**, que otimize o fluxo de atendimento, aumente a eficiência operacional e melhore a experiência do cliente.
+
+A proposta inclui:
+- Interface intuitiva e acessível;
+- Emissão digital de senhas (papel zero);
+- Integração com SMS;
+- Relatórios de desempenho;
+- Controle por perfis de acesso.
+
+---
+
+## 🎯 Propósito
+
+Criar uma solução moderna, ágil e acessível para gerenciar o atendimento presencial de clientes, promovendo:
+- Redução do tempo de espera;
+- Gestão eficaz da fila de atendimento;
+- Experiência mais confortável e organizada;
+- Sustentabilidade, com envio digital de senhas.
+
+---
+
+## 📦 Escopo
+
+- Emissão de senhas via terminal de autoatendimento (Totem);
+- Chamada por monitor e notificação por SMS;
+- Perfis distintos de acesso (Administrador, Supervisor, Atendente);
+- Relatórios detalhados sobre o atendimento;
+- Personalização conforme a identidade visual da Nota Control;
+- Interface acessível e responsiva.
+
+---
+
+## 👥 Público-Alvo
+
+- **Administradores** – Gestão completa do sistema;
+- **Supervisores** – Monitoramento e ajustes no atendimento;
+- **Atendentes** – Operação diária de atendimento ao público;
+- **Usuários (Clientes)** – Solicitação de senhas para atendimento presencial.
+
+---
+
+## ✅ Funcionalidades Principais
+
+- Cadastro de usuários, atendentes, guichês e categorias de serviço;
+- Emissão de senhas com criptografia;
+- Terminal de autoatendimento responsivo;
+- Chamada de senha com aviso sonoro e visual;
+- Envio de notificações por SMS;
+- Registro de horários de início e fim de atendimento;
+- Identificação de senhas ausentes;
+- Geração de relatórios com filtros por data, setor, atendente e tipo de atendimento.
+
+---
+
+## 🔐 Requisitos Funcionais
+
+- **RF001**: Perfis de acesso diferenciados;
+- **RF002**: Cadastro de atendentes e categorias;
+- **RF003**: Cadastro de guichês por categoria;
+- **RF004**: Geração de senhas com criptografia;
+- **RF005**: Terminal de autoatendimento;
+- **RF006**: Envio de SMS na geração e chamada da senha;
+- **RF007**: Aviso sonoro personalizado;
+- **RF008**: Botões para gestão do atendimento (Próxima, Presente, Ausente, Encerrar);
+- **RF009**: Geração de relatórios detalhados.
+
+---
+
+## 🛠️ Requisitos Não Funcionais
+
+- **RNF001**: Interface com identidade visual da Nota Control;
+- **RNF002**: Estrutura de banco de dados flexível e adaptável;
+- **RNF003**: Conformidade com a LGPD;
+- **RNF004**: Backup automático diário;
+- **RNF007**: Compatibilidade com navegadores modernos (Chrome, Firefox, Edge, Safari) e sistemas operacionais (Windows, macOS, Android, iOS).
+
+---
+
+## 🧩 Casos de Uso
+
+- Escolher Tipo de Serviço
+- Realizar Login
+- Chamar Senha
+- Registrar Intervalo
+- Visualizar Fila
+- Gerar Relatórios
+- Cadastrar Serviços e Usuários
+- Visualizar Monitor
+- Visualizar Terminal de Autoatendimento
+
+*(Ver diagrama de casos de uso na documentação técnica.)*
+
+---
+
+## 🧱 Arquitetura do Sistema
+
+- **Frontend**: [HTML, CSS]
+- **Backend**: [PHP, JS]
+- **Banco de Dados**: [MySQL]
+- **API de SMS**: Integração com serviços de envio de mensagens para notificação de usuários.
+- **Envio emails**: [Composer, PHPMAILER]
+
+---
+
+## 📝 Relatórios e Métricas
+
+O sistema permite geração de relatórios com métricas importantes como:
+- Quantidade de senhas por setor e tipo;
+- Tempo médio de atendimento;
+- Atendimentos finalizados vs. ausentes;
+- Produtividade por atendente.
+
+---
+
+## 🔒 Segurança e LGPD
+
+- Criptografia de dados sensíveis;
+- Armazenamento seguro;
+- Conformidade com a Lei Geral de Proteção de Dados (LGPD);
+- Backup diário automatizado.
+
+---
+
+## 📲 Acessibilidade e Usabilidade
+
+- Interface intuitiva;
+- Avisos sonoros para chamadas de senha;
+- Design responsivo para diferentes dispositivos.
+
+---
+
+## 👨‍💼 Desenvolvido por
+
+Projeto desenvolvido pela **Fábrica de Software Turma 32** do **Senac Hub Academy**, em parceria com a empresa **Nota Control**, com participação de alunos, professores e equipe técnica.
+
+---
+
+## 🪪 Licença
+
+Este projeto é de propriedade da empresa **Nota Control** e encontra-se protegido por direitos autorais. Seu uso está restrito ao escopo do projeto e à autorização expressa da empresa contratante.
+
+---
+
+## 📎 Observações Finais
+
+- Todas as senhas geradas são reiniciadas diariamente;
+- Os dados cadastrados são utilizados exclusivamente para fins de atendimento e relatório;
+- A infraestrutura técnica está preparada para evolução modular e adaptações futuras.
+
+---
+
