@@ -22,7 +22,6 @@
     <link rel="stylesheet" href="../../public/css/servico.css">
     <link rel="stylesheet" href="../../public/css/modal_cadastro_servico.css">
     <link rel="stylesheet" href="../../public/css/modal_edicao_servico.css">
-    <link rel="stylesheet" href="../../public/css/modal_status_servico.css">
     <link rel="stylesheet" href="../../public/css/modal_confirmacao_dados_registrados.css">
     <link rel="stylesheet" href="../../public/css/modal_confirmacao_dados.css">
     <link rel="stylesheet" href="../../public/css/modal_aviso_erro.css">
@@ -52,13 +51,12 @@
 
     <section class="Area-Util-Projeto">
         <!-- INICIO DA ÁREA ÚTIL DA PÁGINA -->
-        <div id="PontoAtendimentoCad">
+        <!-- <div id="PontoAtendimentoCad"> -->
             <div class="topo-tela-PontoAtendimentoCad">
-                <div class="campo-busca">
-                    <input id="buscar-Ponto-atendimento" type="text" placeholder="Buscar Registro">
-                </div>
-                <div class="sev">
-                    <p id="Ponto-atendimento">Serviços</p>
+                <div class="sev"><p id="Ponto-atendimento">Serviços</p>
+                    <div class="campo-busca">
+                        <input id="buscar-Ponto-atendimento" type="text" placeholder="Buscar Registro">
+                    </div>
                 </div>
                 <div class="linha-divisoria-Ponto-atendimento"></div>
             </div>
@@ -113,7 +111,6 @@
     include_once "../../public/modais/modal_edicao_servico.php";
     include_once "../../public/modais/modal_confirmacao_dados_registrados.php";
     include_once "../../public/modais/modal_confirmacao_dados.php";
-    include_once "../../public/modais/modal_status_servico.php";
     include_once "../../public/modais/modal_aviso_erro.php";
     ?>
 </body>

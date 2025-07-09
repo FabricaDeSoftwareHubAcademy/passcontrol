@@ -23,11 +23,11 @@ document.addEventListener("DOMContentLoaded", async () => {
             divs[1].innerHTML = `<strong>NOME:</strong> ${data.nome}`;
             divs[2].innerHTML = `<strong>SERVIÇO:</strong> ${data.servico}`;
         } else {
-            alert("Não foi possível localizar a senha.");
+            // alert("Não foi possível localizar a senha.");
         }
     } catch (error) {
         console.error("Erro:", error);
         alert("Erro ao buscar senha.");
     }
     
-});
+}); 

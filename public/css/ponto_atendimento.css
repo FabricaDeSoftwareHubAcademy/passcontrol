@@ -3,7 +3,7 @@
   box-sizing: border-box;
 }
 
-#PontoAtendimentoCad {
+/* #PontoAtendimentoCad {
   z-index: 1;
   top: 157px;
   right: 2vh;
@@ -17,32 +17,49 @@
   flex-direction: column;
   align-content: space-around;
   align-items: stretch;
+} */
+.Area-Util-Projeto{
+  align-items: center;
 }
 .topo-tela-PontoAtendimentoCad{
-  margin: 2% 0% 1% 5%; 
+  margin: 4% 0% 0% 5%; 
   display: flex;
   flex-direction: column;
-  width: 94%;
+  width: 95%;
   height: 100%;
+  /* margin-top: 3.5rem; */
   /* border: 2px solid green; */
 }
+.sev{
+  /* background-color: red; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 95%;
+}
 #Ponto-atendimento {
-  text-align: left;
+  /* text-align: left; */
+  /* display: flex;
+  flex-direction: row;
+  justify-content: space-around; */
   color: var(--cinza-control);
   font-family: Arial, sans-serif;
   font-weight: bold;
-  font-size: 24px;
+  font-size: 25px;
+  /* margin-bottom: -2rem; */
 }
 .campo-busca {
+  position: relative;
   /* height: 0%; */
-  width: 100%;
+  /* width: 30%; */
   outline: none;
   border: 1px rgb(6, 11, 95);
-  margin-bottom: -1.5rem;
+  /* margin-bottom: -1.5rem; */
 }
 #buscar-Ponto-atendimento {
-  float: left;
+  /* float: left; */
   padding: 5px;
+  margin-bottom: 0.2rem;
   padding-left: 5px;
   font-style: italic;
   font-size: 14px;
@@ -54,6 +71,7 @@
   background-position: right 10px center;
   opacity: 0.5;
   border: 2px solid #333;
+  /* margin-left: 76%; */
   /* width: 20%; */
   /* height: 100%; */
   /* font-style: italic; */
@@ -70,12 +88,14 @@
   /* background-position: right 10px center; */
   /* background-repeat: no-repeat; */
   /* box-sizing: border-box; */
-  margin-left: 81.9%;
+}
+#buscar-Ponto-atendimento:focus{
+  background-image: url('');
 }
 .linha-divisoria-Ponto-atendimento {
   background-color: var(--cinza-control);
   height: 5px;
-  width: 96%;
+  width: 95%;
   max-height:339px;
   padding: 1px;
 }
@@ -83,8 +103,9 @@
   background-color: #ffffff75;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
   width: 90%;
-  padding: 20px;
+  padding: 22px;
   margin: 25px auto;
+  border-radius: 5px;
 }
 .tabela-responsiva-Ponto-atendimento {
   max-height: 480px;
@@ -94,7 +115,7 @@
 .tabela-Ponto-atendimento {
   width: 100%;
   border-collapse: separate;
-  border-spacing:0 ;
+  border-spacing: 0;
   background-color: #ffffff75;
 }
 .cabecaTabelaPonto-atendimento{
@@ -102,7 +123,7 @@
   height: max-content;
   position: sticky;
   top: 0;
-  z-index: 1000;
+  z-index: 1;
 }
 .topo-tabela-Ponto-atendimento{
   width: 100%;
@@ -138,7 +159,7 @@
   font-weight: bold;
   position: sticky;
   top: 0;
-  z-index: 999999;
+  z-index: 3;
   padding: 8px;
   text-align: left;
   border: 1px solid #000000;
@@ -228,11 +249,12 @@
 }
 .botoesVoltar-Cadastrar{
   display: flex;
-  justify-content: flex-end;
+  justify-content: end;
   gap: 16px;
   margin-top: auto;
   margin-bottom: 40px;
-  margin-right: 5%;
+  width: 90%;
+  /* margin-right: 5%; */
 }
 .botao-voltar {
   background-color: var(--cinza-control);
@@ -251,166 +273,8 @@
   width: 5px;
 }
 
+  /* TAMANHO DA TELA QUE COMEÇA A QUEBRAR  */
+@media screen and (max-width: 470px) {
 
-
-@media screen and (max-width: 1200px){
-  #buscar-Ponto-atendimento{
-    margin-left: 72.4%;
-  }
-}
-
-@media screen and (max-width: 1024px) {
-  #tabela-Ponto-atendimento {
-    left: 8vh;
-  }
-  
-  #buscar-tabela-Ponto-atendimento{
-    margin-left: 71%;
-    width: 45%;
-  }
-  #buscar-Ponto-atendimento{
-    margin-left: 67%;
   }
 
-  .tabela-tabela-Ponto-atendimento td, .cabecalho-tabela1 th{
-    padding: 3px;
-  }
-  .botao-voltar, .botao-cadastro{
-    width: 7rem;
-    padding: 7px 3px;
-  }
-  .botoesVoltar-Cadastrar{
-    margin-top: -12px;
-  }
-
-}
-@media screen and (max-width: 760px){
-
-  #buscar-Ponto-atendimento{
-    width: 30%;
-    margin-right: 5%;
-    margin-left: 65.9%;
-  }
-}
- @media screen and (max-width: 768px) and (max-height: 600px) {
-  .topo-tela-Ponto-atendimento{
-    width: 100%;
-    font-size: 20px;
-    margin-top: 8px;
-    margin-bottom: 0%;
-  }
-  #buscar-Ponto-atendimento{
-    width: 30%;
-  }
-  .campo-busca{
-    margin-bottom: -3%;
-  }
-  #tela-branca-Ponto-atendimento {
-    height: 100%;
-    padding: 10px;
-  }
-  .tabela-responsiva-Ponto-atendimento{
-    height: 150px;
-  }
-  .tabela-tabela-Ponto-atendimento td, .cabecalho-tabela1 th{
-    padding: 3px;
-  }
-  #buscar-Ponto-atendimento{
-    margin-left: 61%;
-    width: 35%;
-    font-size: 12px;
-  }
-  .botoesVoltar-Cadastrar{
-    margin-right: 5%;
-  }
-  .botao-voltar, .botao-cadastro{
-      width: 7rem;
-      padding: 7px 3px;
-  }
-  #icone-editar {
-    width: 25px;
-    height: 25px;
-    cursor: pointer;
-    margin-right: 20px;
-  }
-} 
-
-@media screen and (max-width: 560px) {
-  #tela-branca {
-    width: 85%;
-    padding: 8px;
-  }
-  .campo-busca{
-    margin-bottom: -4%;
-  }
-  #buscar-Ponto-atendimento{
-    margin-left: 56%;
-    width: 40%;
-  }
-  .topo-tela-Ponto-atendimento{
-    width: 99%;
-    /* border: 2px solid green; */
-    font-size: 20px;
-    margin: 20px -30px 20px 15px;
-  }
-}
-@media screen and (max-width: 480px) {
-  .topo-tela-PontoAtendimentoCad{
-    margin: 20% 0% 3% 5%;
-  }
-  #buscar-Ponto-atendimento{
-    margin-left: 0%;
-    width: 90%;
-  }
-  .campo-busca{
-    margin-bottom: -17%;
-  }
-  .linha-divisoria-Ponto-atendimento{
-    margin-top: 12.5%;
-    width: 90%;
-  }
-  .tabela-responsiva-Ponto-atendimento {
-    max-height: 320px;
-  }
-  
-}
-
-@media screen and (max-width: 320px) {
-  #tela-branca {
-    width: 100%;
-    padding: 5px;
-  }
- 
-  #buscar-tabela-Ponto-atendimento{
-    margin-left: 0%;
-    width: 90%;
-  }
-  .campo-busca{
-    margin-bottom: -17%;
-  }
-  .linha-divisoria-tabela-Ponto-atendimento{
-    margin-top: 10%;
-    width: 90%;
-  }
-  .tabela-responsiva-tabela-Ponto-atendimento {
-    max-height: 340px;
-  }
-  .tabela-tabela-Ponto-atendimento th,
-  .tabela-tabela-Ponto-atendimento td {
-    font-size: 12px;
-  }
-  .botoesVoltar-Cadastrar{
-    margin-right: 1.5%;
-    margin-top: -6%;
-    display: flex;
-    flex-direction: row;
-    align-content: stretch;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-wrap: wrap;
-  }
-  .botao-cadastro, .botao-voltar{
-    font-size: 12px;
-    /* width: 36%; */
-  }
-}

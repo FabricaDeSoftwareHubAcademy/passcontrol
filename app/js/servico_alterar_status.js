@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
     const botoesStatus = document.querySelectorAll(".switch_status");
-    const modalContainer = document.querySelector(".modal-inativar-container");
-    const btnCancelar = document.getElementById("btn-cancelar");
-    const btnConfirmar = document.getElementById("salvar");
+    const modalContainer = document.querySelector(".fundo-container-confirmacao-dados-registrados");
+    const btnCancelar = document.querySelector(".cancel_ConfDadosRegist");
+    const btnConfirmar = document.querySelector(".save_ConfDadosRegist");
     
     const modalSucesso = document.querySelector(".fundo-container-confirmacao-dados");
     const btnOk = document.querySelector(".Okay_ConfDados");

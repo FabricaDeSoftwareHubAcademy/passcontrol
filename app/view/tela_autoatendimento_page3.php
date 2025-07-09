@@ -5,9 +5,9 @@ session_start();
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $nome = $_POST['nome'] ?? '';
     $sobrenome = $_POST['sobrenome'] ?? '';
+    $telefone = $_POST['telefone'] ?? '';
     $prioridade = $_POST['prioridade'] ?? null;
     $id_servico = $_POST['id_servico'] ?? null;
-    $telefone = $_POST['telefone'] ?? '';
 
     if (!empty($nome) && !empty($sobrenome) && $prioridade !== null && $id_servico !== null) {
         $nomeCompleto = $nome . ' ' . $sobrenome;
@@ -32,7 +32,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             // Teste do Zenvia para mandar sms
             if (!empty($telefone)) {
-                
                 $telefoneLimpo = preg_replace('/\D/', '', $telefone);
                 if (strlen($telefoneLimpo) === 11) {
                     $telefoneLimpo = '+55' . $telefoneLimpo;
@@ -58,32 +57,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
                     curl_setopt($ch, CURLOPT_POST, true);
                     curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($smsData));
-                    // Código para desativar a verificação do ssl, apenas para testes de resposta do zenvia.
-
-                    // curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-                    // $response = curl_exec($ch);
-                    // echo '</pre>';
-                    // echo 'informações do smsData linha 83333333: <pre>';
-                    // print_r($response);
-                    // echo '</pre>';
-
-                    $response = curl_exec($ch);
-                    $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-                    $curlError = curl_error($ch);
+                    curl_exec($ch);
                     curl_close($ch);
-                    if ($curlError) {
-                        echo "Erro cURL: $curlError\n<br>";
-                    }
                 }
-            }            
+            }
 
             header("Location: tela_autoatendimento_page4.php");
             exit;
         } else {
-            echo "Erro ao inserir no banco.";
+            
         }
     } else {
-        echo "Dados incompletos.";
+
     }
 }
 ?>
@@ -96,13 +81,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PassControl</title>
 
-    <!-- FONTE -->
+    <!-- FONTES -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-    <!-- CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../public/css/tela_autoatendimento_page3.css">
 
     <!-- LOGO -->
@@ -116,34 +98,27 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <img src="../../public/img/icons/logo_control.svg" alt="LOGOCONTROL" id="img-logo">
             </div>
             <H3>PassControl</H3>
+        </nav>
     </header>
 
     <div class="border-line"></div>
 
     <main class="workspace">
-
         <div class="area-cinza">
-
-            <h4 class="page-title">
-                Informe seus dados para atendimento:
-            </h4>
-
+            <h4 class="page-title">Informe seus dados para atendimento:</h4>
 
             <form method="POST" id="form-dados">
                 <div class="box-inputs">
                     <div class="input-group">
-                        <h3 for="nome">Nome*</h3>
-                        <br>
-                        <input type="text" class="input-infos" id="nome" name="nome" placeholder="Nome" required>
+                        <h3 for="nome">Nome*</h3><br>
+                        <input type="text" class="input-infos" id="nome" name="nome" required>
                     </div>
                     <div class="input-group">
-                        <h3 for="sobrenome">Sobrenome*</h3>
-                        <br>
-                        <input type="text" class="input-infos" id="sobrenome" name="sobrenome" placeholder="Sobrenome" required>
+                        <h3 for="sobrenome">Sobrenome*</h3><br>
+                        <input type="text" class="input-infos" id="sobrenome" name="sobrenome" required>
                     </div>
                     <div class="input-group">
-                        <h3 for="telefone">Telefone</h3>
-                        <br>
+                        <h3 for="telefone">Telefone</h3><br>
                         <input type="tel" class="input-infos" id="telefone" name="telefone" placeholder="(00) 00000-0000">
                     </div>
                     <div class="input-group">
@@ -154,22 +129,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     </div>
                 </div>
 
-                <!-- inputs ocultos necessários para o PHP -->
                 <input type="hidden" id="prioridade" name="prioridade">
                 <input type="hidden" id="id_servico" name="id_servico">
                 <input type="hidden" id="telefone_hidden" name="telefone">
-                
+
                 <div class="footer">
                     <button type="button" class="button">
-                        <a href="../../app/view/tela_autoatendimento_page2.php" class="btn-voltar">VOLTAR</a>
+                        <a href="./tela_autoatendimento_page2.php" class="btn-voltar">VOLTAR</a>
                     </button>
                     <button type="button" class="button btn-confirmar" id="confirmarBtn">CONFIRMAR</button>
                 </div>
             </form>
-
-        </div>
-
-        </div>
         </div>
     </main>
 

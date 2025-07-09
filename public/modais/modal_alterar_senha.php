@@ -9,6 +9,19 @@
                 <input type="text" class="input-senha-atual" placeholder="Digite a sua senha atual">
             </div>
         </div>
+
+        <div class="nova-senha-container">
+            <label class="label-nova-senha"><b>Nova Senha</b></label>
+            <input type="text" class="input-nova-senha" id="nova_senha" placeholder="Digite a sua nova senha">
+            <span id="erro_nova_senha" class="erro-campo"></span> 
+        </div>
+
+        <div class="conf-nova-senha-container">
+            <label class="label-conf-nova-senha"><b>Confirmar Nova Senha</b></label>
+            <input type="text" class="input-conf-nova-senha" id="confirmar_senha" placeholder="Repita a nova senha">
+            <span id="erro_confirmar_senha" class="erro-campo"></span>
+        </div>
+<!-- 
         <div class="nova-senha-container">
             <label class="label-nova-senha"><b>Nova Senha</b></label>
             <input type="text" class="input-nova-senha" placeholder="Digite a sua nova senha">
@@ -16,7 +29,7 @@
         <div class="conf-nova-senha-container">
             <label class="label-conf-nova-senha"><b>Confirmar Nova Senha</b></label>
             <input type="text" class="input-conf-nova-senha" placeholder="Repita a nova senha">
-        </div>
+        </div> -->
         <div class="button-group-alterar-senha">
             <button class="botao-modal-alterar-senha cancel_AltSenha">Voltar</button>
             <button class="botao-modal-alterar-senha save_AltSenha">Salvar</button>

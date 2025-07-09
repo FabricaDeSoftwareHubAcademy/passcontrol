@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    console.log('JS carregado');
+    // console.log('JS carregado');
 
     const inputBusca = document.querySelector('input[type="search"]');
     if (!inputBusca) {

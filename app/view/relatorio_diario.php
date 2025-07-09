@@ -2,52 +2,36 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PassControl</title>
-
-    <!-- FONTE -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="../../public/css/navegacao.css">
-    <link rel="stylesheet" href="../../public/css/monitor-modal.css">
-    <link rel="stylesheet" href="../../public/css/menu_eli.css">
+    <title>Relatório Diário | PassControl</title>
     <link rel="stylesheet" href="../../public/css/relatorio_diario.css">
-    <link rel="stylesheet" href="../../public/modais/Modal_Alterar_Dados_Pessoais/alterar_dados_pessoais.css">
-    <link rel="stylesheet" href="../../public/modais/Modal_Alterar_Senha/alterar_senha.css">
+    <link rel="stylesheet" href="../../public/css/navegacao.css">
 
-    <!-- JS -->
-    <script src="../../public/js/navegacao_menu_lateral.js" defer></script>
-    <script src="../../public/js/monitor_modal.js" defer></script>
-    <script src="../js/exportacao_relatorio.js"></script>
-    <script src="../js/dashboard_teste.js"></script>
+    <!-- Fontes e ícones -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="../../public/img/Logo-Nota-Controlnt.ico">
 
-    <!-- SheetJS para Excel -->
+    <!-- SheetJS / jsPDF / Chart.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
-    <!-- jsPDF e AutoTable para PDF -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.23/jspdf.plugin.autotable.min.js"></script>
-    <!-- ChartJS -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-    <!-- LOGO -->
-    <link rel="shortcut icon" type="imagex/png" href="../../public/img/Logo-Nota-Controlnt.ico">
+    <!-- JS custom -->
+    <script src="../js/exportacao_relatorio.js" defer></script>
+    <script src="../js/relatorio_dinamico.js" defer></script>
+    <script src="../../app/js/busca_servicos.js" defer></script>
 </head>
-
 <body class="control-body-navegacao">
-    <?php
-    include "./navegacao.php";
+    <?php 
+    include "./navegacao.php"; 
+    /* include "../actions/get_servicos.php"; */
     ?>
 
     <section class="Area-Util-Projeto">
-        <div class="scrollmenu" style="display: flex; justify-content: start; align-items: start;">
-            <a href="../../../app/admin/view/atendimento_tempo_real.php">Guichês</a>
-            <a href="../../../app/admin/view/atendimento.php" class="active">Atendimento</a>
+        <div class="scrollmenu">
+            <a href="atendimento_tempo_real.php">Guichês</a>
+            <a href="atendimento.php" class="active">Atendimento</a>
         </div>
-
-
 
         <div class="containerDelimitador">
             <div class="containerRelatioTitle">
@@ -57,49 +41,54 @@
             <div class="areaBrancaRd">
                 <div class="containerOptionsLateral">
                     <div class="containerFiltro">
-                        <div class="containerTitleFiltro">
-                            <h3>Filtro/Período</h3>
-                        </div>
+                        <div class="containerTitleFiltro"><h3>Filtro/Período</h3></div>
 
                         <div class="containerPeriodo">
-                            <!-- <div class="periodoTitle">
-                                <h3>Período</h3>
-                            </div> -->
                             <div class="containerPeriodoFiltro">
                                 <div class="containerInputDate">
                                     <input type="date" class="inputDate1">
                                     <input type="date" class="inputDate2">
                                 </div>
                                 <div class="containerInputLocal">
-                                    <select name="local" id="inputLocal" palceholder="Profeitura de Campo Grande / MS">
-                                        <option value="CampoGrandeMS">Campo Grande / ms</option>
+                                    <select id="inputLocal">
+                                        <option value="">Selecione um Serviço</option>
+                                        <!-- <option value="INSS">INSS</option>
+                                        <option value="IPTU">IPTU</option>
+                                        <option value="Poda Arvore">Poda Arvore</option> -->
                                     </select>
                                 </div>
                                 <div class="containerFiltrar">
-                                    <input type="submit" value="FIltrar" class="inputFIltrar">
+                                    <input type="submit" value="Filtrar" class="inputFIltrar" id="btnFiltrar">
                                     <button onclick="exportarExcel()" class="inputFIltrar">Exportar Excel</button>
                                     <button onclick="exportarPDF()" class="inputFIltrar">Exportar PDF</button>
                                 </div>
                             </div>
                         </div>
                     </div>
-
                 </div>
+
                 <div class="containerMainRd">
-                    
+                    <table id="tabelaRelatorio" class="relatorio-tabela">
+                        <thead>
+                            <tr>
+                                <th>ID</th><th>Fila</th><th>Prioridade</th><th>Data</th><th>Serviço</th><th>Local</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td colspan="6">Nenhum dado encontrado.</td></tr>
+                        </tbody>
+                    </table>
+
+                    <div style="margin-top: 40px;">
+                        <canvas id="graficoBarras" height="120"></canvas>
+                    </div>
+
+                    <div style="margin-top: 40px;">
+                        <canvas id="graficoPizza" height="120"></canvas>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-
-    <?php
-    include "./monitor_modal.php"
-    ?>
-
-    <script>
-        function toggleMenu() {
-            document.getElementById("mobileMenu").classList.toggle("active");
-        }
-    </script>
 </body>
 </html>
