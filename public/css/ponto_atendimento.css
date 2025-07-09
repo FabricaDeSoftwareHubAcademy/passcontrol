@@ -153,16 +153,19 @@
   display: flex;
   justify-content: space-between;
 }
-.tabela-Ponto-atendimento th {
+
+th {
   background-color: var(--cinza-control);
   font-size: 16px;
   font-weight: bold;
   position: sticky;
   top: 0;
   z-index: 3;
-  padding: 8px;
+  padding: 10px;
   text-align: left;
   border: 1px solid #000000;
+  min-width: 50px; 
+  color: var(--cor-fundo); 
 }
 .linha-tabela{
   padding: 6px;
@@ -172,8 +175,65 @@
   padding: 8px;
   text-align: left;
   border: 1px solid var(--cinza-control);
-  font-weight: bold;
   color: var(--cinza-control);
+  width: 140px;
+  white-space: nowrap;
+  overflow: hidden; 
+  text-overflow: ellipsis; 
+}
+.tabela-Ponto-atendimento td { 
+  font-size: 16px;
+  border: 1px solid black; 
+  padding: 9px; 
+  min-width: 50px; 
+} 
+
+/* Estilos de scrollbar da segunda tabela, adaptados para a primeira */
+thead, tbody tr {
+  display: table;
+  width: 100%;
+  table-layout: fixed; 
+}
+tbody {
+  display: block;  
+  overflow-y: scroll;  
+  position: relative;
+  max-height: 400px; 
+}
+
+tbody::-webkit-scrollbar {
+  width: 0.1px;
+  opacity: 0;  
+  transition: opacity 0.3s ease;  
+}
+
+/* Assumindo que a tabela principal pode ter uma classe para o hover, ou o hover será aplicado ao tbody diretamente */
+/* Se a tabela tiver uma classe, substitua 'table-container:hover' pela classe da sua tabela */
+/* Por exemplo, se a sua tabela tiver a classe '.minha-tabela', use '.minha-tabela:hover tbody::-webkit-scrollbar' */
+/* Para simplificar, estou aplicando o hover diretamente no tbody para o scrollbar aparecer */
+tbody:hover::-webkit-scrollbar {
+  opacity: 1;  
+  width: 5px; 
+}
+
+tbody::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 4px;
+}
+
+tbody::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+tbody::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 5px; 
+}
+
+/* Se você quiser o efeito de margin-right, precisará aplicar o hover na tabela pai ou no thead/tbody */
+/* Para este exemplo, estou aplicando no tbody:hover */
+tbody:hover, thead {
+  margin-right: -5px;
 }
 .bot-editar {
   all: unset;
@@ -269,9 +329,9 @@
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }
 
-.tabela-wrapper::-webkit-scrollbar {
+/* .tabela-wrapper::-webkit-scrollbar {
   width: 5px;
-}
+} */
 
   /* TAMANHO DA TELA QUE COMEÇA A QUEBRAR  */
 @media screen and (max-width: 470px) {
