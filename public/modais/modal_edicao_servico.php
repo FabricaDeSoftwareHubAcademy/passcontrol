@@ -19,7 +19,7 @@
             <!-- CÓDIGO SERVIÇO -->
             <div class="edit-codigo-servico">
                 <label class="label-servico"><b>Código do Serviço</b></label>
-                <input type="text" id="identificador_ponto_atendimento" name="codigo_servico" class="input-text-edit">
+                <input type="text" id="identificador_codigo_servico" name="codigo_servico" class="input-text-edit">
             </div>
             <!-- IMAGEM DO SERVIÇO -->
             <div class="img-edit-servico">

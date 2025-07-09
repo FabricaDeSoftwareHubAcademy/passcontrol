@@ -1,6 +1,30 @@
 document.addEventListener("DOMContentLoaded", function () {
     let dadosOriginais = {};
-    let formAlterado = false;
+    let podeEditar = false;
+    let imagemInvalidaGlobal = false;
+
+    const inputImagem = document.getElementById('imagem_edit_servico');
+    const previewImagem = document.getElementById('preview_imagem_editar');
+    const modalConfirmacao = document.querySelector(".fundo-container-confirmacao-dados-registrados");
+    const modalFinal = document.querySelector(".fundo-container-confirmacao-dados");
+
+    function resetarImagemEditar() {
+        inputImagem.value = "";
+        previewImagem.setAttribute("src", "#");
+        previewImagem.style.display = "none";
+    }
+
+    function voltarDoErroHandlerEditar() {
+        document.querySelector(".modal-container-aviso-erro").classList.remove("show");
+        document.querySelector(".modal-container-servico").classList.add("show");
+
+        if (imagemInvalidaGlobal) {
+            resetarImagemEditar();
+        }
+
+        imagemInvalidaGlobal = false;
+        document.querySelector(".voltar_AvisoErro").removeEventListener("click", voltarDoErroHandlerEditar);
+    }
 
     document.querySelectorAll(".chamamodal").forEach(button => {
         button.addEventListener("click", async function (event) {
@@ -18,19 +42,15 @@ document.addEventListener("DOMContentLoaded", function () {
             });
 
             let response = await dados_php.json();
-            // console.log(response);
 
-            // Preencher os campos do formulário
             const inputNome = document.getElementById("nome_edit_servico");
-            const inputCodigo = document.getElementById("identificador_ponto_atendimento");
+            const inputCodigo = document.getElementById("identificador_codigo_servico");
             const inputId = document.getElementById("id_edit_servico");
-            const previewImagem = document.getElementById("preview_imagem_editar");
 
             inputNome.value = response.nome_servico;
             inputCodigo.value = response.codigo_servico;
             inputId.value = response.id_servico;
 
-            // Carregar a imagem atual
             if (response.url_imagem_servico) {
                 previewImagem.src = "../../public/img/uploads/" + response.url_imagem_servico;
                 previewImagem.style.display = "block";
@@ -39,7 +59,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 previewImagem.style.display = "none";
             }
 
-            // Guardar os dados originais
             dadosOriginais = {
                 nome: response.nome_servico.trim(),
                 codigo: response.codigo_servico.trim()
@@ -47,70 +66,110 @@ document.addEventListener("DOMContentLoaded", function () {
 
             modalContainer.classList.add("show");
 
-            // Botão VOLTAR
             buttonCancelar.addEventListener("click", () => {
                 modalContainer.classList.remove("show");
             });
 
-            // Botão SALVAR
+            // BOTÃO SALVAR (com validação)
             buttonSalvar.onclick = function (e) {
                 e.preventDefault();
 
                 const nomeAtual = inputNome.value.trim();
                 const codigoAtual = inputCodigo.value.trim();
+                const arquivos = inputImagem.files[0];
 
-                // console.log("Nome Atual:", nomeAtual);
-                // console.log("Código Atual:", codigoAtual); 
-                
-                document.querySelector(".fundo-container-confirmacao-dados-registrados").classList.add("show");
-                modalContainer.classList.remove("show");
-                formAlterado = true;
+                let erro = false;
+                let imagemInvalida = false;
+                const msgError = document.querySelector(".aviso-erro");
+                msgError.innerHTML = "";
 
+                // Validação campos
+                if (!nomeAtual) {
+                    msgError.innerHTML += "Preencha o nome do serviço!<br><br>";
+                    erro = true;
+                }
+
+                if (!codigoAtual) {
+                    msgError.innerHTML += "Preencha o código do serviço!<br><br>";
+                    erro = true;
+                }
+
+                // Validação imagem nova 
+                if (arquivos) {
+                    const img_permitidos = [".png", ".jpg", ".jpeg"];
+                    const regex = new RegExp("(" + img_permitidos.join('|').replace(/\./g, "\\.") + ")$", "i");
+
+                    if (!regex.test(inputImagem.value.toLowerCase())) {
+                        msgError.innerHTML += "Tipo de arquivo inválido! Permitidos: .png, .jpg e .jpeg<br><br>";
+                        erro = true;
+                        imagemInvalida = true;
+                    }
+
+                    if (!arquivos.type.startsWith("image/")) {
+                        msgError.innerHTML += "Arquivo não é uma imagem válida.<br><br>";
+                        erro = true;
+                        imagemInvalida = true;
+                    }
+                }
+
+                if (!erro) {
+                    podeEditar = true;
+                    modalContainer.classList.remove("show");
+                    modalConfirmacao.classList.add("show");
+                } else {
+                    imagemInvalidaGlobal = imagemInvalida;
+                    modalContainer.classList.remove("show");
+                    document.querySelector(".modal-container-aviso-erro").classList.add("show");
+
+                    //Evita múltiplos listeners
+                    const botaoErro = document.querySelector(".voltar_AvisoErro");
+                    botaoErro.removeEventListener("click", voltarDoErroHandlerEditar);
+                    botaoErro.addEventListener("click", voltarDoErroHandlerEditar);
+                }
             };
 
-            // Botão NÃO na confirmação
-            document.querySelector(".cancel_ConfDadosRegist").addEventListener("click", function () {
-                document.querySelector(".fundo-container-confirmacao-dados-registrados").classList.remove("show");
+            // Botão NÃO -> volta ao modal de edição
+            const btnNao = document.querySelector(".cancel_ConfDadosRegist");
+            btnNao.onclick = function () {
+                modalConfirmacao.classList.remove("show");
                 modalContainer.classList.add("show");
-            });
+                podeEditar = false;
+            };
 
-            // Botão SIM na confirmação -> Enviar dados
-            document.querySelector(".save_ConfDadosRegist").addEventListener("click", async function () {
-                if (!formAlterado) return;
+            // Botão SIM -> envia dados para o PHP
+            const btnSim = document.querySelector(".save_ConfDadosRegist");
+            btnSim.onclick = async function () {
+                if (!podeEditar) return;
 
                 const myform = document.getElementById("formulario_editar_servico");
                 const formData = new FormData(myform);
 
-                console.log(formData);
+                modalConfirmacao.classList.remove("show");
+                podeEditar = false;
+
                 let dados2_php = await fetch("../actions/servico_editar.php", {
                     method: 'POST',
                     body: formData
                 });
 
                 let response2 = await dados2_php.json();
-                console.log(response2);
 
                 if (response2) {
-                    document.querySelector(".fundo-container-confirmacao-dados").classList.add("show");
+                    modalFinal.classList.add("show");
                 }
+            };
 
-                document.querySelector(".fundo-container-confirmacao-dados-registrados").classList.remove("show");
-            });
-
-            // Botão OK no modal final
-            const buttonOkEditar = document.querySelector(".Okay_ConfDados");
-            buttonOkEditar.addEventListener("click", function () {
-                const apareceMod = document.querySelector(".fundo-container-confirmacao-dados");
-                apareceMod.classList.remove("show");
+            // Botão OK -> fecha tudo e recarrega
+            const btnOk = document.querySelector(".Okay_ConfDados");
+            btnOk.onclick = function () {
+                modalFinal.classList.remove("show");
+                resetarImagemEditar();
                 location.reload();
-            });
+            };
         });
     });
 
-    // Preview da nova imagem selecionada
-    const inputImagem = document.getElementById('imagem_edit_servico');
-    const previewImagem = document.getElementById('preview_imagem_editar');
-
+    // Preview da nova imagem (como no cadastro)
     inputImagem.addEventListener('change', function () {
         const file = this.files[0];
 
