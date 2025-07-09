@@ -24,13 +24,27 @@ const buttonOkError = document.querySelector(".voltar_AvisoErro")
 const inputImagem = document.getElementById("imagem_servico_cadastrar");
 const previewImagem = document.getElementById("preview_imagem_cadastrar");
 
-function resetFormCadastro(){
-  // document.getElementById("nome_servico_cadastrar").value = "";
-  // document.getElementById("codigo_servico_cadastrar").value = "";
+// VARIAVES CONTROLE DO FLUXO DO CADASTRO
+let controleCadastro = false;
+let imagemInavlidacontorle = false;
+
+function resetImgCadastro(){
   inputImagem.value = "";
   previewImagem.setAttribute("src", "#");
   previewImagem.style.display = "none";
   msgError.innerHTML = "";
+}
+function voltarModalError(){
+  modalError.classList.remove("show");
+  modalCadastro.classList.add("show");
+
+  if (imagemInavlida){
+    resetImgCadastro();
+  }else{
+    msgError.innerHTML = "";
+  }
+  imagemInavlida = false;
+  buttonOkError.removeEventListener("click", voltarModalError);
 }
 
 //Abre Modal de Cadastro
@@ -56,7 +70,7 @@ btnSalvarCadastro.addEventListener("click", function (event) {
   
   let erro = false;
   let imagemInavlida = false;
-  msgError.innerHTML = ''
+  msgError.innerHTML = '';
   
   // Validação nome do serviço
   if (!nome_servico) {
@@ -94,36 +108,35 @@ btnSalvarCadastro.addEventListener("click", function (event) {
   }
   // Se houver erro, não avança
   if (!erro) {
+    controleCadastro = true;
     modalCadastro.classList.remove("show");
     modalConfirmacao.classList.add("show");
   }else{
+    imagemInavlidacontorle = imagemInavlida;
     modalCadastro.classList.remove("show");
     modalError.classList.add("show");
     
-    buttonOkError.addEventListener("click", ()=>{
-      modalError.classList.remove("show");
-      modalCadastro.classList.add("show");
-      if(imagemInavlida){
-        resetFormCadastro();
-      }
-      if(!imagemInavlida){
-        msgError.innerHTML = "";
-      }
-    }, {once: true});
+  buttonOkError.removeEventListener("click", voltarModalError);
+  buttonOkError.addEventListener("click", voltarModalError);
   }
-  
+});
+
   // NÃO na confirmação -> volta para o modal de cadastro
   btnNaoConfirmacao.addEventListener("click", () => {
     modalConfirmacao.classList.remove("show");
     modalCadastro.classList.add("show");
+    controleCadastro = false;
   });
   
   // SIM na confirmação -> envia os dados para o PHP
   btnSimConfirmacao.addEventListener("click", async () => {
+    if(!controleCadastro) return;
+
     const myform = document.getElementById("formulario_cadastrar_servico");
     const formData = new FormData(myform);
     
     modalConfirmacao.classList.remove("show");
+    controleCadastro = false;
     
     try {
       const dados2_php = await fetch("../actions/servico_cadastrar.php", {
@@ -143,11 +156,11 @@ btnSalvarCadastro.addEventListener("click", function (event) {
       alert("Erro de conexão com o servidor.");
     }
   });
-});
 
 // OK no sucesso -> fecha tudo e recarrega
 btnOkCadastrar.addEventListener("click", () => {
   apareceMod.classList.remove("show");
+  resetImgCadastro();
   location.reload();
 });
 
