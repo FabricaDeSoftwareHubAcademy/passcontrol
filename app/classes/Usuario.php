@@ -174,24 +174,32 @@ class Usuario
         return true;
     }
 
-    public function vincular_servico($cpf, $id_servico) {
-        $usuario = $this->buscar("cpf_usuario =" . $cpf, null, null, "id_usuario");
-        $id_usuario = $usuario["id_usuario"];
+    public function vincular_servico($cpf, $lista_servicos) {
+        $usuario = $this->buscar("cpf_usuario = $cpf");
+        
+        if (!$usuario || !isset($usuario[0]["id_usuario"])) {
+            return false; // Não encontrou o usuário
+        }
+        
+        $id_usuario = $usuario[0]["id_usuario"];
 
         $this->db = new Database("usuario_servico");
         
-        $values = [
-            "id_usuario_fk = ". $id_usuario[0],
-            "id_servico_fk = " . $id_servico
-        ];
+        $sucesso = true;
         
-        $res = $this->db->insert($values);
-        if($res){
-            return true;
-        }else{
-            return false;
+        foreach ($lista_servicos as $id_servico) {
+            $values = [
+                "id_usuario_fk" => $id_usuario,
+                "id_servico_fk" => $id_servico
+            ];
+            $res = $this->db->insert($values);
+
+            if (!$res) {
+                $sucesso = false; // marca erro mas continua tentando os outros
+            }
         }
 
+        return $sucesso;
     }
 }
 

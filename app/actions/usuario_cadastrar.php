@@ -36,26 +36,16 @@
                 $res_vincula = "Nao Vinculado";
 
                 //// CAPTURA SERVICOS SELECIONADOS
-
-                // if(isset($_POST['id_servico'])){
-                //     $servicos_selecionados = $_POST['id_servico'];
-                // }else{
-                //     $servicos_selecionados =  [];
-                // };
-
                 // try{
-                //     if(count($servicos_selecionados) >= 1){
-                //         // ENVIA O ARRAY DE SERVICOS PARA O BANCO DE DADOS
-                //         foreach($servicos_selecionados as $id_servico){
-                //             // AVALIAR UTILIZACAO DE METODO OU CRIACAO DE NOVA CLASSE
-                //             $vincula = $objUser->vincular_servico($cpf_limpo,$id_servico);
-                //             if($vincula){
-                //                 $res_vincula = "Vinculado";
-                //             }else{
-                //                 $res_vincula = "Nao Vinculado";
-                //             }
-                //         }
-                //     }
+                    if(isset($_POST['id_servico'])){
+                        $servicos_selecionados = $_POST['id_servico'];
+
+                        $vincula = $objUser->vincular_servico($objUser->cpf,$servicos_selecionados);
+                        
+                        if($vincula){
+                            $res_vincula = "Vinculado";
+                        }
+                    }
                 // }catch(Exception $erro){
                 //     $res_vincula = "Nao Vinculado: $erro";
                 // }
