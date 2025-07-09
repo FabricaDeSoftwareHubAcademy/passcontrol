@@ -1,5 +1,6 @@
 <?php
 session_start();
+require_once '../actions/verificar_permissao.php';
 if (!isset($_SESSION['id_usuario'])) {
     header("Location: ../../index.php");
     exit();
@@ -71,33 +72,73 @@ if (!isset($_SESSION['id_usuario'])) {
     <div class="area-lateral-navegacao">
         <nav class="menu-lateral-navegacao">
 
-            <a class="botao-lateal-navegacao" href="./atendimento.php">
-                <img class="icone-menu-lateral" src="../../public/img/icons/atend.svg" alt="ICONE-ATENDIMENTO">
-                <p class="texto-bott">Atendimento</p>
-            </a>
+        <?php
 
-            <a class="botao-lateal-navegacao" id="openMonitorModal">
-                <img class="icone-menu-lateral" src="../../public/img/icons/monitor.svg" alt="ICONE-MONITOR">
-                <p class="texto-bott">Monitor</p>
-            </a>
 
-            <a class="botao-lateal-navegacao" href="./menuadm_usuario.php">
-                <img class="icone-menu-lateral" src="../../public/img/icons/gestao.svg" alt="ICONE-GESTAO">
-                <p class="texto-bott">Gestão</p>
-            </a>
+        $id_perfil = $_SESSION['id_perfil_usuario_fk'] ?? null;
 
-            <a class="botao-lateal-navegacao" href="./relatorio_diario.php">
-                <img class="icone-menu-lateral" src="../../public/img/icons/nota.svg" alt="ICONE-RELATORIOS">
-                <p class="texto-bott">Relatórios</p>
-            </a>
+        $adm = ['atendimento.php', 'monitor_modal.php', 'menuadm_usuario.php', 'relatorio_diario.php'];
+        $sup = ['atendimento.php', 'monitor_modal.php', 'menusup_usuario.php', 'relatorio_diario.php'];
+        $atend = ['atendimento.php', 'monitor_modal.php'];
+
+        switch ($id_perfil) {
+            case 5:
+                $menus = $adm;
+                break;
+            case 6:
+                $menus = $sup;
+                break;
+            case 7:
+                $menus = $atend;
+                break;
+            default:
+                $menus = [];
+        }
+
+        $nomeExibicao = [
+            'atendimento.php' => 'Atendimento',
+            'monitor_modal.php' => 'Monitor',
+            'menuadm_usuario.php' => 'Gestão',
+            'menusup_usuario.php' => 'Gestão',
+            'relatorio_diario.php' => 'Relatórios',
+        ];
+
+        $icones = [
+            'Atendimento' => '../../public/img/icons/atend.svg',
+            'Monitor' => '../../public/img/icons/monitor.svg',
+            'Gestão' => '../../public/img/icons/gestao.svg',
+            'Relatórios' => '../../public/img/icons/nota.svg',
+        ];
+        ?>
+
+        <nav class="menu-lateral-navegacao">
+            <?php foreach ($menus as $arquivo): 
+                $nome = $nomeExibicao[$arquivo] ?? ucfirst(pathinfo($arquivo, PATHINFO_FILENAME));
+                $icone = $icones[$nome] ?? '../../public/img/icons/default.svg';
+
+                if ($nome === 'Monitor'): ?>
+                    <a class="botao-lateal-navegacao" id="openMonitorModal" href="javascript:void(0);">
+                        <img class="icone-menu-lateral" src="<?= $icone ?>" alt="ICONE-MONITOR">
+                        <p class="texto-bott"><?= htmlspecialchars($nome) ?></p>
+                    </a>
+                <?php else: ?>
+                    <a class="botao-lateal-navegacao" href="./<?= $arquivo ?>">
+                        <img class="icone-menu-lateral" src="<?= $icone ?>" alt="Ícone <?= htmlspecialchars($nome) ?>">
+                        <p class="texto-bott"><?= htmlspecialchars($nome) ?></p>
+                    </a>
+                <?php endif; ?>
+            <?php endforeach; ?>
+
+            <!-- Botão sair fixo -->
             <div class="sair-navegacao">
                 <a class="botao-lateal-navegacao" href="../../index.php">
-                    <img class="icone-menu-lateral" src="../../public/img/icons/sair.svg" alt="ICONE-SAIR">
+                    <img class="icone-menu-lateral" src="../../public/img/icons/sair.svg" alt="Ícone Sair">
                     <p class="texto-bott">Sair</p>
                 </a>
             </div>
-        
         </nav>
+
+
     </div>
 
     <button class="botao-menu-mobile abrirMenuLateral" id="botao-menu-mobile">

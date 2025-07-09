@@ -52,29 +52,19 @@ if (password_verify($senha, $res['senha_usuario']) && ($res['primeiro_login'] ==
     $_SESSION['cpf_usuario'] = $res['cpf_usuario'];
     $_SESSION['url_foto_usuario'] = $res['url_foto_usuario'];
     $_SESSION['id_perfil_usuario_fk'] = $res['id_perfil_usuario_fk'];
+    
+    error_log("Login: perfil {$res['id_perfil_usuario_fk']} - usuário {$res['nome_usuario']}");
 
-    $perfil = (int)$res['id_perfil_usuario_fk'];
-    $redirect_url = '';
 
-    switch ($perfil) {
-        case 5:
-            $redirect_url = './app/view/menuadm_fluxo.php';
-            break;
-        case 6:
-            $redirect_url = './app/view/menusup_fluxo.php';
-            break;
-        case 7:
-            $redirect_url = './app/view/menuatend_fluxo.php';
-            break;
-        default:
-            echo json_encode([
-                'status' => 'erro',
-                'code' => 403,
-                'msg' => 'Perfil inválido. Acesso negado.'
-            ]);
-            exit;
-    }
-
+    echo json_encode([
+        'status' => 'ok',
+        'code' => 200,
+        'id_usuario' => $res['id_usuario'],
+        'msg' => 'Login realizado com sucesso.',
+        'redirect' => './app/view/atendimento.php'
+    ]);
+    exit;
+}
     echo json_encode([
         'status' => 'ok',
         'code' => 200,
@@ -89,5 +79,4 @@ if (password_verify($senha, $res['senha_usuario']) && ($res['primeiro_login'] ==
         'code' => 400,
         'msg' => 'Senha incorreta.'
     ]);
-};
 };
