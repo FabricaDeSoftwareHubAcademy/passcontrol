@@ -129,6 +129,14 @@
     color: #37474F;
 }
 
+#graficoPizza {
+    width: 400px !important;
+    height: 400px !important;
+    max-width: 400px;
+    max-height: 400px;
+    margin-left: 300px;
+  }  
+
 .containerFiltrar {
     width: 100%;
     height: 20%;

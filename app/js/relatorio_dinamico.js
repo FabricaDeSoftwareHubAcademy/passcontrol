@@ -57,14 +57,15 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 function iniciarGraficosVazios() {
+    // Gráfico de barras
     const ctxBar = document.getElementById('graficoBarras').getContext('2d');
     chartBar = new Chart(ctxBar, {
         type: 'bar',
         data: {
-            labels: [],
+            labels: ['2025-07-01', '2025-07-02'],
             datasets: [{
                 label: 'Atendimentos por Dia',
-                data: [],
+                data: [5, 8],
                 backgroundColor: 'rgba(55, 71, 79, 0.7)'
             }]
         },
@@ -74,15 +75,16 @@ function iniciarGraficosVazios() {
         }
     });
 
+    // Gráfico de pizza
     const ctxPie = document.getElementById('graficoPizza').getContext('2d');
     chartPie = new Chart(ctxPie, {
         type: 'pie',
         data: {
-            labels: [],
+            labels: ['Serviço A', 'Serviço B', 'Serviço C'],
             datasets: [{
                 label: 'Serviços',
-                data: [],
-                backgroundColor: ['#37474F', '#33404d', '#90A4AE', '#78909C', '#B0BEC5']
+                data: [10, 20, 5],
+                backgroundColor: ['#37474F', '#90A4AE', '#B0BEC5']
             }]
         },
         options: {
@@ -91,6 +93,7 @@ function iniciarGraficosVazios() {
         }
     });
 }
+
 
 function atualizarGraficos(dias, servicos) {
     // Gráfico de barras

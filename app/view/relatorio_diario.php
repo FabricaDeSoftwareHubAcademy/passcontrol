@@ -58,7 +58,7 @@
                                     </select>
                                 </div>
                                 <div class="containerFiltrar">
-                                    <input type="submit" value="Filtrar" class="inputFIltrar">
+                                    <input type="submit" value="Filtrar" class="inputFIltrar" id="btnFiltrar">
                                     <button onclick="exportarExcel()" class="inputFIltrar">Exportar Excel</button>
                                     <button onclick="exportarPDF()" class="inputFIltrar">Exportar PDF</button>
                                 </div>
