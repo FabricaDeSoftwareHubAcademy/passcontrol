@@ -174,6 +174,7 @@ class Usuario
         return true;
     }
 
+    // INSERE O ID DO USUARIO E OS ID'S DOS SERVICOS NA TABELA INTERMEDIARIA usuario_servico
     public function vincular_servico($cpf, $lista_servicos) {
         $usuario = $this->buscar("cpf_usuario = $cpf");
         
