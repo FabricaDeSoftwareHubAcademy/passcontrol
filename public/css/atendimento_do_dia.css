@@ -12,36 +12,58 @@
     scroll-behavior: smooth;
 } */
 
-.area-atendimento-tempo-real {
+.area-atendimento-do-dia {
     height: 100vh;
     margin: 80px 30px 30px 30px;
     background-color: var(--color-background-3);
+    padding: 25px;
 }
 
-.container-atendimento-tempo-real {
+.container-atendimento-do-dia {
     max-width: 100%;
     max-height: 60vh;
     /* -webkit-overflow-scrolling: touch; */
     display: flex;
-    display: block;
+    /* display: block; */
     justify-content: space-between;
-    padding: 15px;
+    padding: 9px;
+    margin-top: 20px;
 }
 
-.line-atendimento-tempo-real {
-    width: 98%;
+.line-atendimento-do-dia {
+    width: 99%;
     border: 2px solid var(--color-text-1);
     margin: 0 auto;
-    margin-top: -10px;
 }
 
-.container-atendimento-tempo-real h1 {
+.container-atendimento-do-dia h1 {
     font-weight: bold;
     font-size: 20px;
     color: var(--color-text-1);
+    margin-top: -10px;
 }
 
-.table-atendimento-tempo-real {
+.reloading_atendimento_do_dia{
+    background-color: #33404D;
+    max-width: 70px;
+    max-height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    border-radius: 20%;
+    color: var(--color-background-1);
+    border: 1px solid var(--color-neutro-2);
+    margin-left: 94%;
+    margin-top: -84px;
+}
+
+.icone_atendimento_do_dia{
+    max-width: 20px;
+}
+
+.table-atendimento-do-dia {
     width: 100%;
     border-collapse: collapse;
     position: relative; 
@@ -49,7 +71,7 @@
     transition: overflow 0.3s ease;  
 }
 
-.table-atendimento-tempo-real:hover {
+.table-atendimento-do-dia:hover {
     overflow-y: auto;
 }
 
@@ -88,52 +110,52 @@ tbody {
 
 } 
 
-.table-atendimento-tempo-real tbody::-webkit-scrollbar { 
+.table-atendimento-do-dia tbody::-webkit-scrollbar { 
     width: 0.1px; 
     opacity: 0;  
     transition: opacity 0.3s ease;  
 } 
-.table-atendimento-tempo-real:hover tbody::-webkit-scrollbar { 
+.table-atendimento-do-dia:hover tbody::-webkit-scrollbar { 
     opacity: 1;  
     width: 5px; 
 } 
-.table-atendimento-tempo-real tbody::-webkit-scrollbar-thumb { 
+.table-atendimento-do-dia tbody::-webkit-scrollbar-thumb { 
     background-color: rgba(0, 0, 0, 0.5); 
     border-radius: 4px;
 
 } 
-.table-atendimento-tempo-real tbody::-webkit-scrollbar-track { 
+.table-atendimento-do-dia tbody::-webkit-scrollbar-track { 
     background: transparent; 
 } 
 
-.table-atendimento-tempo-real tbody::-webkit-scrollbar-thumb:hover { 
+.table-atendimento-do-dia tbody::-webkit-scrollbar-thumb:hover { 
     background-color: rgba(0, 0, 0, 0.7); 
     width: 9px; 
 } 
 
-.table-atendimento-tempo-real:hover tbody,thead{ 
+.table-atendimento-do-dia:hover tbody,thead{ 
     margin-right: -5px;
     /* display: flex; */
 } 
 
-.disponivel-atendimento-tempo-real {
+.disponivel-atendimento-do-dia {
     color: var(--color-disponivel);
 }
 
-.em-atendimento-atendimento-tempo-real {
+.em-atendimento-atendimento-do-dia {
     color: var(--color-em-atendimento);
 }
 
-.intervalo-atendimento-tempo-real {
+.intervalo-atendimento-do-dia {
     color: var(--color-intervalo);
 }
 
-.status-flex-atendimento-tempo-real {
+.status-flex-atendimento-do-dia {
     display: flex;
     justify-content: space-between;
 }
 
-.circle-atendimento-tempo-real {
+.circle-atendimento-do-dia {
     display: inline-flex;
     justify-content: center;
     align-items: center;

@@ -41,40 +41,65 @@
         <div class="menu-container">
             <div class="menu">
                 <button class="hamburger" onclick="toggleMenu()">☰</button>
-                <a href="../view/atendimento_tempo_real.php" class="active">Guichês</a>
+                <a href="../view/atendimento_do_dia.php" class="active">Guichês</a>
                 <a href="../view/atendimento.php">Atendimento</a>
             </div>
             <div class="menu-mobile" id="mobileMenu">
-                <a href="../view/atendimento_tempo_real.php" class="active">Guichês</a>
+                <a href="../view/atendimento_do_dia.php" class="active">Guichês</a>
                 <a href="../view/atendimento.php">Atendimento</a>
             </div>
         </div>
 
         <!-- ACOMPANHAMENTO EM TEMPO REAL -->
-        <div class="area-atendimento-tempo-real">
-            <div class="container-atendimento-tempo-real">
-                <h1 class="title-atendimento-tempo-real title-atendimento-tempo-real-bt">Atendimento do Dia</h1>
+        <div class="area-atendimento-do-dia">
+            <div class="container-atendimento-do-dia">
+                <h1 class="title-atendimento-do-dia title-atendimento-tempo-real-bt">Atendimento do Dia</h1>
                 <!-- <h1 class="title-atendimento-tempo-real">Senhas na Fila: 000</h1> -->
             </div>
-            <div class="line-atendimento-tempo-real"></div>
-            <div class="container-atendimento-tempo-real">
-                <table class="table-atendimento-tempo-real">
+            <button class="reloading_atendimento_do_dia">
+                <a>
+                    <img class="icone_atendimento_do_dia" src="../../public/img/icons/reloading_do_dia.png">
+                    <p>Atualizar Tabela</p>
+                </a>
+            </button>
+            <div class="line-atendimento-do-dia"></div>
+            <div class="container-atendimento-do-dia">
+                <table class="table-atendimento-do-dia">
                     <thead>
                         <tr>
                             <th>Perfil</th>
                             <th>Serviço</th>
                             <th>Senha</th>
                             <th>Guichê</th>
-                            <th class="status-atendimento-tempo-real">
-                                <div class="status-flex-atendimento-tempo-real">
-                                    Status <span class="circle-atendimento-tempo-real"><i class="fa-solid fa-question"></i></span>
+                            <th class="status-atendimento-do-dia">
+                                <div class="status-flex-atendimento-do-dia">
+                                    Status <span class="circle-atendimento-do-dia"><i class="fa-solid fa-question"></i></span>
                                 </div>
                             </th>
-                                <a>teste</a>
-                            </tr>
+                        </tr>
                     </thead>
                     <tbody>
-                      
+                        <tr>
+                            <td>Paula Fernanda de Pauli</td>
+                            <td>IPTU</td>
+                            <td>CM 026</td>
+                            <td>03</td>
+                            <td class="disponivel-atendimento-do-dia">Disponível</td>
+                        </tr>
+                        <tr>
+                            <td>Maria Oliveira</td>
+                            <td>IPTU</td>
+                            <td>CM 028</td>
+                            <td>05</td>
+                            <td class="intervalo-atendimento-do-dia">Intervalo</td>
+                        </tr>
+                        <tr>
+                            <td>João Silva</td>
+                            <td>Serviços Públicos</td>
+                            <td>CM 027</td>
+                            <td>04</td>
+                            <td class="em-atendimento-atendimento-do-dia">Em Atendimento</td>
+                        </tr>
                     </tbody>
                 </table>
             </div>
