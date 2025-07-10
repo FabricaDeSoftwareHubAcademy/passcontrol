@@ -3,32 +3,49 @@ if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
 
-// Verifica se o usuário está logado e tem perfil
-if (!isset($_SESSION['id_usuario']) || !isset($_SESSION['id_perfil_usuario_fk'])) {
-    header("Location: ../../index.php"); // ajuste para sua página de login inicial
-    exit();
-}
-
-$id_perfil = $_SESSION['id_perfil_usuario_fk'];
-
+// Redireciona para o login se não estiver logado
 if (!isset($_SESSION['id_usuario']) || !isset($_SESSION['id_perfil_usuario_fk'])) {
     header("Location: ../../index.php");
     exit();
 }
 
 $id_perfil = $_SESSION['id_perfil_usuario_fk'] ?? null;
-
-// Só o nome do arquivo (ex: atendimento.php)
 $currentPage = basename($_SERVER['PHP_SELF']);
 
 $pagesAuth = [
-    5 => ['atendimento.php','menuadm_usuario.php','menuadm_servicos.php','menuadm_autoatendimento.php','monitor_modal.php','atendimento_tempo_real.php','relatorio_diario.php'],
-    6 => ['atendimento.php','menusup_servicos.php','menusup_usuario.php','monitor_modal.php','atendimento_tempo_real.php','relatorio_diario.php'],
-    7 => ['atendimento.php','monitor_modal.php']
+    5 => ['atendimento.php',
+    'menuadm_usuario.php',
+    'menuadm_servicos.php',
+    'menuadm_autoatendimento.php',
+    'monitor_modal.php',
+    'atendimento_tempo_real.php',
+    'listar_usuarios.php',
+    'relatorio_diario.php',
+    'cadastro_usuario.php',
+    'ponto_atendimento.php',
+    'servicos.php'],
+
+    6 => ['atendimento.php',
+    'menusup_servicos.php',
+    'menusup_usuario.php',
+    'monitor_modal.php',
+    'atendimento_tempo_real.php',
+    'relatorio_diario.php',
+    'listar_usuarios.php',
+    'cadastro_usuario.php',
+    'ponto_atendimento.php',
+    'servicos.php'],
+
+    7 => ['atendimento.php',
+    'monitor_modal.php',
+    'atendimento_tempo_real.php']
 ];
 
+// SE NÃO TIVER PERMISSÃO
 if (!isset($pagesAuth[$id_perfil]) || !in_array($currentPage, $pagesAuth[$id_perfil])) {
-    echo "Acesso negado à página: $currentPage";
+    include __DIR__ . '/../../public/modais/modal_aviso_acesso_negado.php';
     exit();
 }
+
+
 ?>
