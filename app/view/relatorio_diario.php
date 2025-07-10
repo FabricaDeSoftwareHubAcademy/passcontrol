@@ -20,6 +20,8 @@
     <script src="../js/exportacao_relatorio.js" defer></script>
     <script src="../js/relatorio_dinamico.js" defer></script>
     <script src="../../app/js/busca_servicos.js" defer></script>
+    <script src="../../app/js/busca_usuario.js" defer></script>
+    <script src="../../app/js/busca_pontoAtend.js" defer></script>
 </head>
 <body class="control-body-navegacao">
     <?php 
@@ -28,10 +30,10 @@
     ?>
 
     <section class="Area-Util-Projeto">
-        <div class="scrollmenu">
+        <!-- <div class="scrollmenu">
             <a href="atendimento_tempo_real.php">Guichês</a>
             <a href="atendimento.php" class="active">Atendimento</a>
-        </div>
+        </div> -->
 
         <div class="containerDelimitador">
             <div class="containerRelatioTitle">
@@ -55,6 +57,16 @@
                                         <!-- <option value="INSS">INSS</option>
                                         <option value="IPTU">IPTU</option>
                                         <option value="Poda Arvore">Poda Arvore</option> -->
+                                    </select>
+                                </div>
+                                <div class="containerInputAtendente">
+                                    <select id="inputAtendente">
+                                        <option value="">Selecione um Atendente</option>
+                                    </select>
+                                </div>
+                                <div class="containerInputGuiche">
+                                    <select id="inputGuiche">
+                                        <option value="">Selecione um Guichê</option>
                                     </select>
                                 </div>
                                 <div class="containerFiltrar">
