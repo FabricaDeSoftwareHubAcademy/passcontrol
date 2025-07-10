@@ -54,7 +54,7 @@
         <div class="area-atendimento-tempo-real">
             <div class="container-atendimento-tempo-real">
                 <h1 class="title-atendimento-tempo-real title-atendimento-tempo-real-bt">Atendimento do Dia</h1>
-                <h1 class="title-atendimento-tempo-real">Senhas na Fila: 000</h1>
+                <!-- <h1 class="title-atendimento-tempo-real">Senhas na Fila: 000</h1> -->
             </div>
             <div class="line-atendimento-tempo-real"></div>
             <div class="container-atendimento-tempo-real">
@@ -70,7 +70,8 @@
                                     Status <span class="circle-atendimento-tempo-real"><i class="fa-solid fa-question"></i></span>
                                 </div>
                             </th>
-                        </tr>
+                                <a>teste</a>
+                            </tr>
                     </thead>
                     <tbody>
                       

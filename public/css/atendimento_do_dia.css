@@ -32,6 +32,7 @@
     width: 98%;
     border: 2px solid var(--color-text-1);
     margin: 0 auto;
+    margin-top: -10px;
 }
 
 .container-atendimento-tempo-real h1 {
