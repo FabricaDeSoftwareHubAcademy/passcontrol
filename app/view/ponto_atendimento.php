@@ -60,30 +60,30 @@ $guiches = $guiche->buscar(null, " status_ponto_atendimento DESC");
         <div id="tela-branca-Ponto-atendimento"> 
             <div class="tabela-responsiva-Ponto-atendimento">
                 <table id="table table-striped" class="tabela-Ponto-atendimento">
-                    <thead class="cabecaTabelaPonto-atendimento">
-                        <tr class="topo-tabela-servicos">
-                            <th  class="cabecalho-tabela1">Tipo</th>
-                            <th class="indentificador-menor"  class="cabecalho-tabela2">Identificador</th>
-                            <th class="editar-menor" class="cabecalho-tabela3">Editar</th>
-                            <th class="inativar-menor" class="cabecalho-tabela1">Status</th>
+                    <thead >
+                        <tr>
+                            <th>Tipo</th>
+                            <th>Identificador</th>
+                            <th>Editar</th>
+                            <th>Status</th>
                         </tr>
                     </thead>
-                    <tbody class="resto-tabela-Ponto-atendimento">
+                    <tbody >
                             <?php
                                 foreach($guiches as $guiche) {
                                     $estadoAtivo = ($guiche->status_ponto_atendimento == 1) ? 'active' : '';
                                     echo '
                                     <tr>
                                         <td>'.$guiche->nome_ponto_atendimento.'</td>
-                                        <td class="indentificador-menor">'.$guiche->identificador_ponto_atendimento.'</td>
-                                        <td class="editar-menor">
-                                            <div class="editar">
+                                        <td>'.$guiche->identificador_ponto_atendimento.'</td>
+                                        <td>
+                                            <div">
                                                 <button class="bot-editar" data-id="'.$guiche->id_ponto_atendimento.'">
                                                     <img id="icone-editar" src="../../public/img/icons/editar.png" alt="Editar">
                                                 </button>
                                             </div>
                                         </td>
-                                        <td class="inativar-menor">
+                                        <td>
                                             <button id="switch_status" id_value_switch="'.$guiche->id_ponto_atendimento.'"  class="switch_status toggle-btn '.$estadoAtivo.'">
                                                 <div class="circulo"></div>
                                             </button>
