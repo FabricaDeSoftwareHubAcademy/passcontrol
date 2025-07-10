@@ -21,16 +21,15 @@
 .containerRelatioTitle {
     width: 95%;
     height: 30px;
-    margin-top: 50px;
+    margin-top: 60px;
     border-bottom: 4px solid var(--color-primary-blue);
 }
 
 .areaBrancaRd {
     width: 95%;
-    height: 85%;
+    height: 82%;
     margin-top: 20px;
     background-color: var(--color-background-white);
-
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -127,6 +126,7 @@
     border-radius: 8px;
     border: 2px solid var(--color-primary-blue);
     color: #37474F;
+    background-color: white;
 }
 
 #graficoPizza {

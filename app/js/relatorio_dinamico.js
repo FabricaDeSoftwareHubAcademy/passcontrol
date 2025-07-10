@@ -80,7 +80,7 @@ function iniciarGraficosVazios() {
     chartPie = new Chart(ctxPie, {
         type: 'pie',
         data: {
-            labels: ['Serviço A', 'Serviço B', 'Serviço C'],
+            labels: ['Transporte', 'Poda Árvore', 'IPTU'],
             datasets: [{
                 label: 'Serviços',
                 data: [10, 20, 5],
