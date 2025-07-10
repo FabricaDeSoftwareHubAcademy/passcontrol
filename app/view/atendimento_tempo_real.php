@@ -22,10 +22,14 @@
     <link rel="stylesheet" href="../../public/css/monitor-modal.css">
     <link rel="stylesheet" href="../../public/modais/Modal_Alterar_Dados_Pessoais/alterar_dados_pessoais.css">
     <link rel="stylesheet" href="../../public/modais/Modal_Alterar_Senha/alterar_senha.css">
+    <link rel="stylesheet" href="../../public/modais/Modal_Alterar_Senha/alterar_senha.css">
+    <link rel="stylesheet" href="../../public/css/modal_aviso_erro.css">
+    
     
     <!-- JS -->
     <script src="../../public/js/navegacao_menu_lateral.js" defer></script>
     <script src="../../public/js/monitor_modal.js" defer></script>
+    <script src="../../public/js/modal_aviso_acesso_negado.js" defer></script>
 
     <!-- LOGO -->
     <link rel="shortcut icon" type="imagex/png" href="../../public/img/Logo-Nota-Controlnt.ico">
@@ -34,6 +38,7 @@
 <body class="control-body-navegacao">
     <?php
     include "./navegacao.php";
+    require_once '../actions/verificar_permissao.php';
     ?>
 
     <section class="Area-Util-Projeto">
