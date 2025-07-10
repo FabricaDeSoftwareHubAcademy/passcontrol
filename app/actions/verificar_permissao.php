@@ -11,33 +11,24 @@ if (!isset($_SESSION['id_usuario']) || !isset($_SESSION['id_perfil_usuario_fk'])
 
 $id_perfil = $_SESSION['id_perfil_usuario_fk'];
 
-// Controle de acesso por perfil
-switch ($id_perfil) {
-    case 5:  // Admin
-        if (strpos($_SERVER['PHP_SELF'], 'menuadm_fluxo.php') === false) {
-            header("Location: ./app/view/menuadm_fluxo.php");
+if (!isset($_SESSION['id_usuario']) || !isset($_SESSION['id_perfil_usuario_fk'])) {
+    header("Location: ../../index.php");
+    exit();
+}
 
-            exit();
-        }
-        break;
+$id_perfil = $_SESSION['id_perfil_usuario_fk'] ?? null;
 
-    case 7:  // Atendente
-        if (strpos($_SERVER['PHP_SELF'], 'menuatend_fluxo.php') === false) {
-            header("Location: ./app/view/menuatend_fluxo.php");
-            exit();
-        }
-        break;
+// Só o nome do arquivo (ex: atendimento.php)
+$currentPage = basename($_SERVER['PHP_SELF']);
 
-    case 6:  // Supervisor
-        if (strpos($_SERVER['PHP_SELF'], 'menusup_fluxo.php') === false) {
-            header("Location: ./app/view/menusup_fluxo.php");
-            exit();
-        }
-        break;
+$pagesAuth = [
+    5 => ['atendimento.php','menuadm_usuario.php','menuadm_servicos.php','menuadm_autoatendimento.php','monitor_modal.php','atendimento_tempo_real.php','relatorio_diario.php'],
+    6 => ['atendimento.php','menusup_servicos.php','menusup_usuario.php','monitor_modal.php','atendimento_tempo_real.php','relatorio_diario.php'],
+    7 => ['atendimento.php','monitor_modal.php']
+];
 
-    default:
-        // Perfil desconhecido: bloquear acesso ou redirecionar
-        echo "Acesso negado: perfil inválido.";
-        exit();
+if (!isset($pagesAuth[$id_perfil]) || !in_array($currentPage, $pagesAuth[$id_perfil])) {
+    echo "Acesso negado à página: $currentPage";
+    exit();
 }
 ?>
