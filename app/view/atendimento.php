@@ -43,6 +43,7 @@
 <body class="control-body-navegacao">
     <?php
     include "./navegacao.php";
+    require_once '../actions/verificar_permissao.php';
     ?>
 
     <section class="Area-Util-Projeto">
