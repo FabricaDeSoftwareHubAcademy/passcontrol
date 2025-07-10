@@ -86,7 +86,9 @@
                                 <td class="matricula-ajuste" scope="col"> <?= $usuario['nome_usuario'] ?> </td>
                                 <td class="matricula-ajuste" scope="col"> <?= $usuario['email_usuario'] ?> </td>
                                 <td class="perfil-ajuste" scope="col"> <?= $id_perfil[0]['nome_perfil_usuario'] ?> </td>
-                                <td class="perfil-ajuste">SERVIÇO</td>
+                                <td class="perfil-ajuste"> 
+                                    Servicos
+                                </td>
                                 <td class="editar-inativar-menor" scope="col">
                                     <div class="editar">
                                         <button class="openEditar" data-id="<?= $usuario["id_usuario"] ?>">

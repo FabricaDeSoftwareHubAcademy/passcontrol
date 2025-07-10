@@ -95,4 +95,21 @@ class Database {
             return false;
         }
     }
+
+    public function inner_join_usuario_servico(){
+        $query = "SELECT usuario.id_usuario, servico.nome_servico
+        FROM usuario
+        INNER JOIN usuario_servico
+        ON usuario.id_usuario = usuario_servico.id_usuario_fk
+        INNER JOIN servico
+        ON servico.id_servico = usuario_servico.id_servico_fk;";
+
+        $res = $this->execute($query);
+        
+        if($res){
+            return $res;
+        } else {
+            return false;
+        }
+    }
 }

@@ -199,8 +199,15 @@ class Usuario
                 $sucesso = false; // marca erro mas continua tentando os outros
             }
         }
-
         return $sucesso;
+    }
+
+    public function select_servicos_atendidos(){
+        $this->db = new Database("usuario");
+
+        $res = $this->db->inner_join_usuario_servico();
+
+        return $res;
     }
 }
 
