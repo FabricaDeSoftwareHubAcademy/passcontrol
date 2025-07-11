@@ -57,10 +57,8 @@
                 <!-- <h1 class="title-atendimento-tempo-real">Senhas na Fila: 000</h1> -->
             </div>
             <button class="reloading_atendimento_do_dia">
-                <a>
                     <img class="icone_atendimento_do_dia" src="../../public/img/icons/reloading_do_dia.png">
-                    <p>Atualizar Tabela</p>
-                </a>
+                    <span>Atualizar</span>
             </button>
             <div class="line-atendimento-do-dia"></div>
             <div class="container-atendimento-do-dia">

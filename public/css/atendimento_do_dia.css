@@ -48,19 +48,27 @@
     max-width: 70px;
     max-height: 70px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 80px;
     height: 80px;
-    border-radius: 20%;
+    border-radius: 5px;
     color: var(--color-background-1);
+    font-size: 13px;
     border: 1px solid var(--color-neutro-2);
-    margin-left: 94%;
-    margin-top: -84px;
+    margin-left: 95git%;
+    margin-top: -70px;
+    cursor: pointer;
+}
+.reloading_atendimento_do_dia:hover{
+    background-color: #252f38;
+    
 }
 
 .icone_atendimento_do_dia{
-    max-width: 20px;
+    max-width: 33px;
+    padding-bottom: 2px;
 }
 
 .table-atendimento-do-dia {
