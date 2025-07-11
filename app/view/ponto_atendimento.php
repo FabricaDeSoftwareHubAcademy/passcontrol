@@ -56,15 +56,15 @@ $guiches = $guiche->buscar(null, " status_ponto_atendimento DESC");
             <div class="sev">
                 <p id="Ponto-atendimento">Ponto de Atendimento</p>
                 <div class="campo-busca">
-                    <input id="buscar-Ponto-atendimento" type="text" placeholder="Buscar Registro">
+                    <input id="buscar" type="text" placeholder="Buscar Registro">
                 </div>
 
             </div>
-            <span class="linha-divisoria-Ponto-atendimento"></span>
+            <span class="linha-divisoria"></span>
         </div>
-        
-        <div class="fundo-area-tabela-ponto-atendimento">
-            <table class="tabela-ponto-atendimento">
+
+        <div class="fundo-area-tabela">
+            <table class="tabela">
                 <thead>
                     <tr>
                         <th class="tipo-ponto-atendimento">Tipo</th>

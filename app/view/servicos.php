@@ -55,13 +55,13 @@
             <div class="topo-tela-PontoAtendimentoCad">
                 <div class="sev"><p id="Ponto-atendimento">Serviços</p>
                     <div class="campo-busca">
-                        <input id="buscar-Ponto-atendimento" type="text" placeholder="Buscar Registro">
+                        <input id="buscar" type="text" placeholder="Buscar Registro">
                     </div>
                 </div>
-                <div class="linha-divisoria-Ponto-atendimento"></div>
+                <div class="linha-divisoria"></div>
             </div>
-            <div class="fundo-area-tabela-ponto-atendimento">
-            <table class="tabela-ponto-atendimento">
+            <div class="fundo-area-tabela">
+            <table class="tabela">
                 <thead>
                     <tr>
                         <th class="tipo-ponto-atendimento">Tipo</th>

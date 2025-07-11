@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     console.log('JS carregado');
 
-    const inputBusca = document.getElementById('buscar-Ponto-atendimento');
+    const inputBusca = document.getElementById('buscar');
     if (!inputBusca) {
         console.warn('Input de busca não encontrado!');
         return;
@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const filtro = this.value.toLowerCase();
         console.log('Digitando: ', filtro);
 
-        const linhas = document.querySelectorAll('.tabela-ponto-atendimento tbody tr');
+        const linhas = document.querySelectorAll('.tabela tbody tr');
 
         linhas.forEach((linha) => {
             const tipo = linha.cells[0].textContent.toLowerCase();
