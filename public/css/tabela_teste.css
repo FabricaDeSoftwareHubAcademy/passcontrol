@@ -1,108 +1,23 @@
-/* CONFIGURAÇÃO DA BASE DA ÁREA ÚTIL */
+@import url(navegacao.css);
+
+:root {
+    --verde-control: #3AA867;
+    --cinza-control: #33404D;
+    --cor-fundo: #f9f9f9;
+    --font-main: Inter, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
 * {
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-main);
+    font-size: bolder;
 }
-
-/* #PontoAtendimentoCad {
-  z-index: 1;
-  top: 157px;
-  right: 2vh;
-  left: 27vh;
-  bottom: 2vh;
-  height: auto;
-  width: auto;
-  overflow: hidden;
-  scroll-behavior: auto;
-  display: flex;
-  flex-direction: column;
-  align-content: space-around;
-  align-items: stretch;
-} */
 .Area-Util-Projeto{
-  align-items: center;
-}
-.topo-tela-PontoAtendimentoCad{
-  margin: 4% 0% 0% 5%; 
-  display: flex;
-  flex-direction: column;
-  width: 95%;
-  /* height: 100%; */
-  /* margin-top: 3.5rem; */
-  /* border: 2px solid green; */
-}
-.sev{
-  /* background-color: red; */
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 95%;
-}
-#Ponto-atendimento {
-  /* text-align: left; */
-  /* display: flex;
-  flex-direction: row;
-  justify-content: space-around; */
-  color: var(--cinza-control);
-  font-family: Arial, sans-serif;
-  font-weight: bold;
-  font-size: 25px;
-  /* margin-bottom: -2rem; */
-}
-.campo-busca {
-  position: relative;
-  /* height: 0%; */
-  /* width: 30%; */
-  outline: none;
-  border: 1px rgb(6, 11, 95);
-  /* margin-bottom: -1.5rem; */
-}
-#buscar-Ponto-atendimento {
-  /* float: left; */
-  padding: 5px;
-  margin-bottom: 0.2rem;
-  padding-left: 5px;
-  font-style: italic;
-  font-size: 14px;
-  outline: 5px;
-  border-radius: 5px;
-  background-image: url(../img/icons/lupa.png);
-  background-position: 142px;
-  background-repeat: no-repeat;
-  background-position: right 10px center;
-  opacity: 0.5;
-  border: 2px solid #333;
-  /* margin-left: 76%; */
-  /* width: 20%; */
-  /* height: 100%; */
-  /* font-style: italic; */
-  /* border: 2px solid #333; */
-  /* border-radius: 5px; */
-  /* font-size: 14px; */
-  /* border: 2px solid var(--cinza-control) 3; */
-  /* border-radius: 10px 10px 0 0; */
-  /* opacity: 0.5; */
-  /* z-index: -1; */
-  /* outline: none; */
-  /* background-image: url(../../public/img/icons/lupa.png); */
-  /* background-size: contain; */
-  /* background-position: right 10px center; */
-  /* background-repeat: no-repeat; */
-  /* box-sizing: border-box; */
-}
-#buscar-Ponto-atendimento:focus{
-  background-image: url('');
-}
-.linha-divisoria-Ponto-atendimento {
-  background-color: var(--cinza-control);
-  height: 5px;
-  width: 95%;
-  max-height:339px;
-  padding: 1px;
+    align-items: center;
 }
 
-
-
-/* TABELA */
 .fundo-area-tabela-ponto-atendimento{ 
     width: 90%; 
     font-weight: 600; 
@@ -258,44 +173,6 @@ thead, .tbody-atendimento tr {
     justify-content: center;
 }
 
-
-.botao-voltar, .botao-cadastro {
-  padding: 10px 20px;
-  font-size: 16px;
-  font-weight: 500;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s, transform 0.2s;
-  width: 7rem;
-}
-.botoesVoltar-Cadastrar{
-  display: flex;
-  justify-content: end;
-  gap: 16px;
-  margin-top: auto;
-  margin-bottom: 40px;
-  width: 90%;
-  /* margin-right: 5%; */
-}
-.botao-voltar {
-  background-color: var(--cinza-control);
-  color: #fff;
-}
-.botao-cadastro {
-  background-color: var(--cinza-control);
-  color: #fff;
-}
-.botao-cadastro:hover {
-  color: #3AA867;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-}
-
-/* .tabela-wrapper::-webkit-scrollbar {
-  width: 5px;
-} */
-
-
 /* RESPONSIVIDADE */
 
 @media screen and (min-width: 710px) and (max-width: 1160px) {
@@ -337,5 +214,3 @@ thead, .tbody-atendimento tr {
         width: 80px;
 }
 }
-
-
