@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const filtro = this.value.toLowerCase();
         console.log('Digitando: ', filtro);
 
-        const linhas = document.querySelectorAll('.tabela-Ponto-atendimento tbody tr');
+        const linhas = document.querySelectorAll('.tabela-ponto-atendimento tbody tr');
 
         linhas.forEach((linha) => {
             const tipo = linha.cells[0].textContent.toLowerCase();
