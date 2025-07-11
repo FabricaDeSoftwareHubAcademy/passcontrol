@@ -1,3 +1,10 @@
+<?php
+require '../classes/PontoAtendimento.php';
+
+$guiche = new Ponto_Atendimento();
+$guiches = $guiche->buscar(null, " status_ponto_atendimento DESC");
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -23,6 +30,7 @@
     <link rel="stylesheet" href="../../public/css/modal_chamar_prox_senha.css"> 
     <link rel="stylesheet" href="../../public/css/modal_iniciar_intervalo.css">
     <link rel="stylesheet" href="../../public/css/modal_encerrar_atendimento.css">
+    <link rel="stylesheet" href="../../public/css/modal_selecao_guiche.css">
 
     <!-- JS -->
     <script src="../../public/js/navegacao_menu_lateral.js" defer></script>
@@ -251,11 +259,12 @@
     </section>
 
     <?php
-    include "./monitor_modal.php"; 
-    include "../../public/modais/modal_consultar_fila.php";
-    include "../../public/modais/modal_chamar_prox_senha.php"; 
-    include "../../public/modais/modal_iniciar_intervalo.php";
-    include "../../public/modais/modal_encerrar_atendimento.php";
+    include_once "./monitor_modal.php"; 
+    include_once "../../public/modais/modal_selecao_guiche.php";
+    include_once "../../public/modais/modal_consultar_fila.php";
+    include_once "../../public/modais/modal_chamar_prox_senha.php"; 
+    include_once "../../public/modais/modal_iniciar_intervalo.php";
+    include_once "../../public/modais/modal_encerrar_atendimento.php";
     ?>
 
     <script>
