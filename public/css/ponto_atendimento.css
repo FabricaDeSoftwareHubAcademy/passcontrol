@@ -32,7 +32,7 @@
   border: 1px rgb(6, 11, 95);
 }
 
-#buscar-Ponto-atendimento {
+#buscar {
   padding: 5px;
   margin-bottom: 0.2rem;
   padding-left: 5px;
@@ -48,11 +48,11 @@
   border: 2px solid #333;
 }
 
-#buscar-Ponto-atendimento:focus {
+#buscar:focus {
   background-image: url('');
 }
 
-.linha-divisoria-Ponto-atendimento {
+.linha-in {
   background-color: var(--cinza-control);
   height: 5px;
   width: 95%;
@@ -62,7 +62,7 @@
 
 
 /* TABELA */
-.fundo-area-tabela-ponto-atendimento {
+.fundo-area-tabela {
   width: 90%;
   font-weight: 600;
   border-radius: 5px;
@@ -76,7 +76,7 @@
   align-items: center;
 }
 
-.tabela-ponto-atendimento {
+.tabela {
   border-collapse: collapse;
   background-color: rgba(255, 255, 255, 0.5);
   width: 96%;
@@ -87,11 +87,11 @@
   transition: overflow 0.3s ease;
 }
 
-.tabela-ponto-atendimento:hover {
+.tabela:hover {
   overflow-y: auto;
 }
 
-.tabela-ponto-atendimento th {
+.tabela th {
   background-color: var(--cinza-control);
   color: var(--cor-fundo);
 }
@@ -133,33 +133,33 @@ thead,
   height: 400px;
 }
 
-.tabela-ponto-atendimento .tbody-atendimento::-webkit-scrollbar {
+.tabela .tbody-atendimento::-webkit-scrollbar {
   width: 0.1px;
   opacity: 0;
   transition: opacity 0.3s ease;
 }
 
-.tabela-ponto-atendimento:hover .tbody-atendimento::-webkit-scrollbar {
+.tabela:hover .tbody-atendimento::-webkit-scrollbar {
   opacity: 1;
   width: 5px;
 }
 
-.tabela-ponto-atendimento .tbody-atendimento::-webkit-scrollbar-thumb {
+.tabela .tbody-atendimento::-webkit-scrollbar-thumb {
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 4px;
 
 }
 
-.tabela-ponto-atendimento .tbody-atendimento::-webkit-scrollbar-track {
+.tabela .tbody-atendimento::-webkit-scrollbar-track {
   background: transparent;
 }
 
-.tabela-ponto-atendimento .tbody-atendimento::-webkit-scrollbar-thumb:hover {
+.tabela .tbody-atendimento::-webkit-scrollbar-thumb:hover {
   background-color: rgba(0, 0, 0, 0.7);
   width: 5px;
 }
 
-.tabela-ponto-atendimento:hover .tbody-atendimento,
+.tabela:hover .tbody-atendimento,
 thead {
   margin-right: -5px;
 }
@@ -275,7 +275,7 @@ thead,
 /* RESPONSIVIDADE */
 
 @media screen and (min-width: 710px) and (max-width: 1160px) {
-  .fundo-area-tabela-ponto-atendimento {
+  .fundo-area-tabela {
     overflow: auto;
   }
 
@@ -293,7 +293,7 @@ thead,
 }
 
 @media screen and (min-width: 300px) and (max-width: 709px) {
-  .fundo-area-tabela-ponto-atendimento {
+  .fundo-area-tabela {
     overflow: auto;
   }
 
