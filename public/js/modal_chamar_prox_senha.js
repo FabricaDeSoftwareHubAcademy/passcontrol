@@ -8,26 +8,6 @@ buttonAbrir_ChamarSenha?.addEventListener("click", () => {
     modalContainer_ChamarSenha.classList.add("show");
 });
 
-function chamarProximaSenha() {
-    fetch('../../app/actions/proxima_senha.php', {
-        method: 'POST'
-    })
-    .then(response => {
-        if (!response.ok) {
-            throw new Error('Erro ao chamar próxima senha');
-        }
-        return response.json();
-    })
-    .then(data => {
-        if (data.sucesso) {
-            location.reload();
-        }
-    })
-    .catch(error => {
-        console.error('Erro:', error);
-    });
-}
-
 buttonAusente_ChamarSenha?.addEventListener("click", () => {
     chamarProximaSenha();
     modalContainer_ChamarSenha.classList.remove("show");
