@@ -60,7 +60,7 @@ $guiches = $guiche->buscar(null, " status_ponto_atendimento DESC");
                 </div>
 
             </div>
-            <span class="linha-divisoria"></span>
+            <span class="linha-in"></span>
         </div>
 
         <div class="fundo-area-tabela">

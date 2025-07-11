@@ -58,7 +58,7 @@
                         <input id="buscar" type="text" placeholder="Buscar Registro">
                     </div>
                 </div>
-                <div class="linha-divisoria"></div>
+                <div class="linha-in"></div>
             </div>
             <div class="fundo-area-tabela">
             <table class="tabela">
