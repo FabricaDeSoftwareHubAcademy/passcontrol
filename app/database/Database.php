@@ -102,7 +102,8 @@ class Database {
         INNER JOIN usuario_servico
         ON usuario.id_usuario = usuario_servico.id_usuario_fk
         INNER JOIN servico
-        ON servico.id_servico = usuario_servico.id_servico_fk;";
+        ON servico.id_servico = usuario_servico.id_servico_fk
+        AND servico.status_servico = 1";
 
         $res = $this->execute($query);
         

@@ -205,7 +205,7 @@ class Usuario
     public function select_servicos_atendidos(){
         $this->db = new Database("usuario");
 
-        $res = $this->db->inner_join_usuario_servico();
+        $res = $this->db->inner_join_usuario_servico()->fetchAll(PDO::FETCH_ASSOC);
 
         return $res;
     }
