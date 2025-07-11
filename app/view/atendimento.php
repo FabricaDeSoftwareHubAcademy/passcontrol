@@ -52,11 +52,11 @@
         <div class="menu-container">
             <div class="menu">
                 <button class="hamburger" onclick="toggleMenu()">☰</button>
-                <a href="../view/atendimento_tempo_real.php">Guichês</a>
+                <a href="../view/atendimento_do_dia.php">Guichês</a>
                 <a href="../view/atendimento.php" class="active">Atendimento</a>
             </div>
             <div class="menu-mobile" id="mobileMenu">
-                <a href="../view/atendimento_tempo_real.php">Guichês</a>
+                <a href="../view/atendimento_do_dia.php">Guichês</a>
                 <a href="../view/atendimento.php" class="active">Atendimento</a>
             </div>
         </div>
