@@ -25,7 +25,7 @@
     <link rel="stylesheet" href="../../public/css/modal_confirmacao_dados.css">    
     <link rel="stylesheet" href="../../public/css/modal_aviso_erro.css">    
     <!-- <link rel="stylesheet" href="../../public/css/modal_alerta_alteracoes.css"> -->
-    <link rel="stylesheet" href="../../public/css/tabela.css">
+    <!-- <link rel="stylesheet" href="../../public/css/tabela.css"> -->
     
     <!-- JS -->
     <script src="../../public/js/navegacao_menu_lateral.js" defer></script>
@@ -63,58 +63,49 @@
             <div class="linha-in">
                 <span></span>
             </div>
-            <div class="area-tabela">
-                <table class="tabela">
-                    <thead>
-                        <tr>
-                            <th class="matricula-ajuste" scope="col">Nome</th>
-                            <th class="matricula-ajuste" scope="col">Matricula</th>
-                            <th class="perfil-ajuste" scope="col">Perfil</th>
-                            <th class="perfil-ajuste" >Serviços</th>
-                            <th class="editar-inativar-menor" scope="col">Editar</th>
-                            <th class="editar-inativar-menor" scope="col">Status</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <?php foreach ($dados as $usuario):
-                            $UsuStatus = $usuario["status_usuario"] == 1 ? 0 : 'active';
-                            
-                            $id_perfil = $objperfil->buscar("id_perfil_usuario =" . $usuario['id_perfil_usuario_fk'], null );
-                        ?>
-                        <tr>
-                            <td class="matricula-ajuste" scope="col"> <?= $usuario['nome_usuario'] ?> </td>
-                            <td class="matricula-ajuste" scope="col"> <?= $usuario['email_usuario'] ?> </td>
-                            <td class="perfil-ajuste" scope="col"> <?= $id_perfil[0]['nome_perfil_usuario'] ?> </td>
-                            <td class="perfil-ajuste"> 
-                                <?php
-                                    foreach($servicos_prestados as $servico_usuario){
-                                        if($servico_usuario["id_usuario"] == $usuario["id_usuario"]){
-                                            echo "-". $servico_usuario["nome_servico"] . "<br>";
-                                        }
-                                        else{
-                                            echo "";
-                                        }
-                                    }
-                                ?>
-                            </td>
-                            <td class="editar-inativar-menor" scope="col">
-                                <div class="editar">
-                                    <button class="openEditar" data-id="<?= $usuario["id_usuario"] ?>">
-                                        <img src="../../public/img/icons/editar.png" alt="">
-                                    </button>
-                                </div>
-                            </td>
-                            <td class="editar-inativar-menor" scope="col">
-                                <div class="openInativarAtivar" data-id="<?= $usuario["id_usuario"] ?>">
-                                    <button class="toggle-btn <?= $UsuStatus ?>">
-                                        <div class="circulo"> </div>
-                                    </button>
-                                </div>
-                            </td>
-                        </tr>
-                    <?php endforeach; ?>
-                    </tbody>
-                </table>
+            <div class="fundo-area-tabela">
+                <div class="sub-area-tabela">
+                    <table class="tabela">
+                        <thead>
+                            <tr>
+                                <th class="tipo-ponto-atendimento" scope="col">Nome</th>
+                                <th class="tipo-ponto-atendimento" scope="col">Matricula</th>
+                                <th class="identificador-ponto-atendimento" scope="col">Perfil</th>
+                                <th class="identificador-ponto-atendimento" >Serviços</th>
+                                <th class="alterar-status-editar-ponto-atendimento" scope="col">Editar</th>
+                                <th class="alterar-status-editar-ponto-atendimento" scope="col">Status</th>
+                            </tr>
+                        </thead>
+                        <tbody class="tbody-atendimento">
+                            <?php foreach ($dados as $usuario):
+                                $UsuStatus = $usuario["status_usuario"] == 0 ? 1 : 'active';
+                                
+                                $id_perfil = $objperfil->buscar("id_perfil_usuario =" . $usuario['id_perfil_usuario_fk'], null );
+                            ?>
+                            <tr>
+                                <td class="tipo-ponto-atendimento" scope="col"> <?= $usuario['nome_usuario'] ?> </td>
+                                <td class="tipo-ponto-atendimento" scope="col"> <?= $usuario['email_usuario'] ?> </td>
+                                <td class="identificador-ponto-atendimento" scope="col"> <?= $id_perfil[0]['nome_perfil_usuario'] ?> </td>
+                                <td class="identificador-ponto-atendimento">SERVIÇO</td>
+                                <td class="alterar-status-editar-ponto-atendimento" scope="col">
+                                    <div class="status-editar-center">
+                                        <button class="openEditar" data-id="<?= $usuario["id_usuario"] ?>">
+                                            <img src="../../public/img/icons/editar.png" alt="">
+                                        </button>
+                                    </div>
+                                </td>
+                                <td class="alterar-status-editar-ponto-atendimentor" scope="col">
+                                    <div class="openInativarAtivar" data-id="<?= $usuario["id_usuario"] ?>">
+                                        <button class="toggle-btn <?= $UsuStatus ?>">
+                                            <div class="circulo"> </div>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                        <?php endforeach; ?>
+                        </tbody>
+                    </table>
+                </div>
             </div>
             <div class="div-botao-info">
                 <button class="add-func" type="submit" onclick="window.location.href='./cadastro_usuario.php';">Novo Funcionario</button>
