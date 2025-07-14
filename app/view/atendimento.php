@@ -3,6 +3,7 @@ require_once '../classes/PontoAtendimento.php';
 
 $guiche = new Ponto_Atendimento();
 $guiches = $guiche->buscar(null, " status_ponto_atendimento DESC");
+$id_perfil = $_SESSION['id_perfil_usuario_fk'] ?? null;
 ?>
 
 <!DOCTYPE html>
@@ -59,11 +60,15 @@ $guiches = $guiche->buscar(null, " status_ponto_atendimento DESC");
         <div class="menu-container">
             <div class="menu">
                 <button class="hamburger" onclick="toggleMenu()">☰</button>
-                <a href="../view/atendimento_do_dia.php">Guichês</a>
+                <?php if ($id_perfil != 7): ?>
+                    <a href="../view/atendimento_do_dia.php">Guichês</a>
+                <?php endif; ?>
                 <a href="../view/atendimento.php" class="active">Atendimento</a>
             </div>
             <div class="menu-mobile" id="mobileMenu">
-                <a href="../view/atendimento_do_dia.php">Guichês</a>
+                <?php if ($id_perfil != 7): ?>
+                    <a href="../view/atendimento_do_dia.php">Guichês</a>
+                <?php endif; ?>
                 <a href="../view/atendimento.php" class="active">Atendimento</a>
             </div>
         </div>
