@@ -18,7 +18,7 @@ $pagesAuth = [
     'menuadm_servicos.php',
     'menuadm_autoatendimento.php',
     'monitor_modal.php',
-    'atendimento_tempo_real.php',
+    'atendimento_do_dia.php',
     'listar_usuarios.php',
     'relatorio_diario.php',
     'cadastro_usuario.php',
@@ -29,7 +29,7 @@ $pagesAuth = [
     'menusup_servicos.php',
     'menusup_usuario.php',
     'monitor_modal.php',
-    'atendimento_tempo_real.php',
+    'atendimento_do_dia.php',
     'relatorio_diario.php',
     'listar_usuarios.php',
     'cadastro_usuario.php',
@@ -37,8 +37,7 @@ $pagesAuth = [
     'servicos.php'],
 
     7 => ['atendimento.php',
-    'monitor_modal.php',
-    'atendimento_tempo_real.php']
+    'monitor_modal.php']
 ];
 
 // SE NÃO TIVER PERMISSÃO
