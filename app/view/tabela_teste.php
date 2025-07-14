@@ -30,12 +30,13 @@
 <body class="control-body-navegacao">
     <?php
     include "./navegacao.php";
+    include "../actions/usuario_listar.php";
     ?>
 
     <section class="Area-Util-Projeto">
 
-        <div class="fundo-area-tabela-ponto-atendimento">
-            <table class="tabela-ponto-atendimento">
+        <div class="fundo-area-tabela">
+            <table class="tabela">
                 <thead>
                     <tr>
                         <th class="tipo-ponto-atendimento">Tipo</th>

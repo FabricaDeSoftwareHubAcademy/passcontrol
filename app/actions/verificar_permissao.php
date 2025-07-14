@@ -13,7 +13,9 @@ $id_perfil = $_SESSION['id_perfil_usuario_fk'] ?? null;
 $currentPage = basename($_SERVER['PHP_SELF']);
 
 $pagesAuth = [
-    5 => ['atendimento.php',
+    5 => [
+    'tabela_teste.php',
+    'atendimento.php',
     'menuadm_usuario.php',
     'menuadm_servicos.php',
     'menuadm_autoatendimento.php',
