@@ -34,6 +34,7 @@ $guiches = $guiche->buscar(null, " status_ponto_atendimento DESC");
 
     <!-- JS -->
     <script src="../../public/js/navegacao_menu_lateral.js" defer></script>
+    <script src="../../app/js/modal_selecao_guiche_login.js" defer></script>
     <script src="../../public/js/modal_teladelogin.js" defer></script>
     <script src="../../public/js/modal_proxima_senha.js" defer></script>
     <script src="../../public/js/modal_conf_saida.js" defer></script>
@@ -55,6 +56,10 @@ $guiches = $guiche->buscar(null, " status_ponto_atendimento DESC");
     ?>
 
     <section class="Area-Util-Projeto">
+        <?php
+        include_once "../../public/modais/modal_selecao_guiche.php";
+        ?>
+
         <!-- SUBMENU ATENDIMENTO -->
         <div class="menu-container">
             <div class="menu">
@@ -261,7 +266,6 @@ $guiches = $guiche->buscar(null, " status_ponto_atendimento DESC");
     </section>
 
     <?php
-    include_once "../../public/modais/modal_selecao_guiche.php";
     include_once "./monitor_modal.php"; 
     include_once "../../public/modais/modal_consultar_fila.php";
     include_once "../../public/modais/modal_chamar_prox_senha.php"; 
