@@ -116,8 +116,10 @@ $guiches = $guiche->buscar(null, " status_ponto_atendimento DESC");
                         <div class="area-botao-atendimento">
                             
                         <button class="botao-proxima-senha-atendimento abrirChamarProxSenha" id="chamar-proxima-senha">
-                            <img class="img-proxima-senha-atendimento" src="../../public/img/icons/proxima-senha.svg" alt="ampulheta">
-                            <h4>Próxima Senha</h4>
+                            <a class="texto-botao-atendimento">
+                                <img class="img-proxima-senha-atendimento" src="../../public/img/icons/proxima-senha.svg" alt="ampulheta">
+                                <h4>Próxima Senha</h4>
+                            </a>
                         </button>
 
                             <button class="botao-encerrar-atendimento open-encerrar-atendimento">
