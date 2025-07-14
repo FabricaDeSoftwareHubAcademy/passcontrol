@@ -1,5 +1,5 @@
 <?php
-require '../classes/PontoAtendimento.php';
+require_once '../classes/PontoAtendimento.php';
 
 $guiche = new Ponto_Atendimento();
 $guiches = $guiche->buscar(null, " status_ponto_atendimento DESC");
@@ -50,12 +50,11 @@ $guiches = $guiche->buscar(null, " status_ponto_atendimento DESC");
 
 <body class="control-body-navegacao">
     <?php
-    include "./navegacao.php";
+    include_once "./navegacao.php";
     require_once '../actions/verificar_permissao.php';
     ?>
 
     <section class="Area-Util-Projeto">
-
         <!-- SUBMENU ATENDIMENTO -->
         <div class="menu-container">
             <div class="menu">
@@ -69,7 +68,7 @@ $guiches = $guiche->buscar(null, " status_ponto_atendimento DESC");
             </div>
         </div>
         <!-- INICIO DA ÁREA ÚTIL DA PÁGINA -->
-        <nav class="area-chamada-atendimento">
+        <div class="area-chamada-atendimento">
             <nav class="topo-area-chamada">
                 <ul class="esquerda-area-chamada">
                     <div class="atendimento-atual-atendimento">
@@ -148,7 +147,6 @@ $guiches = $guiche->buscar(null, " status_ponto_atendimento DESC");
             </nav>
             <div class="meio-guiche-area-chamada">
                 <h3>Senhas Atendidas No Dia</h3>
-            </div>
             </div>
             <div class="fundo-guiche-area-chamada">
                 <table class="tabela_atendimento-guiche-area-chamada">
@@ -256,13 +254,15 @@ $guiches = $guiche->buscar(null, " status_ponto_atendimento DESC");
                         </tr>
                 </table>
             </div>
-        </nav>
         </div>
+        <?php
+        include_once "../../public/modais/modal_selecao_guiche.php";
+        ?>
     </section>
 
     <?php
-    include_once "./monitor_modal.php"; 
     include_once "../../public/modais/modal_selecao_guiche.php";
+    include_once "./monitor_modal.php"; 
     include_once "../../public/modais/modal_consultar_fila.php";
     include_once "../../public/modais/modal_chamar_prox_senha.php"; 
     include_once "../../public/modais/modal_iniciar_intervalo.php";
