@@ -1,10 +1,3 @@
-/* Reset básico */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 /* Estilo dos botões */
 .botao-modal-alterar-dados {
     background-color: #33404D;
@@ -130,6 +123,56 @@
         border-radius: 5px;
         margin: 5px;
     }
+}
+
+/* SELECAO SERVICO*/
+
+.selecao_servico {
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+}
+.seta_dropdown{
+  display: flex;
+  transform: rotate(90deg);
+  font-size: 12px;
+  font-family: 'Arial Narrow';
+}
+.linha_select{
+  margin: 1.5px 0;
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 100%;
+  min-height: 1px;
+}
+.dropdown_select{
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  border: 1px solid #ccc;
+  max-height: 200px;
+  overflow-y: auto;
+  width: calc(((90% - 5%) - 50%) - 10px);
+  z-index: 3;
+  cursor: auto;
+}
+.select_show{
+  display: flex;
+}
+.label_option_servico{
+  display: flex;
+  flex-direction: row;
+  padding: 7px;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 100%;
+  gap: 10px;
+}
+
+.label_option_servico:hover{
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 /* Grupo de botões */

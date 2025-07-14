@@ -43,8 +43,34 @@
                     ?>
                 </select>
             </div>
- 
-            <!-- INSERIR O DROPDOWN DE SELECIONAR SERVICOS -->
+
+            <div class="container_input servico" id="select_servico_usuario">
+                <label class="labeledit" for="Servico">Servicos Atendidos</label>
+                <div class="container_dropdown">
+                <div class="input_dados selecao_servico"> <!-- onclick="toggleDropdown()" -->
+                    <span>Selecione opções</span>
+                    <span class="seta_dropdown">></span>
+                </div>
+                <div class="input_dados dropdown_select">
+                    <label class="label_option_servico">
+                    <input type="checkbox" id="selectAll"> <!-- onchange="toggleAll(this)" -->
+                    Selecionar todos
+                    </label>
+                    <span class="linha_select"></span>
+                    <?php
+                    // // LISTA SERVICOS DISPONIVEIS
+                    foreach ($servicos as $servico):
+                    ?>
+                    <label class="label_option_servico">
+                    <input type="checkbox" class="option_servico" name="id_servico[]" value="<?= $servico->id_servico ?>">
+                    <?= $servico->nome_servico . " - " . $servico->codigo_servico ?>
+                    </label>
+                    <?php
+                    endforeach;
+                    ?>
+                </div>
+                </div>
+            </div>
 
             <div class="button-group-alterar-dados">
                 <button class="botao-modal-alterar-dados cancel_edit_dados_usu" type="reset" form="form_editar_dados_usuario">Voltar</button>

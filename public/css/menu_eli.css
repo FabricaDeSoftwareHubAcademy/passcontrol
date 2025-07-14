@@ -22,7 +22,7 @@ body {
   background-color: var(--cinza-control);
   padding: 0 15px;
   position: absolute;
-  z-index: 10;
+  z-index: 11;
   width: 100%;
 }
 .Area-Util-Projeto .scrollmenu{
