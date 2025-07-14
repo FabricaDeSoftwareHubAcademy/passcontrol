@@ -69,6 +69,7 @@ $guiches = $guiche->buscar(null, " status_ponto_atendimento DESC");
             </div>
         </div>
         <!-- INICIO DA ÁREA ÚTIL DA PÁGINA -->
+        
         <nav class="area-chamada-atendimento">
             <nav class="topo-area-chamada">
                 <ul class="esquerda-area-chamada">
@@ -254,13 +255,17 @@ $guiches = $guiche->buscar(null, " status_ponto_atendimento DESC");
                         </tr>
                 </table>
             </div>
+            <?php
+                include_once "../../public/modais/modal_selecao_guiche.php";
+            ?>
         </nav>
+        
         </div>
+
     </section>
 
     <?php
     include_once "./monitor_modal.php"; 
-    include_once "../../public/modais/modal_selecao_guiche.php";
     include_once "../../public/modais/modal_consultar_fila.php";
     include_once "../../public/modais/modal_chamar_prox_senha.php"; 
     include_once "../../public/modais/modal_iniciar_intervalo.php";
