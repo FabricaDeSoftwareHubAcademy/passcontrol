@@ -1,0 +1,216 @@
+@import url(navegacao.css);
+
+:root {
+    --verde-control: #3AA867;
+    --cinza-control: #33404D;
+    --cor-fundo: #f9f9f9;
+    --font-main: Inter, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-main);
+    font-size: bolder;
+}
+.Area-Util-Projeto{
+    align-items: center;
+}
+
+.fundo-area-tabela-ponto-atendimento{ 
+    width: 90%; 
+    font-weight: 600; 
+    /* height: 38%;  */
+    border-radius: 5px; 
+    background-color: rgb(255, 255, 255,0.5); 
+    gap: 15px; 
+    margin-top: 2rem; 
+    display: flex; 
+    display: block; 
+    justify-content: left;
+    max-height: 500px;
+    align-items: center;
+    /* overflow: auto; */
+} 
+.tabela-ponto-atendimento {
+    border-collapse: collapse; 
+    background-color: rgba(255, 255, 255, 0.5); 
+    width: 96%; 
+    margin: 1.5vw; 
+    max-height: 500px; 
+    position: relative; 
+    overflow-x: auto;
+    transition: overflow 0.3s ease;  
+} 
+.tabela-ponto-atendimento:hover { 
+    overflow-y: auto;  
+} 
+.tabela-ponto-atendimento th { 
+    background-color: var(--cinza-control); 
+    color: var(--cor-fundo); 
+} 
+th { 
+    position: sticky; 
+    top: 0; 
+    background-color: #f4f4f4; 
+    z-index: 2; 
+    padding: 10px; 
+    text-align: left; 
+    border: 1px solid black; 
+    min-width: 50px; 
+} 
+td { 
+    font-size: 16px;
+    border: 1px solid black; 
+    padding: 9px; 
+    text-align: left; 
+    min-width: 50px; 
+    color: var(--cinza-control); 
+} 
+/* td, th {
+    width: calc(+140px);
+} */
+thead, .tbody-atendimento tr { 
+    display: table; 
+    width: 100%; 
+    table-layout: fixed; 
+} 
+.tbody-atendimento { 
+    display: block;  
+    overflow-y: scroll;  
+    position: relative;
+    height: 400px; 
+} 
+.tabela-ponto-atendimento .tbody-atendimento::-webkit-scrollbar { 
+    width: 0.1px; 
+    opacity: 0;  
+    transition: opacity 0.3s ease;  
+} 
+.tabela-ponto-atendimento:hover .tbody-atendimento::-webkit-scrollbar { 
+    opacity: 1;  
+    width: 5px; 
+} 
+.tabela-ponto-atendimento .tbody-atendimento::-webkit-scrollbar-thumb { 
+    background-color: rgba(0, 0, 0, 0.5); 
+    border-radius: 4px;
+
+} 
+.tabela-ponto-atendimento .tbody-atendimento::-webkit-scrollbar-track { 
+    background: transparent; 
+} 
+
+.tabela-ponto-atendimento .tbody-atendimento::-webkit-scrollbar-thumb:hover { 
+    background-color: rgba(0, 0, 0, 0.7); 
+    width: 5px; 
+} 
+
+.tabela-ponto-atendimento:hover .tbody-atendimento,thead{ 
+    margin-right: -5px;
+} 
+
+thead, .tbody-atendimento tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed; 
+}
+
+/* btn editar */
+
+.bot-editar {
+    all: unset;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+#icone-editar {
+    cursor: pointer;
+}
+.bot-editar:hover img{
+    content: url(../../public/img/icons/Group\ 2925.png);
+    transition: 0.2s;
+    border-radius: 5px;
+}
+
+/* btn alterar status */
+
+.toggle-btn {
+    width: 60px;
+    height: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    position: relative;
+    border: 1px solid var(--cinza-control);
+    cursor: pointer;
+}
+
+.toggle-btn .circulo {
+    width: 18px;
+    height: 15px;
+    background-color: #ff0000;
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    transition: left 0.3s;
+}
+
+.toggle-btn.active .circulo {
+    background-color: #4CAF50;
+    left: 37px;
+}
+
+.tipo-ponto-atendimento{
+    width: 35%;
+}
+.identificador-ponto-atendimento{
+    width: 45%;
+}
+.status-editar-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* RESPONSIVIDADE */
+
+@media screen and (min-width: 710px) and (max-width: 1160px) {
+    .fundo-area-tabela-ponto-atendimento{ 
+        overflow: auto;
+    } 
+    .tipo-ponto-atendimento{
+        width: 140px;
+    }
+    .identificador-ponto-atendimento{
+        width: 120px;
+    }
+    .alterar-status-editar-ponto-atendimento{
+        width: 50px;
+    }
+}
+@media screen and (min-width: 300px) and (max-width: 709px) {
+    .fundo-area-tabela-ponto-atendimento{ 
+        overflow: auto;
+    } 
+    .tipo-ponto-atendimento{
+        width: 180px;
+    }
+    .identificador-ponto-atendimento{
+        width: 140px;
+    }
+    .alterar-status-editar-ponto-atendimento{
+        width: 80px;
+    }
+}
+@media screen and (min-width: 300px) and (max-width: 615px) {
+    .tipo-ponto-atendimento{
+        width: 180px;
+}
+    .identificador-ponto-atendimento{
+        width: 140px;
+}
+    .alterar-status-editar-ponto-atendimento{
+        width: 80px;
+}
+}

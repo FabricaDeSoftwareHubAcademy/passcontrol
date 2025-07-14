@@ -1,29 +1,36 @@
 document.addEventListener("DOMContentLoaded", function () {
-    let dadosOriginais = {};
     let podeEditar = false;
     let imagemInvalidaGlobal = false;
+    let dadosOriginais = {};
 
     const inputImagem = document.getElementById('imagem_edit_servico');
     const previewImagem = document.getElementById('preview_imagem_editar');
     const modalConfirmacao = document.querySelector(".fundo-container-confirmacao-dados-registrados");
     const modalFinal = document.querySelector(".fundo-container-confirmacao-dados");
-
-    function resetarImagemEditar() {
-        inputImagem.value = "";
-        previewImagem.setAttribute("src", "#");
-        previewImagem.style.display = "none";
-    }
+    const modalErro = document.querySelector(".modal-container-aviso-erro");
+    const msgError = document.querySelector(".aviso-erro");
+    const botaoErroVoltar = document.querySelector(".voltar_AvisoErro");
 
     function voltarDoErroHandlerEditar() {
-        document.querySelector(".modal-container-aviso-erro").classList.remove("show");
+        modalErro.classList.remove("show");
         document.querySelector(".modal-container-servico").classList.add("show");
 
-        if (imagemInvalidaGlobal) {
-            resetarImagemEditar();
+        document.getElementById("nome_edit_servico").value = dadosOriginais.nome;
+        document.getElementById("identificador_codigo_servico").value = dadosOriginais.codigo;
+        document.getElementById("id_edit_servico").value = dadosOriginais.id;
+
+        if (dadosOriginais.imagem) {
+            previewImagem.src = "../../public/img/uploads/" + dadosOriginais.imagem;
+            previewImagem.style.display = "block";
+        } else{
+            previewImagem.src = "#";
+            previewImagem.style.display = "none";
         }
 
+        msgError.innerHTML = "";
         imagemInvalidaGlobal = false;
-        document.querySelector(".voltar_AvisoErro").removeEventListener("click", voltarDoErroHandlerEditar);
+
+        botaoErroVoltar.removeEventListener("click", voltarDoErroHandlerEditar);
     }
 
     document.querySelectorAll(".chamamodal").forEach(button => {
@@ -40,7 +47,6 @@ document.addEventListener("DOMContentLoaded", function () {
             let dados_php = await fetch("../actions/servico_editar.php?id_servico=" + id_value, {
                 method: 'GET'
             });
-
             let response = await dados_php.json();
 
             const inputNome = document.getElementById("nome_edit_servico");
@@ -61,16 +67,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
             dadosOriginais = {
                 nome: response.nome_servico.trim(),
-                codigo: response.codigo_servico.trim()
+                codigo: response.codigo_servico.trim(),
+                id: response.id_aviso,
+                imagem: response.url_imagem_servico
             };
 
             modalContainer.classList.add("show");
 
-            buttonCancelar.addEventListener("click", () => {
+            buttonCancelar.onclick = () => {
                 modalContainer.classList.remove("show");
-            });
+            };
 
-            // BOTÃO SALVAR (com validação)
             buttonSalvar.onclick = function (e) {
                 e.preventDefault();
 
@@ -119,26 +126,22 @@ document.addEventListener("DOMContentLoaded", function () {
                 } else {
                     imagemInvalidaGlobal = imagemInvalida;
                     modalContainer.classList.remove("show");
-                    document.querySelector(".modal-container-aviso-erro").classList.add("show");
+                    modalErro.classList.add("show");
 
-                    //Evita múltiplos listeners
-                    const botaoErro = document.querySelector(".voltar_AvisoErro");
-                    botaoErro.removeEventListener("click", voltarDoErroHandlerEditar);
-                    botaoErro.addEventListener("click", voltarDoErroHandlerEditar);
+                    botaoErroVoltar.removeEventListener("click", voltarDoErroHandlerEditar);
+                    botaoErroVoltar.addEventListener("click", voltarDoErroHandlerEditar);
                 }
             };
 
             // Botão NÃO -> volta ao modal de edição
-            const btnNao = document.querySelector(".cancel_ConfDadosRegist");
-            btnNao.onclick = function () {
+            document.querySelector(".cancel_ConfDadosRegist").onclick = function (){
                 modalConfirmacao.classList.remove("show");
                 modalContainer.classList.add("show");
                 podeEditar = false;
             };
 
             // Botão SIM -> envia dados para o PHP
-            const btnSim = document.querySelector(".save_ConfDadosRegist");
-            btnSim.onclick = async function () {
+            document.querySelector(".save_ConfDadosRegist").onclick = async function (){
                 if (!podeEditar) return;
 
                 const myform = document.getElementById("formulario_editar_servico");
@@ -160,10 +163,8 @@ document.addEventListener("DOMContentLoaded", function () {
             };
 
             // Botão OK -> fecha tudo e recarrega
-            const btnOk = document.querySelector(".Okay_ConfDados");
-            btnOk.onclick = function () {
+            document.querySelector(".Okay_ConfDados").onclick = function () {
                 modalFinal.classList.remove("show");
-                resetarImagemEditar();
                 location.reload();
             };
         });

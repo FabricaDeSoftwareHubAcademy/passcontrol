@@ -1,63 +1,38 @@
-/* CONFIGURAÇÃO DA BASE DA ÁREA ÚTIL */
-* {
-  box-sizing: border-box;
-}
+@import url(./root.css);
 
-/* #PontoAtendimentoCad {
-  z-index: 1;
-  top: 157px;
-  right: 2vh;
-  left: 27vh;
-  bottom: 2vh;
-  height: auto;
-  width: auto;
-  overflow: hidden;
-  scroll-behavior: auto;
-  display: flex;
-  flex-direction: column;
-  align-content: space-around;
-  align-items: stretch;
-} */
-.Area-Util-Projeto{
+/* CONFIGURAÇÃO DA BASE DA ÁREA ÚTIL */
+.Area-Util-Projeto {
   align-items: center;
 }
-.topo-tela-PontoAtendimentoCad{
-  margin: 4% 0% 0% 5%; 
+
+.topo-tela-PontoAtendimentoCad {
+  margin: 4% 0% 0% 5%;
   display: flex;
   flex-direction: column;
   width: 95%;
-  height: 100%;
-  /* margin-top: 3.5rem; */
-  /* border: 2px solid green; */
 }
-.sev{
-  /* background-color: red; */
+
+.sev {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   width: 95%;
 }
+
 #Ponto-atendimento {
-  /* text-align: left; */
-  /* display: flex;
-  flex-direction: row;
-  justify-content: space-around; */
   color: var(--cinza-control);
   font-family: Arial, sans-serif;
   font-weight: bold;
   font-size: 25px;
-  /* margin-bottom: -2rem; */
 }
+
 .campo-busca {
   position: relative;
-  /* height: 0%; */
-  /* width: 30%; */
   outline: none;
   border: 1px rgb(6, 11, 95);
-  /* margin-bottom: -1.5rem; */
 }
-#buscar-Ponto-atendimento {
-  /* float: left; */
+
+#buscar {
   padding: 5px;
   margin-bottom: 0.2rem;
   padding-left: 5px;
@@ -71,110 +46,133 @@
   background-position: right 10px center;
   opacity: 0.5;
   border: 2px solid #333;
-  /* margin-left: 76%; */
-  /* width: 20%; */
-  /* height: 100%; */
-  /* font-style: italic; */
-  /* border: 2px solid #333; */
-  /* border-radius: 5px; */
-  /* font-size: 14px; */
-  /* border: 2px solid var(--cinza-control) 3; */
-  /* border-radius: 10px 10px 0 0; */
-  /* opacity: 0.5; */
-  /* z-index: -1; */
-  /* outline: none; */
-  /* background-image: url(../../public/img/icons/lupa.png); */
-  /* background-size: contain; */
-  /* background-position: right 10px center; */
-  /* background-repeat: no-repeat; */
-  /* box-sizing: border-box; */
 }
-#buscar-Ponto-atendimento:focus{
+
+#buscar:focus {
   background-image: url('');
 }
-.linha-divisoria-Ponto-atendimento {
+
+.linha-in {
   background-color: var(--cinza-control);
   height: 5px;
   width: 95%;
-  max-height:339px;
+  max-height: 339px;
   padding: 1px;
 }
-#tela-branca-Ponto-atendimento {
-  background-color: #ffffff75;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+
+
+/* TABELA */
+.fundo-area-tabela {
   width: 90%;
-  padding: 22px;
-  margin: 25px auto;
+  font-weight: 600;
   border-radius: 5px;
-}
-.tabela-responsiva-Ponto-atendimento {
-  max-height: 480px;
-  overflow-y: auto;
-  border: 1px solid #dddddd;
-}
-.tabela-Ponto-atendimento {
-  width: 100%;
-  border-collapse: separate;
-  border-spacing: 0;
-  background-color: #ffffff75;
-}
-.cabecaTabelaPonto-atendimento{
-  width: fit-content;
-  height: max-content;
-  position: sticky;
-  top: 0;
-  z-index: 1;
-}
-.topo-tabela-Ponto-atendimento{
-  width: 100%;
-  text-align: right;
-  top: 0;
-  flex-wrap: wrap;
-  align-content: stretch;
-  justify-content: left;
-}
-
-.cabecalho-tabela1{
-  color: #ffffff;
-  width: 30%;
-  height: 10%;
-}
-.cabecalho-tabela2{
-  color: #ffffff;
-  width: 30%;
-  height: 30px;
-}
-.cabecalho-tabela3{
-  color: #ffffff;
-  width: 7%;
-  height: 30px;
-}
-.colm-idit{
+  background-color: rgb(255, 255, 255, 0.5);
+  gap: 15px;
+  margin-top: 2rem;
   display: flex;
-  justify-content: space-between;
-}
-.tabela-Ponto-atendimento th {
-  background-color: var(--cinza-control);
-  font-size: 16px;
-  font-weight: bold;
-  position: sticky;
-  top: 0;
-  z-index: 3;
-  padding: 8px;
-  text-align: left;
-  border: 1px solid #000000;
-}
-.linha-tabela{
-  padding: 6px;
+  display: block;
+  justify-content: left;
+  max-height: 500px;
+  align-items: center;
 }
 
-.tabela-Ponto-atendimento td, .cabecalho-tabela1 th{
-  padding: 8px;
+.tabela {
+  border-collapse: collapse;
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 96%;
+  margin: 1.5vw;
+  max-height: 500px;
+  position: relative;
+  overflow-x: auto;
+  transition: overflow 0.3s ease;
+}
+
+.tabela:hover {
+  overflow-y: auto;
+}
+
+.tabela th {
+  background-color: var(--cinza-control);
+  color: var(--cor-fundo);
+}
+
+th {
+  position: sticky;
+  top: 0;
+  background-color: #f4f4f4;
+  z-index: 2;
+  padding: 10px;
   text-align: left;
-  border: 1px solid var(--cinza-control);
-  font-weight: bold;
+  border: 1px solid black;
+  min-width: 50px;
+}
+
+td {
+  font-size: 16px;
+  border: 1px solid black;
+  padding: 9px;
+  text-align: left;
+  min-width: 50px;
   color: var(--cinza-control);
 }
+
+/* td, th {
+    width: calc(+140px);
+} */
+thead,
+.tbody-atendimento tr {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+
+.tbody-atendimento {
+  display: block;
+  overflow-y: scroll;
+  position: relative;
+  height: 400px;
+}
+
+.tabela .tbody-atendimento::-webkit-scrollbar {
+  width: 0.1px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.tabela:hover .tbody-atendimento::-webkit-scrollbar {
+  opacity: 1;
+  width: 5px;
+}
+
+.tabela .tbody-atendimento::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 4px;
+
+}
+
+.tabela .tbody-atendimento::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.tabela .tbody-atendimento::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 5px;
+}
+
+.tabela:hover .tbody-atendimento,
+thead {
+  margin-right: -5px;
+}
+
+thead,
+.tbody-atendimento tr {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+
+/* btn editar */
+
 .bot-editar {
   all: unset;
   cursor: pointer;
@@ -182,14 +180,19 @@
   align-items: center;
   justify-content: center;
 }
+
 #icone-editar {
   cursor: pointer;
 }
-.bot-editar:hover img{
+
+.bot-editar:hover img {
   content: url(../../public/img/icons/Group\ 2925.png);
   transition: 0.2s;
   border-radius: 5px;
 }
+
+/* btn alterar status */
+
 .toggle-btn {
   width: 60px;
   height: 20px;
@@ -215,29 +218,24 @@
   background-color: #4CAF50;
   left: 37px;
 }
-.editar-menor{
+
+.tipo-ponto-atendimento {
+  width: 35%;
+}
+
+.identificador-ponto-atendimento {
+  width: 45%;
+}
+
+.status-editar-center {
   display: flex;
-  flex-direction: column;
-  min-width: 120px;
-  color: #ffffff;
   align-items: center;
-}
-.inativar-menor{
-  width: 50px;
-  color: #ffffff;
+  justify-content: center;
 }
 
-.editar button:hover img{
-  content: url(../../public/img/icons/Group\ 2925.png);
-  transition: 0.2s;
-  border-radius: 5px;
-}
 
-.indentificador-menor{
-  width: 800px;
-  color: #ffffff;
-}
-.botao-voltar, .botao-cadastro {
+.botao-voltar,
+.botao-cadastro {
   padding: 10px 20px;
   font-size: 16px;
   font-weight: 500;
@@ -247,7 +245,8 @@
   transition: background-color 0.3s, transform 0.2s;
   width: 7rem;
 }
-.botoesVoltar-Cadastrar{
+
+.botoesVoltar-Cadastrar {
   display: flex;
   justify-content: end;
   gap: 16px;
@@ -256,25 +255,71 @@
   width: 90%;
   /* margin-right: 5%; */
 }
+
 .botao-voltar {
   background-color: var(--cinza-control);
   color: #fff;
 }
+
 .botao-cadastro {
   background-color: var(--cinza-control);
   color: #fff;
 }
+
 .botao-cadastro:hover {
   color: #3AA867;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }
 
-.tabela-wrapper::-webkit-scrollbar {
-  width: 5px;
-}
 
-  /* TAMANHO DA TELA QUE COMEÇA A QUEBRAR  */
-@media screen and (max-width: 470px) {
+/* RESPONSIVIDADE */
 
+@media screen and (min-width: 710px) and (max-width: 1160px) {
+  .fundo-area-tabela {
+    overflow: auto;
   }
 
+  .tipo-ponto-atendimento {
+    width: 140px;
+  }
+
+  .identificador-ponto-atendimento {
+    width: 120px;
+  }
+
+  .alterar-status-editar-ponto-atendimento {
+    width: 50px;
+  }
+}
+
+@media screen and (min-width: 300px) and (max-width: 709px) {
+  .fundo-area-tabela {
+    overflow: auto;
+  }
+
+  .tipo-ponto-atendimento {
+    width: 180px;
+  }
+
+  .identificador-ponto-atendimento {
+    width: 140px;
+  }
+
+  .alterar-status-editar-ponto-atendimento {
+    width: 80px;
+  }
+}
+
+@media screen and (min-width: 300px) and (max-width: 615px) {
+  .tipo-ponto-atendimento {
+    width: 180px;
+  }
+
+  .identificador-ponto-atendimento {
+    width: 140px;
+  }
+
+  .alterar-status-editar-ponto-atendimento {
+    width: 80px;
+  }
+}

@@ -1,3 +1,10 @@
+<?php
+require '../classes/PontoAtendimento.php';
+
+$guiche = new Ponto_Atendimento();
+$guiches = $guiche->buscar(null, " status_ponto_atendimento DESC");
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -23,6 +30,7 @@
     <link rel="stylesheet" href="../../public/css/modal_chamar_prox_senha.css"> 
     <link rel="stylesheet" href="../../public/css/modal_iniciar_intervalo.css">
     <link rel="stylesheet" href="../../public/css/modal_encerrar_atendimento.css">
+    <link rel="stylesheet" href="../../public/css/modal_selecao_guiche.css">
 
     <!-- JS -->
     <script src="../../public/js/navegacao_menu_lateral.js" defer></script>
@@ -43,6 +51,7 @@
 <body class="control-body-navegacao">
     <?php
     include "./navegacao.php";
+    require_once '../actions/verificar_permissao.php';
     ?>
 
     <section class="Area-Util-Projeto">
@@ -51,11 +60,11 @@
         <div class="menu-container">
             <div class="menu">
                 <button class="hamburger" onclick="toggleMenu()">☰</button>
-                <a href="../view/atendimento_tempo_real.php">Guichês</a>
+                <a href="../view/atendimento_do_dia.php">Guichês</a>
                 <a href="../view/atendimento.php" class="active">Atendimento</a>
             </div>
             <div class="menu-mobile" id="mobileMenu">
-                <a href="../view/atendimento_tempo_real.php">Guichês</a>
+                <a href="../view/atendimento_do_dia.php">Guichês</a>
                 <a href="../view/atendimento.php" class="active">Atendimento</a>
             </div>
         </div>
@@ -105,12 +114,14 @@
                 <ul class="direita-guiche-area-chamada">
                     <div class="area-botao--guiche-area-chamada">
                         <div class="area-botao-atendimento">
-                            <button class="botao-proxima-senha-atendimento abrirChamarProxSenha">
-                                <a class="texto-botao-atendimento">
-                                    <img class="img-proxima-senha-atendimento" src="../../public/img/icons/proxima-senha.svg" alt="ampulheta">
-                                    <h4>Próxima Senha</h4>
-                                </a>
-                            </button>
+                            
+                        <button class="botao-proxima-senha-atendimento abrirChamarProxSenha" id="chamar-proxima-senha">
+                            <a class="texto-botao-atendimento">
+                                <img class="img-proxima-senha-atendimento" src="../../public/img/icons/proxima-senha.svg" alt="ampulheta">
+                                <h4>Próxima Senha</h4>
+                            </a>
+                        </button>
+
                             <button class="botao-encerrar-atendimento open-encerrar-atendimento">
                                 <a class="texto-botao-atendimento vermelho-botao">
                                     <img class="img-encerrar-atendimento-tela" src="../../public/img/icons/cancelar.svg" alt="ampulheta">
@@ -250,11 +261,12 @@
     </section>
 
     <?php
-    include "./monitor_modal.php"; 
-    include "../../public/modais/modal_consultar_fila.php";
-    include "../../public/modais/modal_chamar_prox_senha.php"; 
-    include "../../public/modais/modal_iniciar_intervalo.php";
-    include "../../public/modais/modal_encerrar_atendimento.php";
+    include_once "./monitor_modal.php"; 
+    include_once "../../public/modais/modal_selecao_guiche.php";
+    include_once "../../public/modais/modal_consultar_fila.php";
+    include_once "../../public/modais/modal_chamar_prox_senha.php"; 
+    include_once "../../public/modais/modal_iniciar_intervalo.php";
+    include_once "../../public/modais/modal_encerrar_atendimento.php";
     ?>
 
     <script>

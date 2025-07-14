@@ -1,143 +1,193 @@
 <?php
 session_start();
+require_once '../actions/verificar_permissao.php';
 if (!isset($_SESSION['id_usuario'])) {
     header("Location: ../../index.php");
     exit();
 }
 ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PassControl</title>
 
+    <!-- CSS -->
+    <link rel="stylesheet" href="../../public/css/navegacao.css">
+    <link rel="stylesheet" href="../../public/css/menu_eli.css">
+    <link rel="stylesheet" href="../../public/css/modal_alterar_dados_login.css">
+    <link rel="stylesheet" href="../../public/css/modal_alterar_senha.css">
+    <link rel="stylesheet" href="../../public/css/modal_alterar_dados_pessoais.css">
+    <link rel="stylesheet" href="../../public/css/modal_confirmacao_dados.css">
+  
+    <!-- JS -->
+    <script src="../../public/js/modal_alterar_senha.js" defer></script>
+    <script src="../../public/js/modal_alterar_dados_login.js" defer></script>
+    <script src="../../public/js/navegacao_menu_lateral.js" defer></script>
+    <script src="../../public/js/monitor_modal.js" defer></script>
 
-<!-- ARRUMAR ARRUMAR ARRUMAR -->
-<!-- CSS -->
-<link rel="stylesheet" href="../../public/css/navegacao.css">
-<link rel="stylesheet" href="../../public/css/menu_eli.css">
-<link rel="stylesheet" href="../../public/css/modal_alterar_dados_login.css">
-<link rel="stylesheet" href="../../public/css/modal_alterar_senha.css">
-<link rel="stylesheet" href="../../public/css/modal_alterar_dados_pessoais.css">
-<link rel="stylesheet" href="../../public/css/modal_confirmacao_dados.css">
+  
+    <!-- LOGO -->
+    <link rel="shortcut icon" type="imagex/png" href="../../public/img/icons/logo_control.svg">
+</head>
+<body>
+    <header class="cabeca-navegacao-control">
+        <div class="nav-cabeca">
+            <div class="logo-control">
+                <img src="../../public/img/icons/logo_control.svg" alt="LOGOCONTROL" id="img-logo">
+                <h1 class="titulo-projeto">PassControl</h1>
+            </div>
+            <p class="usu-nome">
+                <?= isset($_SESSION['nome_usuario']) ? htmlspecialchars($_SESSION['nome_usuario']) : 'Nome do Usuário' ?>
+            </p>
 
-<!-- JS -->
-<script src="../../public/js/modal_alterar_senha.js" defer></script>
-<script src="../../public/js/modal_alterar_dados_login.js" defer></script>
-<script src="../../public/js/navegacao_menu_lateral.js" defer></script>
-<script src="../../public/js/monitor_modal.js" defer></script>
-<script src="../../public/js/modal_alterar_dados_login.js" defer></script>
-<!-- ARRUMAR ARRUMAR ARRUMAR -->
-
-<header class="cabeca-navegacao-control">
-    <div class="nav-cabeca">
-        <div class="logo-control">
-            <img src="../../public/img/icons/logo_control.svg" alt="LOGOCONTROL" id="img-logo">
-            <h1 class="titulo-projeto">PassControl</h1>
-        </div>
-        <p class="usu-nome">
-            <?= isset($_SESSION['nome_usuario']) ? htmlspecialchars($_SESSION['nome_usuario']) : 'Nome do Usuário' ?>
-        </p>
-
-        <!-- <a href="">
+            <!-- <a href="">
                 <img class="usu-nome" src="../../public/img/icons/image 33.svg" alt="Loading..."">
             </a> -->
-    </div>
-    <div class="dark-area"></div>
-</header>
-
-<!-- INFO DO USUARIO -->
-<div class="menu-usuario">
-    <?php
-    // Só o nome do arquivo guardado na sessão (exemplo: perfil_abc.avif)
-    $nomeImagem = $_SESSION['url_foto_usuario'] ?? 'default_user.jpeg';
-    // Caminho relativo da página para a pasta uploads
-    $caminhoRelativo = '../../public/img/uploads/' . basename($nomeImagem);
-    ?>
-    <img class="icone-usuario" src="<?= htmlentities($caminhoRelativo) ?>" alt="erro">
-    <nav class="usu-detalhes">
-        <ul class="texto-usu">
-            <li class="nome-usu"><?= htmlspecialchars($_SESSION['nome_usuario']) ?></li>
-            <li class="email-usu"><?= htmlspecialchars($_SESSION['email_usuario']) ?></li>
-            <li><a class="usu-util open-editar-dados">Editar Informações</a></li>
-            <li><a class="usu-util open-alterar-senha">Alterar Senha</a></li>
-            <li><a class="usu-util usu-sair" href="../../index.php">Sair</a></li>
-        </ul>
-    </nav>
-</div>
-<!-- MENU LATERAL -->
-<div class="area-lateral-navegacao">
-    <nav class="menu-lateral-navegacao">
-
-        <a class="botao-lateal-navegacao" href="./atendimento.php">
-            <img class="icone-menu-lateral" src="../../public/img/icons/atend.svg" alt="ICONE-ATENDIMENTO">
-            <p class="texto-bott">Atendimento</p>
-        </a>
-
-        <a class="botao-lateal-navegacao" id="openMonitorModal">
-            <img class="icone-menu-lateral" src="../../public/img/icons/monitor.svg" alt="ICONE-MONITOR">
-            <p class="texto-bott">Monitor</p>
-        </a>
-
-        <a class="botao-lateal-navegacao" href="./menuadm_usuario.php">
-            <img class="icone-menu-lateral" src="../../public/img/icons/gestao.svg" alt="ICONE-GESTAO">
-            <p class="texto-bott">Gestão</p>
-        </a>
-
-        <a class="botao-lateal-navegacao" href="./relatorio_diario.php">
-            <img class="icone-menu-lateral" src="../../public/img/icons/nota.svg" alt="ICONE-RELATORIOS">
-            <p class="texto-bott">Relatórios</p>
-        </a>
-        <div class="sair-navegacao">
-            <a class="botao-lateal-navegacao" href="../../index.php">
-                <img class="icone-menu-lateral" src="../../public/img/icons/sair.svg" alt="ICONE-SAIR">
-                <p class="texto-bott">Sair</p>
-            </a>
         </div>
+        <div class="dark-area"></div>
+    </header>
 
-    </nav>
-</div>
+    <!-- INFO DO USUARIO -->
+    <div class="menu-usuario">
+    <?php
+        // Só o nome do arquivo guardado na sessão (exemplo: perfil_abc.avif)
+        $nomeImagem = $_SESSION['url_foto_usuario'] ?? 'default_user.jpeg';
+        // Caminho relativo da página para a pasta uploads
+        $caminhoRelativo = '../../public/img/uploads/' . basename($nomeImagem);
+    ?>
+        <img class="icone-usuario" src="<?= htmlentities($caminhoRelativo) ?>" alt="erro">
+        <nav class="usu-detalhes"> 
+            <ul class="texto-usu">
+                <li class="nome-usu"><?= htmlspecialchars($_SESSION['nome_usuario']) ?></li>
+                <li class="email-usu"><?= htmlspecialchars($_SESSION['email_usuario']) ?></li>
+                <li><a class="usu-util open-editar-dados">Editar Informações</a></li>
+                <li><a class="usu-util open-alterar-senha">Alterar Senha</a></li>
+                <li><a class="usu-util usu-sair" href="../../index.php">Sair</a></li>
+            </ul>
+        </nav>
+    </div>
+    <!-- MENU LATERAL -->
+    <div class="area-lateral-navegacao">
+        <nav class="menu-lateral-navegacao">
 
-<button class="botao-menu-mobile abrirMenuLateral" id="botao-menu-mobile">
-    <img class="icone-menu-lateral-mobile" src="../../public/img/icons/DropDownIcon.svg" alt="MENU">
-</button>
+        <?php
 
-<div class="background-m-mobile">
-    <div class="menu-navegacao-mobile">
-        <nav class="area-botao-navegacao-mobile">
 
-            <a class="botao-lateral-navegacao-mobile recolher-m-menu">
-                <img class="icone-menu-lateral-mobile" src="../../public/img/icons/Cross.svg" alt="ICONE-ATEND">
-            </a>
+        $id_perfil = $_SESSION['id_perfil_usuario_fk'] ?? null;
 
-            <a class="botao-lateral-navegacao-mobile" href="./atendimento.php">
-                <img class="icone-menu-lateral-mobile" src="../../public/img/icons/atend.svg" alt="ICONE-ATEND">
-                <p class="texto-bott-mobile">Atendimento</p>
-            </a>
+        $adm = ['atendimento.php', 'monitor_modal.php', 'menuadm_usuario.php', 'relatorio_diario.php'];
+        $sup = ['atendimento.php', 'monitor_modal.php', 'menusup_usuario.php', 'relatorio_diario.php'];
+        $atend = ['atendimento.php', 'monitor_modal.php'];
 
-            <a class="botao-lateral-navegacao-mobile btnMonitorModal" id="openModalBtn">
-                <img class="icone-menu-lateral-mobile" src="../../public/img/icons/monitor.svg" alt="ICONE-MONITOR">
-                <p class="texto-bott-mobile">Monitor</p>
-            </a>
+        switch ($id_perfil) {
+            case 5:
+                $menus = $adm;
+                break;
+            case 6:
+                $menus = $sup;
+                break;
+            case 7:
+                $menus = $atend;
+                break;
+            default:
+                $menus = [];
+        }
 
-            <a class="botao-lateral-navegacao-mobile" href="./menuadm_usuario.php">
-                <img class="icone-menu-lateral-mobile" src="../../public/img/icons/gestao.svg" alt="ICONE-GESTAO">
-                <p class="texto-bott-mobile">Gestão</p>
-            </a>
+        $nomeExibicao = [
+            'atendimento.php' => 'Atendimento',
+            'monitor_modal.php' => 'Monitor',
+            'menuadm_usuario.php' => 'Gestão',
+            'menusup_usuario.php' => 'Gestão',
+            'relatorio_diario.php' => 'Relatórios',
+        ];
 
-            <a class="botao-lateral-navegacao-mobile" href="./relatorio_diario.php">
-                <img class="icone-menu-lateral-mobile" src="../../public/img/icons/nota.svg" alt="ICONE-RELATORIOS">
-                <p class="texto-bott-mobile">Relatórios</p>
-            </a>
+        $icones = [
+            'Atendimento' => '../../public/img/icons/atend.svg',
+            'Monitor' => '../../public/img/icons/monitor.svg',
+            'Gestão' => '../../public/img/icons/gestao.svg',
+            'Relatórios' => '../../public/img/icons/nota.svg',
+        ];
+        ?>
 
-            <div class="sair-mobile">
-                <a class="botao-lateral-navegacao-mobile" href="../../index.php">
-                    <img class="icone-menu-lateral-mobile" src="../../public/img/icons/sair.svg" alt="ICONE-SAIR">
-                    <p class="texto-bott-mobile">Sair</p>
+        <nav class="menu-lateral-navegacao">
+            <?php foreach ($menus as $arquivo): 
+                $nome = $nomeExibicao[$arquivo] ?? ucfirst(pathinfo($arquivo, PATHINFO_FILENAME));
+                $icone = $icones[$nome] ?? '../../public/img/icons/default.svg';
+
+                if ($nome === 'Monitor'): ?>
+                    <a class="botao-lateal-navegacao" id="openMonitorModal" href="javascript:void(0);">
+                        <img class="icone-menu-lateral" src="<?= $icone ?>" alt="ICONE-MONITOR">
+                        <p class="texto-bott"><?= htmlspecialchars($nome) ?></p>
+                    </a>
+                <?php else: ?>
+                    <a class="botao-lateal-navegacao" href="./<?= $arquivo ?>">
+                        <img class="icone-menu-lateral" src="<?= $icone ?>" alt="Ícone <?= htmlspecialchars($nome) ?>">
+                        <p class="texto-bott"><?= htmlspecialchars($nome) ?></p>
+                    </a>
+                <?php endif; ?>
+            <?php endforeach; ?>
+
+            <!-- Botão sair fixo -->
+            <div class="sair-navegacao">
+                <a class="botao-lateal-navegacao" href="../../index.php">
+                    <img class="icone-menu-lateral" src="../../public/img/icons/sair.svg" alt="Ícone Sair">
+                    <p class="texto-bott">Sair</p>
                 </a>
             </div>
         </nav>
-    </div>
-    <div class="areatransp"></div>
-</div>
 
-<?php
-include "../../public/modais/modal_alterar_dados_login.php";
-include "../../public/modais/modal_confirmacao_dados.php"
-// include "../../public/modais/modal_alterar_senha.php";
-?>
+
+    </div>
+
+    <button class="botao-menu-mobile abrirMenuLateral" id="botao-menu-mobile">
+        <img class="icone-menu-lateral-mobile" src="../../public/img/icons/DropDownIcon.svg" alt="MENU">
+    </button>
+
+    <div class="background-m-mobile">
+        <div class="menu-navegacao-mobile">
+            <nav class="area-botao-navegacao-mobile">
+
+                <a class="botao-lateral-navegacao-mobile recolher-m-menu">
+                    <img class="icone-menu-lateral-mobile" src="../../public/img/icons/Cross.svg" alt="ICONE-ATEND">
+                </a>
+
+                <a class="botao-lateral-navegacao-mobile" href="./atendimento.php">
+                    <img class="icone-menu-lateral-mobile" src="../../public/img/icons/atend.svg" alt="ICONE-ATEND">
+                    <p class="texto-bott-mobile">Atendimento</p>
+                </a>
+
+                <a class="botao-lateral-navegacao-mobile btnMonitorModal" id="openModalBtn">
+                    <img class="icone-menu-lateral-mobile" src="../../public/img/icons/monitor.svg" alt="ICONE-MONITOR">
+                    <p class="texto-bott-mobile">Monitor</p>
+                </a>
+
+                <a class="botao-lateral-navegacao-mobile" href="./menuadm_usuario.php">
+                    <img class="icone-menu-lateral-mobile" src="../../public/img/icons/gestao.svg" alt="ICONE-GESTAO">
+                    <p class="texto-bott-mobile">Gestão</p>
+                </a>
+
+                <a class="botao-lateral-navegacao-mobile" href="./relatorio_diario.php">
+                    <img class="icone-menu-lateral-mobile" src="../../public/img/icons/nota.svg" alt="ICONE-RELATORIOS">
+                    <p class="texto-bott-mobile">Relatórios</p>
+                </a>
+
+                <div class="sair-mobile">
+                    <a class="botao-lateral-navegacao-mobile" href="../../index.php">
+                        <img class="icone-menu-lateral-mobile" src="../../public/img/icons/sair.svg" alt="ICONE-SAIR">
+                        <p class="texto-bott-mobile">Sair</p>
+                    </a>
+                </div>
+            </nav>
+        </div>
+        <div class="areatransp"></div>
+    </div>
+
+    <?php
+        include "../../public/modais/modal_alterar_dados_login.php";
+        include "../../public/modais/modal_confirmacao_dados.php"
+        // include "../../public/modais/modal_alterar_senha.php";
+    ?>
+</body>
+</html>

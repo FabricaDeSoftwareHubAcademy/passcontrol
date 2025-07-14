@@ -1,50 +1,43 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const buttonAbrir = document.querySelector("#chm-senha");
+document.addEventListener("DOMContentLoaded", function () {
+    const btnProximaSenha = document.getElementById("chamar-proxima-senha");
+    const modal = document.getElementById("modal-senha"); 
+
+    btnProximaSenha.addEventListener("click", async () => {
+        try {
+            const response = await fetch("../../app/actions/proxima_senha.php");
+            const data = await response.json();
+
+            if (data.success) {
+                // Preencher dados no modal
+                document.getElementById("nome-cliente").innerText = data.nome;
+                document.getElementById("senha-cliente").innerText = data.senha;
+                document.getElementById("servico-cliente").innerText = data.servico;
+
+                // Exibir modal
+                modal.style.display = "flex";
+            } else {
+                alert(data.message || "Erro ao buscar senha.");
+            }
+        } catch (error) {
+            console.error("Erro na requisição:", error);    
+            alert("Erro na requisição");
+        }
+    });
+
+    // Botões de fechar o modal
+    document.querySelector(".ausente_ChamarSenha").addEventListener("click", (e) => {
+        e.stopPropagation(); // impede que o clique afete outros elementos
+        modal.style.display = "none";
+    });
     
-    // Acessar o modal (EXPORTADO)
-    const modalContainer = document.querySelector("main-proxima-senha");
-
-    buttonAbrir.addEventListener("click", (event) => {
-        event.preventDefault();
-        modalContainer.querySelector(".modal-container").classList.add("show");
+    document.querySelector(".presente_ChamarSenha").addEventListener("click", (e) => {
+        e.stopPropagation();
+        modal.style.display = "none";
     });
 
-    const buttonCancelar = modalContainer.querySelector(".ausente");
-    buttonCancelar.addEventListener("click", () => {
-        modalContainer.querySelector(".modal-container").classList.remove("show");
-    });
-
-    const buttonSim = modalContainer.querySelector(".presente");
-    buttonSim.addEventListener("click", () => {
-        modalContainer.querySelector(".modal-container").classList.remove("show");
+    document.querySelector(".chamar_ChamarSenha").addEventListener("click", (e) => {
+        // Aqui você pode repetir o áudio ou ação de chamar novamente
+        e.stopPropagation();
+        alert("Chamando novamente...");
     });
 });
-
-// Definição do Custom Element para o Modal
-class Modal_Proxima_Senha extends HTMLElement {
-    connectedCallback() {
-        this.innerHTML = `
-        <main class="modal-container">
-        <section class="modal">
-            <img src="../../../public/img/img-modais/Logo Nota Controlnt.png" alt="Logo Nota Control" class="logo">
-            <h1 class="title">Confirmar Presença</h1>
-            <hr class="row">
-            <p class="desk-info"><b>Guichê 1</b></p>
-            <p class="name"><b>João Guilherme Ortigosa</b></p>
-            <p class="info"><b>Senha:</b> <span class="senha">CM 001</span></p>
-            <p class="info"><b>Serviço:</b> <strong>IPTU</strong></p>
-            <div class="button-group">
-                <div class="button-row">
-                    <button class="botao-modal ausente">Ausente</button>
-                    <button class="botao-modal presente">Presente</button>
-                </div>
-                <button class="botao-modal chamar">Chamar Novamente</button>
-            </div>            
-        </section>
-        </main>
-        `;
-    }
-}
-
-// Definir o Custom Element
-customElements.define('main-proxima-senha', Modal_Proxima_Senha);
