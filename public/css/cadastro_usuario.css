@@ -45,10 +45,9 @@
   justify-content: space-between;
   flex-wrap: wrap;
   border-radius: 5px;
-
   padding: 45px 5%;
   gap: 5%;
-  padding: auto;
+  /* padding: auto; */
 }
 
 .container_input {
@@ -176,4 +175,29 @@
 
 .label_option_servico:hover{
   background-color: rgba(0, 0, 0, 0.2);
+}
+
+
+
+/* RESPONSIVIDADE */
+@media screen and (max-width:660px) {
+  .container_form {
+    display: block;
+    height: 70%;
+    padding: 20px 5%;
+  }
+  .container_input {
+    width: 100%;
+  }
+  .dropdown_select{
+    width: 76%;
+  }
+}
+@media screen and (max-height: 770px) {
+  .container_form {
+    overflow: auto;
+  }
+  .select_show{
+    bottom: 0;
+  }
 }

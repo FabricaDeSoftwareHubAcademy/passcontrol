@@ -115,3 +115,16 @@
         justify-content: center;
     }
 }
+/* Responsividade */
+@media (max-width: 400px) {
+    .logo-confirmacao-dados{
+        width: 60px;
+    }
+    .modal-title-confirmacao-dados{
+        font-size: 20px;
+    }
+    .modal-message-confirmacao-dados{
+        font-size: 16px;
+    }
+
+}

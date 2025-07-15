@@ -91,7 +91,7 @@
 }
 
 /* Grupo de botões */
-.modal-editar-ponto-atendimento .button-group {
+.modal-editar-ponto-atendimento .button-group-ponto-atendimento-edicao {
     display: flex;
     justify-content: right;
     gap: 30px;
@@ -128,24 +128,19 @@
 
 /* Responsividade */
 
-@media (max-width: 450px) {
-    .modal-editar-ponto-atendimento{
-        padding: 20px;
-    }
-    .modal-editar-ponto-atendimento .logo{
-        right: 20px;
-    }
-    .modal-editar-ponto-atendimento .titulo-modal{
-        font-size: 24px;
-        max-width: 70%;
-    }
-    .modal-editar-ponto-atendimento .button-group {
-        gap: 10px;
+@media (max-width: 500px){
+    .modal-editar-ponto-atendimento .titulo-modal {
+        font-size: 20px;
     }
 }
 
-@media (max-width: 400px) {
-    .modal-editar-ponto-atendimento .button-group {
-        align-items: center;
+@media (max-width: 480px){
+    .modal-editar-ponto-atendimento .titulo-modal {
+        font-size: 20px;
+    }
+    .button-group-ponto-atendimento-edicao {
+        display: flex;
+        justify-content: center;
+        background-color: #ff0000;
     }
 }
