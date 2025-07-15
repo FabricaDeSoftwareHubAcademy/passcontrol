@@ -102,4 +102,4 @@ $ultimasChamadas = $db->select($where, 'id_fila_senha DESC', '4')->fetchAll(PDO:
     </div>
 </section>
 </body>
-</html>
+</html> 
