@@ -42,15 +42,6 @@
     border-radius: 5px;
 }
 
-/* Estilo da linha horizontal */
-.linha-alterar-dados {
-    border: none;
-    border-top: 2px solid #000;
-    width: 100%; 
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-
 /* Estilo do logo */
 .logo-alterar-dados {
     position: absolute;
@@ -59,45 +50,32 @@
     width: 10%;
 }
 
-/* Estilo do container do nome */
-.nome-container-alterar-dados {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-direction: row;
+/* Estilo da linha horizontal */
+.linha-alterar-dados {
+    border: none;
+    border-top: 2px solid #000;
+    width: 100%; 
+    margin-top: 20px;
     margin-bottom: 20px;
 }
-
-.container-dados {
-    flex: 1;
-    margin-right: 20px;
-}
-
-.container:last-child {
-    margin-right: 0;
-}
-
-/* Estilo do container de email */
-.email-container-alterar-dados {
+.form_editar_dados_usuario{
     display: flex;
     flex-direction: column;
-    margin-bottom: 20px;
+    gap: 15px;
 }
 
-/* Estilo do container de CPF */
-.cpf-container-alterar-dados {
+#foto_usuario{
+    max-width: 50px;
+}
+.container_edit_usuario {
     display: flex;
     flex-direction: column;
-    margin-bottom: 20px;
+    width: 100%;
+    /* margin-bottom: 20px; */
 }
 
-/* Estilo dos inputs e labels */
-.label-nome-alterar-dados, .label-email-alterar-dados, .label-cpf-alterar-dados, .label-file-alterar-dados {
-    font-size: 16px;
-    margin-bottom: 5px;
-}
-
-.input-nome, .input-email, .input-cpf, .input-file {
+/* border: 1px dotted red; */
+.input_dados_edit {
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
@@ -106,23 +84,24 @@
     background-color: white;
 }
 
-/* Estilização do container do input file */
-.file-container-alterar-dados {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 20px;
+/* Estilo dos inputs e labels */
+.label-nome-alterar-dados, .label-email-alterar-dados, .label-cpf-alterar-dados, .label-file-alterar-dados {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
 
-    .foto_usuario{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        max-width: 80px;
-        font-size: 12px;
-        background-color: #ccc;
-        border-radius: 5px;
-        margin: 5px;
-    }
+
+/* conf do preview da imagem */
+.foto_usuario{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    max-width: 80px;
+    font-size: 12px;
+    background-color: #ccc;
+    border-radius: 5px;
+    margin: 5px;
 }
 
 /* SELECAO SERVICO*/
@@ -176,11 +155,12 @@
 }
 
 /* Grupo de botões */
-.button-group-alterar-dados {
-    display: flex;
-    justify-content: right;
-    gap: 0px;
-    margin-top: 20px;
+.container_botao_form {
+  margin-top: 15px;
+  width: 90%;
+  display: flex;
+  justify-content: end;
+  gap: 16px;
 }
 
 /* Estilo do botão cancelar */

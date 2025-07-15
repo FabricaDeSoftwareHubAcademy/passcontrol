@@ -93,7 +93,7 @@
           </div>
           <div class="input_dados dropdown_select">
             <label class="label_option_servico">
-              <input type="checkbox" id="selectAll"> <!-- onchange="toggleAll(this)" -->
+              <input checked type="checkbox" id="selectAll"> <!-- onchange="toggleAll(this)" -->
               Selecionar todos
             </label>
             <span class="linha_select"></span>
@@ -102,7 +102,7 @@
               foreach ($servicos as $servico):
             ?>
             <label class="label_option_servico">
-              <input type="checkbox" class="option_servico" name="id_servico[]" value="<?= $servico->id_servico ?>">
+              <input checked type="checkbox" class="option_servico" name="id_servico[]" value="<?= $servico->id_servico ?>">
               <?= $servico->nome_servico . " - " . $servico->codigo_servico ?>
             </label>
             <?php

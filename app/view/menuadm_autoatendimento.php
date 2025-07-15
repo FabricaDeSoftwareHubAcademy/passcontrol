@@ -59,30 +59,29 @@
         <main class="area-cards">
             <div class="container_menu">
                 <div class="wrapper">
-                    <a href="">
+                    <a href="./tela_autoatendimento_page1.php">
                         <div class="banner-img">
                             <img src="../../public/img/Menus/TotemPassControl.png" alt="">
                         </div>
                     </a>
                 </div>
                 <div class="button-wrapper">
-                    <button class="btn outline" onclick="window.location.href='../view/tela_autoatendimento_page1.php';">Visualizar Autoatendimento</button>
+                    <button class="btn outline" onclick="window.location.href='./tela_autoatendimento_page1.php'">Visualizar Autoatendimento</button>
                 </div>
             </div>
             <div class="container_menu">
                 <div class="wrapper">
-                    <a href="./monitor-modal.php">
+                    <a href="./Monitor.php">
                         <div class="banner-img">
                             <img src="../../public/img/img-menu/monitor.png" alt="">
                             <!-- <img src="../../../public/img/Menus/MONITOR.png" alt=""> -->
-
                         </div>
                     </a>
                     <!-- <h3 class="titulo-produto">Monitor</h3> -->
                     <!-- <p>Visualizar Monitor de Autoatendimento</p> -->
                 </div>
                 <div class="button-wrapper">
-                    <button class="btn outline" id="visualisarMonitor">Visualizar Monitor</button>
+                    <button class="btn outline" id="visualisarMonitor" onclick="window.location.href='./Monitor.php'">Visualizar Monitor</button>
                 </div>
             </div>
         </main>

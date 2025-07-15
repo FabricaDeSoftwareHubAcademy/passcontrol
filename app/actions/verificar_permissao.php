@@ -39,7 +39,14 @@ $pagesAuth = [
     'servicos.php'],
 
     7 => ['atendimento.php',
-    'monitor_modal.php']
+    'monitor_modal.php'],
+
+    8 => ['Monitor.php'],
+
+    9 => ['tela_autoatendimento_page1.php',
+    'tela_autoatendimento_page2.php',
+    'tela_autoatendimento_page3.php',
+    'tela_autoatendimento_page1.php']
 ];
 
 // SE NÃO TIVER PERMISSÃO
