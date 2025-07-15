@@ -176,7 +176,7 @@ if (!isset($_SESSION['id_usuario'])) {
                 <div class="sair-mobile">
                     <a class="botao-lateral-navegacao-mobile" href="../../index.php">
                         <img class="icone-menu-lateral-mobile" src="../../public/img/icons/sair.svg" alt="ICONE-SAIR">
-                        <p class="texto-bott-mobile">Sair</p>
+                        <p class="texto-bott-mobile btn_sair">Sair</p>
                     </a>
                 </div>
             </nav>

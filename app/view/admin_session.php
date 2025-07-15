@@ -83,10 +83,10 @@
                 <p class="texto-bott">Relatórios</p>
             </a>
             <div class="sair-navegacao">
-                <a class="botao-lateal-navegacao" href="../../index.php">
+                <button class="botao-lateal-navegacao btn_sair">
                     <img class="icone-menu-lateral" src="../../public/img/icons/sair.svg" alt="ICONE-SAIR">
                     <p class="texto-bott">Sair</p>
-                </a>
+                </button>
             </div>
         
         </nav>
@@ -125,10 +125,10 @@
                 </a>
 
                 <div class="sair-mobile">
-                    <a class="botao-lateral-navegacao-mobile" href="../../index.php">
+                    <button class="botao-lateral-navegacao-mobile btn_sair">
                         <img class="icone-menu-lateral-mobile" src="../../public/img/icons/sair.svg" alt="ICONE-SAIR">
                         <p class="texto-bott-mobile">Sair</p>
-                    </a>
+                    </button>
                 </div>
             </nav>
         </div>
