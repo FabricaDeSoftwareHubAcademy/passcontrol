@@ -8,6 +8,8 @@ Class Ponto_Atendimento{
     public string $nome_ponto_atendimento;
     public int $status_ponto_atendimento;
 
+    public int $disponivel_ponto_atendimento;
+
     public function buscar($where=null, $order=null, $limit=null){
         $db = new Database('ponto_atendimento');
         $res = $db->select($where, $order, $limit)->fetchAll(PDO::FETCH_CLASS,self::class);
@@ -76,4 +78,12 @@ Class Ponto_Atendimento{
     //     $res = $db->delete('id_ponto_atendimento ='.$this->id_ponto_atendimento);
     //     return $res;
     // }
+
+    public function atualizar_disponivel_atendimento(int $id, int $novo_status): bool {
+        $db = new Database('ponto_atendimento');
+        return $db->update(
+            "id_ponto_atendimento = {$id}",
+            ['disponivel' => $novo_status] 
+        );
+    }
 }

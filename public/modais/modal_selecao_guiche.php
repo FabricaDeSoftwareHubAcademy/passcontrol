@@ -6,7 +6,7 @@
         <hr class="modal-divider">
 
         <p class="modal-message"><b>Selecione o Seu Ponto de Atendimento</b></p>
-        <div class="select-container">
+        <form class="select-container">
             <select class="menu" name="guiche" required=''>
                 <option value="" selected disabled>Guichês</option>
                 <?php
@@ -19,7 +19,7 @@
                     }
                 ?>
             </select>
-        </div>
+        </form>
         <div class="button-group">
             <button class="botao-modal confirm_SelecaoGuiche">Confirmar</button>
         </div>
