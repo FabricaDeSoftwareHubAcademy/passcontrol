@@ -36,7 +36,7 @@
                 $res_vincula = "Nao Vinculado";
 
                 //// CAPTURA SERVICOS SELECIONADOS
-                // try{
+                try{
                     if(isset($_POST['id_servico'])){
                         $servicos_selecionados = $_POST['id_servico'];
 
@@ -46,9 +46,9 @@
                             $res_vincula = "Vinculado";
                         }
                     }
-                // }catch(Exception $erro){
-                //     $res_vincula = "Nao Vinculado: $erro";
-                // }
+                }catch(Exception $erro){
+                    $res_vincula = "Nao Vinculado: $erro";
+                }
                 
                 $resposta = array( "msg" => "Usuario cadastrado com sucesso", "status" => $status_res, "servico" => $res_vincula);
                 echo json_encode($resposta);

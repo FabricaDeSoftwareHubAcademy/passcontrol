@@ -1,8 +1,9 @@
 <?php
-require '../classes/PontoAtendimento.php';
+require_once '../classes/PontoAtendimento.php';
 
 $guiche = new Ponto_Atendimento();
 $guiches = $guiche->buscar(null, " status_ponto_atendimento DESC");
+$id_perfil = $_SESSION['id_perfil_usuario_fk'] ?? null;
 ?>
 
 <!DOCTYPE html>
@@ -34,6 +35,7 @@ $guiches = $guiche->buscar(null, " status_ponto_atendimento DESC");
 
     <!-- JS -->
     <script src="../../public/js/navegacao_menu_lateral.js" defer></script>
+    <script src="../../app/js/modal_selecao_guiche_login.js" defer></script>
     <script src="../../public/js/modal_teladelogin.js" defer></script>
     <script src="../../public/js/modal_proxima_senha.js" defer></script>
     <script src="../../public/js/modal_conf_saida.js" defer></script>
@@ -50,26 +52,33 @@ $guiches = $guiche->buscar(null, " status_ponto_atendimento DESC");
 
 <body class="control-body-navegacao">
     <?php
-    include "./navegacao.php";
+    include_once "./navegacao.php";
     require_once '../actions/verificar_permissao.php';
     ?>
 
     <section class="Area-Util-Projeto">
+        <?php
+        include_once "../../public/modais/modal_selecao_guiche.php";
+        ?>
 
         <!-- SUBMENU ATENDIMENTO -->
         <div class="menu-container">
             <div class="menu">
                 <button class="hamburger" onclick="toggleMenu()">☰</button>
-                <a href="../view/atendimento_do_dia.php">Guichês</a>
+                <?php if ($id_perfil != 7): ?>
+                    <a href="../view/atendimento_do_dia.php">Guichês</a>
+                <?php endif; ?>
                 <a href="../view/atendimento.php" class="active">Atendimento</a>
             </div>
             <div class="menu-mobile" id="mobileMenu">
-                <a href="../view/atendimento_do_dia.php">Guichês</a>
+                <?php if ($id_perfil != 7): ?>
+                    <a href="../view/atendimento_do_dia.php">Guichês</a>
+                <?php endif; ?>
                 <a href="../view/atendimento.php" class="active">Atendimento</a>
             </div>
         </div>
         <!-- INICIO DA ÁREA ÚTIL DA PÁGINA -->
-        <nav class="area-chamada-atendimento">
+        <div class="area-chamada-atendimento">
             <nav class="topo-area-chamada">
                 <ul class="esquerda-area-chamada">
                     <div class="atendimento-atual-atendimento">
@@ -148,7 +157,6 @@ $guiches = $guiche->buscar(null, " status_ponto_atendimento DESC");
             </nav>
             <div class="meio-guiche-area-chamada">
                 <h3>Senhas Atendidas No Dia</h3>
-            </div>
             </div>
             <div class="fundo-guiche-area-chamada">
                 <table class="tabela_atendimento-guiche-area-chamada">
@@ -256,13 +264,14 @@ $guiches = $guiche->buscar(null, " status_ponto_atendimento DESC");
                         </tr>
                 </table>
             </div>
-        </nav>
         </div>
+        <?php
+        include_once "../../public/modais/modal_selecao_guiche.php";
+        ?>
     </section>
 
     <?php
     include_once "./monitor_modal.php"; 
-    include_once "../../public/modais/modal_selecao_guiche.php";
     include_once "../../public/modais/modal_consultar_fila.php";
     include_once "../../public/modais/modal_chamar_prox_senha.php"; 
     include_once "../../public/modais/modal_iniciar_intervalo.php";

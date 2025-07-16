@@ -1,10 +1,3 @@
-/* Reset básico */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 /* Estilo dos botões */
 .botao-modal-alterar-dados {
     background-color: #33404D;
@@ -49,15 +42,6 @@
     border-radius: 5px;
 }
 
-/* Estilo da linha horizontal */
-.linha-alterar-dados {
-    border: none;
-    border-top: 2px solid #000;
-    width: 100%; 
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-
 /* Estilo do logo */
 .logo-alterar-dados {
     position: absolute;
@@ -66,45 +50,32 @@
     width: 10%;
 }
 
-/* Estilo do container do nome */
-.nome-container-alterar-dados {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-direction: row;
+/* Estilo da linha horizontal */
+.linha-alterar-dados {
+    border: none;
+    border-top: 2px solid #000;
+    width: 100%; 
+    margin-top: 20px;
     margin-bottom: 20px;
 }
-
-.container-dados {
-    flex: 1;
-    margin-right: 20px;
-}
-
-.container:last-child {
-    margin-right: 0;
-}
-
-/* Estilo do container de email */
-.email-container-alterar-dados {
+.form_editar_dados_usuario{
     display: flex;
     flex-direction: column;
-    margin-bottom: 20px;
+    gap: 15px;
 }
 
-/* Estilo do container de CPF */
-.cpf-container-alterar-dados {
+#foto_usuario{
+    max-width: 50px;
+}
+.container_edit_usuario {
     display: flex;
     flex-direction: column;
-    margin-bottom: 20px;
+    width: 100%;
+    /* margin-bottom: 20px; */
 }
 
-/* Estilo dos inputs e labels */
-.label-nome-alterar-dados, .label-email-alterar-dados, .label-cpf-alterar-dados, .label-file-alterar-dados {
-    font-size: 16px;
-    margin-bottom: 5px;
-}
-
-.input-nome, .input-email, .input-cpf, .input-file {
+/* border: 1px dotted red; */
+.input_dados_edit {
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
@@ -113,31 +84,83 @@
     background-color: white;
 }
 
-/* Estilização do container do input file */
-.file-container-alterar-dados {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 20px;
+/* Estilo dos inputs e labels */
+.label-nome-alterar-dados, .label-email-alterar-dados, .label-cpf-alterar-dados, .label-file-alterar-dados {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
 
-    .foto_usuario{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        max-width: 80px;
-        font-size: 12px;
-        background-color: #ccc;
-        border-radius: 5px;
-        margin: 5px;
-    }
+
+/* conf do preview da imagem */
+.foto_usuario{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    max-width: 80px;
+    font-size: 12px;
+    background-color: #ccc;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+/* SELECAO SERVICO*/
+
+.selecao_servico {
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+}
+.seta_dropdown{
+  display: flex;
+  transform: rotate(90deg);
+  font-size: 12px;
+  font-family: 'Arial Narrow';
+}
+.linha_select{
+  margin: 1.5px 0;
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 100%;
+  min-height: 1px;
+}
+.dropdown_select{
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  border: 1px solid #ccc;
+  max-height: 200px;
+  overflow-y: auto;
+  width: calc(((90% - 5%) - 50%) - 10px);
+  z-index: 3;
+  cursor: auto;
+}
+.select_show{
+  display: flex;
+}
+.label_option_servico{
+  display: flex;
+  flex-direction: row;
+  padding: 7px;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 100%;
+  gap: 10px;
+}
+
+.label_option_servico:hover{
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 /* Grupo de botões */
-.button-group-alterar-dados {
-    display: flex;
-    justify-content: right;
-    gap: 0px;
-    margin-top: 20px;
+.container_botao_form {
+  margin-top: 15px;
+  width: 90%;
+  display: flex;
+  justify-content: end;
+  gap: 16px;
 }
 
 /* Estilo do botão cancelar */

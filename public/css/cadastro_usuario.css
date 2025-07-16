@@ -1,10 +1,5 @@
-@import url(style_main.css);
+@import url(root.css);
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 .Area-Util-Projeto {
   align-items: center;
 }
@@ -133,8 +128,7 @@
 }
 
 
-
-/* EM TRABALHO - SELECAO SERVICO*/
+/* SELECAO SERVICO*/
 
 .selecao_servico {
   width: 100%;

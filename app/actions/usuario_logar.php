@@ -53,12 +53,34 @@ if (password_verify($senha, $res['senha_usuario']) && ($res['primeiro_login'] ==
     $_SESSION['url_foto_usuario'] = $res['url_foto_usuario'];
     $_SESSION['id_perfil_usuario_fk'] = $res['id_perfil_usuario_fk'];
 
+
+    switch ($_SESSION['id_perfil_usuario_fk']){
+        case 5: //adm
+            $redirect_url = "./app/view/menuadm_usuario.php";
+            break;
+        case 6: //supervisor
+            $redirect_url = "./app/view/atendimento_do_dia.php";
+            break;
+        case 7: //atendente
+            $redirect_url = "./app/view/atendimento.php";
+            break;
+        case 8: //monitor
+            $redirect_url = "./app/view/Monitor.php";
+            break;
+        case 9: //auto_atendimento
+            $redirect_url = "./app/view/tela_autoatendimento_page1.php";
+            break;
+        default: 
+            $redirect_url = "./app/view/atendimento.php";
+            break;
+    }
+
     echo json_encode([
         'status' => 'ok',
         'code' => 200,
         'id_usuario' => $res['id_usuario'],
         'msg' => 'Login realizado com sucesso.',
-        'redirect' => './app/view/atendimento.php'
+        'redirect' => $redirect_url
     ]);
     exit;
 }

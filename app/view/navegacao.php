@@ -5,7 +5,46 @@ if (!isset($_SESSION['id_usuario'])) {
     header("Location: ../../index.php");
     exit();
 }
+
+$id_perfil = $_SESSION['id_perfil_usuario_fk'] ?? null;
+
+$adm = ['atendimento.php', 'monitor_modal.php', 'menuadm_usuario.php', 'relatorio_diario.php'];
+$sup = ['atendimento.php', 'monitor_modal.php', 'menusup_usuario.php', 'relatorio_diario.php'];
+$atend = ['atendimento.php', 'monitor_modal.php'];
+$totem = [];
+
+switch ($id_perfil) {
+    case 5:
+        $menus = $adm;
+        break;
+    case 6:
+        $menus = $sup;
+        break;
+    case 7:
+        $menus = $atend;
+        break;
+
+    default:
+        $menus = [];
+}
+
+$nomeExibicao = [
+    'atendimento.php' => 'Atendimento',
+    'monitor_modal.php' => 'Monitor',
+    'menuadm_usuario.php' => 'Gestão',
+    'menusup_usuario.php' => 'Gestão',
+    'relatorio_diario.php' => 'Relatórios',
+];
+
+$icones = [
+    'Atendimento' => '../../public/img/icons/atend.svg',
+    'Monitor' => '../../public/img/icons/monitor.svg',
+    'Gestão' => '../../public/img/icons/gestao.svg',
+    'Relatórios' => '../../public/img/icons/nota.svg',
+];
+
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -71,47 +110,6 @@ if (!isset($_SESSION['id_usuario'])) {
     <!-- MENU LATERAL -->
     <div class="area-lateral-navegacao">
         <nav class="menu-lateral-navegacao">
-
-        <?php
-
-
-        $id_perfil = $_SESSION['id_perfil_usuario_fk'] ?? null;
-
-        $adm = ['atendimento.php', 'monitor_modal.php', 'menuadm_usuario.php', 'relatorio_diario.php'];
-        $sup = ['atendimento.php', 'monitor_modal.php', 'menusup_usuario.php', 'relatorio_diario.php'];
-        $atend = ['atendimento.php', 'monitor_modal.php'];
-
-        switch ($id_perfil) {
-            case 5:
-                $menus = $adm;
-                break;
-            case 6:
-                $menus = $sup;
-                break;
-            case 7:
-                $menus = $atend;
-                break;
-            default:
-                $menus = [];
-        }
-
-        $nomeExibicao = [
-            'atendimento.php' => 'Atendimento',
-            'monitor_modal.php' => 'Monitor',
-            'menuadm_usuario.php' => 'Gestão',
-            'menusup_usuario.php' => 'Gestão',
-            'relatorio_diario.php' => 'Relatórios',
-        ];
-
-        $icones = [
-            'Atendimento' => '../../public/img/icons/atend.svg',
-            'Monitor' => '../../public/img/icons/monitor.svg',
-            'Gestão' => '../../public/img/icons/gestao.svg',
-            'Relatórios' => '../../public/img/icons/nota.svg',
-        ];
-        ?>
-
-        <nav class="menu-lateral-navegacao">
             <?php foreach ($menus as $arquivo): 
                 $nome = $nomeExibicao[$arquivo] ?? ucfirst(pathinfo($arquivo, PATHINFO_FILENAME));
                 $icone = $icones[$nome] ?? '../../public/img/icons/default.svg';
@@ -176,7 +174,7 @@ if (!isset($_SESSION['id_usuario'])) {
                 <div class="sair-mobile">
                     <a class="botao-lateral-navegacao-mobile" href="../../index.php">
                         <img class="icone-menu-lateral-mobile" src="../../public/img/icons/sair.svg" alt="ICONE-SAIR">
-                        <p class="texto-bott-mobile">Sair</p>
+                        <p class="texto-bott-mobile btn_sair">Sair</p>
                     </a>
                 </div>
             </nav>

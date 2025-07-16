@@ -13,12 +13,14 @@ $id_perfil = $_SESSION['id_perfil_usuario_fk'] ?? null;
 $currentPage = basename($_SERVER['PHP_SELF']);
 
 $pagesAuth = [
-    5 => ['atendimento.php',
+    5 => [
+    'tabela_teste.php',
+    'atendimento.php',
     'menuadm_usuario.php',
     'menuadm_servicos.php',
     'menuadm_autoatendimento.php',
     'monitor_modal.php',
-    'atendimento_tempo_real.php',
+    'atendimento_do_dia.php',
     'listar_usuarios.php',
     'relatorio_diario.php',
     'cadastro_usuario.php',
@@ -29,7 +31,7 @@ $pagesAuth = [
     'menusup_servicos.php',
     'menusup_usuario.php',
     'monitor_modal.php',
-    'atendimento_tempo_real.php',
+    'atendimento_do_dia.php',
     'relatorio_diario.php',
     'listar_usuarios.php',
     'cadastro_usuario.php',
@@ -37,8 +39,14 @@ $pagesAuth = [
     'servicos.php'],
 
     7 => ['atendimento.php',
-    'monitor_modal.php',
-    'atendimento_tempo_real.php']
+    'monitor_modal.php'],
+
+    8 => ['Monitor.php'],
+
+    9 => ['tela_autoatendimento_page1.php',
+    'tela_autoatendimento_page2.php',
+    'tela_autoatendimento_page3.php',
+    'tela_autoatendimento_page1.php']
 ];
 
 // SE NÃO TIVER PERMISSÃO

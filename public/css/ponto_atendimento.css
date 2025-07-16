@@ -275,9 +275,9 @@ thead,
 /* RESPONSIVIDADE */
 
 @media screen and (min-width: 710px) and (max-width: 1160px) {
-  .fundo-area-tabela {
+  /* .fundo-area-tabela {
     overflow: auto;
-  }
+  } */
 
   .tipo-ponto-atendimento {
     width: 140px;
