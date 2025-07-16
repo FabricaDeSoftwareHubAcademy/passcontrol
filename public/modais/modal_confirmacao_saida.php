@@ -1,12 +1,12 @@
-<div class="fundo-confimarcao-saida">
-    <section class="modal">
-        <img src="../../../public/img/img-modais/Logo Nota Controlnt.png" alt="Logo Nota Control" class="logo">
-        <h1>Confirmação</h1>
-        <hr>
-        <p><b>Deseja Sair do Sistema?</b></p>        
-        <div class="button-group">
-                <button class="botao-modal cancel">Não</button>
-                <button class="botao-modal save">Sim</button>
+<div class="fundo-confimarcao-saida-sistema">
+    <section class="modal-confirmacao-saida-sistema">
+        <img src="../../public/img/icons/logo_control.svg" alt="Logo Nota Control" class="logo-confirmacao-saida-sistema">
+        <h1 class="titulo-confirmacao-saida-sistema">Confirmação</h1>
+        <hr class="linha-confirmacao-saida-sistema">
+        <p class="texto-confirmacao-saida-sistema"><b>Deseja Sair do Sistema?</b></p>        
+        <div class="button-group-confirmacao-saida-sistema">
+                <button class="botao-modal cancel_Saida">Não</button>
+                <button class="botao-modal save_Saida">Sim</button>
             </div>
     </section>
 </div>

@@ -1,48 +1,16 @@
-document.addEventListener("DOMContentLoaded", function() {
-    // Acessar o botão que vai abrir o modal
-    const buttonAbrir = document.querySelector(".sair");  // Usar a classe .sair para identificar o botão
+const buttonAbrir_SaidaSistema = document.querySelector(".btn_sair");
+const modalContainer_SaidaSistema = document.querySelector(".fundo-confimarcao-saida-sistema");
+// const buttonFechar_SaidaSistema = document.querySelector(".close_ConfDadosRegist");
+const buttonCancelar_SaidaSistema = document.querySelector(".cancel_Saida");
+const buttonSalvar_SaidaSistema = document.querySelector(".save_Saida");
 
-    // Acessar o modal (exportado)
-    const modalContainer = document.querySelector("main-sair-sistema");
-
-    // Abrir o modal ao clicar no botão "Sair"
-    buttonAbrir.addEventListener("click", () => {
-        modalContainer.querySelector(".modal-container").classList.add("show");
-    });
-
-    // Acessar os botões de "Cancelar" e "Sim" no modal
-    const buttonCancelar = modalContainer.querySelector(".cancel");
-    buttonCancelar.addEventListener("click", () => {
-        modalContainer.querySelector(".modal-container").classList.remove("show");
-    });
-
-    const buttonSim = modalContainer.querySelector(".save");
-    buttonSim.addEventListener("click", () => {
-        modalContainer.querySelector(".modal-container").classList.remove("show");
-        // Redireciona para a página de login (index.php)
-        window.location.href = "../../../index.php";
-    });
+buttonAbrir_SaidaSistema.addEventListener("click", () => {
+    modalContainer_SaidaSistema.classList.add("show");
 });
 
-// Definição do Custom Element para o Modal de Confirmação de Sair
-class Modal_Sair_Sistema extends HTMLElement {
-    connectedCallback() {
-        this.innerHTML = `
-        <main class="modal-container">
-            <section class="modal">
-                <img src="../../../public/img/img-modais/Logo Nota Controlnt.png" alt="Logo Nota Control" class="logo">
-                <h1>Confirmação</h1>
-                <hr>
-                <p><b>Deseja Realmente Sair do Sistema?</b></p>
-                <div class="button-group">
-                    <button class="botao-modal cancel">Não</button>
-                    <button class="botao-modal save">Sim</button>
-                </div>
-            </section>
-        </main>
-        `;
-    }
-}
-
-// Definir o Custom Element
-customElements.define('main-sair-sistema', Modal_Sair_Sistema);
+buttonCancelar_SaidaSistema.addEventListener("click", () => {
+    modalContainer_SaidaSistema.classList.remove("show");
+});
+buttonSalvar_SaidaSistema.addEventListener("click", () => {
+    modalContainer_SaidaSistema.remove("show");
+});

@@ -1,0 +1,244 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.fundo-confimarcao-saida-sistema {
+    background: rgba(0, 0, 0, 0.5);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 10;
+}
+
+.fundo-confimarcao-saida-sistema.show {
+    opacity: 1;
+    display: flex;
+    pointer-events: auto;
+}.show {
+    opacity: 1;
+    display: flex;
+    pointer-events: auto;
+}
+
+.modal-confirmacao-saida-sistema {
+    background-color: #e0e0e0;
+    width: 80%;
+    max-width: 600px;
+    padding: 40px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+    text-align: left;
+    border-radius: 5px;
+}
+
+.logo-confirmacao-saida-sistema{
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    width: 60px;
+    max-width: 200px;
+    height: auto;
+}
+
+.titulo-confirmacao-saida-sistema {
+    font-size: 28px;
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+
+.linha-confirmacao-saida-sistema{
+    border: none;
+    border-top: 2px solid #000;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.texto-confirmacao-saida-sistema {
+    font-size: 22px;
+    margin: 40px 0;
+    text-align: center;
+}
+
+.button-group-confirmacao-saida-sistema {
+    display: flex;
+    justify-content: right;
+    gap: 0px;
+    margin-top: 20px;
+}
+
+.cancel_Saida {
+    background-color: #33404D;
+    color: white;
+    margin-right: 30px;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 10px 30px;
+}
+
+.cancel_Saida:hover {
+    color: #FF0000;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.save_Saida {
+    background-color: #33404D;
+    color: white;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 10px 30px;
+}
+
+.save_Saida:hover {
+    color: #3AA867;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+
+/* Responsividade */
+@media (max-width: 1200px) {
+    .modal-confirmacao-saida-sistema {
+        width: 70%;
+    }
+    .linha-confirmacao-saida-sistema{
+        border: none;
+        border-top: 2px solid #000;
+        width: 100%; 
+    }
+}
+
+@media (max-width: 1024px) {
+    .modal-confirmacao-saida-sistema {
+        width: 80%;
+    }
+    .linha-confirmacao-saida-sistema{
+        border: none;
+        border-top: 2px solid #000;
+        width: 100%; 
+    }
+}
+
+@media (max-width: 768px) {
+    .modal-confirmacao-saida-sistema {
+        width: 90%;
+    }
+    .titulo-confirmacao-saida-sistema{
+        margin-bottom: 20px;
+    }
+    .linha-confirmacao-saida-sistema{
+        border: none;
+        border-top: 2px solid #000;
+        width: 100%; 
+    }
+}
+
+@media (max-width: 480px) {
+    .button-group-confirmacao-saida-sistema {
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+    .botao-modal-confirmacao-dados-registrados {
+        width: auto;
+    }
+    .linha-confirmacao-saida-sistema{
+        border: none;
+        border-top: 2px solid #000;
+        width: 100%; 
+    }
+}
+
+@media (min-width: 401px) and (max-width: 550px){
+    .modal-confirmacao-saida-sistema {
+        width: 95%;
+        padding: 20px;
+    }
+    .titulo-confirmacao-saida-sistema{
+        margin-top: 7px;
+        font-size: 20px;
+    }
+    .logo-confirmacao-saida-sistema{
+        top: 10px;
+        width: 50px;
+    }
+    .button-group-confirmacao-saida-sistema {
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+    .botao-modal-confirmacao-saida-sistema {
+        width: auto;
+    }
+    .linha-confirmacao-saida-sistema{
+        border: none;
+        border-top: 2px solid #000;
+        width: 100%; 
+    }
+}
+
+@media (max-width: 400px) {
+    .modal-confirmacao-saida-sistema {
+        width: 95%;
+        padding: 15px;
+    }
+    .titulo-confirmacao-saida-sistema{
+        margin-top: 7px;
+        font-size: 20px;
+    }
+    .texto-confirmacao-saida-sistema{
+        font-size: 18px;
+    }
+    .logo-confirmacao-saida-sistema{
+        top: 10px;
+        width: 50px;
+    }
+    .button-group-confirmacao-saida-sistema {
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+    .botao-modal-confirmacao-saida-sistema {
+        width: auto;
+    }
+    .linha-confirmacao-saida-sistema{
+        border: none;
+        border-top: 2px solid #000;
+        width: 100%; 
+    }
+}
+
+@media (min-width: 320px) and (max-width: 340px) {
+    .modal-confirmacao-saida-sistema {
+        width: 90%;
+        padding: 15px;
+    }
+    .titulo-confirmacao-saida-sistema{
+        font-size: 16px;
+    }
+    .texto-confirmacao-saida-sistema{
+        font-size: 16px;
+    }
+    .logo-confirmacao-saida-sistema{
+        top: 15px;
+        width: 40px;
+    }
+    .button-group-confirmacao-saida-sistema {
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+    .botao-modal-confirmacao-saida-sistema {
+        width: auto;
+    }
+    .linha-confirmacao-saida-sistema{
+        border: none;
+        border-top: 2px solid #000;
+        width: 100%; 
+    }
+}

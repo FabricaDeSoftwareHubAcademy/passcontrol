@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const btn_validacao = document.querySelector(".confirm_SelecaoGuiche");
     const modalvalidacao = document.querySelector(".fundo-selecao-guiche");
     const selectGuiche = document.querySelector('select[name="guiche"]');
-    const botoes_sair = document.querySelectorAll(".btn_sair");
+    const botao_sair = document.querySelectorAll(".btn_sair");
 
     // Abre modal se guichê não foi selecionado
     if (!sessionStorage.getItem('guicheSelected') && modalvalidacao) {
@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // Intercepta clique no botão de sair
-    botoes_sair.forEach(botao => {
+    botao_sair.forEach(botao => {
         botao.addEventListener("click", async (event) => {
             event.preventDefault();
 
