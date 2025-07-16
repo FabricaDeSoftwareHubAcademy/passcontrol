@@ -184,8 +184,8 @@ $icones = [
 
     <?php
         include "../../public/modais/modal_alterar_dados_login.php";
-        include "../../public/modais/modal_confirmacao_dados.php"
-        // include "../../public/modais/modal_alterar_senha.php";
+        include "../../public/modais/modal_confirmacao_dados.php";
+        include "../../public/modais/modal_alterar_senha.php";
     ?>
 </body>
 </html>
