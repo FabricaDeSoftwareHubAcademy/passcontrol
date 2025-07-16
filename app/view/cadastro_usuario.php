@@ -21,12 +21,12 @@
   <link rel="stylesheet" href="../../public/css/modal_confirmacao_dados_registrados.css">
   <link rel="stylesheet" href="../../public/css/modal_confirmacao_dados.css">
   <link rel="stylesheet" href="../../public/css/modal_aviso_erro.css">
-  <!-- <link rel="stylesheet" href="../../../public/modais/Modal_Confirmacao_dos_Dados_Registrados/confirmacao_dados_registrados.css"> -->
 
   <!-- JS -->
   <script src="../../public/js/navegacao_menu_lateral.js" defer></script>
   <script src="../../public/js/monitor_modal.js" defer></script>
-  <!-- <script src="../../public/js/checkbox_seleciona_todos.js" defer></script> -->
+  
+  <script src="../../public/js/dropdown_select.js" defer></script>
   <script src="../js/usuario_cadastrar.js" defer></script>
   <script src="../js/validar_cpf.js" defer></script>
 

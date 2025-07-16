@@ -65,6 +65,11 @@ document.addEventListener("DOMContentLoaded", function() {
                 .replace(/\.(\d{3})(\d)/, '.$1-$2');
             });
 
+            // abre dropdown dos servicos
+            btn_select_servico.addEventListener("click", function(){
+                dropdown_select();
+            });
+
             // ENVIAR DADOS EDITADOS CASO CLIQUE NO CONFIRMAR
             buttonSalvarEdicao.addEventListener("click", async (event) => {
                 event.preventDefault();
