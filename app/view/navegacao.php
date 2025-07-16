@@ -103,7 +103,7 @@ $icones = [
                 <li class="email-usu"><?= htmlspecialchars($_SESSION['email_usuario']) ?></li>
                 <li><a class="usu-util open-editar-dados">Editar Informações</a></li>
                 <li><a class="usu-util open-alterar-senha">Alterar Senha</a></li>
-                <li><a class="usu-util usu-sair" href="../../index.php">Sair</a></li>
+                <li><button class="usu-util usu-sair btn_sair">Sair</button></li>
             </ul>
         </nav>
     </div>
@@ -129,10 +129,10 @@ $icones = [
 
             <!-- Botão sair fixo -->
             <div class="sair-navegacao">
-                <a class="botao-lateal-navegacao" href="../../index.php">
+                <button class="botao-lateal-navegacao btn_sair">
                     <img class="icone-menu-lateral" src="../../public/img/icons/sair.svg" alt="Ícone Sair">
                     <p class="texto-bott">Sair</p>
-                </a>
+                </button>
             </div>
         </nav>
 
@@ -172,10 +172,10 @@ $icones = [
                 </a>
 
                 <div class="sair-mobile">
-                    <a class="botao-lateral-navegacao-mobile" href="../../index.php">
+                    <button class="botao-lateral-navegacao-mobile btn_sair">
                         <img class="icone-menu-lateral-mobile" src="../../public/img/icons/sair.svg" alt="ICONE-SAIR">
-                        <p class="texto-bott-mobile btn_sair">Sair</p>
-                    </a>
+                        <p class="texto-bott-mobile">Sair</p>
+                </button>
                 </div>
             </nav>
         </div>

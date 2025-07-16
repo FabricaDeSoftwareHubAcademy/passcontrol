@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const guicheSelecionado = parseInt(selectGuiche.value);
             sessionStorage.setItem('guicheSelected', guicheSelecionado);
 
-            fetch('../../actions/guiche_liberado.php', {
+            fetch('../actions/guiche_selecionado.php', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             if (guicheSelecionado) {
                 try {
-                    await fetch('../../actions/guiche_liberação.php', {
+                    await fetch('../actions/guiche_liberacao.php', {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json'
@@ -52,8 +52,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 } catch (err) {
                     console.error("Erro ao liberar guichê:", err);
                 }
+                sessionStorage.clear(); 
 
-                sessionStorage.removeItem("guicheSelected");
             }
 
             // Redireciona para tela de login após liberar
