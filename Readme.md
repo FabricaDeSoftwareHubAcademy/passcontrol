@@ -99,11 +99,117 @@ Ativa um usuário inativo.
 
 ### `POST /app/actions/usuario_inativar.php`
 
-Inativa um usuário.
+Inativa um usuário ativo.
 
 ---
 
-## 🧾 Perfil do Usuário
+## 🔄 Recuperação de Senha
+
+### `POST /app/actions/usuario_recuperar.php`
+
+Envia um código de recuperação para o e-mail do usuário com base no CPF informado.
+
+**Parâmetros:**
+
+```json
+{
+  "cpf_user": "12345678901"
+}
+```
+
+**Respostas possíveis:**
+
+* CPF não enviado:
+
+```json
+{
+  "status": 400,
+  "message": "CPF não enviado."
+}
+```
+
+* Usuário não encontrado:
+
+```json
+{
+  "status": 404,
+  "message": "Usuário não encontrado."
+}
+```
+
+* Sucesso no envio:
+
+```json
+{
+  "status": 200,
+  "message": "E-mail enviado com sucesso!"
+}
+```
+
+* Falha no envio:
+
+```json
+{
+  "status": 400,
+  "message": "O e-mail não pôde ser enviado. Erro: <detalhes>"
+}
+```
+
+---
+
+### `POST /app/actions/usuario_redefinir_senha.php`
+
+Redefine a senha do usuário após validação do código de recuperação.
+
+**Parâmetros:**
+
+```json
+{
+  "codigo": "12345",
+  "nova_senha": "Senha@123",
+  "confirmar_senha": "Senha@123"
+}
+```
+
+**Regras da senha:**
+
+* Mínimo de 8 caracteres
+* Pelo menos uma letra maiúscula
+* Pelo menos um número
+* Pelo menos um caractere especial
+
+**Respostas possíveis:**
+
+* Código inválido ou expirado:
+
+```json
+{
+  "status": 401,
+  "message": "Código inválido ou expirado."
+}
+```
+
+* Senhas não conferem ou inválidas:
+
+```json
+{
+  "status": 400,
+  "message": "Senha inválida ou não corresponde à confirmação."
+}
+```
+
+* Redefinição bem-sucedida:
+
+```json
+{
+  "status": 200,
+  "message": "Senha redefinida com sucesso."
+}
+```
+
+---
+
+## 📜 Perfil do Usuário
 
 ### `GET /app/actions/perfil_listar.php`
 
@@ -186,7 +292,7 @@ Envia SMS para um telefone informado.
 
 ---
 
-## 🧾 Códigos de Status
+## 📟 Códigos de Status
 
 | Código | Descrição                |
 | ------ | ------------------------ |
@@ -200,7 +306,7 @@ Envia SMS para um telefone informado.
 
 ---
 
-## 📎 Observações
+## 📌 Observações
 
 * A autenticação utiliza sessão PHP com `$_SESSION`.
 * Os endpoints estão localizados em `/app/actions/`.
