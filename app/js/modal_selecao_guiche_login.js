@@ -2,7 +2,13 @@ document.addEventListener("DOMContentLoaded", () => {
     const btn_validacao = document.querySelector(".confirm_SelecaoGuiche");
     const modalvalidacao = document.querySelector(".fundo-selecao-guiche");
     const selectGuiche = document.querySelector('select[name="guiche"]');
+    const guichetexto = document.querySelector('#guiche-exibir');
     const botao_sair = document.querySelectorAll(".btn_sair");
+    
+    const texto_salvo = sessionStorage.getItem("guichetexto");
+    if (texto_salvo) {
+        guichetexto.textContent = `${texto_salvo}`;
+    }
 
     // Abre modal se guichê não foi selecionado
     if (!sessionStorage.getItem('guicheSelected') && modalvalidacao) {
@@ -26,6 +32,23 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
         btn_validacao.addEventListener("click", () => {
+            const opcaoselecionada = selectGuiche.options[selectGuiche.selectedIndex];
+            
+            if (!opcaoselecionada || !opcaoselecionada.value) {
+                alert("Por favor, selecione um guichê.");
+                return;
+            }
+
+            const guicheText = opcaoselecionada.textContent.trim();
+            const IdGuiche = opcaoselecionada.value;
+
+            guichetexto.textContent = `${guicheText}`;
+
+            modalvalidacao.classList.remove("show");
+
+            sessionStorage.setItem("IdGuicheSelecionado", IdGuiche);
+            sessionStorage.setItem("guichetexto", guicheText);
+
             modalvalidacao.classList.remove("show");
         });
     }

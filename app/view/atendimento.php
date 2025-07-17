@@ -99,8 +99,8 @@ $id_perfil = $_SESSION['id_perfil_usuario_fk'] ?? null;
                             </div>
                         </div>
                         <div class="numero-guiche-atendimento">
-                            <p class="numero--atendimento">1</p>
-                            <p class="texto-info-atendimento">Guichê</p>
+                            <p id="guiche-exibir" class="numero--atendimento">nada selecionado</p>
+                            <!-- <p class="texto-info-atendimento">Guichê</p> -->
                         </div>
                     </div>
                     <div class="info-atendimento-inicio">
