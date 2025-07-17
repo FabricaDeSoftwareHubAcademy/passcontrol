@@ -7,7 +7,7 @@ if (isset($dados['guiche'])) {
     $id_guiche = (int)$dados['guiche'];
 
     $guiche = new Ponto_Atendimento();
-    $guiche->atualizar_disponivel_atendimento($id_guiche, 1);
+    $guiche->atualizar_disponivel_atendimento($id_guiche, 0);
 
     echo json_encode(["status" => "liberado"]);
 } else {

@@ -83,7 +83,7 @@ Class Ponto_Atendimento{
         $db = new Database('ponto_atendimento');
         return $db->update(
             "id_ponto_atendimento = {$id}",
-            ['disponivel' => $novo_status] 
+            ['disponivel_ponto_atendimento' => $novo_status] 
         );
     }
 }
