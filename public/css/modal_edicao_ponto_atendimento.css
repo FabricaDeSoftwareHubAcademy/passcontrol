@@ -48,6 +48,7 @@
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     position: relative;
     text-align: left;
+    border-radius: 5px;
 }
 
 /* Estilo da linha horizontal */
@@ -91,9 +92,9 @@
 }
 
 /* Grupo de botões */
-.modal-editar-ponto-atendimento .button-group-ponto-atendimento-edicao {
+.button-group-ponto-atendimento-edicao {
     display: flex;
-    justify-content: right;
+    justify-content: end;
     gap: 30px;
     margin-top: 20px;
 }
@@ -141,6 +142,6 @@
     .button-group-ponto-atendimento-edicao {
         display: flex;
         justify-content: center;
-        background-color: #ff0000;
+        /* background-color: #ff0000; */
     }
 }

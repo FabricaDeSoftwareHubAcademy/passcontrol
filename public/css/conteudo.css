@@ -35,12 +35,12 @@
 
 .linha-in{
     width: 90%;
-    height: 0.3125rem;
+    height: 4px;
     background-color: var(--cinza-control);
 }
 .div-botao-info{
   width: 90%;
-  height: 8%;
+  /* height: 8%; */
   align-items: end;
   display: flex;
   flex-direction: column;
@@ -105,9 +105,9 @@
   .titulo-area {
     font-size: 22px;
   }
-  .input-search input{
-    /* width: 9.875rem; */
-  }
+  /* .input-search input{
+    width: 9.875rem;
+  } */
 }
 
 @media screen and (max-width:1080px) {
@@ -131,4 +131,32 @@
     font-size: 11px;
     background-position: right 1px center;
   } */
+}
+
+@media screen and (max-height: 880px) {
+  .tbody-atendimento {
+    height: 300px;
+  }
+  .fundo-area-tabela {
+    margin-top: 1rem;
+  }
+}
+@media screen and (max-height: 740px) {
+  .tbody-atendimento {
+    height: 250px;
+  }
+  .fundo-area-tabela {
+    margin-top: 0.8rem;
+  }
+}
+@media screen and (max-height: 666px) {
+  .tbody-atendimento {
+    height: 220px;
+  }
+  .fundo-area-tabela {
+    margin-top: 0.6rem;
+  }
+  .botoesVoltar-Cadastrar{
+    margin-bottom: 20px;
+  }
 }
