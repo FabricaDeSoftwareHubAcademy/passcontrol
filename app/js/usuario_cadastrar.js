@@ -84,11 +84,10 @@ document.addEventListener("DOMContentLoaded", function () {
                 let response_post = JSON.parse(textResponse);
                 msgErro.innerHTML = '';
 
+                console.log(response_post);
                 if(response_post.status === 'OK'){
                     modalConfirmarSalvarDadosUsu.classList.remove("show");
                     modalDadosSalvos.classList.add("show");
-                    
-                    console.log(response_post);
 
                     buttonOk.addEventListener("click", () => {
                         modalDadosSalvos.classList.remove("show");

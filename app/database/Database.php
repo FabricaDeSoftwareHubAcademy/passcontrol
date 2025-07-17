@@ -96,6 +96,22 @@ class Database {
         }
     }
 
+    public function delete($where){
+        $query = "DELETE FROM $this->table" . " WHERE $where";
+
+        $del = $this->execute($query);
+        $del = $del->rowCount();
+
+        if($del>=1){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+
+    // DELETE FROM `usuario_servico` WHERE `id_usuario_fk`=147 AND `id_servico_fk`=255
+
     public function inner_join_usuario_servico(){
         $query = "SELECT usuario.id_usuario, servico.nome_servico
         FROM usuario

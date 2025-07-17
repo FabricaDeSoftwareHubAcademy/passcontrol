@@ -63,7 +63,7 @@
 .form_editar_dados_usuario{
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 15px;
 }
 
 .container_edit_usuario {
@@ -99,10 +99,12 @@
     align-items: center;
     justify-content: center;
 
-    .foto_usuario{
-        border-radius: 5px;
-        max-height: 50px;
-    }
+}
+.foto_usuario{
+    border-radius: 5px;
+    max-height: 50px;
+    background-color: #FFFFFF;
+    text-align: center;
 }
 
 /* SELECAO SERVICO*/
@@ -134,7 +136,8 @@
   border: 1px solid #ccc;
   max-height: 200px;
   overflow-y: auto;
-  width: 85%;
+  width: 100%;
+  max-width: 520px;
   z-index: 3;
   cursor: auto;
 }
@@ -158,7 +161,7 @@
 /* Grupo de botões */
 .container_botao_form {
   margin-top: 15px;
-  width: 90%;
+  width: 100%;
   display: flex;
   justify-content: end;
   gap: 16px;
@@ -193,6 +196,17 @@
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }
 
+/* Bloquear selecao de texto */
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
 /* Responsividade */
 @media (max-width: 1200px) {
     .modal-editar-dados {
@@ -200,11 +214,11 @@
     }
 }
 
-@media (max-width: 1024px) {
+/* @media (max-width: 1024px) {
     .modal-editar-dados {
         width: 80%;
     }
-}
+} */
 
 @media (max-width: 768px) {
     .modal-editar-dados {
@@ -212,6 +226,25 @@
     }
     .titulo{
         margin-bottom: 20px;
+    }
+    .container_edit_usuario{
+        gap: 2px;
+    }
+    .label_input{
+        font-size: 12px;
+    }
+    .font_input{
+        font-size: 11px;
+    }
+    .foto_usuario{
+        max-height: 40px;
+    }
+    .dropdown_select{
+        left: 0%;
+        bottom: 17%;
+        width: 90%;
+        max-width: inherit;
+        margin: 5%;
     }
 }
 

@@ -38,7 +38,6 @@
   <?php
   include_once "./navegacao.php";
   include_once "../actions/usuario_listar.php";
-  include_once "../actions/servico_listar.php";
   ?>
 
   <section class="Area-Util-Projeto">

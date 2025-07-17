@@ -35,21 +35,25 @@ document.addEventListener("DOMContentLoaded", function() {
             })
 
             let response = await dados_php.json();
-            // console.log(response);
+            console.log(response);
 
             // Preenche os campos do modal com os dados do usuário
-            document.getElementById("id_usuario").value = response.id_usuario;
-            document.getElementById("nome").value = response.nome_usuario;
-            document.getElementById("email").value = response.email_usuario;
-            document.getElementById("cpf").value = response.cpf_usuario;
-            if(!response.url_foto_usuario){
+            document.getElementById("id_usuario").value = response[0].id_usuario;
+            document.getElementById("nome").value = response[0].nome_usuario;
+            document.getElementById("email").value = response[0].email_usuario;
+            document.getElementById("cpf").value = response[0].cpf_usuario;
+            if(!response[0].url_foto_usuario){
                 document.getElementById("foto_usuario").src = 'Imagem não encontrada.';
                 document.getElementById("foto").alt = 'Imagem não encontrada.';
             }else{
-                document.getElementById("foto_usuario").src = response.url_foto_usuario;
-                document.getElementById("foto_nula").value = response.url_foto_usuario;
+                document.getElementById("foto_usuario").src = response[0].url_foto_usuario;
+                document.getElementById("foto_nula").value = response[0].url_foto_usuario;
             }
-            document.getElementById("id_perfil").value = response.id_perfil_usuario_fk;
+            document.getElementById("id_perfil").value = response[0].id_perfil_usuario_fk;
+
+            // document.querySelectorAll(".option_servico").forEach(input => {
+
+            // })
 
             modalContainerEdicao.classList.add("show"); //ABRE O MODAL
 
@@ -150,15 +154,31 @@ document.addEventListener("DOMContentLoaded", function() {
 
                 try {
                     let response_post = JSON.parse(textResponse);
+                    msgErro.innerHTML = '';
+
                     console.log("Resultado: " + response_post);
+                    if(response_post.status == "OK"){
+                        // ABRE O MODAL DE ALTERACOES SALVAS
+                        modalConfirmarAltDadosUsu.classList.remove("show");
+                        modalAlteracaoFeita.classList.add("show");
+    
+                        buttonOk.addEventListener("click", ()=>{
+                            modalAlteracaoFeita.classList.remove("show");
+                            location.reload();
+                        })
+                    }else{
+                        modalConfirmarSalvarDadosUsu.classList.remove("show");
+                        console.log("Erro: ", response_post);
+                        
+                        msgErro.innerHTML += response_post.msg;
+                        modalErro.classList.add("show");
 
-                    // ABRE O MODAL DE ALTERACOES SALVAS
-                    modalConfirmarAltDadosUsu.classList.remove("show");
-                    modalAlteracaoFeita.classList.add("show");
-
-                    buttonOk.addEventListener("click", ()=>{
-                        location.reload();
-                    })
+                        buttonOkErro.addEventListener("click", function(){
+                            formEditarUsu = null;
+                            modalErro.classList.remove("show");
+                        })
+                        return;
+                    }
 
                 } catch (error) {
                     console.error("Erro ao analisar JSON: ", error);

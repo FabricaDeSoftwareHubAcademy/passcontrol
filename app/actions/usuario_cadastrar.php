@@ -32,7 +32,6 @@
             
             $res = $objUser->cadastrar();
             if($res){
-                $status_res = "OK";
                 $res_vincula = "Nao Vinculado";
 
                 //// CAPTURA SERVICOS SELECIONADOS
@@ -50,7 +49,7 @@
                     $res_vincula = "Nao Vinculado: $erro";
                 }
                 
-                $resposta = array( "msg" => "Usuario cadastrado com sucesso", "status" => $status_res, "servico" => $res_vincula);
+                $resposta = array( "msg" => "Usuario cadastrado com sucesso", "status" => "OK", "servico" => $res_vincula);
                 echo json_encode($resposta);
             }else{
                 $resposta = array( "msg" => "Erro ao cadastrar", "status" => "ERRO", "servico" => "Nao Vinculado");
