@@ -55,7 +55,7 @@
                 <li class="email-usu"><?= htmlspecialchars($_SESSION['email_usuario']) ?></li>
                 <li><a class="usu-util open-editar-dados">Editar Informações</a></li>
                 <li><a class="usu-util open-alterar-senha">Alterar Senha</a></li>
-                <li><a class="usu-util usu-sair" href="../../index.php">Sair</a></li>
+                <li><button class="usu-util usu-sair btn_sair">Sair</button></li>
             </ul>
         </nav>
     </div>

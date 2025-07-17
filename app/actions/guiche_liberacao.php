@@ -15,4 +15,3 @@ if (isset($dados['guiche'])) {
     echo json_encode(["erro" => "Guichê não informado"]);
 }
 
-}

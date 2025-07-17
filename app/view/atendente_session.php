@@ -7,6 +7,7 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="../../public/css/navegacao.css">
+    <link rel="stylesheet" href="../../public/css/modal_confirmacao_saida.css">
     <link rel="stylesheet" href="../../public/css/menu_eli.css">
     <link rel="stylesheet" href="../../public/css/modal_alterar_dados_login.css">
     <link rel="stylesheet" href="../../public/css/modal_confirmacao_dados.css">
@@ -18,6 +19,7 @@
     <script src="../../public/js/modal_alterar_dados_login.js" defer></script>
     <script src="../../public/js/navegacao_menu_lateral.js" defer></script>
     <script src="../../public/js/monitor_modal.js" defer></script>
+    <script src="../../public/js/modal_confimarcao_saida.js" defer></script>
 
 </head>
 <body>
@@ -52,7 +54,7 @@
                 <li class="email-usu"><?= htmlspecialchars($_SESSION['email_usuario']) ?></li>
                 <li><a class="usu-util open-editar-dados">Editar Informações</a></li>
                 <li><a class="usu-util open-alterar-senha">Alterar Senha</a></li>
-                <li><a class="usu-util usu-sair" href="../../index.php">Sair</a></li>
+                <li><button class="usu-util usu-sair btn_sair">Sair</button></li>
             </ul>
         </nav>
     </div>
@@ -124,6 +126,7 @@
 
     <?php
         include "../../public/modais/modal_alterar_dados_login.php";
+        include "../../public/modais/modal_confirmacao_saida.php";
         include "../../public/modais/modal_confirmacao_dados.php";
         // include "../../public/modais/modal_alterar_senha.php";
         include "./monitor_modal.php";
