@@ -53,15 +53,14 @@ $guiches = $guiche->buscar(null, " status_ponto_atendimento DESC");
         <!-- INICIO DA ÁREA ÚTIL DA PÁGINA -->
         <!-- <div id="PontoAtendimentoCad"> -->
         <div class="topo-tela-PontoAtendimentoCad">
-            <div class="sev">
-                <p id="Ponto-atendimento">Ponto de Atendimento</p>
-                <div class="campo-busca">
-                    <input id="buscar" type="text" placeholder="Buscar Registro">
-                </div>
-
+            <div class="titulo-area">
+                <span id="Ponto-atendimento">Ponto de Atendimento</span>
             </div>
-            <span class="linha-in"></span>
+            <div class="campo-busca">
+                <input id="buscar" type="text" placeholder="Buscar Registro">
+            </div>
         </div>
+        <span class="linha-in"></span>
 
         <div class="fundo-area-tabela">
             <table class="tabela">
