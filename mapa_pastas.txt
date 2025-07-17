@@ -1,30 +1,53 @@
 /passcontrol
-│
-├── .env # Variáveis de ambiente (NUNCA subir para o GitHub)
-├── .mapa_pastas # Modelo para orientar a equipe
-├── .gitignore # Ignorar arquivos sensíveis e pastas desnecessárias
-│
-├── /app # Arquivos públicos acessados pelo navegador
-│ ├── admin # Página inicial
-│ ├── classes # Página de login
-│ └── database # Arquivos de estilo
-│ └──
-│
-├── /public # Arquivos públicos acessados pelo navegador
-│ ├── css # Página inicial
-│ ├── img # Página de login
-│ ├── include # Painel principal
-│ ├── js/ # Scripts da interface
-│ └── modais # Arquivos de estilo
-│
-│
-├── /refatoramento # Funções duplicadas ou em reorganização
-│ ├──
-│ └──
-│
-├── /sql # Scripts e arquivos de banco de dados
-│ └── init.sql # Script de criação das tabelas
-│
-├── /tests # Testes automatizados ou manuais
-│
-└── README.md # Documentação do projeto
+
+Passcontrol
+├───.vscode
+├───app
+│   ├───actions
+│   ├───classes
+│   ├───database
+│   ├───js
+│   └───view
+├───public
+│   ├───css
+│   ├───img
+│   │   ├───icone-servicos
+│   │   ├───icons
+│   │   ├───img-menu
+│   │   ├───img-modais
+│   │   ├───logo_animation
+│   │   ├───Menus
+│   │   └───uploads
+│   ├───include
+│   ├───js
+│   └───modais
+├───refatoracao
+│   ├───desnecessario
+│   ├───modais desnecessarios
+│   │   ├───html_desnecessarios_modais
+│   │   ├───ModalAtivacaoServico
+│   │   ├───ModalConfirmacaoDosDados
+│   │   ├───ModalConfirmacaoDosDadosRegistrados
+│   │   │   └───.vscode
+│   │   ├───ModalConfirmaDados
+│   │   ├───ModalEdicaoPontoAtendimento
+│   │   ├───ModalInativacaoServico
+│   │   ├───Modal_Alerta_Alteracoes_Realizadas
+│   │   ├───Modal_Ativacao_Guiche
+│   │   ├───Modal_Ativacao_Servico
+│   │   ├───Modal_Ativacao_Usuario
+│   │   ├───Modal_Confirmacao_Relatorio_Gerado
+│   │   ├───Modal_Confirmacao_Servico_Cadastrado
+│   │   ├───Modal_Fila_Zerada
+│   │   ├───Modal_Inativacao_Servico
+│   │   └───Modal_Inativação_Usuario
+│   └───usuario
+│       └───view
+├───sql
+├───testeesqueciasenha
+└───vendor
+    ├───composer
+    └───phpmailer
+        └───phpmailer
+            ├───language
+            └───src
