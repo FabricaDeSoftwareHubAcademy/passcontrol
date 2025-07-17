@@ -34,17 +34,21 @@ document.addEventListener('DOMContentLoaded', () => {
     const file = inputFoto.files[0];
     if (file) {
       const extensao = file.name.split('.').pop().toLowerCase();
-      const tiposPermitidos = ['image/png', 'image/jpeg'];
-      const extensoesPermitidas = ['png', 'jpg', 'jpeg'];
+      const tiposPermitidos = ['image/png', 'image/jpeg', 'image/jpg'];
+      const extensoesPermitidas = ['png', 'jpg', 'jpeg', 'jfif'];
 
-      if (!tiposPermitidos.includes(file.type) || !extensoesPermitidas.includes(extensao)) {
+      if (
+        (file.type && !tiposPermitidos.includes(file.type)) ||
+        !extensoesPermitidas.includes(extensao)
+      ) {
         feedback.style.color = 'red';
-        feedback.textContent = 'A imagem deve ser PNG ou JPG.';
+        feedback.textContent = 'A imagem deve ser PNG, JPG, JPEG ou JFIF.';
         inputFoto.value = '';
         previewFoto.style.display = 'none';
         previewFoto.src = '';
         return;
       }
+
 
       const reader = new FileReader();
       reader.onload = () => {
@@ -74,8 +78,8 @@ document.addEventListener('DOMContentLoaded', () => {
      // validação de fotas para ver se é png, jpg, jpeg atraves da const tipos permitidos
     if (foto) {
       const extensao = foto.name.split('.').pop().toLowerCase();
-      const tiposPermitidos = ['image/png', 'image/jpeg'];
-      const extensoesPermitidas = ['png', 'jpg', 'jpeg'];
+      const tiposPermitidos = ['image/png', 'image/jpeg', 'image/jpg'];
+      const extensoesPermitidas = ['png', 'jpg', 'jpeg', 'jfif'];
 
       if (!tiposPermitidos.includes(foto.type) || !extensoesPermitidas.includes(extensao)) {
         feedback.style.color = 'red';
