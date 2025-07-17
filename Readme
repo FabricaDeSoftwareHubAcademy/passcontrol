@@ -96,16 +96,6 @@ Criar uma solução moderna, ágil e acessível para gerenciar o atendimento pre
 
 ---
 
-## 🧱 Arquitetura do Sistema
-
-- **Frontend**: [HTML, CSS]
-- **Backend**: [PHP, JS]
-- **Banco de Dados**: [MySQL]
-- **API de SMS**: Integração com serviços de envio de mensagens para notificação de usuários.
-- **Envio emails**: [Composer, PHPMAILER]
-
----
-
 ## 📝 Relatórios e Métricas
 
 O sistema permite geração de relatórios com métricas importantes como:
@@ -130,6 +120,23 @@ O sistema permite geração de relatórios com métricas importantes como:
 - Interface intuitiva;
 - Avisos sonoros para chamadas de senha;
 - Design responsivo para diferentes dispositivos.
+
+---
+
+## ✅ Conclusão
+
+O projeto "Pass Control" foi desenvolvido para atender às necessidades da empresa Nota Control no gerenciamento do atendimento presencial de seus clientes. Ao longo do processo, foi possível aplicar conhecimentos em levantamento de requisitos, modelagem de sistemas, desenvolvimento web (frontend e backend), e integração com APIs externas (envio de SMS e email).
+
+O sistema proporciona:
+- Emissão de senhas digitais com envio por SMS;
+- Acompanhamento em tempo real da fila de atendimento;
+- Registro de tempo e produtividade dos atendimentos;
+- Acessibilidade e interface intuitiva;
+- Relatórios detalhados para suporte à tomada de decisão.
+
+O resultado final é um sistema funcional, escalável e seguro, com potencial para ser expandido ou adaptado a outras realidades semelhantes. A aplicação também reforça o compromisso da empresa com a inovação e com a melhoria contínua do atendimento ao público, adotando práticas sustentáveis como o conceito de "papel zero".
+
+O desenvolvimento contou com a colaboração ativa dos alunos da Fábrica de Software 32, com apoio técnico e pedagógico dos professores, reforçando o aprendizado prático em um cenário real de mercado.
 
 ---
 

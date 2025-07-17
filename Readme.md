@@ -6,6 +6,43 @@
 
 ---
 
+## 🔧 Configuração do .env
+
+Antes de rodar o sistema, crie um arquivo `.env` na raiz do projeto com as seguintes variáveis (baseado no `.example.env`):
+
+
+> ⚠️ **Importante:** Nunca compartilhe seu `.env` real em repositórios públicos. Use o `.example.env` como referência.
+
+---
+
+## 🧱 Arquitetura do Sistema
+
+- **Frontend**: [HTML, CSS]
+- **Backend**: [PHP, JS]
+- **Banco de Dados**: [MySQL]
+- **API de SMS**: Integração com serviços de envio de mensagens para notificação de usuários.
+- **Envio emails**: [Composer, PHPMAILER]
+
+---
+
+## ⚙️ Tecnologias
+
+- PHP 8.1
+- MySQL
+- HTML/CSS
+- JavaScript
+- PHP Mailer
+- Composer
+- API de envio de SMS
+
+## 🚀 Instalação
+
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/FabricaDeSoftwareHubAcademy/passcontrol
+
+---
+
 ## 🔐 Autenticação (Login)
 
 ### `POST /app/actions/usuario_logar.php`
