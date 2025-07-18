@@ -23,6 +23,7 @@ $id_perfil = $_SESSION['id_perfil_usuario_fk'] ?? null;
     <!-- CSS -->
     <link rel="stylesheet" href="../../public/css/navegacao.css">
     <link rel="stylesheet" href="../../public/css/menu_eli.css">
+    <link rel="stylesheet" href="../../public/css/modal_confirmacao_saida.css">
     <link rel="stylesheet" href="../../public/css/atendimento.css">
     <link rel="stylesheet" href="../../public/css/monitor_modal.css">
     <link rel="stylesheet" href="../../public/css/modal_alterar_dados_pessoais.css">
@@ -272,6 +273,7 @@ $id_perfil = $_SESSION['id_perfil_usuario_fk'] ?? null;
 
     <?php
     include_once "./monitor_modal.php"; 
+    include_once "../../public/modais/modal_confirmacao_saida.php";
     include_once "../../public/modais/modal_consultar_fila.php";
     include_once "../../public/modais/modal_chamar_prox_senha.php"; 
     include_once "../../public/modais/modal_iniciar_intervalo.php";

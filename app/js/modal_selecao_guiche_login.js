@@ -3,7 +3,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const modalvalidacao = document.querySelector(".fundo-selecao-guiche");
     const selectGuiche = document.querySelector('select[name="guiche"]');
     const guichetexto = document.querySelector('#guiche-exibir');
+    const modalSaida = document.querySelector('.fundo-confimarcao-saida-sistema');
     const botao_sair = document.querySelectorAll(".btn_sair");
+    const saidaModal = document.querySelector(".save_Saida");
+    const fechaSaida = document.querySelector(".cancel_Saida");
     
     const texto_salvo = sessionStorage.getItem("guichetexto");
     if (texto_salvo) {
@@ -56,6 +59,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Intercepta clique no botão de sair
     botao_sair.forEach(botao => {
         botao.addEventListener("click", async (event) => {
+            modalSaida.classList.add("show");
             event.preventDefault();
 
             const guicheSelecionado = sessionStorage.getItem("guicheSelected");
@@ -71,16 +75,20 @@ document.addEventListener("DOMContentLoaded", () => {
                             guiche: parseInt(guicheSelecionado)
                         })
                     });
-                    console.log("Guichê liberado.");
                 } catch (err) {
                     console.error("Erro ao liberar guichê:", err);
                 }
-                sessionStorage.clear(); 
-
             }
-
+            
             // Redireciona para tela de login após liberar
-            window.location.href = "../../index.php";
         });
+    });
+    saidaModal.addEventListener("click", () => {
+        modalSaida.classList.remove("show");
+        sessionStorage.clear(); 
+        window.location.href = "../../index.php";
+    });
+    fechaSaida.addEventListener("click", () => {
+        modalSaida.classList.remove("show");
     });
 });
