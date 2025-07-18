@@ -972,7 +972,7 @@ thead, .tbody-atendimento tr {
 }
 @media screen and (min-width: 435px) and (max-width: 534px) {
     .topo-area-chamada{
-        margin-top: 0.8rem;
+        margin-top: 1.8rem;
     }
     .fundo-guiche-area-chamada{
         overflow-x: auto;
@@ -1007,7 +1007,7 @@ thead, .tbody-atendimento tr {
     .area-botao-atendimento{
         display: flex;
         gap: 0.4rem;
-        height: 40%;
+        /* height: 46%; */
     }
     .area-botao--guiche-area-chamada{
         gap: 0.4rem;
@@ -1068,7 +1068,7 @@ thead, .tbody-atendimento tr {
     }
     .botao-proxima-senha-atendimento, .botao-encerrar-atendimento,.botao-consultar-fila-atendimento, .botao-intervalo-atendimento {
         width: 100%;
-        height: 4.5rem;
+        height: 3rem;
     }
     .img-proxima-senha-atendimento, .img-encerrar-atendimento-tela, .img-consultar-fila-atendimento, .img-intervalo-atendimento{
         display: none;
@@ -1312,7 +1312,7 @@ thead, .tbody-atendimento tr {
         /* justify-content: flex-start; */
     }
     .meio-guiche-area-chamada{
-        margin-top: 2.5rem;
+        margin-top: 1rem;
     }
     .tbody-atendimento {
         display: block;
@@ -1448,7 +1448,7 @@ thead, .tbody-atendimento tr {
     .area-botao-atendimento{
         display: flex;
         gap: 0.3rem;
-        height: 42%;
+        height: 46%;
     }
     /* .area-botao--guiche-area-chamada{
         gap: 2.2rem;
