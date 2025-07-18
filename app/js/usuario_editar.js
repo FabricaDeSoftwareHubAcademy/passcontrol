@@ -35,7 +35,8 @@ document.addEventListener("DOMContentLoaded", function() {
             })
 
             let response = await dados_php.json();
-            console.log(response);
+
+            // console.log(response);
 
             // Preenche os campos do modal com os dados do usuário
             document.getElementById("id_usuario").value = response[0].id_usuario;
@@ -51,9 +52,28 @@ document.addEventListener("DOMContentLoaded", function() {
             }
             document.getElementById("id_perfil").value = response[0].id_perfil_usuario_fk;
 
-            // document.querySelectorAll(".option_servico").forEach(input => {
+            
+            response[1].forEach(function(id_servico){
+                document.querySelectorAll(".option_servico").forEach((checkbox) =>{
 
-            // })
+                    // console.log(checkbox, id_servico);
+
+                    if(checkbox.getAttribute('value') == id_servico){
+                        checkbox.checked = true;
+                    }
+                })
+            });
+            // checkbox_servico = document.querySelectorAll(".option_servico");
+
+
+            // option_servicos.forEach((checkbox) => {
+            //     checkbox.checked = select_all_servicos.checked;
+            // });
+            
+
+            // document.querySelectorAll("option_servico").value
+            // console.log(response[1]);
+            
 
             modalContainerEdicao.classList.add("show"); //ABRE O MODAL
 

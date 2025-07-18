@@ -10,18 +10,19 @@ if (isset($_GET['id'])) {
     $usuario = $usuarioObj->buscar('id_usuario = '.$id_usuario);
 
     $busca_usuario_servico = $usuarioObj->select_servicos_atendidos();
-    $servico_usuario = array_keys($busca_usuario_servico, $id_usuario);
-    
-    foreach ($busca_usuario_servico as $ser_atendido){
-        if($ser_atendido[0] == $id_usuario){
-            array_push($servico, $ser_atendido[1]);
+
+    $servicos = [];
+    foreach ($busca_usuario_servico as $servico_atendido){ //captura ids dos servicos atendidos e insere em um array
+        if($servico_atendido["id_usuario"] == $id_usuario){
+            // $servicos[] = ["id_servico" => $servico_atendido["id_servico"]];
+            $servicos[] = $servico_atendido["id_servico"];
         }
     }
-    
+
     if ($usuario) {
         // retorna os dados como um objeto JSON
         if($busca_usuario_servico){
-            echo json_encode([$usuario[0], $servico]);
+            echo json_encode([$usuario[0], $servicos]);
         }
         else{
             echo json_encode([$usuario[0], null]);
