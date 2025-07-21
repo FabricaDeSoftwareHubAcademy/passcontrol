@@ -157,24 +157,26 @@ class Usuario
         
         $sucesso = true;
 
-        $limpa = $this->db->delete("id_usuario = ". $id_usuario); // limpa os servicos vinculados do usuario
+        // INSERT INTO usuario_servico (id_usuario_fk, id_servico_fk)
+        // VALUES (142, 252),(142, 253),(142, 254),(142, 255),(142, 256),(142, 257);
+        foreach ($lista_servicos as $id_servico) {
+            $values = [
+                "id_usuario_fk" => $id_usuario,
+                "id_servico_fk" => $id_servico
+            ];
+            $res = $this->db->insert($values);
 
-        if($limpa){
-            foreach ($lista_servicos as $id_servico) {
-                $values = [
-                    "id_usuario_fk" => $id_usuario,
-                    "id_servico_fk" => $id_servico
-                ];
-                $res = $this->db->insert($values);
-    
-                if (!$res) {
-                    $sucesso = false; // marca erro mas continua tentando os outros
-                }
+            if (!$res) {
+                $sucesso = false; // marca erro mas continua tentando os outros
             }
-            return $sucesso;
         }
+        return $sucesso;
+
     }
 
+    public function limpa_servicos_usuario($id_usuario){
+        $limpa = $this->db->delete("id_usuario = ". $id_usuario); // limpa os servicos vinculados do usuario
+    }
 
     public function select_servicos_atendidos(){
         // $this->db = new Database("usuario");

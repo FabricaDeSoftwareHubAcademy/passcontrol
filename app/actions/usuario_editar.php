@@ -63,8 +63,7 @@ elseif (($_SERVER['REQUEST_METHOD'] === 'POST')){
 
             //// CAPTURA SERVICOS SELECIONADOS
                 try{
-                    if(isset($_POST['id_servico'])){
-                        
+                    if(isset($_POST['id_servico'])){                        
 
                         $servicos_selecionados = $_POST['id_servico'];
 

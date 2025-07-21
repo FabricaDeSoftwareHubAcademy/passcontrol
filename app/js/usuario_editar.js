@@ -36,24 +36,26 @@ document.addEventListener("DOMContentLoaded", function() {
 
             let response = await dados_php.json();
 
+            let [usuario, servico] = response; // ALOCA OS ARRAYS DA RESPONSE A VARIAVEIS SEPARADAS --Obg caique
+
             // console.log(response);
 
             // Preenche os campos do modal com os dados do usuário
-            document.getElementById("id_usuario").value = response[0].id_usuario;
-            document.getElementById("nome").value = response[0].nome_usuario;
-            document.getElementById("email").value = response[0].email_usuario;
-            document.getElementById("cpf").value = response[0].cpf_usuario;
-            if(!response[0].url_foto_usuario){
+            document.getElementById("id_usuario").value = usuario.id_usuario;
+            document.getElementById("nome").value = usuario.nome_usuario;
+            document.getElementById("email").value = usuario.email_usuario;
+            document.getElementById("cpf").value = usuario.cpf_usuario;
+            if(!usuario.url_foto_usuario){
                 document.getElementById("foto_usuario").src = 'Imagem não encontrada.';
                 document.getElementById("foto").alt = 'Imagem não encontrada.';
             }else{
-                document.getElementById("foto_usuario").src = response[0].url_foto_usuario;
-                document.getElementById("foto_nula").value = response[0].url_foto_usuario;
+                document.getElementById("foto_usuario").src = usuario.url_foto_usuario;
+                document.getElementById("foto_nula").value = usuario.url_foto_usuario;
             }
-            document.getElementById("id_perfil").value = response[0].id_perfil_usuario_fk;
+            document.getElementById("id_perfil").value = usuario.id_perfil_usuario_fk;
 
             
-            response[1].forEach(function(id_servico){
+            servico.forEach(function(id_servico){ // MARCA OS SERVICOS ATENDIDOS DO USUARIO
                 document.querySelectorAll(".option_servico").forEach((checkbox) =>{
 
                     // console.log(checkbox, id_servico);
@@ -62,18 +64,7 @@ document.addEventListener("DOMContentLoaded", function() {
                         checkbox.checked = true;
                     }
                 })
-            });
-            // checkbox_servico = document.querySelectorAll(".option_servico");
-
-
-            // option_servicos.forEach((checkbox) => {
-            //     checkbox.checked = select_all_servicos.checked;
-            // });
-            
-
-            // document.querySelectorAll("option_servico").value
-            // console.log(response[1]);
-            
+            });            
 
             modalContainerEdicao.classList.add("show"); //ABRE O MODAL
 
@@ -176,7 +167,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     let response_post = JSON.parse(textResponse);
                     msgErro.innerHTML = '';
 
-                    console.log("Resultado: " + response_post);
+                    // console.log("Resultado: " + response_post.message);
                     if(response_post.status == "OK"){
                         // ABRE O MODAL DE ALTERACOES SALVAS
                         modalConfirmarAltDadosUsu.classList.remove("show");
@@ -187,7 +178,7 @@ document.addEventListener("DOMContentLoaded", function() {
                             location.reload();
                         })
                     }else{
-                        modalConfirmarSalvarDadosUsu.classList.remove("show");
+                        modalConfirmarAltDadosUsu.classList.remove("show");
                         console.log("Erro: ", response_post);
                         
                         msgErro.innerHTML += response_post.msg;
@@ -201,13 +192,13 @@ document.addEventListener("DOMContentLoaded", function() {
                     }
 
                 } catch (error) {
-                    console.error("Erro ao analisar JSON: ", error);
+                    console.log("Erro ao analisar JSON: ", error.message);
                     // console.log("Conteúdo não pode ser analisado como JSON:", textResponse);
                 }
             
             });
 
-        
+
             buttonCancelarEdicao.addEventListener("click", () => {
                 modalContainerEdicao.classList.remove("show");
             });
