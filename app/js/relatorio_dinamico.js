@@ -56,17 +56,26 @@ document.addEventListener('DOMContentLoaded', function () {
     iniciarGraficosVazios();
 });
 
+function obterDataAtual() {
+    const hoje = new Date();
+    const ano = hoje.getFullYear();
+    const mes = String(hoje.getMonth() + 1).padStart(2, '0');
+    const dia = String(hoje.getDate()).padStart(2, '0');
+    return `${ano}-${mes}-${dia}`;
+}
+
 function iniciarGraficosVazios() {
+    const hoje = obterDataAtual();
     // Gráfico de barras
     const ctxBar = document.getElementById('graficoBarras').getContext('2d');
     chartBar = new Chart(ctxBar, {
         type: 'bar',
         data: {
-            labels: ['2025-07-01', '2025-07-02'],
+            labels: [hoje, hoje],
             datasets: [{
                 label: 'Atendimentos por Dia',
                 data: [5, 8],
-                backgroundColor: 'rgba(55, 71, 79, 0.7)'
+                backgroundColor: ['#3aa867', '#5fbe7f']
             }]
         },
         options: {
@@ -84,7 +93,7 @@ function iniciarGraficosVazios() {
             datasets: [{
                 label: 'Serviços',
                 data: [10, 20, 5],
-                backgroundColor: ['#37474F', '#90A4AE', '#B0BEC5']
+                backgroundColor: ['#37474F', '#5fbe7f', '#3aa867']
             }]
         },
         options: {
