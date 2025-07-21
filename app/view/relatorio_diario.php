@@ -25,7 +25,8 @@
 </head>
 <body class="control-body-navegacao">
     <?php 
-    include "./navegacao.php"; 
+    include "./navegacao.php";
+    include "./monitor_modal.php";
     /* include "../actions/get_servicos.php"; */
     ?>
 

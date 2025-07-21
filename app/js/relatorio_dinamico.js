@@ -6,13 +6,16 @@ document.addEventListener('DOMContentLoaded', function () {
         const dataInicio = document.querySelector('.inputDate1').value;
         const dataFim = document.querySelector('.inputDate2').value;
         const local = document.getElementById('inputLocal').value;
+        const atendente = document.getElementById('inputAtendente').value;
+        const guiche = document.getElementById('inputGuiche').value;
+
 
         if (!dataInicio || !dataFim) {
             alert('Informe as datas para filtrar.');
             return;
         }
 
-        fetch(`../php/buscar_relatorio.php?inicio=${dataInicio}&fim=${dataFim}&local=${encodeURIComponent(local)}`)
+        fetch(`../php/buscar_relatorio.php?inicio=${dataInicio}&fim=${dataFim}&local=${encodeURIComponent(local)}&atendente=${encodeURIComponent(atendente)}&guiche=${encodeURIComponent(guiche)}`)
             .then(res => res.json())
             .then(dados => {
                 // Atualizar a tabela
@@ -56,7 +59,7 @@ document.addEventListener('DOMContentLoaded', function () {
     iniciarGraficosVazios();
 });
 
-function obterDataAtual() {
+function obterDataAtual() { 
     const hoje = new Date();
     const ano = hoje.getFullYear();
     const mes = String(hoje.getMonth() + 1).padStart(2, '0');
@@ -102,7 +105,6 @@ function iniciarGraficosVazios() {
         }
     });
 }
-
 
 function atualizarGraficos(dias, servicos) {
     // Gráfico de barras
