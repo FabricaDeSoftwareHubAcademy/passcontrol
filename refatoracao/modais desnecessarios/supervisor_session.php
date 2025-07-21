@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,8 +18,6 @@
     <script src="../../public/js/modal_alterar_dados_login.js" defer></script>
     <script src="../../public/js/navegacao_menu_lateral.js" defer></script>
     <script src="../../public/js/monitor_modal.js" defer></script>
-    <script src="../../modal_alterar_dados_login.js" defer></script>
-
 
 </head>
 <body>
@@ -59,6 +56,7 @@
             </ul>
         </nav>
     </div>
+
     <!-- MENU LATERAL -->
     <div class="area-lateral-navegacao">
         <nav class="menu-lateral-navegacao">
@@ -73,7 +71,7 @@
                 <p class="texto-bott">Monitor</p>
             </a>
 
-            <a class="botao-lateal-navegacao" href="./menuadm_usuario.php">
+            <a class="botao-lateal-navegacao" href="./menusup_usuario.php">
                 <img class="icone-menu-lateral" src="../../public/img/icons/gestao.svg" alt="ICONE-GESTAO">
                 <p class="texto-bott">Gestão</p>
             </a>
@@ -83,7 +81,7 @@
                 <p class="texto-bott">Relatórios</p>
             </a>
             <div class="sair-navegacao">
-                <button class="botao-lateal-navegacao btn_sair">
+                <!-- <button class="botao-lateal-navegacao btn_sair"> -->
                     <img class="icone-menu-lateral" src="../../public/img/icons/sair.svg" alt="ICONE-SAIR">
                     <p class="texto-bott">Sair</p>
                 </button>
@@ -124,8 +122,8 @@
                     <p class="texto-bott-mobile">Relatórios</p>
                 </a>
 
-                <div class="sair-mobile">
-                    <button class="botao-lateral-navegacao-mobile btn_sair">
+                <div class="sair-mobile"> 
+                    <!-- <button class="botao-lateral-navegacao-mobile btn_sair"> -->
                         <img class="icone-menu-lateral-mobile" src="../../public/img/icons/sair.svg" alt="ICONE-SAIR">
                         <p class="texto-bott-mobile">Sair</p>
                     </button>
@@ -141,6 +139,5 @@
         // include "../../public/modais/modal_alterar_senha.php";
         include "./monitor_modal.php";
     ?>
-    
 </body>
 </html>
