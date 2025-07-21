@@ -13,6 +13,10 @@ document.addEventListener("DOMContentLoaded", function () {
                 document.getElementById("senha-cliente").innerText = data.senha;
                 document.getElementById("servico-cliente").innerText = data.servico;
 
+                // Pega guichê atual da tela principal
+                const guiche = document.getElementById("guiche-exibir").innerText;
+                document.getElementById("guiche-cliente").innerText = guiche;
+
                 // Exibir modal
                 modal.style.display = "flex";
             } else {

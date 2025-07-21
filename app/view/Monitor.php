@@ -53,7 +53,7 @@ $ultimasChamadas = $db->select($where, 'id_fila_senha DESC', '4')->fetchAll(PDO:
                             </div>
                             <div class="guiche">
                                 <h3>GUICHÊ:</h3>
-                                <h4>test</h4>
+                                <h4>...</h4>
                             </div>
                         </div>
                     </div>
@@ -84,7 +84,7 @@ $ultimasChamadas = $db->select($where, 'id_fila_senha DESC', '4')->fetchAll(PDO:
                     </li>
                     <li>
                         <h2>GUICHÊ:</h2>
-                        <span>test</span>
+                        <span>...</span>
                     </li>
                 </div>
                 <div class="nome-servico">
