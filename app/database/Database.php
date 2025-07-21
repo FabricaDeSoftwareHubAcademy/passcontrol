@@ -96,8 +96,22 @@ class Database {
         }
     }
 
+    public function delete($where){
+        $query = "DELETE FROM $this->table " . " WHERE $where";
+
+        $del = $this->execute($query);
+        $del = $del->rowCount();
+
+        if($del>=1){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+
     public function inner_join_usuario_servico(){
-        $query = "SELECT usuario.id_usuario, servico.nome_servico
+        $query = "SELECT usuario.id_usuario, servico.id_servico, servico.nome_servico
         FROM usuario
         INNER JOIN usuario_servico
         ON usuario.id_usuario = usuario_servico.id_usuario_fk

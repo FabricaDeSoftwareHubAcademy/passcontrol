@@ -33,7 +33,7 @@
 
             <div class="container_edit_usuario">
                 <label class="label_input" for="perfil">Perfil De Acesso</label>
-                <select class="input_dados_edit perfil" form="form_editar_dados_usuario" type="select" name="id_perfil" id="id_perfil" placeholder="Nome do perfil" required>
+                <select class="input_dados_edit font_input" form="form_editar_dados_usuario" type="select" name="id_perfil" id="id_perfil" placeholder="Nome do perfil" required>
                     <?php
                     // // LISTAR PERFIS DE USUARIO
                     foreach ($perfis as $perfil):
@@ -47,7 +47,7 @@
                 <label class="label_input" for="Servico">Servicos Atendidos</label>
                 <div class="container_dropdown">
 
-                    <div class="input_dados_edit font_input selecao_servico">  <!-- FAKE SELECT BTN -->
+                    <div class="input_dados_edit font_input selecao_servico noselect">  <!-- FAKE SELECT BTN -->
                         Selecione Opções
                         <span class="seta_dropdown">></span>
                     </div>
@@ -58,16 +58,12 @@
                             <p>Selecionar todos</p>
                         </label>
                         <span class="linha_select"></span>
-                        <label class="label_option_servico font_input">
-                            <input type="checkbox" class="option_servico" name="id_servico[]">
-                            blau - blau
-                        </label>
                         <?php
                         // // LISTA SERVICOS DISPONIVEIS
                         foreach ($servicos as $servico):
                         ?>
-                        <label class="label_option_servico">
-                            <input type="checkbox" class="option_servico font_input" name="id_servico[]" value="<?= $servico->id_servico ?>">
+                        <label class="label_option_servico font_input">
+                            <input type="checkbox" class="option_servico" name="id_servico[]" value="<?= $servico->id_servico ?>">
                             <?= $servico->nome_servico . " - " . $servico->codigo_servico ?>
                         </label>
                         <?php

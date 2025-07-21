@@ -35,21 +35,36 @@ document.addEventListener("DOMContentLoaded", function() {
             })
 
             let response = await dados_php.json();
+
+            let [usuario, servico] = response; // ALOCA OS ARRAYS DA RESPONSE A VARIAVEIS SEPARADAS --Obg caique
+
             // console.log(response);
 
             // Preenche os campos do modal com os dados do usuário
-            document.getElementById("id_usuario").value = response.id_usuario;
-            document.getElementById("nome").value = response.nome_usuario;
-            document.getElementById("email").value = response.email_usuario;
-            document.getElementById("cpf").value = response.cpf_usuario;
-            if(!response.url_foto_usuario){
+            document.getElementById("id_usuario").value = usuario.id_usuario;
+            document.getElementById("nome").value = usuario.nome_usuario;
+            document.getElementById("email").value = usuario.email_usuario;
+            document.getElementById("cpf").value = usuario.cpf_usuario;
+            if(!usuario.url_foto_usuario){
                 document.getElementById("foto_usuario").src = 'Imagem não encontrada.';
                 document.getElementById("foto").alt = 'Imagem não encontrada.';
             }else{
-                document.getElementById("foto_usuario").src = response.url_foto_usuario;
-                document.getElementById("foto_nula").value = response.url_foto_usuario;
+                document.getElementById("foto_usuario").src = usuario.url_foto_usuario;
+                document.getElementById("foto_nula").value = usuario.url_foto_usuario;
             }
-            document.getElementById("id_perfil").value = response.id_perfil_usuario_fk;
+            document.getElementById("id_perfil").value = usuario.id_perfil_usuario_fk;
+
+            
+            servico.forEach(function(id_servico){ // MARCA OS SERVICOS ATENDIDOS DO USUARIO
+                document.querySelectorAll(".option_servico").forEach((checkbox) =>{
+
+                    // console.log(checkbox, id_servico);
+
+                    if(checkbox.getAttribute('value') == id_servico){
+                        checkbox.checked = true;
+                    }
+                })
+            });            
 
             modalContainerEdicao.classList.add("show"); //ABRE O MODAL
 
@@ -150,24 +165,40 @@ document.addEventListener("DOMContentLoaded", function() {
 
                 try {
                     let response_post = JSON.parse(textResponse);
-                    console.log("Resultado: " + response_post);
+                    msgErro.innerHTML = '';
 
-                    // ABRE O MODAL DE ALTERACOES SALVAS
-                    modalConfirmarAltDadosUsu.classList.remove("show");
-                    modalAlteracaoFeita.classList.add("show");
+                    // console.log("Resultado: " + response_post.message);
+                    if(response_post.status == "OK"){
+                        // ABRE O MODAL DE ALTERACOES SALVAS
+                        modalConfirmarAltDadosUsu.classList.remove("show");
+                        modalAlteracaoFeita.classList.add("show");
+    
+                        buttonOk.addEventListener("click", ()=>{
+                            modalAlteracaoFeita.classList.remove("show");
+                            location.reload();
+                        })
+                    }else{
+                        modalConfirmarAltDadosUsu.classList.remove("show");
+                        console.log("Erro: ", response_post);
+                        
+                        msgErro.innerHTML += response_post.msg;
+                        modalErro.classList.add("show");
 
-                    buttonOk.addEventListener("click", ()=>{
-                        location.reload();
-                    })
+                        buttonOkErro.addEventListener("click", function(){
+                            formEditarUsu = null;
+                            modalErro.classList.remove("show");
+                        })
+                        return;
+                    }
 
                 } catch (error) {
-                    console.error("Erro ao analisar JSON: ", error);
+                    console.log("Erro ao analisar JSON: ", error.message);
                     // console.log("Conteúdo não pode ser analisado como JSON:", textResponse);
                 }
             
             });
 
-        
+
             buttonCancelarEdicao.addEventListener("click", () => {
                 modalContainerEdicao.classList.remove("show");
             });

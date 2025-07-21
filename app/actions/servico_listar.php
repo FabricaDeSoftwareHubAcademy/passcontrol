@@ -1,6 +1,6 @@
 <?php
 require_once "../classes/Servico.php";
 
-$serv = new Servico();
-$servicos = $serv->buscar("status_servico = 1", "nome_servico ASC");
+$obj_servico = new Servico();
+$servicos = $obj_servico->buscar(null, "nome_servico ASC");
 ?>

@@ -59,10 +59,29 @@ elseif (($_SERVER['REQUEST_METHOD'] === 'POST')){
         
         $res = $objUser->atualizar($id_usuario);
         if($res){
-            $resposta = array( "msg" => "Editado com sucesso", "img" => $path_foto, "status" => "OK");
+            $res_vincula = "Nao Vinculado";
+
+            //// CAPTURA SERVICOS SELECIONADOS
+                try{
+                    if(isset($_POST['id_servico'])){                        
+
+                        $servicos_selecionados = $_POST['id_servico'];
+
+                        $vincula = $objUser->vincular_servico($objUser->cpf,$servicos_selecionados);
+                        
+                        if($vincula){
+                            $res_vincula = "Vinculado";
+                        }
+                    }
+                }catch(Exception $erro){
+                    $res_vincula = "Nao Vinculado: $erro";
+                }
+
+            
+            $resposta = array( "msg" => "Editado com sucesso", "img" => $path_foto, "status" => "OK", "servico" => $res_vincula);
             echo json_encode($resposta);
         }else{
-            $resposta = array( "msg" => "Erro ao editar", "img" => $res_img, "status" => "ERRO");
+            $resposta = array( "msg" => "Erro ao editar", "img" => $res_img, "status" => "ERRO", "servico" => "Nao Vinculado");
             echo json_encode($resposta);
         }                    
     }

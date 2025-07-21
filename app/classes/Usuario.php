@@ -82,37 +82,6 @@ class Usuario
         }
     }
 
-    // Função para definir uma nova senha e atualizar o status de primeiro acesso
-    // public function definirNovaSenha($id_usuario, $nova_senha)
-    // {
-        // Verifica se a senha contém pelo menos um número, uma letra maiúscula e um caractere especial
-        // $id_usuario = (int)$id_usuario;
-        
-        // $nova_senha_hash = password_hash($nova_senha, PASSWORD_DEFAULT);
-        // Atualiza a senha e marca como não sendo mais primeiro acesso
-    //     $resultado = $this->db->update("id_usuario = $id_usuario", [
-    //         'senha_usuario' => $nova_senha_hash,
-    //         'primeiro_login' => 0
-    //     ]);
-        
-    //     if ($resultado === false) {
-    //         return json_encode([
-    //             'success' => false,
-    //             'message' => 'Erro ao atualizar a senha.'
-    //         ]);
-    //     } elseif ($resultado === 0) {
-    //         return json_encode([
-    //             'success' => true,
-    //             'message' => 'Mesma senha anterior.'
-    //         ]);
-    //     } else {
-    //         return json_encode([
-    //             'success' => true,
-    //             'message' => 'Senha atualizada com sucesso.'
-    //         ]);
-    //     }
-    // }
-
     public function definirNovaSenha($id_usuario, $nova_senha)
 {
     $id_usuario = (int)$id_usuario;
@@ -187,7 +156,9 @@ class Usuario
         $this->db = new Database("usuario_servico");
         
         $sucesso = true;
-        
+
+        // INSERT INTO usuario_servico (id_usuario_fk, id_servico_fk)
+        // VALUES (142, 252),(142, 253),(142, 254),(142, 255),(142, 256),(142, 257);
         foreach ($lista_servicos as $id_servico) {
             $values = [
                 "id_usuario_fk" => $id_usuario,
@@ -200,52 +171,18 @@ class Usuario
             }
         }
         return $sucesso;
+
+    }
+
+    public function limpa_servicos_usuario($id_usuario){
+        $limpa = $this->db->delete("id_usuario = ". $id_usuario); // limpa os servicos vinculados do usuario
     }
 
     public function select_servicos_atendidos(){
-        $this->db = new Database("usuario");
+        // $this->db = new Database("usuario");
 
         $res = $this->db->inner_join_usuario_servico()->fetchAll(PDO::FETCH_ASSOC);
 
         return $res;
     }
 }
-
-// Função para listar perfil de usuário com base no ID do perfil
-// public function listar_perfil_usuario($id_perfil)
-// {
-//     $db = new Database('perfil_usuario');
-//     return $db->select("id_perfil_usuario = $id_perfil")->fetch(PDO::FETCH_ASSOC);
-// }
-
-
-
-// // Função para gerar uma senha aleatória
-// public function gerar_senha($length = 10)
-// {
-    //     $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ*+-&@!#$.';
-    //     $charactersLength = strlen($characters);
-    //     $randomPw = '';
-    
-    //     for ($i = 0; $i < $length; $i++) {
-        //         $randomPw .= $characters[random_int(0, $charactersLength - 1)];
-        //     }
-        
-        //     return $randomPw;
-// }
-
-
-
-// busca e retorna todas as permissões que estão vinculadas a um perfil de usuário específico
-// public function listar_permissoes_por_perfil(int $id_perfil): array
-// {
-    
-//     $sql  = "SELECT p.nome_permissao
-//              FROM permissao p
-//              INNER JOIN perfil_permissao pp 
-//                ON p.id_permissao = pp.id_permissao
-//              WHERE pp.id_perfil_usuario = :idPerfil
-//              ORDER BY p.nome_permissao";
-//     $stmt = $this->db->execute($sql, ['idPerfil' => $id_perfil]);
-//     return $stmt->fetchAll(PDO::FETCH_COLUMN);
-// }
