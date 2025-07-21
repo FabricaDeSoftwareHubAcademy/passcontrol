@@ -123,8 +123,27 @@ class Usuario
         ]);
     }
 }
+    public function verificarSenhaAtual($id_usuario, $senha_atual)
+        {
+            
+            // Garante que o banco está apontando para a tabela "usuario"
+            $this->db = new Database("usuario");
 
-    
+            // ira buscar a senha do usuário com o id correspondente.
+            $resultado = $this->db->select("id_usuario = $id_usuario", null, null, 'senha_usuario');
+
+            // se não acha-la o rowCount será 0, ou seja, não existe no banco
+            if ($resultado->rowCount() === 0) {
+                return false;
+            }
+
+            $linha = $resultado->fetch(PDO::FETCH_ASSOC);
+            $senha_hash = $linha['senha_usuario'];
+            
+            //ira verificar se a senha atual corresponde ao harsh no banco
+            return password_verify($senha_atual, $senha_hash);
+        }
+        
     private function valida_cpf($cpf)
     {
         $cpf = preg_replace('/[^0-9]/', '', $cpf);
