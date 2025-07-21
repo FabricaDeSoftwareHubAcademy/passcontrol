@@ -14,6 +14,15 @@ document.addEventListener('DOMContentLoaded', () => {
   feedback.style.marginTop = '15px';
   formEditDados.appendChild(feedback);
 
+  // Função reutilizável para validar a imagem
+  function imagemValida(file) {
+    const tiposPermitidos = ['image/png', 'image/jpeg', 'image/jpg'];
+    const extensoesPermitidas = ['png', 'jpg', 'jpeg'];
+    const extensao = file.name.split('.').pop().toLowerCase();
+
+    return tiposPermitidos.includes(file.type) && extensoesPermitidas.includes(extensao);
+  }
+
   // abrir o modal_alterar_dados_login
   buttonAbrir?.addEventListener('click', () => {
     modalContainer.classList.add('show');
@@ -33,22 +42,14 @@ document.addEventListener('DOMContentLoaded', () => {
   inputFoto?.addEventListener('change', () => {
     const file = inputFoto.files[0];
     if (file) {
-      const extensao = file.name.split('.').pop().toLowerCase();
-      const tiposPermitidos = ['image/png', 'image/jpeg', 'image/jpg'];
-      const extensoesPermitidas = ['png', 'jpg', 'jpeg', 'jfif'];
-
-      if (
-        (file.type && !tiposPermitidos.includes(file.type)) ||
-        !extensoesPermitidas.includes(extensao)
-      ) {
+      if (!imagemValida(file)) {
         feedback.style.color = 'red';
-        feedback.textContent = 'A imagem deve ser PNG, JPG, JPEG ou JFIF.';
+        feedback.textContent = 'A imagem deve ser PNG, JPG, JPEG';
         inputFoto.value = '';
         previewFoto.style.display = 'none';
         previewFoto.src = '';
         return;
       }
-
 
       const reader = new FileReader();
       reader.onload = () => {
@@ -68,6 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const email = document.getElementById('email-login').value.trim();
     const foto = inputFoto.files[0];
+
     // validação do email
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
@@ -75,17 +77,12 @@ document.addEventListener('DOMContentLoaded', () => {
       feedback.textContent = 'Informe um e-mail válido.';
       return;
     }
-     // validação de fotas para ver se é png, jpg, jpeg atraves da const tipos permitidos
-    if (foto) {
-      const extensao = foto.name.split('.').pop().toLowerCase();
-      const tiposPermitidos = ['image/png', 'image/jpeg', 'image/jpg'];
-      const extensoesPermitidas = ['png', 'jpg', 'jpeg', 'jfif'];
 
-      if (!tiposPermitidos.includes(foto.type) || !extensoesPermitidas.includes(extensao)) {
-        feedback.style.color = 'red';
-        feedback.textContent = 'A imagem deve ser PNG ou JPG.';
-        return;
-      }
+    // validação da imagem
+    if (foto && !imagemValida(foto)) {
+      feedback.style.color = 'red';
+      feedback.textContent = 'A imagem deve ser PNG, JPG, JPEG.';
+      return;
     }
 
     const formData = new FormData(formEditDados);
@@ -103,7 +100,7 @@ document.addEventListener('DOMContentLoaded', () => {
         modalConfirmar.classList.add('show');
 
         btnOkCadastrar.onclick = () => {
-          window.location.reload(); // Atualiza a página após clicar em "Ok"
+          window.location.reload();
         };
       } else {
         feedback.style.color = 'red';

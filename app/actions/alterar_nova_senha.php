@@ -1,7 +1,6 @@
 <?php
 session_start();
-require_once '../database/Database.php';
-
+require_once '../classes/Usuario.php';
 header('Content-Type: application/json');
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -20,36 +19,21 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         exit;
     }
 
-    $db = new Database();
-    $conn = $db->getConnection();
+    $usuario = new Usuario();
 
-    // Buscar a senha atual no banco
-    $stmt = $conn->prepare("SELECT senha_usuario FROM usuario WHERE id_usuario = :id");
-    $stmt->bindParam(':id', $id_usuario);
-    $stmt->execute();
+    // Verifica se a senha atual é válida
 
-    if ($stmt->rowCount() === 0) {
-        echo json_encode(['success' => false, 'message' => 'Usuário não encontrado.']);
-        exit;
+    if ($usuario->verificarSenhaAtual($id_usuario, $senha_atual)) {
+        // se a senha atual corresponder ao hars do DB, então ira para $resulatado
+    }else{
+        // se a senha atual não corresponder ao hars do DB, então ira cair no falso no caso o succes: false
+    echo json_encode(['success' => false, 'message' => 'Senha atual incorreta.']);
+    exit;
     }
 
-    $row = $stmt->fetch(PDO::FETCH_ASSOC);
-    $senha_hash = $row['senha_usuario'];
+    // Atualiza para a nova senha
+    $resultado = $usuario->definirNovaSenha($id_usuario, $nova_senha);
 
-    if (!password_verify($senha_atual, $senha_hash)) {
-        echo json_encode(['success' => false, 'message' => 'Senha atual incorreta.']);
-        exit;
-    }
-
-    $nova_senha_hash = password_hash($nova_senha, PASSWORD_DEFAULT);
-
-    $update = $conn->prepare("UPDATE usuario SET senha_usuario = :nova WHERE id_usuario = :id");
-    $update->bindParam(':nova', $nova_senha_hash);
-    $update->bindParam(':id', $id_usuario);
-
-    if ($update->execute()) {
-        echo json_encode(['success' => true, 'message' => 'Senha alterada com sucesso.']);
-    } else {
-        echo json_encode(['success' => false, 'message' => 'Erro ao atualizar a senha.']);
-    }
+    // O método já retorna um JSON, então só precisa imprimir
+    echo $resultado;
 }
