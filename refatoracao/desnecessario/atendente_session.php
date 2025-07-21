@@ -7,6 +7,7 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="../../public/css/navegacao.css">
+    <link rel="stylesheet" href="../../public/css/modal_confirmacao_saida.css">
     <link rel="stylesheet" href="../../public/css/menu_eli.css">
     <link rel="stylesheet" href="../../public/css/modal_alterar_dados_login.css">
     <link rel="stylesheet" href="../../public/css/modal_confirmacao_dados.css">
@@ -18,6 +19,7 @@
     <script src="../../public/js/modal_alterar_dados_login.js" defer></script>
     <script src="../../public/js/navegacao_menu_lateral.js" defer></script>
     <script src="../../public/js/monitor_modal.js" defer></script>
+    <!-- <script src="../../public/js/modal_confimarcao_saida.js" defer></script> -->
 
 </head>
 <body>
@@ -56,12 +58,11 @@
             </ul>
         </nav>
     </div>
-
     <!-- MENU LATERAL -->
     <div class="area-lateral-navegacao">
         <nav class="menu-lateral-navegacao">
 
-            <a class="botao-lateal-navegacao" href="./atendimento.php">
+            <a class="botao-lateal-navegacao">
                 <img class="icone-menu-lateral" src="../../public/img/icons/atend.svg" alt="ICONE-ATENDIMENTO">
                 <p class="texto-bott">Atendimento</p>
             </a>
@@ -71,17 +72,12 @@
                 <p class="texto-bott">Monitor</p>
             </a>
 
-            <a class="botao-lateal-navegacao" href="./menusup_usuario.php">
-                <img class="icone-menu-lateral" src="../../public/img/icons/gestao.svg" alt="ICONE-GESTAO">
-                <p class="texto-bott">Gestão</p>
-            </a>
-
-            <a class="botao-lateal-navegacao" href="./relatorio_diario.php">
+            <a class="botao-lateal-navegacao" href="#">
                 <img class="icone-menu-lateral" src="../../public/img/icons/nota.svg" alt="ICONE-RELATORIOS">
                 <p class="texto-bott">Relatórios</p>
             </a>
             <div class="sair-navegacao">
-                <button class="botao-lateal-navegacao btn_sair">
+                <!-- <button class="botao-lateal-navegacao btn_sair"> -->
                     <img class="icone-menu-lateral" src="../../public/img/icons/sair.svg" alt="ICONE-SAIR">
                     <p class="texto-bott">Sair</p>
                 </button>
@@ -102,7 +98,7 @@
                     <img class="icone-menu-lateral-mobile" src="../../public/img/icons/Cross.svg" alt="ICONE-ATEND">
                 </a>
 
-                <a class="botao-lateral-navegacao-mobile" href="./atendimento.php">
+                <a class="botao-lateral-navegacao-mobile">
                     <img class="icone-menu-lateral-mobile" src="../../public/img/icons/atend.svg" alt="ICONE-ATEND">
                     <p class="texto-bott-mobile">Atendimento</p>
                 </a>
@@ -112,18 +108,13 @@
                     <p class="texto-bott-mobile">Monitor</p>
                 </a>
 
-                <a class="botao-lateral-navegacao-mobile" href="./menuadm_usuario.php">
-                    <img class="icone-menu-lateral-mobile" src="../../public/img/icons/gestao.svg" alt="ICONE-GESTAO">
-                    <p class="texto-bott-mobile">Gestão</p>
-                </a>
-
                 <a class="botao-lateral-navegacao-mobile" href="./relatorio_diario.php">
                     <img class="icone-menu-lateral-mobile" src="../../public/img/icons/nota.svg" alt="ICONE-RELATORIOS">
                     <p class="texto-bott-mobile">Relatórios</p>
                 </a>
 
-                <div class="sair-mobile"> 
-                    <button class="botao-lateral-navegacao-mobile btn_sair">
+                <div class="sair-mobile">
+                    <!-- <button class="botao-lateral-navegacao-mobile btn_sair"> -->
                         <img class="icone-menu-lateral-mobile" src="../../public/img/icons/sair.svg" alt="ICONE-SAIR">
                         <p class="texto-bott-mobile">Sair</p>
                     </button>
@@ -135,6 +126,7 @@
 
     <?php
         include "../../public/modais/modal_alterar_dados_login.php";
+        // include "../../public/modais/modal_confirmacao_saida.php";
         include "../../public/modais/modal_confirmacao_dados.php";
         // include "../../public/modais/modal_alterar_senha.php";
         include "./monitor_modal.php";

@@ -1,12 +1,20 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const btn_validacao = document.querySelector(".confirm_SelecaoGuiche");
+    // MODAL SELEÇÃO DO GUICHE
     const modalvalidacao = document.querySelector(".fundo-selecao-guiche");
+    const btn_validacao = document.querySelector(".confirm_SelecaoGuiche");
     const selectGuiche = document.querySelector('select[name="guiche"]');
+    
+    // EXIBI O NA TELA ATENDIMENTO QUANDO SELECIONA O GUICHE
     const guichetexto = document.querySelector('#guiche-exibir');
-    const modalSaida = document.querySelector('.fundo-confimarcao-saida-sistema');
+    
+    // BOTÃO SAIR MENU LATERAL
     const botao_sair = document.querySelectorAll(".btn_sair");
+    
+    // MODAL CONFIRMAÇÃO DA SAIDA DO SISTEMA
+    const modalSaida = document.querySelector('.fundo-confimarcao-saida-sistema');
     const saidaModal = document.querySelector(".save_Saida");
     const fechaSaida = document.querySelector(".cancel_Saida");
+    
     
     const texto_salvo = sessionStorage.getItem("guichetexto");
     if (texto_salvo) {
@@ -58,7 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Intercepta clique no botão de sair
     botao_sair.forEach(botao => {
-        botao.addEventListener("click", async (event) => {
+    botao.addEventListener("click", async (event) => {
             modalSaida.classList.add("show");
             event.preventDefault();
 
@@ -79,8 +87,6 @@ document.addEventListener("DOMContentLoaded", () => {
                     console.error("Erro ao liberar guichê:", err);
                 }
             }
-            
-            // Redireciona para tela de login após liberar
         });
     });
     saidaModal.addEventListener("click", () => {

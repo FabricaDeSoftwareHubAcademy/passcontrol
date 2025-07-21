@@ -55,12 +55,15 @@ $icones = [
     <!-- CSS -->
     <link rel="stylesheet" href="../../public/css/navegacao.css">
     <link rel="stylesheet" href="../../public/css/menu_eli.css">
+    
+    <link rel="stylesheet" href="../../public/css/modal_confirmacao_saida.css">
     <link rel="stylesheet" href="../../public/css/modal_alterar_dados_login.css">
     <link rel="stylesheet" href="../../public/css/modal_alterar_senha.css">
     <link rel="stylesheet" href="../../public/css/modal_alterar_dados_pessoais.css">
     <link rel="stylesheet" href="../../public/css/modal_confirmacao_dados.css">
-  
+    
     <!-- JS -->
+    <script src="../../app/js/modal_selecao_guiche_inicial.js" defer></script>
     <script src="../../public/js/modal_alterar_senha.js" defer></script>
     <script src="../../public/js/modal_alterar_dados_login.js" defer></script>
     <script src="../../public/js/navegacao_menu_lateral.js" defer></script>
@@ -175,7 +178,7 @@ $icones = [
                     <button class="botao-lateral-navegacao-mobile btn_sair">
                         <img class="icone-menu-lateral-mobile" src="../../public/img/icons/sair.svg" alt="ICONE-SAIR">
                         <p class="texto-bott-mobile">Sair</p>
-                </button>
+                    </button>
                 </div>
             </nav>
         </div>
@@ -183,9 +186,10 @@ $icones = [
     </div>
 
     <?php
-        include "../../public/modais/modal_alterar_dados_login.php";
-        include "../../public/modais/modal_confirmacao_dados.php";
-        include "../../public/modais/modal_alterar_senha.php";
+        include_once "../../public/modais/modal_confirmacao_saida.php";
+        include_once "../../public/modais/modal_alterar_dados_login.php";
+        include_once "../../public/modais/modal_confirmacao_dados.php";
+        include_once "../../public/modais/modal_alterar_senha.php";
     ?>
 </body>
 </html>
