@@ -25,7 +25,7 @@ if ($senhaPrincipal) {
         <img src="../../public/img/icons/logo_control.svg" alt="Logo Nota Control" class="logo-confirmacao-presenca">
         <h1 class="title-confirmacao-presenca">Confirmar Presença</h1>
         <hr class="row-confirmacao-presenca">
-        <p class="desk-info-confirmacao-presenca"><b>Guichê 1</b></p>
+        <p class="desk-info-confirmacao-presenca"><b id="guiche-cliente">---</b></p>
         <p class="name-confirmacao-presenca"><b id="nome-cliente">---</b></p>
         <p class="info-confirmacao-presenca"><b>Senha:</b> <span class="senha-confirmacao-presenca" id="senha-cliente">---</span></p>
         <p class="info-confirmacao-presenca"><b>Serviço:</b> <strong id="servico-cliente">---</strong></p>
