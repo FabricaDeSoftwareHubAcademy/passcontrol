@@ -35,11 +35,38 @@ Antes de rodar o sistema, crie um arquivo `.env` na raiz do projeto com as segui
 - Composer
 - API de envio de SMS
 
-## 🚀 Instalação
+---
 
-1. Clone o repositório:
-   ```bash
-   git clone https://github.com/FabricaDeSoftwareHubAcademy/passcontrol
+# 🚀 Instalação Rápida do PassControl
+
+# 1. Clone o repositório
+git clone https://github.com/FabricaDeSoftwareHubAcademy/passcontrol.git
+cd passcontrol
+
+# 2. Copie o arquivo de variáveis de ambiente
+cd .example.env 
+
+# 3. Instale as dependências do PHP com Composer
+composer install
+
+# 4. Crie o banco de dados no MySQL (substitua pelo nome desejado)
+# Acesse o MySQL:
+mysql -u root -p
+
+# No prompt do MySQL, execute:
+CREATE DATABASE passcontrol CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+EXIT;
+
+# 5. Importe o arquivo SQL com a estrutura e dados iniciais
+mysql -u root -p passcontrol < database/passcontrol.sql
+
+# 6. Inicie o servidor local (Apache + MySQL via XAMPP, Laragon ou similar)
+
+# 7. Acesse o sistema via navegador:
+http://localhost/passcontrol
+
+# ✅ Pronto!
+# Faça login com um usuário existente ou crie um novo via banco ou pagina do admin.
 
 ---
 
