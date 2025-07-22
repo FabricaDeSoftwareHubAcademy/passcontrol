@@ -160,7 +160,7 @@ $id_perfil = $_SESSION['id_perfil_usuario_fk'] ?? null;
             </div>
             <div class="fundo-guiche-area-chamada">
                 <table class="tabela_atendimento-guiche-area-chamada">
-                    <thead>
+                    <thead class="thead-atendimento">
                         <tr>
                             <th>Ordem</th>
                             <th>Nome</th>

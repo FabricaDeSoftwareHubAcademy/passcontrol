@@ -1,4 +1,4 @@
-.fundo-area-tabela {
+.fundo-area-tabela-listar-usuario {
   width: 90%;
   font-weight: 600;
   border-radius: 5px;
@@ -12,7 +12,7 @@
   align-items: center;
 }
 
-.tabela {
+.tabela-listar-usuario {
   border-collapse: collapse;
   background-color: rgba(255, 255, 255, 0.5);
   width: 96%;
@@ -23,11 +23,11 @@
   transition: overflow 0.3s ease;
 }
 
-.tabela:hover {
+.tabela-listar-usuario:hover {
   overflow-y: auto;
 }
 
-.tabela th {
+.tabela-listar-usuario th {
   background-color: var(--cinza-control);
   color: var(--cor-fundo);
 }
@@ -78,33 +78,33 @@ thead,
   border: none;
 }
 
-.tabela .tbody-atendimento::-webkit-scrollbar {
+.tabela-listar-usuario .tbody-atendimento::-webkit-scrollbar {
   width: 0.1px;
   opacity: 0;
   transition: opacity 0.3s ease;
 }
 
-.tabela:hover .tbody-atendimento::-webkit-scrollbar {
+.tabela-listar-usuario:hover .tbody-atendimento::-webkit-scrollbar {
   opacity: 1;
   width: 5px;
 }
 
-.tabela .tbody-atendimento::-webkit-scrollbar-thumb {
+.tabela-listar-usuario .tbody-atendimento::-webkit-scrollbar-thumb {
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 4px;
 
 }
 
-.tabela .tbody-atendimento::-webkit-scrollbar-track {
+.tabela-listar-usuario .tbody-atendimento::-webkit-scrollbar-track {
   background: transparent;
 }
 
-.tabela .tbody-atendimento::-webkit-scrollbar-thumb:hover {
+.tabela-listar-usuario .tbody-atendimento::-webkit-scrollbar-thumb:hover {
   background-color: rgba(0, 0, 0, 0.7);
   width: 5px;
 }
 
-.tabela:hover .tbody-atendimento,
+.tabela-listar-usuario:hover .tbody-atendimento,
 thead {
   margin-right: -5px;
 }
@@ -164,11 +164,11 @@ thead,
   left: 37px;
 }
 
-.tipo-ponto-atendimento {
+.matricula-nome-listar-usuario {
   width: 15%;
 }
 
-.identificador-ponto-atendimento {
+.perfil-servico-listar-usuario {
   width: 23%;
 }
 
@@ -179,30 +179,30 @@ thead,
 }
 
 @media screen and (min-width: 901px) and (max-width: 1000px){
-    .fundo-area-tabela {
+    .fundo-area-tabela-listar-usuario {
     overflow: auto;
   }
-  .tipo-ponto-atendimento {
+  .matricula-nome-listar-usuario {
     width: 180px;
   }
-  .identificador-ponto-atendimento {
+  .perfil-servico-listar-usuario {
     width: 140px;
   }
-    .alterar-status-editar-ponto-atendimento {
+    .alterar-status-listar-usuario {
     width: 80px;
   }
 }
 @media screen and (min-width: 320px) and (max-width: 750px){
-    .fundo-area-tabela {
+    .fundo-area-tabela-listar-usuario {
     overflow: auto;
   }
-  .tipo-ponto-atendimento {
+  .matricula-nome-listar-usuario {
     width: 180px;
   }
-  .identificador-ponto-atendimento {
+  .perfil-servico-listar-usuario {
     width: 140px;
   }
-    .alterar-status-editar-ponto-atendimento {
+    .alterar-status-listar-usuario {
     width: 80px;
   }
 }

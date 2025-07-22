@@ -1,203 +1,216 @@
 @import url(root.css);
 
-.Area-Util-Projeto {
+.cadastro_usuario {
   align-items: center;
-}
-
-.container_titulo {
-  width: 90%;
-  height: 8%;
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  justify-content: end;
-  margin-top: 2rem;
-}
-.container_titulo .titulo_pagina {
-  font-family: var(--font-main);
-  color: var(--cinza-control);
-  font-size: 1.125rem;
-  font-size: 24px;
-}
-
-.container_linha {
-  width: 90%;
-  height: auto;
-  display: flex;
-}
-.container_linha .linha {
-  /* border: 0; */
-  width: 100%;
-  height: 5px;
-  background: var(--cinza-control);
-  /* margin: 20px 0; */
-}
-
-.container_form {
-  /* border: 1px dotted red ; */
-  background-color: rgba(255, 255, 255, 0.5);
-  margin-top: 2rem;
-  width: 90%;
-  height: 60%;
-  display: flex;
-  flex-direction: row;
-  align-items: start;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  border-radius: 5px;
-  padding: 45px 5%;
-  gap: 5%;
-  /* padding: auto; */
-}
-
-.container_input {
-  width: 45%;
-  padding: 10px;
-  display: flex;
-  flex-direction: column;
-}
-
-.input_dados {
-  font-size: 14px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  width: 100%;
-  outline: none;
-  background-color: white;
-  padding: 11px;
-  cursor: pointer;
-}
-
-.input_dados:focus {
-  border: 1px solid black;
-}
-
-/* seleção de perfil de acesso */
-
-.labeledit {
-  font-size: 14px;
-  font-weight: bold;
-  margin-bottom: 5px;
-  color: #333;
-}
-
-.opcao {
-  color: #555;
-}
-
-/* informação de erro */
-.erro {
-  color: red;
-  font-size: 0.85rem;
-  margin-top: 4px;
-  display: block;
-}
-
-/* botao da tela */
-.container_botao_form {
-  margin-top: 15px;
-  width: 90%;
-  display: flex;
-  justify-content: end;
-  gap: 16px;
-}
-
-.botao_volto,
-.botao_salvo {
-  z-index: 1;
-  padding: 10px 20px;
-  font-size: 1rem;
-  font-weight: 500;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s, transform 0.2s;
-  color: #fff;
-  background-color: #33404d;
-}
-
-.botao_volto:hover {
-  color: #ffffff;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-}
-
-.botao_salvo:hover {
-  color: #3aa867;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-}
 
 
-/* SELECAO SERVICO*/
-
-.selecao_servico {
-  width: 100%;
-  text-align: left;
-  cursor: pointer;
-  display: flex;
-  justify-content: space-between;
-}
-.seta_dropdown{
-  display: flex;
-  transform: rotate(90deg);
-  font-size: 12px;
-  font-family: 'Arial Narrow';
-}
-.linha_select{
-  margin: 1.5px 0;
-  display: flex;
-  background-color: rgba(0, 0, 0, 0.3);
-  width: 100%;
-  min-height: 1px;
-}
-.dropdown_select{
-  display: none;
-  flex-direction: column;
-  position: absolute;
-  border: 1px solid #ccc;
-  max-height: 200px;
-  overflow-y: auto;
-  width: calc(((90% - 5%) - 50%) - 10px);
-  z-index: 3;
-  cursor: auto;
-}
-.select_show{
-  display: flex;
-}
-.label_option_servico{
-  display: flex;
-  flex-direction: row;
-  padding: 7px;
-  cursor: pointer;
-  border-radius: 5px;
-  width: 100%;
-  gap: 10px;
-}
-
-.label_option_servico:hover{
-  background-color: rgba(0, 0, 0, 0.2);
-}
-
-
-
-/* RESPONSIVIDADE */
-@media screen and (max-width:660px) {
-  .container_form {
-    display: block;
-    height: 70%;
-    padding: 20px 5%;
+  .container_titulo {
+    width: 90%;
+    height: 8%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: end;
+    margin-top: 2rem;
   }
-  .container_input {
+
+  .container_titulo .titulo_pagina {
+    font-family: var(--font-main);
+    color: var(--cinza-control);
+    font-size: 1.125rem;
+    font-size: 24px;
+  }
+
+  .container_linha {
+    width: 90%;
+    height: auto;
+    display: flex;
+  }
+
+  .container_linha .linha {
+    /* border: 0; */
     width: 100%;
+    height: 5px;
+    background: var(--cinza-control);
+    /* margin: 20px 0; */
   }
-  .dropdown_select{
-    width: 76%;
-  }
-}
-@media screen and (max-height: 770px) {
+
   .container_form {
-    overflow: auto;
+    /* border: 1px dotted red ; */
+    background-color: rgba(255, 255, 255, 0.5);
+    margin-top: 2rem;
+    width: 90%;
+    height: 60%;
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border-radius: 5px;
+    padding: 45px 5%;
+    gap: 5%;
+    /* padding: auto; */
   }
-  .select_show{
-    bottom: 0;
+
+  .container_input {
+    width: 45%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
   }
+
+  .input_dados {
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    outline: none;
+    background-color: white;
+    padding: 11px;
+    cursor: pointer;
+  }
+
+  .input_dados:focus {
+    border: 1px solid black;
+  }
+
+  /* seleção de perfil de acesso */
+
+  .labeledit {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+  }
+
+  .opcao {
+    color: #555;
+  }
+
+  /* informação de erro */
+  .erro {
+    color: red;
+    font-size: 0.85rem;
+    margin-top: 4px;
+    display: block;
+  }
+
+  /* botao da tela */
+  .container_botao_form {
+    margin-top: 15px;
+    width: 90%;
+    display: flex;
+    justify-content: end;
+    gap: 16px;
+  }
+
+  .botao_volto,
+  .botao_salvo {
+    z-index: 1;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: 500;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    color: #fff;
+    background-color: #33404d;
+  }
+
+  .botao_volto:hover {
+    color: #ffffff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  }
+
+  .botao_salvo:hover {
+    color: #3aa867;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  }
+
+
+  /* SELECAO SERVICO*/
+
+  .selecao_servico {
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .seta_dropdown {
+    display: flex;
+    transform: rotate(90deg);
+    font-size: 12px;
+    font-family: 'Arial Narrow';
+  }
+
+  .linha_select {
+    margin: 1.5px 0;
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 100%;
+    min-height: 1px;
+  }
+
+  .dropdown_select {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    border: 1px solid #ccc;
+    max-height: 200px;
+    overflow-y: auto;
+    width: calc(((90% - 5%) - 50%) - 10px);
+    z-index: 3;
+    cursor: auto;
+  }
+
+  .select_show {
+    display: flex;
+  }
+
+  .label_option_servico {
+    display: flex;
+    flex-direction: row;
+    padding: 7px;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .label_option_servico:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+
+
+
+  /* RESPONSIVIDADE */
+  @media screen and (max-width:660px) {
+    .container_form {
+      display: block;
+      height: 70%;
+      padding: 20px 5%;
+    }
+
+    .container_input {
+      width: 100%;
+    }
+
+    .dropdown_select {
+      width: 76%;
+    }
+  }
+
+  @media screen and (max-height: 770px) {
+    .container_form {
+      overflow: auto;
+    }
+
+    .select_show {
+      bottom: 0;
+    }
+  }
+
 }

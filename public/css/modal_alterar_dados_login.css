@@ -1,10 +1,3 @@
-/* Reset básico */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 /* Estilo dos botões */
 .botao-modal-alterar-dados {
     background-color: #33404D;
@@ -15,7 +8,7 @@
 }
 
 /* Estilo do container do modal */
-.edit_dados {
+.z {
     background: rgba(0, 0, 0, 0.5);
     width: 100vw;
     height: 100vh;
@@ -50,7 +43,7 @@
 }
 
 /* Estilo da linha horizontal */
-.line {
+.line-alterar-dados-login {
     border: none;
     border-top: 2px solid #000;
     width: 100%; 

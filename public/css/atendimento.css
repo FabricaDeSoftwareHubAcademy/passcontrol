@@ -7,15 +7,6 @@
     --font-main: Inter, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: var(--font-main);
-    font-size: bolder;
-}
-
-
 .area-chamada-atendimento {
     width: 100%;
     height: 100%;
@@ -375,7 +366,7 @@ td {
 td, th {
     width: calc(+140px);
 }
-thead, .tbody-atendimento tr { 
+.thead-atendimento, .tbody-atendimento tr { 
     display: table; 
     width: 100%; 
     table-layout: fixed; 
@@ -410,11 +401,11 @@ thead, .tbody-atendimento tr {
     width: 5px; 
 } 
 
-.tabela_atendimento-guiche-area-chamada:hover .tbody-atendimento,thead{ 
+.tabela_atendimento-guiche-area-chamada:hover .tbody-atendimento,.thead-atendimento{ 
     margin-right: -5px;
 } 
 
-thead, .tbody-atendimento tr {
+.thead-atendimento, .tbody-atendimento tr {
     display: table;
     width: 100%;
     table-layout: fixed; 

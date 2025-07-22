@@ -5,8 +5,8 @@
         <hr class="linha-confirmacao-saida-sistema">
         <p class="texto-confirmacao-saida-sistema"><b>Deseja Sair do Sistema?</b></p>        
         <div class="button-group-confirmacao-saida-sistema">
-                <button class="botao-modal cancel_Saida">Não</button>
-                <button class="botao-modal save_Saida">Sim</button>
+                <button class="botao-modal cancel_SaidaSis">Não</button>
+                <button class="botao-modal save_SaidaSis">Sim</button>
             </div>
     </section>
 </div>
