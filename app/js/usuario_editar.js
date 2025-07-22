@@ -150,7 +150,7 @@ document.addEventListener("DOMContentLoaded", function() {
             confirmarEdicao.addEventListener("click", async function(event){
                 event.preventDefault();
 
-                const formEditarUsu = new FormData(document.getElementById("form_editar_dados_usuario"));
+                let formEditarUsu = new FormData(document.getElementById("form_editar_dados_usuario"));
                 // console.log(formEditarUsu);
                 
                 // Envia os dados via POST
@@ -172,6 +172,7 @@ document.addEventListener("DOMContentLoaded", function() {
                         // ABRE O MODAL DE ALTERACOES SALVAS
                         modalConfirmarAltDadosUsu.classList.remove("show");
                         modalAlteracaoFeita.classList.add("show");
+                        console.log(response_post);
     
                         buttonOk.addEventListener("click", ()=>{
                             modalAlteracaoFeita.classList.remove("show");

@@ -36,8 +36,8 @@ document.addEventListener("DOMContentLoaded", () => {
       erroNovaSenha.textContent = "";
       erroConfirmarSenha.textContent = "";
   
-      if (inputNovaSenha.value.length < 2) {
-        erroNovaSenha.textContent = "A senha deve ter ao menos 2 caracteres.";
+      if (inputNovaSenha.value.length < 8) {
+        erroNovaSenha.textContent = "A senha deve ter ao menos 8 caracteres.";
         valido = false;
       }
   

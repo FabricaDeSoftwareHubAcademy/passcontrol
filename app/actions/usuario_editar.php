@@ -41,7 +41,7 @@ elseif (($_SERVER['REQUEST_METHOD'] === 'POST')){
     }
     
     // VERIFICA SE OS DADOS FORAM PREENCHIDOS
-    if($nome != null || $email != null || $cpf != null || $id_perfil != null){   
+    if($nome != null || $email != null || $cpf != null || $id_perfil != null){
         
         // INSERE OS DADOS NO OBJETO $objUser
         $objUser = new Usuario();
@@ -58,32 +58,38 @@ elseif (($_SERVER['REQUEST_METHOD'] === 'POST')){
         $objUser->id_perfil = filter_var($id_perfil, FILTER_SANITIZE_NUMBER_INT);
         
         $res = $objUser->atualizar($id_usuario);
-        if($res){
-            $res_vincula = "Nao Vinculado";
 
-            //// CAPTURA SERVICOS SELECIONADOS
-                try{
-                    if(isset($_POST['id_servico'])){                        
-
-                        $servicos_selecionados = $_POST['id_servico'];
-
-                        $vincula = $objUser->vincular_servico($objUser->cpf,$servicos_selecionados);
-                        
-                        if($vincula){
-                            $res_vincula = "Vinculado";
-                        }
-                    }
-                }catch(Exception $erro){
-                    $res_vincula = "Nao Vinculado: $erro";
-                }
-
+        $msg = $res ? "Editado com sucesso" : "Dados não alterados";
+        
+        $res_vincula = "Nao Vinculado";
+        
+        //// CAPTURA SERVICOS SELECIONADOS
+        try{
+            $limpa = $objUser->limpa_servicos_usuario($id_usuario);
+            // $res_vincula = $limpa ? "Limpou" : "Nao limpou";
             
-            $resposta = array( "msg" => "Editado com sucesso", "img" => $path_foto, "status" => "OK", "servico" => $res_vincula);
-            echo json_encode($resposta);
-        }else{
-            $resposta = array( "msg" => "Erro ao editar", "img" => $res_img, "status" => "ERRO", "servico" => "Nao Vinculado");
-            echo json_encode($resposta);
-        }                    
+            if($limpa){
+                if(isset($_POST['id_servico'])){
+                    $servicos_selecionados = $_POST['id_servico'];
+            
+                    $vincula = $objUser->vincular_servico(null, $id_usuario,$servicos_selecionados);
+                    if($vincula){
+                        $res_vincula = "Vinculado";
+                    }
+                }
+            }
+        }catch(Exception $erro){
+            $res_vincula = ("Nao Vinculado: " . $erro);
+        }
+        
+        // $status = $res ? "OK" : "ERRO";
+        
+        $status = ($res || $limpa) ? "OK" : "ERRO";
+        
+
+        // BOA SORTE NA MANUTENCAO S2
+        $resposta = array("msg" => $msg, "img" => $res_img ." ". $path_foto, "status" => $status, "servico" => $res_vincula);
+        echo json_encode($resposta);
     }
     else{
         $resposta = array("msg" => "Preencha todos os campos", "status" => "ERRO");
