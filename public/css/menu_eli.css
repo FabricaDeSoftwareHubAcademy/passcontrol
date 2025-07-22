@@ -9,11 +9,6 @@
   --cor-active: rgb(219 219 219);
   --font-main: Inter, sans-serif;
 }
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 body {
   font-family: var(--font-main);
   background: var(--cor-fundo);

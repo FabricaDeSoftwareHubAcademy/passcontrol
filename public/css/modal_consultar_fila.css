@@ -7,13 +7,6 @@
     --font-main: Inter, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
-*{
-    font-family: var(--font-main);
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 /* Estilo dos botões */
 .botao-modal-consultar-fila {
     background-color: #33404D;
@@ -131,7 +124,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 96%;
+    width: 100%;
     align-items: end;
 }
 
@@ -164,6 +157,7 @@
 }
 .senhas-guiche-area-chamada p{
     font-size: 20px;
+    margin-right: 6px;
 }
 
 .principal-consultar-fila{
@@ -347,9 +341,9 @@ thead, tbody tr {
 }
 @media screen and (min-width: 710px) and (max-width: 999px) {
     .senhas-guiche-area-chamada{
-        height: 3.4rem;
-        gap: 1rem;
-        margin-bottom: 11px;
+        height: 3rem;
+        gap: 0.1rem;
+        margin-right: 2.4rem;
     }
     .fundo-fila-tabela{
         overflow-x: auto;
@@ -363,9 +357,9 @@ thead, tbody tr {
 }
 @media screen and (min-width: 635px) and (max-width: 709px) {
     .senhas-guiche-area-chamada{
-        height: 3.4rem;
+        height: 3rem;
         gap: 1rem;
-        margin-bottom: 11px;
+        margin-right: 1rem;
     }
     .fundo-fila-tabela{
         overflow-x: auto;
@@ -381,7 +375,7 @@ thead, tbody tr {
     .senhas-guiche-area-chamada{
         height: 4rem;
         gap: 1rem;
-        margin-bottom: 11px;
+        margin-right: 2rem;
     }
     .fundo-fila-tabela{
         overflow-x: auto;
@@ -404,8 +398,8 @@ thead, tbody tr {
     .senhas-guiche-area-chamada{
         height: 4rem;
         gap: 1rem;
-        margin: 0;
-        margin-bottom: 11px;
+        margin-right: 1rem;
+        /* margin-bottom: 11px; */
     }
     .senhas-guiche-area-chamada p{
         font-size: 18px;
@@ -422,22 +416,34 @@ thead, tbody tr {
 }
 
 @media screen and (min-width: 200px) and (max-width: 434px) {
+    .area-em-cima-tabela-fila {
+        display: block;
+        width: 52%;
+    }
+    .topo-direita-consultar-fila{
+        width: 100%;
+        margin-top: 8px;
+    }
+    .buscar-consultar {
+        padding: 0px;
+    }
     #divBusca{
-        margin: 0;
+        align-content: center;
+        justify-content: center;
     }
     #txtBusca{
-        width: 140px;
+        width: 220px;
         margin: 0;
     }
     .senhas-guiche-area-chamada{
-        height: 4rem;
+        height: 3rem;
         gap: 1rem;
         margin-bottom: 11px;
         margin: 0;
         width: 680px;
     }
     .senhas-guiche-area-chamada p{
-        font-size: 18px;
+        font-size: 14px;
     }
     .fundo-fila-tabela{
         overflow-x: auto;
@@ -459,16 +465,16 @@ thead, tbody tr {
     .logo-consultar-fila{
         margin-right: 8px;
     }
-    .senhas-guiche-area-chamada{
+    /* .senhas-guiche-area-chamada{
         margin-bottom: 11px;
-    }
+    } */
     .modal-consultar-fila {
         width: 90% !important;
         min-width: auto !important; /* Permite ajuste dinâmico */
         padding: 15px !important;
     }
     .topo-esquerda-consultar-fila h3{
-        font-size: 18px;
+        font-size: 22px;
         margin-bottom: 0px;
     }
     .logo-consultar-fila{

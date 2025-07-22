@@ -40,7 +40,7 @@
   include_once "../actions/usuario_listar.php";
   ?>
 
-  <section class="Area-Util-Projeto">
+  <section class="Area-Util-Projeto cadastro_usuario">
     <div class="container_titulo">
       <span class="titulo_pagina">Cadastrar Usuário</span>
     </div>

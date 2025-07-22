@@ -1,9 +1,3 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 :root {
     --color-background-1: #f9f9f9;
     --color-background-2: #353D46;

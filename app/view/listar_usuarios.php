@@ -49,28 +49,28 @@
 
     <section class="Area-Util-Projeto">
 
-        <div class="area-info">
-            <div class="header-area">
-                <div class="titulo-area">
+        <div class="area-info-listar-usuario">
+            <div class="header-area-listar-usuario">
+                <div class="titulo-area-listar-usuario">
                     <span>Usuarios Cadastrados</span>
                 </div>
-                <div class="input-search">
+                <div class="input-search-listar-usuario">
                     <input type="search" name="Buscar Atendente" placeholder="Buscar Atendente">
                 </div>
             </div>
-            <div class="linha-in">
+            <div class="linha-in-listar-usuario">
                 <span></span>
             </div>
-            <div class="fundo-area-tabela">
-                <table class="tabela">
+            <div class="fundo-area-tabela-listar-usuario">
+                <table class="tabela-listar-usuario">
                     <thead>
                         <tr>
-                            <th class="tipo-ponto-atendimento" scope="col">Nome</th>
-                            <th class="tipo-ponto-atendimento" scope="col">Matricula</th>
-                            <th class="identificador-ponto-atendimento" scope="col">Perfil</th>
-                            <th class="identificador-ponto-atendimento" >Serviços</th>
-                            <th class="alterar-status-editar-ponto-atendimento" scope="col">Editar</th>
-                            <th class="alterar-status-editar-ponto-atendimento" scope="col">Status</th>
+                            <th class="matricula-nome-listar-usuario" scope="col">Nome</th>
+                            <th class="matricula-nome-listar-usuario" scope="col">Matricula</th>
+                            <th class="perfil-servico-listar-usuario" scope="col">Perfil</th>
+                            <th class="perfil-servico-listar-usuario" >Serviços</th>
+                            <th class="alterar-status-listar-usuario" scope="col">Editar</th>
+                            <th class="alterar-status-listar-usuario" scope="col">Status</th>
                         </tr>
                     </thead>
                     <tbody class="tbody-atendimento">
@@ -80,10 +80,10 @@
                             $id_perfil = $objperfil->buscar("id_perfil_usuario =" . $usuario['id_perfil_usuario_fk'], null );
                         ?>
                         <tr>
-                            <td class="tipo-ponto-atendimento" scope="col"> <?= $usuario['nome_usuario'] ?> </td>
-                            <td class="tipo-ponto-atendimento" scope="col"> <?= $usuario['email_usuario'] ?> </td>
-                            <td class="identificador-ponto-atendimento" scope="col"> <?= $id_perfil[0]['nome_perfil_usuario'] ?> </td>
-                            <td class="identificador-ponto-atendimento"> 
+                            <td class="matricula-nome-listar-usuario" scope="col"> <?= $usuario['nome_usuario'] ?> </td>
+                            <td class="matricula-nome-listar-usuario" scope="col"> <?= $usuario['email_usuario'] ?> </td>
+                            <td class="perfil-servico-listar-usuario" scope="col"> <?= $id_perfil[0]['nome_perfil_usuario'] ?> </td>
+                            <td class="perfil-servico-listar-usuario"> 
                                 <?php
                                     foreach($servicos_prestados as $servico_usuario){
                                         if($servico_usuario["id_usuario"] == $usuario["id_usuario"]){
@@ -95,14 +95,14 @@
                                     }
                                 ?>
                             </td>
-                            <td class="alterar-status-editar-ponto-atendimento" scope="col">
+                            <td class="alterar-status-listar-usuario" scope="col">
                                 <div class="status-editar-center">
                                     <button class="openEditar" data-id="<?= $usuario["id_usuario"] ?>">
                                         <img src="../../public/img/icons/editar.png" alt="">
                                     </button>
                                 </div>
                             </td>
-                            <td class="alterar-status-editar-ponto-atendimentor" scope="col">
+                            <td class="alterar-status-listar-usuario" scope="col">
                                 <div class="openInativarAtivar" data-id="<?= $usuario["id_usuario"] ?>">
                                     <button class="toggle-btn <?= $UsuStatus ?>">
                                         <div class="circulo"> </div>
@@ -114,7 +114,7 @@
                     </tbody>
                 </table>
             </div>
-            <div class="div-botao-info">
+            <div class="div-botao-info-listar-usuario">
                 <button class="add-func" type="submit" onclick="window.location.href='./cadastro_usuario.php';">Novo Funcionario</button>
             </div>
         </div>

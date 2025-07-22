@@ -12,20 +12,20 @@
             <div class="inf-modal-edit-servico">
                 <div class="container-edit-nome-servico">
                     <label class="label-servico"><b>Nome do Serviço</b></label>
-                    <input type="text" id="nome_edit_servico" name="nome_servico" class="input-text-edit">
+                    <input type="text" id="nome_edit_servico" name="nome_servico" class="input-text-edit-serv">
                     <input type="hidden" id="id_edit_servico" name="id_servico">
                 </div>
             </div>
             <!-- CÓDIGO SERVIÇO -->
             <div class="edit-codigo-servico">
                 <label class="label-servico"><b>Código do Serviço</b></label>
-                <input type="text" id="identificador_codigo_servico" name="codigo_servico" class="input-text-edit">
+                <input type="text" id="identificador_codigo_servico" name="codigo_servico" class="input-text-edit-serv">
             </div>
             <!-- IMAGEM DO SERVIÇO -->
             <div class="img-edit-servico">
                 <label class="label-servico"><b>Editar Imagem Serviço</b></label>
-                <img id="preview_imagem_editar" src="#" alt="Sem Imagem" class="manipula-img-editar" >
-                <input type="file" id="imagem_edit_servico" name="url_imagem_servico" class="input-text-edit" accept="image/*">
+                <img id="preview_imagem_editar" src="#" alt="Sem Imagem" class="manipula-img-editar-serv" >
+                <input type="file" id="imagem_edit_servico" name="url_imagem_servico" class="input-text-edit-serv" accept="image/*">
             </div>
             <!-- BOTÕES -->
             <div class="button-grup-edit-servico">

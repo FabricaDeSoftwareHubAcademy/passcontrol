@@ -1,7 +1,7 @@
 @import url(navegacao.css);
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
-.area-info{
+.area-info-listar-usuario{
   z-index: 1;
   position: relative;
   width: 100%;
@@ -17,7 +17,7 @@
   font-style: bold;
 }
 
-.header-area {
+.header-area-listar-usuario {
   width: 90%;
   height: 8%;
   display: flex;
@@ -26,19 +26,19 @@
   margin-top: 2rem;
   }
 
-.titulo-area {
+.titulo-area-listar-usuario {
     font-size: 24px;
     color: var(--cinza-control);
     font-style: bold;
     font-weight: bold;
 }
 
-.linha-in{
+.linha-in-listar-usuario {
     width: 90%;
     height: 4px;
     background-color: var(--cinza-control);
 }
-.div-botao-info{
+.div-botao-info-listar-usuario{
   width: 90%;
   /* height: 8%; */
   align-items: end;
@@ -47,7 +47,7 @@
   position: relative;
   bottom: -0.625;
 }
-.area-info .div-botao-info .add-func{
+.area-info-listar-usuario .div-botao-info-listar-usuario .add-func{
   width: 90px;
   height: 40px;
   background-color: var(--cinza-control);
@@ -60,12 +60,12 @@
   font-size: 12px;
 }
 
-.area-info .div-botao-info .add-func:hover {
+.area-info-listar-usuario .div-botao-info-listar-usuario .add-func:hover {
   text-decoration: none;
   color: var(--verde-control);
   filter: drop-shadow(4px 4px 2px gray);
 }
-.input-search input{
+.input-search-listar-usuario input{
   float: left;
   padding: 5px;
   padding-left: 5px;
@@ -102,10 +102,10 @@
     font-size: 0.875rem;
     white-space: nowrap;
   }
-  .titulo-area {
+  .titulo-area-listar-usuario {
     font-size: 22px;
   }
-  /* .input-search input{
+  /* .input-search-listar-usuario input{
     width: 9.875rem;
   } */
 }
@@ -117,16 +117,16 @@
 }
 
 @media screen and (max-width:500px) {
-  .header-area {
+  .header-area-listar-usuario {
     flex-direction: column;
     gap: 1rem; 
     height: auto;
     align-items: start;
   }
-  /* .titulo-area {
+  /* .titulo-area-listar-usuario {
     font-size: 0.938rem;
   }
-  .input-search input{
+  .input-search-listar-usuario input{
     width: 8.2rem;
     font-size: 11px;
     background-position: right 1px center;

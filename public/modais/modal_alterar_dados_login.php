@@ -1,8 +1,8 @@
-<div class="edit_dados">
+<div class="z">
     <section class="edit-dados-login">
         <img src="../../public/img/icons/logo_control.svg" alt="Loading..." class="logo-dados-login">
         <h1 class="titulo-alterar-login">Alterar Dados</h1>
-        <hr class="line">
+        <hr class="line-alterar-dados-login">
             <form class="editDados" id="formEditDados" method="POST" enctype="multipart/form-data">
                 <input type="hidden" name="id_usuario_login" id="id_usuario_login"
                     value="<?= $_SESSION['id_usuario'] ?>">
