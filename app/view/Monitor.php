@@ -4,9 +4,12 @@ require_once '../database/Database.php';
 
 $db = new Database('fila_senha');
 $servicoDB = new Database('servico');
+$guicheDB = new Database('ponto_atendimento'); // novo
 
+// Busca a senha atual em atendimento
 $senhaPrincipal = $db->select("status_fila_senha = 'em atendimento'", 'id_fila_senha DESC', '1')->fetch(PDO::FETCH_ASSOC);
 
+// Busca últimas chamadas (exceto a principal)
 $where = "status_fila_senha IN ('em atendimento', 'atendido')";
 if ($senhaPrincipal) {
     $where .= " AND id_fila_senha != " . intval($senhaPrincipal['id_fila_senha']);
@@ -41,19 +44,20 @@ $ultimasChamadas = $db->select($where, 'id_fila_senha DESC', '4')->fetchAll(PDO:
                 <?php foreach ($ultimasChamadas as $senha): ?>
                     <?php
                         $servico = $servicoDB->select('id_servico = ' . $senha['id_servico_fk'])->fetch(PDO::FETCH_ASSOC);
+                        $guiche = $guicheDB->select('id_ponto_atendimento = ' . (int)$senha['id_ponto_atendimento_fk'])->fetch(PDO::FETCH_ASSOC);
                         $prioridade = $senha['prioridade_fila_senha'] ? 'PR' : 'CM';
                         $numero = str_pad($senha['id_fila_senha'], 3, '0', STR_PAD_LEFT);
                     ?>
                     <div class="caixa-das-senhas">
-                        <h2><?= htmlspecialchars($senha['nome_fila_senha']) ?></h2>
+                        <h2><?= htmlspecialchars($senha['nome_fila_senha'] ?? '...') ?></h2>
                         <div class="conjunto-senhas">
                             <div class="senha">
                                 <h3>SENHA:</h3>
                                 <h4><?= $prioridade ?> <?= $numero ?></h4>
-                            </div>
+                            </div><br>
                             <div class="guiche">
                                 <h3>GUICHÊ:</h3>
-                                <h4>...</h4>
+                                <h4><?= htmlspecialchars($guiche['nome_ponto_atendimento'] ?? '...') ?> - <?= htmlspecialchars($guiche['identificador_ponto_atendimento'] ?? '') ?></h4>
                             </div>
                         </div>
                     </div>
@@ -71,11 +75,12 @@ $ultimasChamadas = $db->select($where, 'id_fila_senha DESC', '4')->fetchAll(PDO:
             <?php if ($senhaPrincipal): ?>
                 <?php
                     $servico = $servicoDB->select('id_servico = ' . $senhaPrincipal['id_servico_fk'])->fetch(PDO::FETCH_ASSOC);
+                    $guiche = $guicheDB->select('id_ponto_atendimento = ' . (int)$senhaPrincipal['id_ponto_atendimento_fk'])->fetch(PDO::FETCH_ASSOC);
                     $prioridade = $senhaPrincipal['prioridade_fila_senha'] ? 'PR' : 'CM';
                     $numero = str_pad($senhaPrincipal['id_fila_senha'], 3, '0', STR_PAD_LEFT);
                 ?>
                 <div class="nome-pessoa">
-                    <h1><?= htmlspecialchars($senhaPrincipal['nome_fila_senha']) ?></h1>
+                    <h1><?= htmlspecialchars($senhaPrincipal['nome_fila_senha'] ?? '...') ?></h1>
                 </div>
                 <div class="infos-senha-principal">
                     <li>
@@ -84,13 +89,13 @@ $ultimasChamadas = $db->select($where, 'id_fila_senha DESC', '4')->fetchAll(PDO:
                     </li>
                     <li>
                         <h2>GUICHÊ:</h2>
-                        <span>...</span>
+                        <span><?= htmlspecialchars($guiche['nome_ponto_atendimento'] ?? '...') ?> - <?= htmlspecialchars($guiche['identificador_ponto_atendimento'] ?? '') ?></span>
                     </li>
                 </div>
                 <div class="nome-servico">
                     <li>
                         <h2>SERVIÇO:</h2>
-                        <span><?= htmlspecialchars($servico['nome_servico'] ?? 'SEM INFORMAÇÕES') ?></span>
+                        <span><?= htmlspecialchars($servico['nome_servico'] ?? '...') ?></span>
                     </li>
                 </div>
             <?php else: ?>
@@ -102,4 +107,4 @@ $ultimasChamadas = $db->select($where, 'id_fila_senha DESC', '4')->fetchAll(PDO:
     </div>
 </section>
 </body>
-</html> 
+</html>
