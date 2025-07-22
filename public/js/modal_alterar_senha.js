@@ -37,11 +37,13 @@ document.addEventListener("DOMContentLoaded", () => {
       erroConfirmarSenha.textContent = "";
   
       if (inputNovaSenha.value.length < 2) {
+        erroNovaSenha.style.color = 'red';
         erroNovaSenha.textContent = "A senha deve ter ao menos 2 caracteres.";
         valido = false;
       }
   
       if (inputConfirmarSenha.value !== inputNovaSenha.value) {
+        erroConfirmarSenha.style.color = 'red';
         erroConfirmarSenha.textContent = "As senhas não coincidem.";
         valido = false;
       }
@@ -73,9 +75,11 @@ document.addEventListener("DOMContentLoaded", () => {
             window.location.reload();
           });
         } else {
+          erroConfirmarSenha.style.color = 'red';
           erroConfirmarSenha.textContent = result.message || "Erro ao alterar a senha.";
         }
       } catch (error) {
+        erroConfirmarSenha.style.color = 'red';
         erroConfirmarSenha.textContent = "Erro na requisição.";
         console.error(error);
       }
