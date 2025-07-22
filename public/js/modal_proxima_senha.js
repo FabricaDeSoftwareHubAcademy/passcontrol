@@ -1,21 +1,35 @@
 document.addEventListener("DOMContentLoaded", function () {
     const btnProximaSenha = document.getElementById("chamar-proxima-senha");
-    const modal = document.getElementById("modal-senha"); 
+    const modal = document.getElementById("modal-senha");
 
     btnProximaSenha.addEventListener("click", async () => {
         try {
-            const response = await fetch("../../app/actions/proxima_senha.php");
+            const idGuiche = sessionStorage.getItem("IdGuicheSelecionado");
+
+            if (!idGuiche) {
+                alert("Guichê não selecionado.");
+                return;
+            }
+
+            const response = await fetch("../../app/actions/proxima_senha.php", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/x-www-form-urlencoded"
+                },
+                body: `id_guiche=${encodeURIComponent(idGuiche)}`
+            });
+
             const data = await response.json();
 
             if (data.success) {
-                // Preencher dados no modal
+                // Preencher modal com os dados da senha
                 document.getElementById("nome-cliente").innerText = data.nome;
                 document.getElementById("senha-cliente").innerText = data.senha;
                 document.getElementById("servico-cliente").innerText = data.servico;
 
-                // Pega guichê atual da tela principal
-                const guiche = document.getElementById("guiche-exibir").innerText;
-                document.getElementById("guiche-cliente").innerText = guiche;
+                // Pega guichê da sessionStorage para exibir
+                const guicheTexto = sessionStorage.getItem("guichetexto") || "N/A";
+                document.getElementById("guiche-cliente").innerText = guicheTexto;
 
                 // Exibir modal
                 modal.style.display = "flex";
@@ -23,8 +37,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 alert(data.message || "Erro ao buscar senha.");
             }
         } catch (error) {
-            console.error("Erro na requisição:", error);    
-            alert("Erro na requisição");
+            console.error("Erro na requisição:", error);
+            alert("Erro ao chamar próxima senha.");
         }
     });
 
@@ -33,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function () {
         e.stopPropagation(); // impede que o clique afete outros elementos
         modal.style.display = "none";
     });
-    
+
     document.querySelector(".presente_ChamarSenha").addEventListener("click", (e) => {
         e.stopPropagation();
         modal.style.display = "none";

@@ -9,7 +9,7 @@ $servicoDB = new Database('servico');
 
 $prioridade = $senhaPrincipal && $senhaPrincipal['prioridade_fila_senha'] ? 'PR' : 'CM';
 $numero = $senhaPrincipal ? str_pad($senhaPrincipal['id_fila_senha'], 3, '0', STR_PAD_LEFT) : '---';
-$nome = $senhaPrincipal['nome_fila_senha'] ?? '---';
+$nome = $senhaPrincipal['nome_fila_senha'] ?? '...';
 
 $servicoNome = '---';
 if ($senhaPrincipal) {
@@ -38,3 +38,4 @@ if ($senhaPrincipal) {
         </div>            
     </section>
 </div>
+ 
