@@ -97,12 +97,12 @@ class Database {
     }
 
     public function delete($where){
-        $query = "DELETE FROM $this->table " . " WHERE $where";
+        $query = "DELETE FROM $this->table WHERE $where";
 
         $del = $this->execute($query);
         $del = $del->rowCount();
 
-        if($del>=1){
+        if($del){
             return true;
         }
         else{

@@ -39,7 +39,7 @@
                     if(isset($_POST['id_servico'])){
                         $servicos_selecionados = $_POST['id_servico'];
 
-                        $vincula = $objUser->vincular_servico($objUser->cpf,$servicos_selecionados);
+                        $vincula = $objUser->vincular_servico($objUser->cpf,null,$servicos_selecionados);
                         
                         if($vincula){
                             $res_vincula = "Vinculado";

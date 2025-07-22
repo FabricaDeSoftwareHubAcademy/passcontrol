@@ -25,7 +25,7 @@ if (isset($_GET['id'])) {
             echo json_encode([$usuario[0], $servicos]);
         }
         else{
-            echo json_encode([$usuario[0], null]);
+            echo json_encode([$usuario[0], []]);
         }
     } else {
         echo json_encode(["error" => "Usuário não encontrado"]);

@@ -163,21 +163,21 @@ class Usuario
     }
 
     // INSERE O ID DO USUARIO E OS ID'S DOS SERVICOS NA TABELA INTERMEDIARIA usuario_servico
-    public function vincular_servico($cpf, $lista_servicos) {
-        $usuario = $this->buscar("cpf_usuario = $cpf");
-        
-        if (!$usuario || !isset($usuario[0]["id_usuario"])) {
-            return false; // Não encontrou o usuário
-        }
-        
-        $id_usuario = $usuario[0]["id_usuario"];
+    public function vincular_servico($cpf, $id_usuario, $lista_servicos) {
+        if($id_usuario == null){
+            $usuario = $this->buscar("cpf_usuario = $cpf");
+            
+            if (!$usuario || !isset($usuario[0]["id_usuario"])) {
+                return false; // Não encontrou o usuário
+            }
+
+            $id_usuario = $usuario[0]["id_usuario"];
+        }        
 
         $this->db = new Database("usuario_servico");
         
         $sucesso = true;
 
-        // INSERT INTO usuario_servico (id_usuario_fk, id_servico_fk)
-        // VALUES (142, 252),(142, 253),(142, 254),(142, 255),(142, 256),(142, 257);
         foreach ($lista_servicos as $id_servico) {
             $values = [
                 "id_usuario_fk" => $id_usuario,
@@ -194,7 +194,9 @@ class Usuario
     }
 
     public function limpa_servicos_usuario($id_usuario){
-        $limpa = $this->db->delete("id_usuario = ". $id_usuario); // limpa os servicos vinculados do usuario
+        $this->db = new Database("usuario_servico");
+
+        return $this->db->delete("id_usuario_fk = $id_usuario"); // limpa os servicos vinculados do usuario
     }
 
     public function select_servicos_atendidos(){
