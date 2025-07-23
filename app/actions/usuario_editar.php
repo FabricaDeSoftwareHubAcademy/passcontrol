@@ -66,25 +66,24 @@ elseif (($_SERVER['REQUEST_METHOD'] === 'POST')){
         //// CAPTURA SERVICOS SELECIONADOS
         try{
             $limpa = $objUser->limpa_servicos_usuario($id_usuario);
-            // $res_vincula = $limpa ? "Limpou" : "Nao limpou";
+            $res_vincula = $limpa ? "Limpou" : "Nao limpou";
             
-            if($limpa){
-                if(isset($_POST['id_servico'])){
-                    $servicos_selecionados = $_POST['id_servico'];
-            
-                    $vincula = $objUser->vincular_servico(null, $id_usuario,$servicos_selecionados);
-                    if($vincula){
-                        $res_vincula = "Vinculado";
-                    }
+            if(isset($_POST['id_servico'])){
+                $servicos_selecionados = $_POST['id_servico'];
+        
+                $vincula = $objUser->vincular_servico(null, $id_usuario,$servicos_selecionados);
+                if($vincula){
+                    $res_vincula = "Vinculado";
                 }
             }
+            
         }catch(Exception $erro){
             $res_vincula = ("Nao Vinculado: " . $erro);
         }
         
         // $status = $res ? "OK" : "ERRO";
         
-        $status = ($res || $limpa) ? "OK" : "ERRO";
+        $status = ($res || $res_vincula) ? "OK" : "ERRO";
         
 
         // BOA SORTE NA MANUTENCAO S2
