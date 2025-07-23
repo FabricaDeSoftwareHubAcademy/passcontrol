@@ -71,12 +71,5 @@
             </form>
         </div>
     </main>
-
-    <?php
-        if (isset($_SESSION['primeiro_login']) && $_SESSION['primeiro_login']) {
-            include './app/view/modais/modal_primeiroacesso_alterarsenha.php';
-            unset($_SESSION['primeiro_login']);
-        }
-    ?>
 </body>
 </html>

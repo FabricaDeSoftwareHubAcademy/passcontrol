@@ -162,6 +162,13 @@ class Usuario
         return true;
     }
 
+    public function select_servicos_atendidos(){
+
+    $res = $this->db->inner_join_usuario_servico()->fetchAll(PDO::FETCH_ASSOC);
+
+    return $res;
+    }
+
     // INSERE O ID DO USUARIO E OS ID'S DOS SERVICOS NA TABELA INTERMEDIARIA usuario_servico
     public function vincular_servico($cpf, $id_usuario, $lista_servicos) {
         if($id_usuario == null){
@@ -199,11 +206,4 @@ class Usuario
         return $this->db->delete("id_usuario_fk = $id_usuario"); // limpa os servicos vinculados do usuario
     }
 
-    public function select_servicos_atendidos(){
-        // $this->db = new Database("usuario");
-
-        $res = $this->db->inner_join_usuario_servico()->fetchAll(PDO::FETCH_ASSOC);
-
-        return $res;
-    }
 }
