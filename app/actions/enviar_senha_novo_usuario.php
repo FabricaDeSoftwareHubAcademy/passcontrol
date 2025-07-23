@@ -6,7 +6,7 @@ require '../vendor/phpmailer/phpmailer/src/PHPMailer.php';
 require '../vendor/phpmailer/phpmailer/src/SMTP.php';
 
 class EmailService {
-    public function enviarEmail($email, $codigo) {
+    public function enviarEmail($email, $senha) {
         
         $mail = new PHPMailer(true);
         try {
@@ -23,14 +23,14 @@ class EmailService {
             
             $mail->isHTML(true);
             $mail->Subject = 'Recuperação de Senha - Passcontrol';
-            $mail->Body    = "
+            $mail->Body = "
                 <p>Olá!</p>
                 <p>Bem vindo ao PassControl.</p>
-                <p>Sua senha por padrão é: <b>$codigo</b></p>
+                <p>Sua senha gerada pelo sistema é: <b>$senha</b></p>
                 <p>Após logar no sistema pela primeira vez, será solicitado que troque sua senha por uma senha forte.</p>
                 <p>Se você não solicitou isso, ignore este e-mail.</p>
             ";
-            $mail->AltBody = "Olá!\n\nRecebemos uma solicitação para redefinir sua senha.\n\nSeu código de recuperação é: $codigo\n\nSe você não solicitou isso, ignore este e-mail.";
+            $mail->AltBody = "Olá!\n\nSua senha gerada pelo sistema é: $senha\n\nSe você não solicitou isso, ignore este e-mail.";
             // Envia o e-mail
             $mail->send();
             echo 'A mensagem foi enviada!';
