@@ -31,12 +31,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
             fetch('../actions/guiche_selecionado.php', {
                 method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({
-                    guiche: guicheSelecionado
-                })
+                // headers: {
+                //     'Content-Type': 'application/json'
+                // },
+                body: JSON.stringify({guiche: guicheSelecionado})
             }).catch(err => {
                 console.error("Erro ao marcar guichê como ocupado:", err);
             });
