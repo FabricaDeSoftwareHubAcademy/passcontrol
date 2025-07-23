@@ -12,8 +12,8 @@ document.addEventListener("DOMContentLoaded", () => {
     
     // MODAL CONFIRMAÇÃO DA SAIDA DO SISTEMA
     const modalSaida = document.querySelector('.fundo-confimarcao-saida-sistema');
-    const saidaModal = document.querySelector(".save_Saida");
-    const fechaSaida = document.querySelector(".cancel_Saida");
+    const saidaModal = document.querySelector(".save_SaidaSis");
+    const fechaSaida = document.querySelector(".cancel_SaidaSis");
     
     
     const texto_salvo = sessionStorage.getItem("guichetexto");
