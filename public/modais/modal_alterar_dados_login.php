@@ -1,4 +1,4 @@
-<div class="z">
+<div class="edit_dados">
     <section class="edit-dados-login">
         <img src="../../public/img/icons/logo_control.svg" alt="Loading..." class="logo-dados-login">
         <h1 class="titulo-alterar-login">Alterar Dados</h1>
