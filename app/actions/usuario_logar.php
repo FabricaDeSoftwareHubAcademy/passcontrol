@@ -88,7 +88,7 @@ if (password_verify($senha, $res['senha_usuario']) && ($res['primeiro_login'] ==
     echo json_encode([
         'status' => 'ok',
         'code' => 200,
-        'id_usuario' => $res['id_usuario'],
+        'usuario' = array('nome' => $res['nome']) ,
         'msg' => 'Redirecionar para a tela inicial de atendimento.',
         'redirect' => $redirect_url
     ]);
