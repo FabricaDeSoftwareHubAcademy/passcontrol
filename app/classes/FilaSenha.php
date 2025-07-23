@@ -9,7 +9,12 @@
         }
 
         public function inserirFilaSenha($nome, $servico, $categoria) {
-            $categoria = ($categoria == "CM") ? 0 : 1;
+            
+            if ($categoria == "CM") {
+                $categoria = 0;
+            } else {
+                $categoria = 1;
+            }
 
             $dados = [
                 "nome_fila_senha" => $nome,
