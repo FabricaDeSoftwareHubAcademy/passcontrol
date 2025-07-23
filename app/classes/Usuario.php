@@ -124,25 +124,39 @@ class Usuario
     }
 }
     public function verificarSenhaAtual($id_usuario, $senha_atual)
-        {
-            
-            // Garante que o banco está apontando para a tabela "usuario"
-            $this->db = new Database("usuario");
+    {
+        
+        // Garante que o banco está apontando para a tabela "usuario"
+        $this->db = new Database("usuario");
 
-            // ira buscar a senha do usuário com o id correspondente.
-            $resultado = $this->db->select("id_usuario = $id_usuario", null, null, 'senha_usuario');
+        // ira buscar a senha do usuário com o id correspondente.
+        $resultado = $this->db->select("id_usuario = $id_usuario", null, null, 'senha_usuario');
 
-            // se não acha-la o rowCount será 0, ou seja, não existe no banco
-            if ($resultado->rowCount() === 0) {
-                return false;
-            }
-
-            $linha = $resultado->fetch(PDO::FETCH_ASSOC);
-            $senha_hash = $linha['senha_usuario'];
-            
-            //ira verificar se a senha atual corresponde ao harsh no banco
-            return password_verify($senha_atual, $senha_hash);
+        // se não acha-la o rowCount será 0, ou seja, não existe no banco
+        if ($resultado->rowCount() === 0) {
+            return false;
         }
+
+        $linha = $resultado->fetch(PDO::FETCH_ASSOC);
+        $senha_hash = $linha['senha_usuario'];
+        
+        //ira verificar se a senha atual corresponde ao harsh no banco
+        return password_verify($senha_atual, $senha_hash);
+    }
+    public function atualizarDadosLogin($id_usuario, $nome, $email, $foto_url = null)
+    {
+        if (!$id_usuario || !$nome || !$email) {
+            return false;
+        }
+        $values = [
+            'nome_usuario' => $nome,
+            'email_usuario' => $email,
+        ];
+        if ($foto_url !== null) {
+            $values['url_foto_usuario'] = $foto_url;
+        }
+        return $this->db->update("id_usuario = $id_usuario", $values);
+    }
         
     private function valida_cpf($cpf)
     {
