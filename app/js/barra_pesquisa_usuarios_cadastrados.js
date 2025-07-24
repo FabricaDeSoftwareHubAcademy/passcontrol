@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
         return;
     }
 
-    const tabela = document.querySelector('.tabela');
+    const tabela = document.querySelector('.tabela-listar-usuario');
     if (!tabela) {
         console.warn('Tabela não encontrada!');
         return;

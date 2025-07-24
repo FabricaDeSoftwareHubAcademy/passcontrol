@@ -1,48 +1,46 @@
 <?php
-header('Content-Type: application/json');
-include 'conexao.php'; // seu arquivo de conexão com o banco
+require_once '../database/Database.php';
 
-// Recebe os parâmetros via GET (pode usar POST também)
-$inicio = $_GET['inicio'] ?? null;
-$fim = $_GET['fim'] ?? null;
-$local = $_GET['local'] ?? null;
-$atendente = $_GET['atendente'] ?? null;
-$guiche = $_GET['guiche'] ?? null;
+$dataInicio = $_GET['inicio'] ?? '';
+$dataFim = $_GET['fim'] ?? '';
+/* $local = $_GET['local'] ?? '';
+$atendente = $_GET['atendente'] ?? '';
+$guiche = $_GET['guiche'] ?? ''; */
 
-// Validação básica das datas
-if (!$inicio || !$fim) {
-    echo json_encode([]);
-    exit;
-}
+// Instanciar a classe Database (sem passar tabela pois faremos query customizada)
+$db = new Database();
 
-// Monta a query base (ajuste nomes de tabela/campos conforme seu banco)
-$sql = "SELECT 
-            f.id_fila_senha,
-            f.nome_fila_senha,
-            f.prioridade_fila_senha,
-            f.fila_senha_created_in,
-            s.nome_servico,
-            p.nome_ponto_atendimento,
-            u.nome_usuario
-        FROM fila_senha f
-        LEFT JOIN servico s ON f.id_servico_fk = s.id_servico
-        LEFT JOIN ponto_atendimento p ON f.id_ponto_atendimento_fk = p.id_ponto_atendimento
-        LEFT JOIN usuario u ON f.id_usuario_fk = u.id_usuario
-        WHERE DATE(f.fila_senha_created_in) BETWEEN ? AND ?";
+// Obter a conexão PDO
+$pdo = $db->getConnection();
 
-// Array para parametros do prepared statement
-$params = [$inicio, $fim];
+// Monta a query com os filtros e status = 'atendido'
+$sql = "SELECT fs.*, s.nome_servico, p.nome_ponto_atendimento
+        FROM fila_senha fs
+        LEFT JOIN servico s ON fs.id_servico_fk = s.id_servico
+        LEFT JOIN ponto_atendimento p ON fs.id_ponto_atendimento_fk = p.id_ponto_atendimento
+        WHERE DATE(fs.fila_senha_created_in) BETWEEN ? AND ? 
+        AND fs.status_fila_senha = 'atendido'";
 
-// Filtros adicionais
-if ($local) {
-    $sql .= " AND s.id_servico = ?";
+$params = [$dataInicio, $dataFim];
+
+if (!empty($local)) {
+    $sql .= " AND s.nome_servico = ?";
     $params[] = $local;
 }
-if ($atendente) {
-    $sql .= " AND u.id_usuario = ?";
+if (!empty($atendente)) {
+    $sql .= " AND fs.fila_senha_updated_by_id = ?";
     $params[] = $atendente;
 }
-if ($guiche) {
-    $sql .= " AND p.id_ponto_atendimento = ?";
+if (!empty($guiche)) {
+    $sql .= " AND p.nome_ponto_atendimento = ?";
     $params[] = $guiche;
 }
+
+var_dump($sql);
+var_dump($params);
+
+$stmt = $pdo->prepare($sql);
+$stmt->execute($params);
+$dados = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+echo json_encode($dados);

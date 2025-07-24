@@ -35,12 +35,13 @@ try {
         exit;
     }
 
-    // Atualiza status e ID do guichê
+    // Atualiza status, guichê e data de atualização
     $filaDB->update(
         'id_fila_senha = ' . (int)$senha['id_fila_senha'],
         [
             'status_fila_senha' => 'em atendimento',
-            'id_ponto_atendimento_fk' => (int)$idGuiche
+            'id_ponto_atendimento_fk' => (int)$idGuiche,
+            'fila_senha_updated_in' => date('Y-m-d H:i:s') // 👈 ESSENCIAL
         ]
     );
 
@@ -56,8 +57,9 @@ try {
         'nome' => $senha['nome_fila_senha'] ?? '---',
         'senha' => "$prioridade$numero",
         'servico' => $servico['nome_servico'] ?? '---',
-        'guiche' => $idGuiche
-    ]);
+        'guiche' => $idGuiche,
+        'id_senha' => $senha['id_fila_senha']
+    ]);    
 } catch (Exception $e) {
     echo json_encode([
         'success' => false,

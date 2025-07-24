@@ -71,9 +71,9 @@ class Usuario
     public function logar($cpf)
     {
         $db = new Database('usuario');
-        
+
         $select_user = $db->select("cpf_usuario = $cpf");
-        
+
         if ($select_user->rowCount() > 0) {
             $dados = $select_user->fetch();
             return $dados;
@@ -83,49 +83,50 @@ class Usuario
     }
 
     public function definirNovaSenha($id_usuario, $nova_senha)
-{
-    $id_usuario = (int)$id_usuario;
+    {
+        $id_usuario = (int)$id_usuario;
 
-    // Valida se a senha atende aos critérios
-    if (
-        strlen($nova_senha) < 8 ||
-        !preg_match('/[A-Z]/', $nova_senha) ||
-        !preg_match('/[0-9]/', $nova_senha) ||
-        !preg_match('/[!@#$%^&*(),.?":{}|<>]/', $nova_senha)
-    ) {
-        return json_encode([
-            'success' => false,
-            'message' => 'A senha não atende aos requisitos de segurança.'
+        // Valida se a senha atende aos critérios
+        if (
+            strlen($nova_senha) < 8 ||
+            !preg_match('/[A-Z]/', $nova_senha) ||
+            !preg_match('/[0-9]/', $nova_senha) ||
+            !preg_match('/[!@#$%^&*(),.?":{}|<>]/', $nova_senha)
+        ) {
+            return json_encode([
+                'success' => false,
+                'message' => 'A senha não atende aos requisitos de segurança.'
+            ]);
+        }
+
+        $nova_senha_hash = password_hash($nova_senha, PASSWORD_DEFAULT);
+
+        $resultado = $this->db->update("id_usuario = $id_usuario", [
+            'senha_usuario' => $nova_senha_hash,
+            'primeiro_login' => 0
         ]);
+
+        if ($resultado === false) {
+            return json_encode([
+                'success' => false,
+                'message' => 'Erro ao atualizar a senha.'
+            ]);
+        } elseif ($resultado === 0) {
+            return json_encode([
+                'success' => true,
+                'message' => 'Mesma senha anterior.'
+            ]);
+        } else {
+            return json_encode([
+                'success' => true,
+                'message' => 'Senha atualizada com sucesso.'
+            ]);
+        }
     }
-
-    $nova_senha_hash = password_hash($nova_senha, PASSWORD_DEFAULT);
-
-    $resultado = $this->db->update("id_usuario = $id_usuario", [
-        'senha_usuario' => $nova_senha_hash,
-        'primeiro_login' => 0
-    ]);
-
-    if ($resultado === false) {
-        return json_encode([
-            'success' => false,
-            'message' => 'Erro ao atualizar a senha.'
-        ]);
-    } elseif ($resultado === 0) {
-        return json_encode([
-            'success' => true,
-            'message' => 'Mesma senha anterior.'
-        ]);
-    } else {
-        return json_encode([
-            'success' => true,
-            'message' => 'Senha atualizada com sucesso.'
-        ]);
-    }
-}
+    
     public function verificarSenhaAtual($id_usuario, $senha_atual)
     {
-        
+
         // Garante que o banco está apontando para a tabela "usuario"
         $this->db = new Database("usuario");
 
@@ -139,7 +140,7 @@ class Usuario
 
         $linha = $resultado->fetch(PDO::FETCH_ASSOC);
         $senha_hash = $linha['senha_usuario'];
-        
+
         //ira verificar se a senha atual corresponde ao harsh no banco
         return password_verify($senha_atual, $senha_hash);
     }
@@ -157,7 +158,7 @@ class Usuario
         }
         return $this->db->update("id_usuario = $id_usuario", $values);
     }
-        
+
     private function valida_cpf($cpf)
     {
         $cpf = preg_replace('/[^0-9]/', '', $cpf);
@@ -176,20 +177,29 @@ class Usuario
         return true;
     }
 
+    public function select_servicos_atendidos()
+    {
+
+        $res = $this->db->inner_join_usuario_servico()->fetchAll(PDO::FETCH_ASSOC);
+
+        return $res;
+    }
+
     // INSERE O ID DO USUARIO E OS ID'S DOS SERVICOS NA TABELA INTERMEDIARIA usuario_servico
-    public function vincular_servico($cpf, $id_usuario, $lista_servicos) {
-        if($id_usuario == null){
+    public function vincular_servico($cpf, $id_usuario, $lista_servicos)
+    {
+        if ($id_usuario == null) {
             $usuario = $this->buscar("cpf_usuario = $cpf");
-            
+
             if (!$usuario || !isset($usuario[0]["id_usuario"])) {
                 return false; // Não encontrou o usuário
             }
 
             $id_usuario = $usuario[0]["id_usuario"];
-        }        
+        }
 
         $this->db = new Database("usuario_servico");
-        
+
         $sucesso = true;
 
         foreach ($lista_servicos as $id_servico) {
@@ -204,20 +214,12 @@ class Usuario
             }
         }
         return $sucesso;
-
     }
 
-    public function limpa_servicos_usuario($id_usuario){
+    public function limpa_servicos_usuario($id_usuario)
+    {
         $this->db = new Database("usuario_servico");
 
         return $this->db->delete("id_usuario_fk = $id_usuario"); // limpa os servicos vinculados do usuario
-    }
-
-    public function select_servicos_atendidos(){
-        // $this->db = new Database("usuario");
-
-        $res = $this->db->inner_join_usuario_servico()->fetchAll(PDO::FETCH_ASSOC);
-
-        return $res;
     }
 }

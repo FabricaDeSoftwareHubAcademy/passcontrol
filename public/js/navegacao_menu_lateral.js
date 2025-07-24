@@ -1,3 +1,7 @@
+if(!sessionStorage.getItem('usuario')){
+    window.location.replace(window.location.origin + '/passcontrol')
+}
+
 // MENU MOBILE
 const menuLateralMobile = document.querySelector(".background-m-mobile");
 const abrirMenuLateral = document.querySelector(".abrirMenuLateral");

@@ -6,15 +6,14 @@ $db = new Database('fila_senha');
 $servicoDB = new Database('servico');
 $guicheDB = new Database('ponto_atendimento'); // novo
 
-// Busca a senha atual em atendimento
-$senhaPrincipal = $db->select("status_fila_senha = 'em atendimento'", 'id_fila_senha DESC', '1')->fetch(PDO::FETCH_ASSOC);
+// Busca todas as senhas com status "em atendimento", ordenadas da mais recente para a mais antiga
+$senhasEmAtendimento = $db->select("status_fila_senha = 'em atendimento'", 'fila_senha_updated_in DESC')->fetchAll(PDO::FETCH_ASSOC);
 
-// Busca últimas chamadas (exceto a principal)
-$where = "status_fila_senha IN ('em atendimento', 'atendido')";
-if ($senhaPrincipal) {
-    $where .= " AND id_fila_senha != " . intval($senhaPrincipal['id_fila_senha']);
-}
-$ultimasChamadas = $db->select($where, 'id_fila_senha DESC', '4')->fetchAll(PDO::FETCH_ASSOC);
+// Pega a senha mais recente como principal
+$senhaPrincipal = $senhasEmAtendimento[0] ?? null;
+
+// Pega até 4 senhas seguintes (últimas chamadas), excluindo a principal
+$ultimasChamadas = array_slice($senhasEmAtendimento, 1, 4);
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
