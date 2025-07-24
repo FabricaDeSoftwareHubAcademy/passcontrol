@@ -68,6 +68,7 @@ $icones = [
     <script src="../../public/js/modal_alterar_dados_login.js" defer></script>
     <script src="../../public/js/navegacao_menu_lateral.js" defer></script>
     <script src="../../public/js/monitor_modal.js" defer></script>
+    <script src="../js/bloquea_navegacao.js" defer></script>
 
   
     <!-- LOGO -->
