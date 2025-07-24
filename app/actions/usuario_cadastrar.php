@@ -1,5 +1,6 @@
 <?php
     require_once '../classes/Usuario.php';
+    require_once '../classes/PHPMailer.php';
 
     if (($_SERVER['REQUEST_METHOD'] === 'POST')){
   
@@ -27,11 +28,12 @@
             
             $senha_generica = $cpf_parcial . '@' . $ultimo_nome;
             $objUser->senha = password_hash($senha_generica, PASSWORD_DEFAULT);
-            
-            // echo ($objUser->senha);
-            
+               
             $res = $objUser->cadastrar();
             if($res){
+                $mailer = new EmailService();
+                $mailer->enviar_email_cadastro($email, $senha_generica);
+
                 $res_vincula = "Nao Vinculado";
 
                 //// CAPTURA SERVICOS SELECIONADOS
@@ -49,16 +51,16 @@
                     $res_vincula = "Nao Vinculado: $erro";
                 }
                 
-                $resposta = array( "msg" => "Usuario cadastrado com sucesso", "status" => "OK", "servico" => $res_vincula);
+                $resposta = array( "msg" => "Usuario cadastrado com sucesso", "status" => 200, "servico" => $res_vincula);
                 echo json_encode($resposta);
             }else{
-                $resposta = array( "msg" => "Erro ao cadastrar", "status" => "ERRO", "servico" => "Nao Vinculado");
+                $resposta = array( "msg" => "Erro ao cadastrar", "status" => 400, "servico" => "Nao Vinculado");
                 echo json_encode($resposta);
                 $objUser = null;
             }                    
         }
         else{
-            $resposta = array( "msg" => "Preencha todos os campos", "status" => "ERRO");
+            $resposta = array( "msg" => "Preencha todos os campos", "status" => 400);
             echo json_encode($resposta);
             exit;
         }

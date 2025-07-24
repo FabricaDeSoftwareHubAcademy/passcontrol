@@ -78,14 +78,14 @@ document.addEventListener("DOMContentLoaded", function () {
             });
 
             let textResponse = await enviar_dados.text();
-            // console.log("Resposta bruta do servidor:", textResponse);
+            console.log("Resposta bruta do servidor:", textResponse);
 
             try {
                 let response_post = JSON.parse(textResponse);
                 msgErro.innerHTML = '';
 
                 console.log(response_post);
-                if(response_post.status === 'OK'){
+                if(response_post.status === 200){
                     modalConfirmarSalvarDadosUsu.classList.remove("show");
                     modalDadosSalvos.classList.add("show");
 
@@ -108,7 +108,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
 
             } catch (error) {
-                console.error(`Erro ao analisar JSON: "${error}"`);
+                console.error("Erro ao analisar JSON: ", error.message);
                 // console.log("Conteúdo não pode ser analisado como JSON:", textResponse);
                 return;
             }

@@ -193,7 +193,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     }
 
                 } catch (error) {
-                    console.log("Erro ao analisar JSON: ", error.message);
+                    console.error("Erro ao analisar JSON: ", error.message);
                     // console.log("Conteúdo não pode ser analisado como JSON:", textResponse);
                 }
             

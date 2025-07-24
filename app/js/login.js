@@ -54,7 +54,7 @@ btn_login.addEventListener("click", async function (event) {
         msg.style.display = "block";
     }
 
-    console.log(response);
+    // console.log(response);
 });
 
 // Esconde a mensagem de erro ao começar a digitar novamente
