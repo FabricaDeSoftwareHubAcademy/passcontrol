@@ -34,12 +34,13 @@ btn_login.addEventListener("click", async function (event) {
     let response = await dados_php.json();
 
     if (response.code == 200 && response.redirect) {
+        sessionStorage.setItem('usuario', response.usuario)
         // redireciona para a URL retornada pelo PHP conforme perfil (menuadm_fluxo, menusup_fluxo, menuatend_fluxo)
         window.location.href = response.redirect;
     } 
     else if (response.code == 201) {
         // redireciona para redefinição de senha no primeiro acesso
-        window.location.href = "./app/view/recuperar_senha_nova_senha.php?id=" + response.id_usuario;
+        window.location.href = "./app/view/recuperar_senha_nova_senha.php?id=" + response.usuario.id;
     } 
     else if (response.code == 400) {
         msg.textContent = "Senha incorreta. Tente novamente.";

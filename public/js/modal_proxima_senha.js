@@ -22,6 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const data = await response.json();
 
             if (data.success) {
+                sessionStorage.setItem("idSenhaAtual", data.id_senha);
                 // Preencher modal com os dados da senha
                 document.getElementById("nome-cliente").innerText = data.nome;
                 document.getElementById("senha-cliente").innerText = data.senha;
@@ -54,8 +55,32 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     document.querySelector(".chamar_ChamarSenha").addEventListener("click", (e) => {
-        // Aqui você pode repetir o áudio ou ação de chamar novamente
         e.stopPropagation();
-        alert("Chamando novamente...");
+    
+        const idSenha = sessionStorage.getItem("idSenhaAtual");
+    
+        if (!idSenha) {
+            alert("ID da senha não encontrado.");
+            return;
+        }
+    
+        fetch("../../app/actions/chamar_novamente.php", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/x-www-form-urlencoded"
+            },
+            body: `id_senha=${encodeURIComponent(idSenha)}`
+        })
+        .then(res => res.json())
+        .then(data => {
+            if (data.success) {
+                alert("Senha chamada novamente.");
+            } else {
+                alert("Erro ao chamar novamente.");
+            }
+        })
+        .catch(() => {
+            alert("Erro de rede.");
+        });    
     });
 });
