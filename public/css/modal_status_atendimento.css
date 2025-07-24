@@ -18,6 +18,12 @@
     justify-content: center;
 }
 
+.show {
+    opacity: 1;
+    display: flex;
+    pointer-events: auto;
+}
+
 .modal-status-atendimento {
     background: #e0e0e0;
     padding: 20px;

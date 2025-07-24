@@ -15,9 +15,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
     <!-- CSS -->
-    <link rel="stylesheet" href="../../public/css/navegacao.css">
     <link rel="stylesheet" href="../../public/css/menu_eli.css">
+    <link rel="stylesheet" href="../../public/css/navegacao.css">
     <link rel="stylesheet" href="../../public/css/atendimento_do_dia.css">
+    <link rel="stylesheet" href="../../public/css/modal_status_atendimento.css">
     <link rel="stylesheet" href="../../public/css/style_atendimento_tempo_real.css">
     <link rel="stylesheet" href="../../public/css/monitor-modal.css">
     <link rel="stylesheet" href="../../public/modais/Modal_Alterar_Dados_Pessoais/alterar_dados_pessoais.css">
@@ -26,6 +27,7 @@
     <!-- JS -->
     <script src="../../public/js/navegacao_menu_lateral.js" defer></script>
     <script src="../../public/js/monitor_modal.js" defer></script>
+    <script src="../../public/js/modal_status_atendimento" defer></script>
 
     <!-- LOGO -->
     <link rel="shortcut icon" type="imagex/png" href="../../public/img/Logo-Nota-Controlnt.ico">
@@ -71,7 +73,7 @@
                             <th>Guichê</th>
                             <th class="status-atendimento-do-dia">
                                 <div class="status-flex-atendimento-do-dia">
-                                    Status <span class="circle-atendimento-do-dia"><i class="fa-solid fa-question"></i></span>
+                                    Status <button class="interrogacao_Tabela" type="button"><span class="circle-atendimento-do-dia"><i class="fa-solid fa-question"></i></span></button> 
                                 </div>
                             </th>
                         </tr>
@@ -106,6 +108,7 @@
 
     <?php
     include "./monitor_modal.php";
+    include "../../public/modais/modal_status_atendimento.php";
     ?>
     
     <script>
