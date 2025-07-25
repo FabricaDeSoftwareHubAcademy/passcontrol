@@ -32,7 +32,7 @@
   color: var(--cor-fundo);
 }
 
-th {
+.matricula-nome-listar-usuario, .perfil-servico-listar-usuario, .alterar-status-listar-usuario {
   position: sticky;
   top: 0;
   background-color: #f4f4f4;
@@ -52,7 +52,7 @@ td {
   color: var(--cinza-control);
 }
 
-td, th {
+td, .matricula-nome-listar-usuario, .perfil-servico-listar-usuario, .alterar-status-listar-usuario {
     white-space: wrap;
     overflow: hidden;
     text-overflow: ellipsis;

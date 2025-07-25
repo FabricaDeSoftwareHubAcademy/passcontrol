@@ -20,22 +20,22 @@
 </head>
 
 <body>
-    <header class="head">
-        <nav class="nav-head">
-            <div class="logo-control">
+    <header class="head-tela-autoatendimento-pag2">
+        <nav class="nav-head-tela-autoatendimento-pag2">
+            <div class="logo-control-tela-autoatendimento-pag2">
                 <img src="../../public/img/icons/logo_control.svg" alt="LOGOCONTROL" id="img-logo">
             </div>
             <h3>PassControl</h3>
         </nav>
     </header>
 
-    <div class="border-line"></div>
+    <div class="border-line-tela-autoatendimento-pag2"></div>
 
-    <main class="workspace">
-        <div class="area-cinza">
-            <h4 class="page-title">Selecione o tipo de atendimento:</h4>
+    <main class="workspace-tela-autoatendimento-pag2">
+        <div class="area-cinza-tela-autoatendimento-pag2">
+            <h4 class="page-title-tela-autoatendimento-pag2">Selecione o tipo de atendimento:</h4>
 
-            <div class="box-area">
+            <div class="box-area-tela-autoatendimento-pag2">
 
                 <a href="#" class="box" data-prioridade="0">
                     <img class="imagem-servico" src="../../public/img/icons/comum_img.svg" alt="Servico">
@@ -54,8 +54,8 @@
 
             </div>
 
-            <div class="footer">
-                <button class="button">
+            <div class="footer-tela-autoatendimento-pag2">
+                <button class="button-tela-autoatendimento-pag2">
                     <a href="./tela_autoatendimento_page1.php" class="btn-text">VOLTAR</a>
                 </button>
             </div>

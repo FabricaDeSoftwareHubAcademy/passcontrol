@@ -27,9 +27,9 @@
     $listaServicos = $servico->buscar('status_servico = 1');
     ?>
 
-    <header class="head">
-        <nav class="nav-head">
-            <div class="logo-control">
+    <header class="head-tela-autoatendimento-pag1">
+        <nav class="nav-head-tela-autoatendimento-pag1">
+            <div class="logo-control-tela-autoatendimento-pag1">
                 <a href="../../app/view/menuadm_autoatendimento.php">
                     <img src="../../public/img/icons/logo_control.svg" alt="LOGOCONTROL" id="img-logo">
                 </a>
@@ -38,13 +38,13 @@
         </nav>
     </header>
 
-    <div class="border-line"></div>
+    <div class="border-line-tela-autoatendimento-pag1"></div>
 
-    <main class="workspace">
-        <div class="area-cinza">
-            <h4 class="page-title">Selecione o serviço para o qual deseja atendimento:</h4>
+    <main class="workspace-tela-autoatendimento-pag1">
+        <div class="area-cinza-tela-autoatendimento-pag1">
+            <h4 class="page-title-tela-autoatendimento-pag1">Selecione o serviço para o qual deseja atendimento:</h4>
 
-            <div class="box-area" id="box-container">
+            <div class="box-area-tela-autoatendimento-pag1" id="box-container">
                 <?php foreach ($listaServicos as $serv): ?>
                     <a href="#" class="box"
                        data-id="<?= $serv->id_servico ?>"

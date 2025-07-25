@@ -5,7 +5,7 @@
     --font-main: Inter, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
-.head {
+.head-tela-autoatendimento-pag2 {
     background-color: var(--cinza-control);
     height: auto;
     width: auto;
@@ -13,7 +13,7 @@
     display: flex;
 }
 
-.nav-head {
+.nav-head-tela-autoatendimento-pag2 {
     background-color: var(--cor-fundo);
     width: 100%;
     height: 100px;
@@ -22,7 +22,7 @@
     align-content: space-evenly;
 }
 
-.logo-control {
+.logo-control-tela-autoatendimento-pag2 {
     width: fit-content;
     padding: 2px;
     padding-left: 5px;
@@ -33,7 +33,7 @@
     width: 100%;
 }
 
-.nav-head H3 {
+.nav-head-tela-autoatendimento-pag2 H3 {
     color: var(--cinza-control);
     width: 80%;
     padding-left: 20px;
@@ -42,7 +42,7 @@
     font-size: 23px;
 }
 
-.workspace {
+.workspace-tela-autoatendimento-pag2 {
     height: 100%;
     width: 100%;
     display: flex;
@@ -56,7 +56,7 @@
 }
 
 
-.page-title {
+.page-title-tela-autoatendimento-pag2 {
     align-items: center;
     justify-content: center;
     font-size: 32px;
@@ -68,14 +68,14 @@
     margin-top: 0%;
 }
 
-.border-line {
+.border-line-tela-autoatendimento-pag2 {
     background-color:var(--cinza-control);
     height: 30px;
     width: 100%;
     margin: 10px 0;
 }
 
-.area-cinza {
+.area-cinza-tela-autoatendimento-pag2 {
     background-color: rgba(0, 0, 0, 0.1); 
     width: calc(100% - 40px);
     /* min-height: 60vh; */
@@ -94,7 +94,7 @@
 }
 
 
-.box-area {
+.box-area-tela-autoatendimento-pag2 {
     display: flex;
     width: 100%;
     max-width: 1200px;
@@ -148,7 +148,7 @@
     padding-top: 10px;
 }
 
-.footer{
+.footer-tela-autoatendimento-pag2 {
     display: flex;
     align-items: center;
     width: 100%;
@@ -157,7 +157,7 @@
     padding: 20px 20px;
 }
 
-.button {
+.button-tela-autoatendimento-pag2 {
     display: flex;
     justify-content:center;
     width: 10%; 
@@ -172,11 +172,11 @@
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.button:hover {
+.button-tela-autoatendimento-pag2:hover {
     background-color: var(--cinza-control);
 }
 
-.button:hover .btn-text {
+.button-tela-autoatendimento-pag2:hover .btn-text {
     color: red; 
 }
 
@@ -206,26 +206,26 @@
         height: 200px; 
     }
 
-    .nav-head h3 {
+    .nav-head-tela-autoatendimento-pag2 h3 {
         font-size: 18px; 
     }
 
-    .page-title {
+    .page-title-tela-autoatendimento-pag2 {
         font-size: 24px;
     }
 
-    .workspace {
+    .workspace-tela-autoatendimento-pag2 {
         background-size: 250px;
     }
 
-    .area-cinza {
+    .area-cinza-tela-autoatendimento-pag2 {
         min-height: 70vh; 
         height: auto; 
         margin-bottom: 10px;
         padding: 10px; 
     }  
 
-    .button {
+    .button-tela-autoatendimento-pag2 {
         width: 40%;
         margin-top: 20px;
         height: 50px;
@@ -236,7 +236,7 @@
     }
 
 @media (max-width: 1024px) and (min-width: 768px) {
-    .area-cinza {
+    .area-cinza-tela-autoatendimento-pag2 {
         min-height: 70vh;
         height: auto;
         margin-bottom: 20px;
@@ -244,7 +244,7 @@
         width: 100%;
     }
     
-    .box-area {
+    .box-area-tela-autoatendimento-pag2 {
         flex-direction: row;
         gap: 20px;
         justify-content: center;
@@ -260,7 +260,7 @@
         height: 80px;
     }
 
-    .button {
+    .button-tela-autoatendimento-pag2 {
         width: 90%;
         margin-top: 20px;
         height: 50px;
@@ -268,21 +268,21 @@
     }
 
     @media (min-width: 1025px) {  
-        .area-cinza {
+        .area-cinza-tela-autoatendimento-pag2 {
           padding: 30px;
           width: calc(100% - 80px); 
         }
     
-        .footer {
+        .footer-tela-autoatendimento-pag2 {
           padding: 30px;
         }
       
-        .button {
+        .button-tela-autoatendimento-pag2 {
           width: 30%;  
           margin-top: 50px;
         }
 
-        .box-area {
+        .box-area-tela-autoatendimento-pag2 {
             flex-direction: row;
             gap: 20px;
             justify-content: center;
