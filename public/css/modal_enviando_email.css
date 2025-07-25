@@ -1,0 +1,103 @@
+.fundo-modal-envio-email {
+  background: rgba(0, 0, 0, 0.5);
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 10;
+}
+
+.fundo-modal-envio-email .show {
+  opacity: 1;
+  display: flex;
+  pointer-events: auto;
+}
+
+.modal-envio-email {
+  background-color: #e0e0e0;
+  width: 80%;
+  max-width: 600px;
+  padding: 40px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  position: relative;
+  text-align: left;
+  border-radius: 5px;
+}
+
+.logo-nota-control-modal {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  width: 60px;
+  max-width: 200px;
+  height: auto;
+}
+
+.titulo-envio-email {
+  font-size: 28px;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+.linha-envio-email {
+  border: none;
+  border-top: 2px solid #000;
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.icones-envio-email {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 130px;
+  /* border: 2px dotted blue; */
+}
+
+.icone-envio {
+  position: absolute;
+  min-height: 100px;
+}
+
+.icone_send {
+  min-height: 80px;
+}
+
+.icone_load {
+  transform: rotate(0deg);
+  animation: rotacao 2.5s ease-in-out infinite;
+}
+
+@keyframes rotacao {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.texto-envio-email {
+  font-size: 22px;
+  margin: 20px 0;
+  text-align: center;
+}
+
+/* Responsividade */
+@media (max-width: 400px) {
+  .logo-nota-control-modal {
+    width: 60px;
+  }
+  .titulo-envio-email {
+    font-size: 20px;
+  }
+  .texto-envio-email {
+    font-size: 16px;
+  }
+}

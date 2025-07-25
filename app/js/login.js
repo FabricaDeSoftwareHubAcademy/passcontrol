@@ -31,30 +31,32 @@ btn_login.addEventListener("click", async function (event) {
         body: formData
     });
 
-    let response = await dados_php.json();
-
-    if (response.code == 200 && response.redirect) {
-        // redireciona para a URL retornada pelo PHP conforme perfil (menuadm_fluxo, menusup_fluxo, menuatend_fluxo)
-        window.location.href = response.redirect;
-    } 
-    else if (response.code == 201) {
-        // redireciona para redefinição de senha no primeiro acesso
-        window.location.href = "./app/view/recuperar_senha_nova_senha.php?id=" + response.id_usuario;
-    } 
-    else if (response.code == 400) {
-        msg.textContent = "Senha incorreta. Tente novamente.";
-        msg.style.display = "block";
-    } 
-    else if (response.code == 403) {
-        msg.textContent = "Usuário inativo. Entre em contato com o administrador.";
-        msg.style.display = "block";
-    } 
-    else if (response.code == 404) {
-        msg.textContent = "Usuário não cadastrado. Verifique o CPF informado.";
-        msg.style.display = "block";
+    try{
+        let response = await dados_php.json();
+    
+        if (response.code == 200 && response.redirect) {
+            // redireciona para a URL retornada pelo PHP conforme perfil (menuadm_fluxo, menusup_fluxo, menuatend_fluxo)
+            window.location.href = response.redirect;
+        } 
+        else if (response.code == 201) {
+            // redireciona para redefinição de senha no primeiro acesso
+            window.location.href = "./app/view/recuperar_senha_nova_senha.php?id=" + response.id_usuario;
+        } 
+        else if (response.code == 400) {
+            msg.textContent = "Senha incorreta. Tente novamente.";
+            msg.style.display = "block";
+        } 
+        else if (response.code == 403) {
+            msg.textContent = "Usuário inativo. Entre em contato com o administrador.";
+            msg.style.display = "block";
+        } 
+        else if (response.code == 404) {
+            msg.textContent = "Usuário não cadastrado. Verifique o CPF informado.";
+            msg.style.display = "block";
+        }
+    }catch(erro){
+        console.error("Erro na resposta:".erro.message);
     }
-
-    // console.log(response);
 });
 
 // Esconde a mensagem de erro ao começar a digitar novamente

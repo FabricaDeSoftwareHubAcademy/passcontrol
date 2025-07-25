@@ -5,6 +5,10 @@ const modalConfirmarSalvarDadosUsu = document.querySelector(".fundo-container-co
 const confirmarSalvar = document.querySelector(".save_ConfDadosRegist");
 const cancelarSalvar = document.querySelector(".cancel_ConfDadosRegist");
 
+// modal de envio de email
+
+const modal_enviar_email = document.querySelector(".fundo-modal-envio-email");
+
 // modal de dados ok
 const modalDadosSalvos = document.querySelector(".fundo-container-confirmacao-dados");
 const buttonOk = document.querySelector(".Okay_ConfDados");
@@ -68,25 +72,30 @@ document.addEventListener("DOMContentLoaded", function () {
         // MODAL CONFIRMACAO
         confirmarSalvar.addEventListener("click", async function (event) {
             event.preventDefault();
+
             
             var formCadastrarUsuario = new FormData(document.getElementById("dados_cad"));
             // console.log(formCadastrarUsuario);
+            
+            modalConfirmarSalvarDadosUsu.classList.remove("show");
+            modal_enviar_email.classList.add("show");
 
             let enviar_dados = await fetch('../actions/usuario_cadastrar.php', {
                 method: "POST",
                 body: formCadastrarUsuario
             });
-
+            
             let textResponse = await enviar_dados.text();
-            console.log("Resposta bruta do servidor:", textResponse);
+            // console.log("Resposta bruta do servidor:", textResponse);
 
             try {
+                
                 let response_post = JSON.parse(textResponse);
                 msgErro.innerHTML = '';
 
                 console.log(response_post);
                 if(response_post.status === 200){
-                    modalConfirmarSalvarDadosUsu.classList.remove("show");
+                    modal_enviar_email.classList.remove("show");
                     modalDadosSalvos.classList.add("show");
 
                     buttonOk.addEventListener("click", () => {
@@ -94,7 +103,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         location.href = './listar_usuarios.php';
                     });
                 }else{
-                    modalConfirmarSalvarDadosUsu.classList.remove("show");
+                    modal_enviar_email.classList.remove("show");
                     console.log("Erro: ", response_post);
                     
                     msgErro.innerHTML += response_post.msg;
@@ -108,6 +117,9 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
 
             } catch (error) {
+                // modal_enviar_email.classList.remove("show");
+                // modalConfirmarSalvarDadosUsu.classList.add("show");
+
                 console.error("Erro ao analisar JSON: ", error.message);
                 // console.log("Conteúdo não pode ser analisado como JSON:", textResponse);
                 return;

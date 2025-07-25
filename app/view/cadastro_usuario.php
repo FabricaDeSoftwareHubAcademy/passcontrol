@@ -20,6 +20,7 @@
   <link rel="stylesheet" href="../../public/css/modal_alterar_senha.css">
   <link rel="stylesheet" href="../../public/css/modal_confirmacao_dados_registrados.css">
   <link rel="stylesheet" href="../../public/css/modal_confirmacao_dados.css">
+  <link rel="stylesheet" href="../../public/css/modal_enviando_email.css">
   <link rel="stylesheet" href="../../public/css/modal_aviso_erro.css">
 
   <!-- JS -->
@@ -120,6 +121,7 @@
   </section>
   <?php
   // include_once "./monitor_modal.php";
+  include_once "../../public/modais/modal_enviando_email.php";
   include_once "../../public/modais/modal_confirmacao_dados_registrados.php";
   include_once "../../public/modais/modal_confirmacao_dados.php";
   include_once "../../public/modais/modal_aviso_erro.php";

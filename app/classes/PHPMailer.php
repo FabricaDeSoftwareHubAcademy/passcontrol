@@ -1,6 +1,8 @@
 <?php
 session_start();
 
+require_once '../database/Env.php';
+
 $rootPath = dirname(__DIR__, 2);
 loadEnv($rootPath . '/.env');
 
