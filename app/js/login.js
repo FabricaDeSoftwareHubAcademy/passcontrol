@@ -33,6 +33,8 @@ btn_login.addEventListener("click", async function (event) {
 
     let response = await dados_php.json();
 
+    console.log(response);
+
     if (response.code == 200 && response.redirect) {
         sessionStorage.setItem('usuario', response.usuario)
         // redireciona para a URL retornada pelo PHP conforme perfil (menuadm_fluxo, menusup_fluxo, menuatend_fluxo)
