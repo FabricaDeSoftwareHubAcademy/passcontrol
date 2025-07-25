@@ -55,10 +55,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
             modalvalidacao.classList.remove("show");
 
-            sessionStorage.setItem("IdGuicheSelecionado", IdGuiche);
-            sessionStorage.setItem("guichetexto", guicheText);
-
-            modalvalidacao.classList.remove("show");
+            const usuario = JSON.parse(sessionStorage.getItem('usuario'));
+            console.log(usuario)
+            //modalvalidacao.classList.remove("show");
         });
     }
 
