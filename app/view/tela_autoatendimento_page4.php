@@ -82,23 +82,23 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </head>
 
 <body>
-    <header class="head">
-        <nav class="nav-head">
-            <div class="logo-control">
+    <header class="head-tela-autoatendimento-pag4">
+        <nav class="nav-head-tela-autoatendimento-pag4">
+            <div class="logo-control-tela-autoatendimento-pag4">
                 <img src="../../public/img/icons/logo_control.svg" alt="LOGOCONTROL" id="img-logo"> <!-- ( Atualização de caminho ) -->
             </div>
             <H3>PassControl</H3>
     </header>
 
-    <div class="border-line"></div>
+    <div class="border-line-tela-autoatendimento-pag4"></div>
 
-    <main class="workspace">
+    <main class="workspace-tela-autoatendimento-pag4">
 
-        <div class="area-cinza">
+        <div class="area-cinza-tela-autoatendimento-pag4">
 
-            <div class="container">
+            <div class="container-tela-autoatendimento-pag4">
 
-                <section class="info-area">
+                <section class="info-area-tela-autoatendimento-pag4">
                     <div class="fixed-text">VERIFIQUE SEU NOME E SENHA<br>AGUARDE SER CHAMADO NO PAINEL!</div>
                     <div class="variable-text">
                         <div><strong>SENHA:</strong></div>
@@ -109,8 +109,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             </div>
 
-            <div class="footer">
-                <button class="button">
+            <div class="footer-tela-autoatendimento-pag4">
+                <button class="button-tela-autoatendimento-pag4">
                     <a href="../../app/view/tela_autoatendimento_page1.php" class="btn-finalizar">FINALIZAR</a> <!-- ( Atualização de caminho e renomeando o nome da pasta para letras minúsculas ) -->
                 </button>
             </div>

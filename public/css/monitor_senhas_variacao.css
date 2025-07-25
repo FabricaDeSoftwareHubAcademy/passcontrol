@@ -1,4 +1,5 @@
 @import url(base_navegacao.css);
+@import url(root.css);
 
 :root{
     --cor-azul-escuro--1: rgba(51, 64, 77, 1);
