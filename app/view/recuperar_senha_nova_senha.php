@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PassControl</title>
 
-    <link rel="stylesheet" href="../../public/css/root.css">
+    <!-- <link rel="stylesheet" href="../../public/css/root.css"> -->
     <link rel="stylesheet" href="../../public/css/forms.css">
     <link rel="shortcut icon" href="../../public/img/favicon.ico" type="image/x-icon">
 
@@ -24,22 +24,22 @@
                 <img src="../../public/img/logo_animation/animation_logo_mid.png" alt="imagem da animação meio" class="image_animation image_animation_mid">
                 <img src="../../public/img/logo_animation/animation_logo_bot.png" alt="imagem da animação baixo" class="image_animation image_animation_bot">
             </div>
-            <h1 class="title">PASS CONTROL</h1>
+            <h1 class="title-login">PASS CONTROL</h1>
         </div>
 
-        <form id="form_recuperar_senha" class="form form_login" method="POST">
-            <div class="input_group input_group_login">
-                <label for="" class="label">Insira a nova senha</label>
+        <form id="form_recuperar_senha" class="form-login form_login" method="POST">
+            <div class="input_group-login input_group_login">
+                <label for="" class="label-login">Insira a nova senha</label>
                 <div class="password_group">
-                    <input type="password" id="nova_senha" name="nova_senha" class="input input_password" placeholder="Digite a nova senha">
+                    <input type="password" id="nova_senha" name="nova_senha" class="input-login input_password" placeholder="Digite a nova senha">
                     <i class="fas fa-eye toggle_password" id="toggle_password_novo"></i>
                 </div>
             </div>
 
-            <div class="input_group">
-                <label for="confirmar_senha" class="label">Confirme a nova senha</label>
+            <div class="input_group-login">
+                <label for="confirmar_senha" class="label-login">Confirme a nova senha</label>
                 <div class="password_group">
-                    <input type="password" id="confirmar_senha" name="confirmar_senha" class="input input_password" placeholder="Confirme a nova senha">
+                    <input type="password" id="confirmar_senha" name="confirmar_senha" class="input-login input_password" placeholder="Confirme a nova senha">
                     <i class="fas fa-eye toggle_password" id="toggle_password"></i>
                 </div>
             </div>
@@ -54,9 +54,9 @@
                 </ul>
             </div>
 
-            <div class="container_button">
+            <div class="container_button-login">
                 <!-- <button id="btn_nova_senha" class="button">Salvar</button> -->
-                <button id="btn_nova_senha" type="button" class="button open-confirmacao-dados">Salvar</button>
+                <button id="btn_nova_senha" type="button" class="button-login open-confirmacao-dados">Salvar</button>
 
             </div>
         </form>

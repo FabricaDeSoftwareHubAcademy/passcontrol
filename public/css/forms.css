@@ -1,4 +1,4 @@
-@import url(root.css);
+@import url(login_recuperacao.css);
 
 .card_left_login, .card_right_login {
     width: 100%;
@@ -23,7 +23,7 @@
     margin-top: 0.8rem;
 }
 
-.link {
+.link-login {
     position: relative;
     text-decoration: none;
     cursor: pointer;
@@ -32,7 +32,7 @@
     color: var(--main_black_color);
 }
 
-.link::after {
+.link-login::after {
     position: absolute;
     content: " ";
     width: 0;
@@ -43,7 +43,7 @@
     transition: 0.6s ease-in-out;
 }
 
-.link:hover::after {
+.link-login:hover::after {
     width: 100%;
 }
 
@@ -106,7 +106,7 @@
     gap: 0.5rem;
 }
 
-.container_input_codigo .input {
+.container_input_codigo .input-login {
     width: 40px;
     text-align: center;
     padding: 0.5rem;
@@ -145,14 +145,14 @@
         height: 75%;
     }
 
-    .container_input_codigo .input {
+    .container_input_codigo .input-login {
         width: 50px;
         height: 50px;
     }
 }
 
 @media (min-width: 48rem) {
-    .link {
+    .link-login {
         font-size: 1rem;
     }
 
@@ -165,7 +165,7 @@
         font-size: 0.95rem;
     }
 
-    .container_input_codigo .input {
+    .container_input_codigo .input-login {
         width: 50px;
     }
 
@@ -229,7 +229,7 @@
         margin-bottom: 2.5rem;
     }
 
-    .container_input_codigo .input {
+    .container_input_codigo .input-login {
         width: 50px;
         height: 3.2rem;
         font-size: 1.3rem;
@@ -250,7 +250,7 @@
         font-size: 1.4rem;
     }
 
-    .container_input_codigo .input {
+    .container_input_codigo .input-login {
         width: 60px;
         height: 3.5rem;
         font-size: 1.4rem;

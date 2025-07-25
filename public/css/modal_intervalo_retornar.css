@@ -1,5 +1,5 @@
 /* Botões gerais */
-.botao-modal-intervelo-retornar {
+.botao-modal {
     background-color: #33404D;
     color: #FFFFFF;
     border: 0;
@@ -8,7 +8,7 @@
 }
 
 /* Estilo do container do modal */
-.fundo-intervalo-retornar {
+.fundo-intervalo {
     background: rgba(0, 0, 0, 0.5);
     width: 100vw;
     height: 100vh;
@@ -31,7 +31,7 @@
 }
 
 /* Estilo do modal */
-.modal-intervalo-retornar {
+.modal-intervalo {
     background-color: #ddd;
     width: 60%;
     max-width: 550px;
@@ -43,7 +43,7 @@
     border-radius: 5px;
 }
 
-.modal-intervalo-retornar .modal-divider {
+.modal-intervalo .modal-divider {
     border: none;
     border-top: 2px solid #000;
     width: 100%;
@@ -51,7 +51,7 @@
     margin-bottom: 20px;
 }
 
-.modal-intervalo-retornar .logo {
+.modal-intervalo .logo {
     width: 60px;
     position: absolute;
     top: 15px;
@@ -59,19 +59,19 @@
 }
 
 /* Tipografia */
-.modal-intervalo-retornar .modal-title-retornar-retornar {
+.modal-intervalo .modal-title {
     font-size: 24px;
     font-weight: bold;
     text-align: left;
 }
 
-.modal-intervalo-retornar .modal-message-retornar {
+.modal-intervalo .modal-message {
     font-size: 18px;
     font-weight: bold;
     text-align: center;    
 }
 
-.modal-intervalo-retornar .timer-intervalo-retornar{
+.modal-intervalo .timer-intervalo{
     margin-bottom: 10px;
     font-size: 30px;
     text-align: center;
@@ -79,7 +79,7 @@
 }
 
 /* Grupo de botões */
-.modal-intervalo-retornar .button-group-intervelo-retornar {
+.modal-intervalo .button-group {
     display: flex;
     justify-content: center;
     margin-top: 15px;

@@ -9,25 +9,8 @@
     height: 13%;
 }
 
-.title {
+.title-login {
     margin-top: 5%;
-}
-
-.container_input {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-}
-
-.input {
-    width: 35px;
-    border-radius: 5px;
-}
-
-@media (min-width: 48rem) {
-    .input {
-        width: 40px;
-    }
 }
 
 @media (min-width: 64rem) {
@@ -42,14 +25,10 @@
     .form_login {
         width: 60%;
     }
-
-    .input {
-        width: 50px;
-    }
 }
 
 @media (min-width: 96rem) {
-    .title {
+    .title-login {
         margin-top: 1%;
     }
 }
