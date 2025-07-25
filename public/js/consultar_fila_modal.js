@@ -33,12 +33,12 @@ document.addEventListener("DOMContentLoaded", () => {
             total++;
         });
   
-        contador.textContent = `Total de senhas pendentes: ${total}`;
+        contador.textContent = `Senhas na fila: ${total}`;
     
         } catch (error) {
             console.error("Erro ao buscar dados:", error);
             tabelaBody.innerHTML = "<tr><td colspan='6'>Erro ao carregar dados</td></tr>";
-            contador.textContent = "Total de senhas pendentes: 0";
+            contador.textContent = "Senhas na fila: 0";
         }
     }
     );

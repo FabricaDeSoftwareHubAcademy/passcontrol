@@ -18,7 +18,7 @@
                     <div class="senhas-guiche-area-chamada">
 
                     <p class="contador-senhas">0</p>
-                        <p>Senhas Na Fila:</p>
+                        <!-- <p>Senhas Na Fila:</p> -->
                     </div>
                 </div>
             </div>
@@ -31,8 +31,6 @@
                             <th>Nome</th>
                             <th>Serviço</th>
                             <th>Categoria</th>
-                            <th>Início</th>
-                            <th>Término</th>
                         </tr>
                     </thead>
                     <tbody>
