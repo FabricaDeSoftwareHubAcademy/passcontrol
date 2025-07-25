@@ -12,7 +12,7 @@
     <link rel="shortcut icon" href="../../public/img/favicon.ico" type="image/x-icon">
 
     <script src="../js/mascara_cpf.js" defer></script>
-    <script src="../../public/js/modal_confirmacao_envio_email.js" defer></script>
+    <script src="../js/confirmacao_envio_email.js" defer></script>
 </head>
 <body class="body_login background_image">
     <main class="container_login">
