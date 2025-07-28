@@ -49,7 +49,7 @@
     // include_once "../actions/servico_listar.php";
     ?>
 
-    <section class="Area-Util-Projeto">
+    <section class="Area-Util-Projeto lista_serviço">
         <!-- INICIO DA ÁREA ÚTIL DA PÁGINA -->
         <!-- <div id="PontoAtendimentoCad"> -->
             <div class="topo-tela-PontoAtendimentoCad">

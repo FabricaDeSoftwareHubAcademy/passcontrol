@@ -1,9 +1,9 @@
 @import url(./root.css);
 
 /* CONFIGURAÇÃO DA BASE DA ÁREA ÚTIL */
-.Area-Util-Projeto {
+.lista_serviço {
   align-items: center;
-}
+
 
 .topo-tela-PontoAtendimentoCad {
   width: 90%;
@@ -368,4 +368,6 @@ thead,
   .botoesVoltar-Cadastrar{
     margin-bottom: 20px;
   }
+}
+
 }
