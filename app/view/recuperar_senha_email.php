@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Passcontrol</title>
  
-    <link rel="stylesheet" href="../../public/css/root.css">
+    <!-- <link rel="stylesheet" href="../../public/css/root.css"> -->
     <link rel="stylesheet" href="../../public/css/forms.css">
     <link rel="stylesheet" href="../../public/css/modal_confirmacao_senha.css">
 
@@ -22,19 +22,19 @@
                 <img src="../../public/img/logo_animation/animation_logo_mid.png" alt="imagem da animação meio" class="image_animation image_animation_mid">
                 <img src="../../public/img/logo_animation/animation_logo_bot.png" alt="imagem da animação baixo" class="image_animation image_animation_bot">
             </div>
-            <h1 class="title">PASS CONTROL</h1>
+            <h1 class="title-login">PASS CONTROL</h1>
         </div>
  
-        <form id="form_rec_senha" method="POST" class="form">
-            <div class="input_group">
+        <form id="form_rec_senha" method="POST" class="form-login">
+            <div class="input_group-login">
                 <label class="label_recuperar_senha" for="">Recuperar Senha</label>
-                <input class="input" type="text" name="cpf_user" id="cpf" placeholder="000.000.000-00">
+                <input class="input-login" type="text" name="cpf_user" id="cpf" placeholder="000.000.000-00">
             </div>
 
             <p class="text_recuperar_senha">Você receberá um código de segurança no email cadastrado para esse CPF, para validar sua nova senha.</p>
 
-            <div class="container_button">
-                <button type="button" class="button open-confirmacao-senha">Enviar</button>
+            <div class="container_button-login">
+                <button type="button" class="button-login open-confirmacao-senha">Enviar</button>
             </div>
         </form>
     </main>

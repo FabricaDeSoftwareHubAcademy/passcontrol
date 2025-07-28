@@ -11,7 +11,7 @@
     padding: 0;
 }
 
-.head {
+.head-tela-autoatendimento-pag1 {
     background-color: var(--cinza-control);
     height: auto;
     width: auto;
@@ -19,7 +19,7 @@
     display: flex;
 }
 
-.nav-head {
+.nav-head-tela-autoatendimento-pag1 {
     background-color: var(--cor-fundo);
     width: 100%;
     height: 100px;
@@ -29,7 +29,7 @@
     padding: 0 20px;
 }
 
-.logo-control {
+.logo-control-tela-autoatendimento-pag1 {
     width: fit-content;
     padding: 2px;
     padding-left: 5px;
@@ -40,7 +40,7 @@
     width: 100%;
 }
 
-.nav-head H3 {
+.nav-head-tela-autoatendimento-pag1 H3 {
     color: var(--cinza-control);
     width: 80%;
     padding-left: 20px;
@@ -49,14 +49,14 @@
     font-size: 23px;
 }
 
-.border-line {
+.border-line-tela-autoatendimento-pag1 {
     background-color: var(--cinza-control);
     height: 30px;
     width: 100%;
     margin: 0 10px 0 0;
 }
 
-.workspace {
+.workspace-tela-autoatendimento-pag1 {
     height: 100%;
     width: 100%;
     display: flex;
@@ -67,11 +67,11 @@
     background-size: 400px;
     background-repeat: no-repeat;
     background-position: right bottom;
-    padding-top: 110px;
+    /* padding-top: 110px; */
 }
 
 
-.page-title {
+.page-title-tela-autoatendimento-pag1 {
     align-items: center;
     justify-content: center;
     font-size: 32px;
@@ -81,7 +81,7 @@
     font-weight: 800;
 }
 
-.area-cinza {
+.area-cinza-tela-autoatendimento-pag1 {
     background-color: rgba(0, 0, 0, 0.1); 
     width: calc(100% - 40px);
     min-height: 60vh;
@@ -100,7 +100,7 @@
 
 
 
-.box-area {
+.box-area-tela-autoatendimento-pag1 {
     display: flex;
     width: 100%;
     max-width: 1200px;
@@ -148,7 +148,7 @@
     text-decoration: none;
 }
 
-.box-area {
+.box-area-tela-autoatendimento-pag1 {
     display: flex;
     width: 100%;
     max-width: 1200px;
@@ -190,7 +190,7 @@
 
 @media (max-width: 600px) {
 
-    .workspace {
+    .workspace-tela-autoatendimento-pag1 {
         background-size: 250px;
     }
 
@@ -199,15 +199,15 @@
         height: 200px; 
     }
 
-    .nav-head h3 {
+    .nav-head-tela-autoatendimento-pag1 h3 {
         font-size: 18px; 
     }
 
-    .page-title {
+    .page-title-tela-autoatendimento-pag1 {
         font-size: 24px;
     }
 
-    .area-cinza {
+    .area-cinza-tela-autoatendimento-pag1 {
         min-height: 70vh; 
         height: auto; 
         margin-bottom: 10px;
@@ -226,7 +226,7 @@
 }
 
 @media (max-width: 800px) {
-    .workspace {
+    .workspace-tela-autoatendimento-pag1 {
         background-size: 300px;
     }
 
@@ -234,15 +234,15 @@
         height: 250px;
     }
 
-    .nav-head h3 {
+    .nav-head-tela-autoatendimento-pag1 h3 {
         font-size: 20px;
     }
 
-    .page-title {
+    .page-title-tela-autoatendimento-pag1 {
         font-size: 28px;
     }
 
-    .area-cinza {
+    .area-cinza-tela-autoatendimento-pag1 {
         min-height: 60vh;
         padding: 15px;
     }
@@ -254,7 +254,7 @@
 }
 
 @media (max-width: 1000px) {
-    .workspace {
+    .workspace-tela-autoatendimento-pag1 {
         background-size: 350px;
     }
 
@@ -262,15 +262,15 @@
         height: 300px;
     }
 
-    .nav-head h3 {
+    .nav-head-tela-autoatendimento-pag1 h3 {
         font-size: 22px;
     }
 
-    .page-title {
+    .page-title-tela-autoatendimento-pag1 {
         font-size: 32px;
     }
 
-    .area-cinza {
+    .area-cinza-tela-autoatendimento-pag1 {
         min-height: 50vh;
         padding: 20px;
     }
@@ -286,7 +286,7 @@
         width: calc(50% - 20px); 
     }
 
-    .area-cinza {
+    .area-cinza-tela-autoatendimento-pag1 {
         min-height: 70vh;
         height: auto;
         margin-bottom: 20px;
@@ -299,7 +299,7 @@
         font-size: 16px;
     }
     
-    .box-area {
+    .box-area-tela-autoatendimento-pag1 {
         flex-direction: row;
         gap: 20px;
         justify-content: center;
@@ -346,7 +346,7 @@
         font-size: 16px; 
     }
     
-    .box-area {
+    .box-area-tela-autoatendimento-pag1 {
         flex-direction: row;
         gap: 20px;
         justify-content: center;

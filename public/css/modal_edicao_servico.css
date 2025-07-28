@@ -142,7 +142,7 @@
 }
 
 @media (max-width: 480px){
-    .modal-editar-ponto-atendimento .titulo-edit-servico {
+    .modal-container-servico .titulo-edit-servico {
         font-size: 20px;
     }
     .button-grup-edit-servico {

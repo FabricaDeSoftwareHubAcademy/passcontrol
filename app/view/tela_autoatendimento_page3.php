@@ -92,36 +92,36 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </head>
 
 <body>
-    <header class="head">
-        <nav class="nav-head">
-            <div class="logo-control">
+    <header class="head-tela-autoatendimento-pag3">
+        <nav class="nav-head-tela-autoatendimento-pag3">
+            <div class="logo-control-tela-autoatendimento-pag3">
                 <img src="../../public/img/icons/logo_control.svg" alt="LOGOCONTROL" id="img-logo">
             </div>
             <H3>PassControl</H3>
         </nav>
     </header>
 
-    <div class="border-line"></div>
+    <div class="border-line-tela-autoatendimento-pag3"></div>
 
-    <main class="workspace">
-        <div class="area-cinza">
-            <h4 class="page-title">Informe seus dados para atendimento:</h4>
+    <main class="workspace-tela-autoatendimento-pag3">
+        <div class="area-cinza-tela-autoatendimento-pag3">
+            <h4 class="page-title-tela-autoatendimento-pag3">Informe seus dados para atendimento:</h4>
 
             <form method="POST" id="form-dados">
-                <div class="box-inputs">
-                    <div class="input-group">
+                <div class="box-inputs-tela-autoatendimento-pag3">
+                    <div class="input-group-tela-autoatendimento-pag3">
                         <h3 for="nome">Nome*</h3><br>
                         <input type="text" class="input-infos" id="nome" name="nome" required>
                     </div>
-                    <div class="input-group">
+                    <div class="input-group-tela-autoatendimento-pag3">
                         <h3 for="sobrenome">Sobrenome*</h3><br>
                         <input type="text" class="input-infos" id="sobrenome" name="sobrenome" required>
                     </div>
-                    <div class="input-group">
+                    <div class="input-group-tela-autoatendimento-pag3">
                         <h3 for="telefone">Telefone</h3><br>
                         <input type="tel" class="input-infos" id="telefone" name="telefone" placeholder="(00) 00000-0000">
                     </div>
-                    <div class="input-group">
+                    <div class="input-group-tela-autoatendimento-pag3">
                         <div class="information">
                             * A SENHA NÃO SERÁ IMPRESSA <br><br>
                             * INSIRA SEU NÚMERO DE TELEFONE PARA RECEBER AS INFORMAÇÕES DO SEU ATENDIMENTO VIA SMS
@@ -133,11 +133,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <input type="hidden" id="id_servico" name="id_servico">
                 <input type="hidden" id="telefone_hidden" name="telefone">
 
-                <div class="footer">
-                    <button type="button" class="button">
+                <div class="footer-tela-autoatendimento-pag3">
+                    <button type="button" class="button-tela-autoatendimento-pag3">
                         <a href="./tela_autoatendimento_page2.php" class="btn-voltar">VOLTAR</a>
                     </button>
-                    <button type="button" class="button btn-confirmar" id="confirmarBtn">CONFIRMAR</button>
+                    <button type="button" class="button-tela-autoatendimento-pag3 btn-confirmar" id="confirmarBtn">CONFIRMAR</button>
                 </div>
             </form>
         </div>
