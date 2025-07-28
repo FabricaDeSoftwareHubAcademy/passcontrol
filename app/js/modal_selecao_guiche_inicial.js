@@ -14,7 +14,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const modalSaida = document.querySelector('.fundo-confimarcao-saida-sistema');
     const saidaModal = document.querySelector(".save_SaidaSis");
     const fechaSaida = document.querySelector(".cancel_SaidaSis");
+
+    const userSession = JSON.parse(sessionStorage.getItem("usuario"))
     
+    if(!userSession.guiche){
+        selectGuiche
+    }
     
     const texto_salvo = sessionStorage.getItem("guichetexto");
     if (texto_salvo) {
