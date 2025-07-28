@@ -85,7 +85,7 @@ function validarConfirmacaoSenha() {
 
 const form = document.getElementById("form_recuperar_senha");
 const salvarBtn = document.getElementById("btn_nova_senha");
-const modalContainer = document.querySelector(".fundo-container-confirmacao-dados");
+// const modalContainer = document.querySelector(".fundo-container-confirmacao-dados");
 const botaoFecharModal = document.querySelector(".Okay_ConfDados");
 
 // Função para verificar se todos os requisitos foram atingidos
@@ -119,11 +119,11 @@ salvarBtn.addEventListener("click", () => {
     }
 
     // Senha válida → exibir modal
-    modalContainer.classList.add("show");
+    document.querySelector(".fundo-container-confirmacao-dados").classList.add("show");
 
     // Ao clicar no botão OK do modal
     botaoFecharModal.addEventListener("click", () => {
-        modalContainer.classList.remove("show");
+        document.querySelector(".fundo-container-confirmacao-dados").classList.remove("show");
         form.submit(); 
         location.href = "../../index.php";
     });
