@@ -49,7 +49,7 @@ btn_login.addEventListener("click", async function (event) {
         } 
         else if (response.code == 201) {
             // redireciona para redefinição de senha no primeiro acesso
-            window.location.href = "./app/view/recuperar_senha_nova_senha.php?id=" + response.id_usuario;
+            window.location.href = "./app/view/recuperar_senha_nova_senha.php?id_user=" + response.id_usuario;
         } 
         else if (response.code == 400) {
             msg.textContent = "Senha incorreta. Tente novamente.";
