@@ -8,6 +8,7 @@
     <!-- <link rel="stylesheet" href="../../public/css/root.css"> -->
     <link rel="stylesheet" href="../../public/css/forms.css">
     <link rel="stylesheet" href="../../public/css/modal_confirmacao_senha.css">
+    <link rel="stylesheet" href="../../public/css/modal_enviando_email.css">
 
     <link rel="shortcut icon" href="../../public/img/favicon.ico" type="image/x-icon">
 
@@ -39,6 +40,9 @@
         </form>
     </main>
  
-    <?php include '../../public/modais/modal_confirmacao_envio_email.php'; ?>
+    <?php
+        include_once '../../public/modais/modal_enviando_email.php';
+        include_once '../../public/modais/modal_confirmacao_envio_email.php'; 
+    ?>
 </body>
 </html>

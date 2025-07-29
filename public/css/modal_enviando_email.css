@@ -14,7 +14,7 @@
   z-index: 10;
 }
 
-.fundo-modal-envio-email .show {
+.show {
   opacity: 1;
   display: flex;
   pointer-events: auto;

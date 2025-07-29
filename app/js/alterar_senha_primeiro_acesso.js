@@ -22,6 +22,8 @@ btn_nova_senha.addEventListener("click",  async function(e) {
         body:form_data
     })
 
+    document.querySelector(".fundo-modal-envio-email").classList.add("show");
+
     let response = await dados_php.json();
 
     if(response.status == 200){

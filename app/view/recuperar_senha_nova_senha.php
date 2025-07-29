@@ -9,12 +9,15 @@
     <link rel="stylesheet" href="../../public/css/forms.css">
     <link rel="shortcut icon" href="../../public/img/favicon.ico" type="image/x-icon">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
     <link rel="shortcut icon" type="imagex/png" href="../../public/img/Logo-Nota-Controlnt.ico">
-    <script src="../../public/js/recuperar_senha_nova_senha.js" defer></script>
-    <script type="module" src="../../public/js/alterar_senha_primeiro_acesso.js" defer></script>
+    
     <link rel="stylesheet" href="../../public/css/modal_confirmacao_dados.css">
+    <link rel="stylesheet" href="../../public/css/modal_enviando_email.css">
     <!-- <link rel="stylesheet" href="../../public/css/recuperar_senha_nova_senha.css"> -->
+
+    <script src="../../public/js/recuperar_senha_nova_senha.js" defer></script>
+    <script type="module" src="../js/alterar_senha_primeiro_acesso.js" defer></script>
 </head>
 <body class="body_login background_image">
     <main class="container_login">
@@ -65,7 +68,8 @@
     <!-- Modal de confirmação -->
 
     <?php
-        include "../../public/modais/modal_confirmacao_dados.php";
+        include_once '../../public/modais/modal_enviando_email.php';
+        include_once "../../public/modais/modal_confirmacao_dados.php";
     ?>
 </div>
 </body>
