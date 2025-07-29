@@ -9,16 +9,14 @@ document.addEventListener('DOMContentLoaded', function () {
         const atendente = document.getElementById('inputAtendente').value;
         const guiche = document.getElementById('inputGuiche').value;
 
-
         if (!dataInicio || !dataFim) {
             alert('Informe as datas para filtrar.');
             return;
         }
 
-        fetch(`../php/buscar_relatorio.php?inicio=${dataInicio}&fim=${dataFim}&local=${encodeURIComponent(local)}&atendente=${encodeURIComponent(atendente)}&guiche=${encodeURIComponent(guiche)}`)
+        fetch(`../actions/buscar_dados_relatorio.php?inicio=${dataInicio}&fim=${dataFim}&local=${encodeURIComponent(local)}&atendente=${encodeURIComponent(atendente)}&guiche=${encodeURIComponent(guiche)}`)
             .then(res => res.json())
             .then(dados => {
-                // Atualizar a tabela
                 const tabela = document.querySelector('#tabelaRelatorio tbody');
                 tabela.innerHTML = '';
 
@@ -40,13 +38,17 @@ document.addEventListener('DOMContentLoaded', function () {
                             </tr>
                         `;
 
-                        // Contagem para gráficos
-                        servicosCount[row.nome_servico] = (servicosCount[row.nome_servico] || 0) + 1;
-                        const dia = row.fila_senha_created_in.split(' ')[0];
+                        // Garantir data no formato ISO YYYY-MM-DD
+                        const data = new Date(row.fila_senha_created_in);
+                        const dia = data.toISOString().split('T')[0];
+
                         datasCount[dia] = (datasCount[dia] || 0) + 1;
+                        servicosCount[row.nome_servico] = (servicosCount[row.nome_servico] || 0) + 1;
                     });
 
-                    // Atualizar gráficos
+                    console.log("Contagem por data:", datasCount); // para depurar
+                    console.log("Contagem por serviço:", servicosCount); // para depurar
+
                     atualizarGraficos(datasCount, servicosCount);
                 }
             })
@@ -55,11 +57,10 @@ document.addEventListener('DOMContentLoaded', function () {
             });
     });
 
-    // Inicializa gráficos vazios
     iniciarGraficosVazios();
 });
 
-function obterDataAtual() { 
+function obterDataAtual() {
     const hoje = new Date();
     const ano = hoje.getFullYear();
     const mes = String(hoje.getMonth() + 1).padStart(2, '0');
@@ -68,52 +69,81 @@ function obterDataAtual() {
 }
 
 function iniciarGraficosVazios() {
-    const hoje = obterDataAtual();
-    // Gráfico de barras
+    const aguardandoPlugin = {
+        id: 'aguardandoFiltro',
+        beforeDraw: (chart) => {
+            const { ctx, width, height } = chart;
+            ctx.save();
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            ctx.font = '16px Arial';
+            ctx.fillStyle = '#888';
+            ctx.fillText('Aguardando filtro...', width / 2, height / 2);
+            ctx.restore();
+        }
+    };
+
     const ctxBar = document.getElementById('graficoBarras').getContext('2d');
     chartBar = new Chart(ctxBar, {
         type: 'bar',
         data: {
-            labels: [hoje, hoje],
+            labels: [],
             datasets: [{
                 label: 'Atendimentos por Dia',
-                data: [5, 8],
+                data: [],
                 backgroundColor: ['#3aa867', '#5fbe7f']
             }]
         },
         options: {
             responsive: true,
-            plugins: { title: { display: true, text: 'Distribuição por Data' } }
-        }
+            plugins: {
+                title: {
+                    display: true,
+                    text: 'Distribuição por Data'
+                }
+            }
+        },
+        plugins: [aguardandoPlugin]
     });
 
-    // Gráfico de pizza
     const ctxPie = document.getElementById('graficoPizza').getContext('2d');
     chartPie = new Chart(ctxPie, {
         type: 'pie',
         data: {
-            labels: ['Transporte', 'Poda Árvore', 'IPTU'],
+            labels: [],
             datasets: [{
                 label: 'Serviços',
-                data: [10, 20, 5],
+                data: [],
                 backgroundColor: ['#37474F', '#5fbe7f', '#3aa867']
             }]
         },
         options: {
             responsive: true,
-            plugins: { title: { display: true, text: 'Distribuição por Serviço' } }
-        }
+            plugins: {
+                title: {
+                    display: true,
+                    text: 'Distribuição por Serviço'
+                }
+            }
+        },
+        plugins: [aguardandoPlugin]
     });
 }
 
-function atualizarGraficos(dias, servicos) {
-    // Gráfico de barras
-    chartBar.data.labels = Object.keys(dias);
-    chartBar.data.datasets[0].data = Object.values(dias);
+function atualizarGraficos(datasCount, servicosCount) {
+    const datas = Object.keys(datasCount).sort();
+    const valoresDatas = datas.map(d => datasCount[d]);
+
+    chartBar.data.labels = datas;
+    chartBar.data.datasets[0].data = valoresDatas;
+    chartBar.config.plugins = []; // remove o plugin "aguardando"
     chartBar.update();
 
-    // Gráfico de pizza
-    chartPie.data.labels = Object.keys(servicos);
-    chartPie.data.datasets[0].data = Object.values(servicos);
+    const servicos = Object.keys(servicosCount);
+    const valoresServicos = servicos.map(s => servicosCount[s]);
+
+    chartPie.data.labels = servicos;
+    chartPie.data.datasets[0].data = valoresServicos;
+    chartPie.config.plugins = []; // remove o plugin "aguardando"
     chartPie.update();
 }

@@ -1,15 +1,16 @@
 <?php
 require_once '../database/Database.php';
 
+header('Content-Type: application/json');
+
 $dataInicio = $_GET['inicio'] ?? '';
 $dataFim = $_GET['fim'] ?? '';
-/* $local = $_GET['local'] ?? '';
+$local = $_GET['local'] ?? '';
 $atendente = $_GET['atendente'] ?? '';
-$guiche = $_GET['guiche'] ?? ''; */
+$guiche = $_GET['guiche'] ?? '';
 
 // Instanciar a classe Database (sem passar tabela pois faremos query customizada)
 $db = new Database();
-
 // Obter a conexão PDO
 $pdo = $db->getConnection();
 
@@ -36,11 +37,14 @@ if (!empty($guiche)) {
     $params[] = $guiche;
 }
 
-var_dump($sql);
-var_dump($params);
+// var_dump($sql);
+// var_dump($params);
 
-$stmt = $pdo->prepare($sql);
-$stmt->execute($params);
-$dados = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-echo json_encode($dados);
+try {
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute($params);
+    $dados = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    echo json_encode($dados);
+} catch (PDOException $e) {
+    echo json_encode(['erro' => $e->getMessage()]);
+}

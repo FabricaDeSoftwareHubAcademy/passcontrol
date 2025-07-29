@@ -81,7 +81,7 @@
                 </div>
 
                 <div class="containerMainRd">
-                    <!-- <table id="tabelaRelatorio" class="relatorio-tabela">
+                    <table id="tabelaRelatorio" class="relatorio-tabela">
                         <thead>
                             <tr>
                                 <th>ID</th><th>Fila</th><th>Prioridade</th><th>Data</th><th>Serviço</th><th>Local</th>
@@ -90,7 +90,7 @@
                         <tbody>
                             <tr><td colspan="6">Nenhum dado encontrado.</td></tr>
                         </tbody>
-                    </table> -->
+                    </table>
 
                     <div style="margin-top: 40px;">
                         <canvas id="graficoBarras" height="120"></canvas>
