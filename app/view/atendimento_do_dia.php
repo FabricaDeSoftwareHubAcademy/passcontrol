@@ -18,10 +18,8 @@
     <link rel="stylesheet" href="../../public/css/navegacao.css">
     <link rel="stylesheet" href="../../public/css/menu_eli.css">
     <link rel="stylesheet" href="../../public/css/atendimento_do_dia.css">
-    <link rel="stylesheet" href="../../public/css/style_atendimento_tempo_real.css">
+    <!-- <link rel="stylesheet" href="../../public/css/style_atendimento_tempo_real.css"> -->
     <link rel="stylesheet" href="../../public/css/monitor-modal.css">
-    <link rel="stylesheet" href="../../public/modais/Modal_Alterar_Dados_Pessoais/alterar_dados_pessoais.css">
-    <link rel="stylesheet" href="../../public/modais/Modal_Alterar_Senha/alterar_senha.css">
     
     <!-- JS -->
     <script src="../../public/js/navegacao_menu_lateral.js" defer></script>
@@ -36,7 +34,7 @@
     include "./navegacao.php";
     ?>
 
-    <section class="Area-Util-Projeto">
+    <section class="Area-Util-Projeto atendimento-dia">
         <!-- SUBMENU ATENDIMENTO -->
         <div class="menu-container">
             <div class="menu">
@@ -52,16 +50,20 @@
 
         <!-- ACOMPANHAMENTO EM TEMPO REAL -->
         <div class="area-atendimento-do-dia">
-            <div class="container-atendimento-do-dia">
-                <h1 class="title-atendimento-do-dia title-atendimento-tempo-real-bt">Atendimento do Dia</h1>
-                <!-- <h1 class="title-atendimento-tempo-real">Senhas na Fila: 000</h1> -->
+            <div class="cabecario-atendimento-dia">
+                <div class="container-atendimento-do-dia">
+                    <h1 class="title-atendimento-do-dia title-atendimento-tempo-real-bt">Atendimento do Dia</h1>
+                    <!-- <h1 class="title-atendimento-tempo-real">Senhas na Fila: 000</h1> -->
+                </div>
+                <div class="area-botao-reloading">
+                    <button class="reloading_atendimento_do_dia">
+                        <img class="icone_atendimento_do_dia" src="../../public/img/icons/reloading_do_dia.png">
+                        <span>Atualizar</span>
+                    </button>
+                </div>
             </div>
-            <button class="reloading_atendimento_do_dia">
-                    <img class="icone_atendimento_do_dia" src="../../public/img/icons/reloading_do_dia.png">
-                    <span>Atualizar</span>
-            </button>
             <div class="line-atendimento-do-dia"></div>
-            <div class="container-atendimento-do-dia">
+            <div class="container-tabela-atendimento-do-dia">
                 <table class="table-atendimento-do-dia">
                     <thead>
                         <tr>
@@ -77,6 +79,111 @@
                         </tr>
                     </thead>
                     <tbody>
+                        <tr>
+                            <td>Paula Fernanda de Pauli</td>
+                            <td>IPTU</td>
+                            <td>CM 026</td>
+                            <td>03</td>
+                            <td class="disponivel-atendimento-do-dia">Disponível</td>
+                        </tr>
+                        <tr>
+                            <td>Paula Fernanda de Pauli</td>
+                            <td>IPTU</td>
+                            <td>CM 026</td>
+                            <td>03</td>
+                            <td class="disponivel-atendimento-do-dia">Disponível</td>
+                        </tr>
+                        <tr>
+                            <td>Paula Fernanda de Pauli</td>
+                            <td>IPTU</td>
+                            <td>CM 026</td>
+                            <td>03</td>
+                            <td class="disponivel-atendimento-do-dia">Disponível</td>
+                        </tr>
+                        <tr>
+                            <td>Paula Fernanda de Pauli</td>
+                            <td>IPTU</td>
+                            <td>CM 026</td>
+                            <td>03</td>
+                            <td class="disponivel-atendimento-do-dia">Disponível</td>
+                        </tr>
+                        <tr>
+                            <td>Paula Fernanda de Pauli</td>
+                            <td>IPTU</td>
+                            <td>CM 026</td>
+                            <td>03</td>
+                            <td class="disponivel-atendimento-do-dia">Disponível</td>
+                        </tr>
+                        <tr>
+                            <td>Paula Fernanda de Pauli</td>
+                            <td>IPTU</td>
+                            <td>CM 026</td>
+                            <td>03</td>
+                            <td class="disponivel-atendimento-do-dia">Disponível</td>
+                        </tr>
+                        <tr>
+                            <td>Paula Fernanda de Pauli</td>
+                            <td>IPTU</td>
+                            <td>CM 026</td>
+                            <td>03</td>
+                            <td class="disponivel-atendimento-do-dia">Disponível</td>
+                        </tr>
+                        <tr>
+                            <td>Paula Fernanda de Pauli</td>
+                            <td>IPTU</td>
+                            <td>CM 026</td>
+                            <td>03</td>
+                            <td class="disponivel-atendimento-do-dia">Disponível</td>
+                        </tr>
+                        <tr>
+                            <td>Paula Fernanda de Pauli</td>
+                            <td>IPTU</td>
+                            <td>CM 026</td>
+                            <td>03</td>
+                            <td class="disponivel-atendimento-do-dia">Disponível</td>
+                        </tr>
+                        <tr>
+                            <td>Paula Fernanda de Pauli</td>
+                            <td>IPTU</td>
+                            <td>CM 026</td>
+                            <td>03</td>
+                            <td class="disponivel-atendimento-do-dia">Disponível</td>
+                        </tr>
+                        <tr>
+                            <td>Paula Fernanda de Pauli</td>
+                            <td>IPTU</td>
+                            <td>CM 026</td>
+                            <td>03</td>
+                            <td class="disponivel-atendimento-do-dia">Disponível</td>
+                        </tr>
+                        <tr>
+                            <td>Paula Fernanda de Pauli</td>
+                            <td>IPTU</td>
+                            <td>CM 026</td>
+                            <td>03</td>
+                            <td class="disponivel-atendimento-do-dia">Disponível</td>
+                        </tr>
+                        <tr>
+                            <td>Paula Fernanda de Pauli</td>
+                            <td>IPTU</td>
+                            <td>CM 026</td>
+                            <td>03</td>
+                            <td class="disponivel-atendimento-do-dia">Disponível</td>
+                        </tr>
+                        <tr>
+                            <td>Paula Fernanda de Pauli</td>
+                            <td>IPTU</td>
+                            <td>CM 026</td>
+                            <td>03</td>
+                            <td class="disponivel-atendimento-do-dia">Disponível</td>
+                        </tr>
+                        <tr>
+                            <td>Paula Fernanda de Pauli</td>
+                            <td>IPTU</td>
+                            <td>CM 026</td>
+                            <td>03</td>
+                            <td class="disponivel-atendimento-do-dia">Disponível</td>
+                        </tr>
                         <tr>
                             <td>Paula Fernanda de Pauli</td>
                             <td>IPTU</td>
