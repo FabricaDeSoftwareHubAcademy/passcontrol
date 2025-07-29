@@ -1,4 +1,5 @@
 history.pushState(null,null, location.href);
+history.pushState(null,null, location.href);
 
 window.addEventListener("popstate", function () {
     console.warn("seta do navegador usada.");

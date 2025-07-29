@@ -40,8 +40,7 @@ btn_login.addEventListener("click", async function (event) {
 
             const usuarioLogado = {
                 cpf: cpf_usuario,
-                email: email_usuario,
-                guiche: null
+                email: email_usuario
             }
             sessionStorage.setItem('usuario', JSON.stringify(usuarioLogado))
             // redireciona para a URL retornada pelo PHP conforme perfil (menuadm_fluxo, menusup_fluxo, menuatend_fluxo)

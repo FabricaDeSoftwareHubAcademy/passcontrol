@@ -17,6 +17,7 @@
 
     <script src="./app/js/mascara_cpf.js" defer></script>
     <script src="./app/js/login.js" defer></script>
+    <script src="../js/bloquea_navegacao.js" defer></script>
 </head>
 <body class="body_login background_image">
     <main class="container_login">
