@@ -17,7 +17,7 @@
                 <div class="topo-direita-consultar-fila">
                     <div class="senhas-guiche-area-chamada">
 
-                    <p class="contador-senhas">0</p>
+                    <p class="contador-senhas">Senhas na fila: 0</p>
                         <!-- <p>Senhas Na Fila:</p> -->
                     </div>
                 </div>
