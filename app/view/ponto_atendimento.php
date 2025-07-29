@@ -49,7 +49,7 @@ $guiches = $guiche->buscar(null, " status_ponto_atendimento DESC");
     include "./navegacao.php";
     ?>
 
-    <section class="Area-Util-Projeto">
+    <section class="Area-Util-Projeto lista_ponto_atendimento">
         <!-- INICIO DA ÁREA ÚTIL DA PÁGINA -->
         <!-- <div id="PontoAtendimentoCad"> -->
         <div class="topo-tela-PontoAtendimentoCad">

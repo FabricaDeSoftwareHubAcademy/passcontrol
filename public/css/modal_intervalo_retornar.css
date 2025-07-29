@@ -24,7 +24,7 @@
     z-index: 10;
 }
 
-.show {
+.fundo-intervalo-retornar .show {
     opacity: 1;
     display: flex;
     pointer-events: auto;

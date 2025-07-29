@@ -95,7 +95,7 @@ class Usuario
         ) {
             return json_encode([
                 'success' => false,
-                'message' => 'A senha não atende aos requisitos de segurança.'
+                'message' => 'A senha não atende aos requisitos de segurança. Utilize no mínimo 8 dígitos, incluindo pelo menos 1 número, 1 letra maiúscula e 1 caractere especial.'
             ]);
         }
 

@@ -1,29 +1,29 @@
 <div class="fundo_editar_dados_usuario">
     <section class="modal-editar-dados">
         <img src="../../public/img/icons/logo_control.svg" alt="Logo Nota Control" class="logo-alterar-dados">
-        <h1 class="titulo">Editar Dados do Usuário</h1>
+        <h1 class="titulo-editar-dados-usu">Editar Dados do Usuário</h1>
         <hr class="linha-alterar-dados">
         <form class="form_editar_dados_usuario" id="form_editar_dados_usuario" method=POST enctype="multipart/form-data">
 
             <input type="hidden" name="id_usuario" id="id_usuario" value=""> <!-- Campo oculto para o ID do usuário -->
 
             <div class="container_edit_usuario">
-                <label class="label_input"><b>Nome</b></label>
+                <label class="label_input-editar-dados-usu"><b>Nome</b></label>
                 <input type="text" class="input_dados_edit font_input" id="nome" name="nome" value="" placeholder="Nome do usuario" required>
             </div>
 
             <div class="container_edit_usuario">
-                <label class="label_input"><b>E-mail</b></label>
+                <label class="label_input-editar-dados-usu"><b>E-mail</b></label>
                 <input type="email" class="input_dados_edit font_input" id="email" name="email" value="" placeholder="exemplo@email.com" required>
             </div>
 
             <div class="container_edit_usuario">
-                <label class="label_input"><b>CPF</b></label>
+                <label class="label_input-editar-dados-usu"><b>CPF</b></label>
                 <input type="text" class="input_dados_edit font_input" id="cpf" name="cpf" value="" maxlength="14" placeholder="000.000.000-00" required>
             </div>
 
             <div class="container_edit_usuario">
-                <label class="label_input"><b>Foto de Perfil</b></label>
+                <label class="label_input-editar-dados-usu"><b>Foto de Perfil</b></label>
                 <div class="sub_container_foto">
                     <img class="foto_usuario" id="foto_usuario" src="" alt="Nada cadastrado!">
                     <input type="file" class="input_dados_edit font_input" id="foto" name="foto" value="">
@@ -32,7 +32,7 @@
             </div>
 
             <div class="container_edit_usuario">
-                <label class="label_input" for="perfil">Perfil De Acesso</label>
+                <label class="label_input-editar-dados-usu" for="perfil">Perfil De Acesso</label>
                 <select class="input_dados_edit font_input" form="form_editar_dados_usuario" type="select" name="id_perfil" id="id_perfil" placeholder="Nome do perfil" required>
                     <?php
                     // // LISTAR PERFIS DE USUARIO
@@ -44,7 +44,7 @@
             </div>
 
             <div class="container_edit_usuario" id="select_servico_usuario">
-                <label class="label_input" for="Servico">Servicos Atendidos</label>
+                <label class="label_input-editar-dados-usu" for="Servico">Servicos Atendidos</label>
                 <div class="container_dropdown">
 
                     <div class="input_dados_edit font_input selecao_servico noselect">  <!-- FAKE SELECT BTN -->

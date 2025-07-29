@@ -54,7 +54,7 @@ $id_perfil = $_SESSION['id_perfil_usuario_fk'] ?? null;
     require_once '../actions/verificar_permissao.php';
     ?>
 
-    <section class="Area-Util-Projeto">
+    <section class="Area-Util-Projeto tela-atendimento">
         <?php
         include_once "../../public/modais/modal_selecao_guiche.php";
         ?>

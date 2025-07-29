@@ -74,7 +74,7 @@
 }
 
 /* labels e inputs */
-.label_input{
+.label_input-editar-dados-usu{
     font-size: 16px;
 }
 .input_dados_edit {
@@ -224,13 +224,13 @@
     .modal-editar-dados {
         width: 90%;
     }
-    .titulo{
+    .titulo-editar-dados-usu{
         margin-bottom: 20px;
     }
     .container_edit_usuario{
         gap: 2px;
     }
-    .label_input{
+    .label_input-editar-dados-usu{
         font-size: 12px;
     }
     .font_input{
@@ -263,7 +263,7 @@
         width: 95%;
         padding: 20px;
     }
-    .titulo{
+    .titulo-editar-dados-usu{
         margin-top: 7px;
         font-size: 20px;
     }
@@ -285,7 +285,7 @@
         width: 95%;
         padding: 15px;
     }
-    .titulo{
+    .titulo-editar-dados-usu{
         margin-top: 7px;
         font-size: 20px;
     }
@@ -307,7 +307,7 @@
         width: 90%;
         padding: 15px;
     }
-    .titulo{
+    .titulo-editar-dados-usu{
         font-size: 16px;
     }
     .logo-alterar-dados{
