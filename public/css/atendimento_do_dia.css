@@ -13,6 +13,9 @@
     --color-em-atendimento: #0080C8;
 }
 
+.atendimento-dia{
+    align-items: center;
+}
 
 .area-atendimento-do-dia {
     height: 100vh;

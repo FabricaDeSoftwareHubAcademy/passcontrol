@@ -43,7 +43,7 @@
     z-index: 2;
 }
 
-.nav-cabeca{
+.navegacao-cabeca{
     background-color: var(--cor-fundo);
     width: 100%;
     height: 10vh;
@@ -55,7 +55,7 @@
     padding-right: 2vh;
 }
 
-.logo-control{
+.logo-control-navegacao{
     height: 100%;
     width: fit-content;
     padding: 2px;
@@ -72,7 +72,7 @@
     width: 100%;
 }
 
-.titulo-projeto{
+.titulo-projeto-navegacao{
     display: flex;
     align-items: center;
     width: 80%;
@@ -99,7 +99,7 @@
 .usu-nome:hover{
     background-color: rgba(0, 0, 0, 0.3);
 }
-.dark-area{
+.dark-area-navegacao{
     height: 5vh;
     width: 100%;
 }
@@ -341,10 +341,10 @@
     .usu-nome{
         font-size: 0.60rem;
     }
-    .logo-control{
+    .logo-control-navegacao{
         padding-left: 30px;
     }
-    .titulo-projeto{
+    .titulo-projeto-navegacao{
         font-size: 20px;
         margin-right: 20px;
     }
@@ -354,10 +354,10 @@
     .usu-nome{
         font-size: 0.60rem;
     }
-    .logo-control{
+    .logo-control-navegacao{
         padding-left: 30px;
     }
-    .titulo-projeto{
+    .titulo-projeto-navegacao{
         font-size: 20px;
         margin-right: 20px;
     }
@@ -367,10 +367,10 @@
     /* .usu-nome{
         font-size: 0.60rem;
     } */
-    .logo-control{
+    .logo-control-navegacao{
         padding-left: 30px;
     }
-    .titulo-projeto{
+    .titulo-projeto-navegacao{
         font-size: 25px;
         margin-right: 20px;
     }
