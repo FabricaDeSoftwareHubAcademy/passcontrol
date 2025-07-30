@@ -76,10 +76,10 @@ $icones = [
 </head>
 <body>
     <header class="cabeca-navegacao-control">
-        <div class="nav-cabeca">
-            <div class="logo-control">
+        <div class="navegacao-cabeca">
+            <div class="logo-control-navegacao">
                 <img src="../../public/img/icons/logo_control.svg" alt="LOGOCONTROL" id="img-logo">
-                <h1 class="titulo-projeto">PassControl</h1>
+                <h1 class="titulo-projeto-navegacao">PassControl</h1>
             </div>
             <p class="usu-nome">
                 <?= isset($_SESSION['nome_usuario']) ? htmlspecialchars($_SESSION['nome_usuario']) : 'Nome do Usuário' ?>
@@ -89,7 +89,7 @@ $icones = [
                 <img class="usu-nome" src="../../public/img/icons/image 33.svg" alt="Loading..."">
             </a> -->
         </div>
-        <div class="dark-area"></div>
+        <div class="dark-area-navegacao"></div>
     </header>
 
     <!-- INFO DO USUARIO -->
