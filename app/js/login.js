@@ -16,31 +16,32 @@ btn_login.addEventListener("click", async function (event) {
 
     const cpf = document.querySelector("#cpf").value.trim();
     const senha = document.querySelector("#input_password").value.trim();
-
+    
     if (!cpf || !senha) {
         msg.textContent = "Por favor, preencha todos os campos.";
         msg.style.display = "block";
         return; // não envia se algum campo estiver vazio
     }
-
+    
     let form_login = document.querySelector("#form_login");
     let formData = new FormData(form_login);
-
+    
     let dados_php = await fetch("./app/actions/usuario_logar.php", {
         method: "POST",
         body: formData
     });
-
+    
     try{
         let response = await dados_php.json();
-    
+        console.log(response)
         if (response.code == 200 && response.redirect) {
-
-            const {cpf_usuario,email_usuario} = response.msg 
+            
+            const {cpf_usuario,email_usuario, id_perfil_usuario_fk} = response.msg 
 
             const usuarioLogado = {
                 cpf: cpf_usuario,
-                email: email_usuario
+                email: email_usuario,
+                id_perfil_usuario_fk: id_perfil_usuario_fk
             }
             sessionStorage.setItem('usuario', JSON.stringify(usuarioLogado))
             // redireciona para a URL retornada pelo PHP conforme perfil (menuadm_fluxo, menusup_fluxo, menuatend_fluxo)
@@ -75,3 +76,12 @@ document.querySelector("#cpf").addEventListener("input", () => {
 document.querySelector("#input_password").addEventListener("input", () => {
     msg.style.display = "none";
 });
+
+// history.pushState(null,null, location.href);
+// history.pushState(null,null, location.href);
+
+// window.addEventListener("popstate", function () {
+//     console.warn("seta do navegador usada.");
+//     sessionStorage.clear()
+//     window.location.href = "../../index.php";
+// });

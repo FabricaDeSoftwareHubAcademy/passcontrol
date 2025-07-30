@@ -29,6 +29,7 @@
     <script src="../../public/js/modal_cadastro_servico.js" defer></script>
     <script src="../js/ponto_atendimento_cadastrar.js" defer></script>
     <script src="../js/servico_cadastrar.js" defer></script>
+    <script src="../js/bloquea_navegacao.js" defer></script>
 
     <!-- LOGO -->
     <link rel="shortcut icon" type="imagex/png" href="../../public/img/Logo-Nota-Controlnt.ico">
