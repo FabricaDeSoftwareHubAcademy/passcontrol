@@ -1,5 +1,5 @@
 <?php
-require_once '../../classes/FilaSenha.php';
+require_once '../classes/FilaSenha.php';
 
 $fila = new FilaSenha();
 $senhas = $fila->buscarFilaPendenteCategoria();
