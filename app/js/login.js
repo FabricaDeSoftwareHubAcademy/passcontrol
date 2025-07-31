@@ -36,13 +36,13 @@ btn_login.addEventListener("click", async function (event) {
     
         if (response.code == 200 && response.redirect) {
 
-            const {cpf_usuario,email_usuario} = response.msg 
+            const {cpf_usuario, email_usuario} = response.usuario;
 
             const usuarioLogado = {
                 cpf: cpf_usuario,
                 email: email_usuario
             }
-            sessionStorage.setItem('usuario', JSON.stringify(usuarioLogado))
+            sessionStorage.setItem('usuario', JSON.stringify(usuarioLogado));
             // redireciona para a URL retornada pelo PHP conforme perfil (menuadm_fluxo, menusup_fluxo, menuatend_fluxo)
             window.location.href = response.redirect;
         } 
@@ -62,8 +62,11 @@ btn_login.addEventListener("click", async function (event) {
             msg.textContent = "Usuário não cadastrado. Verifique o CPF informado.";
             msg.style.display = "block";
         }
-    }catch(erro){
-        console.error("Erro na resposta:".erro.message);
+    }catch(erro){        
+        msg.textContent = "Ouve um erro. Tente novamente";
+        msg.style.display = "block";
+        console.warn("Erro na requisicao: " + erro);
+        return;
     }
 });
 

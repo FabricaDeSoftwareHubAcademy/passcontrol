@@ -67,4 +67,5 @@ if (buttonAbrir_ConfSenha && modalContainer_ConfSenha && buttonFechar_ConfSenha)
 
 } else {
     console.warn("Elementos do modal não encontrados. Verifique as classes no HTML.");
+    location.reload;
 }

@@ -7,6 +7,7 @@ if (isset($_POST['cpf_user'])) {
     $cpf = preg_replace('/[^0-9]/', '', $_POST['cpf_user']);
 
     $objUser = new Usuario();
+    $cpf = filter_var($cpf, FILTER_SANITIZE_SPECIAL_CHARS);
     $buscaCPF = 'cpf_usuario = ' . $cpf;
 
     $buscar = $objUser->buscar($buscaCPF);

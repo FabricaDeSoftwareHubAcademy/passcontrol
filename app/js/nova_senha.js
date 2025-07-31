@@ -18,10 +18,6 @@ async function nova_senha() {
 
   form_data.append("id_usuario", id_user); // INSERE ID DO USUARIO NO FORM
 
-  // console.log(form_data); // ---DEBUG
-
-  // document.querySelector(".fundo-modal-envio-email").classList.add("show");
-
   let dados_php = await fetch("../actions/alterar_senha.php", {
     method: "POST",
     body: form_data,
@@ -31,7 +27,6 @@ async function nova_senha() {
 
 
   if (response.status === 200) {
-    // document.querySelector(".fundo-modal-envio-email").classList.remove("show");
     document.querySelector(".fundo-container-confirmacao-dados").classList.add("show");
   } else {
     msg_erro = response.msg;
