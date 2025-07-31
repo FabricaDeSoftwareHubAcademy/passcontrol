@@ -229,8 +229,4 @@ class Usuario
 
         return $this->db->delete("id_usuario_fk = $id_usuario"); // limpa os servicos vinculados do usuario
     }
-
-    public static function getPagesNavigation($id_perfil_usuario_fk){
-        return SELF::pagesNavigation[$id_perfil_usuario_fk]; 
-    }
 }

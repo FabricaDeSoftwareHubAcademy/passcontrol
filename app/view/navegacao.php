@@ -7,7 +7,29 @@ if (!isset($_SESSION['id_usuario'])) {
     exit();
 }
 
-$pagesNavigation = Usuario::getPagesNavigation($_SESSION['id_perfil_usuario_fk']);
+
+$id_perfil = $_SESSION['id_perfil_usuario_fk'] ?? null;
+
+$adm = ['atendimento.php', 'monitor_modal.php', 'menuadm_usuario.php', 'relatorio_diario.php'];
+$sup = ['atendimento.php', 'monitor_modal.php', 'menusup_usuario.php', 'relatorio_diario.php'];
+$atend = ['atendimento.php', 'monitor_modal.php'];
+$totem = [];
+
+switch ($id_perfil) {
+    case 5:
+        $menus = $adm;
+        break;
+    case 6:
+        $menus = $sup;
+        break;
+    case 7:
+        $menus = $atend;
+        break;
+
+    default:
+        $menus = [];
+}
+
 
 $nomeExibicao = [
     'atendimento.php' => 'Atendimento',
