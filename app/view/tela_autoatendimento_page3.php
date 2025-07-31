@@ -11,15 +11,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if (!empty($nome) && !empty($sobrenome) && $prioridade !== null && $id_servico !== null) {
         $nomeCompleto = $nome . ' ' . $sobrenome;
-        $dataHora = date('Y-m-d H:i:s');
 
         $db = new Database('fila_senha');
         $resultado = $db->insert([
             'nome_fila_senha' => $nomeCompleto,
             'prioridade_fila_senha' => $prioridade,
             'id_servico_fk' => $id_servico,
-            'fila_senha_created_in' => $dataHora,
-            'fila_senha_updated_in' => $dataHora
         ]);
 
         if ($resultado) {
@@ -27,7 +24,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 'nome' => $nomeCompleto,
                 'prioridade' => $prioridade,
                 'id_servico' => $id_servico,
-                'criado_em' => $dataHora
             ];
 
             // Teste do Zenvia para mandar sms

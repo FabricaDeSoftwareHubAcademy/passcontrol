@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", async () => {
     const dados = JSON.parse(localStorage.getItem('dadosSenha'));
 
-    if (!dados || !dados.nome || dados.prioridade === undefined || !dados.id_servico || !dados.criado_em) {
+    if (!dados || !dados.nome || dados.prioridade === undefined || !dados.id_servico) {
         alert("Informações incompletas.");
         return;
     }

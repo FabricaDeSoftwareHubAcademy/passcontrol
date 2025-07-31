@@ -16,9 +16,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $nome = $_POST['nome'] ?? '';
     $prioridade = $_POST['prioridade'] ?? null;
     $id_servico = $_POST['id_servico'] ?? null;
-    $criado_em = $_POST['criado_em'] ?? null;
 
-    if (!empty($nome) && $prioridade !== null && $id_servico !== null && !empty($criado_em)) {
+    if (!empty($nome) && $prioridade !== null && $id_servico !== null) {
         $db = new Database('fila_senha');
 
         $sql = "SELECT fs.*, s.nome_servico FROM fila_senha fs 
@@ -26,7 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 WHERE fs.nome_fila_senha = :nome 
                 AND fs.prioridade_fila_senha = :prioridade 
                 AND fs.id_servico_fk = :id_servico 
-                AND fs.fila_senha_created_in = :criado_em 
+                AND fs.fila_senha_criada_in
                 ORDER BY fs.id_fila_senha DESC 
                 LIMIT 1";
 
@@ -34,7 +33,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             'nome' => $nome,
             'prioridade' => $prioridade,
             'id_servico' => $id_servico,
-            'criado_em' => $criado_em
         ]);
 
         $resultado = $stmt->fetch(PDO::FETCH_ASSOC);
