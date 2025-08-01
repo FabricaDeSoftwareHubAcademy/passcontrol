@@ -28,26 +28,26 @@
 
 <body class="control-body-navegacao">
     <?php
-    include "./navegacao.php";
+    include "./menu_gestao.php";
     require_once '../actions/verificar_permissao.php';
     ?>
 
     <section class="Area-Util-Projeto">
         <!-- navmenu -->
         <div class="menu-container">
-            <div class="menu">
+            <!-- <div class="menu">
                 <button class="hamburger" onclick="toggleMenu()">☰</button>
                 <a href="./menusup_usuario.php">Usuários</a>
                 <a href="./menusup_servicos.php" class="active">Serviços</a>
-                <!-- <a href="./menuadm_autoatendimento.php">Autoatendimento</a> -->
-                <!-- <a href="./menuadm_usuario.php">ADM</a> -->
+                <a href="./menuadm_autoatendimento.php">Autoatendimento</a>
+                <a href="./menuadm_usuario.php">ADM</a>
             </div>
             <div class="menu-mobile" id="mobileMenu">
                 <a href="./menusup_usuario.php">Usuários</a>
                 <a href="./menusup_servicos.php" class="active">Serviços</a>
-                <!-- <a href="./menuadm_autoatendimento.php">Autoatendimento</a> -->
-                <!-- <a href="./menuadm_usuario.php">ADM</a> -->
-            </div>
+                <a href="./menuadm_autoatendimento.php">Autoatendimento</a>
+                <a href="./menuadm_usuario.php">ADM</a>
+            </div> -->
         </div>
 
             <!-- área da descrição da página de navegação  -->

@@ -36,27 +36,27 @@
 
 <body class="control-body-navegacao">
     <?php
-    include "./navegacao.php";
-    require_once '../actions/verificar_permissao.php';
+    include "./menu_gestao.php";
+    // require_once '../actions/verificar_permissao.php';
     /* include "../../public/modais/ModalCadastrodosServicos/cadastro_servicos.php"; */
     ?>
     <section class="Area-Util-Projeto">
         <!-- navmenu -->
         <div class="menu-container">
-            <div class="menu">
+            <!-- <div class="menu">
                 <button class="hamburger" onclick="toggleMenu()">☰</button>
                 <a href="./menuadm_usuario.php">Usuários</a>
                 <a href="./menuadm_servicos.php" class="active">Serviços</a>
                 <a href="./menuadm_autoatendimento.php">Autoatendimento</a>
-                <!-- <a href="./menusup_usuario.php">SUP</a> -->
+                <a href="./menusup_usuario.php">SUP</a>
             </div>
             
             <div class="menu-mobile" id="mobileMenu">
                 <a href="./menuadm_usuario.php">Usuários</a>
                 <a href="./menuadm_servicos.php" class="active">Serviços</a>
                 <a href="./menuadm_autoatendimento.php">Autoatendimento</a>
-                <!-- <a href="./menusup_usuario.php">SUP</a> -->
-            </div>
+                <a href="./menusup_usuario.php">SUP</a>
+            </div> -->
         </div>
 
             <!-- área da descrição da página de navegação  -->

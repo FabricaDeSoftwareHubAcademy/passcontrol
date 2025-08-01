@@ -28,26 +28,26 @@
 </head>
 <body class="control-body-navegacao">
     <?php
-    include "./navegacao.php";
+    include "./menu_gestao.php";
     require_once '../actions/verificar_permissao.php';
     ?>
     
     <section class="Area-Util-Projeto">
         <!-- navmenu -->
         <div class="menu-container">
-            <div class="menu">
+            <!-- <div class="menu">
                 <button class="hamburger" onclick="toggleMenu()">☰</button>
                 <a href="./menuadm_usuario.php" class="active">Usuários</a>
                 <a href="./menuadm_servicos.php">Serviços</a>
                 <a href="./menuadm_autoatendimento.php">Autoatendimento</a>
-                <!-- <a href="./menusup_usuario.php">SUP</a> -->
+                <a href="./menusup_usuario.php">SUP</a>
             </div>
             <div class="menu-mobile" id="mobileMenu">
                 <a href="./menuadm_usuario.php" class="active">Usuários</a>
                 <a href="./menuadm_servicos.php">Serviços</a>
                 <a href="./menuadm_autoatendimento.php">Autoatendimento</a>
-                <!-- <a href="./menusup_usuario.php">SUP</a> -->
-            </div>
+                <a href="./menusup_usuario.php">SUP</a>
+            </div> -->
         </div>
         <script>
             function toggleMenu() {
