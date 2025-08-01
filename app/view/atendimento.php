@@ -37,6 +37,7 @@ $id_perfil = $_SESSION['id_perfil_usuario_fk'] ?? null;
     <!-- JS -->
     <script src="../../public/js/navegacao_menu_lateral.js" defer></script>
     <script src="../../public/js/modal_teladelogin.js" defer></script>
+    <script src="../../public/js/insere_dados_atendimento_atual.js" defer></script>
     <script src="../../public/js/modal_proxima_senha.js" defer></script>
     <script src="../../public/js/monitor_modal.js" defer></script>
     <script src="../../public/js/modal_consultar_fila.js" defer></script>
@@ -83,20 +84,23 @@ $id_perfil = $_SESSION['id_perfil_usuario_fk'] ?? null;
                 <ul class="esquerda-area-chamada">
                     <div class="atendimento-atual-atendimento">
                         <div class="informacoes-area-chamada">
-                            <div class="nome-area-chamada">
-                                <p class="nome-tela-atendimento">Nome:</p>
-                                <p class="pessoa-tela-atendimento">Juliana Barbosa Martins Gomes</p>
-                            </div>
-                            <div class="info-area-chamada">
-                                <div class="senha-area-chamada">
-                                    <p>Senha:</p>
-                                    <p>CM005</p>
-                                </div>
-                                <div class="servico-area-chamada">
-                                    <p>Serviço:</p>
-                                    <p>Poda de Árvore</p>
-                                </div>
-                            </div>
+                            <p class="titulo-informacoes-area-chamada">Atendimento em Andamento:</p>
+                            <span class="nome-area-chamada">
+                                Nome:
+                                <span class="dado-area-chamada-atual" id="nome-atendido-atual">...</span>
+                            </span>
+                            <!-- <div class="info-area-chamada"> -->
+                            <span class="senha-area-chamada">
+                                Senha:
+                                <span class="dado-area-chamada-atual" id="senha-atendido-atual">...</span>
+                                <!-- <p></p> -->
+                            </span>
+                            <span class="servico-area-chamada">
+                                Serviço:
+                                <span class="dado-area-chamada-atual" id="servico-atendido-atual">...</span>
+                                <!-- <p></p> -->
+                            </span>
+                            <!-- </div> -->
                         </div>
                         <div class="numero-guiche-atendimento">
                             <p id="guiche-exibir" class="numero--atendimento">nada selecionado</p>

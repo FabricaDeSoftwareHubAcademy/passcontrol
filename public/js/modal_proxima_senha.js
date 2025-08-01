@@ -1,10 +1,10 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function () {    
     const btnProximaSenha = document.getElementById("chamar-proxima-senha");
     const modal = document.getElementById("modal-senha");
 
     btnProximaSenha.addEventListener("click", async () => {
         try {
-            const idGuiche = sessionStorage.getItem("IdGuicheSelecionado");
+            const idGuiche = sessionStorage.getItem("guicheSelected");
 
             if (!idGuiche) {
                 alert("Guichê não selecionado.");
@@ -27,10 +27,24 @@ document.addEventListener("DOMContentLoaded", function () {
                 document.getElementById("nome-cliente").innerText = data.nome;
                 document.getElementById("senha-cliente").innerText = data.senha;
                 document.getElementById("servico-cliente").innerText = data.servico;
+                
+                // Preenche a informacao de atendimento em andamento com os dados da senha
+                const obj_atendimento_atual = {
+                    nome : data.nome,
+                    senha : data.senha,
+                    servico : data.servico
+                }
+                const obj_atendimento_atual_json = JSON.stringify(obj_atendimento_atual);
+
+                sessionStorage.setItem("atendimento_atual", obj_atendimento_atual_json);
+
+                document.getElementById("nome-atendido-atual").innerText = data.nome;
+                document.getElementById("senha-atendido-atual").innerText = data.senha;
+                document.getElementById("servico-atendido-atual").innerText = data.servico;
 
                 // Pega guichê da sessionStorage para exibir
-                const guicheTexto = sessionStorage.getItem("guichetexto") || "N/A";
-                document.getElementById("guiche-cliente").innerText = guicheTexto;
+                const guicheTexto = sessionStorage.getItem("guicheSelected") || "N/A";
+                document.getElementById("guiche-cliente").innerText = "Guiche: " + guicheTexto;
 
                 // Exibir modal
                 modal.style.display = "flex";

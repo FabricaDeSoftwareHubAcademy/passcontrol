@@ -57,6 +57,7 @@ try {
         'nome' => $senha['nome_fila_senha'] ?? '---',
         'senha' => "$prioridade$numero",
         'servico' => $servico['nome_servico'] ?? '---',
+        'id_servico' => $servico['id_servico'],
         'guiche' => $idGuiche,
         'id_senha' => $senha['id_fila_senha']
     ]);    
