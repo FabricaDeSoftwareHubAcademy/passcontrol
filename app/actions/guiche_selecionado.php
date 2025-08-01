@@ -1,6 +1,11 @@
 <?php 
 require_once '../classes/PontoAtendimento.php';
 
+header("Access-Control-Allow-Origin: *");
+header('Cache-Control: no-cache, must-revalidate'); 
+header("Content-Type: text/plain; charset=UTF-8");
+header("HTTP/1.1 200 OK");
+
 $dados = json_decode(file_get_contents("php://input"), true);
 
 if (isset($dados['guiche'])) {

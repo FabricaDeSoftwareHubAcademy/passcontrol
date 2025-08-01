@@ -21,8 +21,8 @@ document.addEventListener("DOMContentLoaded", () => {
         selectGuiche
     }
     
-    const texto_salvo = sessionStorage.getItem("guichetexto");
-    if (texto_salvo) {
+const texto_salvo = sessionStorage.getItem("guichetexto", `Guichê ${guichetexto}`);
+    if (texto_salvo && guichetexto) {
         guichetexto.textContent = `${texto_salvo}`;
     }
 
@@ -98,5 +98,15 @@ document.addEventListener("DOMContentLoaded", () => {
     });
     fechaSaida.addEventListener("click", () => {
         modalSaida.classList.remove("show");
+    });
+    window.addEventListener("beforeunload", function (e) {
+        const guicheSelecionado = sessionStorage.getItem("guicheSelected");
+        if (guicheSelecionado) {
+            const blob = new Blob(
+                [JSON.stringify({ guiche: parseInt(guicheSelecionado) })],
+                { type: 'application/json' }
+            );
+            navigator.sendBeacon('../actions/guiche_liberacao.php', blob);
+        }
     });
 });
