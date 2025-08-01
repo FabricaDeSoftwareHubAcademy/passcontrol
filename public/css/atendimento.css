@@ -1135,7 +1135,7 @@ td, th {
     .area-botao-atendimento{
         display: flex;
         gap: 0.5rem;
-        height: 48%;
+        /* height: 48%; */
     }
     .area-botao--guiche-area-chamada{
         gap: 0.4rem;

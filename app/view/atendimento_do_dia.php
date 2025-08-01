@@ -62,7 +62,7 @@
                     </button>
                 </div>
             </div>
-            <div class="line-atendimento-do-dia"></div>
+            <span class="line-atendimento-do-dia"></span>
             <div class="container-tabela-atendimento-do-dia">
                 <table class="table-atendimento-do-dia">
                     <thead>

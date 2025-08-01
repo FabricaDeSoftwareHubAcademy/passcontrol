@@ -35,21 +35,21 @@ btn_login.addEventListener("click", async function (event) {
         let response = await dados_php.json();
         console.log(response)
         if (response.code == 200 && response.redirect) {
-            
-            const {cpf_usuario,email_usuario, id_perfil_usuario_fk} = response.msg 
+
+            const {cpf_usuario, email_usuario} = response.usuario;
 
             const usuarioLogado = {
                 cpf: cpf_usuario,
                 email: email_usuario,
                 id_perfil_usuario_fk: id_perfil_usuario_fk
             }
-            sessionStorage.setItem('usuario', JSON.stringify(usuarioLogado))
+            sessionStorage.setItem('usuario', JSON.stringify(usuarioLogado));
             // redireciona para a URL retornada pelo PHP conforme perfil (menuadm_fluxo, menusup_fluxo, menuatend_fluxo)
             window.location.href = response.redirect;
         } 
         else if (response.code == 201) {
             // redireciona para redefinição de senha no primeiro acesso
-            window.location.href = "./app/view/recuperar_senha_nova_senha.php?id=" + response.id_usuario;
+            window.location.href = "./app/view/recuperar_senha_nova_senha.php?id_user=" + response.id_usuario;
         } 
         else if (response.code == 400) {
             msg.textContent = "Senha incorreta. Tente novamente.";
@@ -63,8 +63,11 @@ btn_login.addEventListener("click", async function (event) {
             msg.textContent = "Usuário não cadastrado. Verifique o CPF informado.";
             msg.style.display = "block";
         }
-    }catch(erro){
-        console.error("Erro na resposta:".erro.message);
+    }catch(erro){        
+        msg.textContent = "Ouve um erro. Tente novamente";
+        msg.style.display = "block";
+        console.warn("Erro na requisicao: " + erro);
+        return;
     }
 });
 
@@ -76,12 +79,3 @@ document.querySelector("#cpf").addEventListener("input", () => {
 document.querySelector("#input_password").addEventListener("input", () => {
     msg.style.display = "none";
 });
-
-// history.pushState(null,null, location.href);
-// history.pushState(null,null, location.href);
-
-// window.addEventListener("popstate", function () {
-//     console.warn("seta do navegador usada.");
-//     sessionStorage.clear()
-//     window.location.href = "../../index.php";
-// });
