@@ -128,59 +128,53 @@
     margin: 0; 
 }
 
+/* AREA DE ATENDIMENTO EM ANDAMENTO */
 .informacoes-area-chamada {
     display: flex;
-    align-items: start;
+    align-items: flex-start;
     width: 82%;
     height: 96%;
+    padding: 10px 15px;
+    justify-content: space-around;
+    gap: 0.5em;
     border-radius: 5px;
     box-shadow: 4px 4px 8px 1px rgba(0, 0, 0, 0.2);
-    font-size: 28px;
     font-weight: 700;
     color: #33404D;
     background-color: rgba(255, 255, 255, 0.7);
     flex-direction: column;
+    flex-wrap: nowrap;
+    text-overflow: clip;
+    overflow: auto;
+}
+.nome-area-chamada, .senha-area-chamada, .servico-area-chamada{
+    width: 100%;
+    font-size: 20px;
+    flex-wrap: wrap;
+    
+}
+.dado-area-chamada-atual{
+    font-size: 24px;
+}
+.titulo-informacoes-area-chamada{
+    font-size: 25px;
 }
 .nome-area-chamada{
-    display: flex;
-    padding-left: 1.5rem;
-    gap: 0.8rem;
-    margin-top: 30px;
-}
-.nome-tela-atendimento{
-    margin-left: 0%;
-    font-size: 24px;
-}
-.pessoa-tela-atendimento{
-    font-size: 24px;
-    display: flex;
-}
-.info-area-chamada{
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    margin-top: 40px;
-    align-content: flex-end;
+    
 }
 .senha-area-chamada{
-    padding-left: 1.5rem;
-    display: flex;
-    align-items: start;
-    width: 50%;
-    gap: 0.5rem;
-    font-size: 24px;
+    
 }
 .servico-area-chamada{
-    display: flex;
-    gap: 0.5rem;
-    font-size: 24px;
+    
 }
 .senha-area-chamada p{
-    font-size: 24px;
 }
 .servico-area-chamada p{
-    font-size: 24px;
 }
+
+
+/* BOTOES DE ATENDIMENTO */
 .botao-proxima-senha-atendimento, .botao-encerrar-atendimento,.botao-consultar-fila-atendimento, .botao-intervalo-atendimento  {
     background-color: var(--cinza-control);
     color: #f9f9f9;

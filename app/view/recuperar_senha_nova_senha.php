@@ -17,7 +17,7 @@
 
     <!-- JS -->
     <script src="../../public/js/validacao_visual_nova_senha.js" defer></script>
-    <script src="../js/nova_senha.js" defer></script>
+    <script src="../js/nova_senha_login.js" defer></script>
     <!-- <script src="../../public/js/recuperar_senha_nova_senha.js" defer></script> -->
     <!-- <script type="module" src="../js/alterar_senha_primeiro_acesso.js" defer></script> -->
 
