@@ -18,6 +18,8 @@ if (buttonAbrir_ConfSenha && modalContainer_ConfSenha && buttonFechar_ConfSenha)
     buttonAbrir_ConfSenha.addEventListener("click", async (event) => {
         event.preventDefault();
 
+        document.querySelector(".fundo-modal-envio-email").classList.add("show");
+
         const cpf = cpfInput.value.trim();
 
         // Verifica se CPF foi preenchido
@@ -39,13 +41,16 @@ if (buttonAbrir_ConfSenha && modalContainer_ConfSenha && buttonFechar_ConfSenha)
 
         let response = await dados_php.json();
 
-        console.log("Resposta do PHP:", response);
+        // console.log("Resposta do PHP:", response); //DEBUG
 
         if (response.status === 200) {
-            // Exibe o modal de confirmação
+            // Remove o modal de aguardo de envio e exibe o modal de confirmação
+            document.querySelector(".fundo-modal-envio-email").classList.remove("show");
             modalContainer_ConfSenha.classList.add("show");
         } else {
+            document.querySelector(".fundo-modal-envio-email").classList.remove("show");
             alert("Erro ao enviar o e-mail. Por favor, tente novamente.");
+            location.reload;
         }
     });
 
@@ -62,4 +67,5 @@ if (buttonAbrir_ConfSenha && modalContainer_ConfSenha && buttonFechar_ConfSenha)
 
 } else {
     console.warn("Elementos do modal não encontrados. Verifique as classes no HTML.");
+    location.reload;
 }
