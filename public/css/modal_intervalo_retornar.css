@@ -68,7 +68,9 @@
 .modal-intervalo .modal-message {
     font-size: 18px;
     font-weight: bold;
-    text-align: center;    
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
 .modal-intervalo .timer-intervalo{
