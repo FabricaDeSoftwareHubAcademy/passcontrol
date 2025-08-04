@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 :root {
     --verde-control: #3AA867;
     --cinza-control: #33404D;
@@ -5,10 +6,17 @@
     --font-main: Inter, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
-.body{
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Inter", sans-serif;
+}
+
+body{
     height: 100%;
     margin: 0;
     padding: 0;
+    background-color: rgba(0, 0, 0, 0.1);
 }
 
 .head-tela-autoatendimento-pag1 {
@@ -68,6 +76,7 @@
     background-repeat: no-repeat;
     background-position: right bottom;
     /* padding-top: 110px; */
+    /* background-color: rgba(0, 0, 0, 0.1);  */
 }
 
 
@@ -82,10 +91,10 @@
 }
 
 .area-cinza-tela-autoatendimento-pag1 {
-    background-color: rgba(0, 0, 0, 0.1); 
+    /* background-color: rgba(0, 0, 0, 0.1);  */
     width: calc(100% - 40px);
     min-height: 60vh;
-    /* height: calc(98vh - 160px); */
+    height: 100%;
     top: 10px; 
     left: 10px; 
     right: 10px; 
@@ -95,7 +104,7 @@
     align-items: center;
     border-radius: 10px;
     padding: 40px;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
 }
 
 
@@ -142,10 +151,11 @@
     justify-content: center;
     align-items: center;
     color: #113062;
-    font-size: 18px;
+    font-size: 19px;
     font-weight: bold;
     margin-top: 10px;
     text-decoration: none;
+    font-family: var(--font-main);
 }
 
 .box-area-tela-autoatendimento-pag1 {
@@ -164,7 +174,7 @@
 
 .pagination-controls {
     text-align: center;
-    margin-top: 20px;
+    margin-top: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -186,7 +196,11 @@
     cursor: not-allowed;
 }
 
-
+@media screen and (max-width: 1122px) {
+    *{
+        box-sizing: border-box;
+    }
+}
 
 @media (max-width: 600px) {
 
@@ -281,7 +295,7 @@
     }
 }
 
-@media (max-width: 1024px) and (min-width: 768px) {
+@media (max-width: 1024px) {
     .box {
         width: calc(50% - 20px); 
     }
@@ -306,8 +320,8 @@
     }
     
     .box {
-        width: 230px;
-        height: 230px; 
+        width: 220px;
+        height: 220px; 
         padding: 15px; 
     }
     
@@ -315,6 +329,45 @@
         height: 80px;
     }
 } 
+
+@media screen and (max-width: 979px) {
+    .box {
+        width: 220px;
+        height: 200px; 
+        padding: 15px; 
+    }
+}
+@media (max-width: 775px) {
+    .page-title-tela-autoatendimento-pag1 {
+        font-size: 26px;
+    }
+}
+@media (max-width: 739px) {
+    .box {
+        width: 200px;
+        height: 200px; 
+        padding: 15px; 
+    }
+}
+@media (max-width: 679px) {
+    .box {
+        width: 175px;
+        height: 195px; 
+        padding: 0; 
+    }
+    .box h4{
+        font-size: 16px;
+    }
+}
+@media (max-width: 604px) {
+    .box {
+        width: 200px;
+        height: 200px; 
+        padding: 0; 
+    }
+
+}
+
 
 /* @media (min-width: 1025px) { 
     
