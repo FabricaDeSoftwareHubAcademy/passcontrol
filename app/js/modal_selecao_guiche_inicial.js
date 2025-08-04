@@ -15,8 +15,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const saidaModal = document.querySelector(".save_SaidaSis");
     const fechaSaida = document.querySelector(".cancel_SaidaSis");
 
-
-
     // Abre modal se guichê não foi selecionado
     if (!sessionStorage.getItem('guicheSelected') && modalvalidacao) {
         modalvalidacao.classList.add("show");
@@ -30,12 +28,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 return;
             }
 
-            const texto_salvo = sessionStorage.getItem("guichetexto", `Guichê ${guichetexto}`);
-                if (texto_salvo && guichetexto) {
-                guichetexto.textContent = `${texto_salvo}`;
-            }
-            // const guicheText = opcaoselecionada.textContent.trim();
-            // guichetexto.textContent = `${guicheText}`;
+            const guicheText = opcaoselecionada.textContent.trim();
+            guichetexto.textContent = `${guicheText}`;
             
             sessionStorage.setItem('guicheSelected', guicheSelecionado);
             fetch('../actions/guiche_selecionado.php', {
