@@ -1,16 +1,15 @@
 <?php
-include_once "./navegacao.php"; // já inicia sessão e verifica login
+include_once "./navegacao.php";
 
-// Agora pode usar $_SESSION com segurança
-$perfil = $_SESSION['id_perfil_usuario_fk'] ?? null;
+// $perfil = $_SESSION['id_perfil_usuario_fk'] ?? null;
 
-if ($perfil == 5) {
-    $voltarPara = './menuadm_usuario.php';
-} elseif ($perfil == 6) {
-    $voltarPara = './menusup_usuario.php';
-} else {
-    $voltarPara = '../../index.php';
-}
+// if ($perfil == 5) {
+//     $voltarPara = './menu_gestao_usuario.php';
+// } elseif ($perfil == 6) {
+//     $voltarPara = './menu_gestao_usuario.php';
+// } else {
+//     $voltarPara = '../../index.php';
+// }
 ?>
 
 
@@ -131,7 +130,7 @@ if ($perfil == 5) {
 
     </form>
     <div class="container_botao_form">
-      <button class="botao_volto" form="dados_cad" type="reset" onclick="window.location.href='<?= $voltarPara ?>';">Voltar</button>
+      <button class="botao_volto" form="dados_cad" type="reset" onclick="location.href = document.referrer">Voltar</button>
       <button class="botao_salvo cadastrar_usuario" name="cadastrar" id="save_sucess">Salvar</button>
     </div>
 
