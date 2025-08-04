@@ -15,54 +15,40 @@ document.addEventListener("DOMContentLoaded", () => {
     const saidaModal = document.querySelector(".save_SaidaSis");
     const fechaSaida = document.querySelector(".cancel_SaidaSis");
 
-    const userSession = JSON.parse(sessionStorage.getItem("usuario"))
-    
-    if(!userSession.guiche){
-        selectGuiche
-    }
-    
-const texto_salvo = sessionStorage.getItem("guichetexto", `Guichê ${guichetexto}`);
-    if (texto_salvo && guichetexto) {
-        guichetexto.textContent = `${texto_salvo}`;
-    }
+
 
     // Abre modal se guichê não foi selecionado
     if (!sessionStorage.getItem('guicheSelected') && modalvalidacao) {
         modalvalidacao.classList.add("show");
 
-        selectGuiche.addEventListener('input', () => {
-            const guicheSelecionado = parseInt(selectGuiche.value);
-            sessionStorage.setItem('guicheSelected', guicheSelecionado);
-
-            fetch('../actions/guiche_selecionado.php', {
-                method: 'POST',
-                // headers: {
-                //     'Content-Type': 'application/json'
-                // },
-                body: JSON.stringify({guiche: guicheSelecionado})
-            }).catch(err => {
-                console.error("Erro ao marcar guichê como ocupado:", err);
-            });
-        });
-
         btn_validacao.addEventListener("click", () => {
             const opcaoselecionada = selectGuiche.options[selectGuiche.selectedIndex];
+            const guicheSelecionado = parseInt(opcaoselecionada.value);
             
             if (!opcaoselecionada || !opcaoselecionada.value) {
                 alert("Por favor, selecione um guichê.");
                 return;
             }
 
-            const guicheText = opcaoselecionada.textContent.trim();
-            const IdGuiche = opcaoselecionada.value;
+            const texto_salvo = sessionStorage.getItem("guichetexto", `Guichê ${guichetexto}`);
+                if (texto_salvo && guichetexto) {
+                guichetexto.textContent = `${texto_salvo}`;
+            }
+            // const guicheText = opcaoselecionada.textContent.trim();
+            // guichetexto.textContent = `${guicheText}`;
+            
+            sessionStorage.setItem('guicheSelected', guicheSelecionado);
+            fetch('../actions/guiche_selecionado.php', {
+            method: 'POST',
+            body: JSON.stringify({guiche: guicheSelecionado})
+            }) .catch(err => {
+                console.error("Erro ao marcar o guichê como ocupado", err);
+            });
 
-            guichetexto.textContent = `${guicheText}`;
-
-            modalvalidacao.classList.remove("show");
-
+            
             const usuario = JSON.parse(sessionStorage.getItem('usuario'));
             console.log(usuario)
-            //modalvalidacao.classList.remove("show");
+            modalvalidacao.classList.remove("show");
         });
     }
 
