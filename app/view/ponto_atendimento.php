@@ -1,4 +1,17 @@
 <?php
+
+include_once "./navegacao.php"; // já inicia sessão e verifica login
+
+// Agora pode usar $_SESSION com segurança
+$perfil = $_SESSION['id_perfil_usuario_fk'] ?? null;
+
+if ($perfil == 5) {
+    $voltarPara = './menuadm_usuario.php';
+} elseif ($perfil == 6) {
+    $voltarPara = './menusup_usuario.php';
+} else {
+    $voltarPara = '../../index.php';
+}
 require '../classes/PontoAtendimento.php';
 
 $guiche = new Ponto_Atendimento();
@@ -45,9 +58,6 @@ $guiches = $guiche->buscar(null, " status_ponto_atendimento DESC");
 </head>
 
 <body class="control-body-navegacao">
-    <?php
-    include "./navegacao.php";
-    ?>
 
     <section class="Area-Util-Projeto lista_ponto_atendimento">
         <!-- INICIO DA ÁREA ÚTIL DA PÁGINA -->
@@ -102,7 +112,7 @@ $guiches = $guiche->buscar(null, " status_ponto_atendimento DESC");
         </div>
 
         <div class="botoesVoltar-Cadastrar">
-            <button type="button" class="botao-voltar" onclick="window.location.href='menuadm_servicos.php';">Voltar</button>
+            <button type="button" class="botao-voltar" onclick="window.location.href='<?= $voltarPara ?>';">Voltar</button>
             <button type="button" id="btn_cadastrar_adm" class="botao-cadastro">Cadastrar</button>
         </div>
 

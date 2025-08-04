@@ -1,3 +1,19 @@
+<?php
+include_once "./navegacao.php"; // já inicia sessão e verifica login
+
+// Agora pode usar $_SESSION com segurança
+$perfil = $_SESSION['id_perfil_usuario_fk'] ?? null;
+
+if ($perfil == 5) {
+    $voltarPara = './menuadm_usuario.php';
+} elseif ($perfil == 6) {
+    $voltarPara = './menusup_usuario.php';
+} else {
+    $voltarPara = '../../index.php';
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -38,6 +54,7 @@
 <body class="control-body-navegacao">
   <?php
   include_once "./navegacao.php";
+  require_once '../actions/verificar_permissao.php';
   include_once "../actions/usuario_listar.php";
   ?>
 
@@ -114,7 +131,7 @@
 
     </form>
     <div class="container_botao_form">
-      <button class="botao_volto" form="dados_cad" type="reset" onclick="window.location.href='./menuadm_usuario.php';">Voltar</button>
+      <button class="botao_volto" form="dados_cad" type="reset" onclick="window.location.href='<?= $voltarPara ?>';">Voltar</button>
       <button class="botao_salvo cadastrar_usuario" name="cadastrar" id="save_sucess">Salvar</button>
     </div>
 

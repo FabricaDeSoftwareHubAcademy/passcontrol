@@ -1,5 +1,5 @@
 <?php
-if (session_status() == PHP_SESSION_NONE) {
+if (!session_status() == PHP_SESSION_NONE) {
     session_start();
 }
 
@@ -14,39 +14,46 @@ $currentPage = basename($_SERVER['PHP_SELF']);
 
 $pagesAuth = [
     5 => [
-    'tabela_teste.php',
-    'atendimento.php',
-    'menuadm_usuario.php',
-    'menuadm_servicos.php',
-    'menuadm_autoatendimento.php',
-    'monitor_modal.php',
-    'atendimento_do_dia.php',
-    'listar_usuarios.php',
-    'relatorio_diario.php',
-    'cadastro_usuario.php',
-    'ponto_atendimento.php',
-    'servicos.php'],
+        'tabela_teste.php',
+        'atendimento.php',
+        'menu_gestao_usuario.php',
+        'menu_gestao_servico.php',
+        'menu_gestao_autoatendimento.php',
+        'monitor_modal.php',
+        'atendimento_do_dia.php',
+        'listar_usuarios.php',
+        'relatorio_diario.php',
+        'cadastro_usuario.php',
+        'ponto_atendimento.php',
+        'servicos.php'
+    ],
 
-    6 => ['atendimento.php',
-    'menusup_servicos.php',
-    'menusup_usuario.php',
-    'monitor_modal.php',
-    'atendimento_do_dia.php',
-    'relatorio_diario.php',
-    'listar_usuarios.php',
-    'cadastro_usuario.php',
-    'ponto_atendimento.php',
-    'servicos.php'],
+    6 => [
+        'atendimento.php',
+        'menu_gestao_usuario.php',
+        'menu_gestao_servico.php',
+        'monitor_modal.php',
+        'atendimento_do_dia.php',
+        'relatorio_diario.php',
+        'listar_usuarios.php',
+        'cadastro_usuario.php',
+        'ponto_atendimento.php',
+        'servicos.php'
+    ],
 
-    7 => ['atendimento.php',
-    'monitor_modal.php'],
+    7 => [
+        'atendimento.php',
+        'monitor_modal.php'
+    ],
 
     8 => ['Monitor.php'],
 
-    9 => ['tela_autoatendimento_page1.php',
-    'tela_autoatendimento_page2.php',
-    'tela_autoatendimento_page3.php',
-    'tela_autoatendimento_page1.php']
+    9 => [
+        'tela_autoatendimento_page1.php',
+        'tela_autoatendimento_page2.php',
+        'tela_autoatendimento_page3.php',
+        'tela_autoatendimento_page1.php'
+    ]
 ];
 
 // SE NÃO TIVER PERMISSÃO
@@ -54,6 +61,3 @@ if (!isset($pagesAuth[$id_perfil]) || !in_array($currentPage, $pagesAuth[$id_per
     include __DIR__ . '/../../public/modais/modal_aviso_acesso_negado.php';
     exit();
 }
-
-
-?>
