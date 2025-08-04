@@ -4,7 +4,7 @@ const botaoProximo = document.getElementById("nextPage");
 const indicadorPagina = document.getElementById("pageIndicator");
 
 const todosServicos = Array.from(boxContainer.querySelectorAll(".box"));
-const itensPorPagina = 10;
+const itensPorPagina = 8;
 let paginaAtual = 1;
 
 function renderizarPagina(pagina) {
