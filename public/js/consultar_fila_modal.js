@@ -8,6 +8,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     async function atualizarFila() {
+        if (!tabelaBody || !contador) return;
+
 
         tabelaBody.innerHTML = `
             <tr>
@@ -16,10 +18,26 @@ document.addEventListener("DOMContentLoaded", () => {
         contador.textContent = "Carregando...";
 
         try {
-            const response = await fetch("../../actions/consultar_fila_pendente.php");
+            
+            const response = await fetch("../actions/consultar_fila_pendente.php");
+
+            if (!response.ok) {
+                throw new Error("Erro ao buscar dados da fila");
+            }
+
+    
             const data = await response.json();
 
             tabelaBody.innerHTML = "";
+
+            if (data.length === 0) {
+                tabelaBody.innerHTML = `
+                    <tr>
+                        <td colspan="4" style="text-align:center;">Nenhuma senha na fila</td>
+                    </tr>`;
+                contador.textContent = "Senhas na fila: 0";
+                return;
+            }
 
             let ordem = 1;
             let total = 0;
@@ -27,15 +45,15 @@ document.addEventListener("DOMContentLoaded", () => {
             data.forEach(item => {
                 const row = document.createElement("tr");
                 row.innerHTML = `
-                    <td>${ordem++}</td>
-                    <td>${item.nome}</td>
-                    <td>${item.servico}</td>
-                    <td>${item.categoria}</td>
+                <td>${ordem++}</td>
+                <td>${item.nome_fila_senha ?? '-'}</td>
+                <td>${item.servico_fila_senha ?? '-'}</td>
+                <td>${item.prioridade_fila_senha == 1 ? 'Preferencial' : 'Comum'}</td>
                 `;
+
                 tabelaBody.appendChild(row);
                 total++;
-            }
-            );
+            });
 
         contador.textContent = `Senhas na fila: ${total}`;
 
@@ -46,18 +64,32 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-
-    buttonAbrir.addEventListener("click", () => {
-        modal.classList.add("show");
-        atualizarFila();
-    });
-
-    buttonFechar.addEventListener("click", () => {
-        modal.classList.remove("show");
+    if (buttonAbrir && modal) {
+        buttonAbrir.addEventListener("click", () => {
+            modal.classList.add("show");
+            atualizarFila();
+        });
     }
-    );
+
+    if (buttonFechar && modal) {
+        buttonFechar.addEventListener("click", () => {
+            modal.classList.remove("show");
+        });
+    }
+});
 
 
-});    
+//     buttonAbrir.addEventListener("click", () => {
+//         modal.classList.add("show");
+//         atualizarFila();
+//     });
+
+//     buttonFechar.addEventListener("click", () => {
+//         modal.classList.remove("show");
+//     }
+//     );
+
+
+// });    
 
 

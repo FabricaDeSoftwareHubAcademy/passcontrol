@@ -73,6 +73,7 @@ class Database {
 
         $query = 'SELECT ' . $fields . ' FROM ' . $this->table . ' ' . $where . ' ' . $order . ' ' . $limit;
 
+
         $res = $this->execute($query);
         if ($res) {
             return $res;

@@ -13,27 +13,28 @@
         
             $dados = [
                 "nome_fila_senha" => $nome,
-                "servico_fila_senha" => $servico,
+                "id_servico_fk" => $servico,
                 "prioridade_fila_senha" => $categoria,
-                "status_fila" => "pendente",
+                "status_fila_senha" => "pendente",
+                "status_presenca" => 0,
             ];
     
             $ultimaSenha = $this->db->select(
                 "prioridade_fila_senha = $categoria",
                 "fila_senha_created_in DESC",
                 1,
-                "senha_fila_senha"
+                "id_fila_senha"
             );
         
             $proximaSenha = 1;
             if ($ultimaSenha) {
                 $resultado = $ultimaSenha->fetch(PDO::FETCH_ASSOC);
-                if ($resultado && isset($resultado['senha_fila_senha'])) {
-                    $proximaSenha = (int)$resultado['senha_fila_senha'] + 1;
+                if ($resultado && isset($resultado['id_fila_senha'])) {
+                    $proximaSenha = (int)$resultado['id_fila_senha'] + 1;
                 }
             }
         
-            $dados['senha_fila_senha'] = $categoria . str_pad($proximaSenha, 3, '0', STR_PAD_LEFT);
+            $dados['senha_formatada'] = $categoria . str_pad($proximaSenha, 3, '0', STR_PAD_LEFT);
         
             try {
                 return $this->db->insert($dados);
@@ -43,8 +44,8 @@
         }
 
         public function buscarFilaPendenteCategoria() {
-            $comum = $this->db->select("status_fila_senha = 'pendente' AND prioridade_fila_senha = 0", "fila_senha_created_in ASC");
-            $preferencial = $this->db->select("status_fila_senha = 'pendente' AND prioridade_fila_senha = 1", "fila_senha_created_in ASC");
+            $comum = $this->db->select("status_fila_senha = 'pendente' AND prioridade_fila_senha = 0", "fila_senha_criada_in ASC");
+            $preferencial = $this->db->select("status_fila_senha = 'pendente' AND prioridade_fila_senha = 1", "fila_senha_criada_in ASC");
         
             return [
                 'comum' => $comum ? $comum->fetchAll(PDO::FETCH_ASSOC) : [],
