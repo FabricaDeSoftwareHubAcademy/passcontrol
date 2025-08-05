@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>PassControl</title> 
 
+    <title>PassControl</title> 
+    
     <!-- FONTE -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,8 +15,8 @@
     <link rel="stylesheet" href="../../public/css/navegacao.css">
     <link rel="stylesheet" href="../../public/css/monitor-modal.css">
     <link rel="stylesheet" href="../../public/css/style_eli.css">
-    <link rel="stylesheet" href="../../public/modais/Modal_Alterar_Dados_Pessoais/alterar_dados_pessoais.css">
-    <link rel="stylesheet" href="../../public/modais/Modal_Alterar_Senha/alterar_senha.css">
+    <link rel="stylesheet" href="../../public/modais/alterar_dados_pessoais.css">
+    <link rel="stylesheet" href="../../public/modais/alterar_senha.css">
 
     <!-- JS -->
     <script src="../../public/js/navegacao_menu_lateral.js" defer></script>
@@ -28,75 +28,77 @@
 
 <body class="control-body-navegacao">
     <?php
-    include "./navegacao.php";
+    include "./menu_gestao.php";
     require_once '../actions/verificar_permissao.php';
     ?>
 
     <section class="Area-Util-Projeto">
         <!-- navmenu -->
         <div class="menu-container">
-            <div class="menu">
+            <!-- <div class="menu">
                 <button class="hamburger" onclick="toggleMenu()">☰</button>
-                <a href="./menusup_usuario.php" class="active">Usuários</a>
-                <a href="./menusup_servicos.php">Serviços</a>
-                <!-- <a href="./menuadm_autoatendimento.php" class="active">Autoatendimento</a> -->
-                <!-- <a href="./menuadm_usuario.php">ADM</a> -->
+                <a href="./menusup_usuario.php">Usuários</a>
+                <a href="./menusup_servicos.php" class="active">Serviços</a>
+                <a href="./menuadm_autoatendimento.php">Autoatendimento</a>
+                <a href="./menuadm_usuario.php">ADM</a>
             </div>
             <div class="menu-mobile" id="mobileMenu">
-                <a href="./menusup_usuario.php" class="active">Usuários</a>
-                <a href="./menusup_servicos.php">Serviços</a>
-                <!-- <a href="./menuadm_autoatendimento.php" class="active">Autoatendimento</a> -->
-                <!-- <a href="./menuadm_usuario.php">ADM</a> -->
-            </div>
+                <a href="./menusup_usuario.php">Usuários</a>
+                <a href="./menusup_servicos.php" class="active">Serviços</a>
+                <a href="./menuadm_autoatendimento.php">Autoatendimento</a>
+                <a href="./menuadm_usuario.php">ADM</a>
+            </div> -->
         </div>
-        <script>
-            function toggleMenu() {
-                document.getElementById("mobileMenu").classList.toggle("active");
-            }
-        </script>
-        <!-- área da descrição da página de navegação  -->
-        <div class="descricao">
-            <!-- <h2>Menu de Gestão</h2> -->
+
+            <!-- área da descrição da página de navegação  -->
+            <div class="descricao">
+                <!-- <h2>Menu de Gestão</h2> -->
             
-            <!-- <p>Área de Gestão do Supervisor.</p> -->
-        </div>
+                <!-- <p>Área de Gestão do Admimistrador.</p> -->
+            </div>
             <!-- área dos cards de nevegação  -->
             <main class="area-cards">
                 <div class="container_menu">
                     <div class="wrapper">
-                        <a href="./listar_usuarios.php">
+                        <a href="./ponto_atendimento.php">
                         <div class="banner-img">
-                            <img src="../../public/img/Menus/3.png" alt="">
+                            <img src="../../public/img/img-menu/pontodeatendimento.png" alt="">
                         </div>
                         </a>
-                        <!-- <h3 class="titulo-card">Usuários</h3> -->
-                        <!-- <p>Usuários Cadastrados.</p> -->
+                        <!-- <h3 class="titulo-card">Atendimento</h3> -->
+                        <!-- <p>Pontos de Atendimento.</p> -->
+
                     </div>
                     <div class="button-wrapper">
-                        <button class="btn outline" onclick="window.location.href='./listar_usuarios.php';">Listar Usuários</button>
+                        <button class="btn outline" onclick="window.location.href='./ponto_atendimento.php';">Listar Ponto de Atendimento</button>
                     </div>
                 </div>
                 <div class="container_menu">
                     <div class="wrapper">
-                        <a href="./cadastro_usuario.php">
+                        <a href="./servicos.php">
                         <div class="banner-img">
-                            <img src="../../public/img/Menus/2.png" alt="">
+                            <img src="../../public/img/img-menu/serviços.png" alt="">
                         </div>
                         </a>
-                        <!-- <h3 class="titulo-produto">Cadastro</h3> -->
-                        <!-- <p>Cadastro de Usuário</p> -->
+                        <!-- <h3 class="titulo-produto">Serviços</h3> -->
+                        <!-- <p>Gestão dos serviços</p> -->
                     </div>
                     <div class="button-wrapper">
-                        <button class="btn outline" onclick="window.location.href='./cadastro_usuario.php';">Cadastrar Usuários</button>
+                        <button class="btn outline" onclick="window.location.href='./servicos.php';">Cadastrar Serviços</button>
                     </div>
                 </div>    
             </main>
-        </div>   
+        </div>
     </section>
-         
+
     <?php
     include "./monitor_modal.php";
     ?>
     
+    <script>
+        function toggleMenu() {
+            document.getElementById("mobileMenu").classList.toggle("active");
+        }
+    </script>
 </body>
 </html>

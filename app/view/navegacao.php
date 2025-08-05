@@ -1,68 +1,18 @@
-<?php
-session_start();
-require_once '../actions/verificar_permissao.php';
-if (!isset($_SESSION['id_usuario'])) {
-    header("Location: ../../index.php");
-    exit();
-}
-
-$id_perfil = $_SESSION['id_perfil_usuario_fk'] ?? null;
-
-$adm = ['atendimento.php', 'monitor_modal.php', 'menuadm_usuario.php', 'relatorio_diario.php'];
-$sup = ['atendimento.php', 'monitor_modal.php', 'menusup_usuario.php', 'relatorio_diario.php'];
-$atend = ['atendimento.php', 'monitor_modal.php'];
-$totem = [];
-
-switch ($id_perfil) {
-    case 5:
-        $menus = $adm;
-        break;
-    case 6:
-        $menus = $sup;
-        break;
-    case 7:
-        $menus = $atend;
-        break;
-
-    default:
-        $menus = [];
-}
-
-$nomeExibicao = [
-    'atendimento.php' => 'Atendimento',
-    'monitor_modal.php' => 'Monitor',
-    'menuadm_usuario.php' => 'Gestão',
-    'menusup_usuario.php' => 'Gestão',
-    'relatorio_diario.php' => 'Relatórios',
-];
-
-$icones = [
-    'Atendimento' => '../../public/img/icons/atend.svg',
-    'Monitor' => '../../public/img/icons/monitor.svg',
-    'Gestão' => '../../public/img/icons/gestao.svg',
-    'Relatórios' => '../../public/img/icons/nota.svg',
-];
-
+<?php 
+require_once '../actions/carregar_navegacao.php';
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PassControl</title>
 
     <!-- CSS -->
-    <link rel="stylesheet" href="../../public/css/navegacao.css">
-    <link rel="stylesheet" href="../../public/css/menu_eli.css">
-    
-    <link rel="stylesheet" href="../../public/css/modal_confirmacao_saida.css">
-    <link rel="stylesheet" href="../../public/css/modal_alterar_dados_login.css">
-    <link rel="stylesheet" href="../../public/css/modal_alterar_senha.css">
-    <link rel="stylesheet" href="../../public/css/modal_alterar_dados_pessoais.css">
-    <link rel="stylesheet" href="../../public/css/modal_confirmacao_dados.css">
-    
-    <!-- JS -->
+    <link rel="stylesheet" href="../../public/css/astyle_global.css">
+
+    <!-- JS Geral -->
     <script src="../../app/js/modal_selecao_guiche_inicial.js" defer></script>
     <script src="../../public/js/modal_alterar_senha.js" defer></script>
     <script src="../../public/js/modal_alterar_dados_login.js" defer></script>
@@ -70,7 +20,6 @@ $icones = [
     <script src="../../public/js/monitor_modal.js" defer></script>
     <script src="../js/bloquea_navegacao.js" defer></script>
 
-  
     <!-- LOGO -->
     <link rel="shortcut icon" type="imagex/png" href="../../public/img/icons/logo_control.svg">
 </head>
@@ -84,10 +33,6 @@ $icones = [
             <p class="usu-nome">
                 <?= isset($_SESSION['nome_usuario']) ? htmlspecialchars($_SESSION['nome_usuario']) : 'Nome do Usuário' ?>
             </p>
-
-            <!-- <a href="">
-                <img class="usu-nome" src="../../public/img/icons/image 33.svg" alt="Loading..."">
-            </a> -->
         </div>
         <div class="dark-area-navegacao"></div>
     </header>
@@ -95,9 +40,7 @@ $icones = [
     <!-- INFO DO USUARIO -->
     <div class="menu-usuario">
     <?php
-        // Só o nome do arquivo guardado na sessão (exemplo: perfil_abc.avif)
         $nomeImagem = $_SESSION['url_foto_usuario'] ?? 'default_user.jpeg';
-        // Caminho relativo da página para a pasta uploads
         $caminhoRelativo = '../../public/img/uploads/' . basename($nomeImagem);
     ?>
         <img class="icone-usuario" src="<?= htmlentities($caminhoRelativo) ?>" alt="erro">
@@ -125,7 +68,7 @@ $icones = [
                     </a>
                 <?php else: ?>
                     <a class="botao-lateal-navegacao" href="./<?= $arquivo ?>">
-                        <img class="icone-menu-lateral" src="<?= $icone ?>" alt="Ícone <?= htmlspecialchars($nome) ?>">
+                        <img class="icone-menu-lateral" src="<?= $icone ?>" alt="Icone <?= htmlspecialchars($nome) ?>">
                         <p class="texto-bott"><?= htmlspecialchars($nome) ?></p>
                     </a>
                 <?php endif; ?>
@@ -134,7 +77,7 @@ $icones = [
             <!-- Botão sair fixo -->
             <div class="sair-navegacao">
                 <button class="botao-lateal-navegacao btn_sair">
-                    <img class="icone-menu-lateral" src="../../public/img/icons/sair.svg" alt="Ícone Sair">
+                    <img class="icone-menu-lateral" src="../../public/img/icons/sair.svg" alt="Icone Sair">
                     <p class="texto-bott">Sair</p>
                 </button>
             </div>

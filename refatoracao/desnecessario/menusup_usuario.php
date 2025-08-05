@@ -15,58 +15,57 @@
     <link rel="stylesheet" href="../../public/css/navegacao.css">
     <link rel="stylesheet" href="../../public/css/monitor-modal.css">
     <link rel="stylesheet" href="../../public/css/style_eli.css">
-    <!-- <link rel="stylesheet" href="../../public/modais/Modal_Alterar_Dados_Pessoais/alterar_dados_pessoais.css">
-    <link rel="stylesheet" href="../../public/modais/Modal_Alterar_Senha/alterar_senha.css"> -->
+    <link rel="stylesheet" href="../../public/modais/Modal_Alterar_Dados_Pessoais/alterar_dados_pessoais.css">
+    <link rel="stylesheet" href="../../public/modais/Modal_Alterar_Senha/alterar_senha.css">
 
     <!-- JS -->
     <script src="../../public/js/navegacao_menu_lateral.js" defer></script>
     <script src="../../public/js/monitor_modal.js" defer></script>
-    <script src="../js/bloquea_navegacao.js" defer></script>
 
     <!-- LOGO -->
     <link rel="shortcut icon" type="imagex/png" href="../../public/img/Logo-Nota-Controlnt.ico">
 </head>
+
 <body class="control-body-navegacao">
     <?php
-    include "./navegacao.php";
+    include "./menu_gestao.php";
     require_once '../actions/verificar_permissao.php';
     ?>
-    
+
     <section class="Area-Util-Projeto">
         <!-- navmenu -->
         <div class="menu-container">
-            <div class="menu">
+            <!-- <div class="menu">
                 <button class="hamburger" onclick="toggleMenu()">☰</button>
-                <a href="./menuadm_usuario.php" class="active">Usuários</a>
-                <a href="./menuadm_servicos.php">Serviços</a>
-                <a href="./menuadm_autoatendimento.php">Autoatendimento</a>
-                <!-- <a href="./menusup_usuario.php">SUP</a> -->
+                <a href="./menusup_usuario.php" class="active">Usuários</a>
+                <a href="./menusup_servicos.php">Serviços</a>
+                <a href="./menuadm_autoatendimento.php" class="active">Autoatendimento</a>
+                <a href="./menuadm_usuario.php">ADM</a>
             </div>
             <div class="menu-mobile" id="mobileMenu">
-                <a href="./menuadm_usuario.php" class="active">Usuários</a>
-                <a href="./menuadm_servicos.php">Serviços</a>
-                <a href="./menuadm_autoatendimento.php">Autoatendimento</a>
-                <!-- <a href="./menusup_usuario.php">SUP</a> -->
-            </div>
+                <a href="./menusup_usuario.php" class="active">Usuários</a>
+                <a href="./menusup_servicos.php">Serviços</a>
+                <a href="./menuadm_autoatendimento.php" class="active">Autoatendimento</a>
+                <a href="./menuadm_usuario.php">ADM</a>
+            </div> -->
         </div>
         <script>
             function toggleMenu() {
                 document.getElementById("mobileMenu").classList.toggle("active");
             }
         </script>
-            <!-- área da descrição da página de navegação  -->
-            <div class="descricao">
-                <!-- <h2>Menu de Gestão</h2> -->
+        <!-- área da descrição da página de navegação  -->
+        <div class="descricao">
+            <!-- <h2>Menu de Gestão</h2> -->
             
-                <!-- <p>Área de Gestão do Admimistrador.</p> -->
-            </div>
+            <!-- <p>Área de Gestão do Supervisor.</p> -->
+        </div>
             <!-- área dos cards de nevegação  -->
             <main class="area-cards">
                 <div class="container_menu">
                     <div class="wrapper">
                         <a href="./listar_usuarios.php">
                         <div class="banner-img">
-                            <!-- <img src="../../../public/img/img-menu/usuariocadastrado.png" alt=""> -->
                             <img src="../../public/img/Menus/3.png" alt="">
                         </div>
                         </a>
@@ -81,7 +80,6 @@
                     <div class="wrapper">
                         <a href="./cadastro_usuario.php">
                         <div class="banner-img">
-                            <!-- <img src="../../../public/img/img-menu/cadastrodeusuario.png" alt=""> -->
                             <img src="../../public/img/Menus/2.png" alt="">
                         </div>
                         </a>
@@ -89,14 +87,13 @@
                         <!-- <p>Cadastro de Usuário</p> -->
                     </div>
                     <div class="button-wrapper">
-                        <button class="btn outline" onclick="window.location.href='./cadastro_usuario.php';">Cadastrar Usuário</button>
+                        <button class="btn outline" onclick="window.location.href='./cadastro_usuario.php';">Cadastrar Usuários</button>
                     </div>
-                </div>      
-                </div>
+                </div>    
             </main>
-        </div>
+        </div>   
     </section>
-
+         
     <?php
     include "./monitor_modal.php";
     ?>

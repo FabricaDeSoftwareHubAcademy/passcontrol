@@ -62,7 +62,7 @@ try {
 
             switch ($_SESSION['id_perfil_usuario_fk']) {
                 case 5: //adm
-                    $redirect_url = "./app/view/menuadm_usuario.php";
+                    $redirect_url = "./app/view/menu_gestao_usuario.php";
                     break;
                 case 6: //supervisor
                     $redirect_url = "./app/view/atendimento_do_dia.php";
