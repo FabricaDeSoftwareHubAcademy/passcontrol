@@ -23,11 +23,6 @@ document.addEventListener("DOMContentLoaded", () => {
             const opcaoselecionada = selectGuiche.options[selectGuiche.selectedIndex];
             const guicheSelecionado = parseInt(opcaoselecionada.value);
             
-            if (!opcaoselecionada || !opcaoselecionada.value) {
-                alert("Por favor, selecione um guichê.");
-                return;
-            }
-
             const guicheText = opcaoselecionada.textContent.trim();
             guichetexto.textContent = `${guicheText}`;
             
