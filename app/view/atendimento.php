@@ -46,6 +46,7 @@ $id_perfil = $_SESSION['id_perfil_usuario_fk'] ?? null;
     <script src="../../public/js/modal_encerrar_atendimento.js" defer></script>
     <script src="../../public/js/modal_ler_prox_senha.js" defer></script>
     <script src="../../public/js/modal_intervalo_retornar.js" defer></script>
+    <script src="../../public/js/consultar_fila_modal.js" defer></script>
 
     <!-- LOGO -->
     <link rel="shortcut icon" type="imagex/png" href="../../public/img/Logo-Nota-Controlnt.ico">
@@ -277,7 +278,7 @@ $id_perfil = $_SESSION['id_perfil_usuario_fk'] ?? null;
     </section>
 
     <?php
-    include_once "./monitor_modal.php"; 
+    // include_once "./monitor_modal.php"; 
     include_once "../../public/modais/modal_consultar_fila.php";
     include_once "../../public/modais/modal_chamar_prox_senha.php"; 
     include_once "../../public/modais/modal_iniciar_intervalo.php";

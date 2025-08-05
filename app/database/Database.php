@@ -110,6 +110,21 @@ class Database {
         }
     }
 
+    public function consulta_fila(){
+        $query = "SELECT fila_senha.nome_fila_senha, servico.nome_servico, fila_senha.prioridade_fila_senha as categoria
+        FROM fila_senha INNER JOIN servico
+        ON servico.id_servico = fila_senha.id_servico_fk";
+
+        $res = $this->execute($query);
+                
+        if($res){
+            return $res;
+        } else {
+            return false;
+        }
+
+    }
+
     public function inner_join_usuario_servico(){
         $query = "SELECT usuario.id_usuario, servico.id_servico, servico.nome_servico
         FROM usuario

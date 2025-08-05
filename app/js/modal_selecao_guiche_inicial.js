@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             
             const usuario = JSON.parse(sessionStorage.getItem('usuario'));
-            console.log(usuario)
+            // console.log(usuario)
             modalvalidacao.classList.remove("show");
         });
     }
