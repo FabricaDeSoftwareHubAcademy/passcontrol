@@ -67,9 +67,9 @@
                 <table class="table-atendimento-do-dia">
                     <thead>
                         <tr>
+                            <th>Nome</th>
                             <th>Perfil</th>
-                            <th>Serviço</th>
-                            <th>Senha</th>
+                            <th>Serviços</th>
                             <th>Guichê</th>
                             <th class="status-atendimento-do-dia">
                                 <div class="status-flex-atendimento-do-dia">
