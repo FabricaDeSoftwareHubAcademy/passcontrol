@@ -163,4 +163,4 @@ $ultimasChamadas = array_slice($senhasEmAtendimento, 1, 4);
     </div>
 </section>
 </body>
-</html> 
+</html>
