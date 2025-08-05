@@ -30,9 +30,7 @@
     <header class="head-tela-autoatendimento-pag1">
         <nav class="nav-head-tela-autoatendimento-pag1">
             <div class="logo-control-tela-autoatendimento-pag1">
-                <a href="../../app/view/menuadm_autoatendimento.php">
-                    <img src="../../public/img/icons/logo_control.svg" alt="LOGOCONTROL" id="img-logo">
-                </a>
+                <img src="../../public/img/icons/logo_control.svg" alt="LOGOCONTROL" id="img-logo">
             </div>
             <h3>PassControl</h3>
         </nav>

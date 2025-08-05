@@ -4,59 +4,24 @@ require_once '../classes/PontoAtendimento.php';
 $guiche = new Ponto_Atendimento();
 $guiches = $guiche->buscar(null, " status_ponto_atendimento DESC");
 $id_perfil = $_SESSION['id_perfil_usuario_fk'] ?? null;
+
+include_once 'navegacao.php';
 ?>
 
-<!DOCTYPE html>
-<html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>PassControl</title>
-
-    <!-- FONTE -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="../../public/css/navegacao.css">
-    <link rel="stylesheet" href="../../public/css/menu_eli.css">
-    <link rel="stylesheet" href="../../public/css/atendimento.css">
-    <link rel="stylesheet" href="../../public/css/monitor_modal.css">
-    <link rel="stylesheet" href="../../public/css/modal_alterar_dados_pessoais.css">
-    <link rel="stylesheet" href="../../public/css/modal_alterar_senha.css">
-    <link rel="stylesheet" href="../../public/css/modal_consultar_fila.css">
-    <link rel="stylesheet" href="../../public/css/modal_chamar_prox_senha.css"> 
-    <link rel="stylesheet" href="../../public/css/modal_iniciar_intervalo.css">
-    <link rel="stylesheet" href="../../public/css/modal_encerrar_atendimento.css">
-    <link rel="stylesheet" href="../../public/css/modal_selecao_guiche.css">
-    <link rel="stylesheet" href="../../public/css/modal_intervalo_retornar.css">
-
-    <!-- JS -->
-    <script src="../../public/js/navegacao_menu_lateral.js" defer></script>
-    <script src="../../public/js/modal_teladelogin.js" defer></script>
-    <script src="../../public/js/insere_dados_atendimento_atual.js" defer></script>
-    <script src="../../public/js/modal_proxima_senha.js" defer></script>
-    <script src="../../public/js/monitor_modal.js" defer></script>
-    <script src="../../public/js/modal_consultar_fila.js" defer></script>
-    <script src="../../public/js/modal_chamar_prox_senha.js" defer></script>
-    <script src="../../public/js/modal_iniciar_intervalo.js" defer></script>
-    <script src="../../public/js/modal_encerrar_atendimento.js" defer></script>
-    <script src="../../public/js/modal_ler_prox_senha.js" defer></script>
-    <script src="../../public/js/modal_intervalo_retornar.js" defer></script>
-    <script src="../../public/js/consultar_fila_modal.js" defer></script>
-
-    <!-- LOGO -->
-    <link rel="shortcut icon" type="imagex/png" href="../../public/img/Logo-Nota-Controlnt.ico">
-</head>
+<!-- JS Local -->
+<script src="../../public/js/navegacao_menu_lateral.js" defer></script>
+<script src="../../public/js/modal_teladelogin.js" defer></script>
+<script src="../../public/js/insere_dados_atendimento_atual.js" defer></script>
+<script src="../../public/js/modal_proxima_senha.js" defer></script>
+<script src="../../public/js/monitor_modal.js" defer></script>
+<script src="../../public/js/modal_consultar_fila.js" defer></script>
+<script src="../../public/js/modal_chamar_prox_senha.js" defer></script>
+<script src="../../public/js/modal_iniciar_intervalo.js" defer></script>
+<script src="../../public/js/modal_encerrar_atendimento.js" defer></script>
+<script src="../../public/js/modal_ler_prox_senha.js" defer></script>
+<script src="../../public/js/modal_intervalo_retornar.js" defer></script>
 
 <body class="control-body-navegacao">
-    <?php
-    include_once "./navegacao.php";
-    require_once '../actions/verificar_permissao.php';
-    ?>
 
     <section class="Area-Util-Projeto tela-atendimento">
         <?php
@@ -104,7 +69,7 @@ $id_perfil = $_SESSION['id_perfil_usuario_fk'] ?? null;
                             <!-- </div> -->
                         </div>
                         <div class="numero-guiche-atendimento">
-                            <p id="guiche-exibir" class="numero--atendimento">nada selecionado</p>
+                            <p id="guiche-exibir" class="numero--atendimento">...</p>
                             <!-- <p class="texto-info-atendimento">Guichê</p> -->
                         </div>
                     </div>
@@ -128,13 +93,13 @@ $id_perfil = $_SESSION['id_perfil_usuario_fk'] ?? null;
                 <ul class="direita-guiche-area-chamada">
                     <div class="area-botao--guiche-area-chamada">
                         <div class="area-botao-atendimento">
-                            
-                        <button class="botao-proxima-senha-atendimento abrirChamarProxSenha" id="chamar-proxima-senha">
-                            <a class="texto-botao-atendimento">
-                                <img class="img-proxima-senha-atendimento" src="../../public/img/icons/proxima-senha.svg" alt="ampulheta">
-                                <h4>Próxima Senha</h4>
-                            </a>
-                        </button>
+
+                            <button class="botao-proxima-senha-atendimento abrirChamarProxSenha" id="chamar-proxima-senha">
+                                <a class="texto-botao-atendimento">
+                                    <img class="img-proxima-senha-atendimento" src="../../public/img/icons/proxima-senha.svg" alt="ampulheta">
+                                    <h4>Próxima Senha</h4>
+                                </a>
+                            </button>
 
                             <button class="botao-encerrar-atendimento open-encerrar-atendimento">
                                 <a class="texto-botao-atendimento vermelho-botao">
@@ -147,8 +112,8 @@ $id_perfil = $_SESSION['id_perfil_usuario_fk'] ?? null;
 
                             <button class="botao-consultar-fila-atendimento abrirConsultarFila">
                                 <a class="texto-botao-atendimento">
-                                <img class="img-consultar-fila-atendimento" src="../../public/img/icons/consultar-fila.svg" alt="ampulheta">
-                                <h4>Consultar Fila</h4>
+                                    <img class="img-consultar-fila-atendimento" src="../../public/img/icons/consultar-fila.svg" alt="ampulheta">
+                                    <h4>Consultar Fila</h4>
                                 </a>
                             </button>
 
@@ -278,9 +243,9 @@ $id_perfil = $_SESSION['id_perfil_usuario_fk'] ?? null;
     </section>
 
     <?php
-    // include_once "./monitor_modal.php"; 
+    include_once "./monitor_modal.php";
     include_once "../../public/modais/modal_consultar_fila.php";
-    include_once "../../public/modais/modal_chamar_prox_senha.php"; 
+    include_once "../../public/modais/modal_chamar_prox_senha.php";
     include_once "../../public/modais/modal_iniciar_intervalo.php";
     include_once "../../public/modais/modal_encerrar_atendimento.php";
     include_once "../../public/modais/modal_intervalo_retornar.php";
@@ -292,4 +257,5 @@ $id_perfil = $_SESSION['id_perfil_usuario_fk'] ?? null;
         }
     </script>
 </body>
+
 </html>
