@@ -1,5 +1,51 @@
-<?php 
-require_once '../actions/carregar_navegacao.php';
+<?php
+require_once '../classes/Usuario.php';
+session_start();
+require_once '../actions/verificar_permissao.php';
+if (!isset($_SESSION['id_usuario'])) {
+    header("Location: ../../index.php");
+    exit();
+}
+
+
+$id_perfil = $_SESSION['id_perfil_usuario_fk'] ?? null;
+
+$adm = ['atendimento.php', 'monitor_modal.php', 'menuadm_usuario.php', 'relatorio_diario.php'];
+$sup = ['atendimento.php', 'monitor_modal.php', 'menusup_usuario.php', 'relatorio_diario.php'];
+$atend = ['atendimento.php', 'monitor_modal.php'];
+$totem = [];
+
+switch ($id_perfil) {
+    case 5:
+        $menus = $adm;
+        break;
+    case 6:
+        $menus = $sup;
+        break;
+    case 7:
+        $menus = $atend;
+        break;
+
+    default:
+        $menus = [];
+}
+
+
+$nomeExibicao = [
+    'atendimento.php' => 'Atendimento',
+    'monitor_modal.php' => 'Monitor',
+    'menuadm_usuario.php' => 'Gestão',
+    'menusup_usuario.php' => 'Gestão',
+    'relatorio_diario.php' => 'Relatórios',
+];
+
+$icones = [
+    'Atendimento' => '../../public/img/icons/atend.svg',
+    'Monitor' => '../../public/img/icons/monitor.svg',
+    'Gestão' => '../../public/img/icons/gestao.svg',
+    'Relatórios' => '../../public/img/icons/nota.svg',
+];
+
 ?>
 
 <!DOCTYPE html>
@@ -94,29 +140,33 @@ require_once '../actions/carregar_navegacao.php';
         <div class="menu-navegacao-mobile">
             <nav class="area-botao-navegacao-mobile">
 
-                <a class="botao-lateral-navegacao-mobile recolher-m-menu">
-                    <img class="icone-menu-lateral-mobile" src="../../public/img/icons/Cross.svg" alt="ICONE-ATEND">
-                </a>
-
-                <a class="botao-lateral-navegacao-mobile" href="./atendimento.php">
-                    <img class="icone-menu-lateral-mobile" src="../../public/img/icons/atend.svg" alt="ICONE-ATEND">
-                    <p class="texto-bott-mobile">Atendimento</p>
-                </a>
-
-                <a class="botao-lateral-navegacao-mobile btnMonitorModal" id="openModalBtn">
-                    <img class="icone-menu-lateral-mobile" src="../../public/img/icons/monitor.svg" alt="ICONE-MONITOR">
-                    <p class="texto-bott-mobile">Monitor</p>
-                </a>
-
-                <a class="botao-lateral-navegacao-mobile" href="./menuadm_usuario.php">
-                    <img class="icone-menu-lateral-mobile" src="../../public/img/icons/gestao.svg" alt="ICONE-GESTAO">
-                    <p class="texto-bott-mobile">Gestão</p>
-                </a>
-
-                <a class="botao-lateral-navegacao-mobile" href="./relatorio_diario.php">
-                    <img class="icone-menu-lateral-mobile" src="../../public/img/icons/nota.svg" alt="ICONE-RELATORIOS">
-                    <p class="texto-bott-mobile">Relatórios</p>
-                </a>
+                <?php foreach ($pagesNavigation as $pageNavigation){
+                    echo "
+                    <a href='$pageNavigation' class='botao-lateral-navegacao-mobile recolher-m-menu'>
+                        <img class='icone-menu-lateral-mobile' src='../../public/img/icons/Cross.svg' alt='ICONE-ATEND'>
+                    </a>
+    
+                    <a class='botao-lateral-navegacao-mobile' href='./atendimento.php'>
+                        <img class='icone-menu-lateral-mobile' src='../../public/img/icons/atend.svg' alt='ICONE-ATEND'>
+                        <p class='texto-bott-mobile'>Atendimento</p>
+                    </a>
+    
+                    <a class='botao-lateral-navegacao-mobile btnMonitorModal' id='openModalBtn'>
+                        <img class='icone-menu-lateral-mobile' src='../../public/img/icons/monitor.svg' alt='ICONE-MONITOR'>
+                        <p class='texto-bott-mobile'>Monitor</p>
+                    </a>
+    
+                    <a class='botao-lateral-navegacao-mobile' href='./menuadm_usuario.php'>
+                        <img class='icone-menu-lateral-mobile' src='../../public/img/icons/gestao.svg' alt='ICONE-GESTAO'>
+                        <p class='texto-bott-mobile'>Gestão</p>
+                    </a>
+    
+                    <a class='botao-lateral-navegacao-mobile' href='./relatorio_diario.php'>
+                        <img class='icone-menu-lateral-mobile' src='../../public/img/icons/nota.svg' alt='ICONE-RELATORIOS'>
+                        <p class='texto-bott-mobile'>Relatórios</p>
+                    </a>";
+                } 
+                ?>
 
                 <div class="sair-mobile">
                     <button class="botao-lateral-navegacao-mobile btn_sair">

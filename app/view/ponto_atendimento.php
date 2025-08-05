@@ -39,8 +39,8 @@ $guiches = $guiche->buscar(null, " status_ponto_atendimento DESC");
     <script src="../js/ponto_atendimento_cadastrar.js" defer></script>
     <script src="../js/ponto_atendimento_status.js" defer></script>
     <script src="../../app/js/barra_pesquisa_ponto_atendimento.js" defer></script>
-    <!-- <script src="../../public/js/modal_confirmacao_dados.js" defer></script> -->
-    <!-- <script src="../../public/js/modal_status_ponto_atendimento.js"></script> -->
+    <script src="../../public/js/modal_confirmacao_dados.js" defer></script>
+    <script src="../../public/js/modal_status_ponto_atendimento.js" defer></script>
 
     <!-- LOGO -->
     <link rel="shortcut icon" type="imagex/png" href="../../../public/img/Logo-Nota-Controlnt.ico">

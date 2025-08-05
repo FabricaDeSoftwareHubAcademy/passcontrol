@@ -13,6 +13,13 @@ class Usuario
     public int $id_perfil;
     private $db;
 
+    const pagesNavigation =[
+        5 => ['atendimento.php', 'monitor_modal.php', 'menuadm_usuario.php', 'relatorio_diario.php'],
+        6 => ['atendimento.php', 'monitor_modal.php', 'menusup_usuario.php', 'relatorio_diario.php'],
+        7 => ['atendimento.php', 'monitor_modal.php'],
+        8 => []
+    ];
+
     // Construtor que instância o Database uma única vez
     public function __construct()
     {

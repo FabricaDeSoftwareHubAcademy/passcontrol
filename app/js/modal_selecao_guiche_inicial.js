@@ -15,38 +15,13 @@ document.addEventListener("DOMContentLoaded", () => {
     const saidaModal = document.querySelector(".save_SaidaSis");
     const fechaSaida = document.querySelector(".cancel_SaidaSis");
 
-    const userSession = JSON.parse(sessionStorage.getItem("usuario"))
-    
-    if(!userSession.guiche){
-        selectGuiche
-    }
-    
-    const texto_salvo = sessionStorage.getItem("guichetexto");
-    if (texto_salvo) {
-        guichetexto.textContent = `${texto_salvo}`;
-    }
-
     // Abre modal se guichê não foi selecionado
     if (!sessionStorage.getItem('guicheSelected') && modalvalidacao) {
         modalvalidacao.classList.add("show");
 
-        selectGuiche.addEventListener('input', () => {
-            const guicheSelecionado = parseInt(selectGuiche.value);
-            sessionStorage.setItem('guicheSelected', guicheSelecionado);
-
-            fetch('../actions/guiche_selecionado.php', {
-                method: 'POST',
-                // headers: {
-                //     'Content-Type': 'application/json'
-                // },
-                body: JSON.stringify({guiche: guicheSelecionado})
-            }).catch(err => {
-                console.error("Erro ao marcar guichê como ocupado:", err);
-            });
-        });
-
         btn_validacao.addEventListener("click", () => {
             const opcaoselecionada = selectGuiche.options[selectGuiche.selectedIndex];
+            const guicheSelecionado = parseInt(opcaoselecionada.value);
             
             if (!opcaoselecionada || !opcaoselecionada.value) {
                 alert("Por favor, selecione um guichê.");
@@ -54,15 +29,20 @@ document.addEventListener("DOMContentLoaded", () => {
             }
 
             const guicheText = opcaoselecionada.textContent.trim();
-            const IdGuiche = opcaoselecionada.value;
-
             guichetexto.textContent = `${guicheText}`;
+            
+            sessionStorage.setItem('guicheSelected', guicheSelecionado);
+            fetch('../actions/guiche_selecionado.php', {
+            method: 'POST',
+            body: JSON.stringify({guiche: guicheSelecionado})
+            }) .catch(err => {
+                console.error("Erro ao marcar o guichê como ocupado", err);
+            });
 
-            modalvalidacao.classList.remove("show");
-
+            
             const usuario = JSON.parse(sessionStorage.getItem('usuario'));
             console.log(usuario)
-            //modalvalidacao.classList.remove("show");
+            modalvalidacao.classList.remove("show");
         });
     }
 
@@ -98,5 +78,15 @@ document.addEventListener("DOMContentLoaded", () => {
     });
     fechaSaida.addEventListener("click", () => {
         modalSaida.classList.remove("show");
+    });
+    window.addEventListener("beforeunload", function (e) {
+        const guicheSelecionado = sessionStorage.getItem("guicheSelected");
+        if (guicheSelecionado) {
+            const blob = new Blob(
+                [JSON.stringify({ guiche: parseInt(guicheSelecionado) })],
+                { type: 'application/json' }
+            );
+            navigator.sendBeacon('../actions/guiche_liberacao.php', blob);
+        }
     });
 });

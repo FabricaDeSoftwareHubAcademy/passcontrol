@@ -56,8 +56,10 @@ $pagesAuth = [
     ]
 ];
 
+
 // SE NÃO TIVER PERMISSÃO
 if (!isset($pagesAuth[$id_perfil]) || !in_array($currentPage, $pagesAuth[$id_perfil])) {
     include __DIR__ . '/../../public/modais/modal_aviso_acesso_negado.php';
     exit();
 }
+?>

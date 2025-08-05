@@ -11,19 +11,19 @@ const recolherMenuLateral = document.querySelector(".recolher-m-menu");
 const abrirMonitorModal = document.querySelector(".btnMonitorModal");
 const MonitorModal = document.getElementById("modal-monitor");
 
-abrirMenuLateral.addEventListener("click", () =>{
+abrirMenuLateral?.addEventListener("click", () =>{
     menuLateralMobile.classList.add("menu-visivel");
 })
 
-fecharMenuLateral.addEventListener("click", () =>{
+fecharMenuLateral?.addEventListener("click", () =>{
     menuLateralMobile.classList.remove("menu-visivel");
 })
 
-recolherMenuLateral.addEventListener("click", () =>{
+recolherMenuLateral?.addEventListener("click", () =>{
     menuLateralMobile.classList.remove("menu-visivel");
 })
 
-abrirMonitorModal.addEventListener("click", () =>{
+abrirMonitorModal?.addEventListener("click", () =>{
     menuLateralMobile.classList.remove("menu-visivel");
     MonitorModal.style.display = "flex";
 })
@@ -42,6 +42,14 @@ document.addEventListener('click', event => {
     }
 });
 
+
+// window.onbeforeunload = async function(){
+//     const guicheSelecionado = sessionStorage.getItem('guicheSelected')
+//     const jsonGuiche = JSON.stringify({guiche:guicheSelecionado})
+//     fetch('../../app/actions/guiche_liberacao.php', {method: "POST", body: jsonGuiche});
+    
+//     return 'Tchau';
+// };
 
 // MENU-ESTACIONARIO 
 // const btnAtivoMenu = document.querySelector(".")

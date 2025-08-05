@@ -16,32 +16,33 @@ btn_login.addEventListener("click", async function (event) {
 
     const cpf = document.querySelector("#cpf").value.trim();
     const senha = document.querySelector("#input_password").value.trim();
-
+    
     if (!cpf || !senha) {
         msg.textContent = "Por favor, preencha todos os campos.";
         msg.style.display = "block";
         return; // não envia se algum campo estiver vazio
     }
-
+    
     let form_login = document.querySelector("#form_login");
     let formData = new FormData(form_login);
-
+    
     let dados_php = await fetch("./app/actions/usuario_logar.php", {
         method: "POST",
         body: formData
     });
-
+    
     try{
         let response = await dados_php.json();
-    
         if (response.code == 200 && response.redirect) {
 
-            const {cpf_usuario, email_usuario} = response.usuario;
-
+            const {cpf, email} = response.usuario;
+            console.log()
+            
             const usuarioLogado = {
-                cpf: cpf_usuario,
-                email: email_usuario
+                cpf: cpf,
+                email: email,
             }
+
             sessionStorage.setItem('usuario', JSON.stringify(usuarioLogado));
             // redireciona para a URL retornada pelo PHP conforme perfil (menuadm_fluxo, menusup_fluxo, menuatend_fluxo)
             window.location.href = response.redirect;

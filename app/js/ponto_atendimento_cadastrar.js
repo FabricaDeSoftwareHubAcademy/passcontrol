@@ -1,4 +1,4 @@
-try {
+// try {
     let btn_cadastrar_guiche = document.getElementById("btn_cadastrar_adm");
 
     const modalCadastro = document.querySelector(".fundo-container-cad-ponto-atendimento");
@@ -78,6 +78,6 @@ try {
 
     });
 
-} catch {
-    location.reload();
-}
+// } catch {
+//     location.reload();
+// }
