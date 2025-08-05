@@ -36,7 +36,7 @@ btn_login.addEventListener("click", async function (event) {
         if (response.code == 200 && response.redirect) {
 
             const {cpf, email} = response.usuario;
-            console.log()
+            console.log(response.usuario);
             
             const usuarioLogado = {
                 cpf: cpf,

@@ -40,7 +40,7 @@
 
 <body>
     <?php
-    require '../classes/Servico.php';
+    require_once '../classes/Servico.php';
 
     $novo_servico = new Servico();
     $servicos_cadastrados = $novo_servico->buscar(null, " status_servico DESC ");
