@@ -14,7 +14,6 @@ $currentPage = basename($_SERVER['PHP_SELF']);
 
 $pagesAuth = [
     5 => [
-        'tabela_teste.php',
         'atendimento.php',
         'menu_gestao_usuario.php',
         'menu_gestao_servico.php',
