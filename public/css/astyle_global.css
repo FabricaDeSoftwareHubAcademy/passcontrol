@@ -38,14 +38,13 @@
 @import url(modal_senha_gerada.css);
 @import url(modal_status_atendimento.css);
 @import url(monitor_modal.css); /*---------- CHECAR ---------- */
-@import url(monitor_senhas_variacao.css); /*---------- CHECAR ---------- */
+/* @import url(monitor_senhas_variacao.css); ---------- CHECAR ---------- */
 @import url(monitor_senhas.css); /*---------- CHECAR ---------- */
 @import url(navegacao_mobile.css);
 @import url(ponto_atendimento.css);
 @import url(relatorio_diario.css);
 @import url(servico.css);
 @import url(style_configuracao_autoatendimento.css);
-@import url(style_eli.css); /*---------- CHECAR ---------- */
 @import url(tabela.css);
 @import url(tela_autoatendimento_page1.css);
 @import url(tela_autoatendimento_page2.css);

@@ -7,7 +7,11 @@ $servicoDB = new Database('servico');
 $guicheDB = new Database('ponto_atendimento'); // novo
 
 // Busca todas as senhas com status "em atendimento", ordenadas da mais recente para a mais antiga
-$senhasEmAtendimento = $db->select("status_fila_senha = 'em atendimento'", 'fila_senha_updated_in DESC')->fetchAll(PDO::FETCH_ASSOC);
+try{
+    $senhasEmAtendimento = $db->select("status_fila_senha = 'em atendimento'", 'fila_senha_criada_in DESC')->fetchAll(PDO::FETCH_ASSOC);
+} catch(Exception){
+    $senhasEmAtendimento = [];
+}
 
 // Pega a senha mais recente como principal
 $senhaPrincipal = $senhasEmAtendimento[0] ?? null;
@@ -43,7 +47,7 @@ $ultimasChamadas = array_slice($senhasEmAtendimento, 1, 4);
                 <?php foreach ($ultimasChamadas as $senha): ?>
                     <?php
                         $servico = $servicoDB->select('id_servico = ' . $senha['id_servico_fk'])->fetch(PDO::FETCH_ASSOC);
-                        $guiche = $guicheDB->select('id_ponto_atendimento = ' . (int)$senha['id_ponto_atendimento_fk'])->fetch(PDO::FETCH_ASSOC);
+                        $guiche = $guicheDB->select('id_ponto_atendimento = ' . (int)$senha['id_ponto_atendimento'])->fetch(PDO::FETCH_ASSOC);
                         $prioridade = $senha['prioridade_fila_senha'] ? 'PR' : 'CM';
                         $numero = str_pad($senha['id_fila_senha'], 3, '0', STR_PAD_LEFT);
                     ?>
@@ -74,7 +78,7 @@ $ultimasChamadas = array_slice($senhasEmAtendimento, 1, 4);
             <?php if ($senhaPrincipal): ?>
                 <?php
                     $servico = $servicoDB->select('id_servico = ' . $senhaPrincipal['id_servico_fk'])->fetch(PDO::FETCH_ASSOC);
-                    $guiche = $guicheDB->select('id_ponto_atendimento = ' . (int)$senhaPrincipal['id_ponto_atendimento_fk'])->fetch(PDO::FETCH_ASSOC);
+                    $guiche = $guicheDB->select('id_ponto_atendimento = ' . (int)$senhaPrincipal['id_ponto_atendimento'])->fetch(PDO::FETCH_ASSOC);
                     $prioridade = $senhaPrincipal['prioridade_fila_senha'] ? 'PR' : 'CM';
                     $numero = str_pad($senhaPrincipal['id_fila_senha'], 3, '0', STR_PAD_LEFT);
                 ?>

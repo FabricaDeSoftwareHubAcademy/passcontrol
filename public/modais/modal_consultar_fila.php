@@ -1,3 +1,4 @@
+<script src="../../public/js/consultar_fila_modal.js" defer></script>
 <div class="fundo-consultar-fila">
     <section class="modal-consultar-fila">
 
@@ -45,5 +46,3 @@
         </div>
     </section>
 </div>
-
-    <script src="../../public/js/consultar_fila_modal.js"></script>

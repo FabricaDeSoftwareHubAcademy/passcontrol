@@ -36,12 +36,12 @@ try {
     }
 
     // Atualiza status, guichê e data de atualização
-    $filaDB->update(
+    $atualizaSenha = $filaDB->update(
         'id_fila_senha = ' . (int)$senha['id_fila_senha'],
         [
             'status_fila_senha' => 'em atendimento',
-            'id_ponto_atendimento_fk' => (int)$idGuiche,
-            'fila_senha_updated_in' => date('Y-m-d H:i:s') // 👈 ESSENCIAL
+            'id_ponto_atendimento' => (int)$idGuiche,
+            'fila_senha_iniciada_in' => date('Y-m-d H:i:s') // passa o formato da data
         ]
     );
 
