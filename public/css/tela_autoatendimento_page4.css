@@ -1,49 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 :root {
-    --verde-control: #3aa867;
-    --cinza-control: #33404d;
+    --verde-control: #3AA867;
+    --cinza-control: #33404D;
     --cor-fundo: #f9f9f9;
-    --font-main: Inter, Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  }
+    --font-main: Inter, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
 
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Inter", sans-serif;
+}
 
-  .head-tela-autoatendimento-pag4 {
+body{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0.1);
+    /* overflow: hidden; */
+}
+
+.head-tela-autoatendimento-pag4 {
     background-color: var(--cinza-control);
     height: auto;
     width: auto;
     position: sticky;
     display: flex;
-  }
-  
-  .nav-head-tela-autoatendimento-pag4 {
+}
+
+.nav-head-tela-autoatendimento-pag4 {
     background-color: var(--cor-fundo);
     width: 100%;
     height: 100px;
     display: flex;
     flex-direction: row;
     align-content: space-evenly;
-  }
-  
-  .logo-control-tela-autoatendimento-pag4 {
+    padding: 0 20px;
+}
+
+.logo-control-tela-autoatendimento-pag4 {
     width: fit-content;
     padding: 2px;
     padding-left: 5px;
-  }
-  
-  #img-logo {
+}
+
+#img-logo {
     height: 100%;
     width: 100%;
-  }
-  
-  .nav-head-tela-autoatendimento-pag4 H3 {
+}
+
+.nav-head-tela-autoatendimento-pag4 h3 {
     color: var(--cinza-control);
     width: 80%;
     padding-left: 20px;
     display: flex;
     align-items: center;
     font-size: 23px;
-  }
-  
-  .workspace-tela-autoatendimento-pag4 {
+}
+
+.border-line-tela-autoatendimento-pag4 {
+    background-color: var(--cinza-control);
+    height: 30px;
+    width: 100%;
+    margin: 0 10px 0 0;
+}
+
+.workspace-tela-autoatendimento-pag4 {
     height: 100%;
     width: 100%;
     display: flex;
@@ -55,32 +77,32 @@
     background-repeat: no-repeat;
     background-position: right bottom;
 }
-  
-  .border-line-tela-autoatendimento-pag4 {
-    background-color: var(--cinza-control);
-    height: 30px;
-    width: 100%;
-    margin: 10px 0;
-  }
+
+.page-title-tela-autoatendimento-pag4 {
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    text-align: center;
+    font-family: var(--font-main);
+    color: #113062;
+    font-weight: 800;    
+}
   
   .area-cinza-tela-autoatendimento-pag4 {
-    background-color: rgba(0, 0, 0, 0.1); 
-    width: 100%;
-    max-width: calc(100% - 40px);
+    /* background-color: rgba(0, 0, 0, 0.1);  */
+    width: calc(100% - 40px);
     min-height: 60vh;
-    height: calc(100vh - 160px);
-    top: 10px; 
-    left: 10px; 
-    right: 10px; 
+    /* height: calc(100vh - 160px); */
+    /* top: 10px;  */
+    /* left: 10px;  */
+    /* right: 10px;  */
+    /* border-radius: 10px; */
+    /* margin-bottom: 20px; */
     display: flex;
     flex-direction: column;
     justify-content:flex-start;
     align-items: center;
-    border-radius: 10px;
-    padding: 20px;
-    margin-left: 20px;
-    margin-right: 20px;
-    
+    padding: 40px;
 }
 
 .container-tela-autoatendimento-pag4 {
@@ -100,7 +122,7 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+  /* width: 100%; */
   height: 100%;
   font-size: 36px;
   color: #113062; 
@@ -135,13 +157,13 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  padding: 20px;
+  /* padding-top: 90px; */
 }
 
 .button-tela-autoatendimento-pag4 {
   display: flex;
   justify-content:center;
-  width: 10%; 
+  width: 16%; 
   margin-top: 30px;
   position: relative;
   padding: 10px;
@@ -197,11 +219,11 @@
   }
 
   .fixed-text {
-    font-size: 20px; 
+    font-size: 28px; 
   }
 
   .variable-text {
-    font-size: 28px;
+    font-size: 32px;
   }
 
   .button-tela-autoatendimento-pag4 {
@@ -226,8 +248,7 @@
   }
 
   .container-tela-autoatendimento-pag4 {
-    width: 100%;
-    padding: 10px;
+    padding: 8px;
   }
 
   .info-area-tela-autoatendimento-pag4 {
@@ -237,11 +258,11 @@
   }
 
   .fixed-text {
-    font-size: 18px;
+    font-size: 22px;
   }
 
   .variable-text {
-    font-size: 24px;
+    font-size: 28px;
   }
 
   .button-tela-autoatendimento-pag4 {
