@@ -51,4 +51,12 @@
 
         }
 
+        public function buscarSenhasAtendidasNoDia() {
+            $senhas = $this->db->consulta_senhas_atendidas_dia();
+            $fila_atendida = $senhas->fetchAll(PDO::FETCH_ASSOC);
+
+            return $fila_atendida;
     }
+        }
+
+?>

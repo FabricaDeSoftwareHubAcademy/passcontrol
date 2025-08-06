@@ -125,6 +125,30 @@ class Database {
 
     }
 
+    public function consulta_senhas_atendidas_dia(){
+        $query = "SELECT 
+                    fila_senha.senha_fila_senha AS senha,
+                    fila_senha.nome_fila_senha AS nome,
+                    servico.nome_servico AS servico,
+                    fila_senha.fila_senha_created_in AS inicio,
+                    fila_senha.fila_senha_updated_in AS termino,
+                    fila_senha.prioridade_fila_senha AS categoria
+                  FROM fila_senha 
+                  INNER JOIN servico ON servico.id_servico = fila_senha.id_servico_fk
+                  WHERE fila_senha.status_fila = 'em atendimento' 
+                  AND DATE(fila_senha.fila_senha_updated_in) = CURDATE()
+                  ORDER BY fila_senha.fila_senha_updated_in ASC";
+
+                $res = $this->execute($query);
+
+                if($res){
+                    return $res;
+                } else {
+                    return false;
+                }
+
+    }
+
     public function inner_join_usuario_servico(){
         $query = "SELECT usuario.id_usuario, servico.id_servico, servico.nome_servico
         FROM usuario
