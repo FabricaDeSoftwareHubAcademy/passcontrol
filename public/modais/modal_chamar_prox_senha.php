@@ -20,7 +20,7 @@ if ($senhaPrincipal) {
 }
 ?>
 <!-- Estrutura do Modal fora da tela inicialmente -->
-<div class="fundo-container-confirmacao-presenca" id="modal-senha" style="display: none;">
+<div class="fundo-container-confirmacao-presenca" id="modal-senha">
     <section class="modal-confirmacao-presenca">
         <img src="../../public/img/icons/logo_control.svg" alt="Logo Nota Control" class="logo-confirmacao-presenca">
         <h1 class="title-confirmacao-presenca">Confirmar Presença</h1>
