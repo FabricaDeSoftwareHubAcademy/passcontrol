@@ -7,7 +7,7 @@ $servicoDB = new Database('servico');
 $guicheDB = new Database('ponto_atendimento');
 
 // Busca todas as senhas com status "em atendimento", ordenadas da mais recente para a mais antiga
-$senhasEmAtendimento = $db->select("status_fila_senha = 'em atendimento'", 'fila_senha_updated_in DESC')->fetchAll(PDO::FETCH_ASSOC);
+$senhasEmAtendimento = $db->select("status_fila_senha = 'em atendimento'", 'fila_senha_chamada_in DESC')->fetchAll(PDO::FETCH_ASSOC);
 
 // Pega a senha mais recente como principal
 $senhaPrincipal = $senhasEmAtendimento[0] ?? null;
@@ -23,7 +23,7 @@ $ultimasChamadas = array_slice($senhasEmAtendimento, 1, 4);
     
     <title>PassControl</title> 
 
-    <!-- FONTES -->
+    <!-- FONTE -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
@@ -71,70 +71,13 @@ $ultimasChamadas = array_slice($senhasEmAtendimento, 1, 4);
 
     <div class="fundo-senha-principal">
         <div class="fundo-senha-principal-wrap">
-            <?php if ($senhaPrincipal):
-
-                // Captura dados principais
-                $idSenha = $senhaPrincipal['id_fila_senha'];
-                $dataChamada = $senhaPrincipal['fila_senha_chamada_in']; // datetime usado como "versão" da chamada
-                $ultimaChamada = $_SESSION['ultima_chamada_sms'] ?? [];
-
-                $isNovaChamada = (
-                    $ultimaChamada['id'] !== $idSenha ||
-                    $ultimaChamada['chamada_in'] !== $dataChamada
-                );
-
-                if ($isNovaChamada) {
-                    $telefone = $senhaPrincipal['telefone_fila_senha'] ?? null;
-                    $nomeCompleto = $senhaPrincipal['nome_fila_senha'] ?? '';
-
-                    if (!empty($telefone)) {
-                        $telefoneLimpo = preg_replace('/\D/', '', $telefone);
-
-                        if (strlen($telefoneLimpo) === 11) {
-                            $telefoneLimpo = '+55' . $telefoneLimpo;
-
-                            // Recupera o guichê para colocar na mensagem
-                            $guiche = $guicheDB->select('id_ponto_atendimento = ' . (int)$senhaPrincipal['id_ponto_atendimento'])->fetch(PDO::FETCH_ASSOC);
-                            $guicheNome = htmlspecialchars($guiche['nome_ponto_atendimento'] ?? '...');
-                            $guicheIdentificador = htmlspecialchars($guiche['identificador_ponto_atendimento'] ?? '');
-
-                            $smsData = [
-                                'from' => 'Zenvia',
-                                'to' => $telefoneLimpo,
-                                'contents' => [
-                                    [
-                                        'type' => 'text',
-                                        'text' => "Olá $nomeCompleto! Sua senha está sendo chamada para atendimento. Dirija-se ao guichê $guicheNome - $guicheIdentificador."
-                                    ]
-                                ]
-                            ];
-
-                            $ch = curl_init('https://api.zenvia.com/v2/channels/sms/messages');
-                            curl_setopt($ch, CURLOPT_HTTPHEADER, [
-                                'Content-Type: application/json',
-                                'X-API-TOKEN: z1TCrlshp4MJdUrokoR7WWaPQ_byCWuhl6bM' // Seu token real
-                            ]);
-                            curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-                            curl_setopt($ch, CURLOPT_POST, true);
-                            curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($smsData));
-                            curl_exec($ch);
-                            curl_close($ch);
-
-                            // Atualiza controle da última chamada
-                            $_SESSION['ultima_chamada_sms'] = [
-                                'id' => $idSenha,
-                                'chamada_in' => $dataChamada
-                            ];
-                        }
-                    }
-                }
-
-                // Carrega demais informações para exibir na tela
-                $servico = $servicoDB->select('id_servico = ' . $senhaPrincipal['id_servico_fk'])->fetch(PDO::FETCH_ASSOC);
-                $guiche = $guicheDB->select('id_ponto_atendimento = ' . (int)$senhaPrincipal['id_ponto_atendimento'])->fetch(PDO::FETCH_ASSOC);
-                $prioridade = $senhaPrincipal['prioridade_fila_senha'] ? 'PR' : 'CM';
-                $numero = str_pad($senhaPrincipal['id_fila_senha'], 3, '0', STR_PAD_LEFT);
-            ?>
+            <?php if ($senhaPrincipal): ?>
+                <?php
+                    $servico = $servicoDB->select('id_servico = ' . $senhaPrincipal['id_servico_fk'])->fetch(PDO::FETCH_ASSOC);
+                    $guiche = $guicheDB->select('id_ponto_atendimento = ' . (int)$senhaPrincipal['id_ponto_atendimento'])->fetch(PDO::FETCH_ASSOC);
+                    $prioridade = $senhaPrincipal['prioridade_fila_senha'] ? 'PR' : 'CM';
+                    $numero = str_pad($senhaPrincipal['id_fila_senha'], 3, '0', STR_PAD_LEFT);
+                ?>
                 <div class="nome-pessoa">
                     <h1><?= htmlspecialchars($senhaPrincipal['nome_fila_senha'] ?? '...') ?></h1>
                 </div>

@@ -40,8 +40,8 @@ try {
         'id_fila_senha = ' . (int)$senha['id_fila_senha'],
         [
             'status_fila_senha' => 'em atendimento',
-            'id_ponto_atendimento_fk' => (int)$idGuiche,
-            'fila_senha_updated_in' => date('Y-m-d H:i:s') // 👈 ESSENCIAL
+            'id_ponto_atendimento' => (int)$idGuiche,
+            'fila_senha_chamada_in' => date('Y-m-d H:i:s'), // 👈 ESSENCIAL
         ]
     );
 
