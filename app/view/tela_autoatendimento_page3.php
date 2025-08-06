@@ -130,8 +130,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <input type="hidden" id="telefone_hidden" name="telefone">
 
                 <div class="footer-tela-autoatendimento-pag3">
-                    <button type="button" class="button-tela-autoatendimento-pag3">
-                        <a href="./tela_autoatendimento_page2.php" class="btn-voltar">VOLTAR</a>
+                    <button type="button" class="button-tela-autoatendimento-pag3 btn-voltar">
+                        VOLTAR
                     </button>
                     <button type="button" class="button-tela-autoatendimento-pag3 btn-confirmar" id="confirmarBtn">CONFIRMAR</button>
                 </div>
