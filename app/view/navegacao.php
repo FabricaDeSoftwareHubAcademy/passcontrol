@@ -13,7 +13,7 @@ include_once "../actions/carregar_navegacao.php";
     <link rel="stylesheet" href="../../public/css/astyle_global.css">
 
     <!-- JS Geral -->
-    <script src="../../app/js/modal_selecao_guiche_inicial.js" defer></script>
+    <script src="../../public/js/modal_confirmacao_deslogar.js" defer></script>
     <script src="../../public/js/modal_alterar_senha.js" defer></script>
     <script src="../../public/js/modal_alterar_dados_login.js" defer></script>
     <script src="../../public/js/navegacao_menu_lateral.js" defer></script>

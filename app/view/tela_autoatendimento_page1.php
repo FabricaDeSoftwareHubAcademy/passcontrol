@@ -13,6 +13,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    <!-- JS -->
+    
+
     <!-- CSS -->
     <link rel="stylesheet" href="../../public/css/tela_autoatendimento_page1.css">
 
@@ -29,7 +32,7 @@
 
     <header class="head-tela-autoatendimento-pag1">
         <nav class="nav-head-tela-autoatendimento-pag1">
-            <div class="logo-control-tela-autoatendimento-pag1">
+            <div class="logo-control-tela-autoatendimento-pag1 voltar_autoatendimento">
                 <img src="../../public/img/icons/logo_control.svg" alt="LOGOCONTROL" id="img-logo">
             </div>
             <h3>PassControl</h3>
@@ -66,5 +69,8 @@
     </main>
 
     <script src="../../public/js/tela_autoatendimento_paginação.js"></script>
+    <?php
+    include_once "../../public/modais/modal_confirmacao_saida.php"
+    ?>
 </body>
 </html>

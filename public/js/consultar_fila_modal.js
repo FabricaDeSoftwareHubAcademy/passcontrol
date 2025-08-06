@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
-    document.querySelector(".abrirConsultarFila").addEventListener("click", () => {
+    buttonAbrir.addEventListener("click", () => {
         document.querySelector(".fundo-consultar-fila").classList.add("show");
         atualizarFila();
     });
