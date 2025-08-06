@@ -132,7 +132,9 @@ include_once 'navegacao.php';
             </div>
             <div class="fundo-guiche-area-chamada">
                 <table class="tabela_atendimento-guiche-area-chamada">
+
                     <thead class="thead-atendimento">
+                        
                         <tr>
                             <th>Ordem</th>
                             <th>Nome</th>
@@ -143,97 +145,14 @@ include_once 'navegacao.php';
                             <th>Categoria</th>
                         </tr>
                     </thead>
-                    <tbody class="tbody-atendimento">
-                        <tr>
-                            <td>#01</td>
-                            <td>Guilherme Machado</td>
-                            <td>IPTU</td>
-                            <td>CM002</td>
-                            <td>07:30</td>
-                            <td>07:46</td>
-                            <td>Comum</td>
-                        </tr>
-                        <tr>
-                            <td>#02</td>
-                            <td>Juliana Barbosa</td>
-                            <td>Fiscalização</td>
-                            <td>CM005</td>
-                            <td>07:48</td>
-                            <td>08:04</td>
-                            <td>Preferencial</td>
-                        </tr>
-                        <tr>
-                            <td>#03</td>
-                            <td>Gabriel Alvin</td>
-                            <td>Licenças</td>
-                            <td>CM008</td>
-                            <td>08:08</td>
-                            <td>08:29</td>
-                            <td>Preferencial</td>
-                        </tr>
-                        <tr>
-                            <td>#04</td>
-                            <td>Suelen Cabral</td>
-                            <td>Ouvidoria</td>
-                            <td>CM014</td>
-                            <td>08:32</td>
-                            <td>08:58</td>
-                            <td>Comum</td>
-                        </tr>
-                        <tr>
-                            <td>#05</td>
-                            <td>Fred Lopes</td>
-                            <td>Concelho Municipal</td>
-                            <td>CM019</td>
-                            <td>09:01</td>
-                            <td>09:23</td>
-                            <td>Comum</td>
-                        </tr>
-                        <tr>
-                            <td>#06</td>
-                            <td>Luan Rech</td>
-                            <td>Licenças</td>
-                            <td>CM023</td>
-                            <td>09:24</td>
-                            <td>09:46</td>
-                            <td>Preferencial</td>
-                        </tr>
-                        <tr>
-                            <td>#07</td>
-                            <td>João Guilherme</td>
-                            <td>Licenças</td>
-                            <td>CM028</td>
-                            <td>09:47</td>
-                            <td>09:58</td>
-                            <td>Comum</td>
-                        </tr>
-                        <tr>
-                            <td>#08</td>
-                            <td>Eliandro</td>
-                            <td>Ouvidoria</td>
-                            <td>CM030</td>
-                            <td>10:00</td>
-                            <td>10:23</td>
-                            <td>Comum</td>
-                        </tr>
-                        <tr>
-                            <td>#09</td>
-                            <td>Thiago Almeida</td>
-                            <td>Concelho Municipal</td>
-                            <td>CM034</td>
-                            <td>10:24</td>
-                            <td>10:37</td>
-                            <td>Comum</td>
-                        </tr>
-                        <tr>
-                            <td>#10</td>
-                            <td>Lucas Sesper</td>
-                            <td>Fiscalização</td>
-                            <td>CM037</td>
-                            <td>10:40</td>
-                            <td>10:53</td>
-                            <td>Preferencial</td>
-                        </tr>
+
+                    <tbody class="tbody-atendimento" id="lista-senhas-atendidas">
+
+                    <!-- Dados serão inseridos via JS -->
+
+                    </tbody>
+
+                   
                 </table>
             </div>
         </div>
@@ -256,6 +175,9 @@ include_once 'navegacao.php';
             document.getElementById("mobileMenu").classList.toggle("active");
         }
     </script>
+
+    <script src="../../public/js/senhas_atendidas_no_dia.js"></script>
+
 </body>
 
 </html>
