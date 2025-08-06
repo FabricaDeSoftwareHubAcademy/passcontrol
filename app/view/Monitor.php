@@ -8,7 +8,7 @@ $guicheDB = new Database('ponto_atendimento');
 
 // Busca todas as senhas com status "em atendimento", ordenadas da mais recente para a mais antiga
 try{
-    $senhasEmAtendimento = $db->select("status_fila_senha = 'em atendimento'", 'fila_senha_criada_in DESC')->fetchAll(PDO::FETCH_ASSOC);
+    $senhasEmAtendimento = $db->select("status_fila_senha = 'em atendimento'", 'fila_senha_chamada_in DESC')->fetchAll(PDO::FETCH_ASSOC);
 } catch(Exception){
     $senhasEmAtendimento = [];
 }
