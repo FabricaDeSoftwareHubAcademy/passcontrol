@@ -24,6 +24,7 @@
     <!-- JS -->
     <script src="../../public/js/navegacao_menu_lateral.js" defer></script>
     <script src="../../public/js/monitor_modal.js" defer></script>
+    <script src="../../public/js/buscar_dados_atendimento.js" defer></script>
     
     <!-- LOGO -->
     <link rel="shortcut icon" type="imagex/png" href="../../public/img/Logo-Nota-Controlnt.ico">
@@ -32,6 +33,7 @@
 <body class="control-body-navegacao">
     <?php
     include "./navegacao.php";
+    
     ?>
 
     <section class="Area-Util-Projeto atendimento-dia">
@@ -67,7 +69,7 @@
                 <table class="table-atendimento-do-dia">
                     <thead>
                         <tr>
-                            <th>Nome</th>
+                            <th>Atendente</th>
                             <th>Perfil</th>
                             <th>Serviços</th>
                             <th>Guichê</th>
@@ -86,111 +88,7 @@
                             <td>03</td>
                             <td class="disponivel-atendimento-do-dia">Disponível</td>
                         </tr>
-                        <tr>
-                            <td>Paula Fernanda de Pauli</td>
-                            <td>IPTU</td>
-                            <td>CM 026</td>
-                            <td>03</td>
-                            <td class="disponivel-atendimento-do-dia">Disponível</td>
-                        </tr>
-                        <tr>
-                            <td>Paula Fernanda de Pauli</td>
-                            <td>IPTU</td>
-                            <td>CM 026</td>
-                            <td>03</td>
-                            <td class="disponivel-atendimento-do-dia">Disponível</td>
-                        </tr>
-                        <tr>
-                            <td>Paula Fernanda de Pauli</td>
-                            <td>IPTU</td>
-                            <td>CM 026</td>
-                            <td>03</td>
-                            <td class="disponivel-atendimento-do-dia">Disponível</td>
-                        </tr>
-                        <tr>
-                            <td>Paula Fernanda de Pauli</td>
-                            <td>IPTU</td>
-                            <td>CM 026</td>
-                            <td>03</td>
-                            <td class="disponivel-atendimento-do-dia">Disponível</td>
-                        </tr>
-                        <tr>
-                            <td>Paula Fernanda de Pauli</td>
-                            <td>IPTU</td>
-                            <td>CM 026</td>
-                            <td>03</td>
-                            <td class="disponivel-atendimento-do-dia">Disponível</td>
-                        </tr>
-                        <tr>
-                            <td>Paula Fernanda de Pauli</td>
-                            <td>IPTU</td>
-                            <td>CM 026</td>
-                            <td>03</td>
-                            <td class="disponivel-atendimento-do-dia">Disponível</td>
-                        </tr>
-                        <tr>
-                            <td>Paula Fernanda de Pauli</td>
-                            <td>IPTU</td>
-                            <td>CM 026</td>
-                            <td>03</td>
-                            <td class="disponivel-atendimento-do-dia">Disponível</td>
-                        </tr>
-                        <tr>
-                            <td>Paula Fernanda de Pauli</td>
-                            <td>IPTU</td>
-                            <td>CM 026</td>
-                            <td>03</td>
-                            <td class="disponivel-atendimento-do-dia">Disponível</td>
-                        </tr>
-                        <tr>
-                            <td>Paula Fernanda de Pauli</td>
-                            <td>IPTU</td>
-                            <td>CM 026</td>
-                            <td>03</td>
-                            <td class="disponivel-atendimento-do-dia">Disponível</td>
-                        </tr>
-                        <tr>
-                            <td>Paula Fernanda de Pauli</td>
-                            <td>IPTU</td>
-                            <td>CM 026</td>
-                            <td>03</td>
-                            <td class="disponivel-atendimento-do-dia">Disponível</td>
-                        </tr>
-                        <tr>
-                            <td>Paula Fernanda de Pauli</td>
-                            <td>IPTU</td>
-                            <td>CM 026</td>
-                            <td>03</td>
-                            <td class="disponivel-atendimento-do-dia">Disponível</td>
-                        </tr>
-                        <tr>
-                            <td>Paula Fernanda de Pauli</td>
-                            <td>IPTU</td>
-                            <td>CM 026</td>
-                            <td>03</td>
-                            <td class="disponivel-atendimento-do-dia">Disponível</td>
-                        </tr>
-                        <tr>
-                            <td>Paula Fernanda de Pauli</td>
-                            <td>IPTU</td>
-                            <td>CM 026</td>
-                            <td>03</td>
-                            <td class="disponivel-atendimento-do-dia">Disponível</td>
-                        </tr>
-                        <tr>
-                            <td>Paula Fernanda de Pauli</td>
-                            <td>IPTU</td>
-                            <td>CM 026</td>
-                            <td>03</td>
-                            <td class="disponivel-atendimento-do-dia">Disponível</td>
-                        </tr>
-                        <tr>
-                            <td>Paula Fernanda de Pauli</td>
-                            <td>IPTU</td>
-                            <td>CM 026</td>
-                            <td>03</td>
-                            <td class="disponivel-atendimento-do-dia">Disponível</td>
-                        </tr>
+                        
                         <tr>
                             <td>Maria Oliveira</td>
                             <td>IPTU</td>
