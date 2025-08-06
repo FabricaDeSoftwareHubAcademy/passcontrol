@@ -46,4 +46,4 @@
     </section>
 </div>
 
-    <script src="../../public/js/consultar_fila_modal.js"></script>
+    

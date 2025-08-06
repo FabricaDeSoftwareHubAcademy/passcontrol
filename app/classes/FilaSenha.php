@@ -43,13 +43,12 @@
         }
 
         public function buscarFilaPendenteCategoria() {
-            $comum = $this->db->select("status_fila_senha = 'pendente' AND prioridade_fila_senha = 0", "fila_senha_created_in ASC");
-            $preferencial = $this->db->select("status_fila_senha = 'pendente' AND prioridade_fila_senha = 1", "fila_senha_created_in ASC");
-        
-            return [
-                'comum' => $comum ? $comum->fetchAll(PDO::FETCH_ASSOC) : [],
-                'preferencial' => $preferencial ? $preferencial->fetchAll(PDO::FETCH_ASSOC) : []
-            ];
+
+            $senhas = $this->db->consulta_fila();
+            $fila_pendente = $senhas->fetchAll(PDO::FETCH_ASSOC);
+
+            return $fila_pendente;
+
         }
 
     }

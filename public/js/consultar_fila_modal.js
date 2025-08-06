@@ -16,8 +16,11 @@ document.addEventListener("DOMContentLoaded", () => {
         contador.textContent = "Carregando...";
 
         try {
-            const response = await fetch("../../actions/consultar_fila_pendente.php");
+            const response = await fetch("../../app/actions/consultar_fila_pendente.php");
             const data = await response.json();
+
+
+            console.log(data);
 
             tabelaBody.innerHTML = "";
 
@@ -28,9 +31,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 const row = document.createElement("tr");
                 row.innerHTML = `
                     <td>${ordem++}</td>
-                    <td>${item.nome}</td>
-                    <td>${item.servico}</td>
-                    <td>${item.categoria}</td>
+                    <td>${item.nome_fila_senha}</td>
+                    <td>${item.nome_servico}</td>
+                    <td>${item.categoria === 0 ? 'Comum' : 'Preferencial'}</td>
                 `;
                 tabelaBody.appendChild(row);
                 total++;
@@ -47,8 +50,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
-    buttonAbrir.addEventListener("click", () => {
-        modal.classList.add("show");
+    document.querySelector(".abrirConsultarFila").addEventListener("click", () => {
+        document.querySelector(".fundo-consultar-fila").classList.add("show");
         atualizarFila();
     });
 
