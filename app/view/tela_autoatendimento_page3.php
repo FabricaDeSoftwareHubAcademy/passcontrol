@@ -129,11 +129,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <input type="hidden" id="id_servico" name="id_servico">
                 <input type="hidden" id="telefone_hidden" name="telefone">
 
-                <div class="footer-tela-autoatendimento-pag3">
-                    <button type="button" class="button-tela-autoatendimento-pag3 btn-voltar" onclick="location.href = document.referrer">VOLTAR</button>
-                    <button type="button" class="button-tela-autoatendimento-pag3 btn-confirmar" id="confirmarBtn">CONFIRMAR</button>
-                </div>
             </form>
+        </div>
+        <div class="footer-tela-autoatendimento-pag3">
+            <button type="button" class="button-tela-autoatendimento-pag3 btn-voltar" onclick="location.href = document.referrer">VOLTAR</button>
+            <button type="button" class="button-tela-autoatendimento-pag3 btn-confirmar" id="confirmarBtn">CONFIRMAR</button>
         </div>
     </main>
 
