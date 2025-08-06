@@ -9,11 +9,9 @@ include_once 'navegacao.php';
 ?>
 
 <!-- JS Local -->
-<script src="../../public/js/navegacao_menu_lateral.js" defer></script>
 <script src="../../public/js/modal_teladelogin.js" defer></script>
 <script src="../../public/js/insere_dados_atendimento_atual.js" defer></script>
 <script src="../../public/js/modal_proxima_senha.js" defer></script>
-<script src="../../public/js/monitor_modal.js" defer></script>
 <script src="../../public/js/modal_consultar_fila.js" defer></script>
 <script src="../../public/js/modal_chamar_prox_senha.js" defer></script>
 <script src="../../public/js/modal_iniciar_intervalo.js" defer></script>

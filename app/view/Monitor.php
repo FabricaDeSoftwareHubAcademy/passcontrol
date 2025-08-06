@@ -7,7 +7,11 @@ $servicoDB = new Database('servico');
 $guicheDB = new Database('ponto_atendimento');
 
 // Busca todas as senhas com status "em atendimento", ordenadas da mais recente para a mais antiga
-$senhasEmAtendimento = $db->select("status_fila_senha = 'em atendimento'", 'fila_senha_chamada_in DESC')->fetchAll(PDO::FETCH_ASSOC);
+try{
+    $senhasEmAtendimento = $db->select("status_fila_senha = 'em atendimento'", 'fila_senha_criada_in DESC')->fetchAll(PDO::FETCH_ASSOC);
+} catch(Exception){
+    $senhasEmAtendimento = [];
+}
 
 // Pega a senha mais recente como principal
 $senhaPrincipal = $senhasEmAtendimento[0] ?? null;
