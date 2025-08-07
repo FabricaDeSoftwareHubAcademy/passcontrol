@@ -45,7 +45,7 @@ $pagesAuth = [
         'monitor_modal.php'
     ],
 
-    8 => ['Monitor.php'],
+    8 => ['monitor.php'],
 
     9 => [
         'tela_autoatendimento_page1.php',

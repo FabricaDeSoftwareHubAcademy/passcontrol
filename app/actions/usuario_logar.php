@@ -71,7 +71,7 @@ try {
                     $redirect_url = "./app/view/atendimento.php";
                     break;
                 case 8: //monitor
-                    $redirect_url = "./app/view/Monitor.php";
+                    $redirect_url = "./app/view/monitor.php";
                     break;
                 case 9: //auto_atendimento
                     $redirect_url = "./app/view/tela_autoatendimento_page1.php";

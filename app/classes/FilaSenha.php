@@ -42,6 +42,15 @@
             }
         }
 
+        public function buscar_em_atendimento(){
+            $senhasEmAtendimento = $this->db->select("status_fila_senha = 'em atendimento'", 'fila_senha_chamada_in DESC')->fetchAll(PDO::FETCH_ASSOC);
+            if($senhasEmAtendimento){
+                return $senhasEmAtendimento;
+            }else{
+                return false;
+            }
+        }
+
         public function buscarFilaPendenteCategoria() {
 
             $senhas = $this->db->consulta_fila();

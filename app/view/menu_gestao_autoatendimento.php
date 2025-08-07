@@ -22,14 +22,14 @@ require_once './navegacao.php';
             </div>
             <div class="container_menu">
                 <div class="wrapper">
-                    <a href="./Monitor.php">
+                    <a href="./monitor.php">
                         <div class="banner-img">
                             <img src="../../public/img/img-menu/monitor.png" alt="">
                         </div>
                     </a>
                 </div>
                 <div class="button-wrapper">
-                    <button class="btn outline" id="visualisarMonitor" onclick="window.location.href='./Monitor.php'">Visualizar Monitor</button>
+                    <button class="btn outline" id="visualisarMonitor" onclick="window.location.href='./monitor.php'">Visualizar Monitor</button>
                 </div>
             </div>
         </main>
