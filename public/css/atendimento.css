@@ -156,23 +156,10 @@
 .dado-area-chamada-atual{
     font-size: 24px;
 }
+
 .titulo-informacoes-area-chamada{
     font-size: 25px;
 }
-.nome-area-chamada{
-    
-}
-.senha-area-chamada{
-    
-}
-.servico-area-chamada{
-    
-}
-.senha-area-chamada p{
-}
-.servico-area-chamada p{
-}
-
 
 /* BOTOES DE ATENDIMENTO */
 .botao-proxima-senha-atendimento, .botao-encerrar-atendimento,.botao-consultar-fila-atendimento, .botao-intervalo-atendimento  {
@@ -488,13 +475,9 @@ td, th {
         gap: 1rem;
     }
     .nome-area-chamada{
-        display: flex;
-        padding-left: 0.6rem;
+        /* display: flex; */
         gap: 0.5rem;
-        margin-top: 30px;
-    }
-    .senha-area-chamada{
-        padding-left: 0.6rem;
+        margin-top: 15px;
     }
     .senha-area-chamada p{
         font-size: 20px;
@@ -552,28 +535,31 @@ td, th {
         width: 45%;
         height: 100%;
     }
+    .titulo-informacoes-area-chamada {
+        font-size: 22px;
+    }
     .nome-area-chamada{
-        display: flex;
-        padding-left: 0.6rem;
+        /* display: flex; */
+        /* padding-left: 0.6rem; */
         gap: 0.4rem;
-        margin-top: 30px;
+        margin-top: 10px;
     }
     .nome-area-chamada p{
         font-size: 20px;
     }
-    .senha-area-chamada{
+    /* .senha-area-chamada{
         padding-left: 0.6rem;
-    }
+    } */
     .senha-area-chamada p{
         font-size: 20px;
     }
     .servico-area-chamada p{
         font-size: 20px;
     }
-    .servico-area-chamada{
+    /* .servico-area-chamada{
         width: 0px;
         display: none;
-    }
+    } */
     .texto-info-atendimento{    
         font-size: 20px;
         display: flex;
@@ -629,22 +615,23 @@ td, th {
         display: flex;
         align-items: start;
         width: 90%;
-        margin-left: 1rem;
-        margin-bottom: 50px;
+        /* margin-left: 1rem; */
+        /* margin-bottom: 50px; */
+        gap: 4px;
     }
-    .servico-area-chamada{
+    /* .servico-area-chamada{
         margin-left: 1rem;
         display: flex;
         gap: 0rem;
-    }
+    } */
     .informacoes-area-chamada {
         gap: 0rem;
     }
     .nome-area-chamada{
-        display: flex;
-        padding-left: 1rem;
+        /* display: flex; */
+        /* padding-left: 1rem; */
         gap: 1rem;
-        margin-top: 30px;
+        margin-top: 10px;
     }
     .nome-area-chamada p{
         font-size: 20px;
@@ -655,10 +642,10 @@ td, th {
     .senha-area-chamada p{
         font-size: 20px;
     }
-    .servico-area-chamada{
+    /* .servico-area-chamada{
         width: 0px;
         display: none;
-    }
+    } */
     .servico-area-chamada p{
         font-size: 20px;
     }
@@ -734,27 +721,30 @@ td, th {
         align-items: flex-start;
         align-content: flex-start;
     }
-    .senha-area-chamada{
+    /* .senha-area-chamada{
         padding-left: 0rem;
         display: flex;
         align-items: start;
         width: 50%;
         margin-left: 0.5rem;
         margin-bottom: 40px;
-    }
-    .servico-area-chamada{
+    } */
+    /* .servico-area-chamada{
         margin-left: 1rem;
         display: flex;
         gap: 0rem;
-    }
+    } */
     .informacoes-area-chamada {
         gap: 0rem;
     }
+    .informacoes-area-chamada {
+        font-size: 22px;
+    }
     .nome-area-chamada{
-        display: flex;
-        padding-left: 1rem;
+        /* display: flex; */
+        /* padding-left: 1rem; */
         gap: 0.5rem;
-        margin-top: 30px;
+        margin-top: 3px;
     }
     .nome-area-chamada p{
         font-size: 18px;
@@ -765,9 +755,9 @@ td, th {
     .senha-area-chamada p{
         font-size: 18px;
     }
-    .servico-area-chamada{
+    /* .servico-area-chamada{
         display: none;
-    }
+    } */
     .servico-area-chamada p{
         font-size: 20px;
     }
@@ -860,24 +850,22 @@ td, th {
         align-items: flex-start;
         align-content: flex-start;
     }
-    .senha-area-chamada{
+    /* .senha-area-chamada{
         display: none;
-    }
+    } */
     .servico-area-chamada{
-        margin-left: 1rem;
         display: flex;
-        gap: 0rem;
     }
     .informacoes-area-chamada {
         gap: 0rem;
     }
-    .nome-area-chamada{
+    /* .nome-area-chamada{
         display: flex;
         margin-top: 30px;
         gap: 0.5rem;
         flex-direction: column;
         padding: 0;
-    }
+    } */
     .nome-area-chamada p{
         font-size: 18px;
         text-align: center;
@@ -888,11 +876,11 @@ td, th {
     .senha-area-chamada p{
         font-size: 15px;
     }
-    .servico-area-chamada{
+    /* .servico-area-chamada{
         display: none;
-    }
+    } */
     .servico-area-chamada p{
-        font-size: 20px;
+        font-size: 16px;
     }
     .texto-info-atendimento{    
         font-size: 15px;

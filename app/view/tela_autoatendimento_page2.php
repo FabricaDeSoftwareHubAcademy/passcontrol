@@ -51,16 +51,14 @@
                     </div>
                     <h4>PREFERENCIAL</h4>
                 </a>
-
             </div>
-            <div class="footer-tela-autoatendimento-pag2">
-                <button class="button-tela-autoatendimento-pag2">
-                    <a href="./tela_autoatendimento_page1.php" class="btn-text">VOLTAR</a>
-                </button>
-            </div>
-
         </div>
     </main>
+    <div class="footer-tela-autoatendimento-pag2">
+        <button class="button-tela-autoatendimento-pag2">
+            <a href="./tela_autoatendimento_page1.php" class="btn-text">VOLTAR</a>
+        </button>
+    </div>
 
     <script src="../../public/js/tela_autoatendimento_page2.js"></script>
 </body>
