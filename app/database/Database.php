@@ -113,7 +113,8 @@ class Database {
     public function consulta_fila(){
         $query = "SELECT fila_senha.nome_fila_senha, servico.nome_servico, fila_senha.prioridade_fila_senha as categoria
         FROM fila_senha INNER JOIN servico
-        ON servico.id_servico = fila_senha.id_servico_fk";
+        ON servico.id_servico = fila_senha.id_servico_fk
+        WHERE status_fila_senha = 'pendente'";
 
         $res = $this->execute($query);
                 

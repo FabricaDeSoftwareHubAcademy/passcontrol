@@ -13,7 +13,7 @@ include_once 'navegacao.php';
 <script src="../../public/js/insere_dados_atendimento_atual.js" defer></script>
 <script src="../../public/js/modal_proxima_senha.js" defer></script>
 <script src="../../public/js/modal_consultar_fila.js" defer></script>
-<script src="../../public/js/modal_chamar_prox_senha.js" defer></script>
+<!-- <script src="../../public/js/modal_chamar_prox_senha.js" defer></script> -->
 <script src="../../public/js/modal_iniciar_intervalo.js" defer></script>
 <script src="../../public/js/modal_encerrar_atendimento.js" defer></script>
 <script src="../../public/js/modal_ler_prox_senha.js" defer></script>
@@ -73,7 +73,7 @@ include_once 'navegacao.php';
                     </div>
                     <div class="info-atendimento-inicio">
                         <div class="senhas-na-fila-atendimento-vermelho">
-                            <p class="numero--atendimento senhas-vermelhas">0</p>
+                            <p class="numero--atendimento senhas-vermelhas" id="contador_fila">0</p>
                             <p class="texto-info-atendimento senhas-vermelhas">Senhas na Fila</p>
                         </div>
                         <div class="senhas-na-fila-atendimento">

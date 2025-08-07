@@ -1,13 +1,29 @@
 document.addEventListener("DOMContentLoaded", () => {
     const btnProximaSenha = document.getElementById("chamar-proxima-senha");
-    const modal = document.getElementById("modal-senha");
-    
-    const nomeClienteEl = document.getElementById("nome-cliente");
-    const senhaClienteEl = document.getElementById("senha-cliente");
-    const servicoClienteEl = document.getElementById("servico-cliente");
-    const guicheClienteEl = document.getElementById("guiche-cliente");
+    const modalContainer_ChamarSenha = document.querySelector(".fundo-container-confirmacao-presenca");
 
     let idSenhaAtual = null;
+
+    async function preenche_dados_atendimento(data){
+        document.getElementById("nome-cliente").innerText = data.nome;
+        document.getElementById("senha-cliente").innerText = data.senha;
+        document.getElementById("servico-cliente").innerText = data.servico;
+        document.getElementById("guiche-cliente").innerText = sessionStorage.getItem('nomeGuiche');
+
+        // Preenche a informacao de atendimento em andamento com os dados da senha
+        const obj_atendimento_atual = {
+            nome : data.nome,
+            senha : data.senha,
+            servico : data.servico
+        }
+        const obj_atendimento_atual_json = JSON.stringify(obj_atendimento_atual);
+
+        sessionStorage.setItem("atendimento_atual", obj_atendimento_atual_json);
+
+        document.getElementById("nome-atendido-atual").innerText = data.nome;
+        document.getElementById("senha-atendido-atual").innerText = data.senha;
+        document.getElementById("servico-atendido-atual").innerText = data.servico;
+    }
 
     btnProximaSenha.addEventListener("click", async () => {
         const idGuiche = sessionStorage.getItem("guicheSelected");
@@ -17,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         try {
-            const response = await fetch("../../app/actions/proxima_senha.php", {
+            const response = await fetch("../actions/proxima_senha.php", {
                 method: "POST",
                 headers: { "Content-Type": "application/x-www-form-urlencoded" },
                 body: `id_guiche=${encodeURIComponent(idGuiche)}`
@@ -27,12 +43,9 @@ document.addEventListener("DOMContentLoaded", () => {
             if (data.success) {
                 idSenhaAtual = data.id_senha;
 
-                nomeClienteEl.innerText = data.nome;
-                senhaClienteEl.innerText = data.senha;
-                servicoClienteEl.innerText = data.servico;
-                guicheClienteEl.innerText = "Guichê: " + idGuiche;
+                preenche_dados_atendimento(data);
 
-                modal.style.display = "flex";
+                modalContainer_ChamarSenha.classList.add("show");
                 sessionStorage.setItem("idSenhaAtual", idSenhaAtual);
             } else {
                 alert(data.message || "Nenhuma senha pendente.");
@@ -59,7 +72,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const data = await response.json();
 
             if (data.success) {
-                modal.style.display = "none";
+                modalContainer_ChamarSenha.classList.remove("show");
                 idSenhaAtual = null;
                 sessionStorage.removeItem("idSenhaAtual");
             } else {

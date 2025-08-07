@@ -27,11 +27,13 @@ document.addEventListener("DOMContentLoaded", () => {
                 alert("Por favor, selecione um guichê.");
                 return;
             }
-
+            
             const guicheText = opcaoselecionada.textContent.trim();
-            guichetexto.textContent = `${guicheText}`;
+            guichetexto.textContent = guicheText;
             
             sessionStorage.setItem('guicheSelected', guicheSelecionado);
+            sessionStorage.setItem('nomeGuiche', guicheText);
+
             fetch('../actions/guiche_selecionado.php', {
             method: 'POST',
             body: JSON.stringify({guiche: guicheSelecionado})

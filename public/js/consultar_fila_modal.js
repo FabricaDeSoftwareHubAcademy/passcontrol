@@ -1,28 +1,20 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const buttonAbrir = document.querySelector(".abrirConsultarFila");
-    const modal = document.querySelector(".fundo-consultar-fila");
-    const buttonFechar = document.querySelector(".return_ConsultarFila");
-
-    const tabelaBody = document.querySelector(".tabela-atendimento-consultar-fila tbody");
-    const contador = document.querySelector(".contador-senhas");
-
+    const contador_fila_atendimento = document.querySelector(".contador-senhas");
+    const tabela_fila_body = document.querySelector(".tabela-atendimento-consultar-fila tbody");
 
     async function atualizarFila() {
 
-        tabelaBody.innerHTML = `
+        tabela_fila_body.innerHTML = `
             <tr>
                 <td colspan="4" style="text-align:center;">Carregando...</td>
             </tr>`;
-        contador.textContent = "Carregando...";
+        contador_fila_atendimento.textContent = "Carregando...";
 
         try {
-            const response = await fetch("../../app/actions/consultar_fila_pendente.php");
+            const response = await fetch("../actions/consultar_fila_pendente.php");
             const data = await response.json();
 
-
-            console.log(data);
-
-            tabelaBody.innerHTML = "";
+            tabela_fila_body.innerHTML = "";
 
             let ordem = 1;
             let total = 0;
@@ -35,17 +27,23 @@ document.addEventListener("DOMContentLoaded", () => {
                     <td>${item.nome_servico}</td>
                     <td>${item.categoria === 0 ? 'Comum' : 'Preferencial'}</td>
                 `;
-                tabelaBody.appendChild(row);
+                tabela_fila_body.appendChild(row);
                 total++;
             }
             );
 
-        contador.textContent = `Senhas na fila: ${total}`;
+        contador_fila_atendimento.textContent = `Senhas na fila: ${total}`;
+        // sessionStorage.setItem('contador_fila', total);
+        document.getElementById('contador_fila').innerText = total;
+
+        if(total == 0 || total == null){
+            tabela_fila_body.innerHTML = "<tr><td colspan='4'>Fila Vazia...</td></tr>";
+        }
 
         } catch (error) {
             console.error("Erro ao buscar dados:", error);
-            tabelaBody.innerHTML = "<tr><td colspan='4'>Erro ao carregar dados</td></tr>";
-            contador.textContent = "Senhas na fila: 0";
+            tabela_fila_body.innerHTML = "<tr><td colspan='4'>Erro ao carregar dados</td></tr>";
+            contador_fila_atendimento.textContent = "Senhas na fila: 0";
         }
     }
 
@@ -55,12 +53,10 @@ document.addEventListener("DOMContentLoaded", () => {
         atualizarFila();
     });
 
-    buttonFechar.addEventListener("click", () => {
-        modal.classList.remove("show");
+    document.querySelector(".return_ConsultarFila").addEventListener("click", () => {
+        document.querySelector(".fundo-consultar-fila").classList.remove("show");
     }
     );
-
-
 });    
 
 
