@@ -15,12 +15,20 @@ $db = new Database();
 $pdo = $db->getConnection();
 
 // Monta a query com os filtros e status = 'atendido'
-$sql = "SELECT fs.*, s.nome_servico, p.nome_ponto_atendimento
+$sql = "SELECT 
+            fs.id_fila_senha,
+            fs.nome_fila_senha,
+            fs.prioridade_fila_senha,
+            fs.fila_senha_criada_in AS fila_senha_created_in,
+            fs.status_fila_senha,
+            fs.id_usuario_atendente AS fila_senha_updated_by_id,
+            s.nome_servico,
+            p.nome_ponto_atendimento
         FROM fila_senha fs
         LEFT JOIN servico s ON fs.id_servico_fk = s.id_servico
-        LEFT JOIN ponto_atendimento p ON fs.id_ponto_atendimento_fk = p.id_ponto_atendimento
-        WHERE DATE(fs.fila_senha_created_in) BETWEEN ? AND ? 
-        AND fs.status_fila_senha = 'atendido'";
+        LEFT JOIN ponto_atendimento p ON fs.id_ponto_atendimento = p.id_ponto_atendimento
+        WHERE DATE(fs.fila_senha_criada_in) BETWEEN ? AND ?
+        AND fs.status_fila_senha = 'em atendimento'";
 
 $params = [$dataInicio, $dataFim];
 
@@ -44,7 +52,13 @@ try {
     $stmt = $pdo->prepare($sql);
     $stmt->execute($params);
     $dados = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+    if (!$dados) {
+        $dados = []; // ← garante que seja sempre um array
+    }
+
     echo json_encode($dados);
 } catch (PDOException $e) {
+    http_response_code(500); // sinaliza erro no backend
     echo json_encode(['erro' => $e->getMessage()]);
 }

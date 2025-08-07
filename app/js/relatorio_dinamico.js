@@ -17,8 +17,14 @@ document.addEventListener('DOMContentLoaded', function () {
         fetch(`../actions/buscar_dados_relatorio.php?inicio=${dataInicio}&fim=${dataFim}&local=${encodeURIComponent(local)}&atendente=${encodeURIComponent(atendente)}&guiche=${encodeURIComponent(guiche)}`)
             .then(res => res.json())
             .then(dados => {
+                console.log("Resposta do PHP:", dados); // ← ADICIONE ISSO
                 const tabela = document.querySelector('#tabelaRelatorio tbody');
                 tabela.innerHTML = '';
+
+                if (!Array.isArray(dados)) {
+                    console.error('Erro no retorno do PHP. Esperado um array, recebido:', dados);
+                    return;
+                }
 
                 if (dados.length === 0) {
                     tabela.innerHTML = '<tr><td colspan="6">Nenhum resultado encontrado.</td></tr>';
