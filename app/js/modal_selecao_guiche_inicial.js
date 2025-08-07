@@ -7,14 +7,6 @@ document.addEventListener("DOMContentLoaded", () => {
     // EXIBI O NA TELA ATENDIMENTO QUANDO SELECIONA O GUICHE
     const guichetexto = document.querySelector('#guiche-exibir');
     
-    // BOTÃO SAIR MENU LATERAL
-    const botao_sair = document.querySelectorAll(".btn_sair");
-    
-    // MODAL CONFIRMAÇÃO DA SAIDA DO SISTEMA
-    const modalSaida = document.querySelector('.fundo-confimarcao-saida-sistema');
-    const saidaModal = document.querySelector(".save_SaidaSis");
-    const fechaSaida = document.querySelector(".cancel_SaidaSis");
-
     // Abre modal se guichê não foi selecionado
     if (!sessionStorage.getItem('guicheSelected') && modalvalidacao) {
         modalvalidacao.classList.add("show");
@@ -41,54 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 console.error("Erro ao marcar o guichê como ocupado", err);
             });
 
-            
-            const usuario = JSON.parse(sessionStorage.getItem('usuario'));
-            // console.log(usuario)
             modalvalidacao.classList.remove("show");
         });
     }
-
-    // Intercepta clique no botão de sair
-    botao_sair.forEach(botao => {
-    botao.addEventListener("click", async (event) => {
-            modalSaida.classList.add("show");
-            event.preventDefault();
-
-            const guicheSelecionado = sessionStorage.getItem("guicheSelected");
-
-            if (guicheSelecionado) {
-                try {
-                    await fetch('../actions/guiche_liberacao.php', {
-                        method: 'POST',
-                        headers: {
-                            'Content-Type': 'application/json'
-                        },
-                        body: JSON.stringify({
-                            guiche: parseInt(guicheSelecionado)
-                        })
-                    });
-                } catch (err) {
-                    console.error("Erro ao liberar guichê:", err);
-                }
-            }
-        });
-    });
-    saidaModal.addEventListener("click", () => {
-        modalSaida.classList.remove("show");
-        sessionStorage.clear(); 
-        window.location.href = "../../index.php";
-    });
-    fechaSaida.addEventListener("click", () => {
-        modalSaida.classList.remove("show");
-    });
-    window.addEventListener("beforeunload", function (e) {
-        const guicheSelecionado = sessionStorage.getItem("guicheSelected");
-        if (guicheSelecionado) {
-            const blob = new Blob(
-                [JSON.stringify({ guiche: parseInt(guicheSelecionado) })],
-                { type: 'application/json' }
-            );
-            navigator.sendBeacon('../actions/guiche_liberacao.php', blob);
-        }
-    });
 });
