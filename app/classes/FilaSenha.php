@@ -42,6 +42,15 @@
             }
         }
 
+        public function buscar_em_atendimento(){
+            $senhasEmAtendimento = $this->db->select_monitor_ultimos_chamados()->fetchAll(PDO::FETCH_ASSOC);
+            if($senhasEmAtendimento){
+                return $senhasEmAtendimento;
+            }else{
+                return false;
+            }
+        }
+
         public function buscarFilaPendenteCategoria() {
 
             $senhas = $this->db->consulta_fila();

@@ -16,7 +16,7 @@ include_once 'navegacao.php';
 <!-- <script src="../../public/js/modal_chamar_prox_senha.js" defer></script> -->
 <script src="../../public/js/modal_iniciar_intervalo.js" defer></script>
 <script src="../../public/js/modal_encerrar_atendimento.js" defer></script>
-<script src="../../public/js/modal_ler_prox_senha.js" defer></script>
+<!-- <script src="../../public/js/modal_ler_prox_senha.js" defer></script> -->
 <script src="../../public/js/modal_intervalo_retornar.js" defer></script>
 <script src="../js/modal_selecao_guiche_inicial.js"></script>
 

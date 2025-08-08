@@ -31,14 +31,14 @@ switch ($id_perfil) {
 
 $nomeExibicao = [
     'atendimento.php' => 'Atendimento',
-    'monitor_modal.php' => 'Monitor',
+    'monitor_modal.php' => 'monitor',
     'menu_gestao_usuario.php' => 'Gestão',
     'relatorio_diario.php' => 'Relatórios',
 ];
 
 $icones = [
     'Atendimento' => '../../public/img/icons/atend.svg',
-    'Monitor' => '../../public/img/icons/monitor.svg',
+    'monitor' => '../../public/img/icons/monitor.svg',
     'Gestão' => '../../public/img/icons/gestao.svg',
     'Relatórios' => '../../public/img/icons/nota.svg',
 ];
