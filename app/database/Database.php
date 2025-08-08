@@ -128,7 +128,7 @@ class Database {
 
     public function consulta_senhas_atendidas_dia(){
         $query = "SELECT 
-                    fila_senha.senha_fila_senha AS senha,
+                    fila_senha.id_fila_senha AS senha,
                     fila_senha.nome_fila_senha AS nome,
                     servico.nome_servico AS servico,
                     fila_senha.fila_senha_created_in AS inicio,
@@ -136,7 +136,7 @@ class Database {
                     fila_senha.prioridade_fila_senha AS categoria
                   FROM fila_senha 
                   INNER JOIN servico ON servico.id_servico = fila_senha.id_servico_fk
-                  WHERE fila_senha.status_fila = 'em atendimento' 
+                  WHERE fila_senha.status_presenca = '1'
                   AND DATE(fila_senha.fila_senha_updated_in) = CURDATE()
                   ORDER BY fila_senha.fila_senha_updated_in ASC";
 

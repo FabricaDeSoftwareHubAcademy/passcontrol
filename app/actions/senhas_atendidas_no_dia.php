@@ -6,7 +6,7 @@ $senhas = $fila->buscarSenhasAtendidasNoDia();
 
 header('Content-Type: application/json; charset=utf-8');
 
-// Verifica se há senhas "em atendimento" no dia
+// Verifica se há senhas "presente" no dia
 
 if (!$senhas) {
     $senhas = [];

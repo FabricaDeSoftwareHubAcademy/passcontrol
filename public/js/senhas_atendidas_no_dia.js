@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
     carregarSenhasAtendidas();
-    setInterval(carregarSenhasAtendidas, 10000);
 });
 
 async function carregarSenhasAtendidas() {
@@ -20,9 +19,11 @@ async function carregarSenhasAtendidas() {
             return;
         }
 
+        data.fo
+
         data.forEach((senha, index) => {
-            const tr = document.createElement("tr");
-            tr.innerHTML = `
+            const row = document.createElement("tr");
+            row.innerHTML = `
                 <td>${index + 1}</td>
                 <td>${senha.nome}</td>
                 <td>${senha.servico}</td>
@@ -31,7 +32,7 @@ async function carregarSenhasAtendidas() {
                 <td>${senha.termino}</td>
                 <td>${senha.categoria == 0 ? "Comum" : "Prioridade"}</td>
             `;
-            tbody.appendChild(tr);
+            tbody.appendChild(row);
         });
 
     } catch (error) {
