@@ -4,73 +4,20 @@ if (session_status() === PHP_SESSION_NONE) {
 }
 require_once '../database/Database.php';
 
-if (!function_exists('ordenarSenhasComPrioridade')) {
-    function ordenarSenhasComPrioridade(array $senhas): array {
-        $filaFinal = [];
-        $puladas = [];
-        $prQuePularam = [];
-
-        for ($i = 0; $i < count($senhas); $i++) {
-            $senha = $senhas[$i];
-
-            if ($senha['prioridade_fila_senha']) {
-                if (in_array($senha['id_fila_senha'], $prQuePularam)) {
-                    $filaFinal[] = $senha;
-                    continue;
-                }
-
-                $pulou = false;
-
-                for ($j = 0; $j < count($filaFinal); $j++) {
-                    $alvo = $filaFinal[$j];
-
-                    if (
-                        !$alvo['prioridade_fila_senha'] &&
-                        !in_array($alvo['id_fila_senha'], $puladas)
-                    ) {
-                        if ($j == count($filaFinal) - 1) {
-                            array_splice($filaFinal, $j, 0, [$senha]);
-                            $puladas[] = $alvo['id_fila_senha'];
-                            $prQuePularam[] = $senha['id_fila_senha'];
-                            $pulou = true;
-                            break;
-                        }
-                    }
-                }
-
-                if (!$pulou) {
-                    $filaFinal[] = $senha;
-                }
-            } else {
-                $filaFinal[] = $senha;
-            }
-        }
-
-        return $filaFinal;
-    }
-}
-
-if (!isset($_SESSION['senha_principal']) || !isset($_SESSION['fila_senhas']) || !isset($_SESSION['historico_senhas'])) {
-    $_SESSION['historico_senhas'] = $_SESSION['historico_senhas'] ?? [];
-
-    $db = new Database('fila_senha');
-    $stmt = $db->select('', 'id_fila_senha ASC');
-    $senhasBrutas = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-    if (!empty($senhasBrutas)) {
-        $_SESSION['senha_principal'] = array_shift($senhasBrutas);
-        $_SESSION['fila_senhas'] = ordenarSenhasComPrioridade($senhasBrutas);
-    } else {
-        $_SESSION['senha_principal'] = null;
-        $_SESSION['fila_senhas'] = [];
-    }
-}
-
-$senhaPrincipal = $_SESSION['senha_principal'];
-$ultimasChamadas = array_slice($_SESSION['historico_senhas'], 0, 4);
-
+$db = new Database('fila_senha');
 $servicoDB = new Database('servico');
+$guicheDB = new Database('ponto_atendimento');
+
+// Busca senhas com status "em atendimento"
+$senhasEmAtendimento = $db->select("status_fila_senha = 'em atendimento'", 'fila_senha_chamada_in DESC')->fetchAll(PDO::FETCH_ASSOC);
+
+// Senha principal
+$senhaPrincipal = $senhasEmAtendimento[0] ?? null;
+
+// Últimas chamadas
+$ultimasChamadas = array_slice($senhasEmAtendimento, 1, 4);
 ?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -92,11 +39,12 @@ $servicoDB = new Database('servico');
                             <?php foreach ($ultimasChamadas as $senha): ?>
                                 <?php
                                     $servico = $servicoDB->select('id_servico = ' . $senha['id_servico_fk'])->fetch(PDO::FETCH_ASSOC);
+                                    $guiche = $guicheDB->select('id_ponto_atendimento = ' . (int)$senha['id_ponto_atendimento'])->fetch(PDO::FETCH_ASSOC);
                                     $prioridade = $senha['prioridade_fila_senha'] ? 'PR' : 'CM';
                                     $numero = str_pad($senha['id_fila_senha'], 3, '0', STR_PAD_LEFT);
                                 ?>
                                 <div class="caixa-das-senhas">
-                                    <h2><?= htmlspecialchars($senha['nome_fila_senha']) ?></h2>
+                                    <h2><?= htmlspecialchars($senha['nome_fila_senha'] ?? '...') ?></h2>
                                     <div class="conjunto-senhas">
                                         <div class="senha">
                                             <h3>SENHA</h3>
@@ -104,7 +52,7 @@ $servicoDB = new Database('servico');
                                         </div>
                                         <div class="guiche">
                                             <h5>GUICHÊ</h5>
-                                            <h6>test</h6>
+                                            <h6><?= htmlspecialchars($guiche['nome_ponto_atendimento'] ?? '...') ?> - <?= htmlspecialchars($guiche['identificador_ponto_atendimento'] ?? '') ?></h6>
                                         </div>
                                     </div>
                                 </div>
@@ -116,16 +64,24 @@ $servicoDB = new Database('servico');
                         <?php endif; ?>
                     </div>
                 </div>
+
                 <div class="fundo-principal">
                     <div class="area-botao-fechar-monitor">
                         <div class="botao-fechar-monitor" id="fecharMonitor">
                             <h2>X</h2>
                         </div>
                     </div>
+
                     <div class="fundo-senha-principal">
                         <div class="caixa-senha-principal">
                             <div class="conjunto-senha-principal">
                                 <?php if ($senhaPrincipal): ?>
+                                    <?php
+                                        $servico = $servicoDB->select('id_servico = ' . $senhaPrincipal['id_servico_fk'])->fetch(PDO::FETCH_ASSOC);
+                                        $guiche = $guicheDB->select('id_ponto_atendimento = ' . (int)$senhaPrincipal['id_ponto_atendimento'])->fetch(PDO::FETCH_ASSOC);
+                                        $prioridade = $senhaPrincipal['prioridade_fila_senha'] ? 'PR' : 'CM';
+                                        $numero = str_pad($senhaPrincipal['id_fila_senha'], 3, '0', STR_PAD_LEFT);
+                                    ?>
                                     <div class="nome-pessoa">
                                         <h1><?= htmlspecialchars($senhaPrincipal['nome_fila_senha']) ?></h1>
                                     </div>
@@ -136,14 +92,9 @@ $servicoDB = new Database('servico');
                                             <h2>GUICHÊ:</h2>
                                         </div>
                                         <div class="infos-detalhes-direita">
-                                            <h2>
-                                                <?php
-                                                    $servico = $servicoDB->select('id_servico = ' . $senhaPrincipal['id_servico_fk'])->fetch(PDO::FETCH_ASSOC);
-                                                    echo htmlspecialchars($servico['nome_servico'] ?? 'SEM INFORMAÇÕES');
-                                                ?>
-                                            </h2>
-                                            <h2><?= $senhaPrincipal['prioridade_fila_senha'] ? 'PR' : 'CM' ?> <?= str_pad($senhaPrincipal['id_fila_senha'], 3, '0', STR_PAD_LEFT) ?></h2>
-                                            <h2>test</h2>
+                                            <h2><?= htmlspecialchars($servico['nome_servico'] ?? '...') ?></h2>
+                                            <h2><?= $prioridade ?> <?= $numero ?></h2>
+                                            <h2><?= htmlspecialchars($guiche['nome_ponto_atendimento'] ?? '...') ?> - <?= htmlspecialchars($guiche['identificador_ponto_atendimento'] ?? '') ?></h2>
                                         </div>
                                     </div>
                                 <?php else: ?>
