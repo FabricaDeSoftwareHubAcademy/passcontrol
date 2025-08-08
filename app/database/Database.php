@@ -182,11 +182,17 @@ class Database
         $query = 
         "SELECT 
         fila_senha.nome_fila_senha,
-        fila_senha.prioridade_fila_senha, 
-        -- IF(fila_senha.prioridade_fila_senha = 1, 'PR', 'CM') AS prioridade_fila_senha
-        fila_senha.id_fila_senha, 
+        CONCAT(
+            IF(fila_senha.prioridade_fila_senha = 1, 'PR', 'CM'), 
+            ' ',
+            fila_senha.id_fila_senha
+            ) AS senha_chamada,
         fila_senha.status_fila_senha,
-        CONCAT (ponto_atendimento.nome_ponto_atendimento, ' - ', ponto_atendimento.identificador_ponto_atendimento),
+        CONCAT (
+            ponto_atendimento.nome_ponto_atendimento, 
+            ' - ', 
+            ponto_atendimento.identificador_ponto_atendimento
+            ) AS nome_ponto_atendimento,
         servico.nome_servico
         FROM fila_senha
         INNER JOIN servico 
@@ -194,7 +200,8 @@ class Database
         INNER JOIN ponto_atendimento
         ON ponto_atendimento.id_ponto_atendimento = fila_senha.id_ponto_atendimento
         WHERE fila_senha.status_fila_senha = 'em atendimento'
-        LIMIT 4;
+        ORDER BY fila_senha.id_fila_senha DESC
+        LIMIT 4
         ";
 
         $res = $this->execute($query);

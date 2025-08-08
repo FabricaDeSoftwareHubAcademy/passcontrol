@@ -26,41 +26,29 @@
         <div class="fundo-azul-lateral">
             <h1>Últimas<br>Chamadas</h1>
             <div class="area-das-senhas">
-                <div class="caixa-das-senhas">
-                    <h2>NOME SENHA</h2>
-                    <div class="conjunto-senhas">
-                        <div class="senha">
-                            <h3>SENHA:</h3>
-                            <h4>prioridade - numero</h4>
-                        </div><br>
-                        <div class="guiche">
-                            <h3>GUICHÊ:</h3>
-                            <h4>nome guiche</h4>
-                        </div>
-                    </div>
-                </div>
+                Aguardando Chamadas...
             </div>
         </div>
 
         <div class="fundo-senha-principal">
             <div class="fundo-senha-principal-wrap">
                 <div class="nome-pessoa">
-                    <h1>Nome</h1>
+                    <h1 id="nome_senha_principal">...</h1>
                 </div>
                 <div class="infos-senha-principal">
                     <li>
                         <h2>SENHA:</h2>
-                        <span>prioridade - numero</span>
+                        <span id="senha_principal">...</span>
                     </li>
                     <li>
                         <h2>GUICHÊ:</h2>
-                        <span>nome guiche</span>
+                        <span id="guiche_senha_principal">...</span>
                     </li>
                 </div>
                 <div class="nome-servico">
                     <li>
                         <h2>SERVIÇO:</h2>
-                        <span>nome servico</span>
+                        <span id="servico_senha_principal">...</span>
                     </li>
                 </div>
             </div>

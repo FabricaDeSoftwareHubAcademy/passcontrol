@@ -1,4 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
+    const socket = new WebSocket('ws://127.0.0.1:8080');
+
     const btnProximaSenha = document.getElementById("chamar-proxima-senha");
     const modalContainer_ChamarSenha = document.querySelector(".fundo-container-confirmacao-presenca");
 
@@ -42,6 +44,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
             if (data.success) {
                 idSenhaAtual = data.id_senha;
+
+                // CHAMA O WEBSOCKET PARA ATUALIZAR O MONITOR 
+                const payload = 'chamar';
+                socket.send(JSON.stringify({ type: 'buttonClicked', payload }));
 
                 preenche_dados_atendimento(data);
 
@@ -89,6 +95,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Botão chamar novamente - atualiza somente chamada_in
     document.querySelector(".chamar_ChamarSenha").addEventListener("click", async () => {
+
         if (!idSenhaAtual) {
             alert("Nenhuma senha ativa para chamar novamente.");
             return;
@@ -105,6 +112,9 @@ document.addEventListener("DOMContentLoaded", () => {
             const data = await response.json();
 
             if (data.success) {
+                const payload = 'chamar'; // or any relevant data
+                socket.send(JSON.stringify({ type: 'buttonClicked', payload }));
+
                 alert("Senha chamada novamente.");
             } else {
                 alert(data.message || "Erro ao chamar novamente.");
