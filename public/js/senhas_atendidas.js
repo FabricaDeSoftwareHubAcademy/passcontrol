@@ -9,7 +9,9 @@ document.addEventListener('DOMContentLoaded', function(){
         
         await json.forEach((elemento, sequencial)=>{
             sequencial== 0;
-            const senhaFormatada = 'CM' + String(elemento.id_fila_senha).padStart(3, '0');
+            const prioridade = elemento.prioridade_fila_senha === 0 ? 'CM' : 'PR'; 
+
+            const senhaFormatada = prioridade + String(elemento.id_fila_senha).padStart(3, '0');
             tabela.innerHTML+=`<tr>
             <td>${sequencial+1}</td>
             <td>${elemento.nome_fila_senha}</td>
@@ -17,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function(){
             <td>${senhaFormatada}</td>
             <td>${elemento.fila_senha_chamada_in}</td>
             <td>${elemento.fila_senha_encerrada_in ? elemento.fila_senha_encerrada_in : 'ainda em atendimento'}</td>
-            <td>${elemento.prioridade_fila_senha === 0 ? 'Comum': 'Preferencial' }</td>
+            <td>${prioridade }</td>
         </tr>`
         })
     }
