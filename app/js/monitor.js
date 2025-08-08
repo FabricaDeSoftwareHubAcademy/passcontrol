@@ -24,17 +24,18 @@ document.addEventListener("DOMContentLoaded", async () => {
                 ultimas_chamadas.forEach((senha) => {
                     document.querySelector(".area-das-senhas").innerHTML += `
                     <div class="caixa-das-senhas">
-                    <h2>${senha.nome_fila_senha}</h2>
-                    <div class="conjunto-senhas">
-                    <div class="senha">
-                    <h3>SENHA:</h3>
-                    <h4>${senha.senha_chamada}</h4>
-                    </div><br>
-                    <div class="guiche">
-                    <h3>GUICHÊ:</h3>
-                    <h4>${senha.nome_ponto_atendimento}</h4>
-                    </div>
-                    </div>
+                        <h2>${senha.nome_fila_senha}</h2>
+                        <div class="conjunto-senhas">
+                            <div class="senha">
+                                <h3>SENHA:</h3>
+                                <h4>${senha.senha_chamada}</h4>
+                            </div>
+                            <br>
+                            <div class="guiche">
+                                <h3>GUICHÊ:</h3>
+                                <h4>${senha.nome_ponto_atendimento}</h4>
+                            </div>
+                        </div>
                     </div>
                     `;
                 });
@@ -49,11 +50,24 @@ document.addEventListener("DOMContentLoaded", async () => {
     const socket = new WebSocket('ws://192.168.0.8:8080');
 
     socket.onmessage = event => {
-    const data = JSON.parse(event.data);
-    if (data.type === 'updateScreenB') {
-        if(data.payload == 'chamar') {
-            carregar_senhas_monitor();
+        const data = JSON.parse(event.data);
+        if (data.type === 'updateScreenB') {
+            if(data.payload == 'chamar') {
+                carregar_senhas_monitor();
+            }
         }
-    }
     };
+
+    // const res = await fetch('../../Env.php', {
+    //     action: 'loadEnv("../../.env")'
+    // });
+
+    // try{
+    //     const resposta = await res.json();
+    
+    //     console.log(resposta);
+
+    // }catch(erro){
+    //     console.warn(erro);
+    // }
 });
