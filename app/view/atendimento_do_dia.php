@@ -25,6 +25,7 @@
     <script src="../../public/js/navegacao_menu_lateral.js" defer></script>
     <script src="../../public/js/monitor_modal.js" defer></script>
     <script src="../../public/js/buscar_dados_atendimento.js" defer></script>
+    <script src="../../public/js/modal_orientacao_atendimento.js" defer></script>
     
     <!-- LOGO -->
     <link rel="shortcut icon" type="imagex/png" href="../../public/img/Logo-Nota-Controlnt.ico">
@@ -74,7 +75,7 @@
                             <th>Serviços</th>
                             <th>Guichê</th>
                             <th class="status-atendimento-do-dia">
-                                <div class="status-flex-atendimento-do-dia">
+                                <div class="status-flex-atendimento-do-dia open-status-atendimento">
                                     Status <span class="circle-atendimento-do-dia"><i class="fa-solid fa-question"></i></span>
                                 </div>
                             </th>
@@ -111,6 +112,7 @@
 
     <?php
     include "./monitor_modal.php";
+    include "../../public/modais/modal_orientacao_atendimento.php";
     ?>
     
     <script>
