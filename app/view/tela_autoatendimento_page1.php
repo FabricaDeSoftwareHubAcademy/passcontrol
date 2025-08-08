@@ -30,7 +30,9 @@
     <header class="head-tela-autoatendimento-pag1">
         <nav class="nav-head-tela-autoatendimento-pag1">
             <div class="logo-control-tela-autoatendimento-pag1">
-                <img src="../../public/img/icons/logo_control.svg" alt="LOGOCONTROL" id="img-logo">
+                <a href="../../index.php">
+                    <img src="../../public/img/icons/logo_control.svg" alt="LOGOCONTROL"  id="img-logo">
+                </a>
             </div>
             <h3>PassControl</h3>
         </nav>
@@ -64,7 +66,9 @@
             <div id="pageIndicator" style="display: none;"></div>
         </div>
     </main>
-
+    <?php
+        include_once "../../public/modais/modal_confirmacao_deslogar.php"
+    ?>
     <script src="../../public/js/tela_autoatendimento_paginação.js"></script>
 </body>
 </html>

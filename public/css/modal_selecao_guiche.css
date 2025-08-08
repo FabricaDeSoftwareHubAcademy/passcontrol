@@ -100,6 +100,12 @@
     font-size: 14px;
     padding: 10px 15px;
 }
+.messagem-erro-guiche {
+    color: red;
+    font-size: 12px;
+    margin-top: -17px;
+    display: block;
+}
 
 .modal-selecao-guiche .button-group .confirm_SelecaoGuiche:hover {
     color: #3AA867;
