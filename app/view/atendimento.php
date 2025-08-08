@@ -18,6 +18,7 @@ include_once 'navegacao.php';
 <script src="../../public/js/modal_encerrar_atendimento.js" defer></script>
 <!-- <script src="../../public/js/modal_ler_prox_senha.js" defer></script> -->
 <script src="../../public/js/modal_intervalo_retornar.js" defer></script>
+<script src="../../public/js/senhas_atendidas.js" defer></script>
 <script src="../js/modal_selecao_guiche_inicial.js"></script>
 
 <body class="control-body-navegacao">
@@ -141,7 +142,7 @@ include_once 'navegacao.php';
                             <th>Senha</th>
                             <th>Início</th>
                             <th>Término</th>
-                            <th>Categoria</th>
+                            <th>Prioridade</th>
                         </tr>
                     </thead>
 

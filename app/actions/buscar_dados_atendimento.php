@@ -11,7 +11,7 @@ servico.nome_servico,
 perfil_usuario.nome_perfil_usuario,
 ponto_atendimento.identificador_ponto_atendimento
 from fila_senha 
-inner join servico 
+left join servico 
 on fila_senha.id_servico_fk = servico.id_servico
 inner join ponto_atendimento
 on fila_senha.id_ponto_atendimento = ponto_atendimento.id_ponto_atendimento
