@@ -41,7 +41,7 @@ try {
         [
             'status_fila_senha' => 'em atendimento',
             'id_ponto_atendimento' => (int)$idGuiche,
-            'fila_senha_iniciada_in' => date('Y-m-d H:i:s') // passa o formato da data
+            'fila_senha_chamada_in' => date('Y-m-d H:i:s') // passa o formato da data
         ]
     );
 
