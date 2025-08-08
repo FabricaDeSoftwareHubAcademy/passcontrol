@@ -75,8 +75,8 @@
                             <th>Serviços</th>
                             <th>Guichê</th>
                             <th class="status-atendimento-do-dia">
-                                <div class="status-flex-atendimento-do-dia open-status-atendimento">
-                                    Status <span class="circle-atendimento-do-dia"><i class="fa-solid fa-question"></i></span>
+                                <div class="status-flex-atendimento-do-dia">
+                                    Status <span class="circle-atendimento-do-dia open-status-atendimento"><i class="fa-solid fa-question"></i></span>
                                 </div>
                             </th>
                         </tr>

@@ -1,7 +1,7 @@
 <div class="fundo-status-atendimento">
     <section class="modal-status-atendimento">
         <div class="modal-header">
-            <span class="modal-title">Status de Atendimento</span>
+            <span class="modal-title">Orientação do Atendimento</span>
             <img src="../../public/img/icons/logo_control.svg" alt="Logo Nota Control" alt="Ícone" class="modal-icon">
         </div>
 

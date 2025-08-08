@@ -192,6 +192,7 @@ tbody {
     border-radius: 50%;
     background-color: var(--color-background-2);
     border: 1px solid var(--color-neutro-2);
+    cursor: pointer;
 }
 
 
