@@ -11,21 +11,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="../../public/css/listar_usuarios.css">
-    <link rel="stylesheet" href="../../public/css/navegacao.css">
-    <link rel="stylesheet" href="../../public/css/monitor_modal.css">
-    <link rel="stylesheet" href="../../public/css/conteudo.css">
-    <link rel="stylesheet" href="../../public/css/modal_alterar_dados_pessoais.css">
-    <link rel="stylesheet" href="../../public/css/modal_editar_dados_usuario.css">
-    <link rel="stylesheet" href="../../public/css/modal_alterar_senha.css">
-    <link rel="stylesheet" href="../../public/css/modal_alterar_status.css">
-    <link rel="stylesheet" href="../../public/css/modal_confirmacao_dados_registrados.css">
-    <link rel="stylesheet" href="../../public/css/modal_confirmacao_dados.css">    
-    <link rel="stylesheet" href="../../public/css/modal_aviso_erro.css">    
-    <!-- <link rel="stylesheet" href="../../public/css/modal_alerta_alteracoes.css"> -->
-    <!-- <link rel="stylesheet" href="../../public/css/tabela.css"> -->
     
     <!-- JS -->
     <script src="../../public/js/navegacao_menu_lateral.js" defer></script>

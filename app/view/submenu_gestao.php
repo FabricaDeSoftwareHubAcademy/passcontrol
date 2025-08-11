@@ -20,8 +20,8 @@ $menus = $menusPorPerfil[$id_perfil] ?? [];
 ?>
 
 <!-- <body> -->
-<div class="menu-container">
-    <div class="menu">
+<div class="sub-menu-container-control">
+    <div class="sub-menu-control">
         <button class="hamburger" onclick="toggleMenu()">☰</button>
         <?php foreach ($menus as $item): ?>
             <a href="<?= htmlspecialchars($item['href']) ?>"
@@ -31,7 +31,7 @@ $menus = $menusPorPerfil[$id_perfil] ?? [];
         <?php endforeach; ?>
     </div>
 
-    <div class="menu-mobile" id="mobileMenu">
+    <div class="sub-menu-mobile-control" id="mobileMenu">
         <?php foreach ($menus as $item): ?>
             <a href="<?= htmlspecialchars($item['href']) ?>"
                 <?= (basename($_SERVER['PHP_SELF']) == basename($item['href'])) ? 'class="active"' : '' ?>>
