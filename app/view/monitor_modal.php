@@ -9,7 +9,7 @@ $servicoDB = new Database('servico');
 $guicheDB = new Database('ponto_atendimento');
 
 // Busca senhas com status "em atendimento"
-$senhasEmAtendimento = $db->select("status_fila_senha = 'em atendimento'", 'fila_senha_chamada_in DESC')->fetchAll(PDO::FETCH_ASSOC);
+$senhasEmAtendimento = $db->select("status_fila_senha in ('em atendimento','atendido')", 'fila_senha_chamada_in DESC')->fetchAll(PDO::FETCH_ASSOC);
 
 // Senha principal
 $senhaPrincipal = $senhasEmAtendimento[0] ?? null;
