@@ -13,7 +13,7 @@ body {
   font-family: var(--font-main);
   background: var(--cor-fundo);
 }
-.menu-container {
+.sub-menu-container-control {
   background-color: var(--cinza-control);
   padding: 0 15px;
   position: absolute;
@@ -27,7 +27,7 @@ body {
   z-index: 5;
   width: 100%;
 }
-.menu {
+.sub-menu-control {
   padding-top: 15px;
   display: flex;
   /* justify-content: space-between; */
@@ -39,17 +39,17 @@ body {
   /* justify-content: space-between; */
   align-items: center;
 }
-.menu a {
+.sub-menu-control a {
   color: var(--cor-fundo);
   text-decoration: none;
   padding: 14px;
   border-radius: 5px 5px 0px 0px;
 }
-.menu a:hover {
+.sub-menu-control a:hover {
   background-color: var(--cor-hove-menu);
   color: var(--verde-control);
 }
-.menu a.active {
+.sub-menu-control a.active {
   background-color: var(--cor-active);
   color: var(--font-main);
   padding: 14px;
@@ -73,30 +73,30 @@ body {
   border-radius: 5px 5px 0px 0px;
   text-decoration: none;
 }
-/* .menu a.active:hover {
+/* .sub-menu-control a.active:hover {
   color: var(--font-main); */
 /* } */
-.menu-mobile {
+.sub-menu-mobile-control {
   display: none;
   flex-direction: column;
   background-color: var(--cinza-control);
 }
-.menu-mobile a {
+.sub-menu-mobile-control a {
   color: var(--cor-fundo);
   padding: 14px;
   text-align: center;
   text-decoration: none;
   border-bottom: 1px solid var(--cor-nave-botaa);
 }
-.menu-mobile a:hover {
+.sub-menu-mobile-control a:hover {
   background-color: var(--cor-hove-menu);
   color: var(--verde-control);
 }
-.menu-mobile a.active {
+.sub-menu-mobile-control a.active {
   background-color: var(--cor-active);
   color: var(--verde-control);
 }
-.menu-mobile  a.active:hover {
+.sub-menu-mobile-control  a.active:hover {
   color: var(--font-main);
 }
 .hamburger {
@@ -108,7 +108,7 @@ body {
   border: none;
 }
 @media (max-width: 768px) {
-  .menu a {
+  .sub-menu-control a {
       display: none;
       position: absolute;
   }
@@ -116,13 +116,13 @@ body {
       display: block;
       padding: 0 0 15px;
   }
-  .menu-mobile {
+  .sub-menu-mobile-control{
       display: none;
   }
-  .menu-mobile.active {
+  .sub-menu-mobile-control.active {
       display: flex;
   }
-  .menu-mobile a.active:hover {
+  .sub-menu-mobile-control a.active:hover {
     color: var(--verde-control);
   }
 }

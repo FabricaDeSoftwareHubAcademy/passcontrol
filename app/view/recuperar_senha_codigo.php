@@ -26,7 +26,6 @@ if (isset($_POST['validar'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PassControl</title>
 
-    <!-- <link rel="stylesheet" href="../../public/css/root.css"> -->
     <link rel="stylesheet" href="../../public/css/forms.css">
     <link rel="shortcut icon" href="../../public/img/favicon.ico" type="image/x-icon">
 

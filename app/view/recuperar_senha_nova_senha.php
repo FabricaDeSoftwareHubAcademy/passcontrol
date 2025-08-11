@@ -9,12 +9,8 @@
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
 
     <!-- CSS -->
-    <!-- <link rel="stylesheet" href="../../public/css/root.css"> -->
-    <link rel="stylesheet" href="../../public/css/forms.css">
+    <link rel="stylesheet" href="../../public/css/astyle_global.css">
     <link rel="shortcut icon" href="../../public/img/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="../../public/css/modal_confirmacao_dados.css">
-    <!-- <link rel="stylesheet" href="../../public/css/recuperar_senha_nova_senha.css"> -->
-
     <!-- JS -->
     <script src="../../public/js/validacao_visual_nova_senha.js" defer></script>
     <script src="../js/nova_senha_login.js" defer></script>

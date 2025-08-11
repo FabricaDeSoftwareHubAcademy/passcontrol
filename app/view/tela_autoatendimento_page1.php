@@ -20,7 +20,7 @@
     <link rel="shortcut icon" type="imagex/png" href="../../public/img/Logo-Nota-Controlnt.ico">
 </head>
 
-<body>
+<body class="body-auto-atendimento">
     <?php
     require_once '../../app/classes/Servico.php';
     $servico = new Servico();
