@@ -12,12 +12,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (!empty($nome) && !empty($sobrenome) && $prioridade !== null && $id_servico !== null) {
         $nomeCompleto = $nome . ' ' . $sobrenome;
 
-        $db = new Database('fila_senha');
-        $resultado = $db->insert([
+        $dadosInsert = [
             'nome_fila_senha' => $nomeCompleto,
             'prioridade_fila_senha' => $prioridade,
             'id_servico_fk' => $id_servico,
-        ]);
+        ];
+
+        // Só adiciona o telefone se informado
+        if (!empty($telefone)) {
+            $dadosInsert['telefone_fila_senha'] = $telefone;
+        }
+
+        $db = new Database('fila_senha');
+        $resultado = $db->insert($dadosInsert);
 
         if ($resultado) {
             $_SESSION['senha_info'] = [
@@ -61,7 +68,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             header("Location: tela_autoatendimento_page4.php");
             exit;
         } else {
-            
+
         }
     } else {
 

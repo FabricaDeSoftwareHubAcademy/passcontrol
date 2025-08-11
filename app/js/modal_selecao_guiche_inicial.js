@@ -10,13 +10,24 @@ document.addEventListener("DOMContentLoaded", () => {
     // Abre modal se guichê não foi selecionado
     if (!sessionStorage.getItem('guicheSelected') && modalvalidacao) {
         modalvalidacao.classList.add("show");
-
-        btn_validacao.addEventListener("click", () => {
+        
+        btn_validacao.addEventListener("click", (e) => {
+            e.preventDefault();
             const opcaoselecionada = selectGuiche.options[selectGuiche.selectedIndex];
             const guicheSelecionado = parseInt(opcaoselecionada.value);
+            msgError.innerHTML = '';
+            let erro = false;
             
-            if (!opcaoselecionada || !opcaoselecionada.value) {
-                alert("Por favor, selecione um guichê.");
+            const valorGuiche = selectGuiche.value.trim();
+            if (!valorGuiche) {
+                msgError.innerHTML += "Por favor, selecione um guichê.<br><br>";
+                erro = true;
+              }
+            // if (!opcaoselecionada || !opcaoselecionada.value) {
+            //     alert("Por favor, selecione um guichê.");
+            //     return;
+            // } 
+            if (erro) {
                 return;
             }
             
@@ -29,7 +40,8 @@ document.addEventListener("DOMContentLoaded", () => {
             fetch('../actions/guiche_selecionado.php', {
             method: 'POST',
             body: JSON.stringify({guiche: guicheSelecionado})
-            }) .catch(err => {
+            }) 
+            .catch(err => {
                 console.error("Erro ao marcar o guichê como ocupado", err);
             });
 
