@@ -22,6 +22,7 @@
     margin: 80px 30px 30px 30px;
     background-color: var(--color-background-3);
     padding: 25px;
+    width: 98%;
 }
 
 
@@ -57,7 +58,7 @@
 
 .title-atendimento-do-dia {
     font-weight: bold;
-    font-size: 20px;
+    font-size: 26px;
     color: var(--color-text-1);
 }
 
@@ -259,6 +260,9 @@ tbody {
 }
 
 @media (max-width: 540px) {
+    .title-atendimento-do-dia {
+        font-size: 24px;
+}
     .atendimento-tempo-real {
         margin-top: -50px;
         left: 8vh;
@@ -278,6 +282,9 @@ tbody {
         margin-top: -50px;
         left: 8vh;
     } */
+    .reloading_atendimento_do_dia{
+        margin-left: 0;
+    }
     .cabecario-atendimento-dia {
         flex-direction: column-reverse;
         display: flex;
@@ -392,6 +399,9 @@ tbody {
 }
 
 @media (max-width: 375px) {
+    .title-atendimento-do-dia {
+        font-size: 22px;
+    }
     .atendimento-tempo-real {
         margin-top: -50px;
         left: 8vh;
