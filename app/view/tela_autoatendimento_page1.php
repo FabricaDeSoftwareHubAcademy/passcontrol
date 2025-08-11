@@ -15,6 +15,10 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="../../public/css/tela_autoatendimento_page1.css">
+    <link rel="stylesheet" href="../../public/css/modal_confirmacao_saida.css">
+
+    <!-- JS -->
+    <script src="../../public/js/modal_confirmacao_saida.js" defer></script>
 
     <!-- LOGO -->
     <link rel="shortcut icon" type="imagex/png" href="../../public/img/Logo-Nota-Controlnt.ico">
@@ -22,22 +26,23 @@
 
 <body class="body-auto-atendimento">
     <?php
+    include_once "../../public/modais/modal_confirmacao_saida.php";
     require_once '../../app/classes/Servico.php';
     $servico = new Servico();
     $listaServicos = $servico->buscar('status_servico = 1');
     ?>
 
-    <header class="head-tela-autoatendimento-pag1">
-        <nav class="nav-head-tela-autoatendimento-pag1">
-            <div class="logo-control-tela-autoatendimento-pag1">
-                <a href="../../index.php">
-                    <img src="../../public/img/icons/logo_control.svg" alt="LOGOCONTROL"  id="img-logo">
-                </a>
-            </div>
+<header class="head-tela-autoatendimento-pag1">
+    <nav class="nav-head-tela-autoatendimento-pag1">
+        <button class="logo-control-tela-autoatendimento-pag1 btn_sair">
+            <img src="../../public/img/icons/logo_control.svg" alt="LOGOCONTROL"  id="img-logo">
+            <!-- <a href="../../index.php">
+                </a> -->
+            </button>
             <h3>PassControl</h3>
         </nav>
     </header>
-
+    
     <div class="border-line-tela-autoatendimento-pag1"></div>
 
     <main class="workspace-tela-autoatendimento-pag1">
@@ -66,9 +71,6 @@
             <div id="pageIndicator" style="display: none;"></div>
         </div>
     </main>
-    <?php
-        include_once "../../public/modais/modal_confirmacao_deslogar.php"
-    ?>
     <script src="../../public/js/tela_autoatendimento_paginação.js"></script>
 </body>
 </html>

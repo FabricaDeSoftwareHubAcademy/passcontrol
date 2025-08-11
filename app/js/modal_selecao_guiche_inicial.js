@@ -6,6 +6,8 @@ document.addEventListener("DOMContentLoaded", () => {
     
     // EXIBI O NA TELA ATENDIMENTO QUANDO SELECIONA O GUICHE
     const guichetexto = document.querySelector('#guiche-exibir');
+
+    const msgError = document.querySelector(".menssagem-erro-guiche");
     
     // Abre modal se guichê não foi selecionado
     if (!sessionStorage.getItem('guicheSelected') && modalvalidacao) {

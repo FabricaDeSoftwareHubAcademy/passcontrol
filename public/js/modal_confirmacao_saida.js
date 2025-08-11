@@ -1,21 +1,22 @@
 document.addEventListener("DOMContentLoaded", () => {
     // BOTÃO SAIR MENU LATERAL
     const botao_sair = document.querySelectorAll(".btn_sair");
-        
+    
     // MODAL CONFIRMAÇÃO DA SAIDA DO SISTEMA
     const modalSaida = document.querySelector('.fundo-confimarcao-saida-sistema');
     const saidaModal = document.querySelector(".save_SaidaSis");
     const fechaSaida = document.querySelector(".cancel_SaidaSis");
 
-
-
+    
+    
     // Intercepta clique no botão de sair
     botao_sair.forEach(botao => {
         botao.addEventListener("click", async (event) => {
-                modalSaida.classList.add("show");
-                event.preventDefault();
+            modalSaida.classList.add("show");
+            event.preventDefault();
         });
     });
+    
     saidaModal.addEventListener("click", async () => {
         const guicheSelecionado = sessionStorage.getItem("guicheSelected");     
         if (guicheSelecionado) {
@@ -37,9 +38,11 @@ document.addEventListener("DOMContentLoaded", () => {
             sessionStorage.clear(); 
             window.location.href = "../../index.php";
         });
+
     fechaSaida.addEventListener("click", () => {
         modalSaida.classList.remove("show");
     });
+
     window.addEventListener("beforeunload", function (e) {
         const guicheSelecionado = sessionStorage.getItem("guicheSelected");
         if (guicheSelecionado) {
