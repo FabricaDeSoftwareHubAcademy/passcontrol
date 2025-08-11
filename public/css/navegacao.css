@@ -321,7 +321,7 @@
     .botao-menu-mobile{
         display: flex;
     }
-    .background-m-mobile.menu-visivel{
+    .background-m-mobile .menu-visivel{
         display: flex;
     }
 }

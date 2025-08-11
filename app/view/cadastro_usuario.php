@@ -1,6 +1,5 @@
 <?php
 include_once "./navegacao.php";
-require_once '../actions/verificar_permissao.php';
 ?>
 
 <!-- JS Local -->
