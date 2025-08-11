@@ -11,18 +11,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="../../public/css/navegacao.css">
-    <link rel="stylesheet" href="../../public/css/monitor-modal.css">
-    <link rel="stylesheet" href="../../public/css/style_eli.css">
-    <!-- <link rel="stylesheet" href="../../public/modais/alterar_dados_pessoais.css"> -->
-    <!-- <link rel="stylesheet" href="../../public/modais/alterar_senha.css"> -->
-    <link rel="stylesheet" href="../../public/css/modal_cadastro_servico.css">
-    <link rel="stylesheet" href="../../public/css/modal_cadastro_ponto_atendimento.css">
-    <link rel="stylesheet" href="../../public/css/modal_confirmacao_dados_registrados.css">
-    <link rel="stylesheet" href="../../public/css/modal_confirmacao_dados.css">
-    <link rel="stylesheet" href="../../public/css/modal_aviso_erro.css">
-    
     <!-- JS -->
     <script src="../../public/js/monitor_modal.js" defer></script>
     <script src="../../public/js/navegacao_menu_lateral.js" defer></script>

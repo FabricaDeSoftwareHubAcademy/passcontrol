@@ -14,13 +14,6 @@
     <!-- ICON LIBR -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
-    <!-- CSS -->
-    <link rel="stylesheet" href="../../public/css/navegacao.css">
-    <link rel="stylesheet" href="../../public/css/menu_eli.css">
-    <link rel="stylesheet" href="../../public/css/atendimento_do_dia.css">
-    <!-- <link rel="stylesheet" href="../../public/css/style_atendimento_tempo_real.css"> -->
-    <link rel="stylesheet" href="../../public/css/monitor-modal.css">
-    
     <!-- JS -->
     <script src="../../public/js/navegacao_menu_lateral.js" defer></script>
     <script src="../../public/js/monitor_modal.js" defer></script>
@@ -39,13 +32,13 @@
 
     <section class="Area-Util-Projeto atendimento-dia">
         <!-- SUBMENU ATENDIMENTO -->
-        <div class="menu-container">
-            <div class="menu">
+        <div class="sub-menu-container-control">
+            <div class="sub-menu-control">
                 <button class="hamburger" onclick="toggleMenu()">☰</button>
                 <a href="../view/atendimento_do_dia.php" class="active">Guichês</a>
                 <a href="../view/atendimento.php">Atendimento</a>
             </div>
-            <div class="menu-mobile" id="mobileMenu">
+            <div class="sub-menu-mobile-control" id="mobileMenu">
                 <a href="../view/atendimento_do_dia.php" class="active">Guichês</a>
                 <a href="../view/atendimento.php">Atendimento</a>
             </div>

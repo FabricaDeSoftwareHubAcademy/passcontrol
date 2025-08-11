@@ -21,19 +21,7 @@ $guiches = $guiche->buscar(null, " status_ponto_atendimento DESC");
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
         rel="stylesheet">
-
-    <!-- IMPORT DO CSS -->
-    <link rel="stylesheet" href="../../public/css/navegacao.css">
-    <link rel="stylesheet" href="../../public/css/ponto_atendimento.css">
-    <!-- <link rel="stylesheet" href="../../public/css/servico.css"> -->
-    <!-- <link rel="stylesheet" href="../../public/modais/alterar_dados_pessoais.css">
-    <link rel="stylesheet" href="../../public/modais/alterar_senha.css"> -->
-    <link rel="stylesheet" href="../../public/css/modal_cadastro_ponto_atendimento.css">
-    <link rel="stylesheet" href="../../public/css/modal_edicao_ponto_atendimento.css">
-    <link rel="stylesheet" href="../../public/css/modal_confirmacao_dados.css">
-    <link rel="stylesheet" href="../../public/css/modal_confirmacao_dados_registrados.css">
-    <link rel="stylesheet" href="../../public/css/modal_alterar_status.css">
-
+        
     <!-- IMPORT DO JS -->
     <script src="../../public/js/modal_edicao_ponto_atendimento.js" defer></script>
     <script src="../js/ponto_atendimento_cadastrar.js" defer></script>

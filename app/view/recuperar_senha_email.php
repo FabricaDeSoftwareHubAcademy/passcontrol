@@ -5,10 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Passcontrol</title>
  
-    <!-- <link rel="stylesheet" href="../../public/css/root.css"> -->
-    <link rel="stylesheet" href="../../public/css/forms.css">
-    <link rel="stylesheet" href="../../public/css/modal_confirmacao_senha.css">
-    <link rel="stylesheet" href="../../public/css/modal_enviando_email.css">
+    <link rel="stylesheet" href="../../public/css/astyle_global.css">
+    <!-- <link rel="stylesheet" href="../../public/css/modal_confirmacao_senha.css"> -->
 
     <link rel="shortcut icon" href="../../public/img/favicon.ico" type="image/x-icon">
 

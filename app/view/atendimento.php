@@ -30,15 +30,15 @@ include_once 'navegacao.php';
         ?>
 
         <!-- SUBMENU ATENDIMENTO -->
-        <div class="menu-container">
-            <div class="menu">
+        <div class="sub-menu-container-control">
+            <div class="sub-menu-control">
                 <button class="hamburger" onclick="toggleMenu()">☰</button>
                 <?php if ($id_perfil != 7): ?>
                     <a href="../view/atendimento_do_dia.php">Guichês</a>
                 <?php endif; ?>
                 <a href="../view/atendimento.php" class="active">Atendimento</a>
             </div>
-            <div class="menu-mobile" id="mobileMenu">
+            <div class="sub-menu-mobile-control" id="mobileMenu">
                 <?php if ($id_perfil != 7): ?>
                     <a href="../view/atendimento_do_dia.php">Guichês</a>
                 <?php endif; ?>
