@@ -72,6 +72,12 @@ require_once './navegacao.php';
     include_once "../../public/modais/modal_confirmacao_dados.php";
     include_once "../../public/modais/modal_aviso_erro.php";
     ?>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById("mobileMenu").classList.toggle("active");
+        }
+    </script>
 </body>
 
 </html>
