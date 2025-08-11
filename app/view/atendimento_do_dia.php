@@ -84,23 +84,23 @@
                     <tbody>
                         <tr>
                             <td>Paula Fernanda de Pauli</td>
+                            <td>atendente</td>
                             <td>IPTU</td>
-                            <td>CM 026</td>
                             <td>03</td>
                             <td class="disponivel-atendimento-do-dia">Disponível</td>
                         </tr>
                         
                         <tr>
                             <td>Maria Oliveira</td>
+                            <td>atendente</td>
                             <td>IPTU</td>
-                            <td>CM 028</td>
                             <td>05</td>
                             <td class="intervalo-atendimento-do-dia">Intervalo</td>
                         </tr>
                         <tr>
                             <td>João Silva</td>
+                            <td>atendente</td>
                             <td>Serviços Públicos</td>
-                            <td>CM 027</td>
                             <td>04</td>
                             <td class="em-atendimento-atendimento-do-dia">Em Atendimento</td>
                         </tr>
