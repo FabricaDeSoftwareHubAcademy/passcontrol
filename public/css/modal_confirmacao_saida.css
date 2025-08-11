@@ -31,7 +31,8 @@
     text-align: left;
     border-radius: 5px;
     left: 6%;
-    top: 60px
+    top: 60px;
+    /* z-index: 2; */
 }
 
 .logo-confirmacao-saida-sistema{
