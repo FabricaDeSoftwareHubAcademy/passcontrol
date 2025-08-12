@@ -14,7 +14,7 @@
     z-index: 10;
 }
 
-.fundo-confimarcao-saida-sistema .show {
+.show {
     opacity: 1;
     display: flex;
     pointer-events: auto;
@@ -32,7 +32,7 @@
     border-radius: 5px;
     left: 6%;
     top: 60px;
-    /* z-index: 2; */
+    z-index: 2;
 }
 
 .logo-confirmacao-saida-sistema{
