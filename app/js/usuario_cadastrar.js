@@ -85,22 +85,21 @@ document.addEventListener("DOMContentLoaded", function () {
                 body: formCadastrarUsuario
             });
             
-            let textResponse = await enviar_dados.text();
-            // console.log("Resposta bruta do servidor:", textResponse);
-
             try {
+                let textResponse = await enviar_dados.text();
+                console.log("Resposta bruta do servidor: ", textResponse);
                 
                 let response_post = JSON.parse(textResponse);
                 msgErro.innerHTML = '';
 
-                console.log(response_post);
+                // console.log(response_post);
                 if(response_post.status === 200){
                     modal_enviar_email.classList.remove("show");
                     modalDadosSalvos.classList.add("show");
 
                     buttonOk.addEventListener("click", () => {
                         modalDadosSalvos.classList.remove("show");
-                        location.href = './listar_usuarios.php';
+                        // location.href = './listar_usuarios.php';
                     });
                 }else{
                     modal_enviar_email.classList.remove("show");
@@ -117,11 +116,11 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
 
             } catch (error) {
-                // modal_enviar_email.classList.remove("show");
-                // modalConfirmarSalvarDadosUsu.classList.add("show");
+                modal_enviar_email.classList.remove("show");
+                modalConfirmarSalvarDadosUsu.classList.add("show");
 
-                console.error("Erro ao analisar JSON: ", error.message);
                 // console.log("Conteúdo não pode ser analisado como JSON:", textResponse);
+                console.error("Erro ao analisar JSON: ", JSON.parse(error.message));
                 return;
             }
         });

@@ -18,20 +18,20 @@ class EmailService{
     private string $email_user; // E-mail do Passcontrol
     private string $email_password; // Senha de aplicativo (se a 2FA estiver habilitada)
     private array $msg_sucesso;
-
     private array $msg_erro;
 
     public function __construct()
     {
-        $this->email_user = getenv('EMAIL_USERNAME');
-        $this->email_password = getenv('EMAIL_PASSWORD');
+        $this->email_user = $_ENV['EMAIL_USERNAME'];
+        $this->email_password = $_ENV['EMAIL_PASSWORD'];
         $this->msg_sucesso = [
         'status' => 200,
         'message' => 'E-mail enviado com sucesso!'
         ];
         $this->msg_erro = [
         'status' => 400,
-        'message' => "O e-mail não pôde ser enviado."
+        'message' => "O e-mail nao pode ser enviado.",
+        "env" => $this->email_user .','. $this->email_password
         ];
     }
 
@@ -53,14 +53,14 @@ class EmailService{
             $mail->addAddress($email, 'Usuário');
 
             $mail->isHTML(true);
-            $mail->Subject = 'Recuperação de Senha - Passcontrol';
-            $mail->Body = "
-                <p>Olá!</p>
+            $mail->Subject = utf8_decode('Recuperação de Senha - Passcontrol');
+            $mail->Body = utf8_decode("
+                <p>Olá,</p>
                 <p>Recebemos uma solicitação para redefinir sua senha.</p>
                 <p>Seu código de recuperação é: <b>$codigo</b></p>
                 <p>Se você não solicitou isso, ignore este e-mail.</p>
-            ";
-            $mail->AltBody = "Olá!\n\nRecebemos uma solicitação para redefinir sua senha.\n\nSeu código de recuperação é: $codigo\n\nSe você não solicitou isso, ignore este e-mail.";
+            ");
+            $mail->AltBody = utf8_decode("Olá!\n\nRecebemos uma solicitação para redefinir sua senha.\n\nSeu código de recuperação é: $codigo\n\nSe você não solicitou isso, ignore este e-mail.");
             // Envia o e-mail
             $mail->send();
 
@@ -87,21 +87,20 @@ class EmailService{
             $mail->addAddress($email, 'Fábrica');
 
             $mail->isHTML(true);
-            $mail->Subject = 'Novo Usuario - Passcontrol';
-            $mail->Body = "
+            $mail->Subject = utf8_decode('Novo Usuario - Passcontrol');
+            $mail->Body = utf8_decode("
                 <p>Olá!</p>
                 <p>Bem vindo ao PassControl.</p>
                 <p>Sua senha gerada pelo sistema é: <b>$senha</b></p>
                 <p>Após logar no sistema pela primeira vez, será solicitado que troque sua senha por uma senha forte.</p>
                 <p>Se você não solicitou isso, ignore este e-mail.</p>
-            ";
-            $mail->AltBody = "Olá!\n\nSua senha gerada pelo sistema é: $senha\n\nSe você não solicitou isso, ignore este e-mail.";
+            ");
+            $mail->AltBody = utf8_decode("Olá!\n\nSua senha gerada pelo sistema é: $senha\n\nSe você não solicitou isso, ignore este e-mail.");
             // Envia o e-mail
             $mail->send();
-            echo json_encode($this->msg_sucesso);
-            exit;
+            return($this->msg_sucesso);
         } catch (Exception $e) {
-            echo json_encode($this->msg_erro);
+            return($this->msg_erro);
         }
     }
 }

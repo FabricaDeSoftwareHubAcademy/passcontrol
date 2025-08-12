@@ -1,6 +1,5 @@
 <?php
 include_once "./navegacao.php";
-require_once '../actions/verificar_permissao.php';
 ?>
 
 <!-- JS Local -->
@@ -65,7 +64,7 @@ require_once '../actions/verificar_permissao.php';
           </div>
           <div class="input_dados dropdown_select">
             <label class="label_option_servico">
-              <input checked type="checkbox" id="selectAll"> <!-- onchange="toggleAll(this)" -->
+              <input type="checkbox" id="selectAll"> <!-- onchange="toggleAll(this)" -->
               Selecionar todos
             </label>
             <span class="linha_select"></span>
@@ -74,7 +73,7 @@ require_once '../actions/verificar_permissao.php';
             foreach ($servicos as $servico):
             ?>
               <label class="label_option_servico">
-                <input checked type="checkbox" class="option_servico" name="id_servico[]" value="<?= $servico->id_servico ?>">
+                <input type="checkbox" class="option_servico" name="id_servico[]" value="<?= $servico->id_servico ?>">
                 <?= $servico->nome_servico . " - " . $servico->codigo_servico ?>
               </label>
             <?php
