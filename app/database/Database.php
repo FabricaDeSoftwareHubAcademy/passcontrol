@@ -113,7 +113,7 @@ class Database
                   FROM fila_senha
                   INNER JOIN servico ON servico.id_servico = fila_senha.id_servico_fk
                   INNER JOIN ponto_atendimento ON ponto_atendimento.id_ponto_atendimento = fila_senha.id_ponto_atendimento
-                  WHERE fila_senha.status_fila_senha = 'em atendimento'
+                  WHERE fila_senha.status_fila_senha = 'em atendimento' OR fila_senha.status_fila_senha = 'atendido'
                   ORDER BY fila_senha.id_fila_senha DESC
                   LIMIT 4";
         return $this->execute($query) ?: false;
