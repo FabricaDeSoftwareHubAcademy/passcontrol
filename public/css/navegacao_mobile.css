@@ -122,3 +122,8 @@
     height: 100vh;
     width: 20vw;
 }
+@media screen and (max-width: 900px) {
+    .botao-menu-mobile {
+        display: flex;
+    }
+}

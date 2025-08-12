@@ -94,33 +94,23 @@ include_once "../actions/carregar_navegacao.php";
         <div class="menu-navegacao-mobile">
             <nav class="area-botao-navegacao-mobile">
 
-                <?php foreach ($pagesNavigation as $pageNavigation){
-                    echo "
-                    <a href='$pageNavigation' class='botao-lateral-navegacao-mobile recolher-m-menu'>
-                        <img class='icone-menu-lateral-mobile' src='../../public/img/icons/Cross.svg' alt='ICONE-ATEND'>
-                    </a>
+            <?php 
+                foreach ($menus as $arquivo): 
+                    $nome = $nomeExibicao[$arquivo] ?? ucfirst(pathinfo($arquivo, PATHINFO_FILENAME));
+                    $icone = $icones[$nome] ?? '../../public/img/icons/default.svg';
     
-                    <a class='botao-lateral-navegacao-mobile' href='./atendimento.php'>
-                        <img class='icone-menu-lateral-mobile' src='../../public/img/icons/atend.svg' alt='ICONE-ATEND'>
-                        <p class='texto-bott-mobile'>Atendimento</p>
-                    </a>
-    
-                    <a class='botao-lateral-navegacao-mobile btnMonitorModal' id='openModalBtn'>
-                        <img class='icone-menu-lateral-mobile' src='../../public/img/icons/monitor.svg' alt='ICONE-MONITOR'>
-                        <p class='texto-bott-mobile'>Monitor</p>
-                    </a>
-    
-                    <a class='botao-lateral-navegacao-mobile' href='./menuadm_usuario.php'>
-                        <img class='icone-menu-lateral-mobile' src='../../public/img/icons/gestao.svg' alt='ICONE-GESTAO'>
-                        <p class='texto-bott-mobile'>Gestão</p>
-                    </a>
-    
-                    <a class='botao-lateral-navegacao-mobile' href='./relatorio_diario.php'>
-                        <img class='icone-menu-lateral-mobile' src='../../public/img/icons/nota.svg' alt='ICONE-RELATORIOS'>
-                        <p class='texto-bott-mobile'>Relatórios</p>
-                    </a>";
-                } 
-                ?>
+                    if ($nome === 'Monitor'): ?>
+                        <a class="botao-lateal-navegacao" id="openMonitorModal" href="javascript:void(0);">
+                            <img class="icone-menu-lateral" src="<?= $icone ?>" alt="ICONE-MONITOR">
+                            <p class="texto-bott"><?= htmlspecialchars($nome) ?></p>
+                        </a>
+                    <?php else: ?>
+                        <a class="botao-lateal-navegacao" href="./<?= $arquivo ?>">
+                            <img class="icone-menu-lateral" src="<?= $icone ?>" alt="Icone <?= htmlspecialchars($nome) ?>">
+                            <p class="texto-bott"><?= htmlspecialchars($nome) ?></p>
+                        </a>
+                    <?php endif; ?>
+                <?php endforeach; ?>
 
                 <div class="sair-mobile">
                     <button class="botao-lateral-navegacao-mobile btn_sair">
