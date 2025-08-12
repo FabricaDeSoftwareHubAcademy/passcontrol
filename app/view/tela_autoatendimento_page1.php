@@ -52,11 +52,20 @@
             <div class="box-area-tela-autoatendimento-pag1" id="box-container">
                 <?php foreach ($listaServicos as $serv): ?>
                     <a href="#" class="box"
-                       data-id="<?= $serv->id_servico ?>"
-                       data-nome="<?= htmlspecialchars($serv->nome_servico) ?>"
-                       data-codigo="<?= htmlspecialchars($serv->codigo_servico) ?>"
-                       data-img="<?= htmlspecialchars($serv->url_imagem_servico) ?>">
-                        <img class="imagem-servico" src="../../public/img/uploads/<?= htmlspecialchars($serv->url_imagem_servico) ?>" alt="<?= htmlspecialchars($serv->nome_servico) ?>">
+                    data-id="<?= $serv->id_servico ?>"
+                    data-nome="<?= htmlspecialchars($serv->nome_servico) ?>"
+                    data-codigo="<?= htmlspecialchars($serv->codigo_servico) ?>"
+                    data-img="<?= htmlspecialchars($serv->url_imagem_servico) ?>">
+                        <?php
+                        // Verifica se existe imagem no banco e se o arquivo existe no servidor
+                        $imagemPath = '../../public/img/uploads/' . htmlspecialchars($serv->url_imagem_servico);
+                        $imagemPadrao = '../../public/img/img-modais/Logo Nota Controlnt.png';
+                       
+                        $imagemFinal = (!empty($serv->url_imagem_servico) && file_exists($imagemPath))
+                            ? $imagemPath
+                            : $imagemPadrao;
+                        ?>
+                        <img class="imagem-servico" src="<?= $imagemFinal ?>" alt="<?= htmlspecialchars($serv->nome_servico) ?>">
                         <h4><?= htmlspecialchars($serv->nome_servico) ?></h4>
                     </a>
                 <?php endforeach; ?>
