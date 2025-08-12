@@ -34,11 +34,11 @@
 
 <header class="head-tela-autoatendimento-pag1">
     <nav class="nav-head-tela-autoatendimento-pag1">
-        <button class="logo-control-tela-autoatendimento-pag1 btn_sair">
+        <div class="logo-control-tela-autoatendimento-pag1 btn_sair">
             <img src="../../public/img/icons/logo_control.svg" alt="LOGOCONTROL"  id="img-logo">
             <!-- <a href="../../index.php">
                 </a> -->
-            </button>
+        </div>
             <h3>PassControl</h3>
         </nav>
     </header>

@@ -7,7 +7,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const saidaModal = document.querySelector(".save_SaidaSis");
     const fechaSaida = document.querySelector(".cancel_SaidaSis");
 
-    
+    // const modalSaida = document.querySelector('.fundo-confimarcao-saida-sistema');
+    // modalSaida.classList.add("show");
     
     // Intercepta clique no botão de sair
     botao_sair.forEach(botao => {
@@ -51,6 +52,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 { type: 'application/json' }
             );
             navigator.sendBeacon('../actions/guiche_liberacao.php', blob);
+            sessionStorage.clear();
+            window.location.href = "../../index.php";
         }
     });
 });
