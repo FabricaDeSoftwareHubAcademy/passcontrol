@@ -15,6 +15,10 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="../../public/css/tela_autoatendimento_page1.css">
+    <link rel="stylesheet" href="../../public/css/modal_confirmacao_saida.css">
+
+    <!-- JS -->
+    <script src="../../public/js/modal_confirmacao_saida.js" defer></script>
 
     <!-- LOGO -->
     <link rel="shortcut icon" type="imagex/png" href="../../public/img/Logo-Nota-Controlnt.ico">
@@ -22,22 +26,23 @@
 
 <body class="body-auto-atendimento">
     <?php
+    include_once "../../public/modais/modal_confirmacao_saida.php";
     require_once '../../app/classes/Servico.php';
     $servico = new Servico();
     $listaServicos = $servico->buscar('status_servico = 1');
     ?>
 
-    <header class="head-tela-autoatendimento-pag1">
-        <nav class="nav-head-tela-autoatendimento-pag1">
-            <div class="logo-control-tela-autoatendimento-pag1">
-                <a href="../../index.php">
-                    <img src="../../public/img/icons/logo_control.svg" alt="LOGOCONTROL"  id="img-logo">
-                </a>
-            </div>
+<header class="head-tela-autoatendimento-pag1">
+    <nav class="nav-head-tela-autoatendimento-pag1">
+        <button class="logo-control-tela-autoatendimento-pag1 btn_sair">
+            <img src="../../public/img/icons/logo_control.svg" alt="LOGOCONTROL"  id="img-logo">
+            <!-- <a href="../../index.php">
+                </a> -->
+            </button>
             <h3>PassControl</h3>
         </nav>
     </header>
-
+    
     <div class="border-line-tela-autoatendimento-pag1"></div>
 
     <main class="workspace-tela-autoatendimento-pag1">
@@ -47,11 +52,20 @@
             <div class="box-area-tela-autoatendimento-pag1" id="box-container">
                 <?php foreach ($listaServicos as $serv): ?>
                     <a href="#" class="box"
-                       data-id="<?= $serv->id_servico ?>"
-                       data-nome="<?= htmlspecialchars($serv->nome_servico) ?>"
-                       data-codigo="<?= htmlspecialchars($serv->codigo_servico) ?>"
-                       data-img="<?= htmlspecialchars($serv->url_imagem_servico) ?>">
-                        <img class="imagem-servico" src="../../public/img/uploads/<?= htmlspecialchars($serv->url_imagem_servico) ?>" alt="<?= htmlspecialchars($serv->nome_servico) ?>">
+                    data-id="<?= $serv->id_servico ?>"
+                    data-nome="<?= htmlspecialchars($serv->nome_servico) ?>"
+                    data-codigo="<?= htmlspecialchars($serv->codigo_servico) ?>"
+                    data-img="<?= htmlspecialchars($serv->url_imagem_servico) ?>">
+                        <?php
+                        // Verifica se existe imagem no banco e se o arquivo existe no servidor
+                        $imagemPath = '../../public/img/uploads/' . htmlspecialchars($serv->url_imagem_servico);
+                        $imagemPadrao = '../../public/img/img-modais/Logo Nota Controlnt.png';
+                       
+                        $imagemFinal = (!empty($serv->url_imagem_servico) && file_exists($imagemPath))
+                            ? $imagemPath
+                            : $imagemPadrao;
+                        ?>
+                        <img class="imagem-servico" src="<?= $imagemFinal ?>" alt="<?= htmlspecialchars($serv->nome_servico) ?>">
                         <h4><?= htmlspecialchars($serv->nome_servico) ?></h4>
                     </a>
                 <?php endforeach; ?>
@@ -66,9 +80,6 @@
             <div id="pageIndicator" style="display: none;"></div>
         </div>
     </main>
-    <?php
-        include_once "../../public/modais/modal_confirmacao_deslogar.php"
-    ?>
     <script src="../../public/js/tela_autoatendimento_paginação.js"></script>
 </body>
 </html>

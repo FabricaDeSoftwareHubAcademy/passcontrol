@@ -23,8 +23,8 @@
                     }
                     ?>
             </select>
-            <span id="erro_selecao_guiche" class="menssagem-erro-guiche"></span>
         </form>
+        <span id="erro_selecao_guiche" class="menssagem-erro-guiche"></span>
         <div class="button-group">
             <button class="botao-modal confirm_SelecaoGuiche">Confirmar</button>
         </div>
