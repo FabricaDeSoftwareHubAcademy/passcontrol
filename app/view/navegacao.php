@@ -93,35 +93,42 @@ include_once "../actions/carregar_navegacao.php";
     <div class="background-m-mobile">
         <div class="menu-navegacao-mobile">
             <nav class="area-botao-navegacao-mobile">
+            <?php
+            if (!isset($pagesNavigation) || !is_array($pagesNavigation)) {
+                $pagesNavigation = [];
+            }
 
-                <?php foreach ($pagesNavigation as $pageNavigation){
+            if (!empty($pagesNavigation)) {
+                foreach ($pagesNavigation as $pageNavigation) {
                     echo "
                     <a href='$pageNavigation' class='botao-lateral-navegacao-mobile recolher-m-menu'>
                         <img class='icone-menu-lateral-mobile' src='../../public/img/icons/Cross.svg' alt='ICONE-ATEND'>
                     </a>
-    
-                    <a class='botao-lateral-navegacao-mobile' href='./atendimento.php'>
-                        <img class='icone-menu-lateral-mobile' src='../../public/img/icons/atend.svg' alt='ICONE-ATEND'>
-                        <p class='texto-bott-mobile'>Atendimento</p>
-                    </a>
-    
-                    <a class='botao-lateral-navegacao-mobile btnMonitorModal' id='openModalBtn'>
-                        <img class='icone-menu-lateral-mobile' src='../../public/img/icons/monitor.svg' alt='ICONE-MONITOR'>
-                        <p class='texto-bott-mobile'>Monitor</p>
-                    </a>
-    
-                    <a class='botao-lateral-navegacao-mobile' href='./menuadm_usuario.php'>
-                        <img class='icone-menu-lateral-mobile' src='../../public/img/icons/gestao.svg' alt='ICONE-GESTAO'>
-                        <p class='texto-bott-mobile'>Gestão</p>
-                    </a>
-    
-                    <a class='botao-lateral-navegacao-mobile' href='./relatorio_diario.php'>
-                        <img class='icone-menu-lateral-mobile' src='../../public/img/icons/nota.svg' alt='ICONE-RELATORIOS'>
-                        <p class='texto-bott-mobile'>Relatórios</p>
-                    </a>";
-                } 
-                ?>
+                    ";
+                }
+            }
 
+            // Esses links são fixos e não dependem de $pagesNavigation
+            ?>
+            <a class='botao-lateral-navegacao-mobile' href='./atendimento.php'>
+                <img class='icone-menu-lateral-mobile' src='../../public/img/icons/atend.svg' alt='ICONE-ATEND'>
+                <p class='texto-bott-mobile'>Atendimento</p>
+            </a>
+
+            <a class='botao-lateral-navegacao-mobile btnMonitorModal' id='openModalBtn'>
+                <img class='icone-menu-lateral-mobile' src='../../public/img/icons/monitor.svg' alt='ICONE-MONITOR'>
+                <p class='texto-bott-mobile'>Monitor</p>
+            </a>
+
+            <a class='botao-lateral-navegacao-mobile' href='./menu_gestao_usuario.php'>
+                <img class='icone-menu-lateral-mobile' src='../../public/img/icons/gestao.svg' alt='ICONE-GESTAO'>
+                <p class='texto-bott-mobile'>Gestão</p>
+            </a>
+
+            <a class='botao-lateral-navegacao-mobile' href='./relatorio_diario.php'>
+                <img class='icone-menu-lateral-mobile' src='../../public/img/icons/nota.svg' alt='ICONE-RELATORIOS'>
+                <p class='texto-bott-mobile'>Relatórios</p>
+            </a>
                 <div class="sair-mobile">
                     <button class="botao-lateral-navegacao-mobile btn_sair">
                         <img class="icone-menu-lateral-mobile" src="../../public/img/icons/sair.svg" alt="ICONE-SAIR">
