@@ -52,8 +52,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 { type: 'application/json' }
             );
             navigator.sendBeacon('../actions/guiche_liberacao.php', blob);
-            sessionStorage.clear();
-            window.location.href = "../../index.php";
         }
     });
 });
