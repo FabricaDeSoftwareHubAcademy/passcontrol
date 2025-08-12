@@ -79,7 +79,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <link rel="shortcut icon" type="imagex/png" href="../../public/img/Logo-Nota-Controlnt.ico"> <!-- ( Atualização de caminho ) -->
 </head>
 
-<body>
+<body class="body-auto-atendimento">
     <header class="head-tela-autoatendimento-pag4">
         <nav class="nav-head-tela-autoatendimento-pag4">
             <div class="logo-control-tela-autoatendimento-pag4">
