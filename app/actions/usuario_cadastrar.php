@@ -31,9 +31,13 @@
                
             $res = $objUser->cadastrar();
             if($res){
-                $mailer = new EmailService();
-                $mailer->enviar_email_cadastro($email, $senha_generica);
-
+                try{
+                    $mailer = new EmailService();
+                    $email_res = $mailer->enviar_email_cadastro($email, $senha_generica);
+                }catch(Exception $email_error){
+                    $email_res = "Erro ao enviar email: " . $email_error;
+                }
+                    
                 $res_vincula = "Nao Vinculado";
 
                 //// CAPTURA SERVICOS SELECIONADOS
@@ -51,10 +55,10 @@
                     $res_vincula = "Nao Vinculado: $erro";
                 }
                 
-                $resposta = array( "msg" => "Usuario cadastrado com sucesso", "status" => 200, "servico" => $res_vincula);
+                $resposta = array( "msg" => "Usuario cadastrado com sucesso", "status" => 200,"email" => $email_res, "servico" => $res_vincula);
                 echo json_encode($resposta);
             }else{
-                $resposta = array( "msg" => "Erro ao cadastrar", "status" => 400, "servico" => "Nao Vinculado");
+                $resposta = array( "msg" => "Erro ao cadastrar", "status" => 400, "email" => $email_res, "servico" => "Nao Vinculado");
                 echo json_encode($resposta);
                 $objUser = null;
             }                    
