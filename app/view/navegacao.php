@@ -61,7 +61,7 @@ include_once "../actions/carregar_navegacao.php";
                 $nome = $nomeExibicao[$arquivo] ?? ucfirst(pathinfo($arquivo, PATHINFO_FILENAME));
                 $icone = $icones[$nome] ?? '../../public/img/icons/default.svg';
 
-                if ($nome === 'Monitor'): ?>
+                if ($nome === 'monitor'): ?>
                     <a class="botao-lateal-navegacao" id="openMonitorModal" href="javascript:void(0);">
                         <img class="icone-menu-lateral" src="<?= $icone ?>" alt="ICONE-MONITOR">
                         <p class="texto-bott"><?= htmlspecialchars($nome) ?></p>
