@@ -1,33 +1,52 @@
-document.addEventListener("DOMContentLoaded", async () => {
+document.addEventListener('DOMContentLoaded', async () => {
     const dados = JSON.parse(localStorage.getItem('dadosSenha'));
-
-    if (!dados || !dados.nome || dados.prioridade === undefined || !dados.id_servico) {
-        alert("Informações incompletas.");
-        return;
+  
+    if (
+      !dados ||
+      !dados.nome ||
+      dados.prioridade === undefined ||
+      !dados.id_servico
+    ) {
+      alert('Informações incompletas.');
+      return;
     }
-
+  
     try {
-        const response = await fetch("", {
-            method: "POST",
+      const resCriarSenha = await fetch('', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: new URLSearchParams(dados),
+      });
+  
+      const jsonSenha = await resCriarSenha.json();
+  
+      if (jsonSenha && jsonSenha.sucesso) {
+        const divs = document.querySelectorAll('.variable-text > div');
+        divs[0].innerHTML = `<strong>SENHA:</strong> ${jsonSenha.senha}`;
+        divs[1].innerHTML = `<strong>NOME:</strong> ${jsonSenha.nome}`;
+        divs[2].innerHTML = `<strong>SERVIÇO:</strong> ${jsonSenha.servico}`;
+        
+        console.log(dados);
+
+        if (dados.telefone) {
+          const r = await fetch('../../app/actions/enviar_mensagem.php', {
+            method: 'POST',
             headers: {
-                "Content-Type": "application/x-www-form-urlencoded"
+              'Content-type': 'application/json',
             },
-            body: new URLSearchParams(dados)
-        });
-
-        const data = await response.json();
-
-        if (data && data.sucesso) {
-            const divs = document.querySelectorAll('.variable-text > div');
-            divs[0].innerHTML = `<strong>SENHA:</strong> ${data.senha}`;
-            divs[1].innerHTML = `<strong>NOME:</strong> ${data.nome}`;
-            divs[2].innerHTML = `<strong>SERVIÇO:</strong> ${data.servico}`;
-        } else {
-            // alert("Não foi possível localizar a senha.");
+            body: JSON.stringify({
+              tel: dados.telefone,
+              mensagem: `Olá ${dados.nome}! Sua senha é ${jsonSenha.senha}. Aguarde ser chamado.`,
+            }),
+          });
         }
+      } else {
+        // alert("Não foi possível localizar a senha.");
+      }
     } catch (error) {
-        console.error("Erro:", error);
-        alert("Erro ao buscar senha.");
+      console.error('Erro:', error);
+      alert('Erro ao buscar senha.');
     }
-    
-}); 
+  });  

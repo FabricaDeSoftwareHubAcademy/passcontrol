@@ -31,44 +31,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 'nome' => $nomeCompleto,
                 'prioridade' => $prioridade,
                 'id_servico' => $id_servico,
+                'telefone' => $telefone
             ];
-
-            // Teste do Zenvia para mandar sms
-            if (!empty($telefone)) {
-                $telefoneLimpo = preg_replace('/\D/', '', $telefone);
-                if (strlen($telefoneLimpo) === 11) {
-                    $telefoneLimpo = '+55' . $telefoneLimpo;
-                    $smsData = [
-                        'from' => 'Zenvia', // Use exatamente o identificador da sua conta Zenvia aqui
-                        'to' => $telefoneLimpo,
-                        'contents' => [
-                            [
-                                'type' => 'text',
-                                'text' => "Olá $nomeCompleto! Sua senha foi gerada com sucesso. Aguarde ser chamado."
-                            ]
-                        ]
-                    ];
-                    $ch = curl_init('https://api.zenvia.com/v2/channels/sms/messages');
-                    curl_setopt($ch, CURLOPT_HTTPHEADER, [
-                        'Content-Type: application/json',
-                        // token zenvia 1: Q-E3GbFCQoCy4LY9DODinGi4C0TI25u9-qBG
-                        // token zenvia 2: Gxc8y6AKed3wbFe6SlSEgZKbwKAhLHY8dib2,"wA6kEyWvmPlXO8mX2N8JDGq9f-SXKex-RWCxdmmxokDvuPclHK2DqJIapJOq8K2x"
-                        // 'X-API-TOKEN: Gxc8y6AKed3wbFe6SlSEgZKbwKAhLHY8dib2,"wA6kEyWvmPlXO8mX2N8JDGq9f-SXKex-RWCxdmmxokDvuPclHK2DqJIapJOq8K2x"' // Coloque aqui seu token real da Zenvia
-                        // 'Authorization: Bearer Gxc8y6AKed3wbFe6SlSEgZKbwKAhLHY8dib2wA6kEyWvmPlXO8mX2N8JDGq9fSXKexRWCxdmmxokDvuPclHK2DqJIapJOq8K2x'
-                        'X-API-TOKEN: z1TCrlshp4MJdUrokoR7WWaPQ_byCWuhl6bM'
-                    ]);
-                    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-                    curl_setopt($ch, CURLOPT_POST, true);
-                    curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($smsData));
-                    curl_exec($ch);
-                    curl_close($ch);
-                }
-            }
 
             header("Location: tela_autoatendimento_page4.php");
             exit;
         } else {
-
+            
         }
     } else {
 

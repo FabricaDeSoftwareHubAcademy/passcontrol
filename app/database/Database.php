@@ -46,7 +46,7 @@ class Database
             $stmt->execute($binds);
             return $stmt;
         } catch (PDOException $erro) {
-            return false;
+            return $erro;
         }
     }
 

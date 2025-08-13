@@ -27,6 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Atualiza localStorage com telefone
         dadosUsuario.telefone = telefone;
+        console.log(dadosUsuario);
         localStorage.setItem("dadosUsuario", JSON.stringify(dadosUsuario));
 
         document.getElementById("form-dados").submit();
