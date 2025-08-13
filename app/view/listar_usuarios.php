@@ -100,7 +100,7 @@
                 </table>
             </div>
             <div class="div-botao-info-listar-usuario">
-                <button class="add-func" type="reset" onclick="location.href = document.referrer">Voltar</button>
+                <button class="add-func" type="reset" onclick="location.href = document.location.href='./menu_gestao_usuario.php'">Voltar</button>
                 <button class="add-func" type="submit" onclick="window.location.href='./cadastro_usuario.php';">Novo Funcionario</button>
             </div>
         </div>

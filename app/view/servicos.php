@@ -84,7 +84,7 @@
                 </div>
             <!-- </div> <button id="" id_value_switch="1"  class="switch_status toggle-btn '.$estadoAtivo.'" data-btn-modal="status-servico"></button> -->
             <div class="botoesVoltar-Cadastrar">
-                <button type="button" class="botao-voltar" onclick="location.href = document.referrer">Voltar</button>
+                <button type="button" class="botao-voltar" onclick="location.href = document.location.href='./menu_gestao_servico.php'">Voltar</button>
                 <!-- <button type="button" id="abrirModal" class="botao-cadastro">Cadastrar</button> -->
                 <button type="button" id="btn_cadastrar_servico" class="botao-cadastro"
                     data-btn-modal="cadastrar">Cadastrar</button>
