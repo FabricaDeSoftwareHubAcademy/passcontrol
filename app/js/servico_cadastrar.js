@@ -1,16 +1,6 @@
 // BOTÃO ABRE MODAL DE CADASTRO
 const btn_cadastrar_servico = document.getElementById("btn_cadastrar_servico");
 
-// MODAL DE CADASTRO SERVIÇO
-const modalCadastro = document.querySelector(".fundo-container-cad-servico");
-const btnCancelarCadastro = document.querySelector(".cancel_CadServ");
-const btnSalvarCadastro = document.querySelector(".save_CadServ");
-
-// MODAL DE CONFIRMAÇÃO SIM/NÃO APÓS CADASTRAR
-const modalConfirmacao = document.querySelector(".fundo-container-confirmacao-dados-registrados");
-const btnSimConfirmacao = document.querySelector(".save_ConfDadosRegist");
-const btnNaoConfirmacao = document.querySelector(".cancel_ConfDadosRegist");
-
 // MODAL DE OK PARA FINALIZAR FLUXO DO CADASTRO
 const apareceMod = document.querySelector(".fundo-container-confirmacao-dados");
 const btnOkCadastrar = document.querySelector(".Okay_ConfDados");
@@ -36,7 +26,7 @@ function resetImgCadastro(){
 }
 function voltarModalError(){
   modalError.classList.remove("show");
-  modalCadastro.classList.add("show");
+  document.querySelector(".fundo-container-cad-servico").classList.add("show");
 
   if (imagemInavlida){
     resetImgCadastro();
@@ -50,16 +40,16 @@ function voltarModalError(){
 //Abre Modal de Cadastro
 btn_cadastrar_servico.addEventListener("click", (event) => {
   event.preventDefault();
-  modalCadastro.classList.add("show");
+  document.querySelector(".fundo-container-cad-servico").classList.add("show");
 });
 
 // Cancelar cadastro
-btnCancelarCadastro.addEventListener("click", () => {
-  modalCadastro.classList.remove("show");
+document.querySelector(".cancel_CadServ").addEventListener("click", () => {
+  document.querySelector(".fundo-container-cad-servico").classList.remove("show");
 });
 
 // Salvar cadastro (validação + confirmação)
-btnSalvarCadastro.addEventListener("click", function (event) {
+document.querySelector(".save_CadServ").addEventListener("click", function (event) {
   event.preventDefault();
   
   // Pegando os campos
@@ -109,11 +99,11 @@ btnSalvarCadastro.addEventListener("click", function (event) {
   // Se houver erro, não avança
   if (!erro) {
     controleCadastro = true;
-    modalCadastro.classList.remove("show");
-    modalConfirmacao.classList.add("show");
+    document.querySelector(".fundo-container-cad-servico").classList.remove("show");
+    document.querySelector(".fundo-container-confirmacao-dados-registrados").classList.add("show");
   }else{
     imagemInavlidacontorle = imagemInavlida;
-    modalCadastro.classList.remove("show");
+    document.querySelector(".fundo-container-cad-servico").classList.remove("show");
     modalError.classList.add("show");
     
   buttonOkError.removeEventListener("click", voltarModalError);
@@ -122,20 +112,20 @@ btnSalvarCadastro.addEventListener("click", function (event) {
 });
 
   // NÃO na confirmação -> volta para o modal de cadastro
-  btnNaoConfirmacao.addEventListener("click", () => {
-    modalConfirmacao.classList.remove("show");
-    modalCadastro.classList.add("show");
+  document.querySelector(".cancel_ConfDadosRegist").addEventListener("click", () => {
+    document.querySelector(".fundo-container-confirmacao-dados-registrados").classList.remove("show");
+    document.querySelector(".fundo-container-cad-servico").classList.add("show");
     controleCadastro = false;
   });
   
   // SIM na confirmação -> envia os dados para o PHP
-  btnSimConfirmacao.addEventListener("click", async () => {
+  document.querySelector(".save_ConfDadosRegist").addEventListener("click", async () => {
     if(!controleCadastro) return;
 
     const myform = document.getElementById("formulario_cadastrar_servico");
     const formData = new FormData(myform);
     
-    modalConfirmacao.classList.remove("show");
+    document.querySelector(".fundo-container-confirmacao-dados-registrados").classList.remove("show");
     controleCadastro = false;
     
     try {
