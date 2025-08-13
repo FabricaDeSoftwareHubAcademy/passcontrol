@@ -187,9 +187,7 @@
     align-items: center;
 }
 #divBusca{
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
+    /* display: flex; */
     margin-left: 17px;
 }
 .buscar-consultar{
@@ -203,7 +201,7 @@
     font-size: 14px;
     outline: 5px;
     border-radius: 5px;
-    background-image: url(../../public/img/icons/lupa.svg);
+    background-image: url(../img/icons/lupa.png);
     background-position: 142px; 
     background-repeat: no-repeat;
     background-position: right 10px center;
