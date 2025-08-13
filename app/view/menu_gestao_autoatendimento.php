@@ -40,6 +40,13 @@ require_once './navegacao.php';
     include "./monitor_modal.php";
     ?>
 
+    <script>
+        function toggleMenu() {
+            document.getElementById("mobileMenu").classList.toggle("active");
+        }
+    </script>
+
+
 </body>
 
 </html>
