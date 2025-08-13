@@ -99,7 +99,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
                     buttonOk.addEventListener("click", () => {
                         modalDadosSalvos.classList.remove("show");
-                        // location.href = './listar_usuarios.php';
+                        location.href = './listar_usuarios.php';
                     });
                 }else{
                     modal_enviar_email.classList.remove("show");

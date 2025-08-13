@@ -2,7 +2,7 @@
 document.addEventListener('DOMContentLoaded', function(){
     async function senhasAtendidas(){
         
-        const tabela = document.getElementById('lista-senhas-atendidas')
+        const tabela = document.getElementById('lista-senhas-atendidas-no-dia')
         tabela.innerHTML='';
         const resposta = await fetch('../../app/actions/senhas_atendidas.php')
         const json= await resposta.json();
