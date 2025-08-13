@@ -1,15 +1,15 @@
 <?php
 header('Content-Type: application/json');
 $dadosMensagem = file_get_contents("php://input");
-$dados = json_decode($dadosMensagem);
- 
+$dados = json_decode($dadosMensagem, true);
+
 $env = parse_ini_file('../../.env');
 $token_zenvia = $env['ZENVIA_TOKEN'];
 $user_zenvia = $env['ZENVIA_USER'];
 $url_zenvia = $env['ZENVIA_URL'] . '/channels/sms/messages';
 $body = [
     'from' => $user_zenvia,
-    'to'=> '55' . $dados['tel'],
+    'to'=> '55'.$dados['tel'],
     'contents' => [
         [
             'type'=> 'text',
