@@ -1414,7 +1414,7 @@ td, th {
         margin-top: 3rem;
     }
     .fundo-guiche-area-chamada {
-        overflow-x: auto;
+        /* overflow-x: auto; */
         max-height: 265px;
     }
     .tbody-atendimento {
