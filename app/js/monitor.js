@@ -46,14 +46,21 @@ document.addEventListener("DOMContentLoaded", async () => {
     
     carregar_senhas_monitor();
     
-    const socket = new WebSocket('ws://192.168.0.8:8080');
-
-    socket.onmessage = event => {
-    const data = JSON.parse(event.data);
-    if (data.type === 'updateScreenB') {
-        if(data.payload == 'chamar') {
-            carregar_senhas_monitor();
+    try{
+        const socket = new WebSocket('ws://192.168.0.0:8080');
+    
+        socket.onmessage = event => {
+        const data = JSON.parse(event.data);
+        if (data.type === 'updateScreenB') {
+            if(data.payload == 'chamar') {
+                carregar_senhas_monitor();
+            }
         }
+        };
+    }catch(erro){
+        console.warn(erro);
+        setInterval(function(){
+            carregar_senhas_monitor()
+        }, 5000); 
     }
-    };
 });
