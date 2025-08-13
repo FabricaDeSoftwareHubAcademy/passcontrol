@@ -4,6 +4,7 @@ if (session_status() === PHP_SESSION_NONE) {
 }
 require_once '../database/Database.php';
 
+
 $db = new Database('fila_senha');
 $servicoDB = new Database('servico');
 $guicheDB = new Database('ponto_atendimento');
@@ -109,5 +110,49 @@ $ultimasChamadas = array_slice($senhasEmAtendimento, 1, 4);
             </div>
         </div>
     </div>
+<script>
+function atualizarModal() {
+    fetch('../../app/actions/get_chamadas.php')
+        .then(res => res.json())
+        .then(data => {
+            const fundoPrincipal = document.querySelector('.caixa-senha-principal');
+            const ultimasDiv = document.querySelector('.area-das-senhas');
+
+            if (data.principal) {
+                fundoPrincipal.innerHTML = `
+                    <div class="nome-pessoa"><h1>${data.principal.nome}</h1></div>
+                    <div class="infos-senha-principal">
+                        <div class="infos-detalhes-esquerda">
+                            <h2>SERVIÇO:</h2>
+                            <h2>SENHA:</h2>
+                            <h2>GUICHÊ:</h2>
+                        </div>
+                        <div class="infos-detalhes-direita">
+                            <h2>${data.principal.servico}</h2>
+                            <h2>${data.principal.senha}</h2>
+                            <h2>${data.principal.guiche}</h2>
+                        </div>
+                    </div>`;
+            }
+
+            ultimasDiv.innerHTML = '';
+            data.ultimas.forEach(s => {
+                const div = document.createElement('div');
+                div.classList.add('caixa-das-senhas');
+                div.innerHTML = `<h2>${s.nome}</h2>
+                                 <div class="conjunto-senhas">
+                                     <div class="senha"><h3>SENHA</h3><h4>${s.senha}</h4></div>
+                                     <div class="guiche"><h5>GUICHÊ</h5><h6>${s.guiche}</h6></div>
+                                 </div>`;
+                ultimasDiv.appendChild(div);
+            });
+        })
+        .catch(err => console.error(err));
+}
+
+setInterval(atualizarModal, 2000);
+atualizarModal();
+</script>
+
 </body>
 </html>
