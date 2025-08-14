@@ -31,13 +31,14 @@ document.addEventListener('DOMContentLoaded', async () => {
         console.log(dados);
 
         if (dados.telefone) {
+          const tel = dados.telefone.replace(/\D/g, '');
           const r = await fetch('../../app/actions/enviar_mensagem.php', {
             method: 'POST',
             headers: {
               'Content-type': 'application/json',
             },
             body: JSON.stringify({
-              tel: dados.telefone,
+              tel: tel,
               mensagem: `Olá ${dados.nome}! Sua senha é ${jsonSenha.senha}. Aguarde ser chamado.`,
             }),
           });

@@ -13,7 +13,7 @@ include_once 'navegacao.php';
 <script src="../../public/js/modal_teladelogin.js" defer></script>
 <script src="../../public/js/insere_dados_atendimento_atual.js" defer></script>
 <script src="../../public/js/modal_proxima_senha.js" defer></script>
-<script src="../../public/js/modal_consultar_fila.js" defer></script>
+<script src="../../public/js/consultar_fila_modal.js" defer></script>
 <script src="../../public/js/modal_chamar_prox_senha.js" defer></script>
 <script src="../../public/js/controle_botoes_atendimento.js" defer></script>
 <script src="../../public/js/modal_iniciar_intervalo.js" defer></script>

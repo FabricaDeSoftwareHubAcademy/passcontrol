@@ -150,6 +150,9 @@
     font-size: 13.5px;
     text-decoration: none;
     cursor: pointer;
+    height: auto;
+    border: none;
+    background: none;
 }
 .texto-usu{
     width: 100%;
@@ -176,7 +179,7 @@
     background-color:  rgba(0, 0, 0, 0.1);
 }
 .usu-sair{
-    color: var(--vermelho);
+    color: red;
 }
 .background-block{
     display: flex;

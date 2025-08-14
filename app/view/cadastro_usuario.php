@@ -85,7 +85,7 @@ include_once "./navegacao.php";
 
     </form>
     <div class="container_botao_form">
-      <button class="botao_volto" form="dados_cad" type="reset" onclick="location.href = document.referrer">Voltar</button>
+      <button class="botao_volto" form="dados_cad" type="reset" onclick="location.href = document.location.href='./menu_gestao_usuario.php'">Voltar</button>
       <button class="botao_salvo cadastrar_usuario" name="cadastrar" id="save_sucess">Salvar</button>
     </div>
 

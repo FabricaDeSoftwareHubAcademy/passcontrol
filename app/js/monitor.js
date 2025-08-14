@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                     <h4>${senha.senha_chamada}</h4>
                     </div><br>
                     <div class="guiche">
-                    <h3>GUICHÊ:</h3>
+                    <h3>Ponto de Atendimento:</h3>
                     <h4>${senha.nome_ponto_atendimento}</h4>
                     </div>
                     </div>
@@ -46,14 +46,22 @@ document.addEventListener("DOMContentLoaded", async () => {
     
     carregar_senhas_monitor();
     
-    const socket = new WebSocket('ws://192.168.0.8:8080');
-
-    socket.onmessage = event => {
-    const data = JSON.parse(event.data);
-    if (data.type === 'updateScreenB') {
-        if(data.payload == 'chamar') {
-            carregar_senhas_monitor();
+    try{
+        const socket = new WebSocket('ws://192.168.0.0:8080');
+    
+        socket.onmessage = event => {
+        const data = JSON.parse(event.data);
+        if (data.type === 'updateScreenB') {
+            if(data.payload == 'chamar') {
+                carregar_senhas_monitor();
+                iniciarLeitor();
+            }
         }
+        };
+    }catch(erro){
+        console.warn(erro);
+        setInterval(function(){
+            carregar_senhas_monitor()
+        }, 5000); 
     }
-    };
 });

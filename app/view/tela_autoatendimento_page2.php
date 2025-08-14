@@ -19,7 +19,7 @@
     <link rel="shortcut icon" type="imagex/png" href="../../public/img/Logo-Nota-Controlnt.ico">
 </head>
 
-<body>
+<body class="body-auto-atendimento">
     <header class="head-tela-autoatendimento-pag2">
         <nav class="nav-head-tela-autoatendimento-pag2">
             <div class="logo-control-tela-autoatendimento-pag2">

@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once '../database/Database.php';
+require_once '../classes/FilaSenha.php';
 header('Content-Type: application/json');
 
 try {
@@ -10,13 +10,15 @@ try {
         echo json_encode(['success' => false, 'message' => 'ID da senha inválido.']);
         exit;
     }
-    $db = new Database('fila_senha');
-    $db->update(
-        'id_fila_senha = ' . (int)$idSenha,
-        ['fila_senha_chamada_in' => date('Y-m-d H:i:s')]
-    );
 
-    echo json_encode(['success' => true, 'message' => 'Senha atualizada com sucesso.']);
+    $fila = new FilaSenha();
+    $atualizado = $fila->chamarNovamente((int)$idSenha);
+
+    if ($atualizado !== false) {
+        echo json_encode(['success' => true, 'message' => 'Senha atualizada com sucesso.']);
+    } else {
+        echo json_encode(['success' => false, 'message' => 'Não foi possível atualizar a senha.']);
+    }
 } catch (Exception $e) {
     echo json_encode(['success' => false, 'message' => 'Erro: ' . $e->getMessage()]);
 }
