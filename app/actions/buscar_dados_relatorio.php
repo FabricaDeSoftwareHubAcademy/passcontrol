@@ -28,7 +28,7 @@ $sql = "SELECT
         LEFT JOIN servico s ON fs.id_servico_fk = s.id_servico
         LEFT JOIN ponto_atendimento p ON fs.id_ponto_atendimento = p.id_ponto_atendimento
         WHERE DATE(fs.fila_senha_criada_in) BETWEEN ? AND ?
-        AND fs.status_fila_senha = 'em atendimento'";
+        AND fs.status_fila_senha = 'atendido'";
 
 $params = [$dataInicio, $dataFim];
 
