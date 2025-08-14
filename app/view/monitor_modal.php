@@ -3,18 +3,7 @@ if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
 ?>
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>PassControl - Modal Monitor</title>
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="../../public/css/monitor_modal.css" />
-    <script src="../../public/js/monitor_modal.js" defer></script>
-</head>
-<body>
 <div class="area-monitor-modal">
     <div class="area-modal" id="modalMonitor">
         <div class="modal-fundo">
@@ -58,5 +47,3 @@ if (session_status() === PHP_SESSION_NONE) {
         </div>
     </div>
 </div>
-</body>
-</html>

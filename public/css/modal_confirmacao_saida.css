@@ -23,15 +23,15 @@
 .modal-confirmacao-saida-sistema {
     background-color: #e0e0e0;
     width: 80%;
-    height: 35%;
+    height: auto;
     max-width: 600px;
     padding: 40px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     position: relative;
     text-align: left;
     border-radius: 5px;
-    left: 6%;
-    top: 60px;
+    /* left: 6%; */
+    /* top: 60px; */
     z-index: 2;
 }
 
@@ -179,7 +179,7 @@
 
 @media (max-width: 400px) {
     .modal-confirmacao-saida-sistema {
-        width: 95%;
+        width: 90%;
         padding: 15px;
     }
     .titulo-confirmacao-saida-sistema{

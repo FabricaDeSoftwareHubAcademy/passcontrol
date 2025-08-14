@@ -51,15 +51,15 @@
     background-color: var(--cinza-control);
     background-image: url(../../public/img/icons/logo_control.svg);
     background-repeat: no-repeat;
-    background-position: 10vw 8vh;
+    background-position: 10vw 6vh;
     background-size: 10vh;
 }
 .area-botao-navegacao-mobile{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 5vh;
-    width: 70vw;
+    gap: 4vh;
+    width: 60vw;
 }
 .botao-lateral-navegacao-mobile{
     display: flex;
@@ -110,10 +110,11 @@
     /* background-color: red; */
 }
 .sair-mobile .botao-lateral-navegacao-mobile{
-    width: 50%;
+    width: 65%;
     border-radius: 5px;
     justify-content: center;
     padding-left: 0;
+    border: none;
 }
 .areatransp{
     /* background-color: red;    */
