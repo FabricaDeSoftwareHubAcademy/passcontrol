@@ -16,7 +16,7 @@
 }
 .modal-fundo {
     display: flex;
-    width: 65%;
+    width: 85%;
     height: 75%;
     border-radius: 5px;
     background-color: var(--cor-fundo);
@@ -35,7 +35,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 20px;
+    padding: 12px;
     border-radius: 5px 0px 0px 5px ;
 }
 .fundo-lateral h1 {
@@ -50,6 +50,7 @@
 .area-das-senhas{
     display: flex;
     width: 100%;
+    height: 75%;
     align-items: center;
     flex-direction: column;
     justify-content: center;
@@ -57,12 +58,12 @@
     background-color: var(--cor-fundo);
     margin-left: 15px;
     margin-right: 15px;
-    margin-bottom: 55px;
+    margin-bottom: 25px;
 }
 .caixa-das-senhas {
     display: flex;
     width: 95%;
-    height: 105px;
+    height: 145px;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -74,14 +75,14 @@
 .caixa-das-senhas h2 {
     display: flex;
     font-size: 22px;
-    margin-top: 5px;
+    /* margin-top: 5px; */
     color: var(--cinza-control);
     font-weight: 800;
 }
 .conjunto-senhas {
     display: flex;
     width: 100%;
-    gap: 50px;
+    gap: 30px;
     justify-content: center;
 }
 .senha {
@@ -123,7 +124,7 @@
 .fundo-principal {
     display: flex;
     width: 75%;
-    height: 100%;
+    height: 100%;justify-content: end;
     flex-direction: column;
     align-items: center;
 }
@@ -175,12 +176,12 @@
 }
 .conjunto-senha-principal {
     display: flex;
-    width: 95%;
+    width: 105%;
     height: 75%;
-    margin-left: 50px;
+    /* margin-left: 50px;
     margin-right: 50px;
     margin-top: 80px;
-    margin-bottom: 80px;
+    margin-bottom: 80px; */
     border-radius: 5px;
     flex-direction: column;
     justify-content: center;
@@ -205,6 +206,7 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    gap: 50px;
 }
 .infos-detalhes-esquerda{
     width: 35%;
@@ -213,8 +215,9 @@
     width: 92%;
     display: flex;
     align-items: center;
+    justify-content: end;
     font-weight: 800;
-    font-size: 55px;
+    font-size: 38px;
     margin: 20px;
     color: var(--cinza-control);
 }
@@ -225,9 +228,9 @@
     width: 92%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: start;
     font-weight: 800;
-    font-size: 55px;
+    font-size: 38px;
     margin: 20px;
     color: var(--cinza-control);
 }
@@ -236,271 +239,37 @@
     opacity: 1;
 }
 
-@media (min-width: 1500px) and (max-width: 1878px) {
-    .modal-fundo {
-        width: 70%;
-        height: 95%;
-        background-size: 17vh;
-    }
-    .fundo-lateral {
-        width: 350px;
-        overflow: hidden;
-    }
-    .fundo-lateral h1 {
-        width: 70%;
-        font-size: 30px;
-        font-weight: 700;
-    }
-    .area-das-senhas {
-        width: 100%;
-        margin-bottom: 40px;
-    }
-    .caixa-das-senhas {
-        width: 95%;
-        height: 20%;
-    }
-    .caixa-das-senhas h2 {
-        font-size: 14px;
-        font-weight: 800;
-    }
-    .conjunto-senhas {
-        width: 100%;
-    }
-    .senha {
-        margin-left: 30px;
-    }
-    .senha h3 {
-        font-size: 14px;
-        font-weight: 800;
-    }
-    .senha h4 {
-        font-size: 14px;
-        font-weight: 800;
-    }
-    .guiche {
-        margin-right: 30px;
-    }
-    .guiche h5 {
-        font-size: 14px;
-        font-weight: 800;
-    }
-    .guiche h6 {
-        font-size: 14px;
-        font-weight: 800;
-    }
-    .botao-fechar-monitor {
-        width: 45px;
-        height: 45px;
-        font-size: 15px;
-    }
-    .caixa-senha-principal {
-        height: 75%;
-    }
-    .conjunto-senha-principal {
-        width: 450px;
-        height: 85%;
-        margin-top: 10px;
-        margin-bottom: 10px;
-    }
-    .nome-pessoa h1 {
-        font-size: 30px;
-    }
-    .infos-senha-principal {
-        width: 80%;
-    }
-    .infos-detalhes-esquerda{
-        width: 45%;
-    }
-    .infos-detalhes-esquerda h2 {
-        font-size: 30px;
-        margin: 15px;
-    }
-    .infos-detalhes-direita{
-        width: 45%;
-    }
-    .infos-detalhes-direita h2 {
-        font-size: 30px;
-        margin: 15px;
+@media screen and (max-width: 1455px) {
+    .infos-detalhes-esquerda h2, .infos-detalhes-direita h2 {
+        font-size: 35px;
     }
 }
-@media (min-width: 1200px) and (max-width: 1500px) {
-    .modal-fundo{
-        width: 70%;
-        height: 95%;
-        background-size: 17vh;
+@media screen and (max-width: 1338px) {
+    .infos-detalhes-esquerda h2, .infos-detalhes-direita h2 {
+        font-size: 34px;
     }
-    .fundo-lateral{
-        width: 350px;
-        overflow: hidden;
+    .infos-senha-principal {
+        gap: 40px;
     }
-    .fundo-lateral h1{
-        width: 90%;
-        font-size: 30px;
-        font-weight: 700;
+}
+@media screen and (max-width: 1228px) {
+    .infos-senha-principal {
+        gap: 30px;
     }
-    .area-das-senhas{
-        width: 100%;
-        margin-bottom: 60px;
+    .nome-pessoa h1{
+        font-size: 40px;
     }
-    .caixa-das-senhas{
-        width: 95%;
-        height: 20%;
-    }
-    .caixa-das-senhas h2{
-        font-size: 12px;
-        font-weight: 800;
-    }
-    .conjunto-senhas {
-        width: 100%;
+}
+@media screen and (max-width: 1198px) {
+    .infos-senha-principal {
         gap: 20px;
     }
-    .senha {
-        margin-left: 30px;
-    }
-    .senha h3 {
-        font-size: 12px;
-        font-weight: 800;
-    }
-    .senha h4 {
-        font-size: 12px;
-        font-weight: 800;
-    }
-    .guiche {
-        margin-right: 30px;
-    }
-    .guiche h5 {
-        font-size: 12px;
-        font-weight: 800;
-    }
-    .guiche h6 {
-        font-size: 12px;
-        font-weight: 800;
-    }
-    .botao-fechar-monitor {
-        width: 45px;
-        height: 45px;
-        font-size: 15px;
-    }
-    .caixa-senha-principal {
-        width: 75%;
-        height: 80%;
-    }
-    .conjunto-senha-principal {
-        width: 90%;
-        height: 75%;
-        margin-top: 0px;
-        margin-bottom: 0px;
-    }
-    .nome-pessoa h1 {
-        font-size: 30px;
-    }
-    .infos-senha-principal {
-        width: 90%;
-    }
-    .infos-detalhes-esquerda{
-        width: 45%;
-    }
-    .infos-detalhes-esquerda h2 {
-        font-size: 30px;
-        margin: 10px;
-    }
-    .infos-detalhes-direita{
-        width: 45%;
-    }
-    .infos-detalhes-direita h2 {
-        font-size: 30px;
-        margin: 10px;
+    .nome-pessoa h1{
+        font-size: 35px;
     }
 }
-@media (min-width: 1023px) and (max-width: 1200px) {
-    .modal-fundo{
-        width: 90%;
-        height: 85%;
-        background-size: 17vh;
-    }
-    .fundo-lateral{
-        width: 330px;
-        overflow: hidden;
-    }
-    .fundo-lateral h1{
-        width: 70%;
-        font-size: 25px;
-        font-weight: 700;
-    }
-    .area-das-senhas{
-        width: 100%;
-        margin-bottom: 15px;
-    }
-    .caixa-das-senhas{
-        width: 95%;
-        height: 20%;
-    }
-    .caixa-das-senhas h2{
-        font-size: 15px;
-        font-weight: 800;
-    }
-    .conjunto-senhas {
-        width: 100%;
-    }
-    .senha {
-        margin-left: 30px;
-    }
-    .senha h3 {
-        font-size: 15px;
-        font-weight: 800;
-    }
-    .senha h4 {
-        font-size: 15px;
-        font-weight: 800;
-    }
-    .guiche {
-        margin-right: 30px;
-    }
-    .guiche h5 {
-        font-size: 15px;
-        font-weight: 800;
-    }
-    .guiche h6 {
-        font-size: 15px;
-        font-weight: 800;
-    }
-    .botao-fechar-monitor {
-        width: 45px;
-        height: 45px;
-        font-size: 15px;
-    }
-    .caixa-senha-principal {
-        width: 80%;
-        height: 80%;
-    }
-    .conjunto-senha-principal {
-        width: 85%;
-        height: 75%;
-        margin-top: 0px;
-        margin-bottom: 0px;
-    }
-    .nome-pessoa h1 {
-        font-size: 30px;
-    }
-    .infos-senha-principal {
-        width: 80%;
-        
-    }
-    .infos-detalhes-esquerda{
-        width: 45%;
-    }
-    .infos-detalhes-esquerda h2 {
-        font-size: 30px;
-        margin: 10px;
-    }
-    .infos-detalhes-direita{
-        width: 45%;
-    }
-    .infos-detalhes-direita h2 {
-        font-size: 30px;
-        margin: 10px;
-    }
-}
+
+
 @media (min-width: 770px) and (max-width: 1022px) {
     .modal-fundo{
         width: 90%;
@@ -530,7 +299,7 @@
         margin-bottom: 5px;
     }
     .caixa-das-senhas h2{
-        font-size: 10px;
+        font-size: 20px;
         font-weight: 800;
     }
     .conjunto-senhas {
@@ -540,24 +309,8 @@
     .senha {
         margin-left: 5px;
     }
-    .senha h3 {
-        font-size: 10px;
-        font-weight: 800;
-    }
-    .senha h4 {
-        font-size: 10px;
-        font-weight: 800;
-    }
     .guiche {
         margin-right: 5px;
-    }
-    .guiche h5 {
-        font-size: 10px;
-        font-weight: 800;
-    }
-    .guiche h6 {
-        font-size: 10px;
-        font-weight: 800;
     }
     .botao-fechar-monitor {
         width: 40px;
@@ -572,7 +325,7 @@
         margin-bottom: 75px;
     }
     .conjunto-senha-principal {
-        width: 90%;
+        width: 110%;
         height: 80%;
         margin-top: 15px;
         margin-bottom: 15px;
@@ -610,7 +363,7 @@
     }
     .fundo-lateral h1{
         width: 100%;
-        font-size: 20px;
+
         font-weight: 700;
     }
     .area-das-senhas{
@@ -627,7 +380,7 @@
         margin-bottom: 5px;
     }
     .caixa-das-senhas h2{
-        font-size: 10px;
+
         font-weight: 800;
     }
     .conjunto-senhas {
@@ -639,22 +392,22 @@
         margin-left: 5px;
     }
     .senha h3 {
-        font-size: 10px;
+
         font-weight: 800;
     }
     .senha h4 {
-        font-size: 10px;
+
         font-weight: 800;
     }
     .guiche {
         margin-right: 5px;
     }
     .guiche h5 {
-        font-size: 10px;
+
         font-weight: 800;
     }
     .guiche h6 {
-        font-size: 10px;
+
         font-weight: 800;
     }
     .fundo-principal{
@@ -663,7 +416,7 @@
     .botao-fechar-monitor {
         width: 35px;
         height: 35px;
-        font-size: 15px;
+
     }
     .caixa-senha-principal {
         width: 90%;
@@ -679,7 +432,7 @@
         margin-bottom: 10px;
     }
     .nome-pessoa h1 {
-        font-size: 11px;
+
     }
     .infos-senha-principal {
         width: 70%;
@@ -688,14 +441,14 @@
         width: 45%;
     }
     .infos-detalhes-esquerda h2 {
-        font-size: 11px;
+
         margin: 10px;
     }
     .infos-detalhes-direita{
         width: 45%;
     }
     .infos-detalhes-direita h2 {
-        font-size: 11px;
+
         margin: 10px;
     }
 }
@@ -711,7 +464,7 @@
     }
     .fundo-lateral h1{
         width: 80%;
-        font-size: 20px;
+
         font-weight: 700;
     }
     .area-das-senhas{
@@ -728,7 +481,7 @@
         margin-bottom: 5px;
     }
     .caixa-das-senhas h2{
-        font-size: 10px;
+
         font-weight: 800;
     }
     .conjunto-senhas {
@@ -739,22 +492,22 @@
         margin-left: 5px;
     }
     .senha h3 {
-        font-size: 10px;
+
         font-weight: 800;
     }
     .senha h4 {
-        font-size: 10px;
+
         font-weight: 800;
     }
     .guiche {
         margin-right: 5px;
     }
     .guiche h5 {
-        font-size: 10px;
+
         font-weight: 800;
     }
     .guiche h6 {
-        font-size: 10px;
+
         font-weight: 800;
     }
     .fundo-principal{
@@ -763,7 +516,7 @@
     .botao-fechar-monitor {
         width: 35px;
         height: 35px;
-        font-size: 15px;
+
     }
     .caixa-senha-principal {
         width: 90%;
@@ -777,7 +530,7 @@
         margin-bottom: 10px;
     }
     .nome-pessoa h1 {
-        font-size: 11px;
+
     }
     .infos-senha-principal {
         width: 80%;
@@ -786,14 +539,14 @@
         width: 45%;
     }
     .infos-detalhes-esquerda h2 {
-        font-size: 11px;
+
         margin: 8px;
     }
     .infos-detalhes-direita{
         width: 45%;
     }
     .infos-detalhes-direita h2 {
-        font-size: 11px;
+
         margin: 8px;
     }
 }
@@ -809,7 +562,7 @@
     }
     .fundo-lateral h1{
         width: 70%;
-        font-size: 14px;
+
     }
     .area-das-senhas{
         width: 90%;
@@ -825,7 +578,7 @@
         margin-bottom: 5px;  
     }
     .caixa-das-senhas h2{
-        font-size: 9px;
+
         font-weight: 800;
     }
     .conjunto-senhas {
@@ -836,22 +589,22 @@
         margin-left: 5px;
     }
     .senha h3 {
-        font-size: 9px;
+
         font-weight: 800;
     }
     .senha h4 {
-        font-size: 9px;
+
         font-weight: 800;
     }
     .guiche {
-       margin-right: 5px;
+        margin-right: 5px;
     }
     .guiche h5 {
-        font-size: 9px;
+
         font-weight: 800;
     }
     .guiche h6 {
-        font-size: 9px;
+
         font-weight: 800;
     }
     .fundo-principal{
@@ -860,7 +613,7 @@
     .botao-fechar-monitor {
         width: 30px;
         height: 30px;
-        font-size: 15px;
+
     }
     .caixa-senha-principal {
         width: 90%;
@@ -876,7 +629,7 @@
         width: 100%;
     }
     .nome-pessoa h1 {
-        font-size: 9px;
+
     }
     .infos-senha-principal {
         width: 80%;
@@ -885,14 +638,14 @@
         width: 45%;
     }
     .infos-detalhes-esquerda h2{
-        font-size: 9px;
+
         margin: 8px;
     }
     .infos-detalhes-direita{
         width: 45%;
     }
     .infos-detalhes-direita h2 {
-        font-size: 9px;
+
         margin: 8px;
     }
 }
@@ -908,7 +661,7 @@
     }
     .fundo-lateral h1{
         width: 70%;
-        font-size: 14px;
+
     }
     .area-das-senhas{
         width: 90%;
@@ -924,7 +677,7 @@
         margin-bottom: 5px;  
     }
     .caixa-das-senhas h2{
-        font-size: 9px;
+
         font-weight: 800;
     }
     .conjunto-senhas {
@@ -935,22 +688,22 @@
         margin-left: 5px;
     }
     .senha h3 {
-        font-size: 9px;
+
         font-weight: 800;
     }
     .senha h4 {
-        font-size: 9px;
+
         font-weight: 800;
     }
     .guiche {
-       margin-right: 5px;
+        margin-right: 5px;
     }
     .guiche h5 {
-        font-size: 9px;
+
         font-weight: 800;
     }
     .guiche h6 {
-        font-size: 9px;
+
         font-weight: 800;
     }
     .fundo-principal{
@@ -959,7 +712,7 @@
     .botao-fechar-monitor {
         width: 30px;
         height: 30px;
-        font-size: 15px;
+
     }
     .fundo-principal {
         width: 58%;
@@ -978,7 +731,7 @@
         width: 100%;
     }
     .nome-pessoa h1 {
-        font-size: 9px;
+
     }
     .infos-senha-principal{
         width:90%;
@@ -987,34 +740,14 @@
         width: 45%;
     }
     .infos-detalhes-esquerda h2 {
-        font-size: 9px;
+
         margin: 5px;
     }
     .infos-detalhes-direita{
         width: 45%;
     }
     .infos-detalhes-direita h2 {
-        font-size: 9px;
+
         margin: 5px;
-    }
-}
-@media (min-height: 450px) and (max-height: 700px){
-    .modal-fundo {
-        height: 85%;
-    }
-}
-@media (min-height: 700px) and (max-height: 800px){
-    .modal-fundo {
-        height: 80%;
-    }
-}
-@media (min-height: 800px) and (max-height: 900px){
-    .modal-fundo {
-        height: 75%;
-    }
-}
-@media (min-height: 900px) and (max-height: 1080px){
-    .modal-fundo {
-        height: 75%;
     }
 }
