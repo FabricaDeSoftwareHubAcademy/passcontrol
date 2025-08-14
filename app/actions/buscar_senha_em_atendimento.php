@@ -26,7 +26,13 @@ try {
     $senha = $res->fetch(PDO::FETCH_ASSOC);
 
     if ($senha) {
-        echo json_encode(['success' => true, 'senha' => $senha]);
+        echo json_encode([
+            'success' => true,
+            'senha' => [
+                'id_fila_senha' => $senha['id_fila_senha'],
+                'nome_fila_senha' => $senha['nome_fila_senha'] ?? $senha['id_fila_senha']
+            ]
+        ]);
     } else {
         echo json_encode(['success' => false, 'message' => 'Nenhuma senha em atendimento para este guichê']);
     }

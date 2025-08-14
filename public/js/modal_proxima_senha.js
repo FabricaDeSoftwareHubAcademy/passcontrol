@@ -95,11 +95,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Botão chamar novamente - atualiza somente chamada_in
     document.querySelector(".chamar_ChamarSenha").addEventListener("click", async () => {
+        if (!idSenhaAtual) {
+            idSenhaAtual = sessionStorage.getItem("idSenhaAtual");
+        }
 
         if (!idSenhaAtual) {
             alert("Nenhuma senha ativa para chamar novamente.");
             return;
         }
+
         try {
             const params = new URLSearchParams();
             params.append('id_senha', idSenhaAtual);
@@ -112,8 +116,14 @@ document.addEventListener("DOMContentLoaded", () => {
             const data = await response.json();
 
             if (data.success) {
-                const payload = 'chamar'; // or any relevant data
+                // Mantém atualização via WebSocket
+                const payload = 'chamar';
                 socket.send(JSON.stringify({ type: 'buttonClicked', payload }));
+
+                // Atualiza o monitor se a função existir
+                if (typeof carregarSenhasModal === "function") {
+                    carregarSenhasModal();
+                }
 
                 alert("Senha chamada novamente.");
             } else {
@@ -124,4 +134,5 @@ document.addEventListener("DOMContentLoaded", () => {
             alert("Erro ao chamar novamente.");
         }
     });
+
 });

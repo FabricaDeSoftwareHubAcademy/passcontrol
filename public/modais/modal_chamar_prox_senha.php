@@ -1,24 +1,3 @@
-<?php
-if (session_status() === PHP_SESSION_NONE) {
-    session_start();
-}
-require_once '../database/Database.php';
-
-$senhaPrincipal = $_SESSION['senha_principal'] ?? null;
-$servicoDB = new Database('servico');
-
-$prioridade = $senhaPrincipal && $senhaPrincipal['prioridade_fila_senha'] ? 'PR' : 'CM';
-$numero = $senhaPrincipal ? str_pad($senhaPrincipal['id_fila_senha'], 3, '0', STR_PAD_LEFT) : '---';
-$nome = $senhaPrincipal['nome_fila_senha'] ?? '...';
-
-$servicoNome = '---';
-if ($senhaPrincipal) {
-    $servico = $servicoDB->select('id_servico = ' . $senhaPrincipal['id_servico_fk'])->fetch(PDO::FETCH_ASSOC);
-    if ($servico) {
-        $servicoNome = $servico['nome_servico'];
-    }
-}
-?>
 <!-- Estrutura do Modal fora da tela inicialmente -->
 <div class="fundo-container-confirmacao-presenca" id="modal-senha">
     <section class="modal-confirmacao-presenca">

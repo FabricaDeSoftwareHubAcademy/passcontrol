@@ -13,7 +13,7 @@ class Database
     private string $user;
     private string $password;
     private $table;
-
+ 
     public function __construct($table = null)
     {
         $this->local = $_ENV['DB_HOST'] ?? 'localhost';
@@ -118,4 +118,25 @@ class Database
                   LIMIT 4";
         return $this->execute($query) ?: false;
     }
+
+    public function select_monitor_modal_ultimos_chamados()
+    {
+        $query = "SELECT 
+                    fila_senha.nome_fila_senha,
+                    CONCAT(IF(fila_senha.prioridade_fila_senha = 1, 'PR', 'CM'), ' ', fila_senha.id_fila_senha) AS senha_chamada,
+                    fila_senha.status_fila_senha,
+                    CONCAT(ponto_atendimento.nome_ponto_atendimento, ' - ', ponto_atendimento.identificador_ponto_atendimento) AS nome_ponto_atendimento,
+                    servico.nome_servico,
+                    fila_senha.fila_senha_chamada_in
+                FROM fila_senha
+                INNER JOIN servico 
+                        ON servico.id_servico = fila_senha.id_servico_fk
+                INNER JOIN ponto_atendimento 
+                        ON ponto_atendimento.id_ponto_atendimento = fila_senha.id_ponto_atendimento
+                WHERE fila_senha.status_fila_senha IN ('em atendimento','atendido')
+                ORDER BY fila_senha.fila_senha_chamada_in DESC, fila_senha.id_fila_senha DESC
+                LIMIT 4";
+        return $this->execute($query) ?: false;
+    }
+
 }
