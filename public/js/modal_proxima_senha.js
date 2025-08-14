@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const socket = new WebSocket('ws://127.0.0.1:8080');
+    const socket = new WebSocket('ws://192.168.22.9:8080');
 
     const btnProximaSenha = document.getElementById("chamar-proxima-senha");
     const modalContainer_ChamarSenha = document.querySelector(".fundo-container-confirmacao-presenca");

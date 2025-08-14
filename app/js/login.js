@@ -3,6 +3,16 @@ const password = document.querySelector("#input_password");
 const btn_login = document.querySelector("#btn_login");
 const msg = document.querySelector("#login_msg");
 
+const guicheSelecionado = sessionStorage.getItem("guicheSelected");
+
+if (guicheSelecionado) {
+    const blob = new Blob(
+        [JSON.stringify({ guiche: parseInt(guicheSelecionado) })],
+        { type: 'application/json' }
+    );
+    navigator.sendBeacon('../actions/guiche_liberacao.php', blob);
+}
+
 togglePassword.addEventListener("click", function () {
     const type = password.type === "password" ? "text" : "password";
     password.type = type;

@@ -43,17 +43,6 @@ document.addEventListener("DOMContentLoaded", () => {
     fechaSaida.addEventListener("click", () => {
         modalSaida.classList.remove("show");
     });
-
-    window.addEventListener("beforeunload", function (e) {
-        const guicheSelecionado = sessionStorage.getItem("guicheSelected");
-        if (guicheSelecionado) {
-            const blob = new Blob(
-                [JSON.stringify({ guiche: parseInt(guicheSelecionado) })],
-                { type: 'application/json' }
-            );
-            navigator.sendBeacon('../actions/guiche_liberacao.php', blob);
-        }
-    });
 });
 
 

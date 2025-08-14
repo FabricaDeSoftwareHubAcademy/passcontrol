@@ -41,7 +41,7 @@
                         <span id="senha_principal">...</span>
                     </li>
                     <li>
-                        <h2>GUICHÊ:</h2>
+                        <h2>Ponto de Atendimento:</h2>
                         <span id="guiche_senha_principal">...</span>
                     </li>
                 </div>
@@ -54,39 +54,9 @@
             </div>
         </div>
     </section>
-    <script>
-function atualizarMonitor() {
-    fetch('../../app/actions/get_chamadas.php')
-        .then(res => res.json())
-        .then(data => {
-            if (data.principal) {
-                document.getElementById('nome_senha_principal').textContent = data.principal.nome;
-                document.getElementById('senha_principal').textContent = data.principal.senha;
-                document.getElementById('guiche_senha_principal').textContent = data.principal.guiche;
-                document.getElementById('servico_senha_principal').textContent = data.principal.servico;
-            }
-
-            const ultimasDiv = document.querySelector('.area-das-senhas');
-            ultimasDiv.innerHTML = '';
-            data.ultimas.forEach(s => {
-                const div = document.createElement('div');
-                div.classList.add('caixa-das-senhas');
-                div.innerHTML = `<h2>${s.nome}</h2>
-                                 <div class="conjunto-senhas">
-                                     <div class="senha"><h3>SENHA</h3><h4>${s.senha}</h4></div>
-                                     <div class="guiche"><h5>GUICHÊ</h5><h6>${s.guiche}</h6></div>
-                                 </div>`;
-                ultimasDiv.appendChild(div);
-            });
-        })
-        .catch(err => console.error(err));
-}
-
-// Atualiza a cada 2 segundos
-setInterval(atualizarMonitor, 2000);
-atualizarMonitor();
-</script>
-
+    <script src="../js/leitorSenhas.js"></script>
+ 
+    <script src="../js/monitor.js"></script>
 </body>
 
 </html>

@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                     <h4>${senha.senha_chamada}</h4>
                     </div><br>
                     <div class="guiche">
-                    <h3>GUICHÊ:</h3>
+                    <h3>Ponto de Atendimento:</h3>
                     <h4>${senha.nome_ponto_atendimento}</h4>
                     </div>
                     </div>
@@ -54,6 +54,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         if (data.type === 'updateScreenB') {
             if(data.payload == 'chamar') {
                 carregar_senhas_monitor();
+                iniciarLeitor();
             }
         }
         };
