@@ -9,6 +9,7 @@ try {
     require_once '../database/Database.php';
 
     $idGuiche = $_POST['id_guiche'] ?? null;
+    $idSenha = $_POST['id_senha'] ?? null;
 
     if (!$idGuiche || !is_numeric($idGuiche)) {
         echo json_encode(['success' => false, 'message' => 'Guichê inválido']);
@@ -18,7 +19,7 @@ try {
     $filaDB = new Database('fila_senha');
 
     $res = $filaDB->select(
-        "id_ponto_atendimento = " . (int)$idGuiche . " AND status_fila_senha = 'em atendimento'",
+        "id_ponto_atendimento = " . (int)$idGuiche . " AND status_fila_senha = 'em atendimento' AND id_fila_senha =  $idSenha",
         'id_fila_senha ASC',
         '1'
     );
@@ -30,7 +31,7 @@ try {
             'success' => true,
             'senha' => [
                 'id_fila_senha' => $senha['id_fila_senha'],
-                'nome_fila_senha' => $senha['nome_fila_senha'] ?? $senha['id_fila_senha']
+                'nome_fila_senha' => $senha['nome_fila_senha'],
             ]
         ]);
     } else {

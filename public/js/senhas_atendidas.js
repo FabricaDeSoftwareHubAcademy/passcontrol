@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function(){
     const botao_proxima_senha = document.getElementById('chamar-proxima-senha')
     botao_proxima_senha.addEventListener('click',senhasAtendidas)
 
-    const botao_encerrar = document.querySelector('.botao-encerrar-atendimento open-encerrar-atendimento')
+    const botao_encerrar = document.querySelector('.save_EncerrarAtendimento')
     botao_encerrar.addEventListener('click',senhasAtendidas)
 
 })

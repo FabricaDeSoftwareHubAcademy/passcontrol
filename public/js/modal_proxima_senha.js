@@ -16,7 +16,8 @@ document.addEventListener("DOMContentLoaded", () => {
         const obj_atendimento_atual = {
             nome : data.nome,
             senha : data.senha,
-            servico : data.servico
+            servico : data.servico,
+            id_senha : data.id_senha
         }
         const obj_atendimento_atual_json = JSON.stringify(obj_atendimento_atual);
 

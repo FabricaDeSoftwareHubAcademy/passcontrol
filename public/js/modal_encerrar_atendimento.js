@@ -4,10 +4,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const buttonCancelar_EncerrarAtendimento = document.querySelector(".cancel_EncerrarAtendimento");
     const buttonSalvar_EncerrarAtendimento = document.querySelector(".save_EncerrarAtendimento");
 
-    let idSenhaAtual = null;
-
     // Função para buscar a senha que está em atendimento para o guichê
-    async function buscarSenhaEmAtendimento() {
+    async function buscarSenhaEmAtendimento(senhaEmAtendimento) {
         const idGuiche = sessionStorage.getItem("guicheSelected");
         if (!idGuiche) {
             alert("Guichê não selecionado.");
@@ -17,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const response = await fetch("../actions/buscar_senha_em_atendimento.php", {
                 method: "POST",
                 headers: { "Content-Type": "application/x-www-form-urlencoded" },
-                body: `id_guiche=${encodeURIComponent(idGuiche)}`
+                body: `id_guiche=${encodeURIComponent(idGuiche)}&id_senha=${senhaEmAtendimento}`
             });
             const data = await response.json();
             if (data.success) {
@@ -38,7 +36,9 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     buttonAbrir_EncerrarAtendimento.addEventListener("click", async () => {
-        const encontrou = await buscarSenhaEmAtendimento();
+        const id_senha = JSON.parse(sessionStorage.getItem("atendimento_atual")).id_senha;
+        console.log(id_senha)
+        const encontrou = await buscarSenhaEmAtendimento(id_senha);
         if (encontrou) {
             modalContainer_EncerrarAtendimento.classList.add("show");
         }
@@ -50,7 +50,9 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     buttonSalvar_EncerrarAtendimento.addEventListener("click", async () => {
-        if (!idSenhaAtual) {
+        const id_senha = JSON.parse(sessionStorage.getItem("atendimento_atual")).id_senha;
+        console.log(id_senha)
+        if (!id_senha) {
             alert("Nenhuma senha selecionada para encerrar.");
             return;
         }
@@ -58,19 +60,16 @@ document.addEventListener("DOMContentLoaded", () => {
             const response = await fetch("../../app/actions/encerrar_atendimento.php", {
                 method: "POST",
                 headers: { "Content-Type": "application/x-www-form-urlencoded" },
-                body: `id_senha=${encodeURIComponent(idSenhaAtual)}`
+                body: `id_senha=${encodeURIComponent(id_senha)}`
             });
             const data = await response.json();
-            if (data.success) {
+            if (data) {
                 alert("Atendimento encerrado com sucesso.");
                 modalContainer_EncerrarAtendimento.classList.remove("show");
-                idSenhaAtual = null;
-            } else {
-                alert(data.message || "Erro ao encerrar atendimento.");
+                id_senha = null;
             }
         } catch (err) {
             console.error("Erro ao encerrar atendimento:", err);
-            alert("Erro ao encerrar atendimento.");
         }
     });
 });
