@@ -3,22 +3,20 @@ require_once '../database/Database.php';
 
 $bd = new Database();
 
-$sql='select 
-fila_senha.id_fila_senha,
-fila_senha.id_usuario_atendente,
-fila_senha.status_fila_senha,
-servico.nome_servico,
-perfil_usuario.nome_perfil_usuario,
-ponto_atendimento.identificador_ponto_atendimento
-from fila_senha 
-left join servico 
-on fila_senha.id_servico_fk = servico.id_servico
-inner join ponto_atendimento
-on fila_senha.id_ponto_atendimento = ponto_atendimento.id_ponto_atendimento
-left join usuario 
-on fila_senha.id_usuario_atendente = usuario.id_usuario
+$sql=' select 
+    usuario.nome_usuario,
+    perfil_usuario.nome_perfil_usuario,
+    group_concat(distinct servico.nome_servico separator ",") as nome_servico
+from usuario
 left join perfil_usuario
-on usuario.id_perfil_usuario_fk = perfil_usuario.id_perfil_usuario;';
+    on usuario.id_perfil_usuario_fk = perfil_usuario.id_perfil_usuario
+left join usuario_servico
+    on usuario.id_usuario = usuario_servico.id_usuario_fk
+left join servico
+    on servico.id_servico = usuario_servico.id_servico_fk
+group by 
+    usuario.nome_usuario,
+    perfil_usuario.nome_perfil_usuario;';
 
 
 $results=$bd->execute($sql)->fetchAll();
