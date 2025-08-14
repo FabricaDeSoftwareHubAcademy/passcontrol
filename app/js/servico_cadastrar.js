@@ -40,6 +40,7 @@ function voltarModalError(){
 //Abre Modal de Cadastro
 btn_cadastrar_servico.addEventListener("click", (event) => {
   event.preventDefault();
+  window.controlModal = "cadastro"
   document.querySelector(".fundo-container-cad-servico").classList.add("show");
 });
 
@@ -61,6 +62,7 @@ document.querySelector(".save_CadServ").addEventListener("click", function (even
   let erro = false;
   let imagemInavlida = false;
   msgError.innerHTML = '';
+  window.controlModal = true;
   
   // Validação nome do serviço
   if (!nome_servico) {
@@ -99,6 +101,7 @@ document.querySelector(".save_CadServ").addEventListener("click", function (even
   // Se houver erro, não avança
   if (!erro) {
     controleCadastro = true;
+    window.controlModal = "cadastro"
     document.querySelector(".fundo-container-cad-servico").classList.remove("show");
     document.querySelector(".fundo-container-confirmacao-dados-registrados").classList.add("show");
   }else{
@@ -111,11 +114,16 @@ document.querySelector(".save_CadServ").addEventListener("click", function (even
   }
 });
 
-  // NÃO na confirmação -> volta para o modal de cadastro
+  // NÃO na confirmação -> volta para o modal de cadastro 
   document.querySelector(".cancel_ConfDadosRegist").addEventListener("click", () => {
-    document.querySelector(".fundo-container-confirmacao-dados-registrados").classList.remove("show");
-    document.querySelector(".fundo-container-cad-servico").classList.add("show");
-    controleCadastro = false;
+    if (window.controlModal === "cadastro"){
+      document.querySelector(".fundo-container-confirmacao-dados-registrados").classList.remove("show");
+      document.querySelector(".fundo-container-cad-servico").classList.add("show");
+      controleCadastro = false;
+    } else if (window.controlModal === "status") {
+      document.querySelector(".fundo-container-confirmacao-dados-registrados")
+    }
+    window.controlModal= null;
   });
   
   // SIM na confirmação -> envia os dados para o PHP

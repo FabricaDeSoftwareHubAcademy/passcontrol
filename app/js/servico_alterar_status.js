@@ -11,13 +11,15 @@ document.addEventListener("DOMContentLoaded", () => {
         button.addEventListener("click", () => {
             let id = button.getAttribute("id_value_switch");
             
+            window.controlModal= "status";
             modalContainer.classList.add("show");
 
             btnCancelar.addEventListener("click", () => {
-                modalContainer.classList.remove("show");
-                if (id !== null && id !== '') {
+               if (window.controlModal === "status"){
+                    modalContainer.classList.remove("show");
                     id = null;
-                }
+                    window.controlModal = null; 
+               }
                 // btnConfirmar.removeEventListener("click");
             });
             
