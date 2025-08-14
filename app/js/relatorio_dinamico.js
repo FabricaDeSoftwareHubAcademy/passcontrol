@@ -120,7 +120,7 @@ function iniciarGraficosVazios() {
             datasets: [{
                 label: 'Serviços',
                 data: [],
-                backgroundColor: ['#37474F', '#5fbe7f', '#3aa867']
+                backgroundColor: ['#37474F', '#5fbe7f', '#3aa867', '#CFD8DC', '#A5D6A7', '#546E7A']
             }]
         },
         options: {
