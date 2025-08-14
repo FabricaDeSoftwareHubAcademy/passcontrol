@@ -24,7 +24,7 @@
 <body>
     <section class="fundo-de-tudo">
         <div class="fundo-azul-lateral">
-            <h1>Últimas<br>Chamadas</h1>
+            <h1 class="titulo-azul-lateral">Últimas Chamadas</h1>
             <div class="area-das-senhas">
                 Aguardando Chamadas...
             </div>
@@ -37,18 +37,18 @@
                 </div>
                 <div class="infos-senha-principal">
                     <li>
-                        <h2>SENHA:</h2>
-                        <span id="senha_principal">...</span>
+                        <h2 class="info-senha-principal">SENHA:</h2>
+                        <span class="dados-senha-principal" id="senha_principal">...</span>
                     </li>
                     <li>
-                        <h2>GUICHÊ:</h2>
-                        <span id="guiche_senha_principal">...</span>
+                        <h2 class="info-senha-principal">PONTO DE ATENDIMENTO:</h2>
+                        <span class="dados-senha-principal" id="guiche_senha_principal">...</span>
                     </li>
                 </div>
                 <div class="nome-servico">
                     <li>
-                        <h2>SERVIÇO:</h2>
-                        <span id="servico_senha_principal">...</span>
+                        <h2 class="info-senha-principal">SERVIÇO:</h2>
+                        <span class="dados-senha-principal" id="servico_senha_principal">...</span>
                     </li>
                 </div>
             </div>
@@ -73,8 +73,13 @@ function atualizarMonitor() {
                 div.classList.add('caixa-das-senhas');
                 div.innerHTML = `<h2>${s.nome}</h2>
                                  <div class="conjunto-senhas">
-                                     <div class="senha"><h3>SENHA</h3><h4>${s.senha}</h4></div>
-                                     <div class="guiche"><h5>GUICHÊ</h5><h6>${s.guiche}</h6></div>
+                                     <div class="senha">
+                                        <h3>SENHA</h3>
+                                        <h4>${s.senha}</h4>
+                                     </div>
+                                     <div class="guiche">
+                                        <h4>${s.guiche}</h4>
+                                     </div>
                                  </div>`;
                 ultimasDiv.appendChild(div);
             });
@@ -83,8 +88,8 @@ function atualizarMonitor() {
 }
 
 // Atualiza a cada 2 segundos
-setInterval(atualizarMonitor, 2000);
-atualizarMonitor();
+// setInterval(atualizarMonitor, 2000);
+// atualizarMonitor();
 </script>
 
 </body>

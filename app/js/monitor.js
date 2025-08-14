@@ -24,17 +24,16 @@ document.addEventListener("DOMContentLoaded", async () => {
                 ultimas_chamadas.forEach((senha) => {
                     document.querySelector(".area-das-senhas").innerHTML += `
                     <div class="caixa-das-senhas">
-                    <h2>${senha.nome_fila_senha}</h2>
-                    <div class="conjunto-senhas">
-                    <div class="senha">
-                    <h3>SENHA:</h3>
-                    <h4>${senha.senha_chamada}</h4>
-                    </div><br>
-                    <div class="guiche">
-                    <h3>GUICHÊ:</h3>
-                    <h4>${senha.nome_ponto_atendimento}</h4>
-                    </div>
-                    </div>
+                        <h2>${senha.nome_fila_senha}</h2>
+                        <div class="conjunto-senhas">
+                            <div class="senha">
+                                <h3>SENHA:</h3>
+                                <h4>${senha.senha_chamada}</h4>
+                            </div>
+                            <div class="guiche">
+                                <h4>${senha.nome_ponto_atendimento}</h4>
+                            </div>
+                        </div>
                     </div>
                     `;
                 });

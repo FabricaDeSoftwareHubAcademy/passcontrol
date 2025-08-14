@@ -9,11 +9,11 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: Inter, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+    font-family: Inter, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-transform: capitalize;
 }
 
 .fundo-de-tudo{
-    display: flex;
     align-items: center;
     background-color: var(--cor-cinza--1);
     background-image: url(../../public/img/background_logo.svg);
@@ -33,19 +33,19 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    position: fixed;
+    justify-content: space-evenly;
+    position: absolute;
     left: 0;
     top: 0;
     z-index: 2;
 }
 
-.fundo-azul-lateral h1{
-    width: 100%;
-    height: 20%;
+.titulo-azul-lateral{
+    width: 95%;
+    height: auto;
     
     display: flex;
-    align-items: end;
+    align-items: center;
     justify-content: center;
     text-align: center;
     color: white;
@@ -54,24 +54,19 @@
 }
 
 .area-das-senhas{
+    width: 95%;
+    height: 85%;
     display: flex;
-    height: auto;
     align-items: center;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     border-radius: 5px;
     background-color: var(--cor-cinza--1);
-    gap: 2vh;
-    /* padding: 2.5vh 1.6vh; */
-    margin: 2vh 2vh 2vh 2vh;
-
-    height: 95%;
-    width: 90%;
 }
 
 .caixa-das-senhas{
-    width: calc(100% - 3vh);
-    height: 22%;
+    width: 90%;
+    height: 25%;
     border-radius: 5px;
     padding: 1.5vh;
     display: flex;
@@ -94,8 +89,9 @@
 
 .conjunto-senhas{
     width: 100%;
-    height: 20%;
+    height: auto;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: space-between;
 }
@@ -235,13 +231,13 @@
 }   
 
 
-@media screen and (max-width: 1500px) and (min-width: 1471px){
+@media screen and (max-width: 1500px){
     *{
         overflow: hidden;
     }
 
     .fundo-azul-lateral{
-        width: 38vw;
+        /* width: 38vw; */
         align-items: center;
     }
     
@@ -253,6 +249,7 @@
         white-space: nowrap;
         word-wrap: break-word;
     }
+
     .infos-senha-principal{
         flex-direction: column;
         justify-content: space-between;
@@ -287,15 +284,6 @@
     }
 }
 
-@media screen and (max-width: 1470px){
-    .caixa-das-senhas h2{
-        font-size: 3.5vh;
-    }
-    .senha h3, .senha h4, .guiche h3, .guiche h4{
-        font-size: 2.2vh;
-    }
-}
-
 @media screen and (max-width: 1070px){
     .area-das-senhas{
         padding: 7px;
@@ -304,16 +292,17 @@
         height: 50%;
     }
 
-    .conjunto-senhas{
+    /* .conjunto-senhas{
         align-items: center;
-        /* gap: calc(+5px); */
+        gap: calc(+5px);
         flex-direction: column;
-    }
+    } */
+
     .caixa-das-senhas h2{
-        font-size: 2.2vh;
+        font-size: 2.5vh;
     }
-    .senha h3, .senha h4, .guiche h3, .guiche h4{
-        font-size: 1.7vh;
+    .senha h3, .senha h4, .guiche h4{
+        font-size: 2.4vh;
     }
 }
 
@@ -340,8 +329,7 @@
         justify-content: start;
         overflow:auto;
     }
-    .fundo-azul-lateral h1{
-        /* height: 15%; */
+    .titulo-azul-lateral{
         width: 20% ;
         align-items: center;
         text-align: center;
@@ -382,9 +370,9 @@
         font-size: 5vh;
         margin-bottom: 3vh;
     }
-    .infos-senha-principal li h2, .infos-senha-principal li span{
+    /* .info-senha-principal, .infos-senha-principal li span{
         font-size: 4vh;
-    }
+    } */
     .nome-servico li{
         flex-direction: column;
     }
@@ -395,7 +383,7 @@
     }
 }
 @media screen and (max-height: 700px) {
-    .fundo-azul-lateral h1{
+    .titulo-azul-lateral{
         font-size: 4vh;
     }
 }

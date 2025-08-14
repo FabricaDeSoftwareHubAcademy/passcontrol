@@ -88,7 +88,7 @@ Class Ponto_Atendimento{
     }
     public function buscar_disponiveis() {
         $db = new Database('ponto_atendimento');
-        return $db->select("disponivel_ponto_atendimento = 0")->fetchAll(PDO::FETCH_CLASS, self::class);
+        return $db->select(" disponivel_ponto_atendimento = 0 AND status_ponto_atendimento = 1 ")->fetchAll(PDO::FETCH_CLASS, self::class);
     }
     
     

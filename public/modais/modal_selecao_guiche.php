@@ -10,7 +10,7 @@
             <select class="menu" name="guiche" required=''>
                 <option value="" selected disabled>Guichês</option>
                 <?php
-                    require_once '../../app/classes/PontoAtendimento.php';
+                    require_once '../classes/PontoAtendimento.php';
                     
                     $ponto = new Ponto_Atendimento();
                     $guiches = $ponto->buscar_disponiveis();

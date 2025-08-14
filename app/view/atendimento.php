@@ -1,11 +1,5 @@
 <?php
-require_once '../classes/PontoAtendimento.php';
-
-$guiche = new Ponto_Atendimento();
-$guiches = $guiche->buscar(null, " status_ponto_atendimento DESC");
-
 $id_perfil = $_SESSION['id_perfil_usuario_fk'] ?? null;
-
 include_once 'navegacao.php';
 ?>
 
@@ -21,7 +15,7 @@ include_once 'navegacao.php';
 <!-- <script src="../../public/js/modal_ler_prox_senha.js" defer></script> -->
 <script src="../../public/js/modal_intervalo_retornar.js" defer></script>
 <script src="../../public/js/senhas_atendidas.js" defer></script>
-<script src="../js/modal_selecao_guiche_inicial.js"></script>
+<script src="../js/modal_selecao_guiche_inicial.js" defer></script>
 
 <body class="control-body-navegacao">
 
