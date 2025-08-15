@@ -115,6 +115,18 @@ document.addEventListener("DOMContentLoaded", function () {
                     alert("Erro ao enviar os dados.");
                 }
             });
+            function aplicarFiltroPontoAtendimento(inputId) {
+                const campo = document.getElementById(inputId);
+                    if (!campo) return;
+                        campo.addEventListener("input", function() {
+                    this.value = this.value.replace(/[^a-zA-ZÀ-ÿ\s]/g, '');
+                });
+            }
+
+    // Aplicar filtro somente para os inputs de ponto de atendimento
+    aplicarFiltroPontoAtendimento("nome_guiche");              // cadastro ponto de atendimento
+    aplicarFiltroPontoAtendimento("nome_ponto_atendimento");   // edição ponto de atendimento
+            
 
             // // Botão OK final
             // const buttonOkEditar = document.querySelector(".Okay_ConfDados");

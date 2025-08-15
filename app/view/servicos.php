@@ -94,6 +94,7 @@
     // include_once "./monitor_modal.php";
     include_once "../../public/modais/modal_cadastro_servico.php";
     include_once "../../public/modais/modal_edicao_servico.php";
+    include_once "../../public/modais/modal_alterar_status.php";
     include_once "../../public/modais/modal_confirmacao_dados_registrados.php";
     include_once "../../public/modais/modal_confirmacao_dados.php";
     include_once "../../public/modais/modal_aviso_erro.php";

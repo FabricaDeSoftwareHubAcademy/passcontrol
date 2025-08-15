@@ -14,6 +14,9 @@ const buttonOkError = document.querySelector(".voltar_AvisoErro")
 const inputImagem = document.getElementById("imagem_servico_cadastrar");
 const previewImagem = document.getElementById("preview_imagem_cadastrar");
 
+// CONSTANTE DA MASCARA SÓ DE LETRA 
+const nomeServicoInput = document.getElementById("nome_servico_cadastrar");
+
 // VARIAVES CONTROLE DO FLUXO DO CADASTRO
 let controleCadastro = false;
 let imagemInavlidacontorle = false;
@@ -171,3 +174,7 @@ inputImagem.addEventListener("change", function () {
     previewImagem.style.display = "none";
   }
 });
+
+nomeServicoInput.addEventListener("input", function() {
+        this.value = this.value.replace(/[^a-zA-ZÀ-ÿ\s]/g, '');
+    });

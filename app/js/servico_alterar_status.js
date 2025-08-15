@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
     const botoesStatus = document.querySelectorAll(".switch_status");
-    const modalContainer = document.querySelector(".fundo-container-confirmacao-dados-registrados");
-    const btnCancelar = document.querySelector(".cancel_ConfDadosRegist");
-    const btnConfirmar = document.querySelector(".save_ConfDadosRegist");
+    const modalContainer = document.querySelector(".fundo_AltStatusUsu");
+    const btnCancelar = document.querySelector(".cancel-atv-inatv");
+    const btnConfirmar = document.querySelector(".save-atv-inatv");
     
     const modalSucesso = document.querySelector(".fundo-container-confirmacao-dados");
     const btnOk = document.querySelector(".Okay_ConfDados");
@@ -18,7 +18,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 if (id !== null && id !== '') {
                     id = null;
                 }
-                // btnConfirmar.removeEventListener("click");
             });
             
             btnConfirmar.addEventListener("click", async function() {
@@ -44,20 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 } catch (error) {
                     console.error("Erro na requisição: ", error);
                 } 
-                // finally {
-                //     btnConfirmar.removeEventListener("click", confirmarHandler);
-                // }
             });
-
-            // btnConfirmar.addEventListener("click", confirmarHandler);
-
-           
-            // if (btnOk) {
-            //     btnOk.addEventListener("click", () => {
-            //         modalSucesso.classList.remove("show");
-            //         location.reload();
-            //     });
-            // }
         });
     });
 });
