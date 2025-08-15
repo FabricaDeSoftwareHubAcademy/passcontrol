@@ -7,16 +7,15 @@ document.addEventListener('DOMContentLoaded', function(){
         
         await json.forEach(elemento=>{
             let status;
-            if (elemento.disponivel_ponto_atendimento === 1) {
+            if (elemento.disponivel_ponto_atendimento == 1) { 
                 status = 'Em Atendimento';
-            } else if (elemento.disponivel_ponto_atendimento === 0) {
+            } else if (elemento.disponivel_ponto_atendimento == 0) {
                 status = 'Disponível';
-            } else if (elemento.id_expediente) { // se existe expediente
+            } else if (elemento.id_expediente != null) { 
                 status = 'Intervalo';
             } else {
-                status = 'Sem registro';
+                status = '';
             }
-
             tabela.innerHTML+=`<tr>
                 <td>${elemento.nome_usuario}</td>
                 <td>${elemento.nome_perfil_usuario}</td>
