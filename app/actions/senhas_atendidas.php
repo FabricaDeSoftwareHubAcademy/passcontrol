@@ -3,7 +3,6 @@ require_once '../database/Database.php';
 
 $bd = new Database();
 
-
 $sql=' select fila_senha.id_fila_senha,
 fila_senha.nome_fila_senha,
 servico.nome_servico,

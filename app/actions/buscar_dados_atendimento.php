@@ -25,7 +25,6 @@ group by
 usuario.nome_usuario,
 perfil_usuario.nome_perfil_usuario;';
 
-
 $results=$bd->execute($sql)->fetchAll();
 
 echo json_encode($results);
