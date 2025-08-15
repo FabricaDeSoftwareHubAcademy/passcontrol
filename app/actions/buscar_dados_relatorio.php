@@ -21,11 +21,13 @@ $sql = "SELECT
             fs.prioridade_fila_senha,
             fs.fila_senha_criada_in AS fila_senha_created_in,
             fs.status_fila_senha,
-            fs.id_usuario_atendente AS fila_senha_updated_by_id,
+            fs.id_usuario_atendente,
             s.nome_servico,
-            p.nome_ponto_atendimento
+            p.identificador_ponto_atendimento,
+            u.nome_usuario
         FROM fila_senha fs
         LEFT JOIN servico s ON fs.id_servico_fk = s.id_servico
+        LEFT JOIN usuario u on fs.id_usuario_atendente = u.id_usuario
         LEFT JOIN ponto_atendimento p ON fs.id_ponto_atendimento = p.id_ponto_atendimento
         WHERE DATE(fs.fila_senha_criada_in) BETWEEN ? AND ?
         AND fs.status_fila_senha = 'atendido'";
