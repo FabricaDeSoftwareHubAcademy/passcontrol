@@ -33,14 +33,16 @@ document.addEventListener('DOMContentLoaded', function () {
                     const datasCount = {};
 
                     dados.forEach(row => {
+                        console.log(row);
                         tabela.innerHTML += `
                             <tr>
-                                <td>${row.id_fila_senha}</td>
+                                <td>${row.nome_usuario}</td>
+                                <td>${row.nome_servico}</td>
                                 <td>${row.nome_fila_senha}</td>
                                 <td>${row.prioridade_fila_senha ? 'Sim' : 'Não'}</td>
                                 <td>${row.fila_senha_created_in}</td>
-                                <td>${row.nome_servico}</td>
-                                <td>${row.nome_ponto_atendimento || 'N/A'}</td>
+                                
+                                <td>${row.identificador_ponto_atendimento}</td>
                             </tr>
                         `;
 

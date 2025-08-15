@@ -1,16 +1,19 @@
-document.addEventListener('DOMContentLoaded', function () {
-    fetch('../actions/get_servicos.php')
-        .then(res => res.json())
+document.addEventListener('DOMContentLoaded', function() {
+    const selectServico = document.getElementById('inputLocal');
+    
+    fetch('get_servicos.php')
+        .then(response => response.json())
         .then(data => {
-            const select = document.getElementById('inputLocal');
+            // Limpa opções existentes (exceto a primeira)
+            while (selectServico.options.length > 1) {
+                selectServico.remove(1);
+            }
+            
             data.forEach(servico => {
                 const option = document.createElement('option');
-                option.value = servico.nome_servico;
+                option.value = servico.id_servico;
                 option.textContent = servico.nome_servico;
-                select.appendChild(option);
+                selectServico.appendChild(option);
             });
-        })
-        .catch(err => {
-            console.error('Erro ao carregar serviços:', err);
         });
 });
