@@ -24,14 +24,14 @@ document.addEventListener("DOMContentLoaded", async () => {
                 ultimas_chamadas.forEach((senha) => {
                     document.querySelector(".area-das-senhas").innerHTML += `
                     <div class="caixa-das-senhas">
-                        <h2>${senha.nome_fila_senha}</h2>
+                        <h2 class="nome-senha-secundaria">${senha.nome_fila_senha}</h2>
                         <div class="conjunto-senhas">
                             <div class="senha">
-                                <h3>SENHA:</h3>
-                                <h4>${senha.senha_chamada}</h4>
+                                <h3 class="info-senha-secundaria">SENHA:</h3>
+                                <h4 class="dados-senha-secundaria">${senha.senha_chamada}</h4>
                             </div>
                             <div class="guiche">
-                                <h4>${senha.nome_ponto_atendimento}</h4>
+                                <h4 class="dados-senha-secundaria">${senha.nome_ponto_atendimento}</h4>
                             </div>
                         </div>
                     </div>
@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                 });
             };
         } catch (erro) {
-            console.log(erro);
+            console.warn(erro);
         }
     }
     
@@ -49,12 +49,12 @@ document.addEventListener("DOMContentLoaded", async () => {
         const socket = new WebSocket('ws://192.168.0.8:8080');
     
         socket.onmessage = event => {
-        const data = JSON.parse(event.data);
-        if (data.type === 'updateScreenB') {
-            if(data.payload == 'chamar') {
-                carregar_senhas_monitor();
+            const data = JSON.parse(event.data);
+            if (data.type === 'updateScreenB') {
+                if(data.payload == 'chamar') {
+                    carregar_senhas_monitor();
+                }
             }
-        }
         };
     }catch(erro){
         console.warn(erro);

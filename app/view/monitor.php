@@ -32,10 +32,8 @@
 
         <div class="fundo-senha-principal">
             <div class="fundo-senha-principal-wrap">
-                <div class="nome-pessoa">
-                    <h1 id="nome_senha_principal">...</h1>
-                </div>
                 <div class="infos-senha-principal">
+                    <h1 id="nome_senha_principal">...</h1>
                     <li>
                         <h2 class="info-senha-principal">SENHA:</h2>
                         <span class="dados-senha-principal" id="senha_principal">...</span>
@@ -44,8 +42,6 @@
                         <h2 class="info-senha-principal">PONTO DE ATENDIMENTO:</h2>
                         <span class="dados-senha-principal" id="guiche_senha_principal">...</span>
                     </li>
-                </div>
-                <div class="nome-servico">
                     <li>
                         <h2 class="info-senha-principal">SERVIÇO:</h2>
                         <span class="dados-senha-principal" id="servico_senha_principal">...</span>
@@ -71,14 +67,14 @@ function atualizarMonitor() {
             data.ultimas.forEach(s => {
                 const div = document.createElement('div');
                 div.classList.add('caixa-das-senhas');
-                div.innerHTML = `<h2>${s.nome}</h2>
+                div.innerHTML = `<h2 class="nome-senha-secundaria">${s.nome}</h2>
                                  <div class="conjunto-senhas">
                                      <div class="senha">
-                                        <h3>SENHA</h3>
-                                        <h4>${s.senha}</h4>
+                                        <h3 class="info-senha-secundaria">SENHA</h3>
+                                        <h4 class="dados-senha-secundaria">${s.senha}</h4>
                                      </div>
                                      <div class="guiche">
-                                        <h4>${s.guiche}</h4>
+                                        <h4 class="dados-senha-secundaria">${s.guiche}</h4>
                                      </div>
                                  </div>`;
                 ultimasDiv.appendChild(div);
