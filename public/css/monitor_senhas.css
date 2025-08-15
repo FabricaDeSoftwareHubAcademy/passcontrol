@@ -9,11 +9,12 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: Inter, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+    font-family: Inter, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-transform: capitalize;
+    overflow: hidden;
 }
 
 .fundo-de-tudo{
-    display: flex;
     align-items: center;
     background-color: var(--cor-cinza--1);
     background-image: url(../../public/img/background_logo.svg);
@@ -23,7 +24,6 @@
     width: 100vw;
     height: 100vh;
     justify-content: center;
-    overflow: hidden;
 }
 
 .fundo-azul-lateral{
@@ -33,19 +33,19 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    position: fixed;
+    justify-content: space-evenly;
+    position: absolute;
     left: 0;
     top: 0;
     z-index: 2;
 }
 
-.fundo-azul-lateral h1{
-    width: 100%;
-    height: 20%;
+.titulo-azul-lateral{
+    width: 95%;
+    height: auto;
     
     display: flex;
-    align-items: end;
+    align-items: center;
     justify-content: center;
     text-align: center;
     color: white;
@@ -54,24 +54,19 @@
 }
 
 .area-das-senhas{
+    width: 95%;
+    height: 85%;
     display: flex;
-    height: auto;
     align-items: center;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     border-radius: 5px;
     background-color: var(--cor-cinza--1);
-    gap: 2vh;
-    /* padding: 2.5vh 1.6vh; */
-    margin: 2vh 2vh 2vh 2vh;
-
-    height: 95%;
-    width: 90%;
 }
 
 .caixa-das-senhas{
-    width: calc(100% - 3vh);
-    height: 22%;
+    width: 90%;
+    height: 25%;
     border-radius: 5px;
     padding: 1.5vh;
     display: flex;
@@ -80,7 +75,7 @@
     background-color: var(--cor-azul-escuro--0_10);
 }
 
-.caixa-das-senhas h2{
+.nome-senha-secundaria{
     height: 80%;
     display: flex;
     align-items: center;
@@ -94,8 +89,9 @@
 
 .conjunto-senhas{
     width: 100%;
-    height: 20%;
+    height: auto;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: space-between;
 }
@@ -104,20 +100,19 @@
     display: flex;
     color: var(--cor-azul-escuro--1);
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     flex-direction: row;
 }
 
-.senha h3, .guiche h3{
+.info-senha-secundaria, .info-senha-secundaria{
     display: flex;
     font-size: 3vh;
     padding: 5px;
     font-weight: 800;
-    /* text-decoration: underline; */
     color: var(--cor-azul-acinzentado);
 }
 
-.senha h4, .guiche h4{
+.dados-senha-secundaria{
     display: flex;
     font-size: 4vh;
     text-wrap: nowrap;
@@ -151,26 +146,28 @@
 .fundo-senha-principal-wrap{
     height: 100%;
     width: 100%;
+    max-width: fit-content;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    
+    #nome_senha_principal, .dados-senha-principal{
+        overflow-wrap: anywhere;
+    }
 }
 
-.nome-pessoa{
-    width: 90%;
-}
-
-.nome-pessoa h1{
+#nome_senha_principal{
+    width: 100%;
     padding-bottom: 7%;
     font-size: 8vh;
     text-align: center;
     color: var(--cor-azul-escuro--1);
     font-weight: 800;
-    text-wrap: wrap;
 }
 
 .infos-senha-principal{
+    width: 100%;
     display: block;
     flex-direction: row;
     text-wrap: nowrap;
@@ -188,16 +185,15 @@
     margin-bottom: 10%;
 }
 
-.infos-senha-principal li h2 {
+.info-senha-principal {
     width: auto;
     display: flex;
     justify-content: space-between;
     color: var(--cor-azul-acinzentado);
     font-size: 5vh;
-    /* text-decoration: underline; */
 }
 
-.infos-senha-principal span{
+.dados-senha-principal{
     min-width: 200px;
     text-align: center;
     font-weight: 800;
@@ -225,7 +221,6 @@
     font-size: 4vh;
     font-weight: 600;
     color: var(--cor-azul-acinzentado);
-    /* text-decoration: underline; */
 }   
 
 .nome-servico li span{
@@ -234,140 +229,76 @@
     color: var(--cor-azul-escuro--1);
 }   
 
-
-@media screen and (max-width: 1500px) and (min-width: 1471px){
-    *{
-        overflow: hidden;
-    }
-
-    .fundo-azul-lateral{
-        width: 38vw;
-        align-items: center;
-    }
-    
-    .fundo-senha-principal{
-        top: 2vw;
-        right: 2vw;
-        left: 40vw;
-        bottom: 2vw;
-        white-space: nowrap;
-        word-wrap: break-word;
-    }
-    .infos-senha-principal{
-        flex-direction: column;
-        justify-content: space-between;
-        list-style: none;
-        
-        color: var(--cor-azul-escuro--1);
-        font-size: 3.5vw;
-        gap: 10%;
-    }
-    .nome-pessoa{
-        display: flex;
-        text-size-adjust: 10%;
-    }
-    .infos-senha-principal li{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-betweaen;
-        width: auto;
-        margin-bottom: 10%;
-    }
-    .infos-senha-principal h2 {
-        width: auto;
-        display: flex;
-        justify-content: space-between;
-        color: var(--cor-azul-acinzentado);
-        font-size: 5vh;
-        /* text-decoration: underline; */
-    }
-    .infos-senha-principal span{
-        font-size: 10vh;
-    }
-}
-
-@media screen and (max-width: 1470px){
-    .caixa-das-senhas h2{
-        font-size: 3.5vh;
-    }
-    .senha h3, .senha h4, .guiche h3, .guiche h4{
-        font-size: 2.2vh;
-    }
-}
+/* ------------------ MEDIA ------------------ */
 
 @media screen and (max-width: 1070px){
-    .area-das-senhas{
-        padding: 7px;
+    .nome-senha-secundaria{
+        font-size: 3.3vh;
     }
-    .caixa-das-senhas h2{
-        height: 50%;
-    }
-
-    .conjunto-senhas{
-        align-items: center;
-        /* gap: calc(+5px); */
-        flex-direction: column;
-    }
-    .caixa-das-senhas h2{
-        font-size: 2.2vh;
-    }
-    .senha h3, .senha h4, .guiche h3, .guiche h4{
-        font-size: 1.7vh;
+    .info-senha-secundaria, .dados-senha-secundaria{
+        font-size: 3vh;
     }
 }
 
-@media screen and (max-width: 885px){
+@media screen and (max-width: 900px){
+    .nome-senha-secundaria{
+        font-size: 3.2vh;
+
+        max-height: 3.6em;
+        line-height: 1.3em;
+        overflow-wrap: anywhere;
+    }
+    .info-senha-secundaria, .dados-senha-secundaria{
+        font-size: 2.2vh;
+        text-wrap: wrap;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 840px){
     .fundo-de-tudo{
         display: flex;
         flex-direction: column;
-        justify-content: center;
         align-items: center;
-        
+        justify-content: space-evenly;
     }
     .fundo-azul-lateral{
-        position: absolute;
         top: 70vh;
         right: 0vw;
         left: 0vw;
         bottom: 0px;
         flex-direction: column;
-        flex-direction: row;
         width: 100%;
         height: 30%;
 
         align-items: center;
         justify-content: start;
-        overflow:auto;
-    }
-    .fundo-azul-lateral h1{
-        /* height: 15%; */
-        width: 20% ;
-        align-items: center;
-        text-align: center;
-        /* background-color: rebeccapurple; */
     }
     .area-das-senhas{
+        width: 99%;
         flex-direction: row;
-        margin: 0.8vh;        
-        width: 100vh;
+        justify-content: space-evenly;
+
     }
     .caixa-das-senhas{
         height: 85%;
+        width: 27%;
+        border: 1px solid white;
     }
-    .caixa-das-senhas h2{
+    .nome-senha-secundaria{
+        align-items: start;
         height: 70%;
-        display: none;
     }
     .conjunto-senhas{
         height: 100%;
         flex-direction: column;
+        justify-content: space-around;
     }
     .senha{
         flex-direction: column;
     }
-    .senha h3, .senha h4, .guiche h3, .guiche h4{
-        font-size: 3vh;
+    .info-senha-secundaria{
+        display: none;
     }
     .guiche{
         flex-direction: column;
@@ -378,24 +309,19 @@
         left: 1vh;
         bottom: 31vh;
     }
-    .nome-pessoa h1{
+    #nome_senha_principal{
         font-size: 5vh;
-        margin-bottom: 3vh;
     }
-    .infos-senha-principal li h2, .infos-senha-principal li span{
-        font-size: 4vh;
+    .info-senha-principal{
+        font-size: 3vh;
+        text-size-adjust: auto;
     }
-    .nome-servico li{
-        flex-direction: column;
-    }
-    .nome-servico li h2, .nome-servico li span {
-        font-size: 3.5vh;
-        text-align: center;
-        text-wrap: wrap;
+    .dados-senha-principal{
+        font-size: 5vh;
     }
 }
 @media screen and (max-height: 700px) {
-    .fundo-azul-lateral h1{
+    .titulo-azul-lateral{
         font-size: 4vh;
     }
 }

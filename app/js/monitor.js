@@ -24,37 +24,35 @@ document.addEventListener("DOMContentLoaded", async () => {
                 ultimas_chamadas.forEach((senha) => {
                     document.querySelector(".area-das-senhas").innerHTML += `
                     <div class="caixa-das-senhas">
-                    <h2>${senha.nome_fila_senha}</h2>
-                    <div class="conjunto-senhas">
-                    <div class="senha">
-                    <h3>SENHA:</h3>
-                    <h4>${senha.senha_chamada}</h4>
-                    </div><br>
-                    <div class="guiche">
-                    <h3>Ponto de Atendimento:</h3>
-                    <h4>${senha.nome_ponto_atendimento}</h4>
-                    </div>
-                    </div>
+                        <h2 class="nome-senha-secundaria">${senha.nome_fila_senha}</h2>
+                        <div class="conjunto-senhas">
+                            <div class="senha">
+                                <h3 class="info-senha-secundaria">SENHA:</h3>
+                                <h4 class="dados-senha-secundaria">${senha.senha_chamada}</h4>
+                            </div>
+                            <div class="guiche">
+                                <h4 class="dados-senha-secundaria">${senha.nome_ponto_atendimento}</h4>
+                            </div>
+                        </div>
                     </div>
                     `;
                 });
             };
         } catch (erro) {
-            console.log(erro);
+            console.warn(erro);
         }
     }
     
     carregar_senhas_monitor();
     
     try{
-        const socket = new WebSocket('ws://192.168.0.0:8080');
+        const socket = new WebSocket('ws://192.168.0.8:8080');
     
         socket.onmessage = event => {
         const data = JSON.parse(event.data);
         if (data.type === 'updateScreenB') {
             if(data.payload == 'chamar') {
                 carregar_senhas_monitor();
-                iniciarLeitor();
             }
         }
         };
