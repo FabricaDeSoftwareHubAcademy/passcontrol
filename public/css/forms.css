@@ -185,13 +185,13 @@
 @media (min-width: 64rem) {
     .card_left_login, .card_right_login {
         width: 50%;
-        height: 100%;
+        height: auto;
         padding: 2rem;
         justify-content: center;
     }
 
     .card_left_login {
-        gap: 2rem;
+        gap: 4.5rem;
     }
 
     .container_lines {
@@ -265,4 +265,95 @@
     .container_animation {
         margin-bottom: 0;
     }
+}
+
+@media (max-height: 580px) {
+    .card_left_login, .card_right_login {
+        padding-top: 0;
+    }
+    .input-login {
+        height: 2.8rem;
+        font-size: 1rem;
+    }
+    .title-login {
+        margin-top: 22%;
+        margin-bottom: 0;
+    }
+    .card_left_login {
+        gap: 8.5rem;
+    }
+    .container_button-login {
+        margin-top: 0.9rem;
+    }
+    .container_link {
+        margin-top: 0.5rem;
+    }
+    .form_login {
+        margin-right: 0;
+    }
+
+}
+@media (max-height: 455px) {
+    .card_left_login {
+        gap: 10rem;
+    }
+    .title-login {
+        margin-top: 15%;
+        margin-bottom: 0;
+    }
+    .label-login {
+        margin-bottom: 0;
+    }
+    .container_link {
+        margin-top: 0.3rem;
+    }
+
+}
+@media (max-height: 408px) {
+    .card_left_login {
+        gap: 10rem;
+    }
+    .title-login {
+        font-size: 2rem;
+        margin-top: 15%;
+        margin-bottom: 0;
+    }
+    .label-login {
+        margin-bottom: 0;
+    }
+    .container_link {
+        margin-top: 0.3rem;
+    }
+    .input_group_login {
+        margin-top: 1rem;
+    }
+}
+@media (max-height: 370px) {
+    .title-login {
+        font-size: 2rem;
+        margin-top: 12%;
+        margin-bottom: 0;
+    }
+    .label-login {
+        margin-bottom: 0;
+    }
+    .container_link {
+        margin-top: 0.3rem;
+    }
+    .input_group_login {
+        margin-top: 1rem;
+    }
+    .input-login {
+        height: 2.8rem;
+        font-size: 0.9rem;
+    }
+    .button-login {
+        width: 6rem;
+        height: 3rem;
+        line-height: 3rem;
+    }
+    .container_button-login {
+        margin-top: 0;
+    }
+    
 }
