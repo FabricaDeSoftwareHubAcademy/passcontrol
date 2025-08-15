@@ -23,7 +23,7 @@ $guiches = $guiche->buscar(null, " status_ponto_atendimento DESC");
         rel="stylesheet">
         
     <!-- IMPORT DO JS -->
-    <script src="../../public/js/modal_edicao_ponto_atendimento.js" defer></script>
+    <script src="../../app/js/ponto_atendimento_editar.js" defer></script>
     <script src="../js/ponto_atendimento_cadastrar.js" defer></script>
     <script src="../js/ponto_atendimento_status.js" defer></script>
     <script src="../../app/js/barra_pesquisa_ponto_atendimento.js" defer></script>

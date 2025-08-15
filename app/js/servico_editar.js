@@ -186,4 +186,14 @@ document.addEventListener("DOMContentLoaded", function () {
             previewImagem.style.display = 'none';
         }
     });
+     function aplicarMascaraSomenteLetras(inputId) {
+        const campo = document.getElementById(inputId);
+        if (!campo) return;
+        campo.addEventListener("input", function() {
+            this.value = this.value.replace(/[^a-zA-ZÀ-ÿ\s]/g, '');
+        });
+    }
+
+    aplicarMascaraSomenteLetras("nome_servico_cadastrar");
+    aplicarMascaraSomenteLetras("nome_edit_servico");
 });

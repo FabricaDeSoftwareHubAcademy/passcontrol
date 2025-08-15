@@ -65,5 +65,11 @@ btn_cadastrar_guiche.addEventListener("click", () => {
             }
         });
     });
+    const nomeGuicheInput = document.getElementById("nome_guiche");
+
+    nomeGuicheInput.addEventListener("input", function() {
+        // Remove tudo que não for letra ou espaço
+        this.value = this.value.replace(/[^a-zA-ZÀ-ÿ\s]/g, '');
+    });
 
 });
