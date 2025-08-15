@@ -1,10 +1,18 @@
+document.addEventListener('DOMContentLoaded', async function(){
 
-document.addEventListener('DOMContentLoaded', function(){
+    const resposta_usuario = await fetch('../../app/actions/get_usuario_logado.php');
+    const dados_usuario = await resposta_usuario.json();
+    const id_usuario_logado = dados_usuario.id_usuario;
+
     async function senhasAtendidas(){
         
         const tabela = document.getElementById('lista-senhas-atendidas-no-dia')
         tabela.innerHTML='';
-        const resposta = await fetch('../../app/actions/senhas_atendidas.php')
+        const resposta = await fetch('../../app/actions/senhas_atendidas.php', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: `id_usuario=${id_usuario_logado}`
+        });
         const json= await resposta.json();
         
         await json.forEach((elemento, sequencial)=>{
@@ -17,8 +25,8 @@ document.addEventListener('DOMContentLoaded', function(){
             <td>${elemento.nome_fila_senha}</td>
             <td>${elemento.nome_servico}</td>
             <td>${senhaFormatada}</td>
-            <td>${elemento.fila_senha_chamada_in}</td>
-            <td>${elemento.fila_senha_encerrada_in ? elemento.fila_senha_encerrada_in : 'ainda em atendimento'}</td>
+            <td>${elemento.fila_senha_chamada_in ? elemento.fila_senha_chamada_in : ''}</td>
+            <td>${elemento.fila_senha_encerrada_in ? elemento.fila_senha_encerrada_in : ''}</td>
             <td>${prioridade }</td>
         </tr>`
         })
@@ -32,5 +40,3 @@ document.addEventListener('DOMContentLoaded', function(){
     botao_encerrar.addEventListener('click',senhasAtendidas)
 
 })
-
-
