@@ -186,7 +186,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.05);
+    /* background-color: rgba(0, 0, 0, 0.05); */
 }
 .nome-pessoa {
     width: 100%;
@@ -273,16 +273,19 @@
 }
 @media screen and (max-width: 1150px) {
     .infos-detalhes-esquerda h2, .infos-detalhes-direita h2 {
-        font-size: 30px;
+        font-size: 26px;
     }
     .infos-senha-principal {
-        gap: 20px;
+        gap: 0;
     }
     .conjunto-senhas {
         gap: 20px;
     }
 }
 @media screen and (max-width: 1100px) {
+    .infos-detalhes-esquerda h2, .infos-detalhes-direita h2 {
+        font-size: 26px;
+    }
     .conjunto-senhas {
         flex-direction: column;
     }
@@ -299,5 +302,211 @@
         gap: 5px;
     }
 }
-
-
+@media screen and (max-width: 936px) {
+    .infos-detalhes-esquerda h2, .infos-detalhes-direita h2 {
+        font-size: 22px;
+    }
+    .infos-senha-principal {
+        gap: 0;
+    }
+    .conjunto-senhas {
+        flex-direction: column;
+    }
+    .guiche h5{
+        display: none;
+    }
+    .senha h3{
+        display: none;
+    }
+    .senha{
+        margin-left: 0;
+    }
+    .conjunto-senhas {
+        gap: 5px;
+    }
+    .caixa-das-senhas {
+        width: 90%;
+    }
+    .modal-fundo{
+        width: 90%;
+    }
+}
+@media screen and (max-width: 894px) {
+    .infos-detalhes-esquerda h2, .infos-detalhes-direita h2 {
+        font-size: 20px;
+    }
+    .infos-detalhes-esquerda {
+        width: 24%;
+    }
+    .fundo-lateral{
+        width: 250px;
+    }
+    .caixa-senha-principal{
+        width: 95%;
+    }
+}
+@media screen and (max-width: 760px) {
+    .infos-detalhes-esquerda h2, .infos-detalhes-direita h2 {
+        font-size: 20px;
+    }
+    .infos-detalhes-esquerda {
+        width: 24%;
+    }
+    .fundo-lateral{
+        width: 230px;
+    }
+    .caixa-senha-principal{
+        width: 95%;
+    }
+    .caixa-das-senhas{
+        font-size: 18px;
+    }
+    .fundo-lateral h1{
+        font-size: 30px;
+        width: 90%;
+    }
+    .area-das-senhas{
+        height: 80%;
+        margin-bottom: 0;
+    }
+}
+@media screen and (max-width: 642px) {
+    .infos-detalhes-esquerda h2, .infos-detalhes-direita h2 {
+        font-size: 18px;
+    }
+    .infos-detalhes-esquerda {
+        width: 24%;
+    }
+    .fundo-lateral{
+        width: 165px;
+    }
+    .caixa-senha-principal{
+        width: 95%;
+    }
+    .caixa-das-senhas{
+        font-size: 18px;
+    }
+    .fundo-lateral h1{
+        font-size: 26px;
+        width: 100%;
+    }
+    .area-das-senhas{
+        height: 80%;
+        margin-bottom: 0;
+        width: 108%;
+    }
+    .caixa-das-senhas h2{
+        font-size: 16px;
+    }
+    .senha h4{
+        font-size: 16px;
+    }
+    .guiche h6{
+        font-size: 16px;
+    }
+}
+@media screen and (max-width: 550px) {
+    .infos-detalhes-esquerda h2, .infos-detalhes-direita h2 {
+        font-size: 15px;
+    }
+    .infos-detalhes-esquerda {
+        width: 24%;
+    }
+    .fundo-lateral{
+        width: 130px;
+    }
+    .caixa-senha-principal{
+        width: 95%;
+    }
+    .caixa-das-senhas{
+        font-size: 18px;
+    }
+    .fundo-lateral h1{
+        font-size: 26px;
+        width: 100%;
+    }
+    .area-das-senhas{
+        height: 80%;
+        margin-bottom: 0;
+        width: 108%;
+    }
+    .caixa-das-senhas h2{
+        font-size: 14px;
+    }
+    .senha h4{
+        font-size: 16px;
+    }
+    .guiche h6{
+        font-size: 14px;
+        margin-left: 10px;
+    }
+}
+@media screen and (max-width: 550px) {
+    .infos-detalhes-esquerda h2, .infos-detalhes-direita h2 {
+        font-size: 14px;
+    }
+    .infos-detalhes-esquerda {
+        width: 24%;
+    }
+    .fundo-lateral{
+        width: 130px;
+    }
+    .caixa-senha-principal{
+        width: 95%;
+    }
+    .caixa-das-senhas{
+        font-size: 18px;
+    }
+    .fundo-lateral h1{
+        font-size: 22px;
+        width: 100%;
+    }
+    .area-das-senhas{
+        height: 80%;
+        margin-bottom: 0;
+        width: 108%;
+    }
+    .caixa-das-senhas h2{
+        font-size: 14px;
+    }
+    .senha h4{
+        font-size: 16px;
+    }
+    .guiche h6{
+        font-size: 14px;
+        margin-left: 10px;
+    }
+}
+@media screen and (max-width: 550px) {
+    .infos-detalhes-esquerda h2, .infos-detalhes-direita h2 {
+        font-size: 22px;
+    }
+    .fundo-lateral {
+        display: none;
+    }
+    .caixa-senha-principal {
+        width: 120%;
+        height: 90%;
+        margin-left: 100px;
+        margin-right: 0;
+    }
+    .area-botao-fechar-monitor{
+        justify-content: flex-start;
+    }
+    .conjunto-senha-principal{
+        width: 125%;
+    }
+    .caixa-senha-principal {
+        margin-left: 70px;
+    }
+}
+@media screen and (max-width: 410px) {
+    .infos-detalhes-esquerda h2, .infos-detalhes-direita h2 {
+        font-size: 20px;
+    }
+}
+@media screen and (max-width: 380px) {
+    .infos-detalhes-esquerda h2, .infos-detalhes-direita h2 {
+        font-size: 18px;
+    }
+}
