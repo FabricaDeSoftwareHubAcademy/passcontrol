@@ -1,13 +1,23 @@
 <?php
+
 require_once '../database/Database.php';
 
-$sql = "SELECT id_servico, nome_servico FROM servico WHERE status_servico = 1";
-$resultado = mysqli_query($conn, $sql);
+header('Content-Type: application/json');
 
-$servicos = [];
-while ($row = mysqli_fetch_assoc($resultado)) {
-    $servicos[] = $row;
+$db = new Database('servico');
+
+$result = $db->select(null,null,null,'nome_servico');
+
+if($result) {
+    $servicos = $result->fetchAll(PDO::FETCH_ASSOC);
+    echo json_encode($servicos);
+} else {
+    echo json_encode(['erro' => 'Erro ao consultar serviços']);
 }
 
-echo json_encode($servicos);
+
+
+
+
+
 ?>

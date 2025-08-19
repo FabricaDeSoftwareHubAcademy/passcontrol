@@ -1,13 +1,19 @@
 <?php
 require_once '../database/Database.php';
 
-$sql = "SELECT id_ponto_atendimento, identificador_ponto_atendimento FROM ponto_atendimento WHERE status_ponto_atendimento = 1";
-$resultado = mysqli_query($conn, $sql);
+header('Content-Type: application/json');
 
-$pontos = [];
-while ($row = mysqli_fetch_assoc($resultado)) {
-    $pontos[] = $row;
+$db = new Database('usuario');
+
+$where = "status_usuario = 1";
+$order = "nome_usuario";
+
+$result = $db->select(null, $where, null, $order);
+
+if($result) {
+    $usuarios = $result->fetchAll(PDO::FETCH_ASSOC);
+    echo json_encode($usuarios);
+} else {
+    echo json_encode(['erro' => 'Erro ao consultar usuários']);
 }
-
-echo json_encode($pontos);
 ?>
