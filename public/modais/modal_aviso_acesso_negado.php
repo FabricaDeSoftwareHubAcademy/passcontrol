@@ -6,7 +6,7 @@
         <p class="modal-message-aviso-erro"><b>ACESSO NEGADO</b></p>
         <p class="aviso-erro"></p>
         <div class="button-group-aviso-erro">
-            <button class="botao-modal-aviso-erro voltar_AvisoErro">Voltar</button>
+            <a style="padding:15px;background-color:#232323;color:#fff;text-decoration:none;" class="inicio" href="../../index.php">INICIO</a>
         </div>
     </section>
 </div>
