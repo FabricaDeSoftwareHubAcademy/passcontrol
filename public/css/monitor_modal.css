@@ -16,7 +16,7 @@
 }
 .modal-fundo {
     display: flex;
-    width: 85%;
+    width: 75%;
     height: 75%;
     border-radius: 5px;
     background-color: var(--cor-fundo);
@@ -124,7 +124,8 @@
 .fundo-principal {
     display: flex;
     width: 75%;
-    height: 100%;justify-content: end;
+    height: 100%;
+    justify-content: end;
     flex-direction: column;
     align-items: center;
 }
@@ -136,8 +137,8 @@
 }
 .botao-fechar-monitor {
     display: flex;
-    width: 45px;
-    height: 45px;
+    width: 50px;
+    height: 50px;
     justify-content: center;
     align-items: center; 
     cursor: pointer;
@@ -145,6 +146,7 @@
     border: 3px solid;
     border-color: black;
     margin: 10px;
+    margin-right: 5px;
 }
 .botao-fechar-monitor:hover {
     background-color: rgb(187, 0, 0);
@@ -176,7 +178,7 @@
 }
 .conjunto-senha-principal {
     display: flex;
-    width: 105%;
+    width: 100%;
     height: 75%;
     /* margin-left: 50px;
     margin-right: 50px;
@@ -221,9 +223,9 @@
     margin: 20px;
     color: var(--cinza-control);
 }
-.infos-detalhes-direita{
+/* .infos-detalhes-direita{
     width: 35%;
-}
+} */
 .infos-detalhes-direita h2 {
     width: 92%;
     display: flex;
@@ -247,6 +249,7 @@
 @media screen and (max-width: 1338px) {
     .infos-detalhes-esquerda h2, .infos-detalhes-direita h2 {
         font-size: 34px;
+        margin: 16px;
     }
     .infos-senha-principal {
         gap: 40px;
@@ -284,7 +287,7 @@
 }
 @media screen and (max-width: 1100px) {
     .infos-detalhes-esquerda h2, .infos-detalhes-direita h2 {
-        font-size: 26px;
+        font-size: 24px;
     }
     .conjunto-senhas {
         flex-direction: column;
@@ -332,6 +335,9 @@
     }
 }
 @media screen and (max-width: 894px) {
+    /* .conjunto-senha-principal{
+        width: 135%;
+    } */
     .infos-detalhes-esquerda h2, .infos-detalhes-direita h2 {
         font-size: 20px;
     }
@@ -346,6 +352,9 @@
     }
 }
 @media screen and (max-width: 760px) {
+    /* .conjunto-senha-principal{
+        width: 150%;
+    } */
     .infos-detalhes-esquerda h2, .infos-detalhes-direita h2 {
         font-size: 20px;
     }
@@ -370,6 +379,15 @@
         margin-bottom: 0;
     }
 }
+@media screen and (max-width: 663px) {
+    .nome-pessoa h1 {
+        font-size: 26px;
+    }
+    /* .conjunto-senha-principal{
+        width: 165%;
+    } */
+}
+
 @media screen and (max-width: 642px) {
     .infos-detalhes-esquerda h2, .infos-detalhes-direita h2 {
         font-size: 18px;
@@ -406,6 +424,9 @@
     }
 }
 @media screen and (max-width: 550px) {
+    .infos-detalhes-direita {
+        width: 35%;
+    }
     .infos-detalhes-esquerda h2, .infos-detalhes-direita h2 {
         font-size: 15px;
     }
@@ -478,8 +499,13 @@
     }
 }
 @media screen and (max-width: 550px) {
-    .infos-detalhes-esquerda h2, .infos-detalhes-direita h2 {
+    .nome-pessoa h1 {
         font-size: 22px;
+    }
+    .infos-detalhes-esquerda h2, .infos-detalhes-direita h2{
+        font-size: 16px;
+        margin: 2px;
+        margin-bottom: 10px;
     }
     .fundo-lateral {
         display: none;
@@ -493,20 +519,20 @@
     .area-botao-fechar-monitor{
         justify-content: flex-start;
     }
-    .conjunto-senha-principal{
+    /* .conjunto-senha-principal{
         width: 125%;
-    }
+    } */
     .caixa-senha-principal {
-        margin-left: 70px;
+        margin-left: 34%;
+    }
+    .infos-detalhes-esquerda {
+        width: 32%;
     }
 }
-@media screen and (max-width: 410px) {
-    .infos-detalhes-esquerda h2, .infos-detalhes-direita h2 {
-        font-size: 20px;
-    }
-}
+
 @media screen and (max-width: 380px) {
     .infos-detalhes-esquerda h2, .infos-detalhes-direita h2 {
-        font-size: 18px;
+        font-size: 14px;
+        margin-bottom: 8%;
     }
 }
