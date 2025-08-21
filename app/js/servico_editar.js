@@ -103,11 +103,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 // Validação imagem nova 
                 if (arquivos) {
-                    const img_permitidos = [".png", ".jpg", ".jpeg"];
+                    const img_permitidos = [".png", ".jpg", ".jpeg",".jfif"];
                     const regex = new RegExp("(" + img_permitidos.join('|').replace(/\./g, "\\.") + ")$", "i");
 
                     if (!regex.test(inputImagem.value.toLowerCase())) {
-                        msgError.innerHTML += "Tipo de arquivo inválido! Permitidos: .png, .jpg e .jpeg<br><br>";
+                        msgError.innerHTML += "Tipo de arquivo inválido! Permitidos: .png, .jpg , .jpeg e .jfif<br><br>";
                         erro = true;
                         imagemInvalida = true;
                     }

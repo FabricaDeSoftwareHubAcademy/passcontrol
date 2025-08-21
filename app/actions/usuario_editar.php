@@ -24,7 +24,7 @@ elseif (($_SERVER['REQUEST_METHOD'] === 'POST')){
         $novo_nome = uniqid();
         $extensao = strtolower(pathinfo($nome_arquivo, PATHINFO_EXTENSION));
 
-        if (!in_array($extensao, ["png", "jpg", "jpeg"])) {
+        if (!in_array($extensao, ["png", "jpg", "jpeg","jfif"])) {
             die("Arquivo inválido");
         }
 
