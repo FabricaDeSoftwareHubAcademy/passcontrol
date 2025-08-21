@@ -3,8 +3,6 @@ try {
     const wss = new WebSocket.Server({ port: 8080 });
     console.log('Server on...');
 
-    console.log("websocket online e aguardando conexões...");
-
     wss.on('connection', ws => {
         console.log('Client connected');
         ws.on('message', message => {
