@@ -103,7 +103,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 // Validação imagem nova 
                 if (arquivos) {
-                    const img_permitidos = [".png", ".jpg", ".jpeg"];
+                    const img_permitidos = [".png", ".jpg", ".jpeg", 'jfif'];
                     const regex = new RegExp("(" + img_permitidos.join('|').replace(/\./g, "\\.") + ")$", "i");
 
                     if (!regex.test(inputImagem.value.toLowerCase())) {

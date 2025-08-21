@@ -18,7 +18,7 @@ if (isset($_FILES['url_imagem_servico']) && $_FILES['url_imagem_servico']['error
     $nomeArquivo = basename($_FILES['url_imagem_servico']['name']);
     $extensao = strtolower(pathinfo($nomeArquivo, PATHINFO_EXTENSION));
 
-    $permitidos = ['jpg', 'jpeg', 'png'];
+    $permitidos = ['jpg', 'jpeg', 'png', 'jfif'];
 
     if (in_array($extensao, $permitidos)) {
         $nomeImagem = uniqid('img_') . "." . $extensao;

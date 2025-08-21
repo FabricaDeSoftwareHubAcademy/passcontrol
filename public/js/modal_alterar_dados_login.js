@@ -16,11 +16,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Função reutilizável para validar a imagem
   function imagemValida(file) {
-    const tiposPermitidos = ['image/png', 'image/jpeg', 'image/jpg'];
-    const extensoesPermitidas = ['png', 'jpg', 'jpeg'];
+    const extensoesPermitidas = ['png', 'jpg', 'jpeg','jfif'];
     const extensao = file.name.split('.').pop().toLowerCase();
 
-    return tiposPermitidos.includes(file.type) && extensoesPermitidas.includes(extensao);
+    return  extensoesPermitidas.includes(extensao);
   }
 
   // abrir o modal_alterar_dados_login
@@ -44,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (file) {
       if (!imagemValida(file)) {
         feedback.style.color = 'red';
-        feedback.textContent = 'A imagem deve ser PNG, JPG, JPEG';
+        feedback.textContent = 'A imagem deve ser PNG, JPG, JPEG, JFIF';
         inputFoto.value = '';
         previewFoto.style.display = 'none';
         previewFoto.src = '';
@@ -81,7 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // validação da imagem
     if (foto && !imagemValida(foto)) {
       feedback.style.color = 'red';
-      feedback.textContent = 'A imagem deve ser PNG, JPG, JPEG.';
+      feedback.textContent = 'A imagem deve ser PNG, JPG, JPEG, JFIF.';
       return;
     }
 

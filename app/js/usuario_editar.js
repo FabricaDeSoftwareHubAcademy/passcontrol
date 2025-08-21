@@ -112,7 +112,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 }
                 
                 if (arquivo){
-                    var arquivos_permitidos = [".png", ".jpg", ".jpeg"];
+                    var arquivos_permitidos = [".png", ".jpg", ".jpeg", 'jfif'];
                     const regex = new RegExp("(" + arquivos_permitidos.join('|').replace(/\./g, "\\.") + ")$", "i");
 
                     if(!regex.test(foto.value.toLowerCase())){

@@ -85,7 +85,7 @@ document.querySelector(".save_CadServ").addEventListener("click", function (even
     erro = true;
     imagemInavlida = true;
   } else{
-    const img_permitidos = [".png", ".jpg", ".jpeg"];
+    const img_permitidos = [".png", ".jpg", ".jpeg", ".jfif"];
     const regex = new RegExp("(" + img_permitidos.join('|').replace(/\./g, "\\.") + ")$", "i");
     
     if(!regex.test(imagem_servico.value.toLowerCase())){

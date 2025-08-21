@@ -34,7 +34,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $nomeOriginal = $_FILES['url_imagem_servico']['name'];
         
         $extensao = strtolower(pathinfo($nomeOriginal, PATHINFO_EXTENSION));
-        $permitidos = ['jpg', 'jpeg', 'png'];
+        $permitidos = ['jpg', 'jpeg', 'png', 'jfif'];
         
         if (!in_array($extensao, $permitidos)) {
             echo json_encode(['status' => 'ERRO', 'msg' => 'Extensão de imagem inválida.']);
